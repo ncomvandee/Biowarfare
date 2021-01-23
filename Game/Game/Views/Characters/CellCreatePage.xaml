@@ -3,10 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.Characters.CellCreatePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout  HorizontalOptions="CenterAndExpand">
+            <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
+                   CornerRadius="20" Margin="0, 40, 0, 10" >
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                    <Picker Title="Select....." BackgroundColor="White" WidthRequest="150"
+                            Margin="0, 20, 0, 0" HeightRequest="20" >
+                    </Picker>
+
+                    <Ellipse Fill="white" WidthRequest="180" HeightRequest="180" HorizontalOptions="Center"
+                             Margin="0, 5, 0, 0">
+
+                    </Ellipse>
+                </StackLayout>
+            </Frame>
+
+            <Entry Placeholder="Enter name here" HorizontalTextAlignment="Center" Margin="0, 0, 0, 20"/>
+
+            <Frame BorderColor="LightGray" BackgroundColor="LightGray" WidthRequest="300" HeightRequest="180" CornerRadius="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Stats" Grid.Row="0" HorizontalOptions="Center" Padding="10"/>
+
+                    <Label Text="Atk" Grid.Row="1" Margin="10, 10" />
+                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0"  Grid.Row="1" />
+
+                    <Label Text="Def" Grid.Row="2" Margin="10, 10" />
+                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0" Grid.Row="2"/>
+
+                    <Label Text="Spd" Grid.Row="3" Margin="10, 10" />
+                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0" Grid.Row="3"/>
+                </Grid>
+            </Frame>
+
+            <Button Text="Save" HorizontalOptions="Center" Margin="40" BackgroundColor="LightGray"
+                    FontSize="Large" WidthRequest="150" HeightRequest="40" FontAttributes="Bold" TextColor="Black"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
