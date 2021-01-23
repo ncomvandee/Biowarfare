@@ -22,7 +22,7 @@
                 Dark
                 -->
 
-            <Color x:Key="PageBackgroundColor">Pink</Color>
+            <Color x:Key="PageBackgroundColor">white</Color>
             <Color x:Key="ViewBackgroundColor">green</Color>
             <Color x:Key="NavigationBarColor">orange</Color>
 
