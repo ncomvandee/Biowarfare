@@ -47,9 +47,13 @@
                 </Grid>
             </Frame>
 
-            <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="LightGray"
-                    FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" />
+            <StackLayout Orientation="Horizontal" Margin="0, 10, 0, 0">
+                <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="LightGray"
+                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" CornerRadius="20" />
+                <Button Text="Cancel" HorizontalOptions="Center" Margin="0" BackgroundColor="LightGray"
+                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" CornerRadius="20"/>
 
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
