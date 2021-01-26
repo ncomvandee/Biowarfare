@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.CellCreatePage">
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
@@ -10,15 +11,12 @@
                 <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
                     <Picker BackgroundColor="White" WidthRequest="150"
                             Margin="0, 10, 0, 0" HeightRequest="35"
-                            FontSize="Caption" HorizontalTextAlignment="Center">
-                        <Picker.Items>
-                            <x:String>White blood cell</x:String>
-                        </Picker.Items>
-                    </Picker>
+                            FontSize="Caption" HorizontalTextAlignment="Center"
+                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"/>
 
                     <Frame BackgroundColor="White" WidthRequest="180" HeightRequest="180" BorderColor="LightGray"
                            CornerRadius="100" VerticalOptions="CenterAndExpand" >
-                        <Image Source="cell.jpg" />
+
                     </Frame>
                 </StackLayout>
             </Frame>
