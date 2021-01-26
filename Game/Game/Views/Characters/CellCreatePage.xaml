@@ -16,10 +16,10 @@
                         </Picker.Items>
                     </Picker>
 
-                    <Ellipse Fill="white" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center"
-                             Margin="0, 10, 0, 0">
-
-                    </Ellipse>
+                    <Frame BackgroundColor="White" WidthRequest="180" HeightRequest="180" BorderColor="LightGray"
+                           CornerRadius="100" VerticalOptions="CenterAndExpand" >
+                        <Image Source="cell.jpg" />
+                    </Frame>
                 </StackLayout>
             </Frame>
 
