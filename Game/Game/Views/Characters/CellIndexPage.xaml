@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
+
                 <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
                    CornerRadius="20" Margin="0, 20, 0, 0" >
 
@@ -14,40 +15,12 @@
                             <RowDefinition Height="AUTO" />
                         </Grid.RowDefinitions>
 
-                        <BoxView BackgroundColor="White" HorizontalOptions="Center" Grid.Row="0"
-                                 WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
-                        </BoxView>
-                        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                     Margin="0, 12, 0, 0">
-
-                            <Label Text="Type" FontSize="Medium" FontAttributes="Bold"/>
-                            <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
-                            <Label Text="Name" FontSize="Medium" FontAttributes="Bold"/>
-
-                        </StackLayout>
-
-
                         <Ellipse Fill="white" WidthRequest="190" HeightRequest="190" Grid.Row="1" HorizontalOptions="CenterAndExpand"
                                  VerticalOptions="CenterAndExpand" Margin="7"/>
                     </Grid>
+
                 </Frame>
-
-                <Frame BorderColor="LightGray" WidthRequest="300" HeightRequest="200" BackgroundColor="LightGray"
-                        CornerRadius="20" Margin="0, 20, 0, 0" >
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <BoxView BackgroundColor="white" HorizontalOptions="Center" Grid.Row="0"
-                                 WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
-                        </BoxView>
-                        <Label Text="Items" Grid.Row="0" HorizontalOptions="CenterAndExpand" Margin="0, 12, 0, 0"
-                               FontSize="Medium" FontAttributes="Bold"/>
-
-                    </Grid>
-                </Frame>
-
-                <Button Text="Edit" BackgroundColor="LightGray" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20"/>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
