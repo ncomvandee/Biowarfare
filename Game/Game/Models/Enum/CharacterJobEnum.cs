@@ -55,12 +55,16 @@ namespace Game.Models
         }
     }
 
+    /// <summary>
+    /// Get the Cell type list
+    /// </summary>
     public static class CharacterJobEnumHelper
     {
         public static List<string> GetCharacterJobList
         {
             get
-            {
+            {   
+                // List of all Cell type
                 var myList = Enum.GetNames(typeof(CharacterJobEnum)).ToList();
 
                 return myList;
