@@ -6,7 +6,7 @@
         <ScrollView>
             <StackLayout>
 
-                <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
+                <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="300" BackgroundColor="LightGray"
                    CornerRadius="20" Margin="0, 20, 0, 0" >
 
                     <Grid>
@@ -14,10 +14,19 @@
                             <RowDefinition Height="AUTO" />
                             <RowDefinition Height="AUTO" />
                         </Grid.RowDefinitions>
+                        <Frame BorderColor="LightGray" WidthRequest="150" HeightRequest="150" BackgroundColor="LightGray"
+                            CornerRadius="20" Margin="0, 20, 0, 0" >
+                        
+                            <Ellipse Fill="white" WidthRequest="150" HeightRequest="150" Grid.Row="1" HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand" Margin="7"/>
+                        </Frame>
+                        
+                        <Frame BorderColor="White" WidthRequest="200" HeightRequest="100" BackgroundColor="White"
+                            CornerRadius="20" Margin="0, 180, 0, 0" >
+                        </Frame>
 
-                        <Ellipse Fill="white" WidthRequest="190" HeightRequest="190" Grid.Row="1" HorizontalOptions="CenterAndExpand"
-                                 VerticalOptions="CenterAndExpand" Margin="7"/>
                     </Grid>
+                    
 
                 </Frame>
                 
