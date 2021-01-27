@@ -16,5 +16,10 @@ namespace Game.Views.Characters
         {
             InitializeComponent();
         }
+
+        public async void CreateCell_Clicked(Object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new CellCreatePage()));
+        }
     }
 }
