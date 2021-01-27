@@ -132,7 +132,7 @@ namespace Game.Models
         public DifficultyEnum Difficulty { get; set; } = DifficultyEnum.Unknown;
 
         // The Job for the Player
-        public CharacterJobEnum Job { get; set; } = CharacterJobEnum.Unknown;
+        public CellTypeEnum Job { get; set; } = CellTypeEnum.BCell;
 
         #endregion PlayerAttributes
 
@@ -187,13 +187,13 @@ namespace Game.Models
 
                 switch (Job)
                 {
-                    case CharacterJobEnum.Cleric:
+                    case CellTypeEnum.NKCell:
                         result = -1;
                         break;
-                    case CharacterJobEnum.Fighter:
+                    case CellTypeEnum.KillerTCell:
                         result = +2;
                         break;
-                    case CharacterJobEnum.Unknown:
+                    case CellTypeEnum.BCell:
                     default:
                         break;
                 }
@@ -230,13 +230,13 @@ namespace Game.Models
 
                 switch (Job)
                 {
-                    case CharacterJobEnum.Cleric:
+                    case CellTypeEnum.NKCell:
                         result = +2;
                         break;
-                    case CharacterJobEnum.Fighter:
+                    case CellTypeEnum.KillerTCell:
                         result = -1;
                         break;
-                    case CharacterJobEnum.Unknown:
+                    case CellTypeEnum.BCell:
                     default:
                         break;
                 }
@@ -270,13 +270,13 @@ namespace Game.Models
 
                 switch (Job)
                 {
-                    case CharacterJobEnum.Cleric:
+                    case CellTypeEnum.NKCell:
                         result = 0;
                         break;
-                    case CharacterJobEnum.Fighter:
+                    case CellTypeEnum.KillerTCell:
                         result = +1;
                         break;
-                    case CharacterJobEnum.Unknown:
+                    case CellTypeEnum.BCell:
                     default:
                         break;
                 }

@@ -8,45 +8,51 @@ namespace Game.Models
     /// The Types of Jobs a character can have
     /// Used in Character Crudi, and in Battles.
     /// </summary>
-    public enum CharacterJobEnum
+    public enum CellTypeEnum
     {
         // Not specified
-        Unknown = 0,    
+        BCell = 0,    
 
         // Fighters hit hard and have fight abilities
-        Fighter = 10,
+        KillerTCell = 10,
 
         // Clerics defend well and have buff abilities
-        Cleric = 12,
+        NKCell = 12,
+
+        Macrophage = 15,
+
+        Basophil = 19,
+
+        Eosinophil = 21,
 
     }
 
     /// <summary>
     /// Friendly strings for the Enum Class
     /// </summary>
-    public static class CharacterJobEnumExtensions
+    public static class CellTypeEnumExtension
     {
         /// <summary>
         /// Display a String for the Enums
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string ToMessage(this CharacterJobEnum value)
+        public static string ToMessage(this CellTypeEnum value)
         {
             // Default String
             var Message = "Player";
 
             switch (value)
             {
-                case CharacterJobEnum.Fighter:
+                case CellTypeEnum.KillerTCell:
                     Message = "Fighter";
                     break;
 
-                case CharacterJobEnum.Cleric:
+                case CellTypeEnum.NKCell:
                     Message = "Cleric";
                     break;
 
-                case CharacterJobEnum.Unknown:
+                case CellTypeEnum.BCell:
                 default:
                     break;
             }
@@ -65,7 +71,7 @@ namespace Game.Models
             get
             {   
                 // List of all Cell type
-                var myList = Enum.GetNames(typeof(CharacterJobEnum)).ToList();
+                var myList = Enum.GetNames(typeof(CellTypeEnum)).ToList();
 
                 return myList;
             }
