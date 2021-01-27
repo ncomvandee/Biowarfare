@@ -30,18 +30,22 @@
                         <RowDefinition Height="AUTO"/>
                         <RowDefinition Height="AUTO"/>
                         <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Label Text="Stats" Grid.Row="0" HorizontalOptions="Center" Padding="10"/>
 
-                    <Label Text="Atk" Grid.Row="1" Margin="10, 10" />
-                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0"  Grid.Row="1" />
+                    <Label Text="Atk" Grid.Row="1" Margin="10, 5" />
+                    <ProgressBar Progress="0.5" Margin="40, 5"  Grid.Row="1" />
 
-                    <Label Text="Def" Grid.Row="2" Margin="10, 10" />
-                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0" Grid.Row="2"/>
+                    <Label Text="Def" Grid.Row="2" Margin="10, 5" />
+                    <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="2"/>
 
-                    <Label Text="Spd" Grid.Row="3" Margin="10, 10" />
-                    <ProgressBar Progress="0.5" Margin="40, 0, 40, 0" Grid.Row="3"/>
+                    <Label Text="Spd" Grid.Row="3" Margin="10, 5" />
+                    <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="3"/>
+
+                    <Button Text="Add Items" Grid.Row="4" CornerRadius="20" FontSize="Medium" WidthRequest="200"
+                            TextColor="Black"/>
                 </Grid>
             </Frame>
 
