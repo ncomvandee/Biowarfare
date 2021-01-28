@@ -1,14 +1,13 @@
-﻿using Game.Views.Characters;
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Game.Views
 {
-	/// <summary>
-	/// The Main Game Page
-	/// </summary>
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    /// <summary>
+    /// The Main Game Page
+    /// </summary>
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class VillagePage : ContentPage
 	{
 		/// <summary>
