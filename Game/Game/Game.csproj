@@ -46,6 +46,9 @@
     <Compile Update="Views\Characters\CellUpdatePage.xaml.cs">
       <DependentUpon>CellUpdatePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Characters\CellDeletePage.xaml.cs">
+      <DependentUpon>CellDeletePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Village\VillagePage.xaml.cs">
       <DependentUpon>VillagePage.xaml</DependentUpon>
     </Compile>
