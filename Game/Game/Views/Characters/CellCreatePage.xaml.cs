@@ -30,6 +30,11 @@ namespace Game.Views
             this.ViewModel.Title = "Create";
         }
 
+        /// <summary>
+        /// Send Create message to ViewModel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void SaveButton_Clicked (object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "Create", ViewModel.Data);
