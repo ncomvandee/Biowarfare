@@ -38,6 +38,18 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Constructor w/o parameters for Update Page
+        /// 
+        /// Get the ItemIndexView Model
+        /// </summary>
+        public CellUpdatePage()
+        {
+            InitializeComponent();
+
+            BindingContext = ViewModel;
+        }
+
+        /// <summary>
         /// Save calls to Update
         /// </summary>
         /// <param name="sender"></param>

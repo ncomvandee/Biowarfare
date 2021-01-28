@@ -46,7 +46,7 @@
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" BackgroundColor="LightGray" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20"/>
+            <Button Text="Edit" BackgroundColor="LightGray" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

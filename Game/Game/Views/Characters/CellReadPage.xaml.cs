@@ -55,5 +55,16 @@ namespace Game.Views
             //await Navigation.PushModalAsync(new NavigationPage(new ItemDeletePage(ViewModel)));
             //await Navigation.PopAsync();
         }
+
+        /// <summary>
+		/// Jump to the Cell Update Page
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		public async void CellEditButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CellUpdatePage());
+        }
+
     }
 }
