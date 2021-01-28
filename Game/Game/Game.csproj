@@ -43,6 +43,9 @@
     <Compile Update="Views\Battle\AutoBattlePage.xaml.cs">
       <DependentUpon>AutoBattlePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Characters\CellUpdatePage.xaml.cs">
+      <DependentUpon>CellUpdatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Village\VillagePage.xaml.cs">
       <DependentUpon>VillagePage.xaml</DependentUpon>
     </Compile>
