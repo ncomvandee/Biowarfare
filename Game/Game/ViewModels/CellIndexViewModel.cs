@@ -65,7 +65,7 @@ namespace Game.ViewModels
             });
 
             // Register the Update Message
-            MessagingCenter.Subscribe<ItemUpdatePage, CharacterModel>(this, "Update", async (obj, data) =>
+            MessagingCenter.Subscribe<CellUpdatePage, CharacterModel>(this, "Update", async (obj, data) =>
             {
                 // Have the item update itself
                 data.Update(data);
@@ -74,7 +74,7 @@ namespace Game.ViewModels
             });
 
             // Register the Delete Message
-            MessagingCenter.Subscribe<ItemDeletePage, CharacterModel>(this, "Delete", async (obj, data) =>
+            MessagingCenter.Subscribe<CellDeletePage, CharacterModel>(this, "Delete", async (obj, data) =>
             {
                 await DeleteAsync(data as CharacterModel);
             });
