@@ -115,13 +115,8 @@ namespace Game.ViewModels
             // If so, it returns the item...
 
             var myList = Dataset.Where(a =>
-                                        a.PlayerType == data.PlayerType &&
-                                        a.Guid == data.Guid &&
                                         a.Name == data.Name &&
-                                        a.Description == data.Description &&
-                                        a.Level == data.Level &&
-                                        a.ImageURI == data.ImageURI &&
-                                        a.Job == data.Job
+                                        a.Description == data.Description 
                                         )
                                         .FirstOrDefault();
 
