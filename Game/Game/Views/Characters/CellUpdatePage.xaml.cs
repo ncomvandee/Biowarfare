@@ -9,7 +9,7 @@ using Game.Models;
 namespace Game.Views
 {
     /// <summary>
-    /// Item Update Page
+    /// Cell Update Page
     /// </summary>
     [DesignTimeVisible(false)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
