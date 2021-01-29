@@ -16,7 +16,7 @@ namespace Game.Views
     public partial class CellUpdatePage : ContentPage
     {
         // View Model for Item
-        public readonly GenericViewModel<ItemModel> ViewModel;
+        public readonly GenericViewModel<CharacterModel> ViewModel;
 
         // Empty Constructor for Tests
         public CellUpdatePage(bool UnitTest){ }
@@ -24,7 +24,7 @@ namespace Game.Views
         /// <summary>
         /// Constructor that takes and existing data item
         /// </summary>
-        public CellUpdatePage(GenericViewModel<ItemModel> data)
+        public CellUpdatePage(GenericViewModel<CharacterModel> data)
         {
             InitializeComponent();
 
@@ -32,9 +32,6 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
-            //Need to make the SelectedItem a string, so it can select the correct item.
-            LocationPicker.SelectedItem = data.Data.Location.ToString();
-            AttributePicker.SelectedItem = data.Data.Attribute.ToString();
         }
 
         /// <summary>
