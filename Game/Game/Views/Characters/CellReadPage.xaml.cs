@@ -63,7 +63,9 @@ namespace Game.Views
 		/// <param name="e"></param>
 		public async void CellEditButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CellUpdatePage());
+            await Navigation.PopModalAsync(new NavigationPage(new CellUpdatePage(ViewModel)));
+
+            await Navigation.PopAsync(); 
         }
 
     }
