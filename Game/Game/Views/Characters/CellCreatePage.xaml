@@ -2,7 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local_enum="clr-namespace:Game.Models"
+             xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.CellCreatePage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
             <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
@@ -12,7 +19,9 @@
                     <Picker BackgroundColor="White" WidthRequest="150"
                             Margin="0, 10, 0, 0" HeightRequest="35"
                             FontSize="Caption" HorizontalTextAlignment="Center"
-                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"/>
+                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
+                            SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                            x:Name="CellTypePicker"/>
 
                     <Frame BackgroundColor="White" WidthRequest="180" HeightRequest="180" BorderColor="LightGray"
                            CornerRadius="100" VerticalOptions="CenterAndExpand" >
