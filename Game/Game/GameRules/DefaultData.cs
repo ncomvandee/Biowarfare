@@ -135,10 +135,11 @@ namespace Game.GameRules
         var RightFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.Finger);
         var LeftFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.Finger);
 
-        var datalist = new List<CharacterModel>()
+            var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
                     Name = "C1",
+                    Job = CellTypeEnum.Basophil,
                     Description = "C1",
                     Level = 1,
                     MaxHealth = 5,
@@ -154,6 +155,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C2",
+                    Job = CellTypeEnum.BCell,
                     Description = "C2",
                     Level = 1,
                     MaxHealth = 5,
@@ -169,6 +171,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C3",
+                    Job = CellTypeEnum.Eosinophil,
                     Description = "C3",
                     Level = 1,
                     MaxHealth = 5,
@@ -184,6 +187,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C4",
+                    Job = CellTypeEnum.KillerTCell,
                     Description = "C4",
                     Level = 1,
                     MaxHealth = 5,
@@ -199,6 +203,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C5",
+                    Job = CellTypeEnum.Macrophage,
                     Description = "C5",
                     Level = 1,
                     MaxHealth = 5,
@@ -214,6 +219,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C6",
+                    Job = CellTypeEnum.NKCell,
                     Description = "C6",
                     Level = 1,
                     MaxHealth = 5,
@@ -229,6 +235,7 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "C7",
+                    Job = CellTypeEnum.Eosinophil,
                     Description = "C6",
                     Level = 1,
                     MaxHealth = 5,
