@@ -54,7 +54,8 @@
                         FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" CornerRadius="20"
                         Clicked="SaveButton_Clicked"/>
                 <Button Text="Cancel" HorizontalOptions="Center" Margin="0" BackgroundColor="LightGray"
-                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" CornerRadius="20"/>
+                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="Black" CornerRadius="20"
+                        Clicked="CancelButton_Clicked"/>
 
             </StackLayout>
         </StackLayout>
