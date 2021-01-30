@@ -12,7 +12,7 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
-        <Label Text="Delete Cell" HorizontalTextAlignment="Center"/>
+        <Label Text="Delete Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
     </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}"
