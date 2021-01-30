@@ -12,26 +12,28 @@
     </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout Orientation="Vertical" >
+            
             <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
                CornerRadius="20" Margin="0, 20, 0, 0">
+                
                 <StackLayout>
+                    
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="AUTO" />
                         </Grid.RowDefinitions>
+                        
                         <Frame BorderColor="Black" BackgroundColor="White" CornerRadius="20" Margin="0, 20, 0, 0"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
                             <StackLayout Orientation="Horizontal">
 
                                 <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
                                 <BoxView Color="Black" WidthRequest="01" HeightRequest="1" ></BoxView>
                                 <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
-
                             </StackLayout>
                         </Frame>
-                        
                     </Grid>
-                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-       
+                    
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" Margin="0,30,0,0"/>
                 </StackLayout>
             </Frame>
 
@@ -58,11 +60,8 @@
                     BorderWidth="1" 
                     BorderColor="black">
                     </Button>
-
                 </StackLayout>
-
             </StackLayout>
-
         </StackLayout>
     </ScrollView>
 </ContentPage>
