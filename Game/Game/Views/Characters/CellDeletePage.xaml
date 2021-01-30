@@ -23,12 +23,12 @@
             </StackLayout>
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-
+      
 
             <StackLayout HorizontalOptions="Center" Padding="20">
 
-                <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
-                
+                <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand"/>
+
                 <StackLayout Orientation="Horizontal">
                     <Button 
                     Text="Delete" 
