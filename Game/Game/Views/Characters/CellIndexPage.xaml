@@ -26,7 +26,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame BorderColor="LightGray" WidthRequest="300" HeightRequest="375" BackgroundColor="LightGray"
+                            <Frame BorderColor="LightGray" WidthRequest="300" HeightRequest="365" BackgroundColor="LightGray"
                             CornerRadius="20" Margin="0, 20, 0, 0" >
                                 <Grid ColumnSpacing="5" RowSpacing="1">
                                     <Grid.ColumnDefinitions>
@@ -39,24 +39,26 @@
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
+                                    <!--Frame with Cell name and character number-->
+                                    <Frame BorderColor="White" BackgroundColor="White" WidthRequest="200" HeightRequest="30" CornerRadius="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="50, 0, 0, 280">
 
-                                    <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                        Margin="50, 20, 0, 0">
+                                        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
+                                        Margin="0, 0, 0, 0">
 
-                                        <Label Text="{Binding Job}" FontSize="Medium" FontAttributes="Bold"/>
-                                        <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Job}" FontSize="Medium" FontAttributes="Bold"/>
+                                            <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"/>
 
-                                    </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
 
                                     <StackLayout>
-
-
+                                        <!--Ellipse for thumbnail--> 
                                         <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="LightGray"
                                            CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="50, 50, 0, 0" >
                                         </Frame>
 
-
+                                        <!--Frame with stats bars--> 
                                         <Frame BorderColor="White" BackgroundColor="White" WidthRequest="200" HeightRequest="140" CornerRadius="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="50, 0, 0, 0">
                                             <Grid>
                                                 <Grid.RowDefinitions>
