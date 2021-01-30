@@ -7,10 +7,6 @@
              x:Class="Game.Views.CellDeletePage"
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
         <Label Text="Delete Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
     </NavigationPage.TitleView>
@@ -32,15 +28,27 @@
             <StackLayout HorizontalOptions="Center" Padding="20">
 
                 <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button 
+                    Text="Delete" 
+                    Clicked="Delete_Clicked" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                    </Button>
 
-                <Button 
-                Text="Yes" 
-                Clicked="Delete_Clicked" 
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                BorderWidth="1" 
-                BorderColor="black">
-                </Button>
+                    <Button 
+                    Text="Cancel" 
+                    Clicked="Cancel_Clicked" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                    </Button>
+                </StackLayout>
+
             </StackLayout>
 
         </StackLayout>
