@@ -171,4 +171,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\mapcell.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\basophil_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eosinophil_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\macrophage_bg.png" />
+  </ItemGroup>
 </Project>

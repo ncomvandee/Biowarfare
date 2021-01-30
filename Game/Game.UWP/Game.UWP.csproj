@@ -132,12 +132,15 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="basophil_bg.png" />
+    <Content Include="eosinophil_bg.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
     <Content Include="icon_delete.png" />
     <Content Include="icon_edit.png" />
     <Content Include="icon_new.png" />
     <Content Include="item.png" />
+    <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
