@@ -23,7 +23,7 @@
                 -->
 
             <Color x:Key="PageBackgroundColor">#452180</Color>
-            <Color x:Key="ViewBackgroundColor">green</Color>
+            <Color x:Key="ViewBackgroundColor">#8051CB</Color>
             <Color x:Key="NavigationBarColor">orange</Color>
 
             <Color x:Key="PrimaryBackgroundColor">red</Color>
