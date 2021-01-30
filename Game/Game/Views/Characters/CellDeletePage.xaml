@@ -12,24 +12,27 @@
     </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout Orientation="Vertical" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" >
-
-            <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
+            <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
+               CornerRadius="20" Margin="0, 20, 0, 0">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
                                  Margin="0, 12, 0, 0">
 
-                <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
-                <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
-                <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
-
-            </StackLayout>
-
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-      
+                        <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
+                    </StackLayout>
+                    
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                </StackLayout>
+            </Frame>
 
             <StackLayout HorizontalOptions="Center" Padding="20">
 
                 <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout Orientation="Horizontal">
+
                     <Button 
                     Text="Delete" 
                     Clicked="Delete_Clicked" 
@@ -47,6 +50,7 @@
                     BorderWidth="1" 
                     BorderColor="black">
                     </Button>
+
                 </StackLayout>
 
             </StackLayout>
