@@ -46,5 +46,37 @@ namespace Game.Views
         {
             await Navigation.PopModalAsync();
         }
+
+        public void ImageChanged (object sender, EventArgs e)
+        {
+            var TypeSelected = CellTypePicker.SelectedItem.ToString();
+
+            switch (TypeSelected)
+            {
+                case "Basophil":
+                    CellImage.Source = "basophil_bg.png";
+                    break;
+
+                case "Eosinophil":
+                    CellImage.Source = "eosinophil_bg.png";
+                    break;
+
+                case "Macrophage":
+                    CellImage.Source = "macrophage_bg.png";
+                    break;
+
+                case "BCell":
+                    CellImage.Source = "";
+                    break;
+
+                case "KillerTCell":
+                    CellImage.Source = "";
+                    break;
+
+                case "NKCell":
+                    CellImage.Source = "";
+                    break;
+            }
+        }
     }
 }

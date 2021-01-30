@@ -21,10 +21,11 @@
                             FontSize="Caption" HorizontalTextAlignment="Center"
                             ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
                             SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                            x:Name="CellTypePicker"/>
+                            x:Name="CellTypePicker" SelectedIndexChanged="ImageChanged"/>
 
                     <Frame BackgroundColor="White" WidthRequest="180" HeightRequest="180" BorderColor="LightGray"
                            CornerRadius="100" VerticalOptions="CenterAndExpand" >
+                        <Image x:Name="CellImage" />
 
                     </Frame>
                 </StackLayout>
