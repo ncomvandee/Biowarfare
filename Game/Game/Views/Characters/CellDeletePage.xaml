@@ -15,15 +15,23 @@
             <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
                CornerRadius="20" Margin="0, 20, 0, 0">
                 <StackLayout>
-                    <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                 Margin="0, 12, 0, 0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO" />
+                        </Grid.RowDefinitions>
+                        <Frame BorderColor="Black" BackgroundColor="White" CornerRadius="20" Margin="0, 20, 0, 0"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand">
 
-                        <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
-                        <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
-                        <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
-                    </StackLayout>
-                    
+                                <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
+
+                            </StackLayout>
+                        </Frame>
+                        
+                    </Grid>
                     <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+       
                 </StackLayout>
             </Frame>
 
