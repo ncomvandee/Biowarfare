@@ -23,9 +23,9 @@
                     <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
                                  Margin="0, 12, 0, 0">
 
-                        <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
-                        <Label Text="|" FontSize="Medium" FontAttributes="Bold"/>
-                        <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                        <Label Text="|" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                        <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
 
                     </StackLayout>
 
@@ -45,12 +45,12 @@
                              WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
                     </BoxView>
                     <Label Text="Items" Grid.Row="0" HorizontalOptions="CenterAndExpand" Margin="0, 12, 0, 0"
-                           FontSize="Medium" FontAttributes="Bold"/>
+                           FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
 
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" BackgroundColor="#D8BFFF" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked"/>
+            <Button Text="Edit" BackgroundColor="#D8BFFF" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked" TextColor="#452180"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
