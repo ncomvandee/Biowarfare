@@ -55,7 +55,7 @@
                     <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="3" ProgressColor="#452180"/>
 
                     <Button Text="Add Items" Grid.Row="4" CornerRadius="20" FontSize="Medium" WidthRequest="200"
-                            TextColor="#452180" BackgroundColor="#D8BFFF"/>
+                            TextColor="#452180" BackgroundColor="#D8BFFF" Clicked="AddItem_Clicked"/>
                 </Grid>
             </Frame>
 

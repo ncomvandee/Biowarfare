@@ -17,6 +17,8 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CellItemPage : ContentPage
     {
+        // View Model for Item
+        public readonly GenericViewModel<CharacterModel> ViewModel;
 
         // Empty Constructor for UTs
         public CellItemPage(bool UnitTest) { }
@@ -26,11 +28,14 @@ namespace Game.Views
         /// 
         /// Get the ItemIndexView Model
         /// </summary>
-        public CellItemPage()
+        public CellItemPage(GenericViewModel<CharacterModel> data)
         {
             InitializeComponent();
 
-         
+            BindingContext = this.ViewModel = data;
+
+            this.ViewModel.Title = "Update " + data.Title;
+
         }
 
         /// <summary>
