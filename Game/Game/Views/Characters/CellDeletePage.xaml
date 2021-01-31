@@ -49,8 +49,9 @@
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Medium"
                     BorderWidth="1" 
-                    BorderColor="black"
-                    TextColor="#452180">
+                    BorderColor="#D8BFFF"
+                    TextColor="#452180"
+                    BackgroundColor="#D8BFFF">
                     </Button>
 
                     <Button 
@@ -59,8 +60,9 @@
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Medium"
                     BorderWidth="1" 
-                    BorderColor="black"
-                    TextColor="#452180">
+                    BorderColor="#D8BFFF"
+                    TextColor="#452180"
+                    BackgroundColor="#D8BFFF">
                     </Button>
                 </StackLayout>
             </StackLayout>
