@@ -32,45 +32,9 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
-        }
+            CellTypePicker.SelectedItem = data.Data.Job.ToString();
+            CellImage.Source = data.Data.ImageURI.ToString();
 
-        /// <summary>
-        /// Constructor w/o parameters for Update Page
-        /// 
-        /// Get the ItemIndexView Model
-        /// </summary>
-        public CellUpdatePage()
-        {
-            InitializeComponent();
-
-            BindingContext = ViewModel;
-        }
-
-        /// <summary>
-        /// Save calls to Update
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void Save_Clicked(object sender, EventArgs e)
-        {
-            // If the image in the data box is empty, use the default one..
-            if (string.IsNullOrEmpty(ViewModel.Data.ImageURI))
-            {
-                ViewModel.Data.ImageURI = Services.ItemService.DefaultImageURI;
-            }
-
-            MessagingCenter.Send(this, "Update", ViewModel.Data);
-            await Navigation.PopModalAsync();
-        }
-
-        /// <summary>
-        /// Cancel and close this page
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void Cancel_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
         }
 
         /// <summary>
@@ -80,7 +44,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "Create", ViewModel.Data);
+            MessagingCenter.Send(this, "Update", ViewModel.Data);
 
             await Navigation.PopModalAsync();
         }
@@ -98,14 +62,17 @@ namespace Game.Views
             {
                 case "Basophil":
                     CellImage.Source = "basophil_bg.png";
+                    ViewModel.Data.ImageURI = "basophil_bg.png";
                     break;
 
                 case "Eosinophil":
                     CellImage.Source = "eosinophil_bg.png";
+                    ViewModel.Data.ImageURI = "eosinophil_bg.png";
                     break;
 
                 case "Macrophage":
                     CellImage.Source = "macrophage_bg.png";
+                    ViewModel.Data.ImageURI = "macrophage_bg.png";
                     break;
 
                 case "BCell":
