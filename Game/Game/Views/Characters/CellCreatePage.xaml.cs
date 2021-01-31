@@ -55,14 +55,17 @@ namespace Game.Views
             {
                 case "Basophil":
                     CellImage.Source = "basophil_bg.png";
+                    ViewModel.Data.ImageURI = "basophil_bg.png";
                     break;
 
                 case "Eosinophil":
                     CellImage.Source = "eosinophil_bg.png";
+                    ViewModel.Data.ImageURI = "eosinophil_bg.png";
                     break;
 
                 case "Macrophage":
                     CellImage.Source = "macrophage_bg.png";
+                    ViewModel.Data.ImageURI = "macrophage_bg.png";
                     break;
 
                 case "BCell":
