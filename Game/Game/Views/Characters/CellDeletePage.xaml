@@ -51,7 +51,9 @@
                     BorderWidth="1" 
                     BorderColor="#D8BFFF"
                     TextColor="#452180"
-                    BackgroundColor="#D8BFFF">
+                    BackgroundColor="#D8BFFF"
+                    WidthRequest="150" HeightRequest="40"
+                    CornerRadius="20">
                     </Button>
 
                     <Button 
@@ -62,7 +64,9 @@
                     BorderWidth="1" 
                     BorderColor="#D8BFFF"
                     TextColor="#452180"
-                    BackgroundColor="#D8BFFF">
+                    BackgroundColor="#D8BFFF"
+                    WidthRequest="150" HeightRequest="40"
+                    CornerRadius="20">
                     </Button>
                 </StackLayout>
             </StackLayout>
