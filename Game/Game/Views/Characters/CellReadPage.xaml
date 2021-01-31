@@ -16,8 +16,8 @@
                         <RowDefinition Height="AUTO" />
                         <RowDefinition Height="AUTO" />
                     </Grid.RowDefinitions>
-                    
-                    <BoxView BackgroundColor="White" HorizontalOptions="Center" Grid.Row="0"
+
+                    <BoxView BackgroundColor="#D8BFFF" HorizontalOptions="Center" Grid.Row="0"
                              WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
                     </BoxView>
                     <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
@@ -41,7 +41,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="white" HorizontalOptions="Center" Grid.Row="0"
+                    <BoxView BackgroundColor="#D8BFFF" HorizontalOptions="Center" Grid.Row="0"
                              WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
                     </BoxView>
                     <Label Text="Items" Grid.Row="0" HorizontalOptions="CenterAndExpand" Margin="0, 12, 0, 0"
@@ -50,7 +50,7 @@
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" BackgroundColor="LightGray" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked"/>
+            <Button Text="Edit" BackgroundColor="#D8BFFF" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
