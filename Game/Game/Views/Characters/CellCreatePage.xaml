@@ -12,7 +12,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
-            <Frame BorderColor="LightGray" WidthRequest="250" HeightRequest="250" BackgroundColor="LightGray"
+            <Frame BorderColor="#8051CB" WidthRequest="250" HeightRequest="250" BackgroundColor="#8051CB"
                    CornerRadius="20" Margin="0, 20, 0, 0" >
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
@@ -33,7 +33,7 @@
 
             <Entry Text="{Binding Data.Name}" Placeholder="Enter name here" HorizontalTextAlignment="Center" Margin="0, 0, 0, 10"/>
 
-            <Frame BorderColor="LightGray" BackgroundColor="LightGray" WidthRequest="300" HeightRequest="180" CornerRadius="20">
+            <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" WidthRequest="300" HeightRequest="180" CornerRadius="20">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="AUTO"/>
