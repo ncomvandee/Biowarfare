@@ -51,6 +51,16 @@ namespace Game.Views
 
             await Navigation.PopModalAsync();
         }
+        /// <summary>
+        /// Cancel the modification
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void CancelButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
 
     }
 }
