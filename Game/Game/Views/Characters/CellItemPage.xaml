@@ -2,16 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local_helpers="clr-namespace:Game.Helpers"
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
              x:Class="Game.Views.CellItemPage"
              >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <NavigationPage.TitleView>
         <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
     </NavigationPage.TitleView>
-    
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
@@ -36,7 +41,7 @@
                                 <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
 
                                     <Label Text="Equipqed Item" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                                    
+
                                 </StackLayout>
                             </Frame>
 
@@ -160,12 +165,22 @@
                             </StackLayout>
                         </Grid>
 
-                       
+
                     </StackLayout>
                 </Frame>
 
+                <StackLayout Orientation="Horizontal">
+   
+
+                        <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="#D8BFFF"
+                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
+                        Clicked="SaveButton_Clicked"/>
+    
+
+                </StackLayout>
+
             </StackLayout>
         </ScrollView>
-        
+
     </ContentPage.Content>
 </ContentPage>
