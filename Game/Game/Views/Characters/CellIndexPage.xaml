@@ -58,6 +58,11 @@
                                         <!--Ellipse for thumbnail--> 
                                         <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="LightGray"
                                            CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="50, 20, 0, 0" >
+
+                                            <!--Must change dynamically with type chosen, currently static image-->
+                                            <Image Source="eosinophil_bg.png">
+                       
+                                            </Image>
                                         </Frame>
 
                                         <!--Frame with stats bars-->
