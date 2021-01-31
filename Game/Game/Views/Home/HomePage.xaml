@@ -13,10 +13,17 @@
                 HorizontalOptions="Center">
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
-                    <Image
-                         Source="basophil_bg.png"
-                         Style="{StaticResource ImageLargeStyle}"
-                        />
+                    <!--Ellipse for thumbnail-->
+                    <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="White"
+                                           CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="0, 20, 0, 0" >
+
+                        <!--Must change dynamically with type chosen, currently static image-->
+                        <Image Source="basophil_bg.png">
+
+                        </Image>
+                    </Frame>
+
+
                 
                 </StackLayout>
                 
