@@ -23,7 +23,7 @@
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUtO" />
                                 <RowDefinition Height="AUTO" />
                                 <RowDefinition Height="AUTO" />
                                 <RowDefinition Height="AUTO" />
@@ -32,13 +32,8 @@
                                 <RowDefinition Height="AUTO" />
                             </Grid.RowDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-
                             <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" CornerRadius="20"   VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
-                                <StackLayout Orientation="Horizontal" Grid.Row="0">
+                                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
 
                                     <Label Text="Equipqed Item" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
                                     
@@ -47,41 +42,121 @@
 
                             <StackLayout Orientation="Horizontal" Grid.Row="1"  Margin="0,20,0,0">
 
-                                    
-                                    <Label Text="Head" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Head" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
                                     <Label Text="{Binding Data.Head}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
-                   
-                                
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                                <Label Text="Neckless" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
-                                <Label Text="{Binding Data.Necklass}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="2" >
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Neckless" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.Necklass}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="3"  Margin="0,20,0,0">
-                                <Label Text="Primary Hand" TextColor="White" FontSize="Body" FontAttributes="Bold"  Grid.Column="0"/>
-                                <Label Text="{Binding Data.PrimaryHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Primary Hand" TextColor="White" FontSize="Body" FontAttributes="Bold"  Grid.Column="0"/>
+                                    <Label Text="{Binding Data.PrimaryHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                                <Label Text="Off Hand" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
-                                <Label Text="{Binding Data.OffHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="4">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Off Hand" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.OffHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                                <Label Text="Left Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
-                                <Label Text="{Binding Data.LeftFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Left Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.LeftFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="6" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                                <Label Text="Right Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
-                                <Label Text="{Binding Data.RightFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="6">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Right Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.RightFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="7" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                                <Label Text="Feet" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
-                                <Label Text="{Binding Data.Feet}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="7">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Feet" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.Feet}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                </Grid>
                             </StackLayout>
                         </Grid>
 
