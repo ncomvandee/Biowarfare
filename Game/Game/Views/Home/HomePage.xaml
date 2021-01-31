@@ -14,8 +14,9 @@
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                     <Image
-                         Source="item.png"
-                         Style="{StaticResource ImageLargeStyle}"/>
+                         Source="basophil_bg.png"
+                         Style="{StaticResource ImageLargeStyle}"
+                        />
                 
                 </StackLayout>
                 
@@ -38,9 +39,11 @@
                         />
                 </StackLayout>
 
-                <Button
-                    Text="Enter"
-                    Clicked="GameButton_Clicked"/>
+                
+                <Button Text="Enter" BackgroundColor="#D8BFFF"
+                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
+                        Clicked="GameButton_Clicked"/>
+                  
 
             </StackLayout>
         </ScrollView>
