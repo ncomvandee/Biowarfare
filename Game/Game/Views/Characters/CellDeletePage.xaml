@@ -39,7 +39,7 @@
 
             <StackLayout HorizontalOptions="Center" Padding="20">
 
-                <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand" TextColor="#8051CB"/>
+                <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand" TextColor="White"/>
 
                 <StackLayout Orientation="Horizontal">
 
