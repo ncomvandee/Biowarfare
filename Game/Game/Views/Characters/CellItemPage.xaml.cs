@@ -35,7 +35,7 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = data.Data.Name + " Equipped Item" ;
-      
+
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Game.Views
             await Navigation.PushAsync(new ItemReadPage(new GenericViewModel<ItemModel>(data)));
 
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            //ItemsListView.SelectedItem = null;
         }
 
         /// <summary>

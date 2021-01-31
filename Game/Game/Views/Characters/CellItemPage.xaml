@@ -13,66 +13,84 @@
     </NavigationPage.TitleView>
     
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB"
+               CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
+                    <StackLayout>
 
-            <ListView x:Name="ItemsListView" 
-                    ItemsSource="{Binding Dataset}"
-                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    RefreshCommand="{Binding LoadItemsCommand}"
-                    CachingStrategy="RecycleElement"
-                    ItemSelected="OnItemSelected"
-                    HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="80"
-                    >
-                
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid ColumnSpacing="5" RowSpacing="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                            </Grid.RowDefinitions>
 
-                                <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
-                                        Source="{Binding ImageURI}"
-                                        Style="{StaticResource ImageMediumStyle}"
-                                        VerticalOptions="CenterAndExpand"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="1" Grid.Row="0"
-                                       Text="{Binding Name}" 
-                                       Style="{StaticResource ListStyle}"/>
+                            <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" CornerRadius="20"   VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
+                                <StackLayout Orientation="Horizontal" Grid.Row="0">
 
-                                <StackLayout Grid.Column="1" Grid.Row="1"
-                                    Orientation="Horizontal">
+                                    <Label Text="Equipqed Item" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
                                     
-                                    <Label 
-                                       Text="{Binding Attribute}" 
-                                       Style="{StaticResource ListStyle}"/>
-
-                                    <Label Text="{Binding Value}" 
-                                        Style="{StaticResource ListStyle}"/>
-                                
                                 </StackLayout>
+                            </Frame>
 
-                                <Label Grid.Column="1" Grid.Row="2"
-                                       Text="{Binding Description}" 
-                                       Style="{StaticResource ListStyle}"
-                                       FontSize="Micro"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="1"  Margin="0,20,0,0">
 
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                    
+                                    <Label Text="Head" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                    <Label Text="{Binding Data.Head}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                   
+                                
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Label Text="Neckless" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                <Label Text="{Binding Data.Necklass}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="3"  Margin="0,20,0,0">
+                                <Label Text="Primary Hand" TextColor="White" FontSize="Body" FontAttributes="Bold"  Grid.Column="0"/>
+                                <Label Text="{Binding Data.PrimaryHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Label Text="Off Hand" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                <Label Text="{Binding Data.OffHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Label Text="Left Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                <Label Text="{Binding Data.LeftFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="6" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Label Text="Right Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                <Label Text="{Binding Data.RightFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="7" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                                <Label Text="Feet" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
+                                <Label Text="{Binding Data.Feet}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                            </StackLayout>
+                        </Grid>
+
+                       
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>
