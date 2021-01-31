@@ -8,10 +8,6 @@
              x:Class="Game.Views.CellItemPage"
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" IconImageSource="icon_add.png"/>
-    </ContentPage.ToolbarItems>
-    
     <NavigationPage.TitleView>
         <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
     </NavigationPage.TitleView>
