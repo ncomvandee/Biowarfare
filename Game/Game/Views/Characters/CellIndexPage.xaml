@@ -60,7 +60,7 @@
                                            CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="50, 20, 0, 0" >
 
                                             <!--Must change dynamically with type chosen, currently static image-->
-                                            <Image Source="eosinophil_bg.png">
+                                            <Image Source="{Binding ImageURI}">
                        
                                             </Image>
                                         </Frame>
