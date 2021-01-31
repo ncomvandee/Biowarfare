@@ -33,7 +33,7 @@
 
             <Entry Text="{Binding Data.Name}" Placeholder="Enter name here" HorizontalTextAlignment="Center" Margin="0, 0, 0, 10" TextColor="#8051CB" PlaceholderColor="#8051CB"/>
 
-            <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" WidthRequest="300" HeightRequest="180" CornerRadius="20">
+            <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" WidthRequest="300" HeightRequest="180" CornerRadius="20">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="AUTO"/>
@@ -55,15 +55,15 @@
                     <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="3" ProgressColor="#452180"/>
 
                     <Button Text="Add Items" Grid.Row="4" CornerRadius="20" FontSize="Medium" WidthRequest="200"
-                            TextColor="#452180" BackgroundColor="#8051CB"/>
+                            TextColor="#452180" BackgroundColor="#D8BFFF"/>
                 </Grid>
             </Frame>
 
             <StackLayout Orientation="Horizontal" Margin="0, 10, 0, 0">
-                <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="#8051CB"
+                <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="#D8BFFF"
                         FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
                         Clicked="SaveButton_Clicked"/>
-                <Button Text="Cancel" HorizontalOptions="Center" Margin="0" BackgroundColor="#8051CB"
+                <Button Text="Cancel" HorizontalOptions="Center" Margin="0" BackgroundColor="#D8BFFF"
                         FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
                         Clicked="CancelButton_Clicked"/>
 
