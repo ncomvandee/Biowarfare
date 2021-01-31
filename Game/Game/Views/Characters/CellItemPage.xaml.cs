@@ -34,7 +34,7 @@ namespace Game.Views
 
             BindingContext = this.ViewModel = data;
 
-            this.ViewModel.Title = "Equipped Item" + data.Data.Name;
+            this.ViewModel.Title = data.Data.Name + " Equipped Item" ;
       
         }
 
