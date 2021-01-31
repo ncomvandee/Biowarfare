@@ -14,16 +14,32 @@
                         AlignContent="SpaceAround">
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
+                    <!--Ellipse for thumbnail-->
+                    <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="White"
+                                           CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 0" >
 
-                    <ImageButton
-                                Source="item.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="CharactersButton_Clicked"/>
+
+                        <ImageButton
+                            Source="macrophage_bg.png"
+                            Style="{StaticResource ImageLargeStyle}"
+                            Clicked="CharactersButton_Clicked"/>
+
+
+                    </Frame>
+
+
+
+
+
 
                     <Label 
                                 Text="Characters"
                                 Style="{StaticResource CenterMessageStyle}"/>
 
+                    
+                    
+                    
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
