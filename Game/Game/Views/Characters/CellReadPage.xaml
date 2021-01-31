@@ -32,7 +32,7 @@
 
 
                     <!--Frame for thumbnail-->
-                    <Frame BackgroundColor="White" WidthRequest="190" HeightRequest="190" BorderColor="LightGray"
+                    <Frame BackgroundColor="White" WidthRequest="190" HeightRequest="190" BorderColor="white"
                                            CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="0, 50, 0, 0" >
 
                         <!--Must change dynamically with type chosen, currently static image-->
