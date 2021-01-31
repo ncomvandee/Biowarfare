@@ -26,9 +26,9 @@
                         <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" CornerRadius="20" Margin="0, 20, 0, 0"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
                             <StackLayout Orientation="Horizontal">
 
-                                <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold"/>
-                                <BoxView Color="Black" WidthRequest="01" HeightRequest="1" ></BoxView>
-                                <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                                <BoxView Color="#452180" WidthRequest="01" HeightRequest="1" ></BoxView>
+                                <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -39,7 +39,7 @@
 
             <StackLayout HorizontalOptions="Center" Padding="20">
 
-                <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Are you sure you want to delete?" Style="{StaticResource MessageStyle}" HorizontalOptions="CenterAndExpand" TextColor="#8051CB"/>
 
                 <StackLayout Orientation="Horizontal">
 
@@ -49,7 +49,8 @@
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Medium"
                     BorderWidth="1" 
-                    BorderColor="black">
+                    BorderColor="black"
+                    TextColor="#452180">
                     </Button>
 
                     <Button 
@@ -58,7 +59,8 @@
                     HorizontalOptions="CenterAndExpand"
                     FontSize="Medium"
                     BorderWidth="1" 
-                    BorderColor="black">
+                    BorderColor="black"
+                    TextColor="#452180">
                     </Button>
                 </StackLayout>
             </StackLayout>
