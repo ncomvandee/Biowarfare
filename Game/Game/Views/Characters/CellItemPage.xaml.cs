@@ -10,23 +10,23 @@ using Game.ViewModels;
 namespace Game.Views
 {
     /// <summary>
-    /// Index Page
+    /// Cell Item Page
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0019:Use pattern matching", Justification = "<Pending>")]
     [DesignTimeVisible(false)] 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CellItemPage : ContentPage
     {
-        // View Model for Item
+        // View Model for cell
         public readonly GenericViewModel<CharacterModel> ViewModel;
 
         // Empty Constructor for UTs
         public CellItemPage(bool UnitTest) { }
 
         /// <summary>
-        /// Constructor for Index Page
+        /// Constructor for Cell Item Page
         /// 
-        /// Get the ItemIndexView Model
+        /// Get the CharacterIndexView Model
         /// </summary>
         public CellItemPage(GenericViewModel<CharacterModel> data)
         {
@@ -34,8 +34,8 @@ namespace Game.Views
 
             BindingContext = this.ViewModel = data;
 
-            this.ViewModel.Title = "Update " + data.Title;
-
+            this.ViewModel.Title = "Equipped Item" + data.Data.Name;
+      
         }
 
         /// <summary>
