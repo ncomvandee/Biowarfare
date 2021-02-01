@@ -4,12 +4,22 @@
              x:Class="Game.Views.CellReadPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" IconImageSource="icon_delete.png" Clicked="Delete_Clicked" />
+        <ToolbarItem Text="Delete" 
+                     IconImageSource="icon_delete.png" 
+                     Clicked="Delete_Clicked" 
+                     />
+        
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Frame BorderColor="#8051CB" WidthRequest="250" HeightRequest="250" BackgroundColor="#8051CB"
-               CornerRadius="20" Margin="0, 20, 0, 0" >
+            
+            <Frame BorderColor="#8051CB" 
+                   WidthRequest="250" 
+                   HeightRequest="250" 
+                   BackgroundColor="#8051CB"
+                   CornerRadius="20"
+                   Margin="0, 20, 0, 0" 
+                   >
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -17,55 +27,108 @@
                         <RowDefinition Height="AUTO" />
                     </Grid.RowDefinitions>
 
-                    <BoxView BackgroundColor="#D8BFFF" HorizontalOptions="Center" Grid.Row="0"
-                             WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 200" CornerRadius="10">
+                    <BoxView BackgroundColor="#D8BFFF" 
+                             HorizontalOptions="Center" 
+                             Grid.Row="0"
+                             WidthRequest="180" 
+                             HeightRequest="30" 
+                             Margin="0, 10, 0, 200" 
+                             CornerRadius="10"
+                             >
+                        
                     </BoxView>
-                    <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                 Margin="0, 12, 0, 0">
+                    
+                    <StackLayout Orientation="Horizontal" 
+                                 Grid.Row="0" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 Margin="0, 12, 0, 0"
+                                 >
 
-                        <Label Text="{Binding Data.Job}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                        <Label Text="|" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                        <Label Text="{Binding Data.Name}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                        <Label Text="{Binding Data.Job}" 
+                               FontSize="Medium" 
+                               FontAttributes="Bold" 
+                               TextColor="#452180"
+                               />
+                        
+                        <Label Text="|" 
+                               FontSize="Medium" 
+                               FontAttributes="Bold" 
+                               TextColor="#452180"
+                               />
+                        
+                        <Label Text="{Binding Data.Name}" 
+                               FontSize="Medium" 
+                               FontAttributes="Bold" 
+                               TextColor="#452180"
+                               />
 
                     </StackLayout>
 
 
 
                     <!--Frame for thumbnail-->
-                    <Frame BackgroundColor="White" WidthRequest="190" HeightRequest="190" BorderColor="white"
-                                           CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="0, 50, 0, 0" >
+                    <Frame BackgroundColor="White" 
+                           WidthRequest="190" 
+                           HeightRequest="190" 
+                           BorderColor="white"
+                           CornerRadius="100" 
+                           VerticalOptions="CenterAndExpand" 
+                           Margin="0, 50, 0, 0" 
+                           >
 
-                        <!--Must change dynamically with type chosen, currently static image-->
                         <Image Source="{Binding Data.ImageURI}">
 
                         </Image>
                     </Frame>
-
-
-
-                    <!--Ellipse does not support images, changed to frame above-->
-
-                    <!--<Ellipse Fill="white" WidthRequest="190" HeightRequest="190" Grid.Row="1" HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="CenterAndExpand" Margin="7"/>-->
                 </Grid>
             </Frame>
 
-            <Frame BorderColor="#8051CB" WidthRequest="300" HeightRequest="200" BackgroundColor="#8051CB"
-                    CornerRadius="20" Margin="0, 20, 0, 0" >
+            <Frame BorderColor="#8051CB" 
+                   WidthRequest="300" 
+                   HeightRequest="200" 
+                   BackgroundColor="#8051CB"
+                    CornerRadius="20" 
+                   Margin="0, 20, 0, 0" 
+                   >
+                   
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="#D8BFFF" HorizontalOptions="Center" Grid.Row="0"
-                             WidthRequest="180" HeightRequest="30" Margin="0, 10, 0, 0" CornerRadius="10">
+                    
+                    <BoxView BackgroundColor="#D8BFFF" 
+                             HorizontalOptions="Center" 
+                             Grid.Row="0"
+                             WidthRequest="180" 
+                             HeightRequest="30" 
+                             Margin="0, 10, 0, 0" 
+                             CornerRadius="10"
+                             >
+                        
                     </BoxView>
-                    <Label Text="Items" Grid.Row="0" HorizontalOptions="CenterAndExpand" Margin="0, 12, 0, 0"
-                           FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                    
+                    <Label Text="Items" 
+                           Grid.Row="0" 
+                           HorizontalOptions="CenterAndExpand" 
+                           Margin="0, 12, 0, 0"
+                           FontSize="Medium" 
+                           FontAttributes="Bold" 
+                           TextColor="#452180"
+                           />
 
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" BackgroundColor="#D8BFFF" FontSize="Body" WidthRequest="200" Margin="20" CornerRadius="20" Clicked="CellEditButton_Clicked" TextColor="#452180"/>
+            <Button Text="Edit" 
+                    BackgroundColor="#D8BFFF" 
+                    FontSize="Body" 
+                    WidthRequest="200" 
+                    Margin="20" 
+                    CornerRadius="20" 
+                    Clicked="CellEditButton_Clicked" 
+                    TextColor="#452180"
+                    />
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
