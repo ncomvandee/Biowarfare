@@ -180,7 +180,7 @@
                         x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"/>
                 </Frame>
 
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="200"
                 CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
                     <ListView x:Name="ItemsListView" 
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
