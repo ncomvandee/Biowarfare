@@ -109,21 +109,15 @@
                                  >
 
                         <Label Text="{Binding Data.Job}" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
                         
                         <Label Text="|" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
                         
                         <Label Text="{Binding Data.Name}" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
 
                     </StackLayout>
