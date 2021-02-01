@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
-             x:Class="Game.Views.CellCreatePage">
+             x:Class="Game.Views.CellCreatePage"
+             Title="{Binding Title}">
+               
 
     <ContentPage.Resources>
         <ResourceDictionary>
