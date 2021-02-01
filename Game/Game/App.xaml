@@ -558,7 +558,6 @@
                     <Setter Property="FontAttributes" Value="Bold"/>
                     <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                     <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                    <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
 
                 </Style>
 
@@ -582,6 +581,70 @@
 
                 </Style>
 
-            </ResourceDictionary>
+            
+            <Style TargetType ="Frame"
+                   x:Key="MediumSquareMidgroundFrame"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <Style TargetType="BoxView"
+                   x:Key="PrimaryBoxViewStyle"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="HeightRequest" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+
+
+            </Style>
+
+            <Style  TargetType="Frame"
+                    x:Key="MediumRectangleMidgroundFrame"
+                    BasedOn="{StaticResource OuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="LargeCircleFrameStyle"
+                   BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="190"/>
+                <Setter Property="HeightRequest" Value="190"/>
+
+            </Style>
+
+            <Style TargetType="Button"
+                   x:Key="PrimaryButtonStyle"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
+
+
+
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -3,80 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellReadPage">
 
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <Style TargetType ="Frame"
-                   x:Key="MediumSquareMidgroundFrame"
-                   BasedOn="{StaticResource OuterFrameStyle}"
-                   >
-                
-                <Setter Property="WidthRequest" Value="250"/>
-                <Setter Property="HeightRequest" Value="250"/>
-                <Setter Property="Margin" Value="0, 20, 0, 0"/>
-
-            </Style>
-
-            <Style TargetType="BoxView"
-                   x:Key="PrimaryBoxViewStyle"
-                   >
-
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="WidthRequest" Value="180"/>
-                <Setter Property="HeightRequest" Value="10"/>
-                <Setter Property="CornerRadius" Value="10"/>
-
-
-            </Style>
-
-            <Style  TargetType="Frame"
-                    x:Key="MediumRectangleMidgroundFrame"
-                    BasedOn="{StaticResource OuterFrameStyle}"
-                    >
-                
-                <Setter Property="WidthRequest" Value="300"/>
-                <Setter Property="HeightRequest" Value="200"/>
-            
-
-            </Style>
-
-            <Style TargetType="Frame"
-                   x:Key="LargeCircleFrameStyle"
-                   BasedOn="{StaticResource SmallCircleFrameStyle}"
-                   >
-                
-                <Setter Property="WidthRequest" Value="190"/>
-                <Setter Property="HeightRequest" Value="190"/>
-                  
-            </Style>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    
-    
-    
-    
-    
-    
-    
-
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
                      IconImageSource="icon_delete.png" 
@@ -151,27 +77,20 @@
                              >
                         
                     </BoxView>
-                    
-                    <Label Text="Items" 
+
+                    <Label Style="{StaticResource CellNameLabelStyle}"
+                           Text="Items" 
                            Grid.Row="0" 
-                           HorizontalOptions="CenterAndExpand" 
                            Margin="0, 12, 0, 0"
-                           FontSize="Medium" 
-                           FontAttributes="Bold" 
-                           TextColor="#452180"
                            />
 
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" 
-                    BackgroundColor="#D8BFFF" 
-                    FontSize="Body" 
-                    WidthRequest="200" 
+            <Button Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Edit" 
                     Margin="20" 
-                    CornerRadius="20" 
                     Clicked="CellEditButton_Clicked" 
-                    TextColor="#452180"
                     />
         
         </StackLayout>
