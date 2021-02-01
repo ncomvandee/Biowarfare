@@ -180,7 +180,7 @@
                         x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"/>
                 </Frame>
 
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
                 CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
                     <ListView x:Name="ItemsListView" 
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
@@ -195,7 +195,7 @@
                                 <ViewCell>
                                     <Grid ColumnSpacing="5" RowSpacing="1">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="50"/>
                                             <ColumnDefinition Width="200"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
@@ -221,9 +221,9 @@
                                         </StackLayout>
 
                                         <Label Grid.Column="1" Grid.Row="2" Text="{Binding Description}" Style="{StaticResource ListStyle}" FontSize="Micro"/>
-                                        
-                                        <Button Text="+" HorizontalOptions="Center"  VerticalOptions="End" Margin="0" BackgroundColor="#D8BFFF"
-                                        FontSize="Medium" WidthRequest="60" HeightRequest="60" TextColor="#452180" CornerRadius="20"
+
+                                        <Button Text="+"  VerticalOptions="CenterAndExpand"  BackgroundColor="#D8BFFF"
+                                        FontSize="Medium" WidthRequest="60" HeightRequest="40" TextColor="#452180" CornerRadius="20"
                                         Grid.RowSpan="3" Grid.Column="3"                                                
                                         Clicked="AddButton_Clicked"/>
 
