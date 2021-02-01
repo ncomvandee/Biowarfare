@@ -180,7 +180,7 @@
                         x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"/>
                 </Frame>
 
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" HeightRequest="200" WidthRequest="300"
+                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
                 CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
                     <ListView x:Name="ItemsListView" 
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
@@ -190,13 +190,13 @@
                     Margin="5,0,5,0"
                     RowHeight="80"
                     >
-
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid ColumnSpacing="5" RowSpacing="1">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="200"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
@@ -210,26 +210,22 @@
                                         Style="{StaticResource ImageMediumStyle}"
                                         VerticalOptions="CenterAndExpand"/>
 
-                                        <Label Grid.Column="1" Grid.Row="0"
-                                       Text="{Binding Name}" 
-                                       Style="{StaticResource ListStyle}"/>
+                                        <Label Grid.Column="1" Grid.Row="0" Text="{Binding Name}" Style="{StaticResource ListStyle}"/>
 
-                                        <StackLayout Grid.Column="1" Grid.Row="1"
-                                    Orientation="Horizontal">
+                                        <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
 
-                                            <Label 
-                                       Text="{Binding Attribute}" 
-                                       Style="{StaticResource ListStyle}"/>
+                                            <Label Text="{Binding Attribute}" Style="{StaticResource ListStyle}"/>
 
-                                            <Label Text="{Binding Value}" 
-                                        Style="{StaticResource ListStyle}"/>
+                                            <Label Text="{Binding Value}" Style="{StaticResource ListStyle}"/>
 
                                         </StackLayout>
 
-                                        <Label Grid.Column="1" Grid.Row="2"
-                                       Text="{Binding Description}" 
-                                       Style="{StaticResource ListStyle}"
-                                       FontSize="Micro"/>
+                                        <Label Grid.Column="1" Grid.Row="2" Text="{Binding Description}" Style="{StaticResource ListStyle}" FontSize="Micro"/>
+                                        
+                                        <Button Text="+" HorizontalOptions="Center"  VerticalOptions="End" Margin="0" BackgroundColor="#D8BFFF"
+                                        FontSize="Medium" WidthRequest="60" HeightRequest="60" TextColor="#452180" CornerRadius="20"
+                                        Grid.RowSpan="3" Grid.Column="3"                                                
+                                        Clicked="AddButton_Clicked"/>
 
                                     </Grid>
                                 </ViewCell>

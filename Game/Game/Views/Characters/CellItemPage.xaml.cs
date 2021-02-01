@@ -74,5 +74,10 @@ namespace Game.Views
 
             ItemsListView.ItemsSource = ItemViewModel.GetLocationItems(locationEnum);
         }
+
+        public void AddButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
