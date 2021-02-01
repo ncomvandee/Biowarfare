@@ -62,10 +62,17 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
+        /// <summary>
+        /// Show List of Location's item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Picker_Clicked(object sender, EventArgs e)
         {
-            //Game.Models.ItemLocationEnum location = LocationPicker.SelectedItem.ToString();
-            //var item = ItemViewModel.GetLocationItems(location);
+            //convert String to Enum
+            var locationEnum = ItemLocationEnumHelper.ConvertStringToEnum(LocationPicker.SelectedItem.ToString());
+
+            ItemsListView.ItemsSource = ItemViewModel.GetLocationItems(locationEnum);
         }
     }
 }
