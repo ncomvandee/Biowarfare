@@ -6,12 +6,17 @@
     <ContentPage.Resources>
         <ResourceDictionary>
 
+            <Color x:Key="PrimaryBackgroundPurple">#452180</Color>
+            <Color x:Key="PrimaryMidgroundPurple">#8051CB</Color>
+            <Color x:Key="PrimaryForegroundPurple">#D8BFFF</Color>
+            <Color x:Key="PrimaryAccentColor">White</Color>
+
             <Style TargetType="Frame"
                    x:Key="OuterFrameStyle"
                    >
-                
-                <Setter Property="BorderColor" Value="#8051CB"/>
-                <Setter Property="BackgroundColor" Value="#8051CB"/>
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
@@ -21,8 +26,8 @@
             <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"
                    >
-                <Setter Property="BorderColor" Value="#D8BFFF"/>
-                <Setter Property="BackgroundColor" Value="#D8BFFF"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
@@ -33,8 +38,8 @@
                    x:Key="SmallCircleFrameStyle"
                    >
 
-                <Setter Property="BorderColor" Value="White"/>
-                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryAccentColor}"/>
                 <Setter Property="CornerRadius" Value="100"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
@@ -49,7 +54,7 @@
                 
                 <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="TextColor" Value="#452180"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 
@@ -59,7 +64,7 @@
                    x:Key="ProgressBarLabelStyle"
                    >
 
-                <Setter Property="TextColor" Value="#452180"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="Margin" Value="10, 5"/>
 
@@ -69,7 +74,7 @@
                    x:Key="ProgressBarStyle"
                    >
 
-                <Setter Property="ProgressColor" Value="#452180"/>
+                <Setter Property="ProgressColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="Margin" Value="40, 5"/>
 
