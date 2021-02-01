@@ -22,8 +22,13 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB"
-               CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
+                
+                <Frame BorderColor="#8051CB" 
+                       BackgroundColor="#8051CB"
+                       CornerRadius="20" 
+                       Margin="0, 20, 0, 0" 
+                       Padding="10"
+                       >
 
                     <StackLayout>
 
@@ -39,15 +44,32 @@
                                 <RowDefinition Height="AUTO" />
                             </Grid.RowDefinitions>
 
-                            <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" CornerRadius="20"   VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="10">
-                                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+                            <Frame BorderColor="#D8BFFF" 
+                                   BackgroundColor="#D8BFFF" 
+                                   CornerRadius="20"  
+                                   VerticalOptions="CenterAndExpand" 
+                                   HorizontalOptions="Center" 
+                                   Padding="10"
+                                   >
 
-                                    <Label Text="Equipqed Item" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                                <StackLayout Orientation="Horizontal" 
+                                             Grid.Row="0" 
+                                             Grid.Column="2"
+                                             >
+
+                                    <Label Text="Equipqed Item" 
+                                           FontSize="Medium" 
+                                           FontAttributes="Bold" 
+                                           TextColor="#452180"
+                                           />
 
                                 </StackLayout>
                             </Frame>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="1"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="1"  
+                                         Margin="0,20,0,0"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -59,12 +81,25 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Head" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.Head}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Head" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.Head}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="2" >
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="2" 
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -76,12 +111,25 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Neckless" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.Necklass}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Neckless" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.Necklass}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="3"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -93,12 +141,25 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Primary Hand" TextColor="White" FontSize="Body" FontAttributes="Bold"  Grid.Column="0"/>
-                                    <Label Text="{Binding Data.PrimaryHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Primary Hand" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold"  
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.PrimaryHand}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="4">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="4"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -110,12 +171,25 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Off Hand" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.OffHand}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Off Hand" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.OffHand}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="5"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -127,12 +201,25 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Left Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.LeftFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Left Finger" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.LeftFinger}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="6">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="6"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -144,12 +231,24 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Right Finger" TextColor="White" FontSize="Body" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.RightFinger}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Right Finger" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.RightFinger}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
                                 </Grid>
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Row="7">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Row="7"
+                                         >
 
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -161,35 +260,63 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Feet" TextColor="White" FontSize="Body" FontAttributes="Bold" Margin="0,0,0,20" Grid.Column="0"/>
-                                    <Label Text="{Binding Data.Feet}" FontSize="Body" FontAttributes="Bold" Grid.Column="1"/>
+                                    <Label Text="Feet" 
+                                           TextColor="White" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Margin="0,0,0,20" 
+                                           Grid.Column="0"
+                                           />
+
+                                    <Label Text="{Binding Data.Feet}" 
+                                           FontSize="Body" 
+                                           FontAttributes="Bold" 
+                                           Grid.Column="1"
+                                           />
+
                                 </Grid>
                             </StackLayout>
                         </Grid>
-
-
                     </StackLayout>
                 </Frame>
 
-               <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" WidthRequest="200" HeightRequest="40"
-               CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
+               <Frame BorderColor="#8051CB" 
+                      BackgroundColor="#8051CB" 
+                      WidthRequest="200" 
+                      HeightRequest="40"
+                      CornerRadius="20" 
+                      Margin="0, 20, 0, 0" 
+                      Padding="10"
+                      >
+                   
                     <Picker 
                         BackgroundColor="Transparent"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItem}" 
                         SelectedItem="{Binding ItemViewModel.Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
-                        x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"/>
+                        x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"
+                        />
+                   
                 </Frame>
 
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="200"
-                CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
+                <Frame BorderColor="#8051CB" 
+                       BackgroundColor="#8051CB" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       HeightRequest="200"
+                       CornerRadius="20" 
+                       Margin="0, 20, 0, 0" 
+                       Padding="10"
+                       >
+                    
                     <ListView x:Name="ItemsListView" 
-                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    RefreshCommand="{Binding LoadItemsCommand}"
-                    CachingStrategy="RecycleElement"
-                    HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="80"
-                    >
+                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                        RefreshCommand="{Binding LoadItemsCommand}"
+                        CachingStrategy="RecycleElement"
+                        HasUnevenRows="true"
+                        Margin="5,0,5,0"
+                        RowHeight="80"
+                        >
+                        
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -205,27 +332,53 @@
                                             <RowDefinition Height="auto"/>
                                         </Grid.RowDefinitions>
 
-                                        <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
-                                        Source="{Binding ImageURI}"
-                                        Style="{StaticResource ImageMediumStyle}"
-                                        VerticalOptions="CenterAndExpand"/>
+                                        <Image  Grid.Column="0" 
+                                                Grid.Row="0" 
+                                                Grid.RowSpan="3"
+                                                Source="{Binding ImageURI}"
+                                                Style="{StaticResource ImageMediumStyle}"
+                                                VerticalOptions="CenterAndExpand"
+                                                />
 
-                                        <Label Grid.Column="1" Grid.Row="0" Text="{Binding Name}" Style="{StaticResource ListStyle}"/>
+                                        <Label Grid.Column="1" 
+                                               Grid.Row="0" Text="{Binding Name}" 
+                                               Style="{StaticResource ListStyle}"
+                                               />
 
-                                        <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                                        <StackLayout Grid.Column="1" 
+                                                     Grid.Row="1" 
+                                                     Orientation="Horizontal"
+                                                     >
 
-                                            <Label Text="{Binding Attribute}" Style="{StaticResource ListStyle}"/>
+                                            <Label Text="{Binding Attribute}" 
+                                                   Style="{StaticResource ListStyle}"
+                                                   />
 
-                                            <Label Text="{Binding Value}" Style="{StaticResource ListStyle}"/>
+                                            <Label Text="{Binding Value}" 
+                                                   Style="{StaticResource ListStyle}"
+                                                   />
 
                                         </StackLayout>
 
-                                        <Label Grid.Column="1" Grid.Row="2" Text="{Binding Description}" Style="{StaticResource ListStyle}" FontSize="Micro"/>
+                                        <Label Grid.Column="1" 
+                                               Grid.Row="2" 
+                                               Text="{Binding Description}" 
+                                               Style="{StaticResource ListStyle}" 
+                                               FontSize="Micro"
+                                               />
 
-                                        <Button Text="+"  VerticalOptions="CenterAndExpand"  BackgroundColor="#D8BFFF"
-                                        FontSize="Medium" WidthRequest="60" HeightRequest="40" TextColor="#452180" CornerRadius="20"
-                                        Grid.RowSpan="3" Grid.Column="3"                                                
-                                        Clicked="AddButton_Clicked"/>
+                                        <Button Text="+"  
+                                                VerticalOptions="CenterAndExpand"  
+                                                BackgroundColor="#D8BFFF"
+                                                FontSize="Medium" 
+                                                WidthRequest="60" 
+                                                HeightRequest="40" 
+                                                TextColor="#452180" 
+                                                CornerRadius="20"
+                                                Grid.RowSpan="3" 
+                                                Grid.Column="3"                                                
+                                                Clicked="AddButton_Clicked"
+                                                />
 
                                     </Grid>
                                 </ViewCell>
@@ -234,15 +387,33 @@
                     </ListView>
                 </Frame>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center"
+                             >
 
-                    <Button Text="Save" HorizontalOptions="Center" Margin="0" BackgroundColor="#D8BFFF"
-                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
-                        Clicked="SaveButton_Clicked"/>
+                    <Button Text="Save" 
+                            HorizontalOptions="Center" 
+                            Margin="0" 
+                            BackgroundColor="#D8BFFF"
+                            FontSize="Medium" 
+                            WidthRequest="150" 
+                            HeightRequest="40" 
+                            TextColor="#452180" 
+                            CornerRadius="20"
+                            Clicked="SaveButton_Clicked"
+                            />
 
-                    <Button Text="Cancel" HorizontalOptions="Center" Margin="0" BackgroundColor="#D8BFFF"
-                        FontSize="Medium" WidthRequest="150" HeightRequest="40" TextColor="#452180" CornerRadius="20"
-                        Clicked="CancelButton_Clicked"/>
+                    <Button Text="Cancel" 
+                            HorizontalOptions="Center" 
+                            Margin="0" 
+                            BackgroundColor="#D8BFFF"
+                            FontSize="Medium" 
+                            WidthRequest="150" 
+                            HeightRequest="40" 
+                            TextColor="#452180" 
+                            CornerRadius="20"
+                            Clicked="CancelButton_Clicked"
+                            />
 
                 </StackLayout>
             </StackLayout>
