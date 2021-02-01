@@ -51,21 +51,21 @@
                 <Setter Property="HeightRequest" Value="190"/>
                   
             </Style>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+            <Style TargetType="Button"
+                   x:Key="PrimaryButtonStyle"
+                   >
+                
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
             
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -151,27 +151,20 @@
                              >
                         
                     </BoxView>
-                    
-                    <Label Text="Items" 
+
+                    <Label Style="{StaticResource CellNameLabelStyle}"
+                           Text="Items" 
                            Grid.Row="0" 
-                           HorizontalOptions="CenterAndExpand" 
                            Margin="0, 12, 0, 0"
-                           FontSize="Medium" 
-                           FontAttributes="Bold" 
-                           TextColor="#452180"
                            />
 
                 </Grid>
             </Frame>
 
-            <Button Text="Edit" 
-                    BackgroundColor="#D8BFFF" 
-                    FontSize="Body" 
-                    WidthRequest="200" 
+            <Button Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Edit" 
                     Margin="20" 
-                    CornerRadius="20" 
                     Clicked="CellEditButton_Clicked" 
-                    TextColor="#452180"
                     />
         
         </StackLayout>
