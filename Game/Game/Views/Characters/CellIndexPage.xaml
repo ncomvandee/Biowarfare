@@ -4,13 +4,20 @@
              x:Class="Game.Views.CellIndexPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="CreateCell_Clicked" IconImageSource="icon_add.png"/>
+        
+        <ToolbarItem Text="Add" 
+                     Clicked="CreateCell_Clicked" 
+                     IconImageSource="icon_add.png"
+                     />
+        
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
+            <Label Text="Items List Page" 
+                   Style="{StaticResource HeaderStyle}"
+                   />
 
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset}"
@@ -28,9 +35,18 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame BorderColor="#8051CB" WidthRequest="300" HeightRequest="340" BackgroundColor="#8051CB"
-                            CornerRadius="20" Margin="25, 20, 0, 25" >
-                                <Grid ColumnSpacing="5" RowSpacing="1">
+                            <Frame BorderColor="#8051CB" 
+                                   WidthRequest="300" 
+                                   HeightRequest="340" 
+                                   BackgroundColor="#8051CB"
+                                   CornerRadius="20" 
+                                   Margin="25, 20, 0, 25" 
+                                   >
+                                
+                                <Grid ColumnSpacing="5" 
+                                      RowSpacing="1"
+                                      >
+                                    
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition Width="*"/>
@@ -39,34 +55,38 @@
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
+                                        
                                     </Grid.RowDefinitions>
 
-                                    <!--Frame with Cell name and character number--><!--
-                                    <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" WidthRequest="200" HeightRequest="30" CornerRadius="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="50, 0, 0, 280">
-
-                                        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                        Margin="0, 0, 0, 0">
-
-                                            <Label Text="{Binding Job}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                                            <Label Text="|" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                                            <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-
-                                        </StackLayout>
-                                    </Frame>-->
-
                                     <StackLayout>
-                                        <!--Ellipse for thumbnail--> 
-                                        <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="LightGray"
-                                           CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="50, 20, 0, 0" >
+                                        
+                                        <!--Frame for thumbnail--> 
+                                        <Frame BackgroundColor="White" 
+                                               WidthRequest="140" 
+                                               HeightRequest="140" 
+                                               BorderColor="LightGray"
+                                               CornerRadius="100" 
+                                               VerticalOptions="CenterAndExpand" 
+                                               Margin="50, 20, 0, 0" 
+                                               >
 
-                                            <!--Must change dynamically with type chosen, currently static image-->
                                             <Image Source="{Binding ImageURI}">
                        
                                             </Image>
+                                            
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame BorderColor="#D8BFFF" BackgroundColor="#D8BFFF" WidthRequest="200" HeightRequest="140" CornerRadius="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="50, 10, 0, 0">
+                                        <Frame BorderColor="#D8BFFF" 
+                                               BackgroundColor="#D8BFFF" 
+                                               WidthRequest="200" 
+                                               HeightRequest="140" 
+                                               CornerRadius="20" 
+                                               VerticalOptions="Center" 
+                                               HorizontalOptions="Center" 
+                                               Margin="50, 10, 0, 0"
+                                               >
+                                            
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="AUTO"/>
@@ -76,23 +96,67 @@
                                                     <RowDefinition Height="*"/>
                                                 </Grid.RowDefinitions>
 
-                                                <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand"
-                                                    Margin="0, 10, 0, 10">
+                                                <StackLayout Orientation="Horizontal" 
+                                                             Grid.Row="0" 
+                                                             HorizontalOptions="CenterAndExpand"
+                                                             Margin="0, 10, 0, 10"
+                                                             >
 
-                                                    <Label Text="{Binding Job}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                                                    <Label Text="|" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
-                                                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="#452180"/>
+                                                    <Label Text="{Binding Job}" 
+                                                           FontSize="Medium" 
+                                                           FontAttributes="Bold" 
+                                                           TextColor="#452180"
+                                                           />
+                                                    
+                                                    <Label Text="|" 
+                                                           FontSize="Medium" 
+                                                           FontAttributes="Bold" 
+                                                           TextColor="#452180"
+                                                           />
+                                                    
+                                                    <Label Text="{Binding Name}" 
+                                                           FontSize="Medium" 
+                                                           FontAttributes="Bold" 
+                                                           TextColor="#452180"
+                                                           />
 
                                                 </StackLayout>
 
-                                                <Label Text="Atk" Grid.Row="1" Margin="10, 5" TextColor="#452180" />
-                                                <ProgressBar Progress="0.5" Margin="40, 5"  Grid.Row="1" ProgressColor="#452180"/>
+                                                <Label Text="Atk" 
+                                                       Grid.Row="1" 
+                                                       Margin="10, 5" 
+                                                       TextColor="#452180" 
+                                                       />
+                                                
+                                                <ProgressBar Progress="0.5" 
+                                                             Margin="40, 5"  
+                                                             Grid.Row="1" 
+                                                             ProgressColor="#452180"
+                                                             />
 
-                                                <Label Text="Def" Grid.Row="2" Margin="10, 5" TextColor="#452180" />
-                                                <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="2" ProgressColor="#452180"/>
+                                                <Label Text="Def" 
+                                                       Grid.Row="2" 
+                                                       Margin="10, 5" 
+                                                       TextColor="#452180" 
+                                                       />
+                                                
+                                                <ProgressBar Progress="0.5" 
+                                                             Margin="40, 5" 
+                                                             Grid.Row="2" 
+                                                             ProgressColor="#452180"
+                                                             />
 
-                                                <Label Text="Spd" Grid.Row="3" Margin="10, 5" TextColor="#452180" />
-                                                <ProgressBar Progress="0.5" Margin="40, 5" Grid.Row="3" ProgressColor="#452180"/>
+                                                <Label Text="Spd" 
+                                                       Grid.Row="3" 
+                                                       Margin="10, 5" 
+                                                       TextColor="#452180" 
+                                                       />
+                                                
+                                                <ProgressBar Progress="0.5" 
+                                                             Margin="40, 5"
+                                                             Grid.Row="3" 
+                                                             ProgressColor="#452180"
+                                                             />
 
                                             </Grid>
                                         </Frame>
