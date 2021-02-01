@@ -3,6 +3,85 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellIndexPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Frame"
+                   x:Key="OuterFrameStyle"
+                   >
+                
+                <Setter Property="BorderColor" Value="#8051CB"/>
+                <Setter Property="BackgroundColor" Value="#8051CB"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="InnerFrameStyle"
+                   >
+                <Setter Property="BorderColor" Value="#D8BFFF"/>
+                <Setter Property="BackgroundColor" Value="#D8BFFF"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="SmallCircleFrameStyle"
+                   >
+
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value="140"/>
+                <Setter Property="WidthRequest" Value="140"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="CellNameLabelStyle"
+                   >
+                
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#452180"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="ProgressBarLabelStyle"
+                   >
+
+                <Setter Property="TextColor" Value="#452180"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="10, 5"/>
+
+            </Style>
+
+            <Style TargetType="ProgressBar"
+                   x:Key="ProgressBarStyle"
+                   >
+
+                <Setter Property="ProgressColor" Value="#452180"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="40, 5"/>
+
+            </Style>
+
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+ 
+
     <ContentPage.ToolbarItems>
         
         <ToolbarItem Text="Add" 
@@ -35,12 +114,11 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame BorderColor="#8051CB" 
+                            <Frame 
                                    WidthRequest="300" 
                                    HeightRequest="340" 
-                                   BackgroundColor="#8051CB"
-                                   CornerRadius="20" 
-                                   Margin="25, 20, 0, 25" 
+                                   Margin="0, 25, 0, 25" 
+                                   Style="{StaticResource OuterFrameStyle}"
                                    >
                                 
                                 <Grid ColumnSpacing="5" 
@@ -61,13 +139,9 @@
                                     <StackLayout>
                                         
                                         <!--Frame for thumbnail--> 
-                                        <Frame BackgroundColor="White" 
-                                               WidthRequest="140" 
-                                               HeightRequest="140" 
-                                               BorderColor="LightGray"
-                                               CornerRadius="100" 
-                                               VerticalOptions="CenterAndExpand" 
+                                        <Frame 
                                                Margin="50, 20, 0, 0" 
+                                               Style="{StaticResource SmallCircleFrameStyle}"
                                                >
 
                                             <Image Source="{Binding ImageURI}">
@@ -77,14 +151,11 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame BorderColor="#D8BFFF" 
-                                               BackgroundColor="#D8BFFF" 
+                                        <Frame 
                                                WidthRequest="200" 
                                                HeightRequest="140" 
-                                               CornerRadius="20" 
-                                               VerticalOptions="Center" 
-                                               HorizontalOptions="Center" 
                                                Margin="50, 10, 0, 0"
+                                               Style="{StaticResource InnerFrameStyle}"
                                                >
                                             
                                             <Grid>
@@ -103,59 +174,48 @@
                                                              >
 
                                                     <Label Text="{Binding Job}" 
-                                                           FontSize="Medium" 
-                                                           FontAttributes="Bold" 
-                                                           TextColor="#452180"
+                                                           Style="{StaticResource CellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="|" 
-                                                           FontSize="Medium" 
-                                                           FontAttributes="Bold" 
-                                                           TextColor="#452180"
+                                                           Style="{StaticResource CellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="{Binding Name}" 
-                                                           FontSize="Medium" 
-                                                           FontAttributes="Bold" 
-                                                           TextColor="#452180"
+                                                           Style="{StaticResource CellNameLabelStyle}"
                                                            />
 
                                                 </StackLayout>
 
                                                 <Label Text="Atk" 
                                                        Grid.Row="1" 
-                                                       Margin="10, 5" 
-                                                       TextColor="#452180" 
+                                                       Style="{StaticResource ProgressBarLabelStyle}"
                                                        />
                                                 
-                                                <ProgressBar Progress="0.5" 
-                                                             Margin="40, 5"  
+                                                <ProgressBar Progress="0.5"  
                                                              Grid.Row="1" 
-                                                             ProgressColor="#452180"
+                                                             Style="{StaticResource ProgressBarStyle}"
+                                                             
                                                              />
 
                                                 <Label Text="Def" 
                                                        Grid.Row="2" 
-                                                       Margin="10, 5" 
-                                                       TextColor="#452180" 
+                                                       Style="{StaticResource ProgressBarLabelStyle}"
                                                        />
                                                 
                                                 <ProgressBar Progress="0.5" 
-                                                             Margin="40, 5" 
                                                              Grid.Row="2" 
-                                                             ProgressColor="#452180"
+                                                             Style="{StaticResource ProgressBarStyle}" 
                                                              />
 
                                                 <Label Text="Spd" 
                                                        Grid.Row="3" 
-                                                       Margin="10, 5" 
-                                                       TextColor="#452180" 
+                                                       Style="{StaticResource ProgressBarLabelStyle}"
                                                        />
                                                 
-                                                <ProgressBar Progress="0.5" 
-                                                             Margin="40, 5"
+                                                <ProgressBar Progress="0.5"
                                                              Grid.Row="3" 
-                                                             ProgressColor="#452180"
+                                                             Style="{StaticResource ProgressBarStyle}"
                                                              />
 
                                             </Grid>
