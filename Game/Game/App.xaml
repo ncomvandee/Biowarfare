@@ -521,10 +521,9 @@
                     <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                     <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                     <Setter Property="CornerRadius" Value="20"/>
-                    <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                    <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
 
-                </Style>
+            </Style>
 
                 <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"

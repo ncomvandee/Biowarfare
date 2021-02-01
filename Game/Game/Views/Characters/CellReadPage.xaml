@@ -3,6 +3,80 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellReadPage">
 
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType ="Frame"
+                   x:Key="MediumSquareMidgroundFrame"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+                
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <Style TargetType="BoxView"
+                   x:Key="PrimaryBoxViewStyle"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="HeightRequest" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+
+
+            </Style>
+
+            <Style  TargetType="Frame"
+                    x:Key="MediumRectangleMidgroundFrame"
+                    BasedOn="{StaticResource OuterFrameStyle}"
+                    >
+                
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+            
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="LargeCircleFrameStyle"
+                   BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+                
+                <Setter Property="WidthRequest" Value="190"/>
+                <Setter Property="HeightRequest" Value="190"/>
+                  
+            </Style>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    
+    
+    
+    
+    
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
                      IconImageSource="icon_delete.png" 
@@ -13,13 +87,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <Frame BorderColor="#8051CB" 
-                   WidthRequest="250" 
-                   HeightRequest="250" 
-                   BackgroundColor="#8051CB"
-                   CornerRadius="20"
-                   Margin="0, 20, 0, 0" 
-                   >
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -27,13 +95,9 @@
                         <RowDefinition Height="AUTO" />
                     </Grid.RowDefinitions>
 
-                    <BoxView BackgroundColor="#D8BFFF" 
-                             HorizontalOptions="Center" 
+                    <BoxView Style="{StaticResource PrimaryBoxViewStyle}"
                              Grid.Row="0"
-                             WidthRequest="180" 
-                             HeightRequest="30" 
                              Margin="0, 10, 0, 200" 
-                             CornerRadius="10"
                              >
                         
                     </BoxView>
@@ -45,21 +109,15 @@
                                  >
 
                         <Label Text="{Binding Data.Job}" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
                         
                         <Label Text="|" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
                         
                         <Label Text="{Binding Data.Name}" 
-                               FontSize="Medium" 
-                               FontAttributes="Bold" 
-                               TextColor="#452180"
+                               Style="{StaticResource CellNameLabelStyle}"
                                />
 
                     </StackLayout>
@@ -67,12 +125,7 @@
 
 
                     <!--Frame for thumbnail-->
-                    <Frame BackgroundColor="White" 
-                           WidthRequest="190" 
-                           HeightRequest="190" 
-                           BorderColor="white"
-                           CornerRadius="100" 
-                           VerticalOptions="CenterAndExpand" 
+                    <Frame Style="{StaticResource LargeCircleFrameStyle}"
                            Margin="0, 50, 0, 0" 
                            >
 
@@ -83,11 +136,7 @@
                 </Grid>
             </Frame>
 
-            <Frame BorderColor="#8051CB" 
-                   WidthRequest="300" 
-                   HeightRequest="200" 
-                   BackgroundColor="#8051CB"
-                    CornerRadius="20" 
+            <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
                    >
                    
@@ -95,14 +144,10 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    
-                    <BoxView BackgroundColor="#D8BFFF" 
-                             HorizontalOptions="Center" 
+
+                    <BoxView Style="{StaticResource PrimaryBoxViewStyle}"
                              Grid.Row="0"
-                             WidthRequest="180" 
-                             HeightRequest="30" 
                              Margin="0, 10, 0, 0" 
-                             CornerRadius="10"
                              >
                         
                     </BoxView>
