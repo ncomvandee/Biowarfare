@@ -19,6 +19,9 @@ namespace Game.Views
 
         public GenericViewModel<CharacterModel> ViewModel = new GenericViewModel<CharacterModel>();
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CellCreatePage()
         {
             InitializeComponent();
@@ -42,6 +45,11 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
+        /// <summary>
+        /// Cancel the create process and go back to index page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void CancelButton_Clicked (object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
@@ -57,8 +65,15 @@ namespace Game.Views
             await Navigation.PushModalAsync(new NavigationPage(new CellItemPage(ViewModel)));
             await Navigation.PopAsync();
         }
+
+        /// <summary>
+        /// Changes Cell's thumbnail depends on selected CellType
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ImageChanged (object sender, EventArgs e)
         {
+            // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
 
             switch (TypeSelected)
