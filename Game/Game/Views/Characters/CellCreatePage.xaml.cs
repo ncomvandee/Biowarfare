@@ -106,5 +106,22 @@ namespace Game.Views
                     break;
             }
         }
+
+        public void OnSliderChanged (object sender, ValueChangedEventArgs e)
+        {
+            if (sender == AttackSlider)
+            {
+                AttackStat.Text = String.Format("{0}", (int)e.NewValue);
+            }
+            else if (sender == DefenseSlider)
+            {
+                DefenseStat.Text = String.Format("{0}", (int)e.NewValue);
+            }
+            else if (sender == SpeedSlider)
+            {
+                SpeedStat.Text = String.Format("{0}", (int)e.NewValue);
+            }
+            
+        }
     }
 }
