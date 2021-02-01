@@ -20,7 +20,8 @@ namespace Game.Views
         // View Model for cell
         public readonly GenericViewModel<CharacterModel> ViewModel;
 
-
+        //View Model of Item
+        readonly ItemIndexViewModel ItemViewModel = ItemIndexViewModel.Instance;
         // Empty Constructor for UTs
         public CellItemPage(bool UnitTest) { }
 
@@ -61,6 +62,10 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
-
+        public void Picker_Clicked(object sender, EventArgs e)
+        {
+            //Game.Models.ItemLocationEnum location = LocationPicker.SelectedItem.ToString();
+            //var item = ItemViewModel.GetLocationItems(location);
+        }
     }
 }

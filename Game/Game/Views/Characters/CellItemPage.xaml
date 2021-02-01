@@ -171,13 +171,18 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" WidthRequest="200" HeightRequest="40"
+               <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" WidthRequest="200" HeightRequest="40"
                CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
                     <Picker 
                         BackgroundColor="Transparent"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItem}" 
                         SelectedItem="{Binding ItemViewModel.Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
-                        x:Name="LocationPicker"/>
+                        x:Name="LocationPicker" SelectedIndexChanged="Picker_Clicked"/>
+                </Frame>
+
+                <Frame BorderColor="#8051CB" BackgroundColor="#8051CB" HeightRequest="200" WidthRequest="300"
+                CornerRadius="20" Margin="0, 20, 0, 0" Padding="10">
+ 
                 </Frame>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
