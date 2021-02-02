@@ -100,12 +100,6 @@
                     <Label Text="{Binding Data.Attack}" Grid.Row="1" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="AttackStat"/>
 
-                    <!--<ProgressBar Progress="0.5" 
-                                 Margin="40, 5"  
-                                 Grid.Row="1" 
-                                 ProgressColor="#452180" 
-                                 />-->
-
                     <Label Text="Def" 
                            Grid.Row="2" 
                            Margin="10, 5" 
@@ -118,12 +112,6 @@
                     <Label Text="{Binding Data.Attack}" Grid.Row="2" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="DefenseStat"/>
 
-                    <!--<ProgressBar Progress="0.5" 
-                                 Margin="40, 5" 
-                                 Grid.Row="2" 
-                                 ProgressColor="#452180"
-                                 />-->
-
                     <Label Text="Spd" 
                            Grid.Row="3"
                            Margin="10, 5" 
@@ -135,12 +123,6 @@
 
                     <Label Text="{Binding Data.Attack}" Grid.Row="3" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="SpeedStat"/>
-
-                    <!--<ProgressBar Progress="0.5" 
-                                 Margin="40, 5" 
-                                 Grid.Row="3" 
-                                 ProgressColor="#452180"
-                                 />-->
 
                     <Button Text="Add Items" 
                             Grid.Row="4" 
