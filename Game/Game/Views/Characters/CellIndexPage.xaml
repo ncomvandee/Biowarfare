@@ -15,7 +15,7 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" 
+            <Label Text="Cells List Page" 
                    Style="{StaticResource HeaderStyle}"
                    />
 
