@@ -50,6 +50,11 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
+        /// <summary>
+        /// Cancel the update process
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void CancelButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
@@ -66,8 +71,14 @@ namespace Game.Views
             await Navigation.PopAsync();
         }
 
+        /// <summary>
+        /// Changes the Cell thumbnail related on seleccted Celltype
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ImageChanged(object sender, EventArgs e)
         {
+            // Selected CellType as String
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
 
             switch (TypeSelected)
