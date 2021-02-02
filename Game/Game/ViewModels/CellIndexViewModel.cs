@@ -67,7 +67,7 @@ namespace Game.ViewModels
             // Register the Update Message
             MessagingCenter.Subscribe<CellUpdatePage, CharacterModel>(this, "Update", async (obj, data) =>
             {
-                // Have the item update itself
+                // Have the Cell update itself
                 data.Update(data);
 
                 await UpdateAsync(data as CharacterModel);
@@ -100,7 +100,7 @@ namespace Game.ViewModels
         #region DataOperations_CRUDi
 
         /// <summary>
-        /// Returns the item passed in
+        /// Returns the Cell passed in
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -111,8 +111,8 @@ namespace Game.ViewModels
                 return null;
             }
 
-            // This will walk the items and find if there is one that is the same.
-            // If so, it returns the item...
+            // This will walk the Cell and find if there is one that is the same.
+            // If so, it returns the Cell.
 
             var myList = Dataset.Where(a =>
                                         a.Name == data.Name &&
@@ -143,7 +143,7 @@ namespace Game.ViewModels
         #region SortDataSet
 
         /// <summary>
-        /// The Sort Order for the ItemModel
+        /// The Sort Order for the CharacterModel
         /// </summary>
         /// <param name="dataset"></param>
         /// <returns></returns>
@@ -158,10 +158,9 @@ namespace Game.ViewModels
         #endregion SortDataSet
 
         /// <summary>
-        /// Takes an item string ID and looks it up and returns the item
-        /// This is because the Items on a character are stores as strings of the GUID.  That way it can be saved to the DB.
+        /// Takes an Cell string ID and looks it up and returns the Cell
         /// </summary>
-        /// <param name="ItemID"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         public CharacterModel GetCell(string id)
         {
@@ -170,7 +169,7 @@ namespace Game.ViewModels
                 return null;
             }
 
-            // Item myData = DataStore.GetAsync_Item(ItemID).GetAwaiter().GetResult();
+            // Cell Data
             CharacterModel myData = Dataset.Where(a => a.Id.Equals(id)).FirstOrDefault();
             if (myData == null)
             {
