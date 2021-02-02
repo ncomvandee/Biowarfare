@@ -191,7 +191,7 @@ namespace Game.GameRules
                     Description = "C4",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "",
+                    ImageURI = "t_cell_bg.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
