@@ -67,7 +67,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Picker_Clicked(object sender, EventArgs e)
+        public void LocationPicker_Changed(object sender, EventArgs e)
         {
             //convert String to Enum
             var locationEnum = ItemLocationEnumHelper.ConvertStringToEnum(LocationPicker.SelectedItem.ToString());
