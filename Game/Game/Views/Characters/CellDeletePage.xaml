@@ -84,30 +84,28 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Button 
-                    Text="Delete" 
-                    Clicked="Delete_Clicked" 
-                    HorizontalOptions="CenterAndExpand"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="#D8BFFF"
-                    TextColor="#452180"
-                    BackgroundColor="#D8BFFF"
-                    WidthRequest="150" HeightRequest="40"
-                    CornerRadius="20">
+                    <Button Text="Delete" 
+                            Clicked="Delete_Clicked" 
+                            HorizontalOptions="CenterAndExpand"
+                            FontSize="Medium"
+                            BorderWidth="1" 
+                            BorderColor="#D8BFFF"
+                            TextColor="#452180"
+                            BackgroundColor="#D8BFFF"
+                            WidthRequest="150" HeightRequest="40"
+                            CornerRadius="20">  
                     </Button>
 
-                    <Button 
-                    Text="Cancel" 
-                    Clicked="Cancel_Clicked" 
-                    HorizontalOptions="CenterAndExpand"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="#D8BFFF"
-                    TextColor="#452180"
-                    BackgroundColor="#D8BFFF"
-                    WidthRequest="150" HeightRequest="40"
-                    CornerRadius="20">
+                    <Button Text="Cancel" 
+                            Clicked="Cancel_Clicked" 
+                            HorizontalOptions="CenterAndExpand"
+                            FontSize="Medium"
+                            BorderWidth="1" 
+                            BorderColor="#D8BFFF"
+                            TextColor="#452180"
+                            BackgroundColor="#D8BFFF"
+                            WidthRequest="150" HeightRequest="40"
+                            CornerRadius="20">
                     </Button>
                     
                 </StackLayout>
