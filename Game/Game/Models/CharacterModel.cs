@@ -24,8 +24,6 @@ namespace Game.Models
             ImageURI = "item.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
-
-            // Default to unknown, which is no special job
             Job = CellTypeEnum.BCell; 
         }
 
