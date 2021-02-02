@@ -93,11 +93,20 @@
                            TextColor="#452180" 
                            />
 
-                    <ProgressBar Progress="0.5" 
-                                 Margin="40, 5"  
-                                 Grid.Row="1" 
-                                 ProgressColor="#452180" 
-                                 />
+                    <Slider Minimum="0" Maximum="20" 
+                            Grid.Row="1" 
+                            Margin="30, 5" 
+                            ValueChanged="OnSliderChanged"
+                            x:Name="AttackSlider" 
+                            Value="{Binding Data.Attack}"/>
+
+                    <Label Text="{Binding Data.Attack}" 
+                           Grid.Row="1" 
+                           HorizontalOptions="End" 
+                           Margin="15, 5" 
+                           FontSize="Small" 
+                           FontAttributes="Bold"
+                           x:Name="AttackStat"/>
 
                     <Label Text="Def" 
                            Grid.Row="2" 
@@ -105,11 +114,21 @@
                            TextColor="#452180" 
                            />
 
-                    <ProgressBar Progress="0.5" 
-                                 Margin="40, 5" 
-                                 Grid.Row="2" 
-                                 ProgressColor="#452180"
-                                 />
+                    <Slider Minimum="0" 
+                            Maximum="20" 
+                            Grid.Row="2" 
+                            Margin="30, 5" 
+                            ValueChanged="OnSliderChanged"
+                            x:Name="DefenseSlider" 
+                            Value="{Binding Data.Defense}"/>
+
+                    <Label Text="{Binding Data.Defense}" 
+                           Grid.Row="2" 
+                           HorizontalOptions="End" 
+                           Margin="15, 5" 
+                           FontSize="Small" 
+                           FontAttributes="Bold"
+                           x:Name="DefenseStat"/>
 
                     <Label Text="Spd" 
                            Grid.Row="3" 
@@ -117,11 +136,21 @@
                            TextColor="#452180" 
                            />
 
-                    <ProgressBar Progress="0.5" 
-                                 Margin="40, 5" 
-                                 Grid.Row="3" 
-                                 ProgressColor="#452180"
-                                 />
+                    <Slider Minimum="0" 
+                            Maximum="20" 
+                            Grid.Row="3" 
+                            Margin="30, 5" 
+                            ValueChanged="OnSliderChanged"
+                            x:Name="SpeedSlider" 
+                            Value="{Binding Data.Speed}"/>
+
+                    <Label Text="{Binding Data.Speed}" 
+                           Grid.Row="3" 
+                           HorizontalOptions="End" 
+                           Margin="15, 5" 
+                           FontSize="Small" 
+                           FontAttributes="Bold"
+                           x:Name="SpeedStat"/>
 
                     <Button Text="Add Items" 
                             Grid.Row="4" 
