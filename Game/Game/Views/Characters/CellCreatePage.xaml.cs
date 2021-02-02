@@ -95,6 +95,7 @@ namespace Game.Views
 
                 case "BCell":
                     CellImage.Source = "b_cell_bg.png";
+                    ViewModel.Data.ImageURI = "b_cell_bg.png";
                     break;
 
                 case "KillerTCell":
