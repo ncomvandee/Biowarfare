@@ -75,6 +75,11 @@ namespace Game.Views
             ItemsListView.ItemsSource = ItemViewModel.GetLocationItems(locationEnum);
         }
 
+        /// <summary>
+        /// Asign item to character's location
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void AddButton_Clicked(object sender, EventArgs e)
         {
 
