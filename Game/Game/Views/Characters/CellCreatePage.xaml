@@ -109,7 +109,7 @@
                     <Slider Minimum="0" Maximum="20" Grid.Row="2" Margin="30, 5" ValueChanged="OnSliderChanged"
                             x:Name="DefenseSlider"/>
 
-                    <Label Text="{Binding Data.Attack}" Grid.Row="2" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
+                    <Label Text="{Binding Data.Defense}" Grid.Row="2" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="DefenseStat"/>
 
                     <Label Text="Spd" 
@@ -121,7 +121,7 @@
                     <Slider Minimum="0" Maximum="20" Grid.Row="3" Margin="30, 5" ValueChanged="OnSliderChanged"
                             x:Name="SpeedSlider"/>
 
-                    <Label Text="{Binding Data.Attack}" Grid.Row="3" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
+                    <Label Text="{Binding Data.Speed}" Grid.Row="3" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="SpeedStat"/>
 
                     <Button Text="Add Items" 
