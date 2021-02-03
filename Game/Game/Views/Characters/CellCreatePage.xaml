@@ -95,7 +95,7 @@
 
 
                     <Slider Minimum="0" Maximum="20" Grid.Row="1" Margin="30, 5" ValueChanged="OnSliderChanged"
-                            x:Name="AttackSlider"/>
+                            x:Name="AttackSlider" Value="{Binding Data.Attack}"/>
 
                     <Label Text="{Binding Data.Attack}" Grid.Row="1" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="AttackStat"/>
@@ -107,7 +107,7 @@
                            />
 
                     <Slider Minimum="0" Maximum="20" Grid.Row="2" Margin="30, 5" ValueChanged="OnSliderChanged"
-                            x:Name="DefenseSlider"/>
+                            x:Name="DefenseSlider" Value="{Binding Data.Defense}"/>
 
                     <Label Text="{Binding Data.Defense}" Grid.Row="2" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="DefenseStat"/>
@@ -119,7 +119,7 @@
                            />
 
                     <Slider Minimum="0" Maximum="20" Grid.Row="3" Margin="30, 5" ValueChanged="OnSliderChanged"
-                            x:Name="SpeedSlider"/>
+                            x:Name="SpeedSlider" Value="{Binding Data.Speed}"/>
 
                     <Label Text="{Binding Data.Speed}" Grid.Row="3" HorizontalOptions="End" Margin="15, 5" FontSize="Small" FontAttributes="Bold"
                            x:Name="SpeedStat"/>
