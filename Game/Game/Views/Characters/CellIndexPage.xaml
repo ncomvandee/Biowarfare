@@ -13,7 +13,8 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <StackLayout Style="{StaticResource OuterBoxStack}"
+                     HorizontalOptions="FillAndExpand">
 
             <Label Text="Cells List Page" 
                    Style="{StaticResource HeaderStyle}"
@@ -26,42 +27,36 @@
                     CachingStrategy="RecycleElement"
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="500"
-                    HorizontalScrollBarVisibility="Never"
-                    VerticalScrollBarVisibility="Never"
+                    HorizontalScrollBarVisibility="Default"
                     >
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame 
-                                   WidthRequest="300" 
-                                   HeightRequest="340" 
-                                   Margin="0, 25, 0, 25" 
-                                   Style="{StaticResource OuterFrameStyle}"
-                                   >
-                                
-                                <Grid ColumnSpacing="5" 
-                                      RowSpacing="1"
+                           
+                                <Grid HorizontalOptions="Center"
+                                      RowDefinitions="*"
+                                      ColumnDefinitions="*"
+                                      Padding="25"
                                       >
-                                    
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="auto"/>
-                                        
-                                    </Grid.RowDefinitions>
 
-                                    <StackLayout>
+                                <Frame Grid.Row="0"
+                                            HorizontalOptions="Center"
+                                            Grid.Column="0"
+                                            WidthRequest="275" 
+                                            HeightRequest="325"
+                                          
+                                            
+                                            Style="{StaticResource OuterFrameStyle}"
+                                            >
+                                </Frame>
+
+
+                                <StackLayout>
                                         
                                         <!--Frame for thumbnail--> 
                                         <Frame 
-                                               Margin="50, 20, 0, 0" 
+                                               
                                                Style="{StaticResource SmallCircleFrameStyle}"
                                                >
 
@@ -75,7 +70,7 @@
                                         <Frame 
                                                WidthRequest="200" 
                                                HeightRequest="140" 
-                                               Margin="50, 10, 0, 0"
+                                               
                                                Style="{StaticResource InnerFrameStyle}"
                                                >
                                             
@@ -142,7 +137,7 @@
                                         </Frame>
                                     </StackLayout>
                                 </Grid>
-                            </Frame>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
