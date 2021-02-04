@@ -186,4 +186,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\t_cell_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\b_cell_bg.png" />
+  </ItemGroup>
 </Project>
