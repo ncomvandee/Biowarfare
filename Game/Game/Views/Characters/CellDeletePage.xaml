@@ -42,7 +42,7 @@
                                Style="{StaticResource CellNameLabelStyle}"
                                />
 
-                        <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
+                        <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CellNameLabelStyle}"
                                />
 
