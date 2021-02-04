@@ -524,10 +524,12 @@
                    x:Key="OuterFrameStyle"
                    >
 
+                    <Setter Property="WidthRequest" Value="275"/>
+                    <Setter Property="HeightRequest" Value="325"/>
                     <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                     <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                     <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                    <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
 
             </Style>
             
@@ -536,6 +538,8 @@
                 <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"
                    >
+                    <Setter Property="WidthRequest" Value="200"/>
+                    <Setter Property="HeightRequest" Value="140"/>
                     <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                     <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                     <Setter Property="CornerRadius" Value="20"/>
@@ -670,7 +674,21 @@
                 <Setter Property="TextColor" Value="White"/>
 
             </Style>
-            
+
+            <!-- Grid Style for Index Page -->
+            <Style TargetType="Grid"
+                   x:Key="IndexGridViewStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="RowDefinitions" Value="*"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+                <Setter Property="Padding" Value="25"/>
+
+
+            </Style>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

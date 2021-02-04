@@ -3,34 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellIndexPage">
 
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <Style TargetType="Grid"
-                   x:Key="IndexGridViewStyle"
-                   >
-
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="RowDefinitions" Value="*"/>
-                <Setter Property="ColumnDefinitions" Value="*"/>
-                <Setter Property="Padding" Value="25"/>
-
-
-            </Style>
-            
-            
-        </ResourceDictionary>
-        
-        
-        
-        
-    </ContentPage.Resources>
-    
-    
-    
-    
-    
     <ContentPage.ToolbarItems>
         
         <ToolbarItem Text="Add" 
@@ -56,7 +28,6 @@
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
                     HorizontalScrollBarVisibility="Default"
-                
                     >
 
                 <ListView.ItemTemplate>
@@ -64,26 +35,20 @@
                         <ViewCell>
 
                             <Grid  Style="{StaticResource IndexGridViewStyle}"
-                                      >
+                                   >
 
-                                <Frame      Grid.Row="0"
-                                            HorizontalOptions="Center"
-                                            Grid.Column="0"
-                                            WidthRequest="275" 
-                                            HeightRequest="325"
-                                          
-                                            
-                                            Style="{StaticResource OuterFrameStyle}"
-                                            >
+                                <Frame Grid.Row="0"
+                                       Grid.Column="0"
+                                       Style="{StaticResource OuterFrameStyle}"
+                                       >
+                                    
                                 </Frame>
 
 
                                 <StackLayout>
                                         
                                         <!--Frame for thumbnail--> 
-                                        <Frame 
-                                               
-                                               Style="{StaticResource SmallCircleFrameStyle}"
+                                        <Frame Style="{StaticResource SmallCircleFrameStyle}"
                                                >
 
                                             <Image Source="{Binding ImageURI}">
@@ -93,11 +58,7 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame 
-                                               WidthRequest="200" 
-                                               HeightRequest="140" 
-                                               
-                                               Style="{StaticResource InnerFrameStyle}"
+                                        <Frame Style="{StaticResource InnerFrameStyle}"
                                                >
                                             
                                             <Grid>
@@ -163,8 +124,7 @@
                                         </Frame>
                                     </StackLayout>
                                 </Grid>
-                            
-                        </ViewCell>
+                            </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
