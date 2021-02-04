@@ -133,7 +133,7 @@
                                                        Style="{StaticResource ProgressBarLabelStyle}"
                                                        />
                                                 
-                                                <ProgressBar Progress="0.5"
+                                                <ProgressBar Progress="{Binding GetSpeedAsDouble}"
                                                              Grid.Row="3" 
                                                              Style="{StaticResource ProgressBarStyle}"
                                                              />

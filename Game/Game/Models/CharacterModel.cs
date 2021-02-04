@@ -102,9 +102,7 @@ namespace Game.Models
             return myReturn;
         }
 
-        /// <summary>
-        /// Helper varaible for converting attack attribute integer to double for progress bar
-        /// </summary>
+        // Helper varaible for converting Attack attribute integer to double for progress bar
         public double GetAttackAsDouble
         {
             get
@@ -113,11 +111,21 @@ namespace Game.Models
             }
         }
 
+        // Helper varaible for converting Defense attribute integer to double for progress bar
         public double GetDefenseAsDouble
         {
             get
             {
                 return GetDefenseTotal * 0.01;
+            }
+        }
+
+        // Helper varaible for converting Speed attribute integer to double for progress bar
+        public double GetSpeedAsDouble
+        {
+            get
+            {
+                return GetSpeedTotal * 0.01;
             }
         }
     }
