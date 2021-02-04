@@ -113,10 +113,9 @@
                                                        Style="{StaticResource ProgressBarLabelStyle}"
                                                        />
                                                 
-                                                <ProgressBar Progress="0.5"  
-                                                             Grid.Row="1" 
+                                                <ProgressBar Progress="{Binding GetAttackAsDouble}"
+                                                             Grid.Row="1"
                                                              Style="{StaticResource ProgressBarStyle}"
-                                                             
                                                              />
 
                                                 <Label Text="Def" 
