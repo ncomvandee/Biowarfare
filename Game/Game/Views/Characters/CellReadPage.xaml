@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Game.Views.CellReadPage">
+             x:Class="Game.Views.CellReadPage"
+             Title ="{Binding Title}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
@@ -42,7 +43,7 @@
                                Style="{StaticResource CellNameLabelStyle}"
                                />
                         
-                        <Label Text="{Binding Data.Name}" 
+                        <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
                                Style="{StaticResource CellNameLabelStyle}"
                                />
 
