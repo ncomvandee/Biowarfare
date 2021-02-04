@@ -22,12 +22,9 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
-                
-                <Frame BorderColor="#8051CB" 
-                       BackgroundColor="#8051CB"
-                       CornerRadius="20" 
-                       Margin="0, 20, 0, 0" 
-                       Padding="10"
+                <!--Information Box-->
+                <Frame Style="{StaticResource MediumSquareMidgroundFrame}" Padding="10"
+                       HeightRequest="500"
                        >
 
                     <StackLayout>
@@ -44,9 +41,7 @@
                                 <RowDefinition Height="AUTO" />
                             </Grid.RowDefinitions>
 
-                            <Frame BorderColor="#D8BFFF" 
-                                   BackgroundColor="#D8BFFF" 
-                                   CornerRadius="20"  
+                            <Frame Style="{StaticResource InnerFrameStyle}"
                                    VerticalOptions="CenterAndExpand" 
                                    HorizontalOptions="Center" 
                                    Padding="10"
@@ -58,9 +53,7 @@
                                              >
 
                                     <Label Text="Equipqed Item" 
-                                           FontSize="Medium" 
-                                           FontAttributes="Bold" 
-                                           TextColor="#452180"
+                                           Style="{StaticResource CellNameLabelStyle}"
                                            />
 
                                 </StackLayout>
@@ -82,9 +75,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Head" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -112,9 +104,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Neckless" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -142,9 +133,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Primary Hand" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold"  
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -172,9 +162,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Off Hand" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -202,9 +191,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Left Finger" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -232,9 +220,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Right Finger" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -261,10 +248,8 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Text="Feet" 
-                                           TextColor="White" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Margin="0,0,0,20" 
+                                           Style="{StaticResource SimpleLabelTextStyle}"
+                                           HorizontalOptions="Start"
                                            Grid.Column="0"
                                            />
 
@@ -279,13 +264,10 @@
                         </Grid>
                     </StackLayout>
                 </Frame>
-
-               <Frame BorderColor="#8051CB" 
-                      BackgroundColor="#8051CB" 
+                
+                <!--Picker-->
+                <Frame Style="{StaticResource OuterFrameStyle}"
                       WidthRequest="200" 
-                      HeightRequest="40"
-                      CornerRadius="20" 
-                      Margin="0, 20, 0, 0" 
                       Padding="10"
                       >
                    
@@ -297,14 +279,9 @@
                         />
                    
                 </Frame>
-
-                <Frame BorderColor="#8051CB" 
-                       BackgroundColor="#8051CB" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" 
-                       HeightRequest="200"
-                       CornerRadius="20" 
-                       Margin="0, 20, 0, 0" 
+                
+                <!--Item Box-->
+                <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
                        Padding="10"
                        >
                     
@@ -368,13 +345,8 @@
                                                />
 
                                         <Button Text="+"  
-                                                VerticalOptions="CenterAndExpand"  
-                                                BackgroundColor="#D8BFFF"
-                                                FontSize="Medium" 
-                                                WidthRequest="60" 
-                                                HeightRequest="40" 
-                                                TextColor="#452180" 
-                                                CornerRadius="20"
+                                                Style="{StaticResource PrimaryButtonStyle}"
+                                                WidthRequest="5"
                                                 Grid.RowSpan="3" 
                                                 Grid.Column="3"                                                
                                                 Clicked="AddButton_Clicked"
@@ -387,36 +359,24 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </Frame>
-
+                
+                <!--#Button -->
                 <StackLayout Orientation="Horizontal" 
                              HorizontalOptions="Center"
                              >
 
                     <Button Text="Save" 
-                            HorizontalOptions="Center" 
-                            Margin="0" 
-                            BackgroundColor="#D8BFFF"
-                            FontSize="Medium" 
-                            WidthRequest="150" 
-                            HeightRequest="40" 
-                            TextColor="#452180" 
-                            CornerRadius="20"
+                            Style="{StaticResource PrimaryButtonStyle}"
                             Clicked="SaveButton_Clicked"
                             />
 
                     <Button Text="Cancel" 
-                            HorizontalOptions="Center" 
-                            Margin="0" 
-                            BackgroundColor="#D8BFFF"
-                            FontSize="Medium" 
-                            WidthRequest="150" 
-                            HeightRequest="40" 
-                            TextColor="#452180" 
-                            CornerRadius="20"
+                            Style="{StaticResource PrimaryButtonStyle}"
                             Clicked="CancelButton_Clicked"
                             />
 
                 </StackLayout>
+                <!--#endButton-->
             </StackLayout>
         </ScrollView>
 
