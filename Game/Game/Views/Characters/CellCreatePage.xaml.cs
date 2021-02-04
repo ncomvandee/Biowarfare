@@ -109,6 +109,11 @@ namespace Game.Views
             }
         }
 
+        /// <summary>
+        /// Set the value to change on Slider
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnSliderChanged (object sender, ValueChangedEventArgs e)
         {
             if (sender == AttackSlider)
