@@ -641,6 +641,15 @@
 
             </Style>
 
+            <Style TargetType="Label"
+                   x:Key="SimpleLabelTextStyle">
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
 
 
 

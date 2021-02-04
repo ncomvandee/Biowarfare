@@ -7,25 +7,6 @@
              x:Class="Game.Views.CellDeletePage"
              >
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <Style TargetType="Label"
-                   x:Key="SimpleLabelTextStyle">
-
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="TextColor" Value="White"/>
-
-
-            </Style>
-            
-            
-            
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <NavigationPage.TitleView>
         <Label Text="Delete Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
     </NavigationPage.TitleView>
