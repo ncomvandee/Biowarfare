@@ -112,5 +112,13 @@ namespace Game.Models
                 return GetAttackTotal * 0.01;
             }
         }
+
+        public double GetDefenseAsDouble
+        {
+            get
+            {
+                return GetDefenseTotal * 0.01;
+            }
+        }
     }
 }
