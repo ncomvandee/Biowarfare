@@ -84,7 +84,7 @@
 
             <Frame BorderColor="#8051CB" 
                    BackgroundColor="#8051CB" 
-                   WidthRequest="300" HeightRequest="180" 
+                   WidthRequest="300" HeightRequest="300" 
                    CornerRadius="20"
                    >
 
