@@ -378,6 +378,7 @@
                                                 Grid.RowSpan="3" 
                                                 Grid.Column="3"                                                
                                                 Clicked="AddButton_Clicked"
+                                                CommandParameter="{Binding .}"
                                                 />
 
                                     </Grid>

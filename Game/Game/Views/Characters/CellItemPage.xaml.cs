@@ -38,7 +38,6 @@ namespace Game.Views
 
             this.ViewModel.Title = data.Data.Name + " Equipped Item" ;
             
-
         }
 
         /// <summary>
@@ -82,7 +81,10 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AddButton_Clicked(object sender, EventArgs e)
         {
-
+ 
+            var selectedItem = ((Button)sender).CommandParameter as ItemModel;
+            var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id) ;
+            
         }
     }
 }
