@@ -510,10 +510,16 @@
             </Style>
             
             
+            
+            
+            
             <!--____________________________________________________________________________________________________-->
 
-            <!-- Added styles, will file in correct area once comfortable -->
-
+            <!-- Added styles -->
+            
+            
+            
+            <!-- Outer frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="OuterFrameStyle"
                    >
@@ -524,7 +530,9 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
 
             </Style>
+            
 
+                <!-- Inner frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"
                    >
@@ -536,7 +544,32 @@
 
                 </Style>
 
-                <Style TargetType="Frame"
+            <!-- Upper frame on Delete, Read page -->
+            <Style TargetType ="Frame"
+                   x:Key="MediumSquareMidgroundFrame"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <!-- Lower frame on Read page -->
+            <Style  TargetType="Frame"
+                    x:Key="MediumRectangleMidgroundFrame"
+                    BasedOn="{StaticResource OuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+            <!-- Thumbnail frame on index page -->
+            <Style TargetType="Frame"
                    x:Key="SmallCircleFrameStyle"
                    >
 
@@ -550,7 +583,20 @@
 
                 </Style>
 
-                <Style TargetType="Label"
+            <!-- Thumbnail frame on Read, Delete page -->
+            <Style TargetType="Frame"
+                   x:Key="LargeCircleFrameStyle"
+                   BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="190"/>
+                <Setter Property="HeightRequest" Value="190"/>
+
+            </Style>
+
+
+            <!-- Cell name label for Index page, Read page, Delete page -->
+            <Style TargetType="Label"
                    x:Key="CellNameLabelStyle"
                    >
 
@@ -561,6 +607,7 @@
 
                 </Style>
 
+            <!-- Progress bar for index page -->
                 <Style TargetType="Label"
                    x:Key="ProgressBarLabelStyle"
                    >
@@ -571,7 +618,8 @@
 
                 </Style>
 
-                <Style TargetType="ProgressBar"
+            <!-- Progress bar for index page -->
+            <Style TargetType="ProgressBar"
                    x:Key="ProgressBarStyle"
                    >
 
@@ -581,18 +629,8 @@
 
                 </Style>
 
-            
-            <Style TargetType ="Frame"
-                   x:Key="MediumSquareMidgroundFrame"
-                   BasedOn="{StaticResource OuterFrameStyle}"
-                   >
 
-                <Setter Property="WidthRequest" Value="250"/>
-                <Setter Property="HeightRequest" Value="250"/>
-                <Setter Property="Margin" Value="0, 20, 0, 0"/>
-
-            </Style>
-
+            <!-- Box view used for Read page -->
             <Style TargetType="BoxView"
                    x:Key="PrimaryBoxViewStyle"
                    >
@@ -606,27 +644,8 @@
 
             </Style>
 
-            <Style  TargetType="Frame"
-                    x:Key="MediumRectangleMidgroundFrame"
-                    BasedOn="{StaticResource OuterFrameStyle}"
-                    >
 
-                <Setter Property="WidthRequest" Value="300"/>
-                <Setter Property="HeightRequest" Value="200"/>
-
-
-            </Style>
-
-            <Style TargetType="Frame"
-                   x:Key="LargeCircleFrameStyle"
-                   BasedOn="{StaticResource SmallCircleFrameStyle}"
-                   >
-
-                <Setter Property="WidthRequest" Value="190"/>
-                <Setter Property="HeightRequest" Value="190"/>
-
-            </Style>
-
+            <!-- Button style for Read, Update, Delete pages -->
             <Style TargetType="Button"
                    x:Key="PrimaryButtonStyle"
                    >
@@ -641,6 +660,7 @@
 
             </Style>
 
+            <!-- Simple white text used for Delete page -->
             <Style TargetType="Label"
                    x:Key="SimpleLabelTextStyle">
 
@@ -650,10 +670,7 @@
                 <Setter Property="TextColor" Value="White"/>
 
             </Style>
-
-
-
-
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
