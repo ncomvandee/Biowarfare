@@ -2,6 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellIndexPage">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Grid"
+                   x:Key="IndexGridViewStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="RowDefinitions" Value="*"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+                <Setter Property="Padding" Value="25"/>
+
+
+            </Style>
+            
+            
+        </ResourceDictionary>
+        
+        
+        
+        
+    </ContentPage.Resources>
+    
+    
+    
+    
     
     <ContentPage.ToolbarItems>
         
@@ -28,19 +56,17 @@
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
                     HorizontalScrollBarVisibility="Default"
+                
                     >
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                           
-                                <Grid HorizontalOptions="Center"
-                                      RowDefinitions="*"
-                                      ColumnDefinitions="*"
-                                      Padding="25"
+
+                            <Grid  Style="{StaticResource IndexGridViewStyle}"
                                       >
 
-                                <Frame Grid.Row="0"
+                                <Frame      Grid.Row="0"
                                             HorizontalOptions="Center"
                                             Grid.Column="0"
                                             WidthRequest="275" 
