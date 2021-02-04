@@ -132,6 +132,7 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
     <Content Include="eosinophil_bg.png" />
     <Content Include="icon_add.png" />
