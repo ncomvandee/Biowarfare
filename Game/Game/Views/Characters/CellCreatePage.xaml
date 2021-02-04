@@ -14,13 +14,27 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
-            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-" WidthRequest="30" CornerRadius="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0"/>
+                <Frame Grid.Row="0"
+                       BorderColor="White" BackgroundColor="White"
+                       WidthRequest="50" CornerRadius="10"
+                       HorizontalOptions="Fill" VerticalOptions="Center">
+                    <Label Grid.Row="0" Text="20" HorizontalOptions="Center" Margin="0" Padding="0" WidthRequest="40"
+                   FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                </Frame>
+                <Button Text="+" WidthRequest="30" CornerRadius="50" HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0"/>
+            </StackLayout>
+
+
             <Frame BorderColor="#8051CB" 
                 WidthRequest="250" 
                 HeightRequest="250" 
                 BackgroundColor="#8051CB"
                 CornerRadius="20" 
-                Margin="0, 20, 0, 0" 
+                Margin="0, 10, 0, 0" 
                 >
 
                 <StackLayout Orientation="Vertical" 
@@ -169,7 +183,7 @@
 
             <StackLayout Orientation="Horizontal" 
                          Margin="0, 10, 0, 0"
-                         >
+                         HorizontalOptions="Center">
                 
                 <Button Text="Save" 
                         HorizontalOptions="Center" 
