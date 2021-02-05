@@ -24,7 +24,7 @@
             <StackLayout Orientation="Vertical">
                 <!--Information Box-->
                 <Frame Style="{StaticResource MediumSquareMidgroundFrame}" Padding="10"
-                       HeightRequest="500"
+                       HeightRequest="500" WidthRequest="600"
                        >
 
                     <StackLayout>
