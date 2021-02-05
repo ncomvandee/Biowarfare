@@ -41,7 +41,7 @@
                                 <RowDefinition Height="AUTO" />
                             </Grid.RowDefinitions>
 
-                            <Frame Style="{StaticResource InnerFrameStyle}"
+                            <Frame Style="{StaticResource BasicAutoFrameStyle}"
                                    VerticalOptions="CenterAndExpand" 
                                    HorizontalOptions="Center" 
                                    Padding="10"
