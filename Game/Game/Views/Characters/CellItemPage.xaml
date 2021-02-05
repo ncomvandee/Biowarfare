@@ -80,7 +80,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.Head}" 
+                                    <Label Text=""
+                                           x:Name="CurrentHeadItem"
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -109,7 +110,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.Necklass}" 
+                                    <Label Text=""
+                                           x:Name="CurrentNecklessItem" 
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -138,7 +140,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.PrimaryHand}" 
+                                    <Label Text="" 
+                                           x:Name="CurrentPrimaryHand"
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -167,7 +170,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.OffHand}" 
+                                    <Label Text="" 
+                                           x:Name="CurrentOffHand"
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -196,7 +200,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.LeftFinger}" 
+                                    <Label Text="" 
+                                           x:Name="CurrentLeftFinger"
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -225,7 +230,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.RightFinger}" 
+                                    <Label Text="" 
+                                           x:Name="CurrentRightFinger"
                                            FontSize="Body" 
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
@@ -253,8 +259,8 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="{Binding Data.Feet}" 
-                                           FontSize="Body" 
+                                    <Label Text="" 
+                                           x:Name="CurrentFeet"
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
                                            />

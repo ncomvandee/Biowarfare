@@ -37,7 +37,17 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = data.Data.Name + " Equipped Item" ;
-            
+
+
+            //Get Current character item
+            CurrentHeadItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Head).FormatOutput();
+            CurrentNecklessItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Necklass).FormatOutput();
+            CurrentPrimaryHand.Text = ViewModel.Data.GetItem(ViewModel.Data.PrimaryHand).FormatOutput();
+            CurrentOffHand.Text = ViewModel.Data.GetItem(ViewModel.Data.OffHand).FormatOutput();
+            CurrentLeftFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.LeftFinger).FormatOutput();
+            CurrentRightFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.RightFinger).FormatOutput();
+            CurrentFeet.Text = ViewModel.Data.GetItem(ViewModel.Data.Feet).FormatOutput();
+
         }
 
         /// <summary>
@@ -84,7 +94,7 @@ namespace Game.Views
  
             var selectedItem = ((Button)sender).CommandParameter as ItemModel;
             var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id) ;
-            
+
         }
     }
 }
