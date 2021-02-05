@@ -517,8 +517,16 @@
 
             <!-- Added styles -->
             
-            
-            
+            <!--Basic Frame-->
+            <Style TargetType="Frame"
+                   x:Key="BasicAutoFrameStyle"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                
+            </Style>
+
             <!-- Outer frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="OuterFrameStyle"
