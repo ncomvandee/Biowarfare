@@ -57,5 +57,25 @@ namespace Game.Views
             await Navigation.PopAsync(); 
         }
 
+        public void ShowAttributeClicked (object sender, EventArgs e)
+        {
+
+            if (ImageFrame.IsVisible)
+            {
+                ImageFrame.IsVisible = false;
+                AttributeFrame.IsVisible = true;
+                
+            } 
+            else if (AttributeFrame.IsVisible)
+            {
+                AttributeFrame.IsVisible = false;
+                ImageFrame.IsVisible = true;
+            }
+
+
+
+            
+        }
+
     }
 }

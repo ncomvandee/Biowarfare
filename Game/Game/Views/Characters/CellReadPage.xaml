@@ -22,10 +22,6 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <!--<BoxView Style="{StaticResource PrimaryBoxViewStyle}"
-                             Grid.Row="0"
-                             Margin="0, 0, 0, 200"
-                             IsVisible="True"/>-->
                     <Frame Grid.Row="0" Margin="0, 10, 0, 0" BackgroundColor="#D8BFFF" BorderColor="#D8BFFF" CornerRadius="20"
                            WidthRequest="180" HeightRequest="30">
                         <StackLayout Orientation="Horizontal" 
@@ -49,10 +45,11 @@
                         </StackLayout>
                     </Frame>
 
-
-                    <Frame  BackgroundColor="Transparent" Grid.Row="1"
+                    <Frame  x:Name="AttributeFrame"
+                            BackgroundColor="Transparent" Grid.Row="1"
                             BorderColor="Transparent" Margin="10"
-                            HorizontalOptions="Center">
+                            HorizontalOptions="Center"
+                            IsVisible="False">
 
                         <Grid ColumnSpacing="15" RowSpacing="5" Margin="0, 40">
                             <Grid.RowDefinitions>
@@ -116,11 +113,14 @@
 
                     </Frame>
                     <!--Frame for thumbnail-->
-                    <Frame Style="{StaticResource LargeCircleFrameStyle}" Grid.Row="1" IsVisible="False">
+                    <Frame x:Name="ImageFrame" Style="{StaticResource LargeCircleFrameStyle}" Grid.Row="1">
 
                         <Image Source="{Binding Data.ImageURI}" />
                         
                     </Frame>
+
+                    <Button Grid.Row="1" WidthRequest="200" HeightRequest="200" Clicked="ShowAttributeClicked" BackgroundColor="Transparent" />
+                    
                 </Grid>
             </Frame>
 
