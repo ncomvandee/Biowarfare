@@ -21,8 +21,7 @@
         <StackLayout  HorizontalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Button Text="-" WidthRequest="30" CornerRadius="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center"
-                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0" Clicked="LevelDownButtonClicked" x:Name="LevelDownButton"
-                        IsEnabled="False"/>
+                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0" Clicked="LevelDownButtonClicked" x:Name="LevelDownButton"/>
 
                 <Frame Grid.Row="0"
                        BorderColor="White" BackgroundColor="White"
