@@ -65,19 +65,19 @@
                             </Grid.ColumnDefinitions>
 
                             <Image Source="attack_icon.png" WidthRequest="35" Grid.Row="0" Grid.Column="0" />
-                            <Label Text="{Binding Data.GetAttackTotal}" FontSize="Title" Grid.Row="1" Grid.Column="0" />
+                            <Label Text="{Binding Data.GetAttackTotal}" FontSize="Title" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" />
 
                             <Image Source="defense_icon.png" WidthRequest="35" Grid.Row="0" Grid.Column="1" />
-                            <Label Text="{Binding Data.GetDefenseTotal}" FontSize="Title" Grid.Row="1" Grid.Column="1" />
+                            <Label Text="{Binding Data.GetDefenseTotal}" FontSize="Title" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" />
 
                             <Image Source="speed_icon.png" WidthRequest="35" Grid.Row="0" Grid.Column="2" />
-                            <Label Text="{Binding Data.GetSpeedTotal}" FontSize="Title" Grid.Row="1" Grid.Column="2" />
+                            <Label Text="{Binding Data.GetSpeedTotal}" FontSize="Title" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" />
 
                             <Image Source="heart_icon.png" WidthRequest="35" Grid.Row="0" Grid.Column="3" />
-                            <Label Text="{Binding Data.GetMaxHealthTotal}" FontSize="Title" Grid.Row="1" Grid.Column="3" />
+                            <Label Text="{Binding Data.GetMaxHealthTotal}" FontSize="Title" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" />
 
                             <Label Text="XP" Grid.Row="0" Grid.Column="4" FontSize="Large"/>
-                            <Label Text="{Binding Data.ExperienceTotal}" FontSize="Title" Grid.Row="1" Grid.Column="4" />
+                            <Label Text="{Binding Data.ExperienceTotal}" FontSize="Title" Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center" />
                         </Grid>
 
                     </Frame>
