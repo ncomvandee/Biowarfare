@@ -272,7 +272,8 @@
                 </Frame>
                 
                 <!--Picker-->
-                <Frame Style="{StaticResource OuterFrameStyle}"
+                <Frame Style="{StaticResource BasicAutoFrameStyle}"
+                      BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                       WidthRequest="200" 
                       Padding="10"
                       >
