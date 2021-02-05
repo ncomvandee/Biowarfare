@@ -189,4 +189,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\b_cell_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\speed_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\attack_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\defense_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\heart_icon.png" />
+  </ItemGroup>
 </Project>

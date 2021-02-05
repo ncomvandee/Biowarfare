@@ -132,9 +132,12 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="attack_icon.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
+    <Content Include="defense_icon.png" />
     <Content Include="eosinophil_bg.png" />
+    <Content Include="heart_icon.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
     <Content Include="icon_delete.png" />
@@ -171,6 +174,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="speed_icon.png" />
     <Content Include="t_cell_bg.png" />
   </ItemGroup>
   <ItemGroup>
