@@ -281,7 +281,7 @@
                     <Picker 
                         BackgroundColor="Transparent"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItem}" 
-                        SelectedItem="{Binding ItemViewModel.Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
+                        SelectedItem="{Binding ItemIndexViewModel.Instance.Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
                         />
                    

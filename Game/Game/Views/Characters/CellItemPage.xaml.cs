@@ -21,7 +21,7 @@ namespace Game.Views
         public readonly GenericViewModel<CharacterModel> ViewModel;
 
         //View Model of Item
-        readonly ItemIndexViewModel ItemViewModel = ItemIndexViewModel.Instance;
+        //readonly ItemIndexViewModel ItemViewModel = ItemIndexViewModel.Instance;
         // Empty Constructor for UTs
         public CellItemPage(bool UnitTest) { }
 
@@ -40,13 +40,7 @@ namespace Game.Views
 
 
             //Get Current character item
-            CurrentHeadItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Head).FormatOutput();
-            CurrentNecklessItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Necklass).FormatOutput();
-            CurrentPrimaryHand.Text = ViewModel.Data.GetItem(ViewModel.Data.PrimaryHand).FormatOutput();
-            CurrentOffHand.Text = ViewModel.Data.GetItem(ViewModel.Data.OffHand).FormatOutput();
-            CurrentLeftFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.LeftFinger).FormatOutput();
-            CurrentRightFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.RightFinger).FormatOutput();
-            CurrentFeet.Text = ViewModel.Data.GetItem(ViewModel.Data.Feet).FormatOutput();
+            GetCharacterItem();
 
         }
 
@@ -78,10 +72,16 @@ namespace Game.Views
         /// <param name="e"></param>
         public void LocationPicker_Changed(object sender, EventArgs e)
         {
+            if(LocationPicker.SelectedItem == null)
+            {
+                return;
+            }
+
             //convert String to Enum
             var locationEnum = ItemLocationEnumHelper.ConvertStringToEnum(LocationPicker.SelectedItem.ToString());
 
-            ItemsListView.ItemsSource = ItemViewModel.GetLocationItems(locationEnum);
+            ItemsListView.ItemsSource = ItemIndexViewModel.Instance.GetLocationItems(locationEnum);
+
         }
 
         /// <summary>
@@ -94,7 +94,50 @@ namespace Game.Views
  
             var selectedItem = ((Button)sender).CommandParameter as ItemModel;
             var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id) ;
+            UpdatePageBindingContext();
 
+        }
+
+        /// <summary>
+        /// Rebiding BidingContext to refresh the page
+        /// </summary>
+        /// <returns></returns>
+        public bool UpdatePageBindingContext()
+        {
+            // Temp store off the Level
+            var data = this.ViewModel.Data;
+
+            //Store location picker
+            var locationPickerData = LocationPicker.SelectedItem;
+
+            // Clear the Binding and reset it
+            BindingContext = null;
+            this.ViewModel.Data = data;
+            this.ViewModel.Title = ViewModel.Data.Name + " Equipped Item";
+
+            BindingContext = this.ViewModel;
+
+            //Keep the display for the picker
+            LocationPicker.SelectedItem = locationPickerData;
+
+            //Get Current character item
+            GetCharacterItem();
+
+            return true;
+        }
+
+        /// <summary>
+        /// Display the current item of character base on location
+        /// </summary>
+        private void GetCharacterItem()
+        {
+            CurrentHeadItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Head).FormatOutput();
+            CurrentNecklessItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Necklass).FormatOutput();
+            CurrentPrimaryHand.Text = ViewModel.Data.GetItem(ViewModel.Data.PrimaryHand).FormatOutput();
+            CurrentOffHand.Text = ViewModel.Data.GetItem(ViewModel.Data.OffHand).FormatOutput();
+            CurrentLeftFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.LeftFinger).FormatOutput();
+            CurrentRightFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.RightFinger).FormatOutput();
+            CurrentFeet.Text = ViewModel.Data.GetItem(ViewModel.Data.Feet).FormatOutput();
         }
     }
 }
