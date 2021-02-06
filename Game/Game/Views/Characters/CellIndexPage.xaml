@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Game.Views.CellIndexPage">
+             x:Class="Game.Views.CellIndexPage"
+             Title ="Cell Index"
+             >
 
     <ContentPage.ToolbarItems>
         
@@ -15,10 +17,6 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}"
                      HorizontalOptions="FillAndExpand">
-
-            <Label Text="Cells List Page" 
-                   Style="{StaticResource HeaderStyle}"
-                   />
 
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset}"
