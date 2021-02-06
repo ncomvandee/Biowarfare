@@ -697,6 +697,207 @@
             </Style>
 
 
+
+            
+            <Style TargetType="Button"
+                   x:Key="LevelDownButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="Padding" Value="5, 0"/>
+                <Setter Property="IsEnabled" Value="False"/>
+
+            </Style>
+
+
+
+            <Style TargetType="Button"
+                   x:Key="LevelUpButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="Padding" Value="5, 0"/>
+
+            </Style>
+
+
+            <Style TargetType="Frame"
+                   x:Key="LevelFrameDisplayStyle"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="LevelTextDisplayStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+
+
+            <Style TargetType="Frame"
+                   x:Key="CreateFrameStyle"
+                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+
+            <Style TargetType="Picker"
+                   x:Key="CreatePickerStyle"
+                   >
+
+
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="FontSize" Value="Caption"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
+
+
+
+            <Style TargetType="Frame"
+                   x:Key="CreatePickerFrameStyle"
+                   >
+
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Padding" Value="0"/>
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="MediumCircleFrameStyle"
+                    BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="165"/>
+                <Setter Property="HeightRequest" Value="165"/>
+
+            </Style>
+
+            <Style TargetType="Entry"
+                   x:Key="CreateEntryStyle"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="StatsFrameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="180"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="StatsLabelTitleStyle"
+                   >
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="StatsLabelStyle"
+                   >
+
+                <Setter Property="Margin" Value="10, 5"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <Style TargetType="Slider"
+                   x:Key="StatsSliderStyle"
+                   >
+
+                <Setter Property="Margin" Value="30, 5"/>
+                <Setter Property="Maximum" Value="20"/>
+                <Setter Property="Minimum" Value="0"/>
+
+            </Style>
+
+
+            <Style TargetType="Label"
+                   x:Key="StatsNumberLabelStyle"
+                   >
+
+                <Setter Property="Margin" Value="15, 5"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+            <Style TargetType="Button"
+                   x:Key="AddItemsButtonStyle"
+                   >
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+
+
+            </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
