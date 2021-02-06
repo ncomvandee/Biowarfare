@@ -46,9 +46,15 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void SaveButton_Clicked (object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "Create", ViewModel.Data);
+            // Boolean for checking input completion
+            bool isValidInfo = CheckValidInfo();
 
-            await Navigation.PopModalAsync();
+            if (isValidInfo)
+            {
+                MessagingCenter.Send(this, "Create", ViewModel.Data);
+
+                await Navigation.PopModalAsync();
+            }
         }
 
         /// <summary>
@@ -197,6 +203,22 @@ namespace Game.Views
 
             // Call to set enable or disable the button
             SetEnableLevelButton();
+        }
+
+        /// <summary>
+        /// Check if the input data are complete or not
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckValidInfo()
+        {
+            // If name is blank, change the placeholder color to be red and return false
+            if (NameEntry.Text.Equals(""))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            return true;
         }
 
     }
