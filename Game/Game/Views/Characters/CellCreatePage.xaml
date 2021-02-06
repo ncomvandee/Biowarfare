@@ -42,10 +42,40 @@
             </Style>
 
 
+            <Style TargetType="Frame"
+                   x:Key="LevelFrameDisplayStyle"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+               
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="LevelTextDisplayStyle"
+                   >
+           
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                
+            </Style>
 
 
-
-
+            <Style TargetType="Frame"
+                   x:Key="CreateFrameStyle"
+                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                
+            </Style>
 
 
 
@@ -64,34 +94,34 @@
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal">
+                
                 <Button Text="-"
                         Clicked="LevelDownButtonClicked" 
                         x:Name="LevelDownButton"
-                        Style="{StaticResource LevelDownButtonStyle}"/>
+                        Style="{StaticResource LevelDownButtonStyle}"
+                        />
                 
                 <Frame Grid.Row="0"
-                       BorderColor="White" BackgroundColor="White"
-                       WidthRequest="50" CornerRadius="10"
-                       HorizontalOptions="Fill" VerticalOptions="Center">
+                       Style="{StaticResource LevelFrameDisplayStyle}"
+                       >
                     
-                    <Label Grid.Row="0" Text="{Binding Data.Level}" HorizontalOptions="Center" Margin="0" Padding="0" WidthRequest="40"
-                           FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold" x:Name="LevelEntry"/>
+                    <Label Grid.Row="0" 
+                           Text="{Binding Data.Level}" 
+                           x:Name="LevelEntry" 
+                           Style="{StaticResource LevelTextDisplayStyle}"
+                           />
                 </Frame>
                 
                 <Button Text="+" 
                         Clicked="LevelUpButtonClicked" 
                         x:Name="LevelUpButton"
-                        Style="{StaticResource LevelUpButtonStyle}"/>
+                        Style="{StaticResource LevelUpButtonStyle}"
+                        />
+                
             </StackLayout>
 
 
-            <Frame BorderColor="#8051CB" 
-                WidthRequest="250" 
-                HeightRequest="250" 
-                BackgroundColor="#8051CB"
-                CornerRadius="20" 
-                Margin="0, 10, 0, 0" 
-                >
+            <Frame Style="{StaticResource CreateFrameStyle}">
 
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="Center" 
