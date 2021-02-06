@@ -10,14 +10,64 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+
+
+            <Style TargetType="Button"
+                   x:Key="LevelDownButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="Padding" Value="5, 0"/>
+                <Setter Property="IsEnabled" Value="False"/>
+
+            </Style>
+
+
+
+            <Style TargetType="Button"
+                   x:Key="LevelUpButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="Padding" Value="5, 0"/>
+
+            </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </ResourceDictionary>
     </ContentPage.Resources>
+    
+   
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal">
-                <Button Text="-" WidthRequest="30" CornerRadius="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center"
-                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0" Clicked="LevelDownButtonClicked" x:Name="LevelDownButton"
-                        IsEnabled="False"/>
+                <Button Text="-"
+                        Clicked="LevelDownButtonClicked" 
+                        x:Name="LevelDownButton"
+                        Style="{StaticResource LevelDownButtonStyle}"/>
                 
                 <Frame Grid.Row="0"
                        BorderColor="White" BackgroundColor="White"
@@ -28,8 +78,10 @@
                            FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold" x:Name="LevelEntry"/>
                 </Frame>
                 
-                <Button Text="+" WidthRequest="30" CornerRadius="50" HorizontalOptions="StartAndExpand" VerticalOptions="Center"
-                        FontSize="Large" BackgroundColor="#8051CB" Padding="5, 0" Clicked="LevelUpButtonClicked" x:Name="LevelUpButton"/>
+                <Button Text="+" 
+                        Clicked="LevelUpButtonClicked" 
+                        x:Name="LevelUpButton"
+                        Style="{StaticResource LevelUpButtonStyle}"/>
             </StackLayout>
 
 
