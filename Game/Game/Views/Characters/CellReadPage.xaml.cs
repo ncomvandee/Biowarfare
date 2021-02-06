@@ -57,6 +57,11 @@ namespace Game.Views
             await Navigation.PopAsync(); 
         }
 
+        /// <summary>
+        /// Flip feature, to toggle between Cell thumbnail and attribute
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ShowAttributeClicked (object sender, EventArgs e)
         {
 
