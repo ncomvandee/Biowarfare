@@ -108,7 +108,15 @@
 
             </Style>
 
+            <Style TargetType="Frame"
+                   x:Key="MediumCircleFrameStyle"
+                    BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+                
+                <Setter Property="WidthRequest" Value="165"/>
+                <Setter Property="HeightRequest" Value="165"/>
 
+            </Style>
 
 
 
@@ -168,13 +176,7 @@
                         
                     </Frame>
 
-                    <Frame BackgroundColor="White" 
-                           WidthRequest="180" 
-                           HeightRequest="180" 
-                           BorderColor="LightGray"
-                           CornerRadius="100" 
-                           VerticalOptions="CenterAndExpand" 
-                           >
+                    <Frame Style="{StaticResource MediumCircleFrameStyle}">
                         
                         <Image x:Name="CellImage" />
 
