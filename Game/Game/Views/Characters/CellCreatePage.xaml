@@ -118,11 +118,80 @@
 
             </Style>
 
+            <Style TargetType="Entry"
+                   x:Key="CreateEntryStyle"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="StatsFrameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="180"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="StatsLabelTitleStyle"
+                   >
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <Style TargetType="Label"
+                   x:Key="StatsLabelStyle"
+                   >
+                
+                <Setter Property="Margin" Value="10, 5"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <Style TargetType="Slider"
+                   x:Key="StatsSliderStyle"
+                   >
+
+                <Setter Property="Margin" Value="30, 5"/>
+                <Setter Property="Maximum" Value="20"/>
+                <Setter Property="Minimum" Value="0"/>
+               
+            </Style>
 
 
+            <Style TargetType="Label"
+                   x:Key="StatsNumberLabelStyle"
+                   >
 
+                <Setter Property="Margin" Value="15, 5"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
 
+            </Style>
 
+            <Style TargetType="Button"
+                   x:Key="AddItemsButtonStyle"
+                   >
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+
+            </Style>
 
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -187,19 +256,12 @@
             </Frame>
 
             <Entry Text="{Binding Data.Name}" 
-                   Placeholder="Enter name here" 
-                   HorizontalTextAlignment="Center" 
-                   Margin="0, 0, 0, 10" 
-                   TextColor="#8051CB" 
-                   PlaceholderColor="#8051CB"
+                   Placeholder="Enter name here"
                    x:Name="NameEntry"
+                   Style="{StaticResource CreateEntryStyle}"
                    />
 
-            <Frame BorderColor="#8051CB" 
-                   BackgroundColor="#8051CB" 
-                   WidthRequest="300" 
-                   HeightRequest="180" 
-                   CornerRadius="20"
+            <Frame Style="{StaticResource StatsFrameStyle}"
                    >
                 
                 <Grid>
@@ -213,85 +275,61 @@
 
                     <Label Text="Stats" 
                            Grid.Row="0" 
-                           HorizontalOptions="Center" 
-                           Padding="10" 
-                           TextColor="#452180"
+                           Style="{StaticResource StatsLabelTitleStyle}"
                            />
 
                     <Label Text="Atk" 
                            Grid.Row="1" 
-                           Margin="10, 5" 
-                           TextColor="#452180" 
+                           Style="{StaticResource StatsLabelStyle}"
                            />
 
 
-                    <Slider Minimum="0" 
-                            Maximum="20" 
+                    <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="1" 
-                            Margin="30, 5" 
                             ValueChanged="OnSliderChanged"
                             x:Name="AttackSlider" 
                             Value="{Binding Data.Attack}"/>
 
-                    <Label Text="{Binding Data.Attack}" 
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Attack}" 
                            Grid.Row="1" 
-                           HorizontalOptions="End" 
-                           Margin="15, 5" 
-                           FontSize="Small" 
-                           FontAttributes="Bold"
                            x:Name="AttackStat"/>
 
                     <Label Text="Def" 
                            Grid.Row="2" 
-                           Margin="10, 5" 
-                           TextColor="#452180" 
+                           Style="{StaticResource StatsLabelStyle}"
                            />
 
-                    <Slider Minimum="0" 
-                            Maximum="20" 
+                    <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="2" 
-                            Margin="30, 5" 
                             ValueChanged="OnSliderChanged"
                             x:Name="DefenseSlider" 
                             Value="{Binding Data.Defense}"/>
 
-                    <Label Text="{Binding Data.Defense}" 
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Defense}" 
                            Grid.Row="2" 
-                           HorizontalOptions="End"
-                           Margin="15, 5" 
-                           FontSize="Small" 
-                           FontAttributes="Bold"
                            x:Name="DefenseStat"/>
 
                     <Label Text="Spd" 
                            Grid.Row="3"
-                           Margin="10, 5" 
-                           TextColor="#452180" 
+                           Style="{StaticResource StatsLabelStyle}"
                            />
 
-                    <Slider Minimum="0" 
-                            Maximum="20"
+                    <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="3"
-                            Margin="30, 5"
                             ValueChanged="OnSliderChanged"
                             x:Name="SpeedSlider"
                             Value="{Binding Data.Speed}"/>
 
-                    <Label Text="{Binding Data.Speed}"
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Speed}"
                            Grid.Row="3"
-                           HorizontalOptions="End"
-                           Margin="15, 5"
-                           FontSize="Small"
-                           FontAttributes="Bold"
                            x:Name="SpeedStat"/>
 
-                    <Button Text="Add Items" 
+                    <Button Style="{StaticResource AddItemsButtonStyle}"
+                            Text="Add Items" 
                             Grid.Row="4" 
-                            CornerRadius="20" 
-                            FontSize="Medium" 
-                            WidthRequest="200"
-                            TextColor="#452180" 
-                            BackgroundColor="#D8BFFF" 
                             Clicked="AddItem_Clicked"
                             />
                 </Grid>
@@ -302,27 +340,13 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
                 
-                <Button Text="Save" 
-                        HorizontalOptions="Center" 
-                        Margin="0" 
-                        BackgroundColor="#D8BFFF"
-                        FontSize="Medium" 
-                        WidthRequest="150" 
-                        HeightRequest="40" 
-                        TextColor="#452180" 
-                        CornerRadius="20"
+                <Button Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Save" 
                         Clicked="SaveButton_Clicked"
                         />
-                
-                <Button Text="Cancel" 
-                        HorizontalOptions="Center" 
-                        Margin="0" 
-                        BackgroundColor="#D8BFFF"
-                        FontSize="Medium" 
-                        WidthRequest="150" 
-                        HeightRequest="40" 
-                        TextColor="#452180" 
-                        CornerRadius="20"
+
+                <Button Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Cancel" 
                         Clicked="CancelButton_Clicked"
                         />
 
