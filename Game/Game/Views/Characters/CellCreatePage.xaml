@@ -82,7 +82,7 @@
                    x:Key="CreatePickerStyle"
                    >
                 
-                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                
                 <Setter Property="WidthRequest" Value="150"/>
                 <Setter Property="HeightRequest" Value="35"/>
                 <Setter Property="FontSize" Value="Caption"/>
@@ -99,10 +99,12 @@
                    >
                 
                 <Setter Property="Margin" Value="0, 10, 0, 0"/>
-                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="WidthRequest" Value="180"/>
                 <Setter Property="HeightRequest" Value="35"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Padding" Value="0"/>
 
             </Style>
 
@@ -154,6 +156,7 @@
                              HorizontalOptions="Center" 
                              >
 
+                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
                     
                         
                         <Picker Style="{StaticResource CreatePickerStyle}" 
@@ -163,7 +166,7 @@
                             SelectedIndexChanged="ImageChanged" 
                             />
                         
-               
+                    </Frame>
 
                     <Frame BackgroundColor="White" 
                            WidthRequest="180" 
