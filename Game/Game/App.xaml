@@ -516,7 +516,15 @@
             <!--____________________________________________________________________________________________________-->
 
             <!-- Added styles -->
-            
+
+
+
+
+            <!-- Frames -->
+
+
+
+
             <!--Basic Frame-->
             <Style TargetType="Frame"
                    x:Key="BasicAutoFrameStyle"
@@ -606,7 +614,80 @@
 
             </Style>
 
+            <!-- Level Display For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="LevelFrameDisplayStyle"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryAccentColor}"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
 
+            </Style>
+
+
+            <!-- Outer Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="CreateFrameStyle"
+                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+            <!-- Level Picker Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="CreatePickerFrameStyle"
+                   >
+
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Padding" Value="0"/>
+
+            </Style>
+
+            <!-- Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="MediumCircleFrameStyle"
+                    BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="165"/>
+                <Setter Property="HeightRequest" Value="165"/>
+
+            </Style>
+
+            <!-- Stats Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="StatsFrameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="180"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+
+            </Style>
+
+
+
+
+
+
+            <!-- Lables -->
+
+
+
+
+
+            
             <!-- Cell name label for Index page, Read page, Delete page -->
             <Style TargetType="Label"
                    x:Key="CellNameLabelStyle"
@@ -630,6 +711,75 @@
 
                 </Style>
 
+                <!-- Simple white text used for Delete page -->
+            <Style TargetType="Label"
+                       x:Key="SimpleLabelTextStyle">
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+
+            </Style>
+
+            <!-- Level Display Text For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="LevelTextDisplayStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+
+            <!-- Top Stats Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="StatsLabelTitleStyle"
+                   >
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <!-- Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="StatsLabelStyle"
+                   >
+
+                <Setter Property="Margin" Value="10, 5"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <!-- Number Value For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="StatsNumberLabelStyle"
+                   >
+
+                <Setter Property="Margin" Value="15, 5"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+
+
+
+
+
+            <!-- ProgressBar -->
+
+
+
+
+
             <!-- Progress bar for index page -->
             <Style TargetType="ProgressBar"
                    x:Key="ProgressBarStyle"
@@ -640,6 +790,16 @@
                     <Setter Property="Margin" Value="40, 5"/>
 
                 </Style>
+
+
+
+            
+
+            <!-- BoxView -->
+
+
+
+
 
 
             <!-- Box view used for Read page -->
@@ -657,31 +817,17 @@
             </Style>
 
 
-            <!-- Button style for Read, Update, Delete pages -->
-            <Style TargetType="Button"
-                   x:Key="PrimaryButtonStyle"
-                   >
 
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
-                <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="WidthRequest" Value="150"/>
-                <Setter Property="HeightRequest" Value="40"/>
-                <Setter Property="FontSize" Value="Medium"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
 
-            </Style>
 
-            <!-- Simple white text used for Delete page -->
-            <Style TargetType="Label"
-                   x:Key="SimpleLabelTextStyle">
 
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="TextColor" Value="White"/>
+            <!-- Grids -->
 
-            </Style>
+
+
+
+
+
 
             <!-- Grid Style for Index Page -->
             <Style TargetType="Grid"
@@ -698,7 +844,33 @@
 
 
 
-            
+
+
+
+            <!-- Buttons -->
+
+
+
+
+
+
+            <!-- Button style for Read, Update, Delete pages -->
+            <Style TargetType="Button"
+                   x:Key="PrimaryButtonStyle"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
+           
+            <!-- Level Down Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="LevelDownButtonStyle"
                    >
@@ -714,7 +886,7 @@
             </Style>
 
 
-
+            <!-- Level Up Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="LevelUpButtonStyle"
                    >
@@ -728,147 +900,8 @@
 
             </Style>
 
-
-            <Style TargetType="Frame"
-                   x:Key="LevelFrameDisplayStyle"
-                   >
-                <Setter Property="BorderColor" Value="{StaticResource PrimaryAccentColor}"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryAccentColor}"/>
-                <Setter Property="WidthRequest" Value="50"/>
-                <Setter Property="CornerRadius" Value="10"/>
-                <Setter Property="HorizontalOptions" Value="Fill"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-
-            </Style>
-
-            <Style TargetType="Label"
-                   x:Key="LevelTextDisplayStyle"
-                   >
-
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="Margin" Value="0"/>
-                <Setter Property="Padding" Value="0"/>
-                <Setter Property="WidthRequest" Value="40"/>
-                <Setter Property="FontSize" Value="Large"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-
-            </Style>
-
-
-            <Style TargetType="Frame"
-                   x:Key="CreateFrameStyle"
-                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
-                   >
-                <Setter Property="Margin" Value="0, 10, 0, 0"/>
-
-            </Style>
-
-
-            <Style TargetType="Picker"
-                   x:Key="CreatePickerStyle"
-                   >
-
-
-                <Setter Property="WidthRequest" Value="150"/>
-                <Setter Property="HeightRequest" Value="35"/>
-                <Setter Property="FontSize" Value="Caption"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-
-            </Style>
-
-
-
-            <Style TargetType="Frame"
-                   x:Key="CreatePickerFrameStyle"
-                   >
-
-                <Setter Property="Margin" Value="0, 10, 0, 0"/>
-                <Setter Property="WidthRequest" Value="180"/>
-                <Setter Property="HeightRequest" Value="35"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="Padding" Value="0"/>
-
-            </Style>
-
-            <Style TargetType="Frame"
-                   x:Key="MediumCircleFrameStyle"
-                    BasedOn="{StaticResource SmallCircleFrameStyle}"
-                   >
-
-                <Setter Property="WidthRequest" Value="165"/>
-                <Setter Property="HeightRequest" Value="165"/>
-
-            </Style>
-
-            <Style TargetType="Entry"
-                   x:Key="CreateEntryStyle"
-                   >
-
-                <Setter Property="Margin" Value="0, 0, 0, 10"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-
-
-            </Style>
-
-            <Style TargetType="Frame"
-                   x:Key="StatsFrameStyle"
-                   >
-
-                <Setter Property="WidthRequest" Value="300"/>
-                <Setter Property="HeightRequest" Value="180"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="CornerRadius" Value="20"/>
-
-            </Style>
-
-            <Style TargetType="Label"
-                   x:Key="StatsLabelTitleStyle"
-                   >
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="Padding" Value="10"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
-
-            </Style>
-
-            <Style TargetType="Label"
-                   x:Key="StatsLabelStyle"
-                   >
-
-                <Setter Property="Margin" Value="10, 5"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
-
-            </Style>
-
-            <Style TargetType="Slider"
-                   x:Key="StatsSliderStyle"
-                   >
-
-                <Setter Property="Margin" Value="30, 5"/>
-                <Setter Property="Maximum" Value="20"/>
-                <Setter Property="Minimum" Value="0"/>
-
-            </Style>
-
-
-            <Style TargetType="Label"
-                   x:Key="StatsNumberLabelStyle"
-                   >
-
-                <Setter Property="Margin" Value="15, 5"/>
-                <Setter Property="FontSize" Value="Small"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="HorizontalOptions" Value="End"/>
-
-            </Style>
-
+            
+            <!-- Add Items Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="AddItemsButtonStyle"
                    >
@@ -886,17 +919,73 @@
 
 
 
+            <!-- Picker -->
+
+
+
+
+
+            <!-- Level Picker For Create/Update Page -->
+            <Style TargetType="Picker"
+                   x:Key="CreatePickerStyle"
+                   >
+
+
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="FontSize" Value="Caption"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
 
 
 
 
 
 
+            <!-- Entry -->
+
+
+
+
+            
+
+            <!-- Enrty For Create/Update Page -->
+            <Style TargetType="Entry"
+                   x:Key="CreateEntryStyle"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+
+
+            </Style>
 
 
 
 
 
+
+            <!-- Slider -->
+
+            
+            
+            
+
+            <!-- Stats Sliders For Create/Update Page -->
+            <Style TargetType="Slider"
+                   x:Key="StatsSliderStyle"
+                   >
+
+                <Setter Property="Margin" Value="30, 5"/>
+                <Setter Property="Maximum" Value="20"/>
+                <Setter Property="Minimum" Value="0"/>
+
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>
