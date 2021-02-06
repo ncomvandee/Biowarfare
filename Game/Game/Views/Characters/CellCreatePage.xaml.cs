@@ -85,6 +85,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ImageChanged (object sender, EventArgs e)
         {
+
+            CellTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
+
             // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
 
@@ -215,6 +218,13 @@ namespace Game.Views
             if (NameEntry.Text.Equals(""))
             {
                 NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            // If CellType is not selected, change picker color to red and return false;
+            if (CellTypePicker.SelectedIndex == -1)
+            {
+                CellTypePicker.BackgroundColor = Color.Red;
                 return false;
             }
 
