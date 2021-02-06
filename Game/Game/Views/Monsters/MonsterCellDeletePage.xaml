@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Game.Views.MonsterCellDeletePage"
+             >
+
+    <NavigationPage.TitleView>
+        <Label Text="Delete Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <StackLayout Orientation="Vertical" >
+
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO" />
+                        <RowDefinition Height="AUTO" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView Style="{StaticResource PrimaryBoxViewStyle}"
+                             Grid.Row="0"
+                             Margin="0, 10, 0, 200" 
+                             >
+
+                    </BoxView>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 Grid.Row="0" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 Margin="0, 12, 0, 0"
+                                 >
+
+                        <Label Text="{Binding Data.Job}" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                        <Label Text="|" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                        <Label Text="{Binding Data.Name}" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                    </StackLayout>
+
+                    <Frame Style="{StaticResource LargeCircleFrameStyle}"
+                           Margin="0, 50, 0, 0" 
+                           >
+
+                        <Image Source="{Binding Data.ImageURI}">
+
+                        </Image>
+                    </Frame>
+                </Grid>
+            </Frame>
+
+            <StackLayout HorizontalOptions="Center" 
+                         Padding="20"
+                         >
+
+                <Label Text="Are you sure you want to delete?" 
+                       Style="{StaticResource SimpleLabelTextStyle}" 
+                        />
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Button Style="{StaticResource PrimaryButtonStyle}"
+                            Text="Delete" 
+                            Clicked="Delete_Clicked">  
+                    </Button>
+
+                    <Button Style="{StaticResource PrimaryButtonStyle}"
+                            Text="Cancel" 
+                            Clicked="Cancel_Clicked">
+                    </Button>
+                    
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
