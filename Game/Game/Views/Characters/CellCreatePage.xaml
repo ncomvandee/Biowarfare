@@ -78,6 +78,33 @@
             </Style>
 
 
+            <Style TargetType="Picker"
+                   x:Key="CreatePickerStyle"
+                   >
+                
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="FontSize" Value="Caption"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
+
+            
+
+            <Style TargetType="Frame"
+                   x:Key="CreatePickerFrameStyle"
+                   >
+                
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+
+            </Style>
 
 
 
@@ -126,19 +153,17 @@
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="Center" 
                              >
+
                     
-                    <Picker BackgroundColor="#D8BFFF" 
-                            WidthRequest="150"
-                            Margin="0, 10, 0, 0" 
-                            HeightRequest="35"
-                            FontSize="Caption" 
-                            HorizontalTextAlignment="Center"
+                        
+                        <Picker Style="{StaticResource CreatePickerStyle}" 
                             ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
                             SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                             x:Name="CellTypePicker" 
                             SelectedIndexChanged="ImageChanged" 
-                            TextColor="#452180"
                             />
+                        
+               
 
                     <Frame BackgroundColor="White" 
                            WidthRequest="180" 
