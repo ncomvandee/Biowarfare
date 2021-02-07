@@ -80,6 +80,11 @@ namespace Game.Views
 
         }
 
+        public void DeleteButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion Button
 
         /// <summary>
@@ -97,7 +102,7 @@ namespace Game.Views
             //convert String to Enum
             var locationEnum = ItemLocationEnumHelper.ConvertStringToEnum(LocationPicker.SelectedItem.ToString());
 
-            ItemsListView.ItemsSource = ItemIndexViewModel.Instance.GetLocationItems(locationEnum);
+            ItemsListView.ItemsSource = ItemIndexViewModel.Instance.GetLocationItems(locationEnum);   
 
         }
 
