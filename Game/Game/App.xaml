@@ -548,9 +548,21 @@
                     <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
 
             </Style>
-            
 
-                <!-- Inner frame on index page -->
+
+            <!-- Frame on home page -->
+            <Style TargetType="Frame"
+                   x:Key="HomePageFramestyle"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                   <Setter Property="Margin" Value="0,0,0,75"/>
+
+
+             </Style>
+
+
+            <!-- Inner frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"
                    >

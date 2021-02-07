@@ -3,25 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.HomePage">
 
-
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <Style TargetType="Frame"
-                   x:Key="HomePageFramestyle"
-                   BasedOn="{StaticResource OuterFrameStyle}"
-                   >
-
-                <Setter Property="Margin" Value="0,0,0,75"/>
-
-
-            </Style>
-            
-        </ResourceDictionary>
-        
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <ScrollView
             VerticalOptions="CenterAndExpand"
