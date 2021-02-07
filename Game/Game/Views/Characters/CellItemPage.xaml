@@ -355,7 +355,8 @@
                                                 Style="{StaticResource PrimaryButtonStyle}"
                                                 WidthRequest="40"
                                                 Grid.RowSpan="3" 
-                                                Grid.Column="3"                                                
+                                                Grid.Column="3" 
+                                                HorizontalOptions="End"
                                                 Clicked="AddButton_Clicked"
                                                 CommandParameter="{Binding .}"
                                                 />
