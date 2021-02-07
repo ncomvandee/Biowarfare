@@ -5,70 +5,63 @@ using System.Linq;
 namespace Game.Models
 {
     /// <summary>
-    /// The Types of Jobs a character can have
-    /// Used in Character Crudi, and in Battles.
+    /// The Types of Monster
+    /// Used in Monster Crudi, and in Battles.
     /// </summary>
-    public enum CellTypeEnum
+    public enum MonsterTypeEnum
     {
-        // White blood cell. Special ability, provide damage imumunity to friendly ally
-        BCell = 0,    
+        // 25% chance to poison Cell, reduce 1hp every turn, last for 5 turns
+        Spore = 1,
 
-        // White blood cell. Special abilities, dealth highest damage and +5 attack
-        KillerTCell = 10,
+        // 25 % to deal double damage, 50% to deal regular damage and 25% to heal opponent
+        Bacteria = 12,
 
-        // Lymphocyte. Special ability, +10 speed buff
-        NKCell = 12,
+        // Heals itself for 25% from damage dealth 
+        Parasite = 23,
 
-        // White blood cell. Special ability, increase friendly ally +5 defense when alive
-        Macrophage = 15,
+        // Deal pure attack damage to opponent 
+        Virus = 34,
 
-        // White blood cell. Special ability, +10 hp
-        Basophil = 19,
-
-        // White blood cell. Specical ability, +10 attack if monster is parasite
-        Eosinophil = 21,
+        // BOSS. +10 speed and 5% to cause opponent instant dead
+        Cancer = 45,
 
     }
 
     /// <summary>
     /// Friendly strings for the Enum Class
     /// </summary>
-    public static class CellTypeEnumExtension
+    public static class MonsterTypeEnumExtension
     {
         /// <summary>
         /// Display a String for the Enums
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string ToMessage(this CellTypeEnum value)
+        public static string ToMessage(this MonsterTypeEnum value)
         {
             // Default String
-            var Message = "Cell";
+            var Message = "Monster";
 
             switch (value)
             {
-                case CellTypeEnum.KillerTCell:
-                    Message = "Killer-T-Cell";
+                case MonsterTypeEnum.Spore:
+                    Message = "Spore";
                     break;
 
-                case CellTypeEnum.NKCell:
-                    Message = "NK-Cell";
+                case MonsterTypeEnum.Bacteria:
+                    Message = "Bacteria";
                     break;
 
-                case CellTypeEnum.BCell:
-                    Message = "B-Cell";
+                case MonsterTypeEnum.Parasite:
+                    Message = "Parasite";
                     break;
 
-                case CellTypeEnum.Macrophage:
-                    Message = "Macrophage";
+                case MonsterTypeEnum.Virus:
+                    Message = "Virus";
                     break;
 
-                case CellTypeEnum.Eosinophil:
-                    Message = "Eosinophil";
-                    break;
-
-                case CellTypeEnum.Basophil:
-                    Message = "Basophil";
+                case MonsterTypeEnum.Cancer:
+                    Message = "BIG BOSS CANCER";
                     break;
             }
 
@@ -77,16 +70,16 @@ namespace Game.Models
     }
 
     /// <summary>
-    /// Get the Cell type list
+    /// Get the Monster type list
     /// </summary>
-    public static class CharacterJobEnumHelper
+    public static class MonsterTypeEnumHelper
     {
-        public static List<string> GetCharacterJobList
+        public static List<string> GetMonsterTypeList
         {
             get
             {   
                 // List of all Cell type
-                var myList = Enum.GetNames(typeof(CellTypeEnum)).ToList();
+                var myList = Enum.GetNames(typeof(MonsterTypeEnum)).ToList();
 
                 return myList;
             }
