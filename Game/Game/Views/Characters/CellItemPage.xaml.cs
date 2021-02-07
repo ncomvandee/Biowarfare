@@ -123,6 +123,10 @@ namespace Game.Views
         /// <returns></returns>
         public bool UpdatePageBindingContext()
         {
+
+            //Get Current character item
+            GetCharacterItem();
+
             // Temp store off the Level
             var data = this.ViewModel.Data;
 
@@ -152,13 +156,13 @@ namespace Game.Views
         /// </summary>
         private void GetCharacterItem()
         {
-            GetCharacterItemHelper(CurrentHeadItem, ViewModel.Data.Head);
-            GetCharacterItemHelper(CurrentNecklessItem, ViewModel.Data.Necklass);
-            GetCharacterItemHelper(CurrentPrimaryHand, ViewModel.Data.PrimaryHand);
-            GetCharacterItemHelper(CurrentOffHand, ViewModel.Data.OffHand);
-            GetCharacterItemHelper(CurrentLeftFinger, ViewModel.Data.LeftFinger);
-            GetCharacterItemHelper(CurrentRightFinger, ViewModel.Data.RightFinger);
-            GetCharacterItemHelper(CurrentFeet, ViewModel.Data.Feet);
+            GetCharacterItemHelper(CurrentHeadItem, ViewModel.Data.Head, ItemLocationEnum.Head);
+            GetCharacterItemHelper(CurrentNecklessItem, ViewModel.Data.Necklass, ItemLocationEnum.Necklass);
+            GetCharacterItemHelper(CurrentPrimaryHand, ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand);
+            GetCharacterItemHelper(CurrentOffHand, ViewModel.Data.OffHand, ItemLocationEnum.OffHand);
+            GetCharacterItemHelper(CurrentLeftFinger, ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger);
+            GetCharacterItemHelper(CurrentRightFinger, ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger);
+            GetCharacterItemHelper(CurrentFeet, ViewModel.Data.Feet, ItemLocationEnum.Feet);
        
         }
 
@@ -167,15 +171,61 @@ namespace Game.Views
         /// </summary>
         /// <param name="locationLabel"> The location of the label</param>
         /// <param name="locationString">The string of the location</param>
-        public void GetCharacterItemHelper(Label locationLabel, string locationString )
+        public void GetCharacterItemHelper(Label locationLabel, string locationString, ItemLocationEnum itemLocationEnum)
         {
             if(locationString == null)
             {
                 locationLabel.Text = "";
+                DeleteButtonVisual(itemLocationEnum, false);
             }
             else
             {
                 locationLabel.Text = ViewModel.Data.GetItem(locationString).FormatOutput();
+                DeleteButtonVisual(itemLocationEnum, true);
+            }
+        }
+
+        /// <summary>
+        /// Make Delete Button invisible if no item equip in that location
+        /// </summary>
+        /// <param name="location"></param>
+        /// <param name="v">true if visible</param>
+        private void DeleteButtonVisual(ItemLocationEnum location, bool v)
+        {
+            switch (location)
+            {
+                
+                case ItemLocationEnum.Head:
+                    HeadDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.Necklass:
+                    NeckLessDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.PrimaryHand:
+                    PrimaryHandDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.OffHand:
+                    OffHandDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.LeftFinger:
+                    LeftFingerDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.RightFinger:
+                    RightFingerDeleteButton.IsVisible = v;
+                    break;
+
+                case ItemLocationEnum.Feet:
+                    FeetDeleteButton.IsVisible = v;
+                    break;
+
+                default:
+                    break;
+
             }
         }
         #endregion LocationItem

@@ -89,11 +89,12 @@
                                            />
 
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="HeadDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                         >
 
                                         <Button.CommandParameter>
@@ -132,12 +133,13 @@
                                            Grid.Column="1"
                                            />
 
-                                    <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"  
+                                    <Button Text="-" 
+                                            x:Name="NeckLessDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"  
                                             >
 
                                         <Button.CommandParameter>
@@ -177,11 +179,12 @@
                                            />
 
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="PrimaryHandDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                            >
 
                                         <Button.CommandParameter>
@@ -222,11 +225,12 @@
                                            />
 
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="OffHandDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                           >
 
                                         <Button.CommandParameter>
@@ -267,11 +271,12 @@
                                            />
 
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="LeftFingerDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                         >
 
                                         <Button.CommandParameter>
@@ -312,11 +317,12 @@
                                            />
 
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="RightFingerDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                         >
 
                                         <Button.CommandParameter>
@@ -355,11 +361,12 @@
                                            Grid.Column="1"
                                            />
                                     <Button Text="-"  
-                                                Style="{StaticResource PrimaryButtonStyle}"
-                                                WidthRequest="40" 
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
+                                            x:Name="FeetDeleteButton"
+                                            Style="{StaticResource PrimaryButtonStyle}"
+                                            WidthRequest="40" 
+                                            Grid.Column="3" 
+                                            HorizontalOptions="End"
+                                            Clicked="DeleteButton_Clicked"
                                         >
 
                                         <Button.CommandParameter>
