@@ -126,18 +126,39 @@ namespace Game.Views
             return true;
         }
 
+
+        #region LocationItem
         /// <summary>
         /// Display the current item of character base on location
         /// </summary>
         private void GetCharacterItem()
         {
-            CurrentHeadItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Head).FormatOutput();
-            CurrentNecklessItem.Text = ViewModel.Data.GetItem(ViewModel.Data.Necklass).FormatOutput();
-            CurrentPrimaryHand.Text = ViewModel.Data.GetItem(ViewModel.Data.PrimaryHand).FormatOutput();
-            CurrentOffHand.Text = ViewModel.Data.GetItem(ViewModel.Data.OffHand).FormatOutput();
-            CurrentLeftFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.LeftFinger).FormatOutput();
-            CurrentRightFinger.Text = ViewModel.Data.GetItem(ViewModel.Data.RightFinger).FormatOutput();
-            CurrentFeet.Text = ViewModel.Data.GetItem(ViewModel.Data.Feet).FormatOutput();
+            GetCharacterItemHelper(CurrentHeadItem, ViewModel.Data.Head);
+            GetCharacterItemHelper(CurrentNecklessItem, ViewModel.Data.Necklass);
+            GetCharacterItemHelper(CurrentPrimaryHand, ViewModel.Data.PrimaryHand);
+            GetCharacterItemHelper(CurrentOffHand, ViewModel.Data.OffHand);
+            GetCharacterItemHelper(CurrentLeftFinger, ViewModel.Data.LeftFinger);
+            GetCharacterItemHelper(CurrentRightFinger, ViewModel.Data.RightFinger);
+            GetCharacterItemHelper(CurrentFeet, ViewModel.Data.Feet);
+       
         }
+
+        /// <summary>
+        /// Print the item of a location if not null. Otherwise print empty string
+        /// </summary>
+        /// <param name="locationLabel"> The location of the label</param>
+        /// <param name="locationString">The string of the location</param>
+        public void GetCharacterItemHelper(Label locationLabel, string locationString )
+        {
+            if(locationString == null)
+            {
+                locationLabel.Text = "";
+            }
+            else
+            {
+                locationLabel.Text = ViewModel.Data.GetItem(locationString).FormatOutput();
+            }
+        }
+        #endregion LocationItem
     }
 }
