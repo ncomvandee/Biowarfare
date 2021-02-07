@@ -4,51 +4,97 @@
              x:Class="Game.Views.GamePage"
              >
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style TargetType="Button"
+                   x:Key="GamePageButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+                
+                <Setter Property="WidthRequest" Value="110"/>
+                <Setter Property="HeightRequest" Value="110"/>
+                <Setter Property="CornerRadius" Value="10"/>
+
+
+            </Style>
+
+            <Style TargetType="Button"
+                   x:Key="SmallGamePageButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+                <Setter Property="WidthRequest" Value="80"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+
+
+            </Style>
+
+
+
+        </ResourceDictionary>
+        
+        
+        
+        
+    </ContentPage.Resources>
+
     <ContentPage.Content>
 
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
 
-            <FlexLayout x:Name="flexLayout"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                <StackLayout Style="{StaticResource CardImageTextBox}">
+                    <StackLayout Orientation="Vertical">
+                    <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
+                           Margin="0, 5, 0, 0" 
+                           Grid.Row="0"
+                           >
 
-                    <ImageButton
-                        Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
-                        Clicked="VillageButton_Clicked"/>
+                    </Frame>
 
-                    <Label 
-                        Text="Village"
-                        Style="{StaticResource CenterMessageStyle}"/>
+                    <StackLayout>
+                        <Button
+                            Margin="0, 20, 180, 0" 
+                            Text="Immune System"
+                            Grid.Row="1"
+                            Style="{StaticResource GamePageButtonStyle}"
+                            Clicked="VillageButton_Clicked"/>
+
+                       
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Button
+                            Margin="180, 20, 0, 0" 
+                            Text="Battle"
+                            Grid.Row="2"
+                            Style="{StaticResource GamePageButtonStyle}"
+                            Clicked="DungeonButton_Clicked"/>
+
+                       
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Button
+                            Margin="0, 20, 150, 0" 
+                            Text="Auto"
+                            Grid.Row="3"
+                            Style="{StaticResource SmallGamePageButtonStyle}"
+                            Clicked="AutobattleButton_Clicked"/>
+
+                     
+                    </StackLayout>
+
                 </StackLayout>
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
-                    <ImageButton
-                        Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
-                        Clicked="DungeonButton_Clicked"/>
-
-                    <Label 
-                        Text="Dungeon"
-                        Style="{StaticResource CenterMessageStyle}"/>
-                </StackLayout>
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
-                    <ImageButton
-                        Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
-                        Clicked="AutobattleButton_Clicked"/>
-
-                    <Label 
-                        Text="Auto Battle"
-                        Style="{StaticResource CenterMessageStyle}"/>
-                </StackLayout>
-            </FlexLayout>
+            </Grid>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
