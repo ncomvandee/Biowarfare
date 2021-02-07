@@ -16,33 +16,6 @@
    
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
-            <StackLayout Orientation="Horizontal">
-                
-                <Button Text="-"
-                        Clicked="LevelDownButtonClicked" 
-                        x:Name="LevelDownButton"
-                        Style="{StaticResource LevelDownButtonStyle}"
-                        />
-                
-                <Frame Grid.Row="0"
-                       Style="{StaticResource LevelFrameDisplayStyle}"
-                       >
-                    
-                    <Label Grid.Row="0" 
-                           Text="{Binding Data.Level}" 
-                           x:Name="LevelEntry" 
-                           Style="{StaticResource LevelTextDisplayStyle}"
-                           />
-                </Frame>
-                
-                <Button Text="+" 
-                        Clicked="LevelUpButtonClicked" 
-                        x:Name="LevelUpButton"
-                        Style="{StaticResource LevelUpButtonStyle}"
-                        />
-                
-            </StackLayout>
-
 
             <Frame Style="{StaticResource CreateFrameStyle}">
 
@@ -56,15 +29,14 @@
                         <Picker Style="{StaticResource CreatePickerStyle}" 
                             ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
                             SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                            x:Name="CellTypePicker" 
-                            SelectedIndexChanged="ImageChanged" 
+                            x:Name="MonsterTypePicker" 
                             />
                         
                     </Frame>
 
                     <Frame Style="{StaticResource MediumCircleFrameStyle}">
                         
-                        <Image x:Name="CellImage" />
+                        <Image x:Name="MonsterImage" />
 
                     </Frame>
                     
@@ -143,12 +115,6 @@
                            Text="{Binding Data.Speed}"
                            Grid.Row="3"
                            x:Name="SpeedStat"/>
-
-                    <Button Style="{StaticResource AddItemsButtonStyle}"
-                            Text="Add Items" 
-                            Grid.Row="4" 
-                            Clicked="AddItem_Clicked"
-                            />
                 </Grid>
                 
             </Frame>

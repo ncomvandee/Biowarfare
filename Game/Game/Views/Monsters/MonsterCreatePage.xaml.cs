@@ -150,9 +150,9 @@ namespace Game.Views
             }
 
             // If CellType is not selected, change picker color to red and return false;
-            if (CellTypePicker.SelectedIndex == -1)
+            if (MonsterTypePicker.SelectedIndex == -1)
             {
-                CellTypePicker.BackgroundColor = Color.Red;
+                MonsterTypePicker.BackgroundColor = Color.Red;
                 return false;
             }
 
