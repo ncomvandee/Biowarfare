@@ -677,6 +677,32 @@
             </Style>
 
 
+            <!--Frame for Read Page Cell Name-->
+            <Style TargetType="Frame"
+                   x:Key="ReadCellTitleFrame"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="HeightRequest" Value="30"/>
+
+            </Style>
+
+
+            <!--Frame For Flip Option on Read Page-->
+            <Style TargetType="Frame"
+                   x:Key="InvisibleReadFrameStyle"
+                   >
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
+
 
 
 
@@ -766,6 +792,17 @@
                 <Setter Property="FontSize" Value="Small"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+
+            <!--Label for Icons of Flip Read Page-->
+            <Style TargetType="Label"
+                   x:Key="ReadStatsLabelStyle"
+                   >
+
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
 
             </Style>
 
@@ -914,6 +951,17 @@
 
             </Style>
 
+            <!--Transparent Button on Read Page for Flip Feature-->
+            <Style TargetType="Button"
+                   x:Key="InvisibleReadButtonStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="200"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
+
 
 
 
@@ -986,66 +1034,6 @@
                 <Setter Property="Minimum" Value="0"/>
 
             </Style>
-
-
-
-            <Style TargetType="Frame"
-                   x:Key="ReadCellTitleFrame"
-                   >
-                <Setter Property="Margin" Value="0, 10, 0, 0"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
-                <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="WidthRequest" Value="180"/>
-                <Setter Property="HeightRequest" Value="30"/>
-
-            </Style>
-
-
-            <Style TargetType="Frame"
-                   x:Key="InvisibleReadFrameStyle"
-                   >
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="BorderColor" Value="Transparent"/>
-                <Setter Property="Margin" Value="10"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
-
-            </Style>
-
-            <Style TargetType="Label"
-                   x:Key="ReadStatsLabelStyle"
-                   >
-
-                <Setter Property="FontSize" Value="Title"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
-
-            </Style>
-
-            <Style TargetType="Button"
-                   x:Key="InvisibleReadButtonStyle"
-                   >
-
-                <Setter Property="HeightRequest" Value="200"/>
-                <Setter Property="WidthRequest" Value="200"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-
-            </Style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </ResourceDictionary>
