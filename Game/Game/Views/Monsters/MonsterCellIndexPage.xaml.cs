@@ -19,7 +19,7 @@ namespace Game.Views
     public partial class MonsterCellIndexPage : ContentPage
     {
         // The view model, used for data binding
-        readonly CellIndexViewModel ViewModel = CellIndexViewModel.Instance;
+        readonly MonsterIndexViewModel ViewModel = MonsterIndexViewModel.Instance;
 
         // Empty Constructor for UTs
         public MonsterCellIndexPage(bool UnitTest) { }
@@ -63,7 +63,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void CreateCell_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new CellCreatePage()));
+            await Navigation.PushModalAsync(new NavigationPage(new MonsterCreatePage()));
         }
 
         /// <summary>
