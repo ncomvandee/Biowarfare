@@ -44,6 +44,7 @@ namespace Game.Views
 
         }
 
+        #region Button
         /// <summary>
         /// Send Save message to ViewModel
         /// </summary>
@@ -66,6 +67,22 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Asign item to character's location
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void AddButton_Clicked(object sender, EventArgs e)
+        {
+
+            var selectedItem = ((Button)sender).CommandParameter as ItemModel;
+            var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id);
+            UpdatePageBindingContext();
+
+        }
+
+        #endregion Button
+
+        /// <summary>
         /// Show List of Location's item
         /// </summary>
         /// <param name="sender"></param>
@@ -84,19 +101,7 @@ namespace Game.Views
 
         }
 
-        /// <summary>
-        /// Asign item to character's location
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void AddButton_Clicked(object sender, EventArgs e)
-        {
- 
-            var selectedItem = ((Button)sender).CommandParameter as ItemModel;
-            var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id) ;
-            UpdatePageBindingContext();
 
-        }
 
         /// <summary>
         /// Rebiding BidingContext to refresh the page
