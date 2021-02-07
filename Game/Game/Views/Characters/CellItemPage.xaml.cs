@@ -80,9 +80,18 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Delete item from location
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void DeleteButton_Clicked(object sender, EventArgs e)
         {
-
+            
+            var selectedItem = ((Button)sender).CommandParameter ;
+            var locationEnum = ItemLocationEnumHelper.GetLocationByPosition( Convert.ToInt32(selectedItem));
+            ViewModel.Data.RemoveItem(locationEnum);
+            UpdatePageBindingContext();
         }
 
         #endregion Button

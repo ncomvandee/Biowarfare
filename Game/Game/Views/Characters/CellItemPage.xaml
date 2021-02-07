@@ -94,8 +94,12 @@
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                        >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>1.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
 
                                 </Grid>
                             </StackLayout>
@@ -133,9 +137,13 @@
                                                 WidthRequest="40" 
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
-                                                Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                                Clicked="DeleteButton_Clicked"  
+                                            >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>2.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
 
                                 </Grid>
                             </StackLayout>
@@ -174,8 +182,13 @@
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                           >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>3.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
+
 
                                 </Grid>
                             </StackLayout>
@@ -214,8 +227,13 @@
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                          >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>4.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
+
 
                                 </Grid>
                             </StackLayout>
@@ -247,15 +265,20 @@
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
                                            />
-                                    
+
                                     <Button Text="-"  
                                                 Style="{StaticResource PrimaryButtonStyle}"
                                                 WidthRequest="40" 
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                        >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>6.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
+
 
                                 </Grid>
                             </StackLayout>
@@ -287,15 +310,20 @@
                                            FontAttributes="Bold" 
                                            Grid.Column="1"
                                            />
-                                    
+
                                     <Button Text="-"  
                                                 Style="{StaticResource PrimaryButtonStyle}"
                                                 WidthRequest="40" 
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                        >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>5.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
+
 
                                 </Grid>
                             </StackLayout>
@@ -332,14 +360,19 @@
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
                                                 Clicked="DeleteButton_Clicked"
-                                                CommandParameter="{Binding ItemLocationEnumHelper.GetLocationByPosition(7)}"
-                                                />
+                                        >
+
+                                        <Button.CommandParameter>
+                                            <x:Decimal>7.00000</x:Decimal>
+                                        </Button.CommandParameter>
+                                    </Button>
+
                                 </Grid>
                             </StackLayout>
                         </Grid>
                     </StackLayout>
                 </Frame>
-                
+
                 <!--Picker-->
                 <Frame Style="{StaticResource BasicAutoFrameStyle}"
                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
