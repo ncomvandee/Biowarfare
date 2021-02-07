@@ -975,6 +975,45 @@
             </Style>
 
 
+            <!--Button for Immune System on Game Page-->
+            <Style TargetType="Button"
+                   x:Key="GamePageButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="110"/>
+                <Setter Property="HeightRequest" Value="110"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Margin" Value="0, 20, 180, 0"/>
+
+
+            </Style>
+
+            <!--Button for Battle on Game Page-->
+            <Style TargetType="Button"
+                   x:Key="GamePageBattleButtonStyle"
+                   BasedOn="{StaticResource GamePageButtonStyle}"
+                   >
+
+                <Setter Property="Margin" Value="180, 20, 0, 0"/>
+
+
+            </Style>
+
+            <!--Button for Auto Battle on Game Page-->
+            <Style TargetType="Button"
+                   x:Key="SmallGamePageButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+                <Setter Property="WidthRequest" Value="80"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Margin" Value="0, 20, 150, 0"/>
+
+
+            </Style>
+
+
 
 
 
