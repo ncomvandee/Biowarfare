@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local_enum="clr-namespace:Game.Models"
+             xmlns:local_helpers="clr-namespace:Game.Helpers"
+             x:Class="Game.Views.MonsterCreatePage"
+             Title="{Binding Title}">
+               
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+   
+    <ContentPage.Content>
+        <StackLayout  HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal">
+                
+                <Button Text="-"
+                        Clicked="LevelDownButtonClicked" 
+                        x:Name="LevelDownButton"
+                        Style="{StaticResource LevelDownButtonStyle}"
+                        />
+                
+                <Frame Grid.Row="0"
+                       Style="{StaticResource LevelFrameDisplayStyle}"
+                       >
+                    
+                    <Label Grid.Row="0" 
+                           Text="{Binding Data.Level}" 
+                           x:Name="LevelEntry" 
+                           Style="{StaticResource LevelTextDisplayStyle}"
+                           />
+                </Frame>
+                
+                <Button Text="+" 
+                        Clicked="LevelUpButtonClicked" 
+                        x:Name="LevelUpButton"
+                        Style="{StaticResource LevelUpButtonStyle}"
+                        />
+                
+            </StackLayout>
+
+
+            <Frame Style="{StaticResource CreateFrameStyle}">
+
+                <StackLayout Orientation="Vertical" 
+                             HorizontalOptions="Center" 
+                             >
+
+                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
+                    
+                        
+                        <Picker Style="{StaticResource CreatePickerStyle}" 
+                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
+                            SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                            x:Name="CellTypePicker" 
+                            SelectedIndexChanged="ImageChanged" 
+                            />
+                        
+                    </Frame>
+
+                    <Frame Style="{StaticResource MediumCircleFrameStyle}">
+                        
+                        <Image x:Name="CellImage" />
+
+                    </Frame>
+                    
+                </StackLayout>
+                
+            </Frame>
+
+            <Entry Text="{Binding Data.Name}" 
+                   Placeholder="Enter name here"
+                   x:Name="NameEntry"
+                   Style="{StaticResource CreateEntryStyle}"
+                   />
+
+            <Frame Style="{StaticResource StatsFrameStyle}"
+                   >
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="AUTO"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Stats" 
+                           Grid.Row="0" 
+                           Style="{StaticResource StatsLabelTitleStyle}"
+                           />
+
+                    <Label Text="Atk" 
+                           Grid.Row="1" 
+                           Style="{StaticResource StatsLabelStyle}"
+                           />
+
+
+                    <Slider Style="{StaticResource StatsSliderStyle}"
+                            Grid.Row="1" 
+                            ValueChanged="OnSliderChanged"
+                            x:Name="AttackSlider" 
+                            Value="{Binding Data.Attack}"/>
+
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Attack}" 
+                           Grid.Row="1" 
+                           x:Name="AttackStat"/>
+
+                    <Label Text="Def" 
+                           Grid.Row="2" 
+                           Style="{StaticResource StatsLabelStyle}"
+                           />
+
+                    <Slider Style="{StaticResource StatsSliderStyle}"
+                            Grid.Row="2" 
+                            ValueChanged="OnSliderChanged"
+                            x:Name="DefenseSlider" 
+                            Value="{Binding Data.Defense}"/>
+
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Defense}" 
+                           Grid.Row="2" 
+                           x:Name="DefenseStat"/>
+
+                    <Label Text="Spd" 
+                           Grid.Row="3"
+                           Style="{StaticResource StatsLabelStyle}"
+                           />
+
+                    <Slider Style="{StaticResource StatsSliderStyle}"
+                            Grid.Row="3"
+                            ValueChanged="OnSliderChanged"
+                            x:Name="SpeedSlider"
+                            Value="{Binding Data.Speed}"/>
+
+                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                           Text="{Binding Data.Speed}"
+                           Grid.Row="3"
+                           x:Name="SpeedStat"/>
+
+                    <Button Style="{StaticResource AddItemsButtonStyle}"
+                            Text="Add Items" 
+                            Grid.Row="4" 
+                            Clicked="AddItem_Clicked"
+                            />
+                </Grid>
+                
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" 
+                         Margin="0, 10, 0, 0"
+                         HorizontalOptions="Center">
+                
+                <Button Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Save" 
+                        Clicked="SaveButton_Clicked"
+                        />
+
+                <Button Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Cancel" 
+                        Clicked="CancelButton_Clicked"
+                        />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
