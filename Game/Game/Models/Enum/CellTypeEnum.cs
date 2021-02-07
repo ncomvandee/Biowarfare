@@ -10,19 +10,22 @@ namespace Game.Models
     /// </summary>
     public enum CellTypeEnum
     {
-        // Not specified
+        // White blood cell. Special ability, provide damage imumunity to friendly ally
         BCell = 0,    
 
-        // Fighters hit hard and have fight abilities
+        // White blood cell. Special abilities, dealth highest damage and +5 attack
         KillerTCell = 10,
 
-        // Clerics defend well and have buff abilities
+        // Lymphocyte. Special ability, +10 speed buff
         NKCell = 12,
 
+        // White blood cell. Special ability, increase friendly ally +5 defense when alive
         Macrophage = 15,
 
+        // White blood cell. Special ability, +10 hp
         Basophil = 19,
 
+        // White blood cell. Specical ability, +10 attack if monster is parasite
         Eosinophil = 21,
 
     }
