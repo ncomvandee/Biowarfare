@@ -9,6 +9,8 @@ namespace Game.Models
     /// </summary>
     public class MonsterModel : BasePlayerModel<MonsterModel>
     {
+        public MonsterTypeEnum MonsterType { get; set; } = MonsterTypeEnum.Spore;
+
         /// <summary>
         /// Set Type to Monster
         /// 
@@ -18,17 +20,14 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Monster;
             Guid = Id;
-            Name = "Troll";
-            Description = "Angry Troll";
-            Attack = 1;
+            Name = "";
+            Description = "";
             Difficulty = DifficultyEnum.Average;
             UniqueItem = null;
             ImageURI = "item.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
-
-            // Default to unknown, which is no special job
-            Job = CellTypeEnum.BCell;
+            MonsterType = MonsterTypeEnum.Spore;
         }
 
         /// <summary>

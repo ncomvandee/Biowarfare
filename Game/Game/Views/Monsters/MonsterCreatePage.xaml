@@ -27,8 +27,8 @@
                     
                         
                         <Picker Style="{StaticResource CreatePickerStyle}" 
-                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
-                            SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                            ItemsSource="{x:Static local_enum:MonsterTypeEnumHelper.GetMonsterTypeList}"
+                            SelectedItem="{Binding Data.MonsterType, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                             x:Name="MonsterTypePicker" 
                             />
                         
