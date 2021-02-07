@@ -81,76 +81,78 @@
 
             <Frame Style="{StaticResource StatsFrameStyle}"
                    >
+                <ScrollView>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="AUTO"/>
-                        <RowDefinition Height="AUTO"/>
-                        <RowDefinition Height="AUTO"/>
-                        <RowDefinition Height="AUTO"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Label Text="Stats" 
+                        <Label Text="Stats" 
                            Grid.Row="0" 
                            Style="{StaticResource StatsLabelTitleStyle}"
                            />
 
-                    <Label Text="Atk" 
+                        <Label Text="Atk" 
                            Grid.Row="1" 
                            Style="{StaticResource StatsLabelStyle}"
                            />
 
-                    <Slider Style="{StaticResource StatsSliderStyle}"
+                        <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="1"
                             ValueChanged="OnSliderChanged"
                             x:Name="AttackSlider" 
                             Value="{Binding Data.Attack}"/>
 
-                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                        <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Attack}" 
                            Grid.Row="1" 
                            x:Name="AttackStat"/>
 
-                    <Label Text="Def" 
+                        <Label Text="Def" 
                            Grid.Row="2" 
                            Style="{StaticResource StatsLabelStyle}"
                            />
 
-                    <Slider Style="{StaticResource StatsSliderStyle}"
+                        <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="2" 
                             ValueChanged="OnSliderChanged"
                             x:Name="DefenseSlider" 
                             Value="{Binding Data.Defense}"/>
 
-                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                        <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Defense}" 
                            Grid.Row="2" 
                            x:Name="DefenseStat"/>
 
-                    <Label Text="Spd" 
+                        <Label Text="Spd" 
                            Grid.Row="3" 
                            Style="{StaticResource StatsLabelStyle}"
                            />
 
-                    <Slider Style="{StaticResource StatsSliderStyle}"
+                        <Slider Style="{StaticResource StatsSliderStyle}"
                             Grid.Row="3" 
                             ValueChanged="OnSliderChanged"
                             x:Name="SpeedSlider" 
                             Value="{Binding Data.Speed}"/>
 
-                    <Label Style="{StaticResource StatsNumberLabelStyle}"
+                        <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Speed}" 
                            Grid.Row="3" 
                            x:Name="SpeedStat"/>
 
-                    <Button Style="{StaticResource AddItemsButtonStyle}"
+                        <Button Style="{StaticResource AddItemsButtonStyle}"
                             Text="Add Items" 
                             Grid.Row="4" 
                             Clicked="AddItem_Clicked"
                             />
 
-                </Grid>
+                    </Grid>
+                </ScrollView>
+  
             </Frame>
 
             <StackLayout Orientation="Horizontal" 
