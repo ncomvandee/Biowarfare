@@ -43,20 +43,32 @@ namespace Game.Models
         public static string ToMessage(this CellTypeEnum value)
         {
             // Default String
-            var Message = "Player";
+            var Message = "Cell";
 
             switch (value)
             {
                 case CellTypeEnum.KillerTCell:
-                    Message = "Fighter";
+                    Message = "Killer-T-Cell";
                     break;
 
                 case CellTypeEnum.NKCell:
-                    Message = "Cleric";
+                    Message = "NK-Cell";
                     break;
 
                 case CellTypeEnum.BCell:
-                default:
+                    Message = "B-Cell";
+                    break;
+
+                case CellTypeEnum.Macrophage:
+                    Message = "Macrophage";
+                    break;
+
+                case CellTypeEnum.Eosinophil:
+                    Message = "Eosinophil";
+                    break;
+
+                case CellTypeEnum.Basophil:
+                    Message = "Basophil";
                     break;
             }
 
