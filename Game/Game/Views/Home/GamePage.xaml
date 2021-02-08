@@ -24,7 +24,7 @@
                     <StackLayout>
                         <Button
                            
-                            Text="Immune System"
+                            Text="Village"
                             Grid.Row="1"
                             Style="{StaticResource GamePageButtonStyle}"
                             Clicked="VillageButton_Clicked"/>
