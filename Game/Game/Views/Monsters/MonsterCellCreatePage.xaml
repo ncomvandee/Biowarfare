@@ -4,7 +4,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.MonsterCellCreatePage"
-             Title="{Binding Title}">
+             Title="Monster Cell Creation">
                
 
     <ContentPage.Resources>
