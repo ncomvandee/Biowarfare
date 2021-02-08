@@ -22,7 +22,7 @@ namespace Game.Views
         public MonsterCellUpdatePage(bool UnitTest){ }
 
         /// <summary>
-        /// Constructor that takes and existing data item
+        /// Constructor that takes and existing data Monster
         /// </summary>
         public MonsterCellUpdatePage(GenericViewModel<MonsterModel> data)
         {
@@ -59,7 +59,6 @@ namespace Game.Views
         {
             await Navigation.PopModalAsync();
         }
-
 
         /// <summary>
         /// Changes the MonsterCell thumbnail related on seleccted Monstertype
