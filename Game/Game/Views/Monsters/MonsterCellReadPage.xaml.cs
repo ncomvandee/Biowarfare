@@ -15,7 +15,7 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MonsterCellReadPage : ContentPage
     {
-        // View Model for Item
+        // View Model for Monster
         public readonly GenericViewModel<MonsterModel> ViewModel;
 
         // Empty Constructor for UTs
@@ -46,7 +46,7 @@ namespace Game.Views
         }
 
         /// <summary>
-		/// Jump to the Cell Update Page
+		/// Jump to the MonsterCell Update Page
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -58,7 +58,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Flip feature, to toggle between Cell thumbnail and attribute
+        /// Flip feature, to toggle between MonsterCell thumbnail and attribute
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
