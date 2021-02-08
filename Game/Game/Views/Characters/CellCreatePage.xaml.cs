@@ -233,6 +233,10 @@ namespace Game.Views
             return true;
         }
 
+        /// <summary>
+        /// Send the default description for each Cell to Database
+        /// </summary>
+        /// <param name="TypeSelected"></param>
         public void GetDefaultDescription(String TypeSelected)
         {
             switch (TypeSelected)
