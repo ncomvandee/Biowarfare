@@ -41,6 +41,8 @@ namespace Game.Views
             CellTypePicker.SelectedItem = data.Data.Job.ToString();
             CellImage.Source = data.Data.ImageURI.ToString();
 
+            SetEnableLevelButton();
+
 
         }
 
