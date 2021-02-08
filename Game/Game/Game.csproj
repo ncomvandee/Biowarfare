@@ -53,6 +53,9 @@
     <Compile Update="Views\Characters\CellItemPage.xaml.cs">
       <DependentUpon>CellItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Monsters\MonsterCellReadPage.xaml.cs">
+      <DependentUpon>MonsterCellReadPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Monsters\MonsterCellUpdatePage.xaml.cs">
       <DependentUpon>MonsterCellUpdatePage.xaml</DependentUpon>
     </Compile>

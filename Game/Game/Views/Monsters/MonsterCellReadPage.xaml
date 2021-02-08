@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.Views.MonsterCellReadPage"
+             Title ="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" 
+                     IconImageSource="icon_delete.png" 
+                     Clicked="Delete_Clicked" 
+                     />
+        
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
+
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource ReadCellTitleFrame}"
+                           >
+                        
+                        <StackLayout Orientation="Horizontal" 
+                                 Grid.Row="0" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 >
+
+                            <Label Text="{Binding Data.Job}" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                            <Label Text="|" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                            <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
+                               Style="{StaticResource CellNameLabelStyle}"
+                               />
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            x:Name="AttributeFrame"
+                            Grid.Row="1"
+                            IsVisible="False"
+                            >
+
+                        <Grid ColumnSpacing="15" RowSpacing="5" Margin="0, 40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="attack_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   />
+                            
+                            <Label Text="{Binding Data.GetAttackTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="0" 
+                                   />
+
+                            <Image Source="defense_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   />
+                            
+                            <Label Text="{Binding Data.GetDefenseTotal}"
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   />
+
+                            <Image Source="speed_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="2" 
+                                   />
+                            
+                            <Label Text="{Binding Data.GetSpeedTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="2" 
+                                   />
+
+                            <Image Source="heart_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="3" 
+                                   />
+                            
+                            <Label Text="{Binding Data.GetMaxHealthTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="3" 
+                                   />
+
+                            <Label Text="XP" 
+                                   Grid.Row="0" 
+                                   Grid.Column="4" 
+                                   FontSize="Large"
+                                   />
+                            
+                            <Label Text="{Binding Data.ExperienceTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="4" 
+                                   />
+                            
+                        </Grid>
+
+                    </Frame>
+                    <!--Frame for thumbnail-->
+                    <Frame x:Name="ImageFrame" 
+                           Style="{StaticResource LargeCircleFrameStyle}" 
+                           Grid.Row="1"
+                           >
+
+                        <Image Source="{Binding Data.ImageURI}" />
+                        
+                    </Frame>
+
+                    <Button Style="{StaticResource InvisibleReadButtonStyle}"
+                            Grid.Row="1"   
+                            Clicked="ShowAttributeClicked" 
+                            />
+                    
+                </Grid>
+            </Frame>
+
+            <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
+                   Margin="0, 20, 0, 0" 
+                   >
+                   
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource ReadCellTitleFrame}"
+                           >
+
+                        <Label Style="{StaticResource CellNameLabelStyle}"
+                           Text="Items" 
+                           Grid.Row="0" 
+                           />
+
+                   </Frame>
+
+                </Grid>
+            </Frame>
+
+            <Button Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Edit" 
+                    Margin="20" 
+                    Clicked="CellEditButton_Clicked" 
+                    />
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

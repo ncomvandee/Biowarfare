@@ -1,0 +1,83 @@
+﻿using System;
+using System.ComponentModel;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+using Game.ViewModels;
+using Game.Models;
+
+namespace Game.Views
+{
+    /// <summary>
+    /// The Read Page
+    /// </summary>
+    [DesignTimeVisible(false)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MonsterCellReadPage : ContentPage
+    {
+        // View Model for Item
+        public readonly GenericViewModel<MonsterModel> ViewModel;
+
+        // Empty Constructor for UTs
+        public MonsterCellReadPage(bool UnitTest) { }
+
+        /// <summary>
+        /// Constructor called with a view model
+        /// This is the primary way to open the page
+        /// The viewModel is the data that should be displayed
+        /// </summary>
+        /// <param name="viewModel"></param>
+        public MonsterCellReadPage(GenericViewModel<MonsterModel> data)
+        {
+            InitializeComponent();
+
+            BindingContext = this.ViewModel = data;
+        }
+
+        /// <summary>
+        /// Calls for Delete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Delete_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new MonsterCellDeletePage(ViewModel)));
+            await Navigation.PopAsync();
+        }
+
+        /// <summary>
+		/// Jump to the Cell Update Page
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		public async void CellEditButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new MonsterCellUpdatePage(ViewModel)));
+
+            await Navigation.PopAsync(); 
+        }
+
+        /// <summary>
+        /// Flip feature, to toggle between Cell thumbnail and attribute
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ShowAttributeClicked (object sender, EventArgs e)
+        {
+
+            if (ImageFrame.IsVisible)
+            {
+                ImageFrame.IsVisible = false;
+                AttributeFrame.IsVisible = true;
+                
+            } 
+            else if (AttributeFrame.IsVisible)
+            {
+                AttributeFrame.IsVisible = false;
+                ImageFrame.IsVisible = true;
+            }
+         
+        }
+
+    }
+}
