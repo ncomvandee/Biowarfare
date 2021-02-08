@@ -59,8 +59,8 @@
     <Compile Update="Views\Monsters\MonsterCellIndexPage.xaml.cs">
       <DependentUpon>MonsterCellIndexPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Monsters\MonsterCreatePage.xaml.cs">
-      <DependentUpon>MonsterCreatePage.xaml</DependentUpon>
+    <Compile Update="Views\Monsters\MonsterCellCreatePage.xaml.cs">
+      <DependentUpon>MonsterCellCreatePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Monsters\MonsterCellDeletePage.xaml.cs">
       <DependentUpon>MonsterCellDeletePage.xaml</DependentUpon>

@@ -63,7 +63,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void CreateCell_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MonsterCreatePage()));
+            await Navigation.PushModalAsync(new NavigationPage(new MonsterCellCreatePage()));
         }
 
         /// <summary>

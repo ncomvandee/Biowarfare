@@ -14,7 +14,7 @@ using Xamarin.Forms.Xaml;
 namespace Game.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MonsterCreatePage : ContentPage      
+    public partial class MonsterCellCreatePage : ContentPage      
     {
 
         // Maximum Monster Level
@@ -28,7 +28,7 @@ namespace Game.Views
         /// <summary>
         /// Constructor
         /// </summary>
-        public MonsterCreatePage()
+        public MonsterCellCreatePage()
         {
             InitializeComponent();
 
