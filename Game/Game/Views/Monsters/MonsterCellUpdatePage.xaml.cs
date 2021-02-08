@@ -9,20 +9,14 @@ using Game.Models;
 namespace Game.Views
 {
     /// <summary>
-    /// Cell Update Page
+    /// MonsterCell Update Page
     /// </summary>
     [DesignTimeVisible(false)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MonsterCellUpdatePage : ContentPage
     {
-        // View Model for Item
+        // View Model for MonsterCell
         public readonly GenericViewModel<MonsterModel> ViewModel;
-
-        // Maximum Cell Level
-        public int MaxLevel = 20;
-
-        // Minimum Cell Level
-        public int MinLevel = 1;
 
         // Empty Constructor for Tests
         public MonsterCellUpdatePage(bool UnitTest){ }
@@ -66,19 +60,9 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
-        ///// <summary>
-        ///// Open Cell Item Page
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //public async void AddItem_Clicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushModalAsync(new NavigationPage(new CellItemPage(ViewModel)));
-        //    await Navigation.PopAsync();
-        //}
 
         /// <summary>
-        /// Changes the Cell thumbnail related on seleccted Celltype
+        /// Changes the MonsterCell thumbnail related on seleccted Monstertype
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -141,64 +125,5 @@ namespace Game.Views
             }
 
         }
-
-        //public void SetEnableLevelButton()
-        //{
-        //    LevelUpButton.IsEnabled = true;
-        //    if (ViewModel.Data.Level == MaxLevel)
-        //    {
-        //        LevelUpButton.IsEnabled = false;
-        //    }
-
-        //    LevelDownButton.IsEnabled = true;
-        //    if (ViewModel.Data.Level == MinLevel)
-        //    {
-        //        LevelDownButton.IsEnabled = false;
-        //    }
-
-        //}
-
-        ///// <summary>
-        ///// Handling the Level Down button
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //public void LevelDownButtonClicked(object sender, EventArgs e)
-        //{
-        //    ViewModel.Data.Level--;
-
-        //    if (ViewModel.Data.Level <= MinLevel)
-        //    {
-        //        ViewModel.Data.Level = MinLevel;
-        //    }
-
-        //    LevelEntry.Text = ViewModel.Data.Level.ToString();
-
-        //    // Call to set enable or disable the button
-        //    SetEnableLevelButton();
-
-        //}
-
-        /// <summary>
-        /// Handling the Level Up button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //public void LevelUpButtonClicked(object sender, EventArgs e)
-        //{
-
-        //    ViewModel.Data.Level++;
-
-        //    if (ViewModel.Data.Level >= MaxLevel)
-        //    {
-        //        ViewModel.Data.Level = MaxLevel;
-        //    }
-
-        //    LevelEntry.Text = ViewModel.Data.Level.ToString();
-
-        //    // Call to set enable or disable the button
-        //    SetEnableLevelButton();
-        //}
-
     }
 }
