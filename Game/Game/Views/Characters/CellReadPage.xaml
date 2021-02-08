@@ -88,17 +88,24 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}"
-                           >
+                           Style="{StaticResource ReadCellTitleFrame}">
 
-                        <Label Style="{StaticResource CellNameLabelStyle}"
-                           Text="Items" 
-                           Grid.Row="0" 
-                           />
+                        <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
+                    </Frame>
 
-                   </Frame>
+                    <Button Grid.Row="0" 
+                            Text="Items" 
+                            BackgroundColor="Transparent" 
+                            BorderColor="Transparent"
+                            FontSize="Medium" 
+                            Margin="0, 10"
+                            WidthRequest="180"
+                            x:Name="ItemAttributeToggleButton"
+                            Clicked="ItemAttributeToggle"/>
 
-                    <ScrollView Grid.Row="1" IsVisible="True">
+                    <ScrollView Grid.Row="1" 
+                                IsVisible="True"
+                                x:Name="ItemsFrame">
                         <StackLayout Orientation="Vertical" >
                             <Label Text="Head" />
                             <Label Text="Head" />
@@ -199,7 +206,8 @@
             <Button Style="{StaticResource PrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
-                    Clicked="CellEditButton_Clicked" 
+                    Clicked="CellEditButton_Clicked"
+
                     />
         
         </StackLayout>

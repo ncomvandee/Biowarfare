@@ -58,7 +58,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Flip feature, to toggle between Cell thumbnail and attribute
+        /// Flip feature, to toggle between Cell thumbnail and description
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -76,11 +76,28 @@ namespace Game.Views
                 DescriptionFrame.IsVisible = false;
                 ImageFrame.IsVisible = true;
             }
-
-
-
             
         }
 
+        /// <summary>
+        /// Flip feature, toggle betweem item list and attribute
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ItemAttributeToggle(object sender, EventArgs e)
+        {
+            if (ItemsFrame.IsVisible)
+            {
+                ItemsFrame.IsVisible = false;
+                AttributeFrame.IsVisible = true;
+                ItemAttributeToggleButton.Text = "Attributes";
+            }
+            else if (AttributeFrame.IsVisible)
+            {
+                AttributeFrame.IsVisible = false;
+                ItemsFrame.IsVisible = true;
+                ItemAttributeToggleButton.Text = "Items";
+            }
+        }
     }
 }
