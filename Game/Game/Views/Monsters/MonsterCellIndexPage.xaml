@@ -74,7 +74,7 @@
                                                              Margin="0, 10, 0, 10"
                                                              >
 
-                                                    <Label Text="{Binding Job}" 
+                                                    <Label Text="{Binding MonsterType}" 
                                                            Style="{StaticResource CellNameLabelStyle}"
                                                            />
                                                     
