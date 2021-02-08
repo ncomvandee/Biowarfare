@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.MonsterCellReadPage"
-             Title ="{Binding Title}">
+             Title ="MonsterCell Creation">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
@@ -32,7 +32,7 @@
                                  VerticalOptions="CenterAndExpand"
                                  >
 
-                            <Label Text="{Binding Data.Job}" 
+                            <Label Text="{Binding Data.MonsterType}" 
                                Style="{StaticResource CellNameLabelStyle}"
                                />
 
@@ -107,25 +107,13 @@
                                    Grid.Row="0" 
                                    Grid.Column="3" 
                                    />
-                            
+
                             <Label Text="{Binding Data.GetMaxHealthTotal}" 
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="3" 
                                    />
 
-                            <Label Text="XP" 
-                                   Grid.Row="0" 
-                                   Grid.Column="4" 
-                                   FontSize="Large"
-                                   />
-                            
-                            <Label Text="{Binding Data.ExperienceTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="4" 
-                                   />
-                            
                         </Grid>
 
                     </Frame>
@@ -173,7 +161,7 @@
             <Button Style="{StaticResource PrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
-                    Clicked="CellEditButton_Clicked" 
+                    Clicked="MonsterCellEditButton_Clicked" 
                     />
         
         </StackLayout>
