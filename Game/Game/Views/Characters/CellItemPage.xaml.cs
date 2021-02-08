@@ -19,7 +19,7 @@ namespace Game.Views
     {
         // View Model for cell
         public readonly GenericViewModel<CharacterModel> ViewModel;
-
+ 
         //View Model of Item
         //readonly ItemIndexViewModel ItemViewModel = ItemIndexViewModel.Instance;
         // Empty Constructor for UTs
@@ -108,11 +108,12 @@ namespace Game.Views
                 return;
             }
 
-            //convert String to Enum
-            var locationEnum = ItemLocationEnumHelper.ConvertStringToEnum(LocationPicker.SelectedItem.ToString());
+            //convert message to Enum
+            var locationEnum = ItemLocationEnumHelper.ConvertMessageToEnum(LocationPicker.SelectedItem.ToString());
+            
 
-            ItemsListView.ItemsSource = ItemIndexViewModel.Instance.GetLocationItems(locationEnum);   
-
+            ItemsListView.ItemsSource = ItemIndexViewModel.Instance.GetLocationItems(locationEnum);
+            
         }
 
 
