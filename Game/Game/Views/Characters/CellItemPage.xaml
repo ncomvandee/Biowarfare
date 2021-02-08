@@ -12,6 +12,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -389,8 +390,8 @@
                    
                     <Picker 
                         BackgroundColor="Transparent"
-                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItem}" 
-                        SelectedItem="{Binding ItemIndexViewModel.Instance.Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
+                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListMessageCharacter}" 
+                        SelectedItem="{Binding SelectedLocation, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}" 
                         x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
                         />
                    
