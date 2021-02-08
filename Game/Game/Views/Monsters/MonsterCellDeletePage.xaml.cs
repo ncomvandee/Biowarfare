@@ -16,13 +16,13 @@ namespace Game.Views
     public partial class MonsterCellDeletePage : ContentPage
     {
         // View Model for Item
-        readonly GenericViewModel<CharacterModel> viewModel;
+        readonly GenericViewModel<MonsterModel> viewModel;
 
         // Empty Constructor for UTs
         public MonsterCellDeletePage(bool UnitTest) { }
 
         // Constructor for Delete takes a view model of what to delete
-        public MonsterCellDeletePage(GenericViewModel<CharacterModel> data)
+        public MonsterCellDeletePage(GenericViewModel<MonsterModel> data)
         {
             InitializeComponent();
 
