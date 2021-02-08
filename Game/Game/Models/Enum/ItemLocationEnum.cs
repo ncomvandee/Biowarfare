@@ -152,6 +152,28 @@ namespace Game.Models
         }
 
         /// <summary>
+        /// Given the Message for an enum
+        /// Look it up and return the enum
+        /// 
+        /// Right Finger => RightFinger
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static ItemLocationEnum ConvertMessageToEnum(string value)
+        {
+            // Get the Message, Determine Which enum has that message, and return that enum.
+            foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+            {
+                if (item.ToMessage().Equals(value))
+                {
+                    return item;
+                }
+            }
+            return ItemLocationEnum.Unknown;
+        }
+
+        /// <summary>
         /// If asked for a position number, return a location.  Head as 1 etc. 
         /// This compsenstates for the enum #s not being sequential, but allows for calls to the postion for random allocation etc (roll 1-7 dice and pick a item to equipt), etc... 
         /// </summary>
