@@ -140,7 +140,8 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C1",
                     Job = CellTypeEnum.Basophil,
-                    Description = "C1",
+                    Description = "Basophils are a type of white blood cell that are responsible for causing inflammatory reactions and producing histamine." +
+                                  " Has a +10% hp buff.",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "basophil_bg.png",
@@ -156,7 +157,11 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C2",
                     Job = CellTypeEnum.BCell,
-                    Description = "C2",
+                    Description = "B Cells are a specialized white blood cell that secrete antibodies." +
+                                  " Once per round, B Cells can give any living team member an Immunity token. " +
+                                  "This token will protect that team member from damage on one turn," +
+                                  " if are to be dealt damage that turn. Instead," +
+                                  " the Immunity token is spent and no damage is taken for that team member.",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "b_cell_bg.png",
@@ -172,7 +177,8 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C3",
                     Job = CellTypeEnum.Eosinophil,
-                    Description = "C3",
+                    Description = "Eosinophil are a type of white blood cell that specialize in attacking parasites." +
+                                  " Eosinophil have a 10% attack buff when fighting against invaders of the parasite type.",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "eosinophil_bg.png",
@@ -188,7 +194,9 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C4",
                     Job = CellTypeEnum.KillerTCell,
-                    Description = "C4",
+                    Description = "Killer T Cells are a type of white blood cell that kill infected," +
+                                  " damaged, or cancerous cells. Every time the Killer T Cell attacks," +
+                                  " they will always roll the highest weapon damage. Has +5% attack.",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "t_cell_bg.png",
@@ -204,7 +212,10 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C5",
                     Job = CellTypeEnum.Macrophage,
-                    Description = "C5",
+                    Description = "Macrophages are a type of white blood cell that seek out and dispose of foreign invaders and non-healthy cells in their path." +
+                                  " Macrophages are unique because they recruit other immune cells to fight alongside them." +
+                                  " Having an active Macrophage in your immune system will increase all friendly characters by +5% defense power" +
+                                  ". Has a 5% personal defense buff.  ",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "macrophage_bg.png",
@@ -220,7 +231,8 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "C6",
                     Job = CellTypeEnum.NKCell,
-                    Description = "C6",
+                    Description = "NK cells are a type of lymphocyte that provides a rapid response to viruses in the body." +
+                                  " Has a +10% speed buff.",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "",
