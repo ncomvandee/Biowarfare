@@ -75,7 +75,7 @@ namespace Game.Views
         {
 
             var selectedItem = ((Button)sender).CommandParameter as ItemModel;
-            var item = ViewModel.Data.AddItem(selectedItem.Location, selectedItem.Id);
+            var item = ViewModel.Data.AddItem(ItemLocationEnumHelper.ConvertMessageToEnum(LocationPicker.SelectedItem.ToString()), selectedItem.Id);
             UpdatePageBindingContext();
 
         }
