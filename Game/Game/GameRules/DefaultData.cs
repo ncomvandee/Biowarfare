@@ -233,21 +233,6 @@ namespace Game.GameRules
                     LeftFinger = LeftFingerString,
                 },
 
-                new CharacterModel {
-                    Name = "C7",
-                    Job = CellTypeEnum.Eosinophil,
-                    Description = "C6",
-                    Level = 1,
-                    MaxHealth = 5,
-                    ImageURI = "eosinophil_bg.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
-                },
             };
 
         return datalist;
@@ -263,44 +248,37 @@ namespace Game.GameRules
         var datalist = new List<MonsterModel>()
             {
                 new MonsterModel {
+                    MonsterType = MonsterTypeEnum.Spore,
                     Name = "M1",
                     Description = "M1",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
+                    MonsterType = MonsterTypeEnum.Bacteria,
                     Name = "M2",
                     Description = "M2",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
+                    MonsterType = MonsterTypeEnum.Parasite,
                     Name = "M3",
                     Description = "M3",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
+                    MonsterType = MonsterTypeEnum.Virus,
                     Name = "M4",
                     Description = "M4",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
+                    MonsterType = MonsterTypeEnum.Cancer,
                     Name = "M5",
                     Description = "M5",
-                    ImageURI = "item.png",
-                },
-
-                new MonsterModel {
-                    Name = "M6",
-                    Description = "M6",
-                    ImageURI = "item.png",
-                },
-
-                new MonsterModel {
-                    Name = "M7",
-                    Description = "M7",
                     ImageURI = "item.png",
                 },
             };
