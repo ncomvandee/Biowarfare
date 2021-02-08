@@ -17,12 +17,6 @@ namespace Game.Views
     public partial class MonsterCellCreatePage : ContentPage      
     {
 
-        // Maximum Monster Level
-        public int MaxLevel = 20;
-
-        // Minimum Monster Level
-        public int MinLevel = 1;
-
         public GenericViewModel<MonsterModel> ViewModel = new GenericViewModel<MonsterModel>();
 
         /// <summary>
