@@ -26,8 +26,6 @@ namespace Game.Views
 
         /// <summary>
         /// Constructor for Index Page
-        /// 
-        /// Get the ItemIndexView Model
         /// </summary>
         public MonsterCellIndexPage()
         {
