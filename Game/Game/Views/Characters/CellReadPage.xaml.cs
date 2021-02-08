@@ -62,18 +62,18 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void ShowAttributeClicked (object sender, EventArgs e)
+        public void ShowDescriptionClicked (object sender, EventArgs e)
         {
 
             if (ImageFrame.IsVisible)
             {
                 ImageFrame.IsVisible = false;
-                AttributeFrame.IsVisible = true;
+                DescriptionFrame.IsVisible = true;
                 
             } 
-            else if (AttributeFrame.IsVisible)
+            else if (DescriptionFrame.IsVisible)
             {
-                AttributeFrame.IsVisible = false;
+                DescriptionFrame.IsVisible = false;
                 ImageFrame.IsVisible = true;
             }
 
