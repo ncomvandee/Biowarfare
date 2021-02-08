@@ -65,13 +65,13 @@ namespace Game.ViewModels
             });
 
             // Register the Update Message
-            //MessagingCenter.Subscribe<MonsterUpdatePage, MonsterModel>(this, "Update", async (obj, data) =>
-            //{
-            //    // Have the Monster update itself
-            //    data.Update(data);
+            MessagingCenter.Subscribe<MonsterCellUpdatePage, MonsterModel>(this, "Update", async (obj, data) =>
+            {
+                // Have the Monster update itself
+                data.Update(data);
 
-            //    await UpdateAsync(data as MonsterModel);
-            //});
+                await UpdateAsync(data as MonsterModel);
+            });
 
             // Register the Delete Message
             MessagingCenter.Subscribe<MonsterCellDeletePage, MonsterModel>(this, "Delete", async (obj, data) =>
