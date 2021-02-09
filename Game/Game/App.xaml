@@ -103,15 +103,15 @@
 
             <!-- <Thickness x:Key="PageMargin">0</Thickness> -->
             
-            <!-- Default Pages -->
+            <!-- Default Pages --><!--
             <Style TargetType="NavigationPage">
                 
-                <Setter Property="BarBackgroundColor" Value="{StaticResource ViewBackgroundColor}" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource SecondaryAccentColor}" />
                 <Setter Property="BarTextColor" Value="{StaticResource SecondaryTextColor}" />
                 
             </Style>
 
-            <!-- Character Pages -->
+            --><!-- Character Pages --><!--
             <Style TargetType="NavigationPage"
                    x:Key="CharacterNavigationPage"
                    >
@@ -119,7 +119,7 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryCharacterMidground}" />
                 <Setter Property="BarTextColor" Value="{StaticResource PrimaryCharacterBackground}" />
                 
-            </Style>
+            </Style>-->
 
 
 
