@@ -53,76 +53,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            x:Name="AttributeFrame"
-                            Grid.Row="1"
-                            IsVisible="False"
-                            >
-
-                        <Grid ColumnSpacing="15" RowSpacing="5" Margin="0, 40">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Image Source="attack_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="0" 
-                                   />
-                            
-                            <Label Text="{Binding Data.GetAttackTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="0" 
-                                   />
-
-                            <Image Source="defense_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="1" 
-                                   />
-                            
-                            <Label Text="{Binding Data.GetDefenseTotal}"
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="1" 
-                                   />
-
-                            <Image Source="speed_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="2" 
-                                   />
-                            
-                            <Label Text="{Binding Data.GetSpeedTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="2" 
-                                   />
-
-                            <Image Source="heart_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="3" 
-                                   />
-
-                            <Label Text="{Binding Data.GetMaxHealthTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="3" 
-                                   />
-
-                        </Grid>
-
-                    </Frame>
+                   
                     <!--Frame for thumbnail-->
                     <Frame x:Name="ImageFrame" 
                            Style="{StaticResource LargeCircleFrameStyle}" 
@@ -148,6 +79,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
@@ -155,11 +87,68 @@
                            >
 
                         <Label Style="{StaticResource CellNameLabelStyle}"
-                           Text="Items" 
+                           Text="Attributes" 
                            Grid.Row="0" 
                            />
 
                    </Frame>
+
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            x:Name="AttributeFrame"
+                            Grid.Row="1"
+                            IsVisible="True"
+                            >
+
+                        <Grid ColumnSpacing="20" RowSpacing="5" Margin="0, 20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="attack_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   />
+
+                            <Label Text="{Binding Data.GetAttackTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="0" 
+                                   />
+
+                            <Image Source="defense_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   />
+
+                            <Label Text="{Binding Data.GetDefenseTotal}"
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   />
+
+                            <Image Source="speed_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="2" 
+                                   />
+
+                            <Label Text="{Binding Data.GetSpeedTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="2" 
+                                   />
+
+                        </Grid>
+
+                    </Frame>
 
                 </Grid>
             </Frame>
