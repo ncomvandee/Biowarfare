@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellReadPage"
+             Style="{StaticResource CharacterContentPage}"
              >
 
     <ContentPage.ToolbarItems>
@@ -19,7 +20,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
+            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
 
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
@@ -28,7 +29,7 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}"
+                           Style="{StaticResource CharacterReadCellTitleFrame}"
                            >
                         
                         <StackLayout Orientation="Horizontal" 
@@ -38,15 +39,15 @@
                                  >
 
                             <Label Text="{Binding Data.Job}" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
                             <Label Text="|" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
                             <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
                         </StackLayout>
@@ -82,7 +83,7 @@
                 </Grid>
             </Frame>
 
-            <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
+            <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
                    >
                    
@@ -93,7 +94,7 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}">
+                           Style="{StaticResource CharacterReadCellTitleFrame}">
 
                         <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
                     </Frame>
@@ -208,7 +209,7 @@
                 </Grid>
             </Frame>
 
-            <Button Style="{StaticResource PrimaryButtonStyle}"
+            <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
                     Clicked="CellEditButton_Clicked"
