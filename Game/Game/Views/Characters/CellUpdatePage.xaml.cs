@@ -36,7 +36,7 @@ namespace Game.Views
 
             BindingContext = this.ViewModel = data;
 
-            TitlePage .Text = "Update " + data.Data.Name;
+            TitlePage.Text = "Update " + data.Data.Name;
 
             CellTypePicker.SelectedItem = data.Data.Job.ToString();
             CellImage.Source = data.Data.ImageURI.ToString();
