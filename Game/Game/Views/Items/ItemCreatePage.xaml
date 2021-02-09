@@ -38,7 +38,8 @@
 
                     </Frame>
 
-                    <Frame Style="{StaticResource MediumCircleFrameStyle}">
+                    <Frame Style="{StaticResource MediumCircleFrameStyle}"
+                           WidthRequest="120" HeightRequest="120">
 
                         <Image x:Name="CellImage" />
 
@@ -52,15 +53,17 @@
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
                    Style="{StaticResource CreateEntryStyle}"
-                   Margin="10"/>
+                   Margin="0"/>
 
             <Editor BackgroundColor="White" 
-                    HeightRequest="120" 
+                    HeightRequest="100" 
                     Placeholder="Description goes here..."
                     PlaceholderColor="Gray"
-                    FontSize="Default"/>
+                    FontSize="Default"
+                    />
 
-            <Frame Style="{StaticResource StatsFrameStyle}">
+            <Frame Style="{StaticResource StatsFrameStyle}"
+                   HeightRequest="100">
 
                 <StackLayout>
 
@@ -70,9 +73,11 @@
                         
                     </Frame>
 
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal"
+                                 Margin="0, 20">
                         <Label Text="Atk"
-                               HorizontalOptions="End"/>
+                               HorizontalOptions="EndAndExpand"
+                               FontSize="Medium"/>
 
                         <Slider WidthRequest="200"
                                 HorizontalOptions="StartAndExpand"/>
@@ -81,10 +86,6 @@
                     
                 </StackLayout>
                 
-                
-
-
-
             </Frame>
 
             <StackLayout Orientation="Horizontal" 
