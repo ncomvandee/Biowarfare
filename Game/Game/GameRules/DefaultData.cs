@@ -235,7 +235,7 @@ namespace Game.GameRules
                                   " Has a +10% speed buff.",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "",
+                    ImageURI = "nkcell_bg.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,

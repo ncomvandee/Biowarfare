@@ -119,7 +119,8 @@ namespace Game.Views
                     break;
 
                 case "NKCell":
-                    CellImage.Source = "";
+                    CellImage.Source = "nkcell_bg.png";
+                    ViewModel.Data.ImageURI = "nkcell_bg.png";
                     break;
             }
 
