@@ -35,7 +35,8 @@
                         <Picker Style="{StaticResource CreatePickerStyle}"
                                 ItemsSource="{x:Static local_enum:MonsterTypeEnumHelper.GetMonsterTypeList}"
                                 SelectedItem="{Binding Data.MonsterType, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                                x:Name="MonsterTypePicker" 
+                                x:Name="MonsterTypePicker"
+                                SelectedIndexChanged="ImageChanged"
                                 />
                         
                      </Frame>

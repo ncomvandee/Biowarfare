@@ -67,43 +67,41 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //public void ImageChanged(object sender, EventArgs e)
-        //{
-        //    // Selected CellType as String
-        //    var TypeSelected = CellTypePicker.SelectedItem.ToString();
+        public void ImageChanged(object sender, EventArgs e)
+        {
+            MonsterTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
 
-        //    switch (TypeSelected)
-        //    {
-        //        case "Basophil":
-        //            CellImage.Source = "basophil_bg.png";
-        //            ViewModel.Data.ImageURI = "basophil_bg.png";
-        //            break;
+            // Get the string CellType from picker
+            var TypeSelected = MonsterTypePicker.SelectedItem.ToString();
 
-        //        case "Eosinophil":
-        //            CellImage.Source = "eosinophil_bg.png";
-        //            ViewModel.Data.ImageURI = "eosinophil_bg.png";
-        //            break;
+            switch (TypeSelected)
+            {
+                case "Spore":
+                    MonsterImage.Source = "spore_bg.png";
+                    ViewModel.Data.ImageURI = "spore_bg.png";
+                    break;
 
-        //        case "Macrophage":
-        //            CellImage.Source = "macrophage_bg.png";
-        //            ViewModel.Data.ImageURI = "macrophage_bg.png";
-        //            break;
+                case "Bacteria":
+                    MonsterImage.Source = "bacteria_bg.png";
+                    ViewModel.Data.ImageURI = "bacteria_bg.png";
+                    break;
 
-        //        case "BCell":
-        //            CellImage.Source = "b_cell_bg.png";
-        //            ViewModel.Data.ImageURI = "b_cell_bg.png";
-        //            break;
+                case "Parasite":
+                    MonsterImage.Source = "parasite_bg.png";
+                    ViewModel.Data.ImageURI = "parasite_bg.png";
+                    break;
 
-        //        case "KillerTCell":
-        //            CellImage.Source = "t_cell_bg.png";
-        //            ViewModel.Data.ImageURI = "t_cell_bg.png";
-        //            break; 
+                case "Virus":
+                    MonsterImage.Source = "virus_bg.png";
+                    ViewModel.Data.ImageURI = "virus_bg.png";
+                    break;
 
-        //        case "NKCell":
-        //            CellImage.Source = "";
-        //            break;
-        //    }
-        //}
+                case "Cancer":
+                    MonsterImage.Source = "cancer_bg.png";
+                    ViewModel.Data.ImageURI = "cancer_bg.png";
+                    break;
+            }
+        }
 
         /// <summary>
         /// Shows the value when Slider changed
