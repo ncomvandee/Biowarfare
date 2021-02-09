@@ -25,16 +25,50 @@
             
             
             
-            <!--Added colors (Added styles at end of page)-->
-            <Color x:Key="PrimaryBackgroundPurple">#452180</Color>
+            <!-- Default Color Scheme -->
+            <Color x:Key="PageBackgroundColor">#2D086C</Color>
+            <Color x:Key="PrimaryBackgroundPurple">#2D086C</Color>
             <Color x:Key="PrimaryMidgroundPurple">#8051CB</Color>
-            <Color x:Key="PrimaryForegroundPurple">#D8BFFF</Color>
+            <Color x:Key="PrimaryForegroundPurple">#D660BF</Color>
             <Color x:Key="PrimaryAccentColor">White</Color>
-            
-            
-            
-            
-            <Color x:Key="PageBackgroundColor">#452180</Color>
+            <Color x:Key="SecondaryAccentColor">#F6D55C</Color>
+
+
+            <!-- Character Color Scheme -->
+            <Color x:Key="PrimaryCharacterBackground">#00064D</Color>
+            <Color x:Key="PrimaryCharacterMidground">#20639B</Color>
+            <Color x:Key="PrimaryCharacterForeground">#3CAEA3</Color>
+
+
+            <!-- Monster Color Scheme -->
+            <Color x:Key="PrimaryMonsterBackground">#20083A</Color>
+            <Color x:Key="PrimaryMonsterMidground">#BE4647</Color>
+            <Color x:Key="PrimaryMonsterForeground">#D4894A</Color>
+
+
+            <!-- Items Color Scheme -->
+            <Color x:Key="PrimaryItemBackground">#00392A</Color>
+            <Color x:Key="PrimaryItemMidground">#508104</Color>
+            <Color x:Key="PrimaryItemForeground">#BBC300</Color>
+
+
+            <!-- Scores Color Scheme -->
+            <Color x:Key="PrimaryScoreBackground">#451F3C</Color>
+            <Color x:Key="PrimaryScoreMidground">#EF7834</Color>
+            <Color x:Key="PrimaryScoreForeground">#FFC027</Color>
+
+
+
+
+
+
+
+
+
+
+
+
+           
             <Color x:Key="ViewBackgroundColor">#8051CB</Color>
             <Color x:Key="NavigationBarColor">orange</Color>
 
@@ -525,7 +559,7 @@
 
 
 
-            <!--Basic Frame-->
+            <!--Basic Default Color Frame-->
             <Style TargetType="Frame"
                    x:Key="BasicAutoFrameStyle"
                    >
@@ -534,8 +568,53 @@
                 <Setter Property="CornerRadius" Value="20"/>
                 
             </Style>
+            
+            
+            <!--Basic Character Color Frame-->
+            <Style TargetType="Frame"
+                   x:Key="BasicCharacterFrameStyle"
+                   BasedOn="{StaticResource BasicAutoFrameStyle}"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
 
-            <!-- Outer frame on index page -->
+            </Style>
+
+            <!--Basic Monster Color Frame-->
+            <Style TargetType="Frame"
+                   x:Key="BasicMonsterFrameStyle"
+                   BasedOn="{StaticResource BasicAutoFrameStyle}"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+
+            </Style>
+
+            <!--Basic Items Color Frame-->
+            <Style TargetType="Frame"
+                   x:Key="BasicItemFrameStyle"
+                   BasedOn="{StaticResource BasicAutoFrameStyle}"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemMidground}"/>
+
+            </Style>
+
+            <!--Basic Score Color Frame-->
+            <Style TargetType="Frame"
+                   x:Key="BasicScoreFrameStyle"
+                   BasedOn="{StaticResource BasicAutoFrameStyle}"
+                   >
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreMidground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+            
+
+            <!-- Default Outer frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="OuterFrameStyle"
                    >
@@ -548,9 +627,59 @@
                     <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
 
             </Style>
+            
+
+            <!-- Character Outer frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="CharacterOuterFrameStyle"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+
+            </Style>
 
 
-            <!-- Frame on home page -->
+            <!-- Monster Outer frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="MonsterOuterFrameStyle"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+
+            </Style>
+
+
+            <!-- Items Outer frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="ItemOuterFrameStyle"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemMidground}"/>
+
+            </Style>
+
+            <!-- Score Outer frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="ScoreOuterFrameStyle"
+                   BasedOn="{StaticResource OuterFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreMidground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Frame on home page -->
             <Style TargetType="Frame"
                    x:Key="HomePageFramestyle"
                    BasedOn="{StaticResource OuterFrameStyle}"
@@ -561,8 +690,10 @@
 
              </Style>
 
+            <!--___________________________________________-->
 
-            <!-- Inner frame on index page -->
+
+            <!-- Default Inner frame on index page -->
                 <Style TargetType="Frame"
                    x:Key="InnerFrameStyle"
                    >
@@ -576,7 +707,55 @@
 
                 </Style>
 
-            <!-- Upper frame on Delete, Read page -->
+
+            <!-- Character Inner frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="CharacterInnerFrameStyle"
+                   BasedOn="{StaticResource InnerFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+
+            </Style>
+
+            <!-- Monster Inner frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="MonsterInnerFrameStyle"
+                   BasedOn="{StaticResource InnerFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+
+            </Style>
+
+            <!-- Item Inner frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="ItemInnerFrameStyle"
+                   BasedOn="{StaticResource InnerFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemForeground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemForeground}"/>
+
+            </Style>
+
+            <!-- Score Inner frame on index page -->
+            <Style TargetType="Frame"
+                   x:Key="ScoreInnerFrameStyle"
+                   BasedOn="{StaticResource InnerFrameStyle}"
+                   >
+
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreForeground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+            
+            <!-- Default Upper frame on Delete, Read page -->
             <Style TargetType ="Frame"
                    x:Key="MediumSquareMidgroundFrame"
                    BasedOn="{StaticResource OuterFrameStyle}"
@@ -588,7 +767,59 @@
 
             </Style>
 
-            <!-- Lower frame on Read page -->
+            <!-- Character Upper frame on Delete, Read page -->
+            <Style TargetType ="Frame"
+                   x:Key="CharacterSquareMidgroundFrame"
+                   BasedOn="{StaticResource CharacterOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <!-- Monster Upper frame on Delete, Read page -->
+            <Style TargetType ="Frame"
+                   x:Key="MonsterSquareMidgroundFrame"
+                   BasedOn="{StaticResource MonsterOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <!-- Item Upper frame on Delete, Read page -->
+            <Style TargetType ="Frame"
+                   x:Key="ItemSquareMidgroundFrame"
+                   BasedOn="{StaticResource ItemOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+            <!-- Score Upper frame on Delete, Read page -->
+            <Style TargetType ="Frame"
+                   x:Key="ScoreSquareMidgroundFrame"
+                   BasedOn="{StaticResource ScoreOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Lower frame on Read page -->
             <Style  TargetType="Frame"
                     x:Key="MediumRectangleMidgroundFrame"
                     BasedOn="{StaticResource OuterFrameStyle}"
@@ -599,6 +830,59 @@
 
 
             </Style>
+
+            <!-- Character Lower frame on Read page -->
+            <Style  TargetType="Frame"
+                    x:Key="CharacterRectangleMidgroundFrame"
+                    BasedOn="{StaticResource CharacterOuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+            <!-- Monster Lower frame on Read page -->
+            <Style  TargetType="Frame"
+                    x:Key="MonsterRectangleMidgroundFrame"
+                    BasedOn="{StaticResource MonsterOuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+
+            <!-- Item Lower frame on Read page -->
+            <Style  TargetType="Frame"
+                    x:Key="ItemRectangleMidgroundFrame"
+                    BasedOn="{StaticResource ItemOuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+            <!-- Score Lower frame on Read page -->
+            <Style  TargetType="Frame"
+                    x:Key="ScoreRectangleMidgroundFrame"
+                    BasedOn="{StaticResource ScoreOuterFrameStyle}"
+                    >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="200"/>
+
+
+            </Style>
+
+            
+            <!--___________________________________________-->
+
 
             <!-- Thumbnail frame on index page -->
             <Style TargetType="Frame"
@@ -615,6 +899,8 @@
 
                 </Style>
 
+            <!--___________________________________________-->
+
             <!-- Thumbnail frame on Read, Delete page -->
             <Style TargetType="Frame"
                    x:Key="LargeCircleFrameStyle"
@@ -625,6 +911,8 @@
                 <Setter Property="HeightRequest" Value="190"/>
 
             </Style>
+
+            <!--___________________________________________-->
 
             <!-- Level Display For Create/Update Page -->
             <Style TargetType="Frame"
@@ -639,8 +927,10 @@
 
             </Style>
 
+            <!--___________________________________________-->
 
-            <!-- Outer Thumbnail Frame For Create/Update Page -->
+
+            <!-- Default Outer Thumbnail Frame For Create/Update Page -->
             <Style TargetType="Frame"
                    x:Key="CreateFrameStyle"
                    BasedOn="{StaticResource MediumSquareMidgroundFrame}"
@@ -649,7 +939,48 @@
 
             </Style>
 
-            <!-- Level Picker Frame For Create/Update Page -->
+
+            <!-- Character Outer Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="CharacterCreateFrameStyle"
+                   BasedOn="{StaticResource CharacterSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+            <!-- Monster Outer Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="MonsterCreateFrameStyle"
+                   BasedOn="{StaticResource MonsterSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+            <!-- Item Outer Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ItemCreateFrameStyle"
+                   BasedOn="{StaticResource ItemSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+            <!-- Score Outer Thumbnail Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ScoreCreateFrameStyle"
+                   BasedOn="{StaticResource ScoreSquareMidgroundFrame}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+            
+
+            <!-- Default Level Picker Frame For Create/Update Page -->
             <Style TargetType="Frame"
                    x:Key="CreatePickerFrameStyle"
                    >
@@ -664,6 +995,53 @@
 
             </Style>
 
+            <!-- Character Level Picker Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="CharacterCreatePickerFrameStyle"
+                   BasedOn="{StaticResource CreatePickerFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+
+            </Style>
+
+            <!-- Monster Level Picker Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="MonsterCreatePickerFrameStyle"
+                   BasedOn="{StaticResource CreatePickerFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+
+            </Style>
+
+            <!-- Item Level Picker Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ItemCreatePickerFrameStyle"
+                   BasedOn="{StaticResource CreatePickerFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemForeground}"/>
+
+            </Style>
+
+            <!-- Score Level Picker Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ScoreCreatePickerFrameStyle"
+                   BasedOn="{StaticResource CreatePickerFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreForeground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
             <!-- Thumbnail Frame For Create/Update Page -->
             <Style TargetType="Frame"
                    x:Key="MediumCircleFrameStyle"
@@ -674,8 +1052,12 @@
                 <Setter Property="HeightRequest" Value="165"/>
 
             </Style>
+            
 
-            <!-- Stats Frame For Create/Update Page -->
+            <!--___________________________________________-->
+            
+
+            <!-- Default Stats Frame For Create/Update Page -->
             <Style TargetType="Frame"
                    x:Key="StatsFrameStyle"
                    >
@@ -688,8 +1070,62 @@
 
             </Style>
 
+            <!-- Character Stats Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="CharacterStatsFrameStyle"
+                   BasedOn="{StaticResource StatsFrameStyle}"
+                   
+                   >
 
-            <!--Frame for Read Page Cell Name-->
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+
+
+            </Style>
+
+            <!-- Monster Stats Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="MonsterStatsFrameStyle"
+                   BasedOn="{StaticResource StatsFrameStyle}"
+                   
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+
+
+            </Style>
+
+            <!-- Item Stats Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ItemStatsFrameStyle"
+                   BasedOn="{StaticResource StatsFrameStyle}"
+                   
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemMidground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemMidground}"/>
+
+
+            </Style>
+
+            <!-- Score Stats Frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ScoreStatsFrameStyle"
+                   BasedOn="{StaticResource StatsFrameStyle}"
+                   
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreMidground}"/>
+
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
+            <!--Default Frame for Read Page Cell Name-->
             <Style TargetType="Frame"
                    x:Key="ReadCellTitleFrame"
                    >
@@ -701,6 +1137,52 @@
                 <Setter Property="HeightRequest" Value="30"/>
 
             </Style>
+
+            <!--Character Frame for Read Page Cell Name-->
+            <Style TargetType="Frame"
+                   x:Key="CharacterReadCellTitleFrame"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+
+            </Style>
+
+            <!--Monster Frame for Read Page Cell Name-->
+            <Style TargetType="Frame"
+                   x:Key="MonsterReadCellTitleFrame"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+
+            </Style>
+
+            <!--Item Frame for Read Page item Name-->
+            <Style TargetType="Frame"
+                   x:Key="ItemReadCellTitleFrame"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryItemForeground}"/>
+
+            </Style>
+
+            <!--Score Frame for Read Page score Name-->
+            <Style TargetType="Frame"
+                   x:Key="ScoreReadCellTitleFrame"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreForeground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
             <!--Frame For Flip Option on Read Page-->
@@ -714,10 +1196,13 @@
 
             </Style>
 
+            <!--___________________________________________-->
 
 
 
-
+            
+            
+            
 
             <!-- Lables -->
 
