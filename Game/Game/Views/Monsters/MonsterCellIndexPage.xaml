@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.MonsterCellIndexPage"
              Title ="Monster Cell Index"
+             Style="{StaticResource MonsterContentPage}"
              >
 
     <ContentPage.ToolbarItems>
@@ -42,7 +43,7 @@
 
                                 <Frame Grid.Row="0"
                                        Grid.Column="0"
-                                       Style="{StaticResource OuterFrameStyle}"
+                                       Style="{StaticResource MonsterOuterFrameStyle}"
                                        >
                                     
                                 </Frame>
@@ -61,7 +62,7 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame Style="{StaticResource InnerFrameStyle}"
+                                        <Frame Style="{StaticResource MonsterInnerFrameStyle}"
                                                >
                                             
                                             <Grid>
@@ -80,47 +81,47 @@
                                                              >
 
                                                     <Label Text="{Binding MonsterType}" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource MonsterCellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="|" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource MonsterCellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="{Binding Name}" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource MonsterCellNameLabelStyle}"
                                                            />
 
                                                 </StackLayout>
 
                                                 <Label Text="Atk" 
                                                        Grid.Row="1" 
-                                                       Style="{StaticResource ProgressBarLabelStyle}"
+                                                       Style="{StaticResource MonsterProgressBarLabelStyle}"
                                                        />
                                                 
                                                 <ProgressBar Progress="{Binding GetAttackAsDouble}"
                                                              Grid.Row="1"
-                                                             Style="{StaticResource ProgressBarStyle}"
+                                                             Style="{StaticResource MonsterProgressBarStyle}"
                                                              />
 
                                                 <Label Text="Def" 
                                                        Grid.Row="2" 
-                                                       Style="{StaticResource ProgressBarLabelStyle}"
+                                                       Style="{StaticResource MonsterProgressBarLabelStyle}"
                                                        />
                                                 
                                                 <ProgressBar Progress="{Binding GetDefenseAsDouble}" 
                                                              Grid.Row="2" 
-                                                             Style="{StaticResource ProgressBarStyle}" 
+                                                             Style="{StaticResource MonsterProgressBarStyle}" 
                                                              />
 
                                                 <Label Text="Spd" 
                                                        Grid.Row="3" 
-                                                       Style="{StaticResource ProgressBarLabelStyle}"
+                                                       Style="{StaticResource MonsterProgressBarLabelStyle}"
                                                        />
                                                 
                                                 <ProgressBar Progress="{Binding GetSpeedAsDouble}"
                                                              Grid.Row="3" 
-                                                             Style="{StaticResource ProgressBarStyle}"
+                                                             Style="{StaticResource MonsterProgressBarStyle}"
                                                              />
 
                                             </Grid>
