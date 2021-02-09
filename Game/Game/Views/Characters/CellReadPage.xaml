@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellReadPage"
-             Title ="{Binding Title}">
+             >
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
@@ -11,6 +11,11 @@
                      />
         
     </ContentPage.ToolbarItems>
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout>
             

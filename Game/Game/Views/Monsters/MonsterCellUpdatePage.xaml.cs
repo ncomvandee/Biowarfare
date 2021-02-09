@@ -32,6 +32,8 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
+            TitlePage.Text = "Update " + data.Data.Name;
+
             MonsterTypePicker.SelectedItem = data.Data.MonsterType.ToString();
             MonsterImage.Source = data.Data.ImageURI.ToString();
 

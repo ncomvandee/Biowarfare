@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellIndexPage"
-             Title ="Cell Index"
              >
 
     <ContentPage.ToolbarItems>
@@ -13,6 +12,11 @@
                      />
         
     </ContentPage.ToolbarItems>
+
+    <NavigationPage.TitleView>
+        <Label Text="Cell Index" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}"

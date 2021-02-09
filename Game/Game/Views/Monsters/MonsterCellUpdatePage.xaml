@@ -16,6 +16,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <NavigationPage.TitleView>
+        <Label x:Name="TitlePage" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
 
         <StackLayout  HorizontalOptions="CenterAndExpand">
