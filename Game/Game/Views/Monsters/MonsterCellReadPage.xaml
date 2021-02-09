@@ -64,9 +64,16 @@
                         
                     </Frame>
 
+                    <Label Grid.Row="1" Text="{Binding Data.Description}" 
+                           Margin="20"
+                           FontSize="Caption"
+                           IsVisible="false"
+                           x:Name="DescriptionFrame"/>
+
+
                     <Button Style="{StaticResource InvisibleReadButtonStyle}"
                             Grid.Row="1"   
-                            Clicked="ShowAttributeClicked" 
+                            Clicked="ShowDescriptionClicked" 
                             />
                     
                 </Grid>
