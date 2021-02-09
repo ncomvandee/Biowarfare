@@ -23,7 +23,8 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <StackLayout Style="{StaticResource OuterBoxStack}"
+                     HorizontalOptions="FillAndExpand">
 
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset}"
