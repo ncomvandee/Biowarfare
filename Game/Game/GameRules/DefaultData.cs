@@ -261,36 +261,47 @@ namespace Game.GameRules
             {
                 new MonsterModel {
                     MonsterType = MonsterTypeEnum.Spore,
-                    Name = "M1",
-                    Description = "M1",
+                    Name = "Pony",
+                    Description = "A Spore is a small unicellular entity that typically can invade the body through the respiratory system." +
+                                  " Spores have a 25% chance of causing a character to be poisoned if a hit succeeds." +
+                                  " When a character is poisoned, it loses 1hp at the beginning of its turn for 5 turns." +
+                                  " At the end of 5 turns, the character is cured. Poison does not stack damage and extend duration.",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
                     MonsterType = MonsterTypeEnum.Bacteria,
-                    Name = "M2",
-                    Description = "M2",
+                    Name = "Rusty",
+                    Description = "Bacteria are unicellular organisms that can be both beneficial or detrimental to the body." +
+                                  " Bacteria has a 25% chance on attack to deal double damage," +
+                                  " 50% chance to deal regular damage, or 25% chance to heal its opponent for 50% of attack power.",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
                     MonsterType = MonsterTypeEnum.Parasite,
-                    Name = "M3",
-                    Description = "M3",
+                    Name = "Tison",
+                    Description = "Parasites are organisms that feed off of a host organism." +
+                                  " Parasites heal themselves when they deal damage." +
+                                  " For every damage point a Parasite deals to a character," +
+                                  " it heals itself for 25% of the total damage dealt.",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
                     MonsterType = MonsterTypeEnum.Virus,
-                    Name = "M4",
-                    Description = "M4",
+                    Name = "Vector",
+                    Description = "A microscopic pathogen that can wreak havoc on the body through rapid replication." +
+                                  " A Virus’s attack ignores defense points and deals pure attack damage to a character.",
                     ImageURI = "item.png",
                 },
 
                 new MonsterModel {
                     MonsterType = MonsterTypeEnum.Cancer,
-                    Name = "M5",
-                    Description = "M5",
+                    Name = "Simon",
+                    Description = "Boss enemy: Cancer is a malformed body cell that can rapidly divide and spread quickly." +
+                                  " Cancer has a 5% chance to deal lethal damage instantly to one Cell." +
+                                  " Cancer has +10% to movement speed.  ",
                     ImageURI = "item.png",
                 },
             };
