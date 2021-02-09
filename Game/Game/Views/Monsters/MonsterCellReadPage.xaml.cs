@@ -66,13 +66,14 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ShowDescriptionClicked (object sender, EventArgs e)
         {
-
+            // Hide image, show description
             if (ImageFrame.IsVisible)
             {
                 ImageFrame.IsVisible = false;
                 DescriptionFrame.IsVisible = true;
                 
             } 
+            // Hide description, show image
             else if (DescriptionFrame.IsVisible)
             {
                 DescriptionFrame.IsVisible = false;
