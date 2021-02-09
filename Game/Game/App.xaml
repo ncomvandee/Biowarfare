@@ -1211,7 +1211,7 @@
 
 
             
-            <!-- Cell name label for Index page, Read page, Delete page -->
+            <!-- Default Cell name label for Index page, Read page, Delete page -->
             <Style TargetType="Label"
                    x:Key="CellNameLabelStyle"
                    >
@@ -1223,7 +1223,51 @@
 
                 </Style>
 
-            <!-- Progress bar for index page -->
+            <!-- Character Cell name label for Index page, Read page, Delete page -->
+            <Style TargetType="Label"
+                   x:Key="CharacterCellNameLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+            
+            </Style>
+
+            <!-- Monster Cell name label for Index page, Read page, Delete page -->
+            <Style TargetType="Label"
+                   x:Key="MonsterCellNameLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item name label for Index page, Read page, Delete page -->
+            <Style TargetType="Label"
+                   x:Key="ItemNameLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+            <!-- Score name label for Index page, Read page, Delete page -->
+            <Style TargetType="Label"
+                   x:Key="ScoreNameLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Progress bar for index page -->
                 <Style TargetType="Label"
                    x:Key="ProgressBarLabelStyle"
                    >
@@ -1234,7 +1278,41 @@
 
                 </Style>
 
-                <!-- Simple white text used for Delete page -->
+            <!-- Character Progress bar for index page -->
+            <Style TargetType="Label"
+                   x:Key="CharacterProgressBarLabelStyle"
+                   BasedOn="{StaticResource ProgressBarLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!-- Monster Progress bar for index page -->
+            <Style TargetType="Label"
+                   x:Key="MonsterProgressBarLabelStyle"
+                   BasedOn="{StaticResource ProgressBarLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Progress bar for index page -->
+            <Style TargetType="Label"
+                   x:Key="ItemProgressBarLabelStyle"
+                   BasedOn="{StaticResource ProgressBarLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Simple white text used for Delete page -->
             <Style TargetType="Label"
                        x:Key="SimpleLabelTextStyle">
 
@@ -1244,6 +1322,8 @@
                 <Setter Property="TextColor" Value="White"/>
 
             </Style>
+
+            <!--___________________________________________-->
 
             <!-- Level Display Text For Create/Update Page -->
             <Style TargetType="Label"
@@ -1260,7 +1340,9 @@
 
             </Style>
 
-            <!-- Top Stats Label For Create/Update Page -->
+            <!--___________________________________________-->
+
+            <!-- Default Top Attribute Label For Create/Update Page -->
             <Style TargetType="Label"
                    x:Key="StatsLabelTitleStyle"
                    >
@@ -1270,7 +1352,41 @@
 
             </Style>
 
-            <!-- Attribute Label For Create/Update Page -->
+            <!-- Character Top Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="CharacterStatsLabelTitleStyle"
+                   BasedOn="{StaticResource StatsLabelTitleStyle}"
+                   >
+                
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!-- Monster Top Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="MonsterStatsLabelTitleStyle"
+                   BasedOn="{StaticResource StatsLabelTitleStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Top Stats Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="ItemStatsLabelTitleStyle"
+                   BasedOn="{StaticResource StatsLabelTitleStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Attribute Label For Create/Update Page -->
             <Style TargetType="Label"
                    x:Key="StatsLabelStyle"
                    >
@@ -1279,6 +1395,38 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
 
             </Style>
+
+            <!-- Character Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="CharacterStatsLabelStyle"
+                   BasedOn="{StaticResource StatsLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!-- Monster Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="MonsterStatsLabelStyle"
+                   BasedOn="{StaticResource StatsLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Attribute Label For Create/Update Page -->
+            <Style TargetType="Label"
+                   x:Key="ItemStatsLabelStyle"
+                   BasedOn="{StaticResource StatsLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
             <!-- Number Value For Create/Update Page -->
             <Style TargetType="Label"
@@ -1292,6 +1440,8 @@
 
             </Style>
 
+            <!--___________________________________________-->
+
 
             <!--Label for Icons of Flip Read Page-->
             <Style TargetType="Label"
@@ -1302,6 +1452,8 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
 
             </Style>
+
+            <!--___________________________________________-->
 
 
 
