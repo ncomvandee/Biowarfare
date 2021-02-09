@@ -158,6 +158,40 @@
                 
             </Style>
 
+            <!-- Monster Pages -->
+            <Style TargetType="ContentPage" 
+                   ApplyToDerivedTypes="True"
+                   x:Key="MonsterContentPage"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryMonsterBackground}" />
+                <Setter Property="Padding" Value="10,10,10,10" />
+
+            </Style>
+
+            <!-- Item Pages -->
+            <Style TargetType="ContentPage" 
+                   ApplyToDerivedTypes="True"
+                   x:Key="ItemContentPage"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryItemBackground}" />
+                <Setter Property="Padding" Value="10,10,10,10" />
+
+            </Style>
+
+            <!-- Scores Pages -->
+            <Style TargetType="ContentPage" 
+                   ApplyToDerivedTypes="True"
+                   x:Key="ScoreContentPage"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryScoreBackground}" />
+                <Setter Property="Padding" Value="10,10,10,10" />
+
+            </Style>
+
+
 
 
 
