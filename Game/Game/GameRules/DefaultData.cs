@@ -266,7 +266,7 @@ namespace Game.GameRules
                                   " Spores have a 25% chance of causing a character to be poisoned if a hit succeeds." +
                                   " When a character is poisoned, it loses 1hp at the beginning of its turn for 5 turns." +
                                   " At the end of 5 turns, the character is cured. Poison does not stack damage and extend duration.",
-                    ImageURI = "item.png",
+                    ImageURI = "spore_bg.png",
                 },
 
                 new MonsterModel {
@@ -275,7 +275,7 @@ namespace Game.GameRules
                     Description = "Bacteria are unicellular organisms that can be both beneficial or detrimental to the body." +
                                   " Bacteria has a 25% chance on attack to deal double damage," +
                                   " 50% chance to deal regular damage, or 25% chance to heal its opponent for 50% of attack power.",
-                    ImageURI = "item.png",
+                    ImageURI = "bacteria_bg.png",
                 },
 
                 new MonsterModel {
@@ -285,7 +285,7 @@ namespace Game.GameRules
                                   " Parasites heal themselves when they deal damage." +
                                   " For every damage point a Parasite deals to a character," +
                                   " it heals itself for 25% of the total damage dealt.",
-                    ImageURI = "item.png",
+                    ImageURI = "parasite_bg.png",
                 },
 
                 new MonsterModel {
@@ -293,7 +293,7 @@ namespace Game.GameRules
                     Name = "Vector",
                     Description = "A microscopic pathogen that can wreak havoc on the body through rapid replication." +
                                   " A Virus’s attack ignores defense points and deals pure attack damage to a character.",
-                    ImageURI = "item.png",
+                    ImageURI = "virus_bg.png",
                 },
 
                 new MonsterModel {
@@ -302,7 +302,7 @@ namespace Game.GameRules
                     Description = "Boss enemy: Cancer is a malformed body cell that can rapidly divide and spread quickly." +
                                   " Cancer has a 5% chance to deal lethal damage instantly to one Cell." +
                                   " Cancer has +10% to movement speed.  ",
-                    ImageURI = "item.png",
+                    ImageURI = "cancer_bg.png",
                 },
             };
 
