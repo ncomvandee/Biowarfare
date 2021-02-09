@@ -252,11 +252,10 @@ namespace Game.Views
                     break;
 
                 case "Macrophage":
-                    ViewModel.Data.Description = "A Spore is a small unicellular entity that typically can invade the body through the respiratory system." +
-                                                 " Spores have a 25% chance of causing a character to be poisoned if a hit succeeds. When a character is poisoned," +
-                                                 " it loses 1hp at the beginning of its turn for 5 turns." +
-                                                 " At the end of 5 turns, the character is cured." +
-                                                 " Poison does not stack damage and extend duration.";
+                    ViewModel.Data.Description = "Macrophages are a type of white blood cell that seek out and dispose of foreign invaders and non-healthy cells in their path." +
+                                                 " Macrophages are unique because they recruit other immune cells to fight alongside them." +
+                                                 " Having an active Macrophage in your immune system will increase all friendly characters by +5% defense power." +
+                                                 " Has a 5% personal defense buff.  ";
                     break;
 
                 case "BCell":
