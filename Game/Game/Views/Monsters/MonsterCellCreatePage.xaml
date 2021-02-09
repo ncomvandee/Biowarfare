@@ -4,7 +4,9 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.MonsterCellCreatePage"
-             Title="Monster Cell Creation">
+             Title="Monster Cell Creation"
+             Style="{StaticResource MonsterContentPage}"
+             >
                
 
     <ContentPage.Resources>
@@ -20,16 +22,16 @@
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
 
-            <Frame Style="{StaticResource CreateFrameStyle}">
+            <Frame Style="{StaticResource MonsterCreateFrameStyle}">
 
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="Center" 
                              >
 
-                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
+                    <Frame Style="{StaticResource MonsterCreatePickerFrameStyle}">
                     
                         
-                        <Picker Style="{StaticResource CreatePickerStyle}" 
+                        <Picker Style="{StaticResource MonsterCreatePickerStyle}" 
                                 ItemsSource="{x:Static local_enum:MonsterTypeEnumHelper.GetMonsterTypeList}"
                                 SelectedItem="{Binding Data.MonsterType, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                 x:Name="MonsterTypePicker"
@@ -50,10 +52,10 @@
             <Entry Text="{Binding Data.Name}" 
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
-                   Style="{StaticResource CreateEntryStyle}"
+                   Style="{StaticResource MonsterCreateEntryStyle}"
                    />
 
-            <Frame Style="{StaticResource StatsFrameStyle}"
+            <Frame Style="{StaticResource MonsterStatsFrameStyle}"
                    >
                 
                 <Grid>
@@ -67,12 +69,12 @@
 
                     <Label Text="Stats" 
                            Grid.Row="0" 
-                           Style="{StaticResource StatsLabelTitleStyle}"
+                           Style="{StaticResource MonsterStatsLabelTitleStyle}"
                            />
 
                     <Label Text="Atk" 
                            Grid.Row="1" 
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource MonsterStatsLabelStyle}"
                            />
 
 
@@ -89,7 +91,7 @@
 
                     <Label Text="Def" 
                            Grid.Row="2" 
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource MonsterStatsLabelStyle}"
                            />
 
                     <Slider Style="{StaticResource StatsSliderStyle}"
@@ -105,7 +107,7 @@
 
                     <Label Text="Spd" 
                            Grid.Row="3"
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource MonsterStatsLabelStyle}"
                            />
 
                     <Slider Style="{StaticResource StatsSliderStyle}"
@@ -126,12 +128,12 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
                 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
                         Text="Save" 
                         Clicked="SaveButton_Clicked"
                         />
 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
                         Text="Cancel" 
                         Clicked="CancelButton_Clicked"
                         />
