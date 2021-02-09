@@ -14,6 +14,11 @@
         
     </ContentPage.ToolbarItems>
 
+
+    <NavigationPage.TitleView>
+        <Label Text="Create New Monster Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}"
                      HorizontalOptions="FillAndExpand">
