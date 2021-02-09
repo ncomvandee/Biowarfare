@@ -234,4 +234,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Virus_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nkcell_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nkcell_bg.png" />
+  </ItemGroup>
 </Project>

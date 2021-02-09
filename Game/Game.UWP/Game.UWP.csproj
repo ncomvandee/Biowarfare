@@ -151,6 +151,8 @@
     <Content Include="item.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
+    <Content Include="nkcell_bg.png" />
+    <Content Include="nkcell_no_bg.png" />
     <Content Include="parasite_bg.png" />
     <Content Include="parasite_no_bg.png" />
     <Content Include="Properties\Default.rd.xml" />
