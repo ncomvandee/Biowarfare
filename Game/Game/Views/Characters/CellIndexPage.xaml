@@ -2,16 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.CellIndexPage"
+             Style="{StaticResource CharacterContentPage}"
              >
 
     <ContentPage.ToolbarItems>
-        
+
         <ToolbarItem Text="Add" 
                      Clicked="CreateCell_Clicked" 
                      IconImageSource="icon_add.png"
                      />
-        
+
     </ContentPage.ToolbarItems>
+    
 
     <NavigationPage.TitleView>
         <Label Text="Cell Index" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
@@ -41,7 +43,7 @@
 
                                 <Frame Grid.Row="0"
                                        Grid.Column="0"
-                                       Style="{StaticResource OuterFrameStyle}"
+                                       Style="{StaticResource CharacterOuterFrameStyle}"
                                        >
                                     
                                 </Frame>
@@ -60,7 +62,7 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame Style="{StaticResource InnerFrameStyle}"
+                                        <Frame Style="{StaticResource CharacterInnerFrameStyle}"
                                                >
                                             
                                             <Grid>
@@ -79,27 +81,27 @@
                                                              >
 
                                                     <Label Text="{Binding Job}" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource CharacterCellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="|" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource CharacterCellNameLabelStyle}"
                                                            />
                                                     
                                                     <Label Text="{Binding Name}" 
-                                                           Style="{StaticResource CellNameLabelStyle}"
+                                                           Style="{StaticResource CharacterCellNameLabelStyle}"
                                                            />
 
                                                 </StackLayout>
 
                                                 <Label Text="Atk" 
                                                        Grid.Row="1" 
-                                                       Style="{StaticResource ProgressBarLabelStyle}"
+                                                       Style="{StaticResource CharacterProgressBarLabelStyle}"
                                                        />
                                                 
                                                 <ProgressBar Progress="{Binding GetAttackAsDouble}"
                                                              Grid.Row="1"
-                                                             Style="{StaticResource ProgressBarStyle}"
+                                                             Style="{StaticResource CharacterProgressBarStyle}"
                                                              />
 
                                                 <Label Text="Def" 
@@ -109,7 +111,7 @@
                                                 
                                                 <ProgressBar Progress="{Binding GetDefenseAsDouble}" 
                                                              Grid.Row="2" 
-                                                             Style="{StaticResource ProgressBarStyle}" 
+                                                             Style="{StaticResource CharacterProgressBarStyle}" 
                                                              />
 
                                                 <Label Text="Spd" 
@@ -119,7 +121,7 @@
                                                 
                                                 <ProgressBar Progress="{Binding GetSpeedAsDouble}"
                                                              Grid.Row="3" 
-                                                             Style="{StaticResource ProgressBarStyle}"
+                                                             Style="{StaticResource CharacterProgressBarStyle}"
                                                              />
 
                                             </Grid>
