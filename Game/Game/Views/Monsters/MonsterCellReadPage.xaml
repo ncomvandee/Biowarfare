@@ -11,6 +11,12 @@
                      />
         
     </ContentPage.ToolbarItems>
+
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout>
             
