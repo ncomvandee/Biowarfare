@@ -133,8 +133,12 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="attack_icon.png" />
+    <Content Include="bacteria_bg.png" />
+    <Content Include="bacteria_no_bg.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
+    <Content Include="cancer_bg.png" />
+    <Content Include="cancer_no_bg.png" />
     <Content Include="defense_icon.png" />
     <Content Include="eosinophil_bg.png" />
     <Content Include="heart_icon.png" />
@@ -147,6 +151,8 @@
     <Content Include="item.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
+    <Content Include="parasite_bg.png" />
+    <Content Include="parasite_no_bg.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -176,7 +182,11 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="speed_icon.png" />
+    <Content Include="spore_bg.png" />
+    <Content Include="spore_no_bg.png" />
     <Content Include="t_cell_bg.png" />
+    <Content Include="Virus_bg.png" />
+    <Content Include="Virus_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
