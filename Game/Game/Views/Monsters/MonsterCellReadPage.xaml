@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.MonsterCellReadPage"
-             Title ="{Binding Data.Name}">
+             Title ="{Binding Data.Name}"
+             Style="{StaticResource MonsterContentPage}"
+             >
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
@@ -20,7 +22,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
+            <Frame Style="{StaticResource MonsterSquareMidgroundFrame}">
 
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
@@ -29,7 +31,7 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}"
+                           Style="{StaticResource MonsterReadCellTitleFrame}"
                            >
                         
                         <StackLayout Orientation="Horizontal" 
@@ -39,15 +41,15 @@
                                  >
 
                             <Label Text="{Binding Data.MonsterType}" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource MonsterCellNameLabelStyle}"
                                />
 
                             <Label Text="|" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource MonsterCellNameLabelStyle}"
                                />
 
                             <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
-                               Style="{StaticResource CellNameLabelStyle}"
+                               Style="{StaticResource MonsterCellNameLabelStyle}"
                                />
 
                         </StackLayout>
@@ -79,7 +81,7 @@
                 </Grid>
             </Frame>
 
-            <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
+            <Frame Style="{StaticResource MonsterRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
                    >
                    
@@ -90,10 +92,10 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}"
+                           Style="{StaticResource MonsterReadCellTitleFrame}"
                            >
 
-                        <Label Style="{StaticResource CellNameLabelStyle}"
+                        <Label Style="{StaticResource MonsterCellNameLabelStyle}"
                            Text="Attributes" 
                            Grid.Row="0" 
                            />
@@ -160,7 +162,7 @@
                 </Grid>
             </Frame>
 
-            <Button Style="{StaticResource PrimaryButtonStyle}"
+            <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
                     Clicked="MonsterCellEditButton_Clicked" 
