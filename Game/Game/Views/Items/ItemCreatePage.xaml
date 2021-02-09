@@ -39,7 +39,7 @@
                     </Frame>
 
                     <Frame Style="{StaticResource MediumCircleFrameStyle}"
-                           WidthRequest="120" HeightRequest="120">
+                           WidthRequest="170" HeightRequest="170">
 
                         <Image x:Name="CellImage" />
 
@@ -55,26 +55,38 @@
                    Style="{StaticResource CreateEntryStyle}"
                    Margin="0"/>
 
-            <Editor BackgroundColor="White" 
-                    HeightRequest="100" 
+            <Frame Style="{StaticResource StatsFrameStyle}"
+                   HeightRequest="100">
+                <Editor BackgroundColor="Transparent" 
                     Placeholder="Description goes here..."
                     PlaceholderColor="Gray"
                     FontSize="Default"
+                    HeightRequest="100"
+                    TextColor="Black"
                     />
+            </Frame>
+            
 
             <Frame Style="{StaticResource StatsFrameStyle}"
                    HeightRequest="100">
 
-                <StackLayout>
+                <Grid RowDefinitions="AUTO, AUTO">
 
-                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
-                        
-                        <Picker Style="{StaticResource CreatePickerStyle}"/>
+                    <Frame Style="{StaticResource CreatePickerFrameStyle}"
+                           Grid.Row="0"
+                           HeightRequest="35">
+
+                        <Picker Style="{StaticResource CreatePickerStyle}">
+                            <Picker.Items>
+                                <x:String>Attak boost</x:String>
+                            </Picker.Items>
+                        </Picker>
                         
                     </Frame>
 
                     <StackLayout Orientation="Horizontal"
-                                 Margin="0, 20">
+                                 Margin="0, 10, 0, 0"
+                                 Grid.Row="1">
                         <Label Text="Atk"
                                HorizontalOptions="EndAndExpand"
                                FontSize="Medium"/>
@@ -84,7 +96,7 @@
 
                     </StackLayout>
                     
-                </StackLayout>
+                </Grid>
                 
             </Frame>
 
