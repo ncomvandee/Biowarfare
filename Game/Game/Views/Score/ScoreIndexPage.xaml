@@ -6,16 +6,33 @@
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
              x:Class="Game.Views.ScoreIndexPage"
-             Title="{Binding Title}">
+             >
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddScore_Clicked" IconImageSource="icon_add.png"/>
+        
+        <ToolbarItem Text="Add" 
+                     Clicked="AddScore_Clicked" 
+                     IconImageSource="icon_add.png"
+                     />
+        
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+    <NavigationPage.TitleView>
+        
+        <Label Text="Score Index" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               />
+        
+    </NavigationPage.TitleView>
 
-            <Label Text="Score List Page" Style="{StaticResource HeaderStyle}"/>
+
+
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource OuterBoxStack}"
+                     HorizontalOptions="FillAndExpand">
+
 
             <ListView x:Name="DataListView" 
                     ItemsSource="{Binding Dataset}"
@@ -24,14 +41,101 @@
                     CachingStrategy="RecycleElement"
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="80"
+                    HorizontalScrollBarVisibility="Default"
                     >
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnSpacing="1" RowSpacing="1">
+                            <Grid  Style="{StaticResource IndexGridViewStyle}"
+                                   >
+
+                                <Frame Grid.Row="0"
+                                       Grid.Column="0"
+                                       Style="{StaticResource ScoreOuterFrameStyle}"
+                                       HeightRequest="250"
+                                       >
+
+                                </Frame>
+
+
+                                <StackLayout>
+
+                                 
+                                    <!--Frame with stats bars-->
+                                    <Frame Style="{StaticResource ScoreInnerFrameStyle}"
+                                               >
+
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <StackLayout Orientation="Horizontal" 
+                                                             Grid.Row="0" 
+                                                             HorizontalOptions="CenterAndExpand"
+                                                             Margin="0, 10, 0, 10"
+                                                             >
+
+
+                                                <Label Grid.Column="0" Grid.Row="0"
+                                               Text="{Binding Name}" 
+                                               Style="{StaticResource ListStyle}"/>
+
+                                                <Label Grid.Column="0" Grid.Row="1"
+                                               Text="Rounds" 
+                                               Style="{StaticResource ListStyle}"/>
+
+                                                <Label Grid.Column="1" Grid.Row="1"
+                                               Text="{Binding RoundCount}" 
+                                               Style="{StaticResource ListStyle}"/>
+
+                                                <Label Grid.Column="0" Grid.Row="2"
+                                               Text="Score" 
+                                               Style="{StaticResource ListStyle}"/>
+
+                                                <Label Grid.Column="1" Grid.Row="2"
+                                               Text="{Binding ScoreTotal}" 
+                                               Style="{StaticResource ListStyle}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </Grid>
+
+
+
+                            <!--<Label Text="{Binding Name}" 
+                                                           Style="{StaticResource ScoreNameLabelStyle}"
+                                                           />
+
+                                            </StackLayout>
+
+                                            <Label Text="Atk" 
+                                                       Grid.Row="1" 
+                                                       Style="{StaticResource ScoreProgressBarLabelStyle}"
+                                                       />
+
+                                           
+
+                                            <Label Text="Def" 
+                                                       Grid.Row="2" 
+                                                       Style="{StaticResource ProgressBarLabelStyle}"
+                                                       />
+
+                                       
+
+                                            <Label Text="Spd" 
+                                                       Grid.Row="3" 
+                                                       Style="{StaticResource ProgressBarLabelStyle}"-->
+                            <!--/>-->
+
+
+                            <!--<Grid ColumnSpacing="1" RowSpacing="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto"/>
                                 </Grid.ColumnDefinitions>
@@ -59,7 +163,7 @@
                                        Text="{Binding ScoreTotal}" 
                                        Style="{StaticResource ListStyle}"/>
 
-                            </Grid>
+                            </Grid>-->
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
