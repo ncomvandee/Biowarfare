@@ -4,7 +4,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.CellCreatePage"
-             Title="{Binding Title}">
+             >
                
 
     <ContentPage.Resources>
@@ -12,8 +12,11 @@
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-   
+
+    <NavigationPage.TitleView>
+        <Label Text="Create New Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <StackLayout  HorizontalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal">
