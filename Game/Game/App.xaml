@@ -1466,7 +1466,7 @@
 
 
 
-            <!-- Progress bar for index page -->
+            <!-- Default Progress bar for index page -->
             <Style TargetType="ProgressBar"
                    x:Key="ProgressBarStyle"
                    >
@@ -1477,9 +1477,57 @@
 
                 </Style>
 
+            <!-- Character Progress bar for index page -->
+            <Style TargetType="ProgressBar"
+                   x:Key="CharacterProgressBarStyle"
+                   BasedOn="{StaticResource ProgressBarStyle}"
+                   >
+
+                <Setter Property="ProgressColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!-- Monster Progress bar for index page -->
+            <Style TargetType="ProgressBar"
+                   x:Key="MonsterProgressBarStyle"
+                   BasedOn="{StaticResource ProgressBarStyle}"
+                   >
+
+                <Setter Property="ProgressColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Progress bar for index page -->
+            <Style TargetType="ProgressBar"
+                   x:Key="ItemProgressBarStyle"
+                   BasedOn="{StaticResource ProgressBarStyle}"
+                   >
+
+                <Setter Property="ProgressColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+            <!-- Score Progress bar for index page -->
+            <Style TargetType="ProgressBar"
+                   x:Key="ScoreProgressBarStyle"
+                   BasedOn="{StaticResource ProgressBarStyle}"
+                   >
+
+                <Setter Property="ProgressColor" Value="{StaticResource PrimaryScoreBackground}"/>
+
+            </Style>
 
 
-            
+            <!--___________________________________________-->
+
+
+
+
+
+
+
+
+
 
             <!-- BoxView -->
 
@@ -1488,7 +1536,7 @@
 
 
 
-            <!-- Box view used for Read page -->
+            <!-- Default Box view used for Read page -->
             <Style TargetType="BoxView"
                    x:Key="PrimaryBoxViewStyle"
                    >
@@ -1501,6 +1549,52 @@
 
 
             </Style>
+
+            <!-- Character Box view used for Read page -->
+            <Style TargetType="BoxView"
+                   x:Key="CharacterPrimaryBoxViewStyle"
+                   BasedOn="{StaticResource PrimaryBoxViewStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+
+            </Style>
+
+            <!-- Monster Box view used for Read page -->
+            <Style TargetType="BoxView"
+                   x:Key="MonsterPrimaryBoxViewStyle"
+                   BasedOn="{StaticResource PrimaryBoxViewStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMonsterForeground}"/>
+
+            </Style>
+
+            <!-- Item Box view used for Read page -->
+            <Style TargetType="BoxView"
+                   x:Key="ItemPrimaryBoxViewStyle"
+                   BasedOn="{StaticResource PrimaryBoxViewStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryItemForeground}"/>
+
+            </Style>
+
+            <!-- Score Box view used for Read page -->
+            <Style TargetType="BoxView"
+                   x:Key="ScorePrimaryBoxViewStyle"
+                   BasedOn="{StaticResource PrimaryBoxViewStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreForeground}"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+
+
+
 
 
 
@@ -1540,12 +1634,12 @@
 
 
 
-            <!-- Button style for Read, Update, Delete pages -->
+            <!-- Default Button style for Read, Update, Delete pages -->
             <Style TargetType="Button"
                    x:Key="PrimaryButtonStyle"
                    >
 
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryAccentColor}"/>
                 <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="WidthRequest" Value="150"/>
@@ -1555,8 +1649,52 @@
 
             </Style>
 
-           
-            <!-- Level Down Button For Create/Update Page -->
+            <!-- Character Button style for Read, Update, Delete pages -->
+            <Style TargetType="Button"
+                   x:Key="CharacterPrimaryButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!-- Monster Button style for Read, Update, Delete pages -->
+            <Style TargetType="Button"
+                   x:Key="MonsterPrimaryButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Button style for Read, Update, Delete pages -->
+            <Style TargetType="Button"
+                   x:Key="ItemPrimaryButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+            <!-- Score Button style for Read, Update, Delete pages -->
+            <Style TargetType="Button"
+                   x:Key="ScorePrimaryButtonStyle"
+                   BasedOn="{StaticResource PrimaryButtonStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+
+            <!-- Default Level Down Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="LevelDownButtonStyle"
                    >
@@ -1571,8 +1709,20 @@
 
             </Style>
 
+            <!-- Character Level Down Button For Create/Update Page -->
+            <Style TargetType="Button"
+                   x:Key="CharacterLevelDownButtonStyle"
+                   BasedOn="{StaticResource LevelDownButtonStyle}"
+                   >
+                
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
 
-            <!-- Level Up Button For Create/Update Page -->
+            </Style>
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Level Up Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="LevelUpButtonStyle"
                    >
@@ -1586,8 +1736,21 @@
 
             </Style>
 
-            
-            <!-- Add Items Button For Create/Update Page -->
+            <!-- Character Level Up Button For Create/Update Page -->
+            <Style TargetType="Button"
+                   x:Key="CharacterLevelUpButtonStyle"
+                   BasedOn="{StaticResource LevelUpButtonStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+            <!-- Default Add Items Button For Create/Update Page -->
             <Style TargetType="Button"
                    x:Key="AddItemsButtonStyle"
                    >
@@ -1600,6 +1763,22 @@
 
             </Style>
 
+
+            <!-- Character Add Items Button For Create/Update Page -->
+            <Style TargetType="Button"
+                   x:Key="CharacterAddItemsButtonStyle"
+                   BasedOn="{StaticResource AddItemsButtonStyle}"
+                   >
+ 
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
             <!--Transparent Button on Read Page for Flip Feature-->
             <Style TargetType="Button"
                    x:Key="InvisibleReadButtonStyle"
@@ -1611,8 +1790,10 @@
                 <Setter Property="BorderColor" Value="Transparent"/>
             </Style>
 
+            <!--___________________________________________-->
 
-            <!--Button for Immune System on Game Page-->
+
+            <!--Button for Immune System/Village on Game Page-->
             <Style TargetType="Button"
                    x:Key="GamePageButtonStyle"
                    BasedOn="{StaticResource PrimaryButtonStyle}"
@@ -1626,6 +1807,8 @@
 
             </Style>
 
+            <!--___________________________________________-->
+
             <!--Button for Battle on Game Page-->
             <Style TargetType="Button"
                    x:Key="GamePageBattleButtonStyle"
@@ -1636,6 +1819,8 @@
 
 
             </Style>
+
+            <!--___________________________________________-->
 
             <!--Button for Auto Battle on Game Page-->
             <Style TargetType="Button"
@@ -1649,6 +1834,8 @@
 
 
             </Style>
+            
+            <!--___________________________________________-->
 
 
 
@@ -1661,7 +1848,7 @@
 
 
 
-            <!-- Level Picker For Create/Update Page -->
+            <!-- Default Level Picker For Create/Update Page -->
             <Style TargetType="Picker"
                    x:Key="CreatePickerStyle"
                    >
@@ -1677,6 +1864,49 @@
             </Style>
 
 
+            <!-- Character Level Picker For Create/Update Page -->
+            <Style TargetType="Picker"
+                   x:Key="CharacterCreatePickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+                
+            </Style>
+
+            <!-- Monster Level Picker For Create/Update Page -->
+            <Style TargetType="Picker"
+                   x:Key="MonsterCreatePickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterBackground}"/>
+
+            </Style>
+
+            <!-- Item Level Picker For Create/Update Page -->
+            <Style TargetType="Picker"
+                   x:Key="ItemCreatePickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+            <!-- Score Level Picker For Create/Update Page -->
+            <Style TargetType="Picker"
+                   x:Key="ScoreCreatePickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
 
 
 
@@ -1688,7 +1918,7 @@
 
             
 
-            <!-- Enrty For Create/Update Page -->
+            <!-- Default Enrty For Create/Update Page -->
             <Style TargetType="Entry"
                    x:Key="CreateEntryStyle"
                    >
@@ -1701,7 +1931,52 @@
 
             </Style>
 
+            <!-- Character Enrty For Create/Update Page -->
+            <Style TargetType="Entry"
+                   x:Key="CharacterCreateEntryStyle"
+                   BasedOn="{StaticResource CreateEntryStyle}"
+                   >
 
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+
+            </Style>
+
+            <!-- Monster Enrty For Create/Update Page -->
+            <Style TargetType="Entry"
+                   x:Key="MonsterCreateEntryStyle"
+                   BasedOn="{StaticResource CreateEntryStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+
+            </Style>
+
+            <!-- Item Enrty For Create/Update Page -->
+            <Style TargetType="Entry"
+                   x:Key="ItemCreateEntryStyle"
+                   BasedOn="{StaticResource CreateEntryStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryItemMidground}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryItemMidground}"/>
+
+            </Style>
+
+            <!-- Score Enrty For Create/Update Page -->
+            <Style TargetType="Entry"
+                   x:Key="ScoreCreateEntryStyle"
+                   BasedOn="{StaticResource CreateEntryStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryScoreMidground}"/>
+
+            </Style>
+
+
+            <!--___________________________________________-->
 
 
 
@@ -1722,6 +1997,8 @@
                 <Setter Property="Minimum" Value="0"/>
 
             </Style>
+
+            <!--___________________________________________-->
 
 
         </ResourceDictionary>
