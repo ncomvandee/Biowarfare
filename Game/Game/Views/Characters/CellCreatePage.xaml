@@ -4,6 +4,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.CellCreatePage"
+             Style="{StaticResource CharacterContentPage}"
              >
                
 
@@ -24,7 +25,7 @@
                 <Button Text="-"
                         Clicked="LevelDownButtonClicked" 
                         x:Name="LevelDownButton"
-                        Style="{StaticResource LevelDownButtonStyle}"
+                        Style="{StaticResource CharacterLevelDownButtonStyle}"
                         />
                 
                 <Frame Grid.Row="0"
@@ -41,22 +42,22 @@
                 <Button Text="+" 
                         Clicked="LevelUpButtonClicked" 
                         x:Name="LevelUpButton"
-                        Style="{StaticResource LevelUpButtonStyle}"
+                        Style="{StaticResource CharacterLevelUpButtonStyle}"
                         />
                 
             </StackLayout>
 
 
-            <Frame Style="{StaticResource CreateFrameStyle}">
+            <Frame Style="{StaticResource CharacterCreateFrameStyle}">
 
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="Center" 
                              >
 
-                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
+                    <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}">
                     
                         
-                        <Picker Style="{StaticResource CreatePickerStyle}" 
+                        <Picker Style="{StaticResource CharacterCreatePickerStyle}" 
                             ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
                             SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                             x:Name="CellTypePicker" 
@@ -78,10 +79,10 @@
             <Entry Text="{Binding Data.Name}" 
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
-                   Style="{StaticResource CreateEntryStyle}"
+                   Style="{StaticResource CharacterCreateEntryStyle}"
                    />
 
-            <Frame Style="{StaticResource StatsFrameStyle}"
+            <Frame Style="{StaticResource CharacterStatsFrameStyle}"
                    >
                 <ScrollView>
                     <Grid>
@@ -95,12 +96,12 @@
 
                         <Label Text="Stats" 
                            Grid.Row="0" 
-                           Style="{StaticResource StatsLabelTitleStyle}"
+                           Style="{StaticResource CharacterStatsLabelTitleStyle}"
                            />
 
                         <Label Text="Atk" 
                            Grid.Row="1" 
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource CharacterStatsLabelStyle}"
                            />
 
 
@@ -117,7 +118,7 @@
 
                         <Label Text="Def" 
                            Grid.Row="2" 
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource CharacterStatsLabelStyle}"
                            />
 
                         <Slider Style="{StaticResource StatsSliderStyle}"
@@ -133,7 +134,7 @@
 
                         <Label Text="Spd" 
                            Grid.Row="3"
-                           Style="{StaticResource StatsLabelStyle}"
+                           Style="{StaticResource CharacterStatsLabelStyle}"
                            />
 
                         <Slider Style="{StaticResource StatsSliderStyle}"
@@ -147,7 +148,7 @@
                            Grid.Row="3"
                            x:Name="SpeedStat"/>
 
-                        <Button Style="{StaticResource AddItemsButtonStyle}"
+                        <Button Style="{StaticResource CharacterAddItemsButtonStyle}"
                             Text="Add Items" 
                             Grid.Row="4" 
                             Clicked="AddItem_Clicked"
@@ -162,12 +163,12 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
                 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                         Text="Save" 
                         Clicked="SaveButton_Clicked"
                         />
 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                         Text="Cancel" 
                         Clicked="CancelButton_Clicked"
                         />
