@@ -60,7 +60,7 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="finger_glove_no_bg.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
 
