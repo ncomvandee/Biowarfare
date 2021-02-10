@@ -43,7 +43,7 @@
                                 <RowDefinition Height="AUTO" />
                             </Grid.RowDefinitions>
 
-                            <Frame Style="{StaticResource BasicAutoFrameStyle}"
+                            <Frame Style="{StaticResource CharacterReadCellTitleFrame}"
                                    VerticalOptions="CenterAndExpand" 
                                    HorizontalOptions="Center" 
                                    Padding="10"
