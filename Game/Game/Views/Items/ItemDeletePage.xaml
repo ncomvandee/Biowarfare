@@ -14,7 +14,7 @@
     <ScrollView>
         <StackLayout Orientation="Vertical" >
 
-            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+            <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
                    Padding="5">
 
                 <Grid>
@@ -23,10 +23,7 @@
                         <RowDefinition Height="AUTO" />
                     </Grid.RowDefinitions>
 
-                    <Frame Style="{StaticResource CharacterReadCellTitleFrame}"
-                                   VerticalOptions="CenterAndExpand" 
-                                   HorizontalOptions="Center" 
-                                   Padding="5"
+                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
                                    Grid.Row="0" 
                                    >
 
@@ -35,7 +32,7 @@
                                     >
 
                             <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                               Style="{StaticResource ItemNameLabelStyle}"
                                />
 
                         </StackLayout>
@@ -65,12 +62,12 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                             Text="Delete" 
                             Clicked="Delete_Clicked">
                     </Button>
 
-                    <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                             Text="Cancel" 
                             Clicked="Cancel_Clicked">
                     </Button>
