@@ -1124,6 +1124,21 @@
             <!--___________________________________________-->
 
 
+            <!-- Character attribute frame For Create/Update Page -->
+            <Style TargetType="Frame"
+                   x:Key="ReadAttributeFrameStyle"
+                   BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
+                   >
+                
+                <Setter Property="WidthRequest" Value="150"/>
+                
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+
             <!-- Thumbnail Frame For Create/Update Page -->
             <Style TargetType="Frame"
                    x:Key="MediumCircleFrameStyle"
@@ -1215,8 +1230,11 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
                 <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="WidthRequest" Value="180"/>
+                
                 <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="MinimumWidthRequest" Value="180"/>
+                
+                
 
             </Style>
 
