@@ -160,10 +160,10 @@
     <AndroidResource Include="Resources\drawable\spore_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Virus_bg.png" />
+    <AndroidResource Include="Resources\drawable\virus_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Virus_no_bg.png" />
+    <AndroidResource Include="Resources\drawable\virus_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bacteria_bg.png" />
