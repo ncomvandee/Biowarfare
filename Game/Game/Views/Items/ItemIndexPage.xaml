@@ -78,13 +78,7 @@
                                                              Margin="0, 10, 0, 10"
                                                              >
 
-                                                <Label Text="{Binding Job}" 
-                                                           Style="{StaticResource ItemNameLabelStyle}"
-                                                           />
-
-                                                <Label Text="|" 
-                                                           Style="{StaticResource ItemNameLabelStyle}"
-                                                           />
+                                  
 
                                                 <Label Text="{Binding Name}" 
                                                            Style="{StaticResource ItemNameLabelStyle}"
