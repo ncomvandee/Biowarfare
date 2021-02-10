@@ -16,8 +16,8 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "I1",
-                    Description = "I1",
+                    Name = "Disinfectant",
+                    Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -26,8 +26,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "I2",
-                    Description = "I2",
+                    Name = "Face Mask",
+                    Description = "A medical grade mask that adds to a cell’s defense by default. ",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -36,8 +36,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "I3",
-                    Description = "I3",
+                    Name = "Stethoscope",
+                    Description = "A metal item that monitors the patient’s heartbeat. Boosts a cell’s Defense by default.  ",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -46,8 +46,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "I4",
-                    Description = "I4",
+                    Name = "Thermometer",
+                    Description = "A expensive yet solid item that can be used to check the enemy’s temperature. Boosts a cell’s attack by default.  ",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -56,8 +56,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "I5",
-                    Description = "I5",
+                    Name = "Finger Glove",
+                    Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -66,8 +66,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "I6",
-                    Description = "I6",
+                    Name = "Medical Boots",
+                    Description = "Sturdy boots with comfortable insoles add a boost to a cell’s speed by default",
                     ImageURI = "item.png",
                     Range = 10,
                     Damage = 10,
@@ -77,22 +77,22 @@ namespace Game.GameRules
                 },
             };
 
-            for (int i = 0; i < 20; i++)
-            {
-                var item = new ItemModel
-                {
-                    ImageURI = "item.png",
-                    Range = 2,
-                    Damage = 10,
-                    Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Attack
-                };
-                item.Name = "I" + (datalist.Count+1).ToString();
-                item.Description = item.Name;
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    var item = new ItemModel
+            //    {
+            //        ImageURI = "item.png",
+            //        Range = 2,
+            //        Damage = 10,
+            //        Value = 9,
+            //        Location = ItemLocationEnum.PrimaryHand,
+            //        Attribute = AttributeEnum.Attack
+            //    };
+            //    item.Name = "I" + (datalist.Count+1).ToString();
+            //    item.Description = item.Name;
 
-                datalist.Add(item);
-            }
+            //    datalist.Add(item);
+            ////}
 
             return datalist;
         }
