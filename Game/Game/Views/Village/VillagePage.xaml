@@ -14,44 +14,45 @@
                         AlignContent="SpaceAround">
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
-                    <!--Ellipse for thumbnail-->
-                    <Frame BackgroundColor="White" WidthRequest="140" HeightRequest="140" BorderColor="White"
-                                           CornerRadius="100" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 0" >
 
+
+                    
 
                         <ImageButton
-                            Source="macrophage_bg.png"
+                            Source="nkcell_no_bg.png"
                             Style="{StaticResource ImageLargeStyle}"
                             Clicked="CharactersButton_Clicked"/>
+                   
 
+                    
 
-                    </Frame>
-
-
-
-
-
-
-                    <Label 
+                        <Label 
                                 Text="Characters"
-                                Style="{StaticResource CenterMessageStyle}"/>
+                                Style="{StaticResource CellNameLabelStyle}"
+                                TextColor="{StaticResource SecondaryAccentColor}"
+                                />
 
-                    
-                    
-                    
-                    
+                   
+
+
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="spore_no_bg.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="MonstersButton_Clicked"/>
 
-                    <Label 
+                   
+                        
+                        <Label 
                                 Text="Monsters"
-                                Style="{StaticResource CenterMessageStyle}"/>
+                                Style="{StaticResource CellNameLabelStyle}"
+                                TextColor="{StaticResource SecondaryAccentColor}"
+                            />
+                   
+
 
                 </StackLayout>
 
@@ -63,9 +64,15 @@
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
 
-                    <Label 
+                  
+
+                        <Label 
                                 Text="Items"
-                                Style="{StaticResource CenterMessageStyle}"/>
+                                Style="{StaticResource CellNameLabelStyle}"
+                                TextColor="{StaticResource SecondaryAccentColor}"
+                                />
+
+                  
                 </StackLayout>
 
 
@@ -76,9 +83,15 @@
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ScoresButton_Clicked"/>
 
-                    <Label 
+                    
+                        
+                        <Label 
                                 Text="Scores"
-                                Style="{StaticResource CenterMessageStyle}"/>
+                                Style="{StaticResource CellNameLabelStyle}"
+                                TextColor="{StaticResource SecondaryAccentColor}"
+                                />
+
+                   
 
                 </StackLayout>
 
