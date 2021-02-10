@@ -93,7 +93,8 @@
                                HorizontalOptions="CenterAndExpand"
                                FontSize="Medium"/>
 
-                        <Slider WidthRequest="200"
+                        <Slider ThumbColor="{StaticResource SecondaryAccentColor}"
+                                WidthRequest="200"
                                 HorizontalOptions="StartAndExpand"/>
 
                         <Label Text="9" 
