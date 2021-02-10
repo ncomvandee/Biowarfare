@@ -187,8 +187,8 @@
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
     <Content Include="t_cell_bg.png" />
-    <Content Include="Virus_bg.png" />
-    <Content Include="Virus_no_bg.png" />
+    <Content Include="virus_bg.png" />
+    <Content Include="virus_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

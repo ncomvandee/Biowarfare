@@ -11321,10 +11321,10 @@ namespace Game.Droid
 			public const int t_cell_bg = 2131165352;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int Virus_bg = 2131165356;
+			public const int virus_bg = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int Virus_no_bg = 2131165357;
+			public const int virus_no_bg = 2131165357;
 			
 			static Drawable()
 			{
