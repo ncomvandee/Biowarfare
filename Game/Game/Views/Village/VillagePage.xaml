@@ -19,7 +19,7 @@
                     
 
                         <ImageButton
-                            Source="nkcell_no_bg.png"
+                            Source="character_button.png"
                             Style="{StaticResource ImageLargeStyle}"
                             Clicked="CharactersButton_Clicked"/>
                    
@@ -40,7 +40,7 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="spore_no_bg.png"
+                                Source="monster_button.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="MonstersButton_Clicked"/>
 
@@ -60,7 +60,7 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="finger_glove_no_bg.png"
+                                Source="items_button.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
 
@@ -79,7 +79,7 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="scores_button.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ScoresButton_Clicked"/>
 
