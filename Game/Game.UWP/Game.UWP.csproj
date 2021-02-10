@@ -142,6 +142,7 @@
     <Content Include="basophil_bg.png" />
     <Content Include="cancer_bg.png" />
     <Content Include="cancer_no_bg.png" />
+    <Content Include="character_button.png" />
     <Content Include="defense_icon.png" />
     <Content Include="eosinophil_bg.png" />
     <Content Include="face_mask_no_bg.png" />
@@ -154,8 +155,10 @@
     <Content Include="icon_edit.png" />
     <Content Include="icon_new.png" />
     <Content Include="item.png" />
+    <Content Include="items_button.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
+    <Content Include="monster_button.png" />
     <Content Include="mri_headband_no_bg.png" />
     <Content Include="nkcell_bg.png" />
     <Content Include="nkcell_no_bg.png" />
@@ -189,6 +192,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="scores_button.png" />
     <Content Include="speed_icon.png" />
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
