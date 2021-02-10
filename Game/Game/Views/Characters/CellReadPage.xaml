@@ -101,13 +101,9 @@
                         <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
                     </Frame>
 
-                    <Button Grid.Row="0" 
+                    <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
+                            Grid.Row="0" 
                             Text="Items" 
-                            BackgroundColor="Transparent" 
-                            BorderColor="Transparent"
-                            FontSize="Medium" 
-                            Margin="0, 10"
-                            WidthRequest="180"
                             x:Name="ItemAttributeToggleButton"
                             Clicked="ItemAttributeToggle"/>
 
