@@ -2073,7 +2073,8 @@
             <Style TargetType="Slider"
                    x:Key="StatsSliderStyle"
                    >
-
+                
+                <Setter Property="ThumbColor" Value="{StaticResource SecondaryAccentColor}"/>
                 <Setter Property="Margin" Value="30, 5"/>
                 <Setter Property="Maximum" Value="20"/>
                 <Setter Property="Minimum" Value="0"/>
