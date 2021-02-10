@@ -28,7 +28,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Face Mask",
                     Description = "A medical grade mask that adds to a cell’s defense by default. ",
-                    ImageURI = "item.png",
+                    ImageURI = "face_mask_no_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -48,7 +48,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Thermometer",
                     Description = "A expensive yet solid item that can be used to check the enemy’s temperature. Boosts a cell’s attack by default.  ",
-                    ImageURI = "item.png",
+                    ImageURI = "thermometer_no_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -58,7 +58,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Finger Glove",
                     Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
-                    ImageURI = "item.png",
+                    ImageURI = "finger_glove_no_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
