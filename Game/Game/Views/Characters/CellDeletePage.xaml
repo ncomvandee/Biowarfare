@@ -14,49 +14,50 @@
     <ScrollView>
         <StackLayout Orientation="Vertical" >
 
-            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
+            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                   Padding="10">
 
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="AUTO" />
                         <RowDefinition Height="AUTO" />
                     </Grid.RowDefinitions>
+                    
+                    <Frame Style="{StaticResource BasicAutoFrameStyle}"
+                                   VerticalOptions="CenterAndExpand" 
+                                   HorizontalOptions="Center" 
+                                   Padding="5"
+                                   Grid.Row="0" 
+                                   >
 
-                    <BoxView Style="{StaticResource CharacterPrimaryBoxViewStyle}"
-                             Grid.Row="0"
-                             Margin="0, 10, 0, 200" 
-                             >
+                        <StackLayout Orientation="Horizontal" 
+                                     HorizontalOptions="CenterAndExpand"
+                                    >
 
-                    </BoxView>
-
-                    <StackLayout Orientation="Horizontal" 
-                                 Grid.Row="0" 
-                                 HorizontalOptions="CenterAndExpand"
-                                 Margin="0, 12, 0, 0"
-                                 >
-
-                        <Label Text="{Binding Data.Job}" 
+                            <Label Text="{Binding Data.Job}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                        <Label Text="|" 
+                            <BoxView Color="{StaticResource PrimaryBackgroundPurple}" WidthRequest="2" HeightRequest="1" ></BoxView>
+
+                            <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                        <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                        </StackLayout>
 
-                    </StackLayout>
+                    </Frame>
 
                     <Frame Style="{StaticResource LargeCircleFrameStyle}"
-                           Margin="0, 50, 0, 0" 
+                           Grid.Row="1"
+                           Margin="0,10,0,0"
                            >
 
                         <Image Source="{Binding Data.ImageURI}">
 
                         </Image>
                     </Frame>
+
                 </Grid>
             </Frame>
 
