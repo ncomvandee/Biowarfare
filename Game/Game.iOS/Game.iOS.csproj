@@ -205,7 +205,7 @@
     <BundleResource Include="Resources\icon_click.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Virus_no_bg.png" />
+    <BundleResource Include="Resources\virus_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\bacteria_bg.png" />
@@ -232,7 +232,7 @@
     <BundleResource Include="Resources\spore_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Virus_bg.png" />
+    <BundleResource Include="Resources\virus_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\nkcell_no_bg.png" />
