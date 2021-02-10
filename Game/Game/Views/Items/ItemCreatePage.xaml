@@ -92,8 +92,6 @@
                                FontSize="Medium"/>
 
                         <Slider WidthRequest="200"
-                                Minimum="1"
-                                Maximum="9"
                                 HorizontalOptions="StartAndExpand"/>
 
                         <Label Text="9" 
