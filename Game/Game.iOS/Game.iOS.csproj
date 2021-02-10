@@ -264,4 +264,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\vicious_scalpel_no_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\character_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\items_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scores_button.png" />
+  </ItemGroup>
 </Project>
