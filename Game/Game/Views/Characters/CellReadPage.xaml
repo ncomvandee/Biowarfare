@@ -94,7 +94,8 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource CharacterReadCellTitleFrame}">
+                           Style="{StaticResource ReadAttributeFrameStyle}"
+                           >
 
                         <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
                     </Frame>
