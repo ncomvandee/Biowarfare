@@ -55,7 +55,7 @@
                                              >
 
                                     <Label Text="Equipqed Item" 
-                                           Style="{StaticResource CellNameLabelStyle}"
+                                           Style="{StaticResource CharacterCellNameLabelStyle}"
                                            />
 
                                 </StackLayout>
