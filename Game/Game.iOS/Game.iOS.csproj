@@ -240,4 +240,28 @@
   <ItemGroup>
     <BundleResource Include="Resources\nkcell_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\adrenaline_syringe_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bandaid_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bloodstone_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\face_mask_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\finger_glove_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mri_headband_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thermometer_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vicious_scalpel_no_bg.png" />
+  </ItemGroup>
 </Project>
