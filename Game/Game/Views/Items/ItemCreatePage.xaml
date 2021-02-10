@@ -8,7 +8,9 @@
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ItemCreatePage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Style="{StaticResource ItemContentPage}"
+             >
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -21,16 +23,16 @@
         <StackLayout  HorizontalOptions="CenterAndExpand">
 
 
-            <Frame Style="{StaticResource CreateFrameStyle}">
+            <Frame Style="{StaticResource ItemCreateFrameStyle}">
 
                 <StackLayout Orientation="Vertical" 
                              HorizontalOptions="Center" 
                              >
 
-                    <Frame Style="{StaticResource CreatePickerFrameStyle}">
+                    <Frame Style="{StaticResource ItemCreatePickerFrameStyle}">
 
 
-                        <Picker Style="{StaticResource CreatePickerStyle}" 
+                        <Picker Style="{StaticResource ItemCreatePickerStyle}" 
                             ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
                             SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                             x:Name="CellTypePicker" 
@@ -52,14 +54,14 @@
             <Entry Text="{Binding Data.Name}" 
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
-                   Style="{StaticResource CreateEntryStyle}"
+                   Style="{StaticResource ItemCreateEntryStyle}"
                    Margin="0"/>
 
-            <Frame Style="{StaticResource StatsFrameStyle}"
+            <Frame Style="{StaticResource ItemStatsFrameStyle}"
                    HeightRequest="100">
                 <Editor BackgroundColor="Transparent" 
                     Placeholder="Description goes here..."
-                    PlaceholderColor="Gray"
+                    PlaceholderColor="{StaticResource PrimaryItemForeground}"
                     FontSize="Default"
                     HeightRequest="100"
                     TextColor="Black"
@@ -67,16 +69,16 @@
             </Frame>
             
 
-            <Frame Style="{StaticResource StatsFrameStyle}"
+            <Frame Style="{StaticResource ItemStatsFrameStyle}"
                    HeightRequest="100">
 
                 <Grid RowDefinitions="AUTO, AUTO">
 
-                    <Frame Style="{StaticResource CreatePickerFrameStyle}"
+                    <Frame Style="{StaticResource ItemCreatePickerFrameStyle}"
                            Grid.Row="0"
                            HeightRequest="35">
 
-                        <Picker Style="{StaticResource CreatePickerStyle}">
+                        <Picker Style="{StaticResource ItemCreatePickerStyle}">
                             <Picker.Items>
                                 <x:String>Attak boost</x:String>
                             </Picker.Items>
@@ -109,11 +111,11 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Save"  
                         Clicked="Save_Clicked"/>
 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
+                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Cancel"  
                         Clicked="Cancel_Clicked"/>
 
