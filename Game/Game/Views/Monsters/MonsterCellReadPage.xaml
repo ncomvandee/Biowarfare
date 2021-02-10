@@ -31,6 +31,7 @@
 
                     <Frame Grid.Row="0" 
                            Style="{StaticResource MonsterReadCellTitleFrame}"
+                           Padding="5"
                            >
                         
                         <StackLayout Orientation="Horizontal" 
