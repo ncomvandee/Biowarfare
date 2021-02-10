@@ -1130,7 +1130,7 @@
                    BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
                    >
                 
-                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="WidthRequest" Value="180"/>
                 
             </Style>
 
@@ -1936,6 +1936,28 @@
             </Style>
             
             <!--___________________________________________-->
+
+
+
+            <!--Invisible attribute button on character read page-->
+            <Style TargetType="Button"
+                   x:Key="InvisibleReadAttributeButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="Margin" Value="0, 10"/>
+                <Setter Property="Background" Value="transparent"/>
+                <Setter Property="BorderColor" Value="transparent"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+
+            </Style>
+
+
+
+
+
 
 
 
