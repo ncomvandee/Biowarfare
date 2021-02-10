@@ -15,7 +15,7 @@
         <StackLayout Orientation="Vertical" >
 
             <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
-                   Padding="10">
+                   Padding="5">
 
                 <Grid>
                     <Grid.RowDefinitions>
