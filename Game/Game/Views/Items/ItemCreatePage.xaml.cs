@@ -66,5 +66,15 @@ namespace Game.Views
         {
             await Navigation.PopModalAsync();
         }
+
+        public void OnSliderChange(object sender, ValueChangedEventArgs e)
+        {
+
+        }
+
+        public void OnPickerChange(object sender, EventArgs e)
+        {
+            StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
+        }
     }
 }
