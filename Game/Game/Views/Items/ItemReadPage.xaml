@@ -6,93 +6,215 @@
              mc:Ignorable="d"
              x:Class="Game.Views.ItemReadPage"
              Title="{Binding Title}">
-
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
+        <ToolbarItem Text="Delete" 
+                     IconImageSource="icon_delete.png" 
+                     Clicked="Delete_Clicked" 
+                     />
+
     </ContentPage.ToolbarItems>
 
+    <NavigationPage.TitleView>
+        <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
 
-    <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-            Spacing="10">
+    <ContentPage.Content>
+        <StackLayout>
 
-            <Label Text="Detail Page" Style="{StaticResource HeaderStyle}"/>
+            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                   Text="Name : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Name}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource CharacterReadCellTitleFrame}"
+                           Padding="5"
+                           >
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Description : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Description}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                        <StackLayout Orientation="Horizontal" 
+                                 Grid.Row="0" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 >
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Location : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Location}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                            <Label Text="{Binding Data.Job}" 
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                               />
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Attribute : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Attribute}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                            <Label Text="|" 
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                               />
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Range : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Range}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                            <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                               />
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Range : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Range}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                        </StackLayout>
+                    </Frame>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Value : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Value}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            Grid.Row="1"
+                            IsVisible="False"
+                            >
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Damage : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Damage}" 
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+
+                    </Frame>
+                    <!--Frame for thumbnail-->
+                    <Frame x:Name="ImageFrame" 
+                           Style="{StaticResource LargeCircleFrameStyle}" 
+                           Grid.Row="1">
+
+                        <Image Source="{Binding Data.ImageURI}" />
+
+                    </Frame>
+
+                    <Label Grid.Row="1" Text="{Binding Data.Description}" 
+                           Margin="20"
+                           FontSize="Caption"
+                           IsVisible="false"
+                           x:Name="DescriptionFrame"/>
+
+                    <Button Style="{StaticResource InvisibleReadButtonStyle}"
+                            Grid.Row="1"   
+                            Clicked="ShowDescriptionClicked"
+                            />
+
+                </Grid>
+            </Frame>
+
+            <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
+                   Margin="0, 20, 0, 0" 
+                   >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource ReadAttributeFrameStyle}"
+                           >
+
+                        <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
+                    </Frame>
+
+                    <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
+                            Grid.Row="0" 
+                            Text="Items" 
+                            x:Name="ItemAttributeToggleButton"
+                            Clicked="ItemAttributeToggle"/>
+
+                    <ScrollView Grid.Row="1" 
+                                IsVisible="True"
+                                x:Name="ItemsFrame">
+                        <StackLayout Orientation="Vertical" >
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                            <Label Text="Head" />
+                        </StackLayout>
+                    </ScrollView>
+
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            x:Name="AttributeFrame"
+                            Grid.Row="1"
+                            IsVisible="False"
+                            >
+
+                        <Grid ColumnSpacing="15" RowSpacing="5" Margin="0, 20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="attack_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   />
+
+                            <Label Text="{Binding Data.GetAttackTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="0" 
+                                   />
+
+                            <Image Source="defense_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   />
+
+                            <Label Text="{Binding Data.GetDefenseTotal}"
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   />
+
+                            <Image Source="speed_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="2" 
+                                   />
+
+                            <Label Text="{Binding Data.GetSpeedTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="2" 
+                                   />
+
+                            <Image Source="heart_icon.png" 
+                                   WidthRequest="35" 
+                                   Grid.Row="0" 
+                                   Grid.Column="3" 
+                                   />
+
+                            <Label Text="{Binding Data.GetMaxHealthTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="3" 
+                                   />
+
+                            <Label Text="XP" 
+                                   Grid.Row="0" 
+                                   Grid.Column="4" 
+                                   FontSize="Large"
+                                   />
+
+                            <Label Text="{Binding Data.ExperienceTotal}" 
+                                   Style="{StaticResource ReadStatsLabelStyle}"
+                                   Grid.Row="1" 
+                                   Grid.Column="4" 
+                                   />
+
+                        </Grid>
+
+                    </Frame>
+
+                </Grid>
+            </Frame>
+
+            <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                    Text="Edit" 
+                    Margin="20" 
+                    Clicked="CellEditButton_Clicked"
+
+                    />
 
         </StackLayout>
-    </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
