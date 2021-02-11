@@ -95,6 +95,11 @@ namespace Game.Models
             return Message;
         }
 
+        /// <summary>
+        /// Displays item as catagory in UI
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToCatagories(this ItemLocationEnum value)
         {
             // Default String
@@ -141,6 +146,11 @@ namespace Game.Models
             return Message;
         }
 
+        /// <summary>
+        /// Get the image per ItemCatagory
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToImage(this ItemLocationEnum value)
         {
             var image = "";
@@ -252,6 +262,9 @@ namespace Game.Models
             }
         }
 
+        /// <summary>
+        /// Get list Item as Catagory. For example, head = Face Mask
+        /// </summary>
         public static List<string> GetListItemAsCatagories
         {
             get
@@ -301,6 +314,11 @@ namespace Game.Models
             return ItemLocationEnum.Unknown;
         }
 
+        /// <summary>
+        /// Convert string catagory back to ItemLocationEnum
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ItemLocationEnum ConvertCatagoryToEnum(string value)
         {
             // Get the Message, Determine Which enum has that message, and return that enum.
