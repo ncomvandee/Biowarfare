@@ -74,6 +74,40 @@ namespace Game.Models
 
             return Message;
         }
+
+        public static string ToImage(this CellTypeEnum value)
+        {
+            var image = "";
+
+            switch (value)
+            {
+                case CellTypeEnum.KillerTCell:
+                    image = "t_cell_bg.png";
+                    break;
+
+                case CellTypeEnum.NKCell:
+                    image = "nkcell_bg.png";
+                    break;
+
+                case CellTypeEnum.BCell:
+                    image = "b_Cell_bg.png";
+                    break;
+
+                case CellTypeEnum.Macrophage:
+                    image = "macrophage_bg.png";
+                    break;
+
+                case CellTypeEnum.Eosinophil:
+                    image = "eosinophil_bg.png";
+                    break;
+
+                case CellTypeEnum.Basophil:
+                    image = "basophil_bg.png";
+                    break;
+            }
+
+            return image;
+        }
     }
 
     /// <summary>
