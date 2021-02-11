@@ -97,7 +97,7 @@ namespace Game.Models
         /// Returns a list of strings of the enum for Attribute
         /// Removes the unknown
         /// </summary>
-        public static List<string> GetListCharacter
+        public static List<string> GetListAttributes
         {
             get
             {

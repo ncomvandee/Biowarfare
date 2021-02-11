@@ -17,7 +17,7 @@ namespace UnitTests.Helpers
             // Arrange
 
             // Instantiate a new Attribute Base, should have default of 1 for all values
-            var myDataList = AttributeEnumHelper.GetListCharacter;
+            var myDataList = AttributeEnumHelper.GetListAttributes;
 
             // Get Expected set
             var myList = Enum.GetNames(typeof(AttributeEnum)).ToList();

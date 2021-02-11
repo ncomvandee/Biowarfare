@@ -79,7 +79,7 @@
                            HeightRequest="35">
 
                         <Picker Style="{StaticResource ItemCreatePickerStyle}"
-                                ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" />
+                                ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListAttributes}" />
 
                     </Frame>
 
