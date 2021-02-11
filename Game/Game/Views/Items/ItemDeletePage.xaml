@@ -24,7 +24,8 @@
                     </Grid.RowDefinitions>
 
                     <Frame Style="{StaticResource ItemReadCellTitleFrame}"
-                                   Grid.Row="0" 
+                           Grid.Row="0" 
+                           Padding="5"
                                    >
 
                         <StackLayout Orientation="Horizontal" 
