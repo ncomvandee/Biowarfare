@@ -127,7 +127,7 @@
                             IsVisible="False"
                             >
 
-                        <Grid ColumnSpacing="15" RowSpacing="5" Margin="0, 20">
+                        <Grid ColumnSpacing="25" RowSpacing="5" Margin="0, 20">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
