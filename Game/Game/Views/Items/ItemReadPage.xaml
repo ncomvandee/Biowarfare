@@ -40,17 +40,10 @@
                                  VerticalOptions="CenterAndExpand"
                                  >
 
-                            <Label Text="{Binding Data.Job}" 
+                            <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                            <Label Text="|" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
-
-                            <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
 
                         </StackLayout>
                     </Frame>
