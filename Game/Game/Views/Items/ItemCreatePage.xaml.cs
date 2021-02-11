@@ -35,6 +35,8 @@ namespace Game.Views
 
             this.ViewModel.Title = "Create";
 
+            NameEntry.Text = "";
+
             //Need to make the SelectedItem a string, so it can select the correct item.
             //LocationPicker.SelectedItem = ViewModel.Data.Location.ToString();
             //AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
@@ -53,8 +55,11 @@ namespace Game.Views
                 ViewModel.Data.ImageURI = Services.ItemService.DefaultImageURI;
             }
 
-            MessagingCenter.Send(this, "Create", ViewModel.Data);
-            await Navigation.PopModalAsync();
+            if (ValidateInfo())
+            {
+                MessagingCenter.Send(this, "Create", ViewModel.Data);
+                await Navigation.PopModalAsync();
+            }
         }
 
         /// <summary>
@@ -74,25 +79,53 @@ namespace Game.Views
 
         public void OnPickerChange(object sender, EventArgs e)
         {
+            AttributePickerFrame.BackgroundColor = Color.FromHex("#BBC300");
+
             StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
         }
 
         public void OnCatagoryChange(object sender, EventArgs e)
         {
+            ItemCatagoryPickerFrame.BackgroundColor = Color.FromHex("#BBC300");
+
             if (ItemCatagoryPicker.SelectedItem == null)
             {
                 return;
             }
 
-            //convert message to Enum
             var locationEnum = ItemLocationEnumHelper.ConvertCatagoryToEnum(ItemCatagoryPicker.SelectedItem.ToString());
 
             ViewModel.Data.Location = locationEnum;
 
-            ItemImage.Source = ViewModel.Data.Location.ToImage(); 
+            var ImageSource = ViewModel.Data.Location.ToImage();
 
+            ItemImage.Source = ImageSource;
 
+            ViewModel.Data.ImageURI = ImageSource;
             
+        }
+
+        public bool ValidateInfo()
+        {
+            if (String.IsNullOrEmpty(NameEntry.Text))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            if (AttributePicker.SelectedIndex < 0)
+            {
+                AttributePickerFrame.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            if (ItemCatagoryPicker.SelectedIndex < 0)
+            {
+                ItemCatagoryPickerFrame.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -29,7 +29,8 @@
                              HorizontalOptions="Center" 
                              >
 
-                    <Frame Style="{StaticResource ItemCreatePickerFrameStyle}">
+                    <Frame Style="{StaticResource ItemCreatePickerFrameStyle}"
+                           x:Name="ItemCatagoryPickerFrame">
 
 
                         <Picker Style="{StaticResource ItemCreatePickerStyle}" 
@@ -75,12 +76,14 @@
 
                     <Frame Style="{StaticResource ItemCreatePickerFrameStyle}"
                            Grid.Row="0"
-                           HeightRequest="35">
+                           HeightRequest="35"
+                           x:Name="AttributePickerFrame">
 
                         <Picker Style="{StaticResource ItemCreatePickerStyle}"
                                 ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListAttributes}"
                                 SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                                SelectedIndexChanged="OnPickerChange"/>
+                                SelectedIndexChanged="OnPickerChange"
+                                x:Name="AttributePicker"/>
 
                     </Frame>
 
