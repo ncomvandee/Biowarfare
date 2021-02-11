@@ -116,8 +116,23 @@
                             
                             <Label Style="{StaticResource ItemNameLabelStyle}"
                                    Text="{Binding Data.Value}"
-                                   Grid.Column="2"
+                                   Grid.Column="1"
                                    Grid.Row="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" 
+                                   />
+
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="Damge"
+                                   Grid.Column="0"
+                                   Grid.Row="1"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="{Binding Data.Damage}"
+                                   Grid.Column="1"
+                                   Grid.Row="1"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center" 
                                    />
