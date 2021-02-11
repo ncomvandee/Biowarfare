@@ -69,7 +69,7 @@ namespace Game.Views
 
         public void OnSliderChange(object sender, ValueChangedEventArgs e)
         {
-
+            StatValue.Text = String.Format("{0}", (int)e.NewValue);
         }
 
         public void OnPickerChange(object sender, EventArgs e)

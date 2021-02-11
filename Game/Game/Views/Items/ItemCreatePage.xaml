@@ -99,10 +99,11 @@
                                 HorizontalOptions="StartAndExpand"
                                 ValueChanged="OnSliderChange"/>
 
-                        <Label Text="9" 
+                        <Label Text="{Binding Data.Value}" 
                                FontSize="Body"
                                FontAttributes="Bold"
-                               HorizontalOptions="StartAndExpand"/>
+                               HorizontalOptions="StartAndExpand"
+                               x:Name="StatValue"/>
 
                     </StackLayout>
                     
