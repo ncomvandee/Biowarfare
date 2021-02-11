@@ -37,17 +37,6 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Save calls to Update
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void Update_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new ItemUpdatePage(ViewModel)));
-            await Navigation.PopAsync();
-        }
-
-        /// <summary>
         /// Calls for Delete
         /// </summary>
         /// <param name="sender"></param>
