@@ -79,9 +79,40 @@
 
             <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
+                   Padding="5"
                    >
-               
-               
+
+                <ScrollView>
+                    <StackLayout Orientation="Vertical">
+                        
+                        <Frame Style="{StaticResource BasicItemFrameStyle}"
+                               Padding="5">
+                            
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                               Text="{Binding Data.Location}"
+                               HorizontalOptions="CenterAndExpand"
+                               />
+                        </Frame>
+                        
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+
+                        </Grid>
+                    </StackLayout>
+
+                </ScrollView>
             </Frame>
 
             <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
