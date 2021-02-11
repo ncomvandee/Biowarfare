@@ -201,6 +201,7 @@
     <Content Include="vicious_scalpel_no_bg.png" />
     <Content Include="virus_bg.png" />
     <Content Include="virus_no_bg.png" />
+    <Content Include="xp_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

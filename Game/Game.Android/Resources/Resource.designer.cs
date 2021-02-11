@@ -11362,6 +11362,9 @@ namespace Game.Droid
 			// aapt resource value: 0x7F0700B9
 			public const int virus_no_bg = 2131165369;
 			
+			// aapt resource value: 0x7F0700BA
+			public const int xp_icon = 2131165370;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
