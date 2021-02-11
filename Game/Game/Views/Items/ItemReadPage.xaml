@@ -44,7 +44,6 @@
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-
                         </StackLayout>
                     </Frame>
 
@@ -204,7 +203,7 @@
             <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
-                    Clicked="CellEditButton_Clicked"
+                    Clicked="ItemEditButton_Clicked"
 
                     />
 

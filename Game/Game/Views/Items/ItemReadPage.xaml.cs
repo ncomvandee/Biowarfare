@@ -63,7 +63,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public async void CellEditButton_Clicked(object sender, EventArgs e)
+        public async void ItemEditButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new ItemReadPage(ViewModel)));
 
