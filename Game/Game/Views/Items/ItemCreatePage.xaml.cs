@@ -76,5 +76,18 @@ namespace Game.Views
         {
             StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
         }
+
+        public void OnCatagoryChange(object sender, EventArgs e)
+        {
+            if (ItemCatagoryPicker.SelectedItem == null)
+            {
+                return;
+            }
+
+            //convert message to Enum
+            var locationEnum = ItemLocationEnumHelper.ConvertCatagoryToEnum(ItemCatagoryPicker.SelectedItem.ToString());
+
+            ViewModel.Data.Location = locationEnum;
+        }
     }
 }

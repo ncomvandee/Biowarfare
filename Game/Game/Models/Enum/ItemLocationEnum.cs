@@ -94,6 +94,53 @@ namespace Game.Models
             }
             return Message;
         }
+
+        public static string ToCatagories(this ItemLocationEnum value)
+        {
+            // Default String
+            var Message = "Unknown";
+
+            switch (value)
+            {
+                case ItemLocationEnum.Head:
+                    Message = "Face Mask";
+                    break;
+
+                case ItemLocationEnum.Necklass:
+                    Message = "Stethoscope";
+                    break;
+
+                case ItemLocationEnum.PrimaryHand:
+                    Message = "Knife";
+                    break;
+
+                case ItemLocationEnum.OffHand:
+                    Message = "Thermometer";
+                    break;
+
+                case ItemLocationEnum.RightFinger:
+                    Message = "Finger Glove";
+                    break;
+
+                case ItemLocationEnum.LeftFinger:
+                    Message = "Ring";
+                    break;
+
+                case ItemLocationEnum.Finger:
+                    Message = "Any Finger";
+                    break;
+
+                case ItemLocationEnum.Feet:
+                    Message = "Boots";
+                    break;
+
+                case ItemLocationEnum.Unknown:
+                default:
+                    break;
+            }
+            return Message;
+        }
+
     }
 
     /// <summary>
@@ -162,6 +209,23 @@ namespace Game.Models
             }
         }
 
+        public static List<string> GetListItemAsCatagories
+        {
+            get
+            {
+                var myList = new List<string>();
+                foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+                {
+                    if (item != ItemLocationEnum.Unknown &&
+                        item != ItemLocationEnum.Finger
+                    )
+                        myList.Add(item.ToCatagories());
+                }
+
+                return myList;
+            }
+        }
+
         /// <summary>
         /// Given the String for an enum, return its value.  That allows for the enums to be numbered 2,4,6 rather than 1,2,3 
         /// </summary>
@@ -187,6 +251,19 @@ namespace Game.Models
             foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
             {
                 if (item.ToMessage().Equals(value))
+                {
+                    return item;
+                }
+            }
+            return ItemLocationEnum.Unknown;
+        }
+
+        public static ItemLocationEnum ConvertCatagoryToEnum(string value)
+        {
+            // Get the Message, Determine Which enum has that message, and return that enum.
+            foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+            {
+                if (item.ToCatagories().Equals(value))
                 {
                     return item;
                 }
