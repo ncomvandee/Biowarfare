@@ -73,6 +73,32 @@ namespace Game.Models
 
             return Message;
         }
+
+        public static string ToAbbrivation(this AttributeEnum value)
+        {
+            var msg = "";
+
+            switch (value)
+            {
+                case AttributeEnum.Attack:
+                    msg = "ATK";
+                    break;
+
+                case AttributeEnum.Defense:
+                    msg = "DEF";
+                    break;
+
+                case AttributeEnum.Speed:
+                    msg = "SPD";
+                    break;
+
+                case AttributeEnum.MaxHealth:
+                    msg = "HP";
+                    break;
+            }
+
+            return msg;
+        }
     }
 
     /// <summary>
