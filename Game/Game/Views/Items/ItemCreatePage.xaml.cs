@@ -88,6 +88,11 @@ namespace Game.Views
             var locationEnum = ItemLocationEnumHelper.ConvertCatagoryToEnum(ItemCatagoryPicker.SelectedItem.ToString());
 
             ViewModel.Data.Location = locationEnum;
+
+            ItemImage.Source = ViewModel.Data.Location.ToImage(); 
+
+
+            
         }
     }
 }

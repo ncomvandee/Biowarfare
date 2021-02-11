@@ -141,6 +141,49 @@ namespace Game.Models
             return Message;
         }
 
+        public static string ToImage(this ItemLocationEnum value)
+        {
+            var image = "";
+
+            switch (value)
+            {
+                case ItemLocationEnum.Head:
+                    image = "face_mask_no_bg.png";
+                    break;
+
+                case ItemLocationEnum.Necklass:
+                    image = "";
+                    break;
+
+                case ItemLocationEnum.PrimaryHand:
+                    image = "vicious_scalpel_no_bg.png";
+                    break;
+
+                case ItemLocationEnum.OffHand:
+                    image = "thermometer_no_bg.png";
+                    break;
+
+                case ItemLocationEnum.RightFinger:
+                    image = "finger_glove_no_bg.png";
+                    break;
+
+                case ItemLocationEnum.LeftFinger:
+                    image = "";
+                    break;
+
+                case ItemLocationEnum.Feet:
+                    image = "";
+                    break;
+
+                case ItemLocationEnum.Unknown:
+                default:
+                    break;
+            }
+
+            return image;
+        
+        }
+
     }
 
     /// <summary>

@@ -42,7 +42,7 @@
                     <Frame Style="{StaticResource MediumCircleFrameStyle}"
                            WidthRequest="170" HeightRequest="170">
 
-                        <Image x:Name="CellImage" />
+                        <Image x:Name="ItemImage" />
 
                     </Frame>
 
