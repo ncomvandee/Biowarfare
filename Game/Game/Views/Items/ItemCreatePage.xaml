@@ -97,7 +97,8 @@
                                 Minimum="1"
                                 WidthRequest="200"
                                 HorizontalOptions="StartAndExpand"
-                                ValueChanged="OnSliderChange"/>
+                                ValueChanged="OnSliderChange"
+                                Value="{Binding Data.Value}"/>
 
                         <Label Text="{Binding Data.Value}" 
                                FontSize="Body"
