@@ -95,20 +95,32 @@
                         </Frame>
                         
 
-                        <Grid>
+                        <Grid >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="{Binding Data.Attribute}"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                            
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="{Binding Data.Value}"
+                                   Grid.Column="2"
+                                   Grid.Row="0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" 
+                                   />
                         </Grid>
                     </StackLayout>
 
