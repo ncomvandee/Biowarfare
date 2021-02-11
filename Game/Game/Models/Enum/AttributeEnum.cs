@@ -101,7 +101,7 @@ namespace Game.Models
         {
             get
             {
-                var myList = Enum.GetNames(typeof(AttributeEnum)).ToList().Where(m => m.ToString().Equals("Unknown") == false).ToList();
+                var myList = Enum.GetNames(typeof(AttributeEnum)).ToList().Where(m => m.ToString().Equals("Unknown") == false && m.ToString().Equals("CurrentHealth") == false).ToList();
                 return myList;
             }
         }

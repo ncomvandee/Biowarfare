@@ -78,12 +78,9 @@
                            Grid.Row="0"
                            HeightRequest="35">
 
-                        <Picker Style="{StaticResource ItemCreatePickerStyle}">
-                            <Picker.Items>
-                                <x:String>Attak boost</x:String>
-                            </Picker.Items>
-                        </Picker>
-                        
+                        <Picker Style="{StaticResource ItemCreatePickerStyle}"
+                                ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" />
+
                     </Frame>
 
                     <StackLayout Orientation="Horizontal"
@@ -94,6 +91,8 @@
                                FontSize="Medium"/>
 
                         <Slider ThumbColor="{StaticResource SecondaryAccentColor}"
+                                Maximum="9"
+                                Minimum="1"
                                 WidthRequest="200"
                                 HorizontalOptions="StartAndExpand"/>
 
