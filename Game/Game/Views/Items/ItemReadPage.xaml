@@ -136,6 +136,21 @@
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center" 
                                    />
+
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="Range"
+                                   Grid.Column="0"
+                                   Grid.Row="2"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+
+                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                                   Text="{Binding Data.Range}"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" 
+                                   />
                         </Grid>
                     </StackLayout>
 
