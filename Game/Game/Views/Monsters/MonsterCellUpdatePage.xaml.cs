@@ -52,9 +52,14 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "Update", ViewModel.Data);
 
-            await Navigation.PopModalAsync();
+            if (CheckValidInfo())
+            {
+                MessagingCenter.Send(this, "Update", ViewModel.Data);
+
+                await Navigation.PopModalAsync();
+
+            }
         }
 
         /// <summary>
@@ -131,6 +136,29 @@ namespace Game.Views
                 SpeedStat.Text = String.Format("{0}", (int)e.NewValue);
             }
 
+        }
+
+        /// <summary>
+        /// Check if the input data are complete or not
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckValidInfo()
+        {
+            // If name is blank, change the placeholder color to be red and return false
+            if (NameEntry.Text.Equals(""))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            // If CellType is not selected, change picker color to red and return false;
+            if (MonsterTypePicker.SelectedIndex == -1)
+            {
+                MonsterTypePicker.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            return true;
         }
     }
 }
