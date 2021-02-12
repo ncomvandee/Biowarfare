@@ -95,40 +95,14 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ImageChanged(object sender, EventArgs e)
         {
-            // Selected CellType as String
+            CellTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
+
+            // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
+            var image = ViewModel.Data.Job.ToImage();
 
-            switch (TypeSelected)
-            {
-                case "Basophil":
-                    CellImage.Source = "basophil_bg.png";
-                    ViewModel.Data.ImageURI = "basophil_bg.png";
-                    break;
-
-                case "Eosinophil":
-                    CellImage.Source = "eosinophil_bg.png";
-                    ViewModel.Data.ImageURI = "eosinophil_bg.png";
-                    break;
-
-                case "Macrophage":
-                    CellImage.Source = "macrophage_bg.png";
-                    ViewModel.Data.ImageURI = "macrophage_bg.png";
-                    break;
-
-                case "BCell":
-                    CellImage.Source = "b_cell_bg.png";
-                    ViewModel.Data.ImageURI = "b_cell_bg.png";
-                    break;
-
-                case "KillerTCell":
-                    CellImage.Source = "t_cell_bg.png";
-                    ViewModel.Data.ImageURI = "t_cell_bg.png";
-                    break; 
-
-                case "NKCell":
-                    CellImage.Source = "";
-                    break;
-            }
+            CellImage.Source = image;
+            ViewModel.Data.ImageURI = image;
 
             GetDefaultDescription(TypeSelected);
         }
