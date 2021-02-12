@@ -25,7 +25,7 @@
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <!--Information Box-->
-                <Frame Style="{StaticResource MediumSquareMidgroundFrame}" Padding="10"
+                <Frame Style="{StaticResource MediumSquareMidgroundFrame}" Padding="5"
                        HeightRequest="-1" WidthRequest="400"
                        >
 
@@ -68,7 +68,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -113,7 +113,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -158,7 +158,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -204,7 +204,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -250,7 +250,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -296,7 +296,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -342,7 +342,7 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
