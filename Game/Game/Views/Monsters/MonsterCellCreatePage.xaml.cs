@@ -71,36 +71,12 @@ namespace Game.Views
 
             MonsterTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
 
-            // Get the string CellType from picker
-            var TypeSelected = MonsterTypePicker.SelectedItem.ToString();
+            var ImageSource = ViewModel.Data.MonsterType.ToImage();
 
-            switch (TypeSelected)
-            {
-                case "Spore":
-                    MonsterImage.Source = "spore_bg.png";
-                    ViewModel.Data.ImageURI = "spore_bg.png";
-                    break;
+            MonsterImage.Source = ImageSource;
+            ViewModel.Data.ImageURI = ImageSource;
 
-                case "Bacteria":
-                    MonsterImage.Source = "bacteria_bg.png";
-                    ViewModel.Data.ImageURI = "bacteria_bg.png";
-                    break;
-
-                case "Parasite":
-                    MonsterImage.Source = "parasite_bg.png";
-                    ViewModel.Data.ImageURI = "parasite_bg.png";
-                    break;
-
-                case "Virus":
-                    MonsterImage.Source = "virus_bg.png";
-                    ViewModel.Data.ImageURI = "virus_bg.png";
-                    break;
-
-                case "Cancer":
-                    MonsterImage.Source = "cancer_bg.png";
-                    ViewModel.Data.ImageURI = "cancer_bg.png";
-                    break;
-            }
+           
         }
 
         /// <summary>
