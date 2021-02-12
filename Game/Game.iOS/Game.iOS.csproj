@@ -291,4 +291,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\item_value.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_attack.png" />
+  </ItemGroup>
 </Project>
