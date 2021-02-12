@@ -80,21 +80,30 @@
 
             <Frame Style="{StaticResource ItemRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
-                   Padding="5"
                    >
 
-                <ScrollView>
-                    <StackLayout Orientation="Vertical">
-                        
-                        <Frame Style="{StaticResource BasicItemFrameStyle}"
-                               Padding="5">
-                            
-                            <Label Style="{StaticResource ItemNameLabelStyle}"
-                               Text="{Binding Data.Location}"
-                               HorizontalOptions="CenterAndExpand"
-                               />
-                        </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource ItemReadCellTitleFrame}"
+                           >
+
+                        <Label Style="{StaticResource ItemNameLabelStyle}"
+                           Text="{Binding Data.Location}" 
+                           Grid.Row="0" 
+                           />
+
+                    </Frame>
+
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            x:Name="AttributeFrame"
+                            Grid.Row="1"
+                            IsVisible="True"
+                            >
 
                         <Grid ColumnSpacing="20" RowSpacing="5" Margin="0, 20">
                             <Grid.RowDefinitions>
@@ -107,8 +116,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            
-                            <Image Source="attack_icon.png" 
+                            <Image Source="item_attack.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="0" 
@@ -143,12 +151,14 @@
                                    Grid.Column="2"
                                    Grid.Row="1"
                                    />
+
                         </Grid>
-                    </StackLayout>
 
-                </ScrollView>
+                    </Frame>
+
+                </Grid>
             </Frame>
-
+            
             <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
