@@ -96,7 +96,7 @@
                         </Frame>
 
 
-                        <Grid ColumnSpacing="0" RowSpacing="5" Margin="0, 20">
+                        <Grid ColumnSpacing="20" RowSpacing="5" Margin="0, 20">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -107,59 +107,38 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <!--<Label Style="{StaticResource ItemNameLabelStyle}"
-                                   Text="{Binding Data.Attribute}"
-                                   Grid.Column="0"
-                                   Grid.Row="0"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center" 
-                                   TextColor="DeepPink"/>-->
+                            
                             <Image Source="attack_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="0" 
                                    />
 
-                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                            <Label Style="{StaticResource ReadStatsLabelStyle}"
                                    Text="{Binding Data.Value}"
                                    Grid.Column="0"
                                    Grid.Row="1"
                                    />
 
-                            <!--<Label Style="{StaticResource ItemNameLabelStyle}"
-                                   Text="Damge"
-                                   Grid.Column="0"
-                                   Grid.Row="1"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center" />-->
-                            <Image Source="attack_icon.png" 
+                            <Image Source="item_damage.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="1" 
                                    />
 
-
-                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                            <Label Style="{StaticResource ReadStatsLabelStyle}"
                                    Text="{Binding Data.Damage}"
                                    Grid.Column="1"
                                    Grid.Row="1"
                                    />
 
-                            <Image Source="attack_icon.png" 
+                            <Image Source="item_range.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="2" 
                                    />
 
-
-                            <!--<Label Style="{StaticResource ItemNameLabelStyle}"
-                                   Text="Range"
-                                   Grid.Column="0"
-                                   Grid.Row="2"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center" />-->
-
-                            <Label Style="{StaticResource ItemNameLabelStyle}"
+                            <Label Style="{StaticResource ReadStatsLabelStyle}"
                                    Text="{Binding Data.Range}"
                                    Grid.Column="2"
                                    Grid.Row="1"

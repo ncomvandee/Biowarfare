@@ -67,6 +67,35 @@ namespace Game.Models
 
             return Message;
         }
+
+        public static string ToImage(this MonsterTypeEnum value)
+        {
+            var image = "";
+            switch (value)
+            {
+                case MonsterTypeEnum.Spore:
+                    image = "spore_bg.png";
+                    break;
+
+                case MonsterTypeEnum.Bacteria:
+                    image = "bacteria_bg.png";
+                    break;
+
+                case MonsterTypeEnum.Parasite:
+                    image = "parasite_bg.png";
+                    break;
+
+                case MonsterTypeEnum.Virus:
+                    image = "virus_bg.png";
+                    break;
+
+                case MonsterTypeEnum.Cancer:
+                    image = "cancer_bg.png";
+                    break;
+            }
+
+            return image;
+        }
     }
 
     /// <summary>
