@@ -21,6 +21,9 @@ namespace Game.Views
         // Empty Constructor for Tests
         public MonsterCellUpdatePage(bool UnitTest){ }
 
+        //hold a copy of the original data for cancel to use
+        public MonsterModel DataCopy;
+
         /// <summary>
         /// Constructor that takes and existing data Monster
         /// </summary>
@@ -37,6 +40,8 @@ namespace Game.Views
             MonsterTypePicker.SelectedItem = data.Data.MonsterType.ToString();
             MonsterImage.Source = data.Data.ImageURI.ToString();
 
+            //Make a copy of the character for cancle to resotre
+            DataCopy = new MonsterModel(data.Data);
 
         }
 
@@ -59,6 +64,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void CancelButton_Clicked(object sender, EventArgs e)
         {
+            //put the copy back
+            ViewModel.Data.Update(DataCopy);
+
             await Navigation.PopModalAsync();
         }
 
