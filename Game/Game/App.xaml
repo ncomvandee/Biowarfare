@@ -1145,8 +1145,8 @@
                     BasedOn="{StaticResource SmallCircleFrameStyle}"
                    >
 
-                <Setter Property="WidthRequest" Value="165"/>
-                <Setter Property="HeightRequest" Value="165"/>
+                <Setter Property="WidthRequest" Value="160"/>
+                <Setter Property="HeightRequest" Value="160"/>
 
             </Style>
             
@@ -1172,8 +1172,9 @@
                    x:Key="CharacterStatsFrameStyle"
                    BasedOn="{StaticResource StatsFrameStyle}"
                    
+                   
                    >
-
+                <Setter Property="HeightRequest" Value="210"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryCharacterMidground}"/>
 
@@ -1863,6 +1864,7 @@
                 <Setter Property="WidthRequest" Value="200"/>
                 <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="Margin" Value="0, 0, 20, 0"/>
 
 
             </Style>
@@ -2119,9 +2121,12 @@
                    >
                 
                 <Setter Property="ThumbColor" Value="{StaticResource SecondaryAccentColor}"/>
-                <Setter Property="Margin" Value="30, 5"/>
+                <Setter Property="Margin" Value="25, 0"/>
                 <Setter Property="Maximum" Value="20"/>
                 <Setter Property="Minimum" Value="0"/>
+                <Setter Property="ScaleX" Value=".75"/>
+                <Setter Property="ScaleY" Value=".75"/>
+
 
             </Style>
 
