@@ -18,6 +18,9 @@ namespace Game.Views
         // View Model for Item
         public readonly GenericViewModel<ItemModel> ViewModel;
 
+        //hold a copy of the original data for cancel to use
+        public ItemModel DataCopy;
+
         // Empty Constructor for Tests
         public ItemUpdatePage(bool UnitTest){ }
 
@@ -35,6 +38,9 @@ namespace Game.Views
             ItemCatagoryPicker.SelectedItem = ViewModel.Data.Location.ToCatagories();
             AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
             StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
+
+            //Make a copy of the character for cancle to resotre
+            DataCopy = new ItemModel(data.Data);
         }
 
         /// <summary>
@@ -64,6 +70,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
+            //put the copy back
+            ViewModel.Data.Update(DataCopy);
+
             await Navigation.PopModalAsync();
         }
 
