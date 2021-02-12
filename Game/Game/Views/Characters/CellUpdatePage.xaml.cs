@@ -59,9 +59,14 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "Update", ViewModel.Data);
+            if (CheckValidInfo())
+            {
 
-            await Navigation.PopModalAsync();
+                MessagingCenter.Send(this, "Update", ViewModel.Data);
+
+                await Navigation.PopModalAsync();
+
+            }
         }
 
         /// <summary>
@@ -99,6 +104,8 @@ namespace Game.Views
 
             // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
+
+            // Get image file name
             var image = ViewModel.Data.Job.ToImage();
 
             CellImage.Source = image;
@@ -232,6 +239,29 @@ namespace Game.Views
                                                  " Has a +10% speed buff.";
                     break;
             }
+        }
+
+        /// <summary>
+        /// Check if the input data are complete or not
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckValidInfo()
+        {
+            // If name is blank, change the placeholder color to be red and return false
+            if (NameEntry.Text.Equals(""))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            // If CellType is not selected, change picker color to red and return false;
+            if (CellTypePicker.SelectedIndex == -1)
+            {
+                CellTypePicker.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            return true;
         }
 
     }

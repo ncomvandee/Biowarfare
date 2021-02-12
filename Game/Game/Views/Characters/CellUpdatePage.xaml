@@ -79,7 +79,8 @@
                 
             </Frame>
 
-            <Entry Text="{Binding Data.Name}" 
+            <Entry Text="{Binding Data.Name}"
+                   x:Name="NameEntry"
                    Placeholder="Enter name here" 
                    Style="{StaticResource CharacterCreateEntryStyle}"
                    />
