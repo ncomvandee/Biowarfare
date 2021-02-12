@@ -111,7 +111,7 @@ namespace Game.Views
             CellImage.Source = image;
             ViewModel.Data.ImageURI = image;
 
-            GetDefaultDescription(TypeSelected);
+            GetDefaultDescription();
         }
 
         /// <summary>
@@ -198,47 +198,9 @@ namespace Game.Views
         /// Update the default description for each Cell to Database
         /// </summary>
         /// <param name="TypeSelected"></param>
-        public void GetDefaultDescription(String TypeSelected)
+        public void GetDefaultDescription()
         {
-            switch (TypeSelected)
-            {
-                case "Basophil":
-                    ViewModel.Data.Description = "Basophils are a type of white blood cell that are responsible for causing inflammatory reactions and producing histamine." +
-                                                 " Has a +10% hp buff.";
-                    break;
-
-                case "Eosinophil":
-                    ViewModel.Data.Description = "Eosinophil are a type of white blood cell that specialize in attacking parasites." +
-                                                 " Eosinophil have a 10% attack buff when fighting against invaders of the parasite type.";
-                    break;
-
-                case "Macrophage":
-                    ViewModel.Data.Description = "A Spore is a small unicellular entity that typically can invade the body through the respiratory system." +
-                                                 " Spores have a 25% chance of causing a character to be poisoned if a hit succeeds. When a character is poisoned," +
-                                                 " it loses 1hp at the beginning of its turn for 5 turns." +
-                                                 " At the end of 5 turns, the character is cured." +
-                                                 " Poison does not stack damage and extend duration.";
-                    break;
-
-                case "BCell":
-                    ViewModel.Data.Description = "B Cells are a specialized white blood cell that secrete antibodies." +
-                                                 " Once per round, B Cells can give any living team member an Immunity token. " +
-                                                 "This token will protect that team member from damage on one turn," +
-                                                 " if are to be dealt damage that turn. Instead," +
-                                                 " the Immunity token is spent and no damage is taken for that team member.";
-                    break;
-
-                case "KillerTCell":
-                    ViewModel.Data.Description = "Killer T Cells are a type of white blood cell that kill infected," +
-                                                 " damaged, or cancerous cells. Every time the Killer T Cell attacks," +
-                                                 " they will always roll the highest weapon damage. Has +5% attack.";
-                    break;
-
-                case "NKCell":
-                    ViewModel.Data.Description = "NK cells are a type of lymphocyte that provides a rapid response to viruses in the body." +
-                                                 " Has a +10% speed buff.";
-                    break;
-            }
+            ViewModel.Data.Description = ViewModel.Data.Job.ToDescription();
         }
 
         /// <summary>
