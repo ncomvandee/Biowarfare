@@ -1802,10 +1802,13 @@
                 <Setter Property="CornerRadius" Value="50"/>
                 <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="Padding" Value="5, 0"/>
+                <Setter Property="Padding" Value="0, 0, 0, 3"/> 
                 <Setter Property="IsEnabled" Value="False"/>
+                
+                
 
             </Style>
 
@@ -1830,9 +1833,10 @@
                 <Setter Property="CornerRadius" Value="50"/>
                 <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="Padding" Value="5, 0"/>
+                <Setter Property="Padding" Value="0, 0, 0, 3"/>
 
             </Style>
 
