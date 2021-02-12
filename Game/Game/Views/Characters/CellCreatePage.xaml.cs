@@ -90,6 +90,8 @@ namespace Game.Views
 
             // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
+
+            // Get image file name
             var image = ViewModel.Data.Job.ToImage();
 
             CellImage.Source = image;
