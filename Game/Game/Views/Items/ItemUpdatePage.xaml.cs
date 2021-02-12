@@ -38,6 +38,7 @@ namespace Game.Views
             ItemCatagoryPicker.SelectedItem = ViewModel.Data.Location.ToCatagories();
             AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
             StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
+            DescriptionBox.Text = ViewModel.Data.Description;
 
             //Make a copy of the character for cancle to resotre
             DataCopy = new ItemModel(data.Data);
