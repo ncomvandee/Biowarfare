@@ -2071,7 +2071,7 @@
                    >
 
                 <Setter Property="TextColor" Value="{StaticResource PrimaryMonsterMidground}"/>
-                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMonsterMidground}"/>
+                <Setter Property="PlaceholderColor" Value="Gray"/>
 
             </Style>
 
