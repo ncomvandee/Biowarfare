@@ -32,9 +32,9 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
-            //Need to make the SelectedItem a string, so it can select the correct item.
-            //LocationPicker.SelectedItem = data.Data.Location.ToString();
-            //AttributePicker.SelectedItem = data.Data.Attribute.ToString();
+            ItemCatagoryPicker.SelectedItem = ViewModel.Data.Location.ToCatagories();
+            AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
+            StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
         }
 
         /// <summary>
@@ -50,8 +50,11 @@ namespace Game.Views
                 ViewModel.Data.ImageURI = Services.ItemService.DefaultImageURI;
             }
 
-            MessagingCenter.Send(this, "Update", ViewModel.Data);
-            await Navigation.PopModalAsync();
+            if (ValidateInfo())
+            {
+                MessagingCenter.Send(this, "Update", ViewModel.Data);
+                await Navigation.PopModalAsync();
+            }
         }
 
         /// <summary>
@@ -66,18 +69,71 @@ namespace Game.Views
 
         public void OnCatagoryChange(object sender, EventArgs e)
         {
+            ItemCatagoryPickerFrame.BackgroundColor = Color.FromHex("#BBC300");
 
+            if (ItemCatagoryPicker.SelectedItem == null)
+            {
+                return;
+            }
+
+            // Get the ItemCatagory as EnumLocation
+            var locationEnum = ItemLocationEnumHelper.ConvertCatagoryToEnum(ItemCatagoryPicker.SelectedItem.ToString());
+
+            // Set the location as location selected
+            ViewModel.Data.Location = locationEnum;
+
+            // Get the image from what ItemCatagory has been chosen
+            var ImageSource = ViewModel.Data.Location.ToImage();
+
+            // Show the Image in UI
+            ItemImage.Source = ImageSource;
+
+            // Set the ImageURI as image
+            ViewModel.Data.ImageURI = ImageSource;
         }
 
         public void OnPickerChange(object sender, EventArgs e)
         {
+            AttributePickerFrame.BackgroundColor = Color.FromHex("#BBC300");
 
+            // Set the text to show what attribute user choose
+            StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
         }
+    
 
         public void OnSliderChange(object sender, ValueChangedEventArgs e)
         {
-
+            StatValue.Text = String.Format("{0}", (int)e.NewValue);
         }
 
+        /// <summary>
+        /// Validate if the information required is empty on not
+        /// </summary>
+        /// <returns>True if all required infomation is not empty</returns>
+        public bool ValidateInfo()
+        {
+            // Check the name entry
+            if (String.IsNullOrEmpty(NameEntry.Text))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            // Check the Attribute picker
+            if (AttributePicker.SelectedIndex < 0)
+            {
+                AttributePickerFrame.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            // Chech the ItemCatagory picker
+            if (ItemCatagoryPicker.SelectedIndex < 0)
+            {
+                ItemCatagoryPickerFrame.BackgroundColor = Color.Red;
+                return false;
+            }
+
+            return true;
+        }
     }
 }
