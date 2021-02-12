@@ -156,6 +156,11 @@
     <Content Include="icon_new.png" />
     <Content Include="item.png" />
     <Content Include="items_button.png" />
+    <Content Include="item_attribute.png" />
+    <Content Include="item_damage.png" />
+    <Content Include="item_location.png" />
+    <Content Include="item_range.png" />
+    <Content Include="item_value.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
     <Content Include="monster_button.png" />
