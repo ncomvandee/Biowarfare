@@ -24,6 +24,9 @@ namespace Game.Views
         // Minimum Cell Level
         public int MinLevel = 1;
 
+        //hold a copy of the original data for cancel to use
+        public CharacterModel DataCopy;
+
         // Empty Constructor for Tests
         public CellUpdatePage(bool UnitTest){ }
 
@@ -37,6 +40,9 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             TitlePage.Text = "Update " + data.Data.Name;
+
+            //Make a copy of the character for cancle to resotre
+            DataCopy = new CharacterModel(data.Data);
 
             CellTypePicker.SelectedItem = data.Data.Job.ToString();
             CellImage.Source = data.Data.ImageURI.ToString();
@@ -65,6 +71,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void CancelButton_Clicked(object sender, EventArgs e)
         {
+            //put the copy back
+            ViewModel.Data.Update(DataCopy);
+
             await Navigation.PopModalAsync();
         }
 

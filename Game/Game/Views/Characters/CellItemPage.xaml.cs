@@ -19,6 +19,9 @@ namespace Game.Views
     {
         // View Model for cell
         public readonly GenericViewModel<CharacterModel> ViewModel;
+
+        //hold a copy of the original data for cancel to use
+        public CharacterModel DataCopy;
  
         //View Model of Item
         //readonly ItemIndexViewModel ItemViewModel = ItemIndexViewModel.Instance;
@@ -38,6 +41,8 @@ namespace Game.Views
 
             this.ViewModel.Title = data.Data.Name + " Equipped Item" ;
 
+            //Make a copy of the character for cancle to resotre
+            DataCopy = new CharacterModel(data.Data);
 
             //Get Current character item
             GetCharacterItem();
@@ -63,6 +68,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void CancelButton_Clicked(object sender, EventArgs e)
         {
+            //put the copy back
+            ViewModel.Data.Update(DataCopy);
+
             await Navigation.PopModalAsync();
         }
 
