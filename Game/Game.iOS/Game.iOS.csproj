@@ -276,4 +276,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\scores_button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_attribute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_damage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_range.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\item_value.png" />
+  </ItemGroup>
 </Project>
