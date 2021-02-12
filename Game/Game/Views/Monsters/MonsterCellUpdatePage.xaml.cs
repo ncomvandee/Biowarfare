@@ -82,7 +82,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ImageChanged(object sender, EventArgs e)
         {
-            MonsterTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
+            MonsterTypePicker.BackgroundColor = Color.FromHex("#EF7834");
 
             var ImageSource = ViewModel.Data.MonsterType.ToImage();
 
