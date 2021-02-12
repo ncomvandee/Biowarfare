@@ -59,12 +59,14 @@
 
             <Frame Style="{StaticResource ItemStatsFrameStyle}"
                    HeightRequest="100">
+                
                 <Editor BackgroundColor="Transparent" 
-                    Placeholder="Description goes here..."
-                    PlaceholderColor="{StaticResource PrimaryItemForeground}"
-                    FontSize="Default"
-                    HeightRequest="100"
-                    TextColor="Black"
+                        Text="{Binding Data.Description}"
+                        Placeholder="Description goes here..."
+                        PlaceholderColor="{StaticResource PrimaryItemForeground}"
+                        FontSize="Default"
+                        HeightRequest="100"
+                        TextColor="Black"
                     />
             </Frame>
             
