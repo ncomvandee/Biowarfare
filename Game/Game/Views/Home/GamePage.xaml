@@ -58,7 +58,7 @@
                             Grid.Row="4"
                             Style="{StaticResource SmallGamePageButtonStyle}"
                             Margin="180, 20, 0, 0"
-                            Clicked="AutobattleButton_Clicked"/>
+                            Clicked="AboutButton_Clicked"/>
                     
                 </StackLayout>
             </Grid>
