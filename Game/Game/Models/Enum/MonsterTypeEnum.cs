@@ -68,6 +68,11 @@ namespace Game.Models
             return Message;
         }
 
+        /// <summary>
+        /// Get MonsterCell's image per specific MonsterCellType
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToImage(this MonsterTypeEnum value)
         {
             var image = "";
