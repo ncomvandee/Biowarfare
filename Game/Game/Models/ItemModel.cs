@@ -127,5 +127,50 @@ namespace Game.Models
 
             return Value;
         }
+
+        // Get value for item attribute as double for showing in progress bar        
+        public double GetValueForProgressBar
+        {
+            get
+            {
+                if (Value >= 9)
+                {
+                    return 1.0;
+                }
+
+                return Value * 0.1;
+            }
+        }
+
+        // Get text for attribute in progress bar
+        public string GetTextForAttributeProgressBar
+        {
+            get
+            {
+                // Default text
+                var msg = "";
+
+                switch (Attribute)
+                {
+                    case AttributeEnum.Attack:
+                        msg = "ATK";
+                        break;
+
+                    case AttributeEnum.Defense:
+                        msg = "DEF";
+                        break;
+
+                    case AttributeEnum.Speed:
+                        msg = "SPD";
+                        break;
+
+                    case AttributeEnum.MaxHealth:
+                        msg = "HP";
+                        break;
+                }
+
+                return msg;
+            }
+        }
     }
 }

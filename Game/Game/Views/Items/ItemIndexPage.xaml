@@ -67,9 +67,7 @@
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="AUTO"/>
                                                 <RowDefinition Height="AUTO"/>
-                                                <RowDefinition Height="AUTO"/>
-                                                <RowDefinition Height="AUTO"/>
-                                                <RowDefinition Height="*"/>
+
                                             </Grid.RowDefinitions>
 
                                             <StackLayout Orientation="Horizontal" 
@@ -86,34 +84,19 @@
 
                                             </StackLayout>
 
-                                            <Label Text="Atk" 
-                                                       Grid.Row="1" 
-                                                       Style="{StaticResource ItemProgressBarLabelStyle}"
+                                            <Label Text="{Binding GetTextForAttributeProgressBar}" 
+                                                   Grid.Row="1" 
+                                                   Style="{StaticResource ItemProgressBarLabelStyle}"
+                                                   x:Name="AtttributeName"
                                                        />
 
-                                            <ProgressBar Progress="{Binding GetAttackAsDouble}"
-                                                             Grid.Row="1"
-                                                             Style="{StaticResource ItemProgressBarStyle}"
-                                                             />
 
-                                            <Label Text="Def" 
-                                                       Grid.Row="2" 
-                                                       Style="{StaticResource ItemProgressBarLabelStyle}"
-                                                       />
-
-                                            <ProgressBar Progress="{Binding GetDefenseAsDouble}" 
-                                                             Grid.Row="2" 
-                                                             Style="{StaticResource ItemProgressBarStyle}" 
-                                                             />
-
-                                            <Label Text="Spd" 
-                                                       Grid.Row="3" 
-                                                       Style="{StaticResource ItemProgressBarLabelStyle}"
-                                                       />
-
-                                            <ProgressBar Progress="{Binding GetSpeedAsDouble}"
-                                                             Grid.Row="3" 
-                                                             Style="{StaticResource ItemProgressBarStyle}"
+                                            <ProgressBar Progress="{Binding GetValueForProgressBar}"
+                                                         Grid.Row="1"
+                                                         Style="{StaticResource ItemProgressBarStyle}"
+                                                         HeightRequest="10"
+                                                         Margin="40, 0, 20, 0"
+                                                         x:Name="AttributeBar"
                                                              />
 
                                         </Grid>
