@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.ViewModels;
 using Game.Models;
+using System.Linq;
 
 namespace Game.Views
 {
@@ -34,6 +35,8 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = data.Data.Name + " Information";
+
+            AddItemToDisplay();
         }
 
         /// <summary>
@@ -100,6 +103,70 @@ namespace Game.Views
                 ItemsFrame.IsVisible = true;
                 ItemAttributeToggleButton.Text = "Items";
             }
+        }
+
+        public void AddItemToDisplay()
+        {
+            var FlexList = ItemBox.Children.ToList();
+
+            foreach (var data in FlexList)
+            {
+                ItemBox.Children.Remove(data);
+            }
+
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Head));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Necklass));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.PrimaryHand));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.OffHand));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.RightFinger));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.LeftFinger));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Feet));
+
+        }
+
+        public StackLayout GetItemToDisplay(ItemLocationEnum location)
+        {
+            var ClickableButton = true;
+
+            var data = ViewModel.Data.GetItemByLocation(location);
+
+            if (data == null)
+            {
+
+                return new StackLayout { };
+
+            }
+
+            var ItemButton = new ImageButton
+            {
+                Source = data.ImageURI,
+                WidthRequest = 50,
+                HeightRequest = 50,
+            };
+
+            if (ClickableButton)
+            {
+
+            }
+
+            var ItemLabel = new Label
+            {
+                Text = data.Name,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+
+            };
+
+            var ItemStack = new StackLayout
+            {
+                Padding = 3,
+                HorizontalOptions = LayoutOptions.Center,
+                
+                Children = { ItemButton, ItemLabel },
+            };
+
+            return ItemStack;
         }
     }
 }

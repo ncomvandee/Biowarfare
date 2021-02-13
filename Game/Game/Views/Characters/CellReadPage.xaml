@@ -109,87 +109,14 @@
 
                     <ScrollView Grid.Row="1" 
                                 x:Name="ItemsFrame">
-                        <FlexLayout  
-                                    IsVisible="True"
+                        <FlexLayout x:Name="ItemBox"
                                     Wrap="Wrap"
-                                    JustifyContent="End"
-                                    >
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="White" WidthRequest="60" HeightRequest="60" 
-                               BorderColor="Transparent" CornerRadius="100" >
-
-                                    <Image Source="face_mask_no_bg.png" />
-
-                                </Frame>
-                                <Label Text="N-95 Face Mask" />
-                            </StackLayout>
-
-
-
-
-                        </FlexLayout>
+                                    JustifyContent="SpaceAround"
+                                    HeightRequest="300"
+                                    />
+                        
                     </ScrollView>
+                    
                     <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
                             x:Name="AttributeFrame"
                             Grid.Row="1"
