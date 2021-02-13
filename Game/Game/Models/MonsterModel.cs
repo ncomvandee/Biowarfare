@@ -20,11 +20,11 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Monster;
             Guid = Id;
-            Name = "";
-            Description = "";
+            Name = "COIVD-19";
+            Description = "Not the most dangerous virus, but the most annoying virus for 2019-2021";
             Difficulty = DifficultyEnum.Average;
             UniqueItem = null;
-            ImageURI = "item.png";
+            ImageURI = "virus_bg.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             MonsterType = MonsterTypeEnum.Spore;
