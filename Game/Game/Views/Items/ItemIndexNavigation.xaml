@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Game.Views.Items.ItemIndexNavigation">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Game.Views"
+            x:Class="Game.Views.Items.ItemIndexNavigation">
+
+    <local:ItemIndexPage Title="Equipable"/>
+    <ContentPage Title="Consumable"/>
+    <ContentPage Title="Special"/>
+    
 </TabbedPage>
