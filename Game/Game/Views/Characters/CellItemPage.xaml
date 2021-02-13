@@ -25,7 +25,7 @@
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <!--Information Box-->
-                <Frame Style="{StaticResource MediumSquareMidgroundFrame}" Padding="5"
+                <Frame Style="{StaticResource CharacterCreateFrameStyle}" Padding="5"
                        HeightRequest="-1" WidthRequest="400"
                        >
 
