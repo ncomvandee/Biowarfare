@@ -18,10 +18,10 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Character;
             Guid = Id;
-            Name = "";
-            Description = "";
+            Name = "Osmosis Jones";
+            Description = "For infinity and beyond";
             Level = 1;
-            ImageURI = "item.png";
+            ImageURI = "nkcell_bg.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             Job = CellTypeEnum.BCell; 
