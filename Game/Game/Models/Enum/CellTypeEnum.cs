@@ -127,6 +127,11 @@ namespace Game.Models
             return Message;
         }
 
+        /// <summary>
+        /// Get Cell's image per specific CellType
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToImage(this CellTypeEnum value)
         {
             var image = "";
