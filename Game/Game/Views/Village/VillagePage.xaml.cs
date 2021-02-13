@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.Views.Items;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -45,7 +46,7 @@ namespace Game.Views
 		/// <param name="e"></param>
 		public async void ItemsButton_Clicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new ItemIndexPage());
+			await Navigation.PushAsync(new ItemIndexNavigation());
 		}
 
 		/// <summary>
