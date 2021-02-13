@@ -80,6 +80,7 @@
                                     <Label Text="Head" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -125,6 +126,7 @@
                                     <Label Text="Neckless" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -170,6 +172,7 @@
                                     <Label Text="Primary Hand" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -216,6 +219,7 @@
                                     <Label Text="Off Hand" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -262,6 +266,7 @@
                                     <Label Text="Left Finger" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -308,6 +313,7 @@
                                     <Label Text="Right Finger" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
@@ -354,6 +360,7 @@
                                     <Label Text="Feet" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
+                                           VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
