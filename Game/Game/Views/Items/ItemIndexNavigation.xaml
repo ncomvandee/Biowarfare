@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Game.Views"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Game.Views" xmlns:local1="clr-namespace:Game.Views.Items"
             x:Class="Game.Views.Items.ItemIndexNavigation">
 
     <local:ItemIndexPage Title="Equipable"/>
-    <ContentPage Title="Consumable"/>
+    <local1:ConsumableItemIndexPage Title="Consumable"/>
     <ContentPage Title="Special"/>
     
 </TabbedPage>
