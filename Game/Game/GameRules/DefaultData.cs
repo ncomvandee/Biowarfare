@@ -16,9 +16,9 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Disinfectant",
-                    Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
-                    ImageURI = "item.png",
+                    Name = "Vicious Scalpal",
+                    Description = "A medical grade scalpel that adds extra attack power when equipped. ",
+                    ImageURI = "vicious_scalpel_white_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -38,7 +38,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Stethoscope",
                     Description = "A metal item that monitors the patient’s heartbeat. Boosts a cell’s Defense by default.  ",
-                    ImageURI = "item.png",
+                    ImageURI = "stethoscope_no_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -48,7 +48,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Thermometer",
                     Description = "A expensive yet solid item that can be used to check the enemy’s temperature. Boosts a cell’s attack by default.  ",
-                    ImageURI = "thermometer_no_bg.png",
+                    ImageURI = "thermometer_white_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -68,7 +68,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Medical Boots",
                     Description = "Sturdy boots with comfortable insoles add a boost to a cell’s speed by default",
-                    ImageURI = "item.png",
+                    ImageURI = "boots_no_bg.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
