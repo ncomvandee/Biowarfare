@@ -175,12 +175,12 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
 
-                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                         Text="Save" 
                         Clicked="Save_Clicked"
                         />
 
-                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                         Text="Cancel" 
                         Clicked="Cancel_Clicked"
                         />
