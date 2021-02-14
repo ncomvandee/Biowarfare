@@ -99,6 +99,42 @@ namespace Game.Models
 
             return msg;
         }
+
+        /// <summary>
+        /// Get Icon image for attribute
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string ToImage(this AttributeEnum value)
+        {
+            var msg = "";
+
+            switch (value)
+            {
+                case AttributeEnum.Attack:
+                    msg = "attack_icon.png";
+                    break;
+
+                case AttributeEnum.Defense:
+                    msg = "defense_icon.png";
+                    break;
+
+                case AttributeEnum.Speed:
+                    msg = "speed_icon.png";
+                    break;
+
+                case AttributeEnum.CurrentHealth:
+                    msg = "heart_icon.png";
+                    break;
+
+                case AttributeEnum.MaxHealth:
+                    msg = "heart_icon.png";
+                    break;
+            }
+
+            return msg;
+        }
+
     }
 
     /// <summary>
