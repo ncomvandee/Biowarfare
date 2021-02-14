@@ -193,6 +193,7 @@ namespace Game.Views
                     {
                         new RowDefinition(),
                         new RowDefinition(),
+                        new RowDefinition(),
 
                     },
                 ColumnDefinitions =
@@ -222,7 +223,7 @@ namespace Game.Views
                 WidthRequest = 25,
                 Source = item.Attribute.ToImage(),
 
-            }, 0, 0);
+            }, 0, 1);
 
             //Attribute value
             grid.Children.Add(new Label 
@@ -231,7 +232,7 @@ namespace Game.Views
                 Text = item.Value.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
 
-            }, 0, 1);
+            }, 0, 2);
 
             //Damge Image
             grid.Children.Add(new Image
@@ -239,7 +240,7 @@ namespace Game.Views
                 Source = "item_damage.png",
                 WidthRequest = 25,
 
-            }, 1, 0);
+            }, 1, 1);
 
             //Damge value
             grid.Children.Add(new Label
@@ -247,7 +248,7 @@ namespace Game.Views
                 Text = item.Damage.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
 
-            }, 1, 1);
+            }, 1, 2);
 
             //item Range
             grid.Children.Add(new Image
@@ -255,7 +256,7 @@ namespace Game.Views
                 Source = "item_range.png",
                 WidthRequest = 25,
 
-            }, 2, 0);
+            }, 2, 1);
 
             //Damge value
             grid.Children.Add(new Label
@@ -263,7 +264,7 @@ namespace Game.Views
                 Text = item.Range.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
 
-            }, 2, 1);
+            }, 2, 2);
 
             DeleteButtonVisual(locationEnum, true);
 
