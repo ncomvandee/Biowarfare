@@ -49,8 +49,13 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "Update", ViewModel.Data);
-            await Navigation.PopModalAsync();
+
+            // Checks if name is not empty
+            if (IsValidInfo())
+            {
+                MessagingCenter.Send(this, "Update", ViewModel.Data);
+                await Navigation.PopModalAsync();
+            }
         }
 
         /// <summary>
@@ -64,6 +69,22 @@ namespace Game.Views
             ViewModel.Data.Update(DataCopy);
 
             await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Checks if Name is empty or not
+        /// </summary>
+        /// <returns>True if name is not empty</returns>
+        public bool IsValidInfo()
+        {
+            if (String.IsNullOrEmpty(NameEntry.Text))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+
+                return false;
+            }
+
+            return true;
         }
     }
 }
