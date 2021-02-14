@@ -51,8 +51,14 @@ namespace Game.Views
                 ViewModel.Data.ImageURI = Services.ItemService.DefaultImageURI;
             }
 
-            MessagingCenter.Send(this, "Create", ViewModel.Data);
-            await Navigation.PopModalAsync();
+            // Check if Name is not empty
+            if (IsValidInfo())
+            {
+
+                MessagingCenter.Send(this, "Create", ViewModel.Data);
+                await Navigation.PopModalAsync();
+
+            }
         }
 
         /// <summary>
@@ -63,6 +69,21 @@ namespace Game.Views
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Check if the Name entry is empty or not
+        /// </summary>
+        /// <returns>True if Name is not empty</returns>
+        public bool IsValidInfo()
+        {
+            if (String.IsNullOrEmpty(NameEntry.Text))
+            {
+                NameEntry.PlaceholderColor = Color.Red;
+                return false;
+            }
+
+            return true;
         }
     }
 }
