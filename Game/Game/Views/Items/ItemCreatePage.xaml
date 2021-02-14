@@ -62,6 +62,7 @@
 
                 <Editor BackgroundColor="Transparent" 
                         Text="{Binding Data.Description}"
+                        x:Name="DescriptionEntry"
                         Placeholder="Description goes here..."
                         PlaceholderColor="{StaticResource PrimaryItemForeground}"
                         FontSize="Default"

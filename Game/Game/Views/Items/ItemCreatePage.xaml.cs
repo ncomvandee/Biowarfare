@@ -38,6 +38,8 @@ namespace Game.Views
             // Set the name entry to be empty
             NameEntry.Text = "";
 
+            DescriptionEntry.Text = "";
+
         }
 
         /// <summary>
