@@ -217,6 +217,20 @@ namespace Game.Views
             //get item
             ItemModel item = ViewModel.Data.GetItem(locationString);
 
+
+            //item label
+            var itemNameLabel = new Label {
+                Text = item.Name,
+                Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+            };
+
+            Grid.SetRow(itemNameLabel, 0);
+            Grid.SetColumnSpan(itemNameLabel, 3);
+
+            grid.Children.Add(itemNameLabel);
+
             //Attribute image
             grid.Children.Add(new Image
             {
