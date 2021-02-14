@@ -31,7 +31,13 @@
                 <Setter Property="WidthRequest" Value="350"/>
                 <Setter Property="HeightRequest" Value="420"/>
 
+            </Style>
 
+            <Style TargetType="Label"
+                   x:Key="ScoreStatsValueLabelStyle"
+                   BasedOn="{StaticResource ScoreStatsLabelStyle}"
+                   >
+                <Setter Property="FontAttributes" Value="Bold"/>
 
             </Style>
 
@@ -89,8 +95,8 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.GameDate}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"
-                                           FontAttributes="Bold"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"
+                                          />
 
                                 </StackLayout>
 
@@ -99,7 +105,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.AutoBattle}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -108,7 +114,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.ScoreTotal}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -118,7 +124,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.RoundCount}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -128,7 +134,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.TurnCount}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -138,7 +144,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.MonsterSlainNumber}"
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -148,7 +154,7 @@
                                    Style="{StaticResource ScoreStatsLabelStyle}"/>
 
                                     <Label Text="{Binding Data.ExperienceGainedTotal}" 
-                                   Style="{StaticResource ScoreStatsLabelStyle}"/>
+                                   Style="{StaticResource ScoreStatsValueLabelStyle}"/>
 
                                 </StackLayout>
 
@@ -159,7 +165,7 @@
                                        />
 
                                     <Label Text="{Binding Data.CharacterAtDeathList}" 
-                                       Style="{StaticResource ScoreStatsLabelStyle}"
+                                       Style="{StaticResource ScoreStatsValueLabelStyle}"
                                        />
 
                                 </StackLayout>
@@ -172,7 +178,7 @@
                                            />
 
                                     <Label Text="{Binding Data.MonstersKilledList}" 
-                                           Style="{StaticResource ScoreStatsLabelStyle}"
+                                           Style="{StaticResource ScoreStatsValueLabelStyle}"
                                            />
                                 </StackLayout>
 
@@ -183,7 +189,7 @@
                                            />
 
                                     <Label Text="{Binding Data.ItemsDroppedList}"
-                                           Style="{StaticResource ScoreStatsLabelStyle}"
+                                           Style="{StaticResource ScoreStatsValueLabelStyle}"
                                            />
                                     
                                 </StackLayout>
