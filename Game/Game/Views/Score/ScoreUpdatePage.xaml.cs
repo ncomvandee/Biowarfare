@@ -19,6 +19,9 @@ namespace Game.Views
         // View Model for Score
         public readonly GenericViewModel<ScoreModel> ViewModel;
 
+        //hold a copy of the original data for cancel to use
+        public ScoreModel DataCopy;
+
         // Constructor for Unit Testing
         public ScoreUpdatePage(bool UnitTest) { }
 
@@ -32,6 +35,11 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Update " + data.Title;
+
+            //Make a copy of the character for cancle to resotre
+            DataCopy = new ScoreModel(data.Data);
+
+
         }
 
         /// <summary>
@@ -52,6 +60,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
+            //put the copy back
+            ViewModel.Data.Update(DataCopy);
+
             await Navigation.PopModalAsync();
         }
     }
