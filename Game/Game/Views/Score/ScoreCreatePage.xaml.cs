@@ -34,6 +34,8 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Create";
+
+            NameEntry.Text = null;
         }
 
         /// <summary>

@@ -10,11 +10,6 @@
              x:Class="Game.Views.ScoreCreatePage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
@@ -22,8 +17,34 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
 
-        <ScrollView>
+            <Entry Placeholder="Name goes here"
+                   x:Name="NameEntry"
+                   Text="{Binding Data.Name}"
+                   WidthRequest="200"
+                   Margin="0, 50"
+                   HorizontalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Horizontal" 
+                         Margin="0, 10, 0, 0"
+                         HorizontalOptions="Center">
+
+                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                        Text="Save" 
+                        Clicked="Save_Clicked"
+                        />
+
+                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                        Text="Cancel" 
+                        Clicked="Cancel_Clicked"
+                        />
+
+            </StackLayout>
+
+        </StackLayout>
+
+        <!--<ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10">
 
@@ -63,6 +84,6 @@
 
                 </Grid>
             </StackLayout>
-        </ScrollView>
+        </ScrollView>-->
     </ContentPage.Content>
 </ContentPage>
