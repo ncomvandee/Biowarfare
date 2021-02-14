@@ -16,200 +16,307 @@
     <NavigationPage.TitleView>
         <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
     </NavigationPage.TitleView>
-    
+
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
+        <AbsoluteLayout HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All" >
 
-                <Grid RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+                <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
 
-                    <Frame Grid.Row="0" 
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Frame Grid.Row="0" 
                            Style="{StaticResource CharacterReadCellTitleFrame}"
                            Padding="5"
                            >
-                        
-                        <StackLayout Orientation="Horizontal" 
+
+                            <StackLayout Orientation="Horizontal" 
                                  Grid.Row="0" 
                                  HorizontalOptions="CenterAndExpand"
                                  VerticalOptions="CenterAndExpand"
                                  >
 
-                            <Label Text="{Binding Data.Job}" 
+                                <Label Text="{Binding Data.Job}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                            <Label Text="|" 
+                                <Label Text="|" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                            <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
+                                <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                        </StackLayout>
-                    </Frame>
+                            </StackLayout>
+                        </Frame>
 
-                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                        <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
                             Grid.Row="1"
                             IsVisible="False"
                             >
 
 
-                    </Frame>
-                    <!--Frame for thumbnail-->
-                    <Frame x:Name="ImageFrame" 
+                        </Frame>
+                        <!--Frame for thumbnail-->
+                        <Frame x:Name="ImageFrame" 
                            Style="{StaticResource LargeCircleFrameStyle}" 
                            Grid.Row="1">
 
-                        <Image Source="{Binding Data.ImageURI}" />
-                        
-                    </Frame>
+                            <Image Source="{Binding Data.ImageURI}" />
 
-                    <Label Grid.Row="1" Text="{Binding Data.Description}" 
+                        </Frame>
+
+                        <Label Grid.Row="1" Text="{Binding Data.Description}" 
                            Margin="20"
                            FontSize="Caption"
                            IsVisible="false"
                            x:Name="DescriptionFrame"/>
 
-                    <Button Style="{StaticResource InvisibleReadButtonStyle}"
+                        <Button Style="{StaticResource InvisibleReadButtonStyle}"
                             Grid.Row="1"   
                             Clicked="ShowDescriptionClicked"
                             />
-                    
-                </Grid>
-            </Frame>
 
-            <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
+                    </Grid>
+                </Frame>
+
+                <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
                    Margin="0, 20, 0, 0" 
                    >
-                   
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
 
-                    <Frame Grid.Row="0" 
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Frame Grid.Row="0" 
                            Style="{StaticResource ReadAttributeFrameStyle}"
                            >
 
-                        <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
-                    </Frame>
+                            <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
+                        </Frame>
 
-                    <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
+                        <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
                             Grid.Row="0" 
                             Text="Items" 
                             x:Name="ItemAttributeToggleButton"
                             Clicked="ItemAttributeToggle"/>
 
-                    <ScrollView Grid.Row="1" 
+                        <ScrollView Grid.Row="1" 
                                 x:Name="ItemsFrame">
-                        <FlexLayout x:Name="ItemBox"
+                            <FlexLayout x:Name="ItemBox"
                                     Wrap="Wrap"
                                     JustifyContent="SpaceAround"
                                     HeightRequest="300"
                                     />
-                        
-                    </ScrollView>
-                    
-                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+
+                        </ScrollView>
+
+                        <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
                             x:Name="AttributeFrame"
                             Grid.Row="1"
                             IsVisible="False"
                             >
 
-                        <Grid ColumnSpacing="25" RowSpacing="5" Margin="0, 20">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid ColumnSpacing="25" RowSpacing="5" Margin="0, 20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <Image Source="attack_icon.png" 
+                                <Image Source="attack_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="0" 
                                    />
 
-                            <Label Text="{Binding Data.GetAttackTotal}" 
+                                <Label Text="{Binding Data.GetAttackTotal}" 
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="0" 
                                    />
 
-                            <Image Source="defense_icon.png" 
+                                <Image Source="defense_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="1" 
                                    />
 
-                            <Label Text="{Binding Data.GetDefenseTotal}"
+                                <Label Text="{Binding Data.GetDefenseTotal}"
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="1" 
                                    />
 
-                            <Image Source="speed_icon.png" 
+                                <Image Source="speed_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="2" 
                                    />
 
-                            <Label Text="{Binding Data.GetSpeedTotal}" 
+                                <Label Text="{Binding Data.GetSpeedTotal}" 
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="2" 
                                    />
 
-                            <Image Source="heart_icon.png" 
+                                <Image Source="heart_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="3" 
                                    />
 
-                            <Label Text="{Binding Data.GetMaxHealthTotal}" 
+                                <Label Text="{Binding Data.GetMaxHealthTotal}" 
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="3" 
                                    />
 
-                            <Image Source="xp_icon.png" 
+                                <Image Source="xp_icon.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="4" 
                                    />
 
-                            <Label Text="{Binding Data.ExperienceTotal}" 
+                                <Label Text="{Binding Data.ExperienceTotal}" 
                                    Style="{StaticResource ReadStatsLabelStyle}"
                                    Grid.Row="1" 
                                    Grid.Column="4" 
                                    />
 
-                        </Grid>
+                            </Grid>
 
-                    </Frame>
+                        </Frame>
 
-                </Grid>
-            </Frame>
+                    </Grid>
+                </Frame>
 
-            <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                     Text="Edit" 
                     Margin="20" 
                     Clicked="CellEditButton_Clicked"
 
                     />
-        
-        </StackLayout>
+
+            </StackLayout>
+
+            <Frame AbsoluteLayout.LayoutBounds=".5, .5, .7, .7"
+                   AbsoluteLayout.LayoutFlags="All"
+                   BackgroundColor="Wheat"
+                   BorderColor="Transparent"
+                   CornerRadius="20">
+
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="500"
+                             WidthRequest="500" >
+
+                    <ImageButton Source="icon_cancel.png" 
+                                 WidthRequest="30" 
+                                 HeightRequest="40"
+                                 HorizontalOptions="End"
+                                 Margin="10, 0"/>
+
+                    <Frame BackgroundColor="White"
+                           BorderColor="Transparent"
+                           HeightRequest="30"
+                           CornerRadius="10"
+                           Padding="5">
+
+                        <Label Text="Name goes here, I guess"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="Center"
+                               FontSize="Subtitle"/>
+
+                    </Frame>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="100"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           BorderColor="Transparent"
+                           Padding="10">
+                        
+                        <Image Source="face_mask_no_bg.png" />
+
+                    </Frame>
+
+                    <Grid Padding="10" RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Description: "
+                               Grid.Row="0"
+                               Grid.Column="0" />
+                        <Label Text="Description goes here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+                               Grid.Row="0"
+                               Grid.Column="1" />
+
+                        <Label Text="Location: "
+                               Grid.Row="1"
+                               Grid.Column="0" />
+                        <Label Text="Location goes here"
+                               Grid.Row="1"
+                               Grid.Column="1" />
+
+                        <Label Text="Attribute: "
+                               Grid.Row="2"
+                               Grid.Column="0" />
+                        <Label Text="Value goes here"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+
+
+
+                    </Grid>
+
+
+
+
+                </StackLayout>
+                
+            </Frame>
+
+            <!--<StackLayout x:Name="PopUpLoadingView"
+                         AbsoluteLayout.LayoutBounds=".5, .5, .7, .7"
+                         AbsoluteLayout.LayoutFlags="All"
+                         BackgroundColor="Wheat"
+                         >
+
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             WidthRequest="500"
+                             HeightRequest="500">
+                    
+                    
+                </StackLayout>
+                            
+                
+            </StackLayout>-->
+            
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
