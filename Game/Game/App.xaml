@@ -754,6 +754,7 @@
 
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreMidground}"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="HeightRequest" Value="250"/>
 
             </Style>
 
@@ -1280,6 +1281,8 @@
 
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryScoreForeground}"/>
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
 
             </Style>
 
@@ -1554,8 +1557,20 @@
 
             </Style>
 
-            <!--___________________________________________-->
+            
 
+
+            <!--Label for Scores page stats (rounds, score, ect)-->
+            <Style TargetType="Label"
+                 x:Key="ScoreStatsLabelStyle"
+                 >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
