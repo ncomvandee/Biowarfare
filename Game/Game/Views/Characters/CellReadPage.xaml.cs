@@ -36,6 +36,7 @@ namespace Game.Views
 
             this.ViewModel.Title = data.Data.Name + " Information";
 
+            // Displays item Cell equipped
             AddItemToDisplay();
         }
 
@@ -105,6 +106,9 @@ namespace Game.Views
             }
         }
 
+        /// <summary>
+        /// Displays items Cell equipped as image
+        /// </summary>
         public void AddItemToDisplay()
         {
             var FlexList = ItemBox.Children.ToList();
@@ -124,12 +128,20 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Look up items to display
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
         public StackLayout GetItemToDisplay(ItemLocationEnum location)
         {
+            // Default clickable button
             var ClickableButton = true;
 
+            // Data as ItemModel per specific item
             var data = ViewModel.Data.GetItemByLocation(location);
 
+            // If item is not equipped, will not render anything
             if (data == null)
             {
 
@@ -137,6 +149,7 @@ namespace Game.Views
 
             }
 
+            // Item image as ImageButton for pop-up detail view
             var ItemButton = new ImageButton
             {
                 Source = data.ImageURI,
@@ -144,11 +157,13 @@ namespace Game.Views
                 HeightRequest = 50,
             };
 
+            // If valid clickable ImageButton, show to pop-up detail view
             if (ClickableButton)
             {
-
+                ItemButton.Clicked += (sender, args) => ShowPopup(data);
             }
 
+            // Label for each item
             var ItemLabel = new Label
             {
                 Text = data.Name,
@@ -158,6 +173,7 @@ namespace Game.Views
 
             };
 
+            // Put ImageButton and label in to same stack
             var ItemStack = new StackLayout
             {
                 Padding = 3,
@@ -166,7 +182,36 @@ namespace Game.Views
                 Children = { ItemButton, ItemLabel },
             };
 
+            // Render particuler stack
             return ItemStack;
+        }
+
+        /// <summary>
+        /// Show pop-up detail view
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool ShowPopup(ItemModel data)
+        {
+            ItemPopUpFrame.IsVisible = true;
+            ItemPopUpImage.Source = data.ImageURI;
+            ItemPopUpName.Text = data.Name;
+            ItemPopUpDescription.Text = data.Description;
+            ItemPopUpLocation.Text = data.Location.ToString();
+            ItemPopUpAttribute.Text = data.Attribute.ToAbbrivation();
+            ItemPopUpValue.Text = "+ " + data.Value.ToString();
+
+            return true;
+        }
+
+        /// <summary>
+        /// Close pop-up detail view handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ClosePopup_Clicked(object sender, EventArgs e)
+        {
+            ItemPopUpFrame.IsVisible = false;
         }
     }
 }

@@ -219,18 +219,21 @@
                    AbsoluteLayout.LayoutFlags="All"
                    BackgroundColor="Wheat"
                    BorderColor="Transparent"
-                   CornerRadius="20">
+                   CornerRadius="20"
+                   x:Name="ItemPopUpFrame"
+                   IsVisible="false">
 
                 <StackLayout VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
                              HeightRequest="500"
                              WidthRequest="500" >
 
-                    <ImageButton Source="icon_cancel.png" 
+                    <ImageButton Source="icon_cancel.png"
                                  WidthRequest="30" 
                                  HeightRequest="40"
                                  HorizontalOptions="End"
-                                 Margin="10, 0"/>
+                                 Margin="10, 0"
+                                 Clicked="ClosePopup_Clicked"/>
 
                     <Frame BackgroundColor="White"
                            BorderColor="Transparent"
@@ -239,6 +242,7 @@
                            Padding="5">
 
                         <Label Text="Name goes here, I guess"
+                               x:Name="ItemPopUpName"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="Center"
                                FontSize="Subtitle"/>
@@ -252,7 +256,8 @@
                            BorderColor="Transparent"
                            Padding="10">
                         
-                        <Image Source="face_mask_no_bg.png" />
+                        <Image Source="face_mask_no_bg.png"
+                               x:Name="ItemPopUpImage"/>
 
                     </Frame>
 
@@ -264,28 +269,31 @@
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="90" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
                         <Label Text="Description: "
                                Grid.Row="0"
-                               Grid.Column="0" />
-                        <Label Text="Description goes here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+                               Grid.Column="0"
+                               FontAttributes="Bold"/>
+                        <Label x:Name="ItemPopUpDescription"
                                Grid.Row="0"
                                Grid.Column="1" />
 
                         <Label Text="Location: "
                                Grid.Row="1"
-                               Grid.Column="0" />
-                        <Label Text="Location goes here"
+                               Grid.Column="0"
+                               FontAttributes="Bold"/>
+                        <Label x:Name="ItemPopUpLocation"
                                Grid.Row="1"
                                Grid.Column="1" />
 
-                        <Label Text="Attribute: "
+                        <Label x:Name="ItemPopUpAttribute"
                                Grid.Row="2"
-                               Grid.Column="0" />
-                        <Label Text="Value goes here"
+                               Grid.Column="0"
+                               FontAttributes="Bold"/>
+                        <Label x:Name="ItemPopUpValue"
                                Grid.Row="2"
                                Grid.Column="1" />
 
