@@ -113,12 +113,12 @@
                 <StackLayout Orientation="Horizontal" 
                              Margin="10">
 
-                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                    <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                             Text="Delete" 
                             Clicked="Delete_Clicked">
                     </Button>
 
-                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                    <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                             Text="Cancel" 
                             Clicked="Cancel_Clicked">
                     </Button>
