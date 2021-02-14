@@ -116,7 +116,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
-                    Message = "Vicious Scalpal";
+                    Message = "Vicious Scalpel";
                     break;
 
                 case ItemLocationEnum.OffHand:
