@@ -16,8 +16,8 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Vicious Scalpel",
-                    Description = "A medical grade scalpel that adds extra attack power when equipped. ",
+                    Name = "Vicious Scalpel of Swedish Hospital operation room",
+                    Description = "The super sharp operating knife useually use in surgery. The blade is very sharp, it can cut though everything, except cut you out of my mind",
                     ImageURI = "vicious_scalpel_white_bg.png",
                     Range = 10,
                     Damage = 10,
