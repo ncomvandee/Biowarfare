@@ -86,7 +86,7 @@ namespace Game.Views
         public void ImageChanged (object sender, EventArgs e)
         {
 
-            CellTypePicker.BackgroundColor = Color.FromHex("#D8BFFF");
+            CellTypePicker.BackgroundColor = Color.FromHex("#3CAEA3");
 
             // Get the string CellType from picker
             var TypeSelected = CellTypePicker.SelectedItem.ToString();
