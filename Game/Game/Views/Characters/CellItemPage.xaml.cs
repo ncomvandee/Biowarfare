@@ -221,7 +221,7 @@ namespace Game.Views
             //item label
             var itemNameLabel = new Label {
                 Text = item.Name,
-                Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+                Style = (Style)Application.Current.Resources["LabelBaseStyle"],
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
             };
