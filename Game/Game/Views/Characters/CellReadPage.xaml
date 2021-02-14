@@ -110,12 +110,18 @@
                             x:Name="ItemAttributeToggleButton"
                             Clicked="ItemAttributeToggle"/>
 
-                        <ScrollView Grid.Row="1" 
-                                x:Name="ItemsFrame">
+                        <ScrollView Orientation="Both"
+                                    HorizontalScrollBarVisibility="Default"
+                                    VerticalScrollBarVisibility="Default"
+                                    Grid.Row="1" 
+                                    x:Name="ItemsFrame">
+                            
                             <FlexLayout x:Name="ItemBox"
-                                    Wrap="Wrap"
-                                    JustifyContent="SpaceAround"
-                                    HeightRequest="300"
+                                        Padding="0, 10"
+                                        Wrap="NoWrap"
+                                        JustifyContent="SpaceBetween"
+                                        AlignContent="SpaceBetween"
+                                        HeightRequest="300"
                                     />
 
                         </ScrollView>

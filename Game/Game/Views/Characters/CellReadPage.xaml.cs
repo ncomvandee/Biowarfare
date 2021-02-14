@@ -153,8 +153,11 @@ namespace Game.Views
             var ItemButton = new ImageButton
             {
                 Source = data.ImageURI,
-                WidthRequest = 50,
-                HeightRequest = 50,
+                WidthRequest = 60,
+                HeightRequest = 60,
+                BackgroundColor = Color.White,
+                CornerRadius = 50,
+                Padding = 5,
             };
 
             // If valid clickable ImageButton, show to pop-up detail view
@@ -173,13 +176,22 @@ namespace Game.Views
 
             };
 
+            var ItemFrame = new Frame
+            {
+                BackgroundColor = Color.Transparent,
+                BorderColor = Color.Transparent,
+                WidthRequest = 100,
+
+                Content = ItemLabel,
+            };
+
             // Put ImageButton and label in to same stack
             var ItemStack = new StackLayout
             {
                 Padding = 3,
                 HorizontalOptions = LayoutOptions.Center,
                 
-                Children = { ItemButton, ItemLabel },
+                Children = { ItemButton, ItemFrame },
             };
 
             // Render particuler stack
