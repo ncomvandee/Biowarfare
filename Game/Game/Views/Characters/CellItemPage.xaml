@@ -129,12 +129,11 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text=""
-                                           x:Name="CurrentNecklessItem" 
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    <StackLayout x:Name="CurrentNecklessItem"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
+
+                                    </StackLayout>
 
                                     <Button Text="-" 
                                             x:Name="NeckLessDeleteButton"
@@ -175,12 +174,11 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="" 
-                                           x:Name="CurrentPrimaryHand"
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    <StackLayout x:Name="CurrentPrimaryHand"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
+
+                                    </StackLayout>
 
                                     <Button Text="-"  
                                             x:Name="PrimaryHandDeleteButton"
@@ -222,13 +220,11 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="" 
-                                           x:Name="CurrentOffHand"
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    <StackLayout x:Name="CurrentOffHand"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
 
+                                    </StackLayout>
                                     <Button Text="-"  
                                             x:Name="OffHandDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
@@ -269,12 +265,12 @@
                                            Grid.Column="0"
                                            />
 
-                                    <Label Text="" 
-                                           x:Name="CurrentLeftFinger"
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+
+                                    <StackLayout x:Name="CurrentLeftFinger"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
+
+                                    </StackLayout>
 
                                     <Button Text="-"  
                                             x:Name="LeftFingerDeleteButton"
@@ -315,13 +311,13 @@
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
+                                    
+                                    <StackLayout x:Name="CurrentRightFinger"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
 
-                                    <Label Text="" 
-                                           x:Name="CurrentRightFinger"
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    </StackLayout>
+                                    
 
                                     <Button Text="-"  
                                             x:Name="RightFingerDeleteButton"
@@ -362,12 +358,13 @@
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
+                                    
+                                    <StackLayout x:Name="CurrentFeet"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
 
-                                    <Label Text="" 
-                                           x:Name="CurrentFeet"
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    </StackLayout>
+   
                                     <Button Text="-"  
                                             x:Name="FeetDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
