@@ -176,6 +176,7 @@ namespace Game.Views
 
             };
 
+            // Frame for label, so that the text will wrap if text is long
             var ItemFrame = new Frame
             {
                 BackgroundColor = Color.Transparent,
