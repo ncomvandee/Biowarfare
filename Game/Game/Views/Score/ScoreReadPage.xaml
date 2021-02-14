@@ -10,45 +10,6 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <Style TargetType="Frame"
-                   x:Key="LargeOuterScoresFrameStyle"
-                   BasedOn="{StaticResource ScoreOuterFrameStyle}"
-                   >
-
-                <Setter Property="WidthRequest" Value="400"/>
-                <Setter Property="HeightRequest" Value="500"/>
-
-            </Style>
-
-            <Style TargetType="Frame"
-                   x:Key="LargeScoresInnerFrameStyle"
-                   BasedOn="{StaticResource ScoreInnerFrameStyle}"
-                   >
-
-                <Setter Property="WidthRequest" Value="350"/>
-                <Setter Property="HeightRequest" Value="420"/>
-
-            </Style>
-
-            <Style TargetType="Label"
-                   x:Key="ScoreStatsValueLabelStyle"
-                   BasedOn="{StaticResource ScoreStatsLabelStyle}"
-                   >
-                <Setter Property="FontAttributes" Value="Bold"/>
-
-            </Style>
-
-
-
-        </ResourceDictionary>
-        
-        
-        
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <StackLayout>
             <Frame Grid.Row="0" 
@@ -84,7 +45,8 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <ScrollView>
+                        <ScrollView VerticalScrollBarVisibility="Default"
+                                    >
                             <StackLayout Style="{StaticResource OuterBoxStack}"
                                          Spacing="10"
                                          Margin="20">

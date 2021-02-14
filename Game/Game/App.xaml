@@ -1302,11 +1302,43 @@
 
             <!--___________________________________________-->
 
+            <!--Outer scores frame on read page-->
+            <Style TargetType="Frame"
+                   x:Key="LargeOuterScoresFrameStyle"
+                   BasedOn="{StaticResource ScoreOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="450"/>
+                <Setter Property="HeightRequest" Value="500"/>
+                
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Inner scores frame on read page-->
+            <Style TargetType="Frame"
+                   x:Key="LargeScoresInnerFrameStyle"
+                   BasedOn="{StaticResource ScoreInnerFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="HeightRequest" Value="420"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                
+                
+                
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
-            
-            
-            
+
+
+
+
 
             <!-- Lables -->
 
@@ -1566,7 +1598,7 @@
                  >
 
                 <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
-                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontSize" Value="Small"/>
 
             </Style>
 
@@ -1633,6 +1665,17 @@
 
             </Style>
 
+
+            <!--___________________________________________-->
+
+            <!--Label for score values on read page-->
+            <Style TargetType="Label"
+                   x:Key="ScoreStatsValueLabelStyle"
+                   BasedOn="{StaticResource ScoreStatsLabelStyle}"
+                   >
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
 
             <!--___________________________________________-->
 
