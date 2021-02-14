@@ -54,7 +54,7 @@ namespace Game.GameRules
                     Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
                     ImageURI = "finger_glove_no_bg.png",
                     Value = 9,
-                    Location = ItemLocationEnum.RightFinger,
+                    Location = ItemLocationEnum.Finger,
                     Attribute = AttributeEnum.Defense
                 },
                 new ItemModel {
