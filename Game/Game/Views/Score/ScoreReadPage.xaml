@@ -12,17 +12,22 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Frame Style="{StaticResource ItemReadCellTitleFrame}"
-                   WidthRequest="200"
-                   Margin="0, 40"
-                   BackgroundColor="#EF7834"
-                   BorderColor="Transparent">
+            <Frame Grid.Row="0" 
+                   Style="{StaticResource ScoreReadCellTitleFrame}"
+                   >
 
-                <Label Text="{Binding Data.Name}"
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="Center"
-                       FontSize="Title"
-                       />
+                <StackLayout Orientation="Horizontal" 
+                             Grid.Row="0" 
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             >
+
+                    <Label Text="{Binding Data.Name}" 
+                           Style="{StaticResource ScoreNameLabelStyle}"
+                            />
+
+                </StackLayout>
+
             </Frame>
 
             <Frame BackgroundColor="#EF7834"
