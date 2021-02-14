@@ -6,85 +6,124 @@
              mc:Ignorable="d"
              x:Class="Game.Views.ScoreDeletePage"
              Title="{Binding Title}">
-    
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems>
 
-    <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid  Style="{StaticResource IndexGridViewStyle}"
+                   Margin="20">
 
-            <Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>
+                <Frame Grid.Row="0"
+                       Grid.Column="0"
+                       Style="{StaticResource ScoreOuterFrameStyle}"
+                       HeightRequest="250">
 
-            <StackLayout>
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label 
-                       Text="Name : " 
-                        Style="{StaticResource LabelStyle}"/>
-                    <Label 
-                        Text="{Binding Data.Name}" 
-                        Style="{StaticResource ValueStyle}"/>
+                </Frame>
+
+                <Frame Grid.Row="0" 
+                       Style="{StaticResource ScoreReadCellTitleFrame}"
+                       Padding="5"
+                       Margin="0, 20, 0, 0">
+
+                    <StackLayout Orientation="Horizontal" 
+                                 Grid.Row="0" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand"
+                                 >
+
+                        <Label Text="{Binding Data.Name}" 
+                               Style="{StaticResource ScoreNameLabelStyle}"
+                               />
+
+
+
+                    </StackLayout>
+                </Frame>
+
+
+                <StackLayout>
+
+
+                    <!--Frame with stats bars-->
+                    <Frame Style="{StaticResource ScoreInnerFrameStyle}"
+                           Margin="0, 55, 0, 0">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Orientation="Vertical" 
+                                         Grid.Row="0" 
+                                         HorizontalOptions="CenterAndExpand"
+                                         Margin="0, 10, 0, 10"
+                                                             >
+                                <StackLayout Orientation="Horizontal" 
+                                             Grid.Row="0" 
+                                             HorizontalOptions="CenterAndExpand"
+                                             Margin="0, 10, 0, 10">
+
+
+                                    <Label Grid.Column="0" Grid.Row="1"
+                                           Text="Rounds: " 
+                                           TextColor="{StaticResource PrimaryScoreBackground}"
+                                           FontSize="Medium"/>
+
+                                    <Label Grid.Column="1" Grid.Row="1"
+                                           Text="{Binding Data.RoundCount}" 
+                                           TextColor="{StaticResource PrimaryScoreBackground}"
+                                           FontSize="Medium"/>
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" 
+                                             Grid.Row="0" 
+                                             HorizontalOptions="CenterAndExpand"
+                                             Margin="0, 10, 0, 10">
+
+                                    <Label Grid.Column="0" Grid.Row="2"
+                                           Text="Score: " 
+                                           TextColor="{StaticResource PrimaryScoreBackground}"
+                                           FontSize="Medium"/>
+
+                                    <Label Grid.Column="1" Grid.Row="2"
+                                           Text="{Binding Data.ScoreTotal}" 
+                                           TextColor="{StaticResource PrimaryScoreBackground}"
+                                           FontSize="Medium"/>
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
                 </StackLayout>
+            </Grid>
 
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label 
-                        Text="Game Date:"
-                        Style="{StaticResource LabelStyle}"/>
+            <StackLayout HorizontalOptions="Center"
+                         >
 
-                    <Label 
-                        Text="{Binding Data.GameDate}"
-                        Style="{StaticResource ValueStyle}"/>
+                <Label Text="Are you sure you want to delete?" 
+                       Style="{StaticResource SimpleLabelTextStyle}" 
+                        />
+
+                <StackLayout Orientation="Horizontal" 
+                             Margin="10">
+
+                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                            Text="Delete" 
+                            Clicked="Delete_Clicked">
+                    </Button>
+
+                    <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                            Text="Cancel" 
+                            Clicked="Cancel_Clicked">
+                    </Button>
+
                 </StackLayout>
-
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label 
-                        Text="AutoBattle:"                      
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <Label 
-                        Text="{Binding Data.AutoBattle}"
-                        Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label 
-                        Text="Score:" 
-                        Style="{StaticResource LabelStyle}"/>
-                    <Label 
-                        Text="{Binding Data.ScoreTotal}"
-                        Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label 
-                        Text="Number of Rounds:"                      
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <Label 
-                        Text="{Binding Data.RoundCount}"
-                        Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-   
-            </StackLayout>
-
-            <StackLayout 
-                HorizontalOptions="Center" 
-                Padding="20">
-
-                <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
-
-                <Button 
-                    Text="Yes" 
-                    Clicked="Delete_Clicked" 
-                    HorizontalOptions="Center"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="black">
-                </Button>
-
             </StackLayout>
         </StackLayout>
-    </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
