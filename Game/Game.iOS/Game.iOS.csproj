@@ -294,4 +294,34 @@
   <ItemGroup>
     <BundleResource Include="Resources\item_attack.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\adrenaline_syringe_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\antidote_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\boots_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chemo_port_of_pain_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\disinfectant_spray_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gummy_multivitamin_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stethoscope_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thermometer_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\vicious_scalpel_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\x_ray_gun_no_bg.png" />
+  </ItemGroup>
 </Project>
