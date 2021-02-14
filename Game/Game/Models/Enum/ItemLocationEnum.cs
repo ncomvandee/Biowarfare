@@ -116,7 +116,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
-                    Message = "Knife";
+                    Message = "Vicious Scalpal";
                     break;
 
                 case ItemLocationEnum.OffHand:
@@ -128,7 +128,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.LeftFinger:
-                    Message = "Ring";
+                    Message = "Disinfectant";
                     break;
 
                 case ItemLocationEnum.Finger:
@@ -162,15 +162,15 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.Necklass:
-                    image = "";
+                    image = "stethoscope_no_bg.png";
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
-                    image = "vicious_scalpel_no_bg.png";
+                    image = "vicious_scalpel_white_bg.png";
                     break;
 
                 case ItemLocationEnum.OffHand:
-                    image = "thermometer_no_bg.png";
+                    image = "thermometer_white_bg.png";
                     break;
 
                 case ItemLocationEnum.RightFinger:
@@ -178,11 +178,11 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.LeftFinger:
-                    image = "";
+                    image = "disinfectant_spray_no_bg.png";
                     break;
 
                 case ItemLocationEnum.Feet:
-                    image = "";
+                    image = "boots_no_bg.png";
                     break;
 
                 case ItemLocationEnum.Unknown:
