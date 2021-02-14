@@ -167,7 +167,7 @@ namespace Game.Views
         {
 
            
-            CurrentHeadItemFrame.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
+            CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
             
 
 

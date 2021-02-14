@@ -84,7 +84,7 @@
                                            Grid.Column="0"
                                            />
                                     
-                                    <StackLayout x:Name="CurrentHeadItemFrame"
+                                    <StackLayout x:Name="CurrentHeadItem"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
                                         
