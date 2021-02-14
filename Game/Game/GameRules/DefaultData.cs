@@ -62,12 +62,12 @@ namespace Game.GameRules
                     Range = 10,
                     Damage = 10,
                     Value = 9,
-                    Location = ItemLocationEnum.Finger,
+                    Location = ItemLocationEnum.RightFinger,
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
                     Name = "Medical Boots",
-                    Description = "Sturdy boots with comfortable insoles add a boost to a cell’s speed by default",
+                    Description = "Sturdy boots with comfortable insoles add a boost to a cell’s speed by default. ",
                     ImageURI = "boots_no_bg.png",
                     Range = 10,
                     Damage = 10,
@@ -75,6 +75,16 @@ namespace Game.GameRules
                     Location = ItemLocationEnum.Feet,
                     Attribute = AttributeEnum.Defense
                 },
+                 new ItemModel {
+                    Name = "Disinfectant",
+                    Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
+                    ImageURI = "disinfectant_spray_no_bg.png",
+                    Range = 10,
+                    Damage = 10,
+                    Value = 9,
+                    Location = ItemLocationEnum.LeftFinger,
+                    Attribute = AttributeEnum.Attack
+                 },
             };
 
             //for (int i = 0; i < 20; i++)
