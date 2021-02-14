@@ -83,13 +83,12 @@
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
-
-                                    <Label Text=""
-                                           x:Name="CurrentHeadItem"
-                                           FontSize="Body" 
-                                           FontAttributes="Bold" 
-                                           Grid.Column="1"
-                                           />
+                                    
+                                    <StackLayout x:Name="CurrentHeadItemFrame"
+                                                 BackgroundColor="Transparent"
+                                                 Grid.Column="1">
+                                        
+                                    </StackLayout>
 
                                     <Button Text="-"  
                                             x:Name="HeadDeleteButton"
