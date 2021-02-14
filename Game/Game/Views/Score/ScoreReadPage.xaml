@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Game.Views.ScoreReadPage">
+             x:Class="Game.Views.ScoreReadPage"
+             Style="{StaticResource ScoreContentPage}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
