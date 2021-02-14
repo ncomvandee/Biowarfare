@@ -165,7 +165,13 @@ namespace Game.Views
         /// </summary>
         private void GetCharacterItem()
         {
-            GetCharacterItemHelper(CurrentHeadItem, ViewModel.Data.Head, ItemLocationEnum.Head);
+
+           
+            CurrentHeadItemFrame.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
+            
+
+
+
             GetCharacterItemHelper(CurrentNecklessItem, ViewModel.Data.Necklass, ItemLocationEnum.Necklass);
             GetCharacterItemHelper(CurrentPrimaryHand, ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand);
             GetCharacterItemHelper(CurrentOffHand, ViewModel.Data.OffHand, ItemLocationEnum.OffHand);
@@ -173,6 +179,99 @@ namespace Game.Views
             GetCharacterItemHelper(CurrentRightFinger, ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger);
             GetCharacterItemHelper(CurrentFeet, ViewModel.Data.Feet, ItemLocationEnum.Feet);
        
+        }
+        
+        /// <summary>
+        /// Display information of an item
+        /// </summary>
+        /// <param name="locationString"></param>
+        /// <param name="locationEnum"></param>
+        /// <param name="col"></param>
+        /// <returns></returns>
+        public Grid RenderItemInformation(string locationString, ItemLocationEnum locationEnum, int col)
+        {
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+                    {
+                        new RowDefinition(),
+                        new RowDefinition(),
+
+                    },
+                ColumnDefinitions =
+                    {
+                        new ColumnDefinition(),
+                        new ColumnDefinition(),
+                        new ColumnDefinition()
+                    }
+            };
+
+
+
+            if (locationString == null)
+            {
+
+                DeleteButtonVisual(locationEnum, false);
+                grid.SetValue(Grid.ColumnProperty, col);
+                return grid;
+            }
+
+            //get item
+            ItemModel item = ViewModel.Data.GetItem(locationString);
+
+            //Attribute image
+            grid.Children.Add(new Image
+            {
+                WidthRequest = 25,
+                Source = item.Attribute.ToImage(),
+
+            }, 0, 0);
+
+            //Attribute value
+            grid.Children.Add(new Label 
+            {
+                
+                Text = item.Value.ToString(),
+                Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+
+            }, 0, 1);
+
+            //Damge Image
+            grid.Children.Add(new Image
+            {
+                Source = "item_damage.png",
+                WidthRequest = 25,
+
+            }, 1, 0);
+
+            //Damge value
+            grid.Children.Add(new Label
+            {
+                Text = item.Damage.ToString(),
+                Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+
+            }, 1, 1);
+
+            //item Range
+            grid.Children.Add(new Image
+            {
+                Source = "item_range.png",
+                WidthRequest = 25,
+
+            }, 2, 0);
+
+            //Damge value
+            grid.Children.Add(new Label
+            {
+                Text = item.Range.ToString(),
+                Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+
+            }, 2, 1);
+
+            DeleteButtonVisual(locationEnum, true);
+
+            grid.SetValue(Grid.ColumnProperty, col);
+            return grid;
         }
 
         /// <summary>
