@@ -1352,7 +1352,7 @@
                    x:Key="CellNameLabelStyle"
                    >
 
-                    <Setter Property="FontSize" Value="Medium"/>
+                    <Setter Property="FontSize" Value="Small"/>
                     <Setter Property="FontAttributes" Value="Bold"/>
                     <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
                     <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
