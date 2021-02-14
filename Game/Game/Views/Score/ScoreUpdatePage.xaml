@@ -19,11 +19,11 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center">
 
-            <Entry Placeholder="Name goes here"
+            <Entry Style="{StaticResource ScoresNameEntryStyle}"
+                   Placeholder="Name goes here"
                    x:Name="NameEntry"
                    Text="{Binding Data.Name}"
-                   Margin="0, 30"
-                   HorizontalTextAlignment="Center" />
+                   />
 
             <Frame Style="{StaticResource LargeOuterScoresFrameStyle}">
 

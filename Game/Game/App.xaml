@@ -2164,6 +2164,19 @@
 
             <!--___________________________________________-->
 
+            <!--Entry style for scores name on update/create pages-->
+            <Style TargetType="Entry"
+                   x:Key="ScoresNameEntryStyle"
+                   >
+
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryScoreForeground}"/>
+                <Setter Property="Margin" Value="0, 30"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
