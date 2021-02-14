@@ -73,7 +73,7 @@ namespace Game.GameRules
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Defense
                 },
             };
 
