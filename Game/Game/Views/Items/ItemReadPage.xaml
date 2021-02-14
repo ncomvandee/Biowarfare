@@ -94,7 +94,7 @@
                            >
 
                         <Label Style="{StaticResource ItemNameLabelStyle}"
-                           Text="{Binding Data.Location}" 
+                           x:Name="LocationName"
                            Grid.Row="0" 
                            />
 
