@@ -234,7 +234,7 @@ namespace Game.Views
             //Attribute image
             grid.Children.Add(new Image
             {
-                WidthRequest = 25,
+                WidthRequest = 20,
                 Source = item.Attribute.ToImage(),
 
             }, 0, 1);
@@ -245,6 +245,7 @@ namespace Game.Views
                 
                 Text = item.Value.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+                FontSize = 20,
 
             }, 0, 2);
 
@@ -252,7 +253,7 @@ namespace Game.Views
             grid.Children.Add(new Image
             {
                 Source = "item_damage.png",
-                WidthRequest = 25,
+                WidthRequest = 20,
 
             }, 1, 1);
 
@@ -261,6 +262,7 @@ namespace Game.Views
             {
                 Text = item.Damage.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+                FontSize = 20,
 
             }, 1, 2);
 
@@ -268,7 +270,7 @@ namespace Game.Views
             grid.Children.Add(new Image
             {
                 Source = "item_range.png",
-                WidthRequest = 25,
+                WidthRequest = 20,
 
             }, 2, 1);
 
@@ -277,6 +279,7 @@ namespace Game.Views
             {
                 Text = item.Range.ToString(),
                 Style = (Style)Application.Current.Resources["ReadStatsLabelStyle"],
+                FontSize = 20,
 
             }, 2, 2);
 
