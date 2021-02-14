@@ -168,16 +168,13 @@ namespace Game.Views
 
            
             CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
-            
+            CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.Necklass, ItemLocationEnum.Necklass, 1));
+            CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand, 1));
+            CurrentOffHand.Children.Add(RenderItemInformation(ViewModel.Data.OffHand, ItemLocationEnum.OffHand, 1));
+            CurrentLeftFinger.Children.Add(RenderItemInformation(ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger, 1));
+            CurrentRightFinger.Children.Add(RenderItemInformation(ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger, 1));
+            CurrentFeet.Children.Add(RenderItemInformation(ViewModel.Data.Feet, ItemLocationEnum.Feet, 1));
 
-
-
-            GetCharacterItemHelper(CurrentNecklessItem, ViewModel.Data.Necklass, ItemLocationEnum.Necklass);
-            GetCharacterItemHelper(CurrentPrimaryHand, ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand);
-            GetCharacterItemHelper(CurrentOffHand, ViewModel.Data.OffHand, ItemLocationEnum.OffHand);
-            GetCharacterItemHelper(CurrentLeftFinger, ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger);
-            GetCharacterItemHelper(CurrentRightFinger, ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger);
-            GetCharacterItemHelper(CurrentFeet, ViewModel.Data.Feet, ItemLocationEnum.Feet);
        
         }
         
