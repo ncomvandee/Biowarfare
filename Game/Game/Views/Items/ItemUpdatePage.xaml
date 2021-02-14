@@ -59,7 +59,8 @@
             <Frame Style="{StaticResource ItemStatsFrameStyle}"
                    HeightRequest="100">
 
-                <Editor BackgroundColor="Transparent" 
+                <Editor Text="{Binding Data.Description}"
+                        BackgroundColor="Transparent" 
                         x:Name="DescriptionBox"
                         Placeholder="Description goes here..."
                         PlaceholderColor="{StaticResource PrimaryItemForeground}"
