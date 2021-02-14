@@ -214,7 +214,7 @@
                 </Frame>
             </Frame>
 
-            <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+            <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                         Text="Update" 
                         Clicked="Update_Clicked"
                         />
