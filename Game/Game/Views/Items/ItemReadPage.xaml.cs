@@ -34,6 +34,9 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = data.Data.Name + " Information";
+
+            //get the correct icon for attribute
+            AttributeIcon.Source = ViewModel.Data.Attribute.ToImage();
         }
 
         /// <summary>

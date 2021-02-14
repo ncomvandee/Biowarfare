@@ -116,7 +116,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="item_attack.png" 
+                            <Image x:Name="AttributeIcon" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="0" 
