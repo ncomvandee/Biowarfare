@@ -26,31 +26,25 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack
                 },
                 new ItemModel {
-                    Name = "Face Mask",
-                    Description = "A medical grade mask that adds to a cell’s defense by default. ",
+                    Name = "Face Mask of Protection",
+                    Description = "A medical grade mask that can protect you from Corona Virus, but cannot protect you from her cuteness.",
                     ImageURI = "face_mask_no_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.Head,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Defense
                 },
                 new ItemModel {
                     Name = "Stethoscope",
                     Description = "A metal item that monitors the patient’s heartbeat. Boosts a cell’s Defense by default.  ",
                     ImageURI = "stethoscope_no_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.Necklass,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Defense
                 },
                 new ItemModel {
                     Name = "Thermometer",
                     Description = "A expensive yet solid item that can be used to check the enemy’s temperature. Boosts a cell’s attack by default.  ",
                     ImageURI = "thermometer_white_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.OffHand,
                     Attribute = AttributeEnum.Attack
@@ -59,28 +53,22 @@ namespace Game.GameRules
                     Name = "Finger Glove",
                     Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
                     ImageURI = "finger_glove_no_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.RightFinger,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Defense
                 },
                 new ItemModel {
                     Name = "Medical Boots",
                     Description = "Sturdy boots with comfortable insoles add a boost to a cell’s speed by default. ",
                     ImageURI = "boots_no_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Defense
+                    Attribute = AttributeEnum.Speed
                 },
                  new ItemModel {
                     Name = "Disinfectant",
                     Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
                     ImageURI = "disinfectant_spray_no_bg.png",
-                    Range = 10,
-                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.LeftFinger,
                     Attribute = AttributeEnum.Attack
@@ -148,7 +136,7 @@ namespace Game.GameRules
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
-                    Name = "C1",
+                    Name = "Connie",
                     Job = CellTypeEnum.Basophil,
                     Description = "Basophils are a type of white blood cell that are responsible for causing inflammatory reactions and producing histamine." +
                                   " Has a +10% hp buff.",
@@ -165,7 +153,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "C2",
+                    Name = "Missy",
                     Job = CellTypeEnum.BCell,
                     Description = "B Cells are a specialized white blood cell that secrete antibodies." +
                                   " Once per round, B Cells can give any living team member an Immunity token. " +
@@ -185,7 +173,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "C3",
+                    Name = "Georgie",
                     Job = CellTypeEnum.Eosinophil,
                     Description = "Eosinophil are a type of white blood cell that specialize in attacking parasites." +
                                   " Eosinophil have a 10% attack buff when fighting against invaders of the parasite type.",
@@ -202,7 +190,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "C4",
+                    Name = "George",
                     Job = CellTypeEnum.KillerTCell,
                     Description = "Killer T Cells are a type of white blood cell that kill infected," +
                                   " damaged, or cancerous cells. Every time the Killer T Cell attacks," +
@@ -220,7 +208,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "C5",
+                    Name = "Mary",
                     Job = CellTypeEnum.Macrophage,
                     Description = "Macrophages are a type of white blood cell that seek out and dispose of foreign invaders and non-healthy cells in their path." +
                                   " Macrophages are unique because they recruit other immune cells to fight alongside them." +
@@ -239,7 +227,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "C6",
+                    Name = "Sheldon",
                     Job = CellTypeEnum.NKCell,
                     Description = "NK cells are a type of lymphocyte that provides a rapid response to viruses in the body." +
                                   " Has a +10% speed buff.",
