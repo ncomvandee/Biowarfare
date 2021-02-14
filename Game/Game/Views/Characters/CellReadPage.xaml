@@ -217,8 +217,11 @@
 
             <Frame AbsoluteLayout.LayoutBounds=".5, .5, .7, .7"
                    AbsoluteLayout.LayoutFlags="All"
-                   BackgroundColor="Wheat"
-                   BorderColor="Transparent"
+                   BackgroundColor="{StaticResource PrimaryCharacterForeground}"
+                   BorderColor="{StaticResource SecondaryAccentColor}"
+                  
+                   
+                   
                    CornerRadius="20"
                    x:Name="ItemPopUpFrame"
                    IsVisible="false">
@@ -235,17 +238,19 @@
                                  Margin="10, 0"
                                  Clicked="ClosePopup_Clicked"/>
 
-                    <Frame BackgroundColor="White"
+                    <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
                            BorderColor="Transparent"
                            HeightRequest="30"
-                           CornerRadius="10"
+                           CornerRadius="20"
                            Padding="5">
 
                         <Label Text="Name goes here, I guess"
                                x:Name="ItemPopUpName"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="Center"
-                               FontSize="Subtitle"/>
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
 
                     </Frame>
 
@@ -276,26 +281,41 @@
                         <Label Text="Description: "
                                Grid.Row="0"
                                Grid.Column="0"
-                               FontAttributes="Bold"/>
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+                        
                         <Label x:Name="ItemPopUpDescription"
                                Grid.Row="0"
-                               Grid.Column="1" />
+                               Grid.Column="1"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
 
                         <Label Text="Location: "
                                Grid.Row="1"
                                Grid.Column="0"
-                               FontAttributes="Bold"/>
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+                        
                         <Label x:Name="ItemPopUpLocation"
                                Grid.Row="1"
-                               Grid.Column="1" />
+                               Grid.Column="1" 
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
 
                         <Label x:Name="ItemPopUpAttribute"
                                Grid.Row="2"
                                Grid.Column="0"
-                               FontAttributes="Bold"/>
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+                        
                         <Label x:Name="ItemPopUpValue"
                                Grid.Row="2"
-                               Grid.Column="1" />
+                               Grid.Column="1" 
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
 
 
 
