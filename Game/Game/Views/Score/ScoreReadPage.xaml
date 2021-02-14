@@ -10,6 +10,39 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Frame"
+                   x:Key="LargeOuterScoresFrameStyle"
+                   BasedOn="{StaticResource ScoreOuterFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="HeightRequest" Value="500"/>
+
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="LargeScoresInnerFrameStyle"
+                   BasedOn="{StaticResource ScoreInnerFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="HeightRequest" Value="420"/>
+
+
+
+            </Style>
+
+
+
+        </ResourceDictionary>
+        
+        
+        
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
             <Frame Grid.Row="0" 
@@ -30,13 +63,22 @@
 
             </Frame>
 
-            <Frame BackgroundColor="#EF7834"
-                   WidthRequest="400"
-                   HeightRequest="500"
-                   BorderColor="Transparent"
-                   CornerRadius="20">
+            <Frame Style="{StaticResource LargeOuterScoresFrameStyle}">
 
-                <ScrollView>
+                <Frame Style="{StaticResource LargeScoresInnerFrameStyle}"
+                       
+                       >
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}"
                                  Spacing="10"
                                  Margin="20">
@@ -129,6 +171,9 @@
 
                     </StackLayout>
                 </ScrollView>
+                        
+               </Grid>
+               </Frame>
 
             </Frame>
 
