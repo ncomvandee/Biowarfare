@@ -211,7 +211,7 @@ namespace Game.Views
             ItemPopUpName.Text = data.Name;
             ItemPopUpDescription.Text = data.Description;
             ItemPopUpLocation.Text = data.Location.ToString();
-            ItemPopUpAttribute.Text = data.Attribute.ToAbbrivation();
+            ItemPopUpAttribute.Text = data.Attribute.ToMessage();
             ItemPopUpValue.Text = "+ " + data.Value.ToString();
 
             return true;
