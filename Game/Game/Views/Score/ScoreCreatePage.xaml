@@ -19,23 +19,22 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center">
 
-            <Entry Placeholder="Name goes here"
+            <Entry Style="{StaticResource ScoresNameCreateEntryStyle}"
+                   Placeholder="Name goes here"
                    x:Name="NameEntry"
                    Text="{Binding Data.Name}"
-                   WidthRequest="200"
-                   Margin="0, 50"
-                   HorizontalTextAlignment="Center"/>
+                   />
 
             <StackLayout Orientation="Horizontal" 
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
 
-                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                         Text="Save" 
                         Clicked="Save_Clicked"
                         />
 
-                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
+                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
                         Text="Cancel" 
                         Clicked="Cancel_Clicked"
                         />
@@ -43,47 +42,5 @@
             </StackLayout>
 
         </StackLayout>
-
-        <!--<ScrollView>
-            <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10">
-
-                <Label Text="Create Page" Style="{StaticResource HeaderStyle}"/>
-
-                <Grid
-                    RowSpacing="1"
-                    ColumnSpacing="2"
-                    VerticalOptions="Center">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label Grid.Row="0" Grid.Column="0"
-                        Text="Name" 
-                        Style="{StaticResource LabelStyle}"/>
-                    
-                    <Entry Grid.Row="0" Grid.Column="1"
-                        Text="{Binding Data.Name}" 
-                        Style="{StaticResource EntryStyle}"/>
-
-                    <Label Grid.Row="1" Grid.Column="0"
-                        Text="Score" 
-                        Style="{StaticResource LabelStyle}"/>
-                    
-                    <Entry Grid.Row="1" Grid.Column="1"
-                        Text="{Binding Data.ScoreTotal}" 
-                        Style="{StaticResource EntryStyle}"/>
-
-                    <Label Grid.Row="1" Grid.Column="0"
-                        Text="Score" 
-                        Style="{StaticResource LabelStyle}"/>
-
-                </Grid>
-            </StackLayout>
-        </ScrollView>-->
     </ContentPage.Content>
 </ContentPage>

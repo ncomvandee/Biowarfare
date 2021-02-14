@@ -2177,6 +2177,19 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Custom entry for scores create page name-->
+            <Style TargetType="Entry"
+                   x:Key="ScoresNameCreateEntryStyle"
+                   BasedOn="{StaticResource ScoresNameEntryStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0, 50"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="WidthRequest" Value="200"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
