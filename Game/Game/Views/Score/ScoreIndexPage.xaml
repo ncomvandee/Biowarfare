@@ -113,7 +113,7 @@
                                                     <Label Grid.Column="1" 
                                                            Grid.Row="1"
                                                            Text="{Binding RoundCount}" 
-                                                           Style="{StaticResource ScoreStatsLabelStyle}"
+                                                           Style="{StaticResource ScoreStatsValueLabelStyle}"
                                                            />
                                                     
                                                 </StackLayout>
@@ -133,7 +133,7 @@
                                                     <Label Grid.Column="1" 
                                                            Grid.Row="2"
                                                            Text="{Binding ScoreTotal}"
-                                                           Style="{StaticResource ScoreStatsLabelStyle}"
+                                                           Style="{StaticResource ScoreStatsValueLabelStyle}"
                                                            />
 
                                                 </StackLayout>
