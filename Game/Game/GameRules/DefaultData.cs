@@ -16,7 +16,7 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Vicious Scalpal",
+                    Name = "Vicious Scalpel",
                     Description = "A medical grade scalpel that adds extra attack power when equipped. ",
                     ImageURI = "vicious_scalpel_white_bg.png",
                     Range = 10,
