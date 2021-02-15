@@ -152,19 +152,19 @@ namespace Game.Models
                     break;
 
                 case AttributeEnum.Defense:
-                    msg = "defense_icon.png";
+                    msg = "defense_green.png";
                     break;
 
                 case AttributeEnum.Speed:
-                    msg = "speed_icon.png";
+                    msg = "speed_green.png";
                     break;
 
                 case AttributeEnum.CurrentHealth:
-                    msg = "heart_icon.png";
+                    msg = "hp_green.png";
                     break;
 
                 case AttributeEnum.MaxHealth:
-                    msg = "heart_icon.png";
+                    msg = "hp_green.png";
                     break;
             }
 
