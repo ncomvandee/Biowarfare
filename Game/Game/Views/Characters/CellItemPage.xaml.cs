@@ -223,7 +223,9 @@ namespace Game.Views
                 Text = item.Name,
                 Style = (Style)Application.Current.Resources["LabelBaseStyle"],
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                LineBreakMode = (LineBreakMode)4,
             };
 
             Grid.SetRow(itemNameLabel, 0);
