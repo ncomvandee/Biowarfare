@@ -92,19 +92,18 @@
 
                                         </StackLayout>
 
-                                        <Button Text="-"  
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30"
                                             x:Name="HeadDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>1.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
                                     </Grid>
                                 </StackLayout>
@@ -137,19 +136,18 @@
 
                                         </StackLayout>
 
-                                        <Button Text="-" 
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30" 
                                             x:Name="NeckLessDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"  
                                             >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>2.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
                                     </Grid>
                                 </StackLayout>
@@ -182,19 +180,18 @@
 
                                         </StackLayout>
 
-                                        <Button Text="-"  
-                                            x:Name="PrimaryHandDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30" 
+                                            x:Name="PrimaryHandDeleteButton" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                            >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>3.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
 
                                     </Grid>
@@ -227,19 +224,18 @@
                                                  Grid.Column="1">
 
                                         </StackLayout>
-                                        <Button Text="-"  
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30" 
                                             x:Name="OffHandDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                           >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>4.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
 
                                     </Grid>
@@ -274,19 +270,18 @@
 
                                         </StackLayout>
 
-                                        <Button Text="-"  
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30" 
                                             x:Name="LeftFingerDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>6.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
 
                                     </Grid>
@@ -321,19 +316,18 @@
                                         </StackLayout>
 
 
-                                        <Button Text="-"  
-                                            x:Name="RightFingerDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30"
+                                            x:Name="RightFingerDeleteButton" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>5.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
 
                                     </Grid>
@@ -367,19 +361,18 @@
 
                                         </StackLayout>
 
-                                        <Button Text="-"  
+                                        <ImageButton Source="icon_delete.png"  
+                                            HeightRequest="30"  
                                             x:Name="FeetDeleteButton"
-                                            Style="{StaticResource PrimaryButtonStyle}"
-                                            WidthRequest="40" 
                                             Grid.Column="3" 
                                             HorizontalOptions="End"
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                            <Button.CommandParameter>
+                                            <ImageButton.CommandParameter>
                                                 <x:Decimal>7.00000</x:Decimal>
-                                            </Button.CommandParameter>
-                                        </Button>
+                                            </ImageButton.CommandParameter>
+                                        </ImageButton>
 
                                     </Grid>
                                 </StackLayout>

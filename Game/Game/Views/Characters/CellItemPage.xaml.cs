@@ -82,7 +82,7 @@ namespace Game.Views
         public void AddButton_Clicked(object sender, EventArgs e)
         {
 
-            var selectedItem = ((Button)sender).CommandParameter as ItemModel;
+            var selectedItem = ((ImageButton)sender).CommandParameter as ItemModel;
             var item = ViewModel.Data.AddItem(ItemLocationEnumHelper.ConvertMessageToEnum(LocationPicker.SelectedItem.ToString()), selectedItem.Id);
             UpdatePageBindingContext();
 
@@ -96,7 +96,7 @@ namespace Game.Views
         public void DeleteButton_Clicked(object sender, EventArgs e)
         {
             
-            var selectedItem = ((Button)sender).CommandParameter ;
+            var selectedItem = ((ImageButton)sender).CommandParameter ;
             var locationEnum = ItemLocationEnumHelper.GetLocationByPosition( Convert.ToInt32(selectedItem));
             ViewModel.Data.RemoveItem(locationEnum);
             UpdatePageBindingContext();
