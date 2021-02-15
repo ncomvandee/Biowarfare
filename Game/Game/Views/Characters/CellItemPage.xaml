@@ -480,6 +480,7 @@
                     <!--#endButton-->
 
                 </StackLayout>
+                
                 <!--#Popup Window-->
                 <Frame 
                    BackgroundColor="{StaticResource PrimaryCharacterForeground}"
@@ -498,6 +499,7 @@
                                  HeightRequest="40"
                                  HorizontalOptions="End"
                                  Margin="10, 0"
+                                 Clicked="ClosePopup_Clicked"
                                  />
 
                         <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"

@@ -123,7 +123,15 @@ namespace Game.Views
             ItemsListView.SelectedItem = null;
         }
 
-      
+        /// <summary>
+        /// Clost the popup frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ClosePopup_Clicked(object sender, EventArgs e)
+        {
+            ItemPopUpFrame.IsVisible = false;
+        }
 
         #endregion Button
 
