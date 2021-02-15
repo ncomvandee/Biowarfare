@@ -140,6 +140,7 @@
     <Content Include="bacteria_no_bg.png" />
     <Content Include="bandaid_no_bg.png" />
     <Content Include="bloodstone_no_bg.png" />
+    <Content Include="bloodstone_white_bg.png" />
     <Content Include="boots_no_bg.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
@@ -147,12 +148,15 @@
     <Content Include="cancer_no_bg.png" />
     <Content Include="character_button.png" />
     <Content Include="chemo_port_of_pain_no_bg.png" />
+    <Content Include="chemo_port_of_pain_white_bg.png" />
     <Content Include="defense_icon.png" />
     <Content Include="disinfectant_spray_no_bg.png" />
+    <Content Include="disinfectant_spray_white_bg.png" />
     <Content Include="eosinophil_bg.png" />
     <Content Include="face_mask_no_bg.png" />
     <Content Include="finger_glove_no_bg.png" />
     <Content Include="gummy_multivitamin_no_bg.png" />
+    <Content Include="gummy_multivitamin_white_bg.png" />
     <Content Include="heart_icon.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
@@ -209,6 +213,7 @@
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
     <Content Include="stethoscope_no_bg.png" />
+    <Content Include="stethoscope_white_bg.png" />
     <Content Include="thermometer_no_bg.png" />
     <Content Include="thermometer_white_bg.png" />
     <Content Include="t_cell_bg.png" />
@@ -218,6 +223,7 @@
     <Content Include="virus_no_bg.png" />
     <Content Include="xp_icon.png" />
     <Content Include="x_ray_gun_no_bg.png" />
+    <Content Include="x_ray_gun_white_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
