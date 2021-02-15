@@ -16,23 +16,38 @@
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
                 <Frame Style="{StaticResource BasicCharacterFrameStyle}"
-                       WidthRequest="-1"
+                       WidthRequest="300"
                        HeightRequest="-1"
                        Padding="10"
                        >
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Style="{StaticResource VerticalStack}"
+                                     HorizontalOptions="Start"
+                                     Grid.Column="0">
+                            <Label Text="Developers" Style="{StaticResource CharacterCellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" FontSize="Title" />
+                            <Label Text="Jara Lindsay" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
+                            <Label Text="Ken Comvandee" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
+                            <Label Text="Hung Huynh" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
 
+                        </StackLayout>
 
-                        <Label Text="Ken Comvandee" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Hung Huynh" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Jara Lindsay" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Nathan LaRiviere Koempel" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Jaida Ho" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label x:Name="CurrentDateTime" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                    </StackLayout>
+                        <StackLayout Style="{StaticResource VerticalStack}"
+                                     HorizontalOptions="End"
+                                     Grid.Column="1">
+                            <Label Text="Designers" Style="{StaticResource CharacterCellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" FontSize="Title" />
+                            <Label Text="Nathan Koempel" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" />
+                            <Label Text="Jaida Ho" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" />
+                        </StackLayout>
+
+  
+                    </Grid>
                 </Frame>
 
-
+                <Label x:Name="CurrentDateTime" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <!--Database Settings Frame-->
 
                 <StackLayout Style="{StaticResource HorizontalStack}">
