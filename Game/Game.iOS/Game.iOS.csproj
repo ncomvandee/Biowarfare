@@ -324,4 +324,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\x_ray_gun_no_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bloodstone_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chemo_port_of_pain_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\disinfectant_spray_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gummy_multivitamin_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stethoscope_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\x_ray_gun_white_bg.png" />
+  </ItemGroup>
 </Project>
