@@ -15,41 +15,75 @@
         <ScrollView>
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Frame Style="{StaticResource BasicCharacterFrameStyle}"
-                       WidthRequest="300"
-                       HeightRequest="-1"
+                <Frame 
+                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
+                       CornerRadius="20"
+                       WidthRequest="200"
+                       HeightRequest="150"
                        Padding="10"
+                       Margin="20"
                        >
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Style="{StaticResource VerticalStack}"
-                                     HorizontalOptions="Start"
-                                     Grid.Column="0">
-                            <Label Text="Developers" Style="{StaticResource CharacterCellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" FontSize="Title" />
-                            <Label Text="Jara Lindsay" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
-                            <Label Text="Ken Comvandee" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
-                            <Label Text="Hung Huynh" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
 
-                        </StackLayout>
+                    <StackLayout>
 
-                        <StackLayout Style="{StaticResource VerticalStack}"
-                                     HorizontalOptions="End"
-                                     Grid.Column="1">
-                            <Label Text="Designers" Style="{StaticResource CharacterCellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" FontSize="Title" />
-                            <Label Text="Nathan Koempel" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" />
-                            <Label Text="Jaida Ho" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="End"  HorizontalTextAlignment="Center" />
-                        </StackLayout>
+                        <Frame 
+                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                       BorderColor="{StaticResource PrimaryForegroundPurple}"
+                       CornerRadius="50"
+                      
+                       >
 
-  
-                    </Grid>
+                            <Label Text="Developers" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontSize="Title" Padding="10" />
+
+                        </Frame>
+
+
+
+                        <Label Text="Jara Lindsay" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                        <Label Text="Ken Comvandee" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                        <Label Text="Hung Huynh" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+
+                    </StackLayout>
                 </Frame>
+
+                <Frame BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
+                       CornerRadius="20"
+                       WidthRequest="200"
+                       HeightRequest="150"
+                       Padding="10"
+                       Margin="10"
+                       >
+                   
+                        <StackLayout>
+
+                        <Frame 
+                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                       BorderColor="{StaticResource PrimaryForegroundPurple}"
+                       CornerRadius="50"
+                      
+                       >
+
+
+
+                            <Label Text="Designers" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontSize="Title" Padding="10"  />
+
+                        </Frame>
+
+                        <Label Text="Nathan Koempel" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                            <Label Text="Jaida Ho" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                        </StackLayout>
+
+
+                </Frame>
+
 
 
                 <!--Database Settings Frame-->
                 <Frame Style="{StaticResource BasicScoreFrameStyle}"
+                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                       BorderColor="{StaticResource PrimaryForegroundPurple}"
                        Padding="10"
                        Margin="0, 10, 0, 0">
                     <StackLayout Style="{StaticResource VerticalStack}">
@@ -57,7 +91,7 @@
 
                             <Label
                                 Text="Database Settings"
-                                Style="{DynamicResource ScoreNameLabelStyle}"/>
+                                Style="{DynamicResource CellNameLabelStyle}"/>
 
                             <Switch
                                 x:Name="DatabaseSettingsSwitch"
@@ -106,7 +140,7 @@
 
                             <Label
                                 Text="Debug Settings"
-                                Style="{DynamicResource ScoreNameLabelStyle}"
+                                Style="{DynamicResource CellNameLabelStyle}"
                                 />
 
                             <Switch
