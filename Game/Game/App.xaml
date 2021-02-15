@@ -103,15 +103,15 @@
 
             <!-- <Thickness x:Key="PageMargin">0</Thickness> -->
             
-            <!-- Default Pages --><!--
+             
             <Style TargetType="NavigationPage">
                 
-                <Setter Property="BarBackgroundColor" Value="{StaticResource SecondaryAccentColor}" />
-                <Setter Property="BarTextColor" Value="{StaticResource SecondaryTextColor}" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}" />
+                <Setter Property="BarTextColor" Value="{StaticResource PrimaryBackgroundPurple}" />
                 
             </Style>
 
-            --><!-- Character Pages --><!--
+            <!-- Character Pages --><!--
             <Style TargetType="NavigationPage"
                    x:Key="CharacterNavigationPage"
                    >
