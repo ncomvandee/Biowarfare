@@ -66,7 +66,7 @@
                         PlaceholderColor="{StaticResource PrimaryItemForeground}"
                         FontSize="Default"
                         HeightRequest="100"
-                        TextColor="Black"
+                        TextColor="{StaticResource PrimaryItemBackground}"
                     />
             </Frame>
 
