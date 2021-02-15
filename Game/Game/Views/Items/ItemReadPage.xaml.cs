@@ -40,6 +40,12 @@ namespace Game.Views
 
             //get the name for location
             LocationName.Text = ViewModel.Data.Location.ToMessage();
+
+            // Disable button if item is consumable
+            if (ViewModel.Data.IsConsumable)
+            {
+                AdjustButtonIfConsumable();
+            } 
         }
 
         /// <summary>
@@ -85,6 +91,16 @@ namespace Game.Views
                 ImageFrame.IsVisible = true;
             }
 
+        }
+
+        /// <summary>
+        /// Disable delete and edit button if item is consumable
+        /// </summary>
+        public void AdjustButtonIfConsumable()
+        {
+            DeleteButton.IsEnabled = false;
+
+            EditButton.IsVisible = false;
         }
 
     }

@@ -10,7 +10,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" 
                      IconImageSource="icon_delete.png" 
-                     Clicked="Delete_Clicked" 
+                     Clicked="Delete_Clicked"
+                     x:Name="DeleteButton"
                      />
 
     </ContentPage.ToolbarItems>
@@ -164,7 +165,7 @@
                     Text="Edit" 
                     Margin="20" 
                     Clicked="ItemEditButton_Clicked"
-
+                    x:Name="EditButton"
                     />
 
         </StackLayout>
