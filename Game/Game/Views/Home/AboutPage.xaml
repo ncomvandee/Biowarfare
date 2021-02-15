@@ -10,8 +10,7 @@
     <NavigationPage.TitleView>
         <Label Text="Osmosis Jones" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Title"  Margin="0, 0, 75, 0"/>
     </NavigationPage.TitleView>
-    
-`    
+      
     <ContentPage.Content>
         <ScrollView>
 
