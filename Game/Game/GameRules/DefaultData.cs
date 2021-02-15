@@ -23,7 +23,7 @@ namespace Game.GameRules
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Attack,
                 },
                 new ItemModel {
                     Name = "Face Mask of Protection",
@@ -31,7 +31,7 @@ namespace Game.GameRules
                     ImageURI = "face_mask_no_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Head,
-                    Attribute = AttributeEnum.Defense
+                    Attribute = AttributeEnum.Defense,
                 },
                 new ItemModel {
                     Name = "Stethoscope",
@@ -39,7 +39,7 @@ namespace Game.GameRules
                     ImageURI = "stethoscope_no_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Necklass,
-                    Attribute = AttributeEnum.Defense
+                    Attribute = AttributeEnum.Defense,
                 },
                 new ItemModel {
                     Name = "Thermometer",
@@ -47,7 +47,7 @@ namespace Game.GameRules
                     ImageURI = "thermometer_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.OffHand,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Attack,
                 },
                 new ItemModel {
                     Name = "Finger Glove",
@@ -55,7 +55,7 @@ namespace Game.GameRules
                     ImageURI = "finger_glove_no_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Finger,
-                    Attribute = AttributeEnum.Defense
+                    Attribute = AttributeEnum.Defense,
                 },
                 new ItemModel {
                     Name = "Medical Boots",
@@ -63,7 +63,7 @@ namespace Game.GameRules
                     ImageURI = "boots_no_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Speed
+                    Attribute = AttributeEnum.Speed,
                 },
                  new ItemModel {
                     Name = "Disinfectant",
@@ -142,6 +142,77 @@ namespace Game.GameRules
 
             //    datalist.Add(item);
             ////}
+
+            return datalist;
+        }
+
+
+
+        public static List<ItemModel> LoadUniqueData(ItemModel temp)
+        {
+            var datalist = new List<ItemModel>()
+            {
+
+                 new ItemModel {
+                    Name = "Chemo Port Of Pain",
+                    Description = "Daamage dealt to equipped character is halved, excludes cancer cell.",
+                    ImageURI = "chemo_port_of_pain_no_bg.png",
+                    Value = 9,
+                    Location = ItemLocationEnum.Unknown,
+                    Attribute = AttributeEnum.Unknown,
+                    IsUnique = true,
+                 },
+
+
+                     new ItemModel {
+                        Name = "X Ray Gun",
+                        Description = "Pew Pew Pew …",
+                        ImageURI = "x_ray_gun_no_bg.png",
+                        Value = 9,
+                        Location = ItemLocationEnum.Unknown,
+                        Attribute = AttributeEnum.Unknown,
+                        IsUnique = true,
+                     },
+
+                     new ItemModel {
+                        Name = "MRI Headband",
+                        Description = "Shows the character the next round of monsters",
+                        ImageURI = "mri_headband_no_bg.png",
+                        Value = 9,
+                        Location = ItemLocationEnum.Unknown,
+                        Attribute = AttributeEnum.Unknown,
+                        IsUnique = true,
+                     },
+
+                     new ItemModel {
+                        Name = "Blood Stone",
+                        Description = "Indcrease max health based on the number of enemies defeated",
+                        ImageURI = "bloodstone_no_bg.png",
+                        Value = 9,
+                        Location = ItemLocationEnum.Unknown,
+                        Attribute = AttributeEnum.Unknown,
+                        IsUnique = true,
+                     },
+
+                };
+
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    var item = new ItemModel
+            //    {
+            //        ImageURI = "item.png",
+            //        Range = 2,
+            //        Damage = 10,
+            //        Value = 9,
+            //        Location = ItemLocationEnum.PrimaryHand,
+            //        Attribute = AttributeEnum.Attack
+            //    };
+            //    item.Name = "I" + (datalist.Count+1).ToString();
+            //    item.Description = item.Name;
+
+            //    datalist.Add(item);
+            ////}
+
 
             return datalist;
         }

@@ -34,13 +34,15 @@ namespace Game.Models
         public int Value { get; set; } = 0;
 
         public bool IsConsumable { get; set; } = false;
-        
+
+        public bool IsUnique { get; set; } = false;
+
         //// Count of how many
         //public int Count { get; set; } = 1;
-        
+
         //// Tracks if the item is a consumable or not
         //public bool IsConsumable { get; set; } = false;
-        
+
         //// The Category of the itme
         //public int Category { get; set; } = 0;
 

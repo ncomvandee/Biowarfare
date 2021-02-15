@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Text;
+using System.Linq;
 
 using Xamarin.Forms;
 
@@ -11,18 +12,18 @@ using Game.GameRules;
 namespace Game.ViewModels
 {
     /// <summary>
-    /// Index View Model
-    /// Manages the list of data records
+    /// Unique Item Index View Model
+    /// Manages the list of unique drop item data records
     /// </summary>
-    public class ItemIndexViewModel : BaseViewModel<ItemModel>
+    public class UniqueItemIndexViewModel : BaseViewModel<ItemModel>
     {
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
-        private static volatile ItemIndexViewModel instance;
+        private static volatile UniqueItemIndexViewModel instance;
         private static readonly object syncRoot = new Object();
 
-        public static ItemIndexViewModel Instance
+        public static UniqueItemIndexViewModel Instance
         {
             get
             {
@@ -32,7 +33,7 @@ namespace Game.ViewModels
                     {
                         if (instance == null)
                         {
-                            instance = new ItemIndexViewModel();
+                            instance = new UniqueItemIndexViewModel();
                             instance.Initialize();
                         }
                     }
@@ -51,7 +52,7 @@ namespace Game.ViewModels
         /// 
         /// The constructor subscribes message listeners for crudi operations
         /// </summary>
-        public ItemIndexViewModel()
+        public UniqueItemIndexViewModel()
         {
             Title = "Items";
 
@@ -94,7 +95,7 @@ namespace Game.ViewModels
         }
 
         #endregion Constructor
-        
+
         #region DataOperations_CRUDi
 
         /// <summary>
@@ -136,9 +137,9 @@ namespace Game.ViewModels
         /// Load the Default Data
         /// </summary>
         /// <returns></returns>
-        public override List<ItemModel> GetDefaultData() 
+        public override List<ItemModel> GetDefaultData()
         {
-            return DefaultData.LoadData(new ItemModel());
+            return DefaultData.LoadUniqueData(new ItemModel());
         }
 
         #endregion DataOperations_CRUDi
@@ -152,10 +153,8 @@ namespace Game.ViewModels
         /// <returns></returns>
         public override List<ItemModel> SortDataset(List<ItemModel> dataset)
         {
-            return dataset.Where(a => a.IsConsumable == false && a.IsUnique == false)
-                    .OrderBy(a => a.Name)
-                    .ThenBy(a => a.Description)
-                    .ToList();
+
+            return dataset.Where(a => a.IsUnique == true).ToList();
         }
 
         #endregion SortDataSet
@@ -217,7 +216,7 @@ namespace Game.ViewModels
 
             return data;
         }
-        
+
         /// <summary>
         /// Get all the items for a set location
         /// </summary>
@@ -245,3 +244,4 @@ namespace Game.ViewModels
         }
     }
 }
+

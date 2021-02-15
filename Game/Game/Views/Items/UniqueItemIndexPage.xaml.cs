@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Game.Models;
+using Game.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +22,10 @@ namespace Game.Views.Items
     {
 
         // The view model, used for data binding
-        readonly ConsumableItemIndexViewModel ViewModel = ConsumableItemIndexViewModel.Instance;
+        readonly UniqueItemIndexViewModel ViewModel = UniqueItemIndexViewModel.Instance;
 
         // Empty Constructor for UTs
-        public ConsumableItemIndexPage(bool UnitTest) { }
+        public UniqueItemIndexPage(bool UnitTest) { }
 
         public UniqueItemIndexPage()
         {
