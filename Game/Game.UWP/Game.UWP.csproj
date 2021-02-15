@@ -149,6 +149,8 @@
     <Content Include="character_button.png" />
     <Content Include="chemo_port_of_pain_no_bg.png" />
     <Content Include="chemo_port_of_pain_white_bg.png" />
+    <Content Include="damage_blue.png" />
+    <Content Include="defense_green.png" />
     <Content Include="defense_icon.png" />
     <Content Include="disinfectant_spray_no_bg.png" />
     <Content Include="disinfectant_spray_white_bg.png" />
@@ -158,6 +160,7 @@
     <Content Include="gummy_multivitamin_no_bg.png" />
     <Content Include="gummy_multivitamin_white_bg.png" />
     <Content Include="heart_icon.png" />
+    <Content Include="hp_green.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
     <Content Include="icon_click.png" />
@@ -208,7 +211,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="range_blue.png" />
     <Content Include="scores_button.png" />
+    <Content Include="speed_green.png" />
     <Content Include="speed_icon.png" />
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
