@@ -7,57 +7,53 @@
              x:Class="Game.Views.AboutPage"
              Title="About"
              Style="{StaticResource ScoreContentPage}">
-
-    <ScrollView
+    <ContentPage.Content>
+        <ScrollView
       Padding="10,10,10,10"
-      VerticalOptions="Start"
       HorizontalOptions="FillAndExpand"
       Orientation="Vertical">
 
-    <StackLayout Style="{StaticResource VerticalStack}">
-        <Grid HorizontalOptions="FillAndExpand">
+            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
-        </Grid>
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                    <Image Source="item.png" Style="{StaticResource ImageMediumStyle}"/>
+                    <Label Text="Osmosis Jones" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Ken Comvandee" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Hung Huynh" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Jara Lindsay" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Nathan LaRiviere Koempel" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Jaida Ho" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label x:Name="CurrentDateTime" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                </StackLayout>
 
-            <Image Source="item.png" Style="{StaticResource ImageMediumStyle}"/>
-            <Label Text="Osmosis Jones" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label Text="Ken Comvandee" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label Text="Hung Huynh" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label Text="Jara Lindsay" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label Text="Nathan LaRiviere Koempel" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label Text="Jaida Ho" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-            <Label x:Name="CurrentDateTime" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-        </StackLayout>
+                <!--Database Settings Frame-->
 
-        <!--Database Settings Frame-->
+                <StackLayout Style="{StaticResource HorizontalStack}">
 
-        <StackLayout Style="{StaticResource HorizontalStack}">
-
-            <Label
+                    <Label
                         Text="Database Settings"
                         Style="{DynamicResource LabelStyle}"/>
 
-            <Switch
+                    <Switch
                         x:Name="DatabaseSettingsSwitch"
                         HorizontalOptions="EndAndExpand"
                         Toggled="DatabaseSettingsSwitch_OnToggled"
                         IsToggled="False"/>
-        </StackLayout>
+                </StackLayout>
 
-        <StackLayout Style="{StaticResource VerticalStack}"
+                <StackLayout Style="{StaticResource VerticalStack}"
                         x:Name="DatabaseSettingsFrame"
                         IsVisible="False">
 
-            <!--Database Settings-->
-            <StackLayout Style="{StaticResource HorizontalStack}"
+                    <!--Database Settings-->
+                    <StackLayout Style="{StaticResource HorizontalStack}"
                                     Padding="50,0,0,0">
 
-                <Label Text="SQL Data Source"
+                        <Label Text="SQL Data Source"
                             Style="{DynamicResource LabelStyle}"/>
 
-                <Switch
+                        <Switch
                         HorizontalOptions="Start" 
                         VerticalOptions="Center"
                         x:Name="DataSourceValue"
@@ -65,54 +61,54 @@
                         Toggled="DataSource_Toggled" 
                         />
 
-            </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}"
+                    <StackLayout Style="{StaticResource HorizontalStack}"
                                     Padding="50,0,0,0">
 
-                <Label Text="Wipe Data List"
+                        <Label Text="Wipe Data List"
                            Style="{DynamicResource LabelStyle}"/>
 
-                <Button
+                        <Button
                         Text="Wipe"
                         Clicked="WipeDataList_Clicked"
                         />
 
-            </StackLayout>
-        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
 
-        <!--Debug Settings Frame-->
-        <StackLayout Style="{StaticResource HorizontalStack}">
+                <!--Debug Settings Frame-->
+                <StackLayout Style="{StaticResource HorizontalStack}">
 
-            <Label
+                    <Label
                     Text="Debug Settings"
                     Style="{DynamicResource LabelStyle}"
                     />
 
-            <Switch
+                    <Switch
                     x:Name="DebugSettingsSwitch"
                     HorizontalOptions="EndAndExpand"
                     Toggled="DebugSettingsSwitch_OnToggled"
                     IsToggled="False"/>
-        </StackLayout>
+                </StackLayout>
 
-        <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
+                <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
 
-            <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
+                    <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
 
-                <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
+                        <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
 
-                <StackLayout Style="{StaticResource VerticalStack}">
+                        <StackLayout Style="{StaticResource VerticalStack}">
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
-                        <Label
+                            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                                <Label
                                 Text="Number of Items "
                                 HorizontalTextAlignment="Start"
                                 HorizontalOptions="Start"
                                 Style="{DynamicResource LabelStyle}"
                                 />
 
-                        <Entry
+                                <Entry
                                 x:Name="ServerItemValue"
                                 Text="1" 
                                 FontSize="Micro"
@@ -124,21 +120,23 @@
                                 HorizontalOptions="FillAndExpand"
                                 Style="{DynamicResource EntryStyle}"
                                 />
-                    </StackLayout>
+                            </StackLayout>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}">
-                        <Button
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Button
                                 Text="Get"
                                 Clicked="GetItemsGet_Command"/>
 
-                        <Button
+                                <Button
                                 Text="Post"
                                 Clicked="GetItemsPost_Command"/>
-                    </StackLayout>
+                            </StackLayout>
 
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
-    </StackLayout>
-    </ScrollView>
+        </ScrollView>
+    </ContentPage.Content>
+
 </ContentPage>
