@@ -165,8 +165,16 @@ namespace Game.Views
         /// </summary>
         private void GetCharacterItem()
         {
+            //Remove all children of the stacklayout
+            CurrentHeadItem.Children.Clear();
+            CurrentNecklessItem.Children.Clear();
+            CurrentPrimaryHand.Children.Clear();
+            CurrentOffHand.Children.Clear();
+            CurrentRightFinger.Children.Clear();
+            CurrentLeftFinger.Children.Clear();
+            CurrentFeet.Children.Clear();
 
-           
+            //Add new children
             CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
             CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.Necklass, ItemLocationEnum.Necklass, 1));
             CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand, 1));
