@@ -23,75 +23,76 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Orientation="Vertical">
-                <!--Information Box-->
-                <Frame Style="{StaticResource CharacterCreateFrameStyle}" Padding="5"
+            <Grid>
+                <StackLayout Orientation="Vertical">
+                    <!--Information Box-->
+                    <Frame Style="{StaticResource CharacterCreateFrameStyle}" Padding="5"
                        HeightRequest="-1" WidthRequest="400"
                        >
 
-                    <StackLayout>
+                        <StackLayout>
 
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUtO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUtO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                </Grid.RowDefinitions>
 
-                            <Frame Style="{StaticResource CharacterReadCellTitleFrame}"
+                                <Frame Style="{StaticResource CharacterReadCellTitleFrame}"
                                    VerticalOptions="CenterAndExpand" 
                                    HorizontalOptions="Center" 
                                    Padding="10"
                                    >
 
-                                <StackLayout Orientation="Horizontal" 
+                                    <StackLayout Orientation="Horizontal" 
                                              Grid.Row="0" 
                                              Grid.Column="2"
                                              >
 
-                                    <Label Text="Equipqed Item" 
+                                        <Label Text="Equipqed Item" 
                                            Style="{StaticResource CharacterCellNameLabelStyle}"
                                            Margin="0"
                                            />
 
-                                </StackLayout>
-                            </Frame>
+                                    </StackLayout>
+                                </Frame>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="1"  
                                          Margin="0,20,0,0"
                                          >
 
-                                <Grid >
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Head" 
+                                        <Label Text="Head" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
-                                    
-                                    <StackLayout x:Name="CurrentHeadItem"
+
+                                        <StackLayout x:Name="CurrentHeadItem"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
-                                        
-                                    </StackLayout>
 
-                                    <Button Text="-"  
+                                        </StackLayout>
+
+                                        <Button Text="-"  
                                             x:Name="HeadDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -100,43 +101,43 @@
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>1.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>1.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="2" 
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Neckless" 
+                                        <Label Text="Neckless" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
-                                    <StackLayout x:Name="CurrentNecklessItem"
+                                        <StackLayout x:Name="CurrentNecklessItem"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
+                                        </StackLayout>
 
-                                    <Button Text="-" 
+                                        <Button Text="-" 
                                             x:Name="NeckLessDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -145,43 +146,43 @@
                                             Clicked="DeleteButton_Clicked"  
                                             >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>2.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>2.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="3"
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Primary Hand" 
+                                        <Label Text="Primary Hand" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
-                                    <StackLayout x:Name="CurrentPrimaryHand"
+                                        <StackLayout x:Name="CurrentPrimaryHand"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
+                                        </StackLayout>
 
-                                    <Button Text="-"  
+                                        <Button Text="-"  
                                             x:Name="PrimaryHandDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -190,43 +191,43 @@
                                             Clicked="DeleteButton_Clicked"
                                            >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>3.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>3.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="4"
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Off Hand" 
+                                        <Label Text="Off Hand" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
 
-                                    <StackLayout x:Name="CurrentOffHand"
+                                        <StackLayout x:Name="CurrentOffHand"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
-                                    <Button Text="-"  
+                                        </StackLayout>
+                                        <Button Text="-"  
                                             x:Name="OffHandDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -235,31 +236,31 @@
                                             Clicked="DeleteButton_Clicked"
                                           >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>4.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>4.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="5"
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Left Finger" 
+                                        <Label Text="Left Finger" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
@@ -267,13 +268,13 @@
                                            />
 
 
-                                    <StackLayout x:Name="CurrentLeftFinger"
+                                        <StackLayout x:Name="CurrentLeftFinger"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
+                                        </StackLayout>
 
-                                    <Button Text="-"  
+                                        <Button Text="-"  
                                             x:Name="LeftFingerDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -282,45 +283,45 @@
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>6.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>6.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="6"
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Right Finger" 
+                                        <Label Text="Right Finger" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
-                                    
-                                    <StackLayout x:Name="CurrentRightFinger"
+
+                                        <StackLayout x:Name="CurrentRightFinger"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
-                                    
+                                        </StackLayout>
 
-                                    <Button Text="-"  
+
+                                        <Button Text="-"  
                                             x:Name="RightFingerDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -329,44 +330,44 @@
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>5.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>5.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
 
-                                </Grid>
-                            </StackLayout>
+                                    </Grid>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
+                                <StackLayout Orientation="Horizontal" 
                                          Grid.Row="7"
                                          >
 
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="170"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Text="Feet" 
+                                        <Label Text="Feet" 
                                            Style="{StaticResource SimpleLabelTextStyle}"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Center"
                                            Grid.Column="0"
                                            />
-                                    
-                                    <StackLayout x:Name="CurrentFeet"
+
+                                        <StackLayout x:Name="CurrentFeet"
                                                  BackgroundColor="Transparent"
                                                  Grid.Column="1">
 
-                                    </StackLayout>
-   
-                                    <Button Text="-"  
+                                        </StackLayout>
+
+                                        <Button Text="-"  
                                             x:Name="FeetDeleteButton"
                                             Style="{StaticResource PrimaryButtonStyle}"
                                             WidthRequest="40" 
@@ -375,74 +376,75 @@
                                             Clicked="DeleteButton_Clicked"
                                         >
 
-                                        <Button.CommandParameter>
-                                            <x:Decimal>7.00000</x:Decimal>
-                                        </Button.CommandParameter>
-                                    </Button>
+                                            <Button.CommandParameter>
+                                                <x:Decimal>7.00000</x:Decimal>
+                                            </Button.CommandParameter>
+                                        </Button>
 
-                                </Grid>
-                            </StackLayout>
-                        </Grid>
-                    </StackLayout>
-                </Frame>
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
 
-                <!--Picker-->
-                <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
+                    <!--Picker-->
+                    <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
                       BackgroundColor="{StaticResource PrimaryCharacterMidground}"
                       WidthRequest="200" 
                       Padding="10"
                       >
-                   
-                    <Picker 
+
+                        <Picker 
                         Style="{StaticResource CreatePickerStyle}"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListMessageCharacter}" 
                         SelectedItem="{Binding SelectedLocation, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}" 
                         x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
                         />
-                   
-                </Frame>
-                
-                <!--Item Box-->
-                <Frame Style="{StaticResource CharacterCreateFrameStyle}"
+
+                    </Frame>
+
+                    <!--Item Box-->
+                    <Frame Style="{StaticResource CharacterCreateFrameStyle}"
                        Padding="5"
                        WidthRequest="400"
                        >
-                    
-                    <ListView x:Name="ItemsListView" 
+
+                        <ListView x:Name="ItemsListView" 
                         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                         RefreshCommand="{Binding LoadItemsCommand}"
                         CachingStrategy="RecycleElement"
-                        HasUnevenRows="true"
+                        HasUnevenRows="False"
                         Margin="5,0,5,0"
                         RowHeight="80"
+                        ItemSelected="OnItemSelected"
                         >
-                        
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Grid WidthRequest="400" HorizontalOptions="FillAndExpand">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="50"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="auto"/>
-                                        </Grid.RowDefinitions>
 
-                                        <Image  Grid.Column="0" 
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid WidthRequest="400" HorizontalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="50"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Image  Grid.Column="0" 
                                                 Source="{Binding ImageURI}"
                                                 Style="{StaticResource ImageMediumStyle}"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"
                                                 />
 
-                                        <Label Grid.Column="1" 
+                                            <Label Grid.Column="1" 
                                                Text="{Binding Name}" 
                                                Style="{StaticResource SimpleLabelTextStyle}"
                                                />
 
-                                        <Button Text="+"  
+                                            <Button Text="+"  
                                                 Style="{StaticResource PrimaryButtonStyle}"
                                                 WidthRequest="40"
                                                 Grid.Column="3" 
@@ -451,31 +453,138 @@
                                                 CommandParameter="{Binding .}"
                                                 />
 
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </Frame>
-                
-                <!--#Button -->
-                <StackLayout Orientation="Horizontal" 
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Frame>
+
+
+                    <!--#Button -->
+                    <StackLayout Orientation="Horizontal" 
                              HorizontalOptions="Center"
                              >
 
-                    <Button Text="Save" 
+                        <Button Text="Save" 
                             Style="{StaticResource PrimaryButtonStyle}"
                             Clicked="SaveButton_Clicked"
                             />
 
-                    <Button Text="Cancel" 
+                        <Button Text="Cancel" 
                             Style="{StaticResource PrimaryButtonStyle}"
                             Clicked="CancelButton_Clicked"
                             />
 
+                    </StackLayout>
+                    <!--#endButton-->
+
                 </StackLayout>
-                <!--#endButton-->
-            </StackLayout>
+                <!--#Popup Window-->
+                <Frame 
+                   BackgroundColor="{StaticResource PrimaryCharacterForeground}"
+                   BorderColor="{StaticResource SecondaryAccentColor}"
+                   CornerRadius="20"
+                   x:Name="ItemPopUpFrame"
+                   IsVisible="false">
+
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="500"
+                             WidthRequest="500" >
+
+                        <ImageButton Source="icon_cancel.png"
+                                 WidthRequest="30" 
+                                 HeightRequest="40"
+                                 HorizontalOptions="End"
+                                 Margin="10, 0"
+                                 />
+
+                        <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
+                           BorderColor="Transparent"
+                           HeightRequest="30"
+                           CornerRadius="20"
+                           Padding="5">
+
+                            <Label Text="Name goes here, I guess"
+                               x:Name="ItemPopUpName"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="Center"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                        </Frame>
+
+                        <Frame BackgroundColor="White"
+                               CornerRadius="100"
+                               WidthRequest="100"
+                               HeightRequest="100"
+                               BorderColor="Transparent"
+                               Padding="10">
+
+                            <Image Source="face_mask_no_bg.png"
+                               x:Name="ItemPopUpImage"/>
+
+                        </Frame>
+
+                        <Grid Padding="10" RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Description: "
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                            <Label x:Name="ItemPopUpDescription"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                            <Label Text="Location: "
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                            <Label x:Name="ItemPopUpLocation"
+                               Grid.Row="1"
+                               Grid.Column="1" 
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                            <Label x:Name="ItemPopUpAttribute"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                            <Label x:Name="ItemPopUpValue"
+                               Grid.Row="2"
+                               Grid.Column="1" 
+                               TextColor="{StaticResource PrimaryCharacterBackground}"
+                               />
+
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <!--#endPopup Window-->
+            </Grid>
+                
         </ScrollView>
 
     </ContentPage.Content>
