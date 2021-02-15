@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Game.Views.AboutPage"
-             Title="About">
+             Title="About"
+             Style="{StaticResource ScoreContentPage}>
 
     <ScrollView
       Padding="10,10,10,10"
@@ -14,6 +15,9 @@
       Orientation="Vertical">
 
         <StackLayout Style="{StaticResource VerticalStack}">
+            <Grid HorizontalOptions="FillAndExpand">
+                
+            </Grid>
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
