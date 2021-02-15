@@ -284,7 +284,7 @@ namespace Game.Views
             grid.Children.Add(new Image
             {
                 WidthRequest = 20,
-                Source = item.Attribute.ToImage(),
+                Source = item.Attribute.ToItemImage(),
 
             }, 0, 1);
 
