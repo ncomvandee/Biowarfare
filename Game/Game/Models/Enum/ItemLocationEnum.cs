@@ -89,7 +89,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.Unknown:
-                default:
+                    Message = "Consumable";
                     break;
             }
             return Message;
