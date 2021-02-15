@@ -357,4 +357,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\speed_green.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_defense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_range.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_xp.png" />
+  </ItemGroup>
 </Project>
