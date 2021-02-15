@@ -76,11 +76,9 @@
                                                              Margin="0, 10, 0, 10"
                                                              >
 
-                                  
-
                                                 <Label Text="{Binding Name}" 
-                                                           Style="{StaticResource ItemNameLabelStyle}"
-                                                           />
+                                                        Style="{StaticResource ItemNameLabelStyle}"
+                                                        HorizontalTextAlignment="Center"   />
 
                                             </StackLayout>
 
