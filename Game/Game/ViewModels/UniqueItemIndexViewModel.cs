@@ -56,42 +56,6 @@ namespace Game.ViewModels
         {
             Title = "Items";
 
-            #region Messages
-
-            // Register the Create Message
-            MessagingCenter.Subscribe<ItemCreatePage, ItemModel>(this, "Create", async (obj, data) =>
-            {
-                await CreateAsync(data as ItemModel);
-            });
-
-            // Register the Update Message
-            MessagingCenter.Subscribe<ItemUpdatePage, ItemModel>(this, "Update", async (obj, data) =>
-            {
-                // Have the item update itself
-                data.Update(data);
-
-                await UpdateAsync(data as ItemModel);
-            });
-
-            // Register the Delete Message
-            MessagingCenter.Subscribe<ItemDeletePage, ItemModel>(this, "Delete", async (obj, data) =>
-            {
-                await DeleteAsync(data as ItemModel);
-            });
-
-            // Register the Set Data Source Message
-            MessagingCenter.Subscribe<AboutPage, int>(this, "SetDataSource", async (obj, data) =>
-            {
-                await SetDataSource(data);
-            });
-
-            // Register the Wipe Data List Message
-            MessagingCenter.Subscribe<AboutPage, bool>(this, "WipeDataList", async (obj, data) =>
-            {
-                await WipeDataListAsync();
-            });
-
-            #endregion Messages
         }
 
         #endregion Constructor
