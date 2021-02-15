@@ -5,6 +5,6 @@
 
     <local:ItemIndexPage Title="Equipable"/>
     <local1:ConsumableItemIndexPage Title="Consumable"/>
-    <ContentPage Title="Special"/>
+    <local1:UniqueItemIndexPage Title="Unique Drop"/>
     
 </TabbedPage>
