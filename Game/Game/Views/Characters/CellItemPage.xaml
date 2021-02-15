@@ -402,8 +402,9 @@
                 </Frame>
                 
                 <!--Item Box-->
-                <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
-                       Padding="10"
+                <Frame Style="{StaticResource CharacterCreateFrameStyle}"
+                       Padding="5"
+                       WidthRequest="400"
                        >
                     
                     <ListView x:Name="ItemsListView" 
