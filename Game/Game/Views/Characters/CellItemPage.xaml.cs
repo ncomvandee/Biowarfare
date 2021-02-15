@@ -175,13 +175,13 @@ namespace Game.Views
             CurrentFeet.Children.Clear();
 
             //Add new children
-            CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head,1));
-            CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.Necklass, ItemLocationEnum.Necklass, 1));
-            CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand, 1));
-            CurrentOffHand.Children.Add(RenderItemInformation(ViewModel.Data.OffHand, ItemLocationEnum.OffHand, 1));
-            CurrentLeftFinger.Children.Add(RenderItemInformation(ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger, 1));
-            CurrentRightFinger.Children.Add(RenderItemInformation(ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger, 1));
-            CurrentFeet.Children.Add(RenderItemInformation(ViewModel.Data.Feet, ItemLocationEnum.Feet, 1));
+            CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head));
+            CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.Necklass, ItemLocationEnum.Necklass));
+            CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand));
+            CurrentOffHand.Children.Add(RenderItemInformation(ViewModel.Data.OffHand, ItemLocationEnum.OffHand));
+            CurrentLeftFinger.Children.Add(RenderItemInformation(ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger));
+            CurrentRightFinger.Children.Add(RenderItemInformation(ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger));
+            CurrentFeet.Children.Add(RenderItemInformation(ViewModel.Data.Feet, ItemLocationEnum.Feet));
 
        
         }
@@ -193,7 +193,7 @@ namespace Game.Views
         /// <param name="locationEnum"></param>
         /// <param name="col"></param>
         /// <returns></returns>
-        public Grid RenderItemInformation(string locationString, ItemLocationEnum locationEnum, int col)
+        public Grid RenderItemInformation(string locationString, ItemLocationEnum locationEnum)
         {
             Grid grid = new Grid
             {
@@ -218,7 +218,6 @@ namespace Game.Views
             {
 
                 DeleteButtonVisual(locationEnum, false);
-                grid.SetValue(Grid.ColumnProperty, col);
                 return grid;
             }
 
@@ -295,7 +294,6 @@ namespace Game.Views
 
             DeleteButtonVisual(locationEnum, true);
 
-            grid.SetValue(Grid.ColumnProperty, col);
             return grid;
         }
 
