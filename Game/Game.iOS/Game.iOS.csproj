@@ -375,4 +375,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\monster_xp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="icon_add.png" />
+  </ItemGroup>
 </Project>
