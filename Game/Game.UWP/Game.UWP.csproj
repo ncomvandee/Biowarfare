@@ -177,7 +177,13 @@
     <Content Include="item_value.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
+    <Content Include="monster_attack.png" />
     <Content Include="monster_button.png" />
+    <Content Include="monster_defense.png" />
+    <Content Include="monster_health.png" />
+    <Content Include="monster_range.png" />
+    <Content Include="monster_speed.png" />
+    <Content Include="monster_xp.png" />
     <Content Include="mri_headband_no_bg.png" />
     <Content Include="nkcell_bg.png" />
     <Content Include="nkcell_no_bg.png" />
