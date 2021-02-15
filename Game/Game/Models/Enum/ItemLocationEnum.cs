@@ -162,7 +162,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.Necklass:
-                    image = "stethoscope_no_bg.png";
+                    image = "stethoscope_white_bg.png";
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
@@ -178,7 +178,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.LeftFinger:
-                    image = "disinfectant_spray_no_bg.png";
+                    image = "disinfectant_spray_white_bg.png";
                     break;
 
                 case ItemLocationEnum.Feet:
