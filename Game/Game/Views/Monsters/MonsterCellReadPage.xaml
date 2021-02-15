@@ -119,7 +119,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="attack_icon.png" 
+                            <Image Source="monster_attack.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="0" 
@@ -131,7 +131,7 @@
                                    Grid.Column="0" 
                                    />
 
-                            <Image Source="defense_icon.png" 
+                            <Image Source="monster_defense.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="1" 
@@ -143,7 +143,7 @@
                                    Grid.Column="1" 
                                    />
 
-                            <Image Source="speed_icon.png" 
+                            <Image Source="monster_speed.png" 
                                    WidthRequest="35" 
                                    Grid.Row="0" 
                                    Grid.Column="2" 
