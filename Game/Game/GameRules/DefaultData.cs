@@ -36,7 +36,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Stethoscope",
                     Description = "A metal item that monitors the patient’s heartbeat. Boosts a cell’s Defense by default.  ",
-                    ImageURI = "stethoscope_no_bg.png",
+                    ImageURI = "stethoscope_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Necklass,
                     Attribute = AttributeEnum.Defense,
@@ -68,7 +68,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Disinfectant",
                     Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
-                    ImageURI = "disinfectant_spray_no_bg.png",
+                    ImageURI = "disinfectant_spray_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.LeftFinger,
                     Attribute = AttributeEnum.Attack,
@@ -117,7 +117,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Gummy Multi-Vitamin",
                     Description = "A delicious vitamin that boosts a Cell's defense",
-                    ImageURI = "gummy_multivitamin_no_bg.png",
+                    ImageURI = "gummy_multivitamin_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
                     Attribute = AttributeEnum.Unknown,
@@ -156,7 +156,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Chemo Port Of Pain",
                     Description = "Daamage dealt to equipped character is halved, excludes cancer cell.",
-                    ImageURI = "chemo_port_of_pain_no_bg.png",
+                    ImageURI = "chemo_port_of_pain_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
                     Attribute = AttributeEnum.Unknown,
@@ -167,7 +167,7 @@ namespace Game.GameRules
                      new ItemModel {
                         Name = "X Ray Gun",
                         Description = "Pew Pew Pew …",
-                        ImageURI = "x_ray_gun_no_bg.png",
+                        ImageURI = "x_ray_gun_white_bg.png",
                         Value = 9,
                         Location = ItemLocationEnum.Unknown,
                         Attribute = AttributeEnum.Unknown,
@@ -187,7 +187,7 @@ namespace Game.GameRules
                      new ItemModel {
                         Name = "Blood Stone",
                         Description = "Indcrease max health based on the number of enemies defeated",
-                        ImageURI = "bloodstone_no_bg.png",
+                        ImageURI = "bloodstone_white_bg.png",
                         Value = 9,
                         Location = ItemLocationEnum.Unknown,
                         Attribute = AttributeEnum.Unknown,
