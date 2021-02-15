@@ -226,31 +226,40 @@ namespace Game.Views
         /// <returns></returns>
         public Grid RenderItemInformation(string locationString, ItemLocationEnum locationEnum)
         {
-            Grid grid = new Grid
-            {
-                RowDefinitions =
-                    {
-                        new RowDefinition(),
-                        new RowDefinition(),
-                        new RowDefinition(),
 
-                    },
-                ColumnDefinitions =
-                    {
-                        new ColumnDefinition(),
-                        new ColumnDefinition(),
-                        new ColumnDefinition()
-                    }
-            };
-
+            var grid = new Grid { };
 
 
             if (locationString == null)
             {
 
+                grid.RowDefinitions.Add(new RowDefinition
+                {
+                    Height = new GridLength(100)
+                });
+
+                //Create empty boxview
+                var box = new BoxView
+                {
+                    BackgroundColor = Color.Transparent,
+                    
+                };
+
+                grid.Children.Add(box);
+
                 DeleteButtonVisual(locationEnum, false);
+
                 return grid;
             }
+
+            grid.RowDefinitions.Add(new RowDefinition());
+            grid.RowDefinitions.Add(new RowDefinition());
+            grid.RowDefinitions.Add(new RowDefinition());
+
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+
 
             //get item
             ItemModel item = ViewModel.Data.GetItem(locationString);
