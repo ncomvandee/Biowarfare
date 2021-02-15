@@ -406,7 +406,7 @@
                         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                         RefreshCommand="{Binding LoadItemsCommand}"
                         CachingStrategy="RecycleElement"
-                        HasUnevenRows="False"
+                        HasUnevenRows="True"
                         Margin="5,0,5,0"
                         ItemSelected="OnItemSelected"
                         >
@@ -414,7 +414,7 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Grid HorizontalOptions="FillAndExpand">
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="100"/>
                                                 <ColumnDefinition Width="*"/>
@@ -436,10 +436,12 @@
                                                Style="{StaticResource SimpleLabelTextStyle}"
                                                HorizontalTextAlignment="Center"
                                                VerticalTextAlignment="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand"
                                                />
 
                                             <ImageButton Source="icon_add.png"
-                                                HeightRequest="30"
+                                                HeightRequest="40"
                                                 WidthRequest="30"
                                                 Grid.Column="3" 
                                                 HorizontalOptions="End"
