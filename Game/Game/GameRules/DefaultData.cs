@@ -93,6 +93,37 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Unknown,
                     IsConsumable = true,
                  },
+
+                 new ItemModel {
+                    Name = "Adrenaline Syringe",
+                    Description = "A syringe that drastically increase a Cell's speed for a turn",
+                    ImageURI = "adrenaline_syringe_no_bg.png",
+                    Value = 9,
+                    Location = ItemLocationEnum.Unknown,
+                    Attribute = AttributeEnum.Unknown,
+                    IsConsumable = true,
+                 },
+
+                 new ItemModel {
+                    Name = "Band aid",
+                    Description = "Heals a Cell a small amount of HP when used",
+                    ImageURI = "bandaid_no_bg.png",
+                    Value = 9,
+                    Location = ItemLocationEnum.Unknown,
+                    Attribute = AttributeEnum.Unknown,
+                    IsConsumable = true,
+                 },
+
+                 new ItemModel {
+                    Name = "Gummy Multi-Vitamin",
+                    Description = "A delicious vitamin that boosts a Cell's defense",
+                    ImageURI = "gummy_multivitamin_no_bg.png",
+                    Value = 9,
+                    Location = ItemLocationEnum.Unknown,
+                    Attribute = AttributeEnum.Unknown,
+                    IsConsumable = true,
+                 },
+
             };
 
             //for (int i = 0; i < 20; i++)
