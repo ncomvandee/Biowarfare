@@ -53,6 +53,9 @@
     <Compile Update="Views\Characters\CellItemPage.xaml.cs">
       <DependentUpon>CellItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Items\ConsumableItemIndexPage.xaml.cs">
+      <DependentUpon>ConsumableItemIndexPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Monsters\MonsterCellReadPage.xaml.cs">
       <DependentUpon>MonsterCellReadPage.xaml</DependentUpon>
     </Compile>
@@ -99,9 +102,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Characters\CellReadPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Items\ConsumableItemIndexPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Items\ItemIndexNavigation.xaml">

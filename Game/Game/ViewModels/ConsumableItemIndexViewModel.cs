@@ -14,15 +14,15 @@ namespace Game.ViewModels
     /// Index View Model
     /// Manages the list of data records
     /// </summary>
-    public class ItemIndexViewModel : BaseViewModel<ItemModel>
+    public class ConsumableItemIndexViewModel : BaseViewModel<ItemModel>
     {
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
-        private static volatile ItemIndexViewModel instance;
+        private static volatile ConsumableItemIndexViewModel instance;
         private static readonly object syncRoot = new Object();
 
-        public static ItemIndexViewModel Instance
+        public static ConsumableItemIndexViewModel Instance
         {
             get
             {
@@ -32,7 +32,7 @@ namespace Game.ViewModels
                     {
                         if (instance == null)
                         {
-                            instance = new ItemIndexViewModel();
+                            instance = new ConsumableItemIndexViewModel();
                             instance.Initialize();
                         }
                     }
@@ -51,7 +51,7 @@ namespace Game.ViewModels
         /// 
         /// The constructor subscribes message listeners for crudi operations
         /// </summary>
-        public ItemIndexViewModel()
+        public ConsumableItemIndexViewModel()
         {
             Title = "Items";
 
@@ -138,7 +138,7 @@ namespace Game.ViewModels
         /// <returns></returns>
         public override List<ItemModel> GetDefaultData() 
         {
-            return DefaultData.LoadData(new ItemModel());
+            return DefaultData.LoadConsumableData(new ItemModel());
         }
 
         #endregion DataOperations_CRUDi
@@ -152,10 +152,8 @@ namespace Game.ViewModels
         /// <returns></returns>
         public override List<ItemModel> SortDataset(List<ItemModel> dataset)
         {
-            return dataset.Where(a => a.IsConsumable == false)
-                    .OrderBy(a => a.Name)
-                    .ThenBy(a => a.Description)
-                    .ToList();
+
+            return dataset.Where(a => a.IsConsumable == true).ToList();
         }
 
         #endregion SortDataSet

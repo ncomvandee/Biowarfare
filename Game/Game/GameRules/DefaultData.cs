@@ -71,7 +71,27 @@ namespace Game.GameRules
                     ImageURI = "disinfectant_spray_no_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.LeftFinger,
-                    Attribute = AttributeEnum.Attack
+                    Attribute = AttributeEnum.Attack,
+                 },
+
+            };
+
+            return datalist;
+        }
+
+        public static List<ItemModel> LoadConsumableData(ItemModel temp)
+        {
+            var datalist = new List<ItemModel>()
+            {
+               
+                 new ItemModel {
+                    Name = "Antidote",
+                    Description = "Cure you from poison ",
+                    ImageURI = "antidote_no_bg.png",
+                    Value = 9,
+                    Location = ItemLocationEnum.Unknown,
+                    Attribute = AttributeEnum.Unknown,
+                    IsConsumable = true,
                  },
             };
 
@@ -95,12 +115,12 @@ namespace Game.GameRules
             return datalist;
         }
 
-    /// <summary>
-    /// Load Example Scores
-    /// </summary>
-    /// <param name="temp"></param>
-    /// <returns></returns>
-    public static List<ScoreModel> LoadData(ScoreModel temp)
+        /// <summary>
+        /// Load Example Scores
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <returns></returns>
+        public static List<ScoreModel> LoadData(ScoreModel temp)
     {
         var datalist = new List<ScoreModel>()
             {
