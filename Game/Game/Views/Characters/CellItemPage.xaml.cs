@@ -102,6 +102,29 @@ namespace Game.Views
             UpdatePageBindingContext();
         }
 
+        public void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            ItemModel data = args.SelectedItem as ItemModel;
+            if(data == null)
+            {
+                return;
+            }
+
+            ItemPopUpFrame.IsVisible = true;
+            ItemPopUpImage.Source = data.ImageURI;
+            ItemPopUpName.Text = data.Name;
+            ItemPopUpDescription.Text = data.Description;
+            ItemPopUpLocation.Text = data.Location.ToString();
+            ItemPopUpAttribute.Text = data.Attribute.ToMessage();
+            ItemPopUpValue.Text = "+ " + data.Value.ToString();
+
+
+            // Manually deselect item.
+            ItemsListView.SelectedItem = null;
+        }
+
+      
+
         #endregion Button
 
         /// <summary>
