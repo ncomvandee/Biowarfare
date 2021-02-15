@@ -1455,7 +1455,9 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TextColor" Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="Margin" Value="0, 0, 0, 20"/>
+                
 
             </Style>
 
