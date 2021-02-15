@@ -77,20 +77,12 @@
 
                                             </StackLayout>
 
-                                            <Label Text="{Binding GetTextForAttributeProgressBar}" 
+                                            <Label Text="{Binding Description}" 
                                                    Grid.Row="1" 
-                                                   Style="{StaticResource ItemProgressBarLabelStyle}"
-                                                   x:Name="AtttributeName"
-                                                       />
-
-
-                                            <ProgressBar Progress="{Binding GetValueForProgressBar}"
-                                                         Grid.Row="1"
-                                                         Style="{StaticResource ItemProgressBarStyle}"
-                                                         HeightRequest="10"
-                                                         Margin="40, 0, 20, 0"
-                                                         x:Name="AttributeBar"
-                                                             />
+                                                   HorizontalTextAlignment="Center"
+                                                   HorizontalOptions="Center"
+                                                   Padding="5"
+                                                   />
 
                                         </Grid>
                                     </Frame>
