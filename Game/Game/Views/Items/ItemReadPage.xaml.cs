@@ -36,7 +36,7 @@ namespace Game.Views
             this.ViewModel.Title = data.Data.Name + " Information";
 
             //get the correct icon for attribute
-            AttributeIcon.Source = ViewModel.Data.Attribute.ToImage();
+            AttributeIcon.Source = ViewModel.Data.Attribute.ToItemImage();
 
             //get the name for location
             LocationName.Text = ViewModel.Data.Location.ToMessage();

@@ -101,7 +101,7 @@ namespace Game.Models
         }
 
         /// <summary>
-        /// Get Icon image for attribute
+        /// Get Character Color Icon image for attribute
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -135,12 +135,48 @@ namespace Game.Models
             return msg;
         }
 
+
+        /// <summary>
+        /// Get Item color Icon image for attribute
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string ToItemImage(this AttributeEnum value)
+        {
+            var msg = "";
+
+            switch (value)
+            {
+                case AttributeEnum.Attack:
+                    msg = "item_attack.png";
+                    break;
+
+                case AttributeEnum.Defense:
+                    msg = "defense_icon.png";
+                    break;
+
+                case AttributeEnum.Speed:
+                    msg = "speed_icon.png";
+                    break;
+
+                case AttributeEnum.CurrentHealth:
+                    msg = "heart_icon.png";
+                    break;
+
+                case AttributeEnum.MaxHealth:
+                    msg = "heart_icon.png";
+                    break;
+            }
+
+            return msg;
+        }
+
     }
 
-    /// <summary>
-    /// Helper for the Attribute Enum Class
-    /// </summary>
-    public static class AttributeEnumHelper
+/// <summary>
+/// Helper for the Attribute Enum Class
+/// </summary>
+public static class AttributeEnumHelper
     {
         /// <summary>
         /// Returns a list of strings of the enum for Attribute
