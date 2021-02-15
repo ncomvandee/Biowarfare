@@ -298,25 +298,6 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Print the item of a location if not null. Otherwise print empty string
-        /// </summary>
-        /// <param name="locationLabel"> The location of the label</param>
-        /// <param name="locationString">The string of the location</param>
-        public void GetCharacterItemHelper(Label locationLabel, string locationString, ItemLocationEnum itemLocationEnum)
-        {
-            if(locationString == null)
-            {
-                locationLabel.Text = "";
-                DeleteButtonVisual(itemLocationEnum, false);
-            }
-            else
-            {
-                locationLabel.Text = ViewModel.Data.GetItem(locationString).FormatOutput();
-                DeleteButtonVisual(itemLocationEnum, true);
-            }
-        }
-
-        /// <summary>
         /// Make Delete Button invisible if no item equip in that location
         /// </summary>
         /// <param name="location"></param>
