@@ -10,82 +10,69 @@
     <NavigationPage.TitleView>
         <Label Text="Osmosis Jones" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Title"  Margin="0, 0, 75, 0"/>
     </NavigationPage.TitleView>
-      
+
     <ContentPage.Content>
         <ScrollView>
 
-            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Frame 
-                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
-                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       CornerRadius="20"
-                       WidthRequest="200"
-                       HeightRequest="150"
-                       Padding="10"
-                       Margin="20"
-                       >
+            <StackLayout Style="{StaticResource VerticalStack}" 
+                         HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand"
+                         >
+                
+                <Frame Style="{StaticResource AboutFrameStyle}">
 
                     <StackLayout>
 
-                        <Frame 
-                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
-                       BorderColor="{StaticResource PrimaryForegroundPurple}"
-                       CornerRadius="50"
-                      
-                       >
+                        <Frame Style="{StaticResource AboutTitleStyle}">
 
-                            <Label Text="Developers" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontSize="Title" Padding="10" />
+                            <Label Text="Developers" 
+                                   Style="{StaticResource AboutTitleLabelStyle}" 
+                                   />
 
                         </Frame>
 
-
-
-                        <Label Text="Jara Lindsay" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Ken Comvandee" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        <Label Text="Hung Huynh" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                        <Label Text="Jara Lindsay" 
+                               Style="{StaticResource CellNameLabelStyle}" 
+                               />
+                        
+                        <Label Text="Ken Comvandee" 
+                               Style="{StaticResource CellNameLabelStyle}" 
+                               />
+                        
+                        <Label Text="Hung Huynh" 
+                               Style="{StaticResource CellNameLabelStyle}" 
+                               />
 
                     </StackLayout>
                 </Frame>
 
-                <Frame BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
-                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       CornerRadius="20"
-                       WidthRequest="200"
-                       HeightRequest="150"
-                       Padding="10"
-                       Margin="10"
-                       >
-                   
-                        <StackLayout>
+                <Frame Style="{StaticResource AboutFrameStyle}">
 
-                        <Frame 
-                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
-                       BorderColor="{StaticResource PrimaryForegroundPurple}"
-                       CornerRadius="50"
-                      
-                       >
+                    <StackLayout>
 
+                        <Frame Style="{StaticResource AboutTitleStyle}">
 
-
-                            <Label Text="Designers" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" FontSize="Title" Padding="10"  />
+                            <Label Text="Designers" 
+                                   Style="{StaticResource AboutTitleLabelStyle}" 
+                                   />
 
                         </Frame>
 
-                        <Label Text="Nathan Koempel" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                            <Label Text="Jaida Ho" Style="{StaticResource CellNameLabelStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                        </StackLayout>
+                        <Label Text="Nathan Koempel" 
+                               Style="{StaticResource CellNameLabelStyle}" 
+                             
+                               />
 
+                        <Label Text="Jaida Ho" 
+                                   Style="{StaticResource CellNameLabelStyle}" 
+                                   />
 
+                    </StackLayout>
                 </Frame>
 
 
-
                 <!--Database Settings Frame-->
-                <Frame Style="{StaticResource BasicScoreFrameStyle}"
-                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
-                       BorderColor="{StaticResource PrimaryForegroundPurple}"
-                       Padding="10"
-                       Margin="0, 10, 0, 0">
+                <Frame Style="{StaticResource AboutDatabaseFrameStyle}">
                     <StackLayout Style="{StaticResource VerticalStack}">
                         <StackLayout Style="{StaticResource HorizontalStack}">
 

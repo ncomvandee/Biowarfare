@@ -1334,6 +1334,48 @@
 
             <!--___________________________________________-->
 
+            <!--Outer frame for about page-->
+            <Style TargetType="Frame"
+               x:Key="AboutFrameStyle"
+               >
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="20"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+            <!--Inner title frame for about page-->
+            <Style TargetType="Frame"
+               x:Key="AboutTitleStyle"
+               >
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="CornerRadius" Value="50"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Database settings frame for about page-->
+            <Style TargetType="Frame"
+               x:Key="AboutDatabaseFrameStyle"
+                   BasedOn="{StaticResource BasicScoreFrameStyle}"
+               >
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
 
 
 
@@ -1601,6 +1643,19 @@
 
                 <Setter Property="TextColor" Value="{StaticResource PrimaryScoreBackground}"/>
                 <Setter Property="FontSize" Value="Small"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Title label in about page style-->
+            <Style TargetType="Label"
+               x:Key="AboutTitleLabelStyle"
+               BasedOn="{StaticResource CellNameLabelStyle}"
+               >
+
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="Padding" Value="5"/>
 
             </Style>
 
