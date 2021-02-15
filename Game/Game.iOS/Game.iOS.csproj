@@ -342,4 +342,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\x_ray_gun_white_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\damage_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\defense_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hp_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\range_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\speed_green.png" />
+  </ItemGroup>
 </Project>
