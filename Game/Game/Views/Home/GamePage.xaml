@@ -16,6 +16,7 @@
                 <StackLayout Orientation="Vertical">
                     <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
                            HeightRequest="130"
+                           WidthRequest="350"
                            Margin="0, 5, 0, 0" 
                            Grid.Row="0"
                            >
@@ -25,9 +26,10 @@
                     <StackLayout>
                         <Button
                            
-                            Text="Village"
+                            Text="Immune System"
                             Grid.Row="1"
                             Style="{StaticResource GamePageButtonStyle}"
+                            WidthRequest="175"
                             Clicked="VillageButton_Clicked"/>
 
 
@@ -48,18 +50,19 @@
 
                     <StackLayout>
                         <Button
-                            Text="Auto"
+                            Text="About"
                             Grid.Row="3"
                             Style="{StaticResource SmallGamePageButtonStyle}"
-                            Clicked="AutobattleButton_Clicked"/>
+                            WidthRequest="110"
+                            Clicked="AboutButton_Clicked"/>
 
                     </StackLayout>
 
-                    <Button Text="About"
+                    <Button Text="Auto"
                             Grid.Row="4"
                             Style="{StaticResource SmallGamePageButtonStyle}"
                             Margin="180, 20, 0, 0"
-                            Clicked="AboutButton_Clicked"/>
+                            Clicked="AutobattleButton_Clicked"/>
                     
                 </StackLayout>
             </Grid>
