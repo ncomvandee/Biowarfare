@@ -92,7 +92,7 @@
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30"
                                             x:Name="HeadDeleteButton"
                                             Grid.Column="3" 
@@ -136,7 +136,7 @@
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30" 
                                             x:Name="NeckLessDeleteButton"
                                             Grid.Column="3" 
@@ -180,7 +180,7 @@
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30" 
                                             x:Name="PrimaryHandDeleteButton" 
                                             Grid.Column="3" 
@@ -224,7 +224,7 @@
                                                  Grid.Column="1">
 
                                         </StackLayout>
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30" 
                                             x:Name="OffHandDeleteButton"
                                             Grid.Column="3" 
@@ -270,7 +270,7 @@
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30" 
                                             x:Name="LeftFingerDeleteButton"
                                             Grid.Column="3" 
@@ -316,7 +316,7 @@
                                         </StackLayout>
 
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30"
                                             x:Name="RightFingerDeleteButton" 
                                             Grid.Column="3" 
@@ -361,7 +361,7 @@
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_delete.png"  
+                                        <ImageButton Source="icon_subtract.png"  
                                             HeightRequest="30"  
                                             x:Name="FeetDeleteButton"
                                             Grid.Column="3" 
