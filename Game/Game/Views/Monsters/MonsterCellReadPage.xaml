@@ -98,7 +98,7 @@
                         <Label Style="{StaticResource MonsterCellNameLabelStyle}"
                            Text="Attributes" 
                            Grid.Row="0" 
-                           />
+                           Padding="5"/>
 
                    </Frame>
 
