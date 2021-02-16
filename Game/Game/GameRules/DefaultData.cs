@@ -159,7 +159,7 @@ namespace Game.GameRules
                     ImageURI = "chemo_port_of_pain_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Necklass,
-                    Attribute = AttributeEnum.Unknown,
+                    Attribute = AttributeEnum.Defense,
                     IsUnique = true,
                  },
 
@@ -170,7 +170,7 @@ namespace Game.GameRules
                         ImageURI = "x_ray_gun_white_bg.png",
                         Value = 9,
                         Location = ItemLocationEnum.PrimaryHand,
-                        Attribute = AttributeEnum.Unknown,
+                        Attribute = AttributeEnum.Attack,
                         IsUnique = true,
                      },
 
@@ -180,7 +180,7 @@ namespace Game.GameRules
                         ImageURI = "mri_headband_no_bg.png",
                         Value = 9,
                         Location = ItemLocationEnum.Head,
-                        Attribute = AttributeEnum.Unknown,
+                        Attribute = AttributeEnum.Defense,
                         IsUnique = true,
                      },
 
@@ -190,7 +190,7 @@ namespace Game.GameRules
                         ImageURI = "bloodstone_white_bg.png",
                         Value = 9,
                         Location = ItemLocationEnum.OffHand,
-                        Attribute = AttributeEnum.Unknown,
+                        Attribute = AttributeEnum.MaxHealth,
                         IsUnique = true,
                      },
 
