@@ -24,12 +24,13 @@
     <ContentPage.Content>
 
         <StackLayout  HorizontalOptions="CenterAndExpand">
-            <StackLayout Orientation="Horizontal">
-                
-                <Button Text="-" 
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <ImageButton Source="icon_subtract.png"
                         Clicked="LevelDownButtonClicked" 
                         x:Name="LevelDownButton"
-                        Style="{StaticResource CharacterLevelDownButtonStyle}"
+                        HeightRequest="30"
+                        WidthRequest="30"
                         />
 
                 <Frame Grid.Row="0"
@@ -38,18 +39,17 @@
 
                     <Label Grid.Row="0" 
                            Text="{Binding Data.Level}" 
-                           x:Name="LevelEntry"
+                           x:Name="LevelEntry" 
                            Style="{StaticResource LevelTextDisplayStyle}"
                            />
-                    
                 </Frame>
 
-                <Button Text="+" 
+                <ImageButton Source="icon_add.png" 
                         Clicked="LevelUpButtonClicked" 
                         x:Name="LevelUpButton"
-                        Style="{StaticResource CharacterLevelUpButtonStyle}"
-                        />
-                
+                        HeightRequest="30"
+                        WidthRequest="30"/>
+
             </StackLayout>
 
             <Frame Style="{StaticResource CharacterCreateFrameStyle}">
