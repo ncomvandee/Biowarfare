@@ -33,8 +33,10 @@ namespace Game.Models
         // The Value item modifies.  So a ring of Health +3, has a Value of 3
         public int Value { get; set; } = 0;
 
+        // Identify the item as Consumable
         public bool IsConsumable { get; set; } = false;
 
+        // Identify the item as Unique drop
         public bool IsUnique { get; set; } = false;
 
         //// Count of how many
