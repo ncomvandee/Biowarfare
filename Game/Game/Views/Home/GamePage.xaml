@@ -15,6 +15,7 @@
 
                 <StackLayout Orientation="Vertical">
                     <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
+                           HeightRequest="130"
                            Margin="0, 5, 0, 0" 
                            Grid.Row="0"
                            >
