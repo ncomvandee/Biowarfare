@@ -101,7 +101,11 @@ namespace Game.Views
             ViewModel.Data.RemoveItem(locationEnum);
             UpdatePageBindingContext();
         }
-
+        /// <summary>
+        /// Show popup when click on item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             ItemModel data = args.SelectedItem as ItemModel;
