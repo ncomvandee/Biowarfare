@@ -52,7 +52,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Finger Glove",
                     Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
-                    ImageURI = "finger_glove_no_bg.png",
+                    ImageURI = "finger_glove_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.LeftFinger,
                     Attribute = AttributeEnum.Defense,
@@ -87,7 +87,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Antidote",
                     Description = "Cure you from poison ",
-                    ImageURI = "antidote_no_bg.png",
+                    ImageURI = "antidote_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
                     Attribute = AttributeEnum.Unknown,
@@ -97,7 +97,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Adrenaline Syringe",
                     Description = "A syringe that drastically increase a Cell's speed for a turn",
-                    ImageURI = "adrenaline_syringe_no_bg.png",
+                    ImageURI = "adrenaline_syringe_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
                     Attribute = AttributeEnum.Unknown,
@@ -107,7 +107,7 @@ namespace Game.GameRules
                  new ItemModel {
                     Name = "Band aid",
                     Description = "Heals a Cell a small amount of HP when used",
-                    ImageURI = "bandaid_no_bg.png",
+                    ImageURI = "band_aid_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
                     Attribute = AttributeEnum.Unknown,
