@@ -32,13 +32,19 @@
 
                         <StackLayout Orientation="Horizontal" 
                                      HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand" 
                                     >
 
                             <Label Text="{Binding Data.Job}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
                                />
 
-                            <BoxView Color="{StaticResource PrimaryCharacterBackground}" WidthRequest="2" HeightRequest="1" ></BoxView>
+                            <!--<BoxView Color="{StaticResource PrimaryCharacterBackground}" WidthRequest="2" HeightRequest="1" ></BoxView>-->
+
+
+                            <Label Text="|" 
+                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                               />
 
                             <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CharacterCellNameLabelStyle}"
