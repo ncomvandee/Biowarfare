@@ -2274,6 +2274,51 @@
             <!--___________________________________________-->
 
 
+            <!--Item create/update slider-->
+            <Style TargetType="Slider"
+                   x:Key="ItemCreateSliderStyle"
+                   >
+
+                <Setter Property="ThumbColor"  Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="WidthRequest"  Value="200"/>
+                <Setter Property="HorizontalOptions"  Value="StartAndExpand"/>
+
+
+
+            </Style>
+
+
+            <!--___________________________________________-->
+
+
+
+
+            
+
+
+            <!-- Editor -->
+            
+            
+            
+            
+            
+            
+            
+
+            <!--Item create page editor-->
+            <Style TargetType="Editor"
+                   x:Key="ItemCreateEditorStyle"
+                   >
+
+                <Setter Property="BackgroundColor"  Value="Transparent"/>
+                <Setter Property="PlaceholderColor"  Value="{StaticResource PrimaryItemForeground}"/>
+                <Setter Property="FontSize"  Value="Default"/>
+                <Setter Property="HeightRequest"  Value="100"/>
+                <Setter Property="TextColor"  Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
