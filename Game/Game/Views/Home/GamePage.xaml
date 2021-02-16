@@ -20,6 +20,11 @@
                            Margin="0, 5, 0, 0" 
                            Grid.Row="0"
                            >
+                        <Label Text="BioWarfare"
+                               FontSize="Header"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"/>
 
                     </Frame>
 
