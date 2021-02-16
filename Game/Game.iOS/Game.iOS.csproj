@@ -378,4 +378,16 @@
   <ItemGroup>
     <BundleResource Include="icon_add.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_subtract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\antidote_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\band_aid_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\finger_glove_bg.png" />
+  </ItemGroup>
 </Project>
