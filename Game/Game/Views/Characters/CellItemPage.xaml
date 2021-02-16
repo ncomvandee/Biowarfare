@@ -430,7 +430,7 @@
                                             <Frame BackgroundColor="White"
                                                    HeightRequest="60"
                                                    WidthRequest="60"
-                                                   CornerRadius="20"
+                                                   CornerRadius="100"
                                                    Grid.Column="0"
                                                    BorderColor="White">
                                                 
