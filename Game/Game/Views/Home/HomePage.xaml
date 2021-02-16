@@ -25,6 +25,7 @@
                     <Frame Style="{StaticResource HomePageFramestyle}"
                            Grid.Row="0"
                            >
+                        <Image Source="nkcell_no_bg.png" />
 
                     </Frame>
 
