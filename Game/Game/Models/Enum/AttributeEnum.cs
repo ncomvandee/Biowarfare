@@ -74,6 +74,11 @@ namespace Game.Models
             return Message;
         }
 
+        /// <summary>
+        /// Get the abbrivation per specific attribute
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToAbbrivation(this AttributeEnum value)
         {
             var msg = "";
