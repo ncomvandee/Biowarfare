@@ -489,19 +489,20 @@
                 </StackLayout>
                 
                 <!--#Popup Window-->
-                <Frame 
+                <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,200,0,0">
+                    <Frame 
                    BackgroundColor="{StaticResource PrimaryCharacterForeground}"
                    BorderColor="{StaticResource SecondaryAccentColor}"
                    CornerRadius="20"
                    x:Name="ItemPopUpFrame"
                    IsVisible="false">
 
-                    <StackLayout VerticalOptions="CenterAndExpand"
+                        <StackLayout VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
                              HeightRequest="500"
                              WidthRequest="500" >
 
-                        <ImageButton Source="icon_cancel.png"
+                            <ImageButton Source="icon_cancel.png"
                                  WidthRequest="30" 
                                  HeightRequest="40"
                                  HorizontalOptions="End"
@@ -509,13 +510,13 @@
                                  Clicked="ClosePopup_Clicked"
                                  />
 
-                        <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
+                            <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
                            BorderColor="Transparent"
                            HeightRequest="30"
                            CornerRadius="20"
                            Padding="5">
 
-                            <Label Text="Name goes here, I guess"
+                                <Label Text="Name goes here, I guess"
                                x:Name="ItemPopUpName"
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="Center"
@@ -523,74 +524,76 @@
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                        </Frame>
+                            </Frame>
 
-                        <Frame BackgroundColor="White"
+                            <Frame BackgroundColor="White"
                                CornerRadius="100"
                                WidthRequest="100"
                                HeightRequest="100"
                                BorderColor="Transparent"
                                Padding="10">
 
-                            <Image Source="face_mask_no_bg.png"
+                                <Image Source="face_mask_no_bg.png"
                                x:Name="ItemPopUpImage"/>
 
-                        </Frame>
+                            </Frame>
 
-                        <Grid Padding="10" RowSpacing="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                                <RowDefinition Height="AUTO" />
-                            </Grid.RowDefinitions>
+                            <Grid Padding="10" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                </Grid.RowDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="90" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="90" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
 
-                            <Label Text="Description: "
+                                <Label Text="Description: "
                                Grid.Row="0"
                                Grid.Column="0"
                                FontAttributes="Bold"
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                            <Label x:Name="ItemPopUpDescription"
+                                <Label x:Name="ItemPopUpDescription"
                                Grid.Row="0"
                                Grid.Column="1"
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                            <Label Text="Location: "
+                                <Label Text="Location: "
                                Grid.Row="1"
                                Grid.Column="0"
                                FontAttributes="Bold"
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                            <Label x:Name="ItemPopUpLocation"
+                                <Label x:Name="ItemPopUpLocation"
                                Grid.Row="1"
                                Grid.Column="1" 
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                            <Label x:Name="ItemPopUpAttribute"
+                                <Label x:Name="ItemPopUpAttribute"
                                Grid.Row="2"
                                Grid.Column="0"
                                FontAttributes="Bold"
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                            <Label x:Name="ItemPopUpValue"
+                                <Label x:Name="ItemPopUpValue"
                                Grid.Row="2"
                                Grid.Column="1" 
                                TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                        </Grid>
-                    </StackLayout>
-                </Frame>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+       
                 <!--#endPopup Window-->
             </Grid>
                 
