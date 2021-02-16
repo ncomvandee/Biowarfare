@@ -23,7 +23,6 @@
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     RefreshCommand="{Binding LoadItemsCommand}"
                     CachingStrategy="RecycleElement"
-                    ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
                     HorizontalScrollBarVisibility="Default"
                     >

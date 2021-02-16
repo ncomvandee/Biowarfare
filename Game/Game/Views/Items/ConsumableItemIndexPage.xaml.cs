@@ -36,26 +36,6 @@ namespace Game.Views.Items
         }
 
         /// <summary>
-        /// The row selected from the list
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        public async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            ItemModel data = args.SelectedItem as ItemModel;
-            if (data == null)
-            {
-                return;
-            }
-
-            // Open the Read Page
-            await Navigation.PushAsync(new ItemReadPage(new GenericViewModel<ItemModel>(data)));
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
-        }
-
-        /// <summary>
         /// Call to Add a new record
         /// </summary>
         /// <param name="sender"></param>
