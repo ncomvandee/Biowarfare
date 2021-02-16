@@ -55,7 +55,7 @@
                                              Grid.Column="2"
                                              >
 
-                                        <Label Text="Equipqed Item" 
+                                        <Label Text="Equipped Item" 
                                            Style="{StaticResource CharacterCellNameLabelStyle}"
                                            Margin="0"
                                            />
