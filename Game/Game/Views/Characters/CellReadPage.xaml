@@ -110,9 +110,8 @@
                             x:Name="ItemAttributeToggleButton"
                             Clicked="ItemAttributeToggle"/>
 
-                        <ScrollView Orientation="Both"
+                        <ScrollView Orientation="Horizontal"
                                     HorizontalScrollBarVisibility="Default"
-                                    VerticalScrollBarVisibility="Default"
                                     Grid.Row="1" 
                                     x:Name="ItemsFrame">
                             

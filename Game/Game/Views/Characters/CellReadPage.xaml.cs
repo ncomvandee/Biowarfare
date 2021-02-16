@@ -173,6 +173,7 @@ namespace Game.Views
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalTextAlignment = TextAlignment.Center,
                 HorizontalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.HeadTruncation
 
             };
 
