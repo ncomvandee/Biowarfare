@@ -174,7 +174,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.RightFinger:
-                    image = "finger_glove_no_bg.png";
+                    image = "finger_glove_bg.png";
                     break;
 
                 case ItemLocationEnum.LeftFinger:
