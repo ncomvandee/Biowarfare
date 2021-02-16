@@ -284,7 +284,7 @@ namespace Game.Views
             grid.Children.Add(new Image
             {
                 WidthRequest = 20,
-                Source = item.Attribute.ToItemImage(),
+                Source = item.Attribute.ToImage(),
 
             }, 0, 1);
 
@@ -301,7 +301,7 @@ namespace Game.Views
             //Damge Image
             grid.Children.Add(new Image
             {
-                Source = "item_damage.png",
+                Source = "damage_blue.png",
                 WidthRequest = 20,
 
             }, 1, 1);
@@ -318,7 +318,7 @@ namespace Game.Views
             //item Range
             grid.Children.Add(new Image
             {
-                Source = "item_range.png",
+                Source = "range_blue.png",
                 WidthRequest = 20,
 
             }, 2, 1);
