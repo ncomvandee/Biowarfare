@@ -382,13 +382,15 @@
 
                     <!--Picker-->
                     <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
-                      BackgroundColor="{StaticResource PrimaryCharacterMidground}"
+                      BackgroundColor="{StaticResource PrimaryCharacterForeground}"
                       WidthRequest="200" 
                       Padding="10"
                       >
 
                         <Picker 
                         Style="{StaticResource CreatePickerStyle}"
+                        TextColor="{StaticResource PrimaryCharacterBackground}"
+                        BackgroundColor="{StaticResource PrimaryCharacterForeground}"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListMessageCharacter}" 
                         SelectedItem="{Binding SelectedLocation, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}" 
                         x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
@@ -463,12 +465,12 @@
                              >
 
                         <Button Text="Save" 
-                            Style="{StaticResource PrimaryButtonStyle}"
+                            Style="{StaticResource CharacterPrimaryButtonStyle}"
                             Clicked="SaveButton_Clicked"
                             />
 
                         <Button Text="Cancel" 
-                            Style="{StaticResource PrimaryButtonStyle}"
+                            Style="{StaticResource CharacterPrimaryButtonStyle}"
                             Clicked="CancelButton_Clicked"
                             />
 
