@@ -61,7 +61,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.Necklass:
-                    Message = "Neckless";
+                    Message = "Necklace";
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
