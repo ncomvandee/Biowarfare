@@ -21,7 +21,7 @@
                            Grid.Row="0"
                            >
                         <Label Text="BioWarfare"
-                               FontSize="Header"
+                               FontSize="Title"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
                                TextColor="{StaticResource PrimaryBackgroundPurple}"/>
