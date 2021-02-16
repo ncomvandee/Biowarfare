@@ -4,6 +4,12 @@
              x:Class="Game.Views.VillagePage"
              >
 
+
+    <NavigationPage.TitleView>
+        <Label Text="Immune System" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
 
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
