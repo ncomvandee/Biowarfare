@@ -9,7 +9,14 @@
              >
 
     <NavigationPage.TitleView>
-        <Label Text="Delete Item" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        
+        <Label Text="Delete Item" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+        
     </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout Orientation="Vertical" >
