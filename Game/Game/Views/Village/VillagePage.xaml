@@ -6,7 +6,12 @@
 
 
     <NavigationPage.TitleView>
-        <Label Text="Immune System" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 0, 55, 0"/>
+        <Label Text="Immune System" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title" Margin="0, 0, 55, 0"
+                TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
     </NavigationPage.TitleView>
 
 
