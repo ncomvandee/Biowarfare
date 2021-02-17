@@ -15,7 +15,14 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <Label Text="Create New Cell" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        
+        <Label Text="Create New Cell" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title" 
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
