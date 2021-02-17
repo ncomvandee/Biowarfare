@@ -18,7 +18,14 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <Label x:Name="TitlePage" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        
+        <Label x:Name="TitlePage" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
