@@ -17,7 +17,14 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        
+        <Label Text="{Binding Title}" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+        
     </NavigationPage.TitleView>
 
 
