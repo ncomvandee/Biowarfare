@@ -77,6 +77,11 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
+        /// <summary>
+        /// Render the image per item catagories selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnCatagoryChange(object sender, EventArgs e)
         {
             ItemCatagoryPickerFrame.BackgroundColor = Color.FromHex("#BBC300");
@@ -102,6 +107,11 @@ namespace Game.Views
             ViewModel.Data.ImageURI = ImageSource;
         }
 
+        /// <summary>
+        /// Set the attribute label as attribute selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnPickerChange(object sender, EventArgs e)
         {
             AttributePickerFrame.BackgroundColor = Color.FromHex("#BBC300");
@@ -110,7 +120,11 @@ namespace Game.Views
             StatIcon.Text = ViewModel.Data.Attribute.ToAbbrivation();
         }
     
-
+        /// <summary>
+        /// Change attribute value based on slider
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnSliderChange(object sender, ValueChangedEventArgs e)
         {
             StatValue.Text = String.Format("{0}", (int)e.NewValue);
