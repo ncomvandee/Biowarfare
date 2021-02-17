@@ -100,7 +100,7 @@ namespace Game.GameRules
                     ImageURI = "adrenaline_syringe_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
-                    Attribute = AttributeEnum.Unknown,
+                    Attribute = AttributeEnum.Speed,
                     IsConsumable = true,
                  },
 
@@ -110,7 +110,7 @@ namespace Game.GameRules
                     ImageURI = "band_aid_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
-                    Attribute = AttributeEnum.Unknown,
+                    Attribute = AttributeEnum.CurrentHealth,
                     IsConsumable = true,
                  },
 
@@ -120,7 +120,7 @@ namespace Game.GameRules
                     ImageURI = "gummy_multivitamin_white_bg.png",
                     Value = 9,
                     Location = ItemLocationEnum.Unknown,
-                    Attribute = AttributeEnum.Unknown,
+                    Attribute = AttributeEnum.Defense,
                     IsConsumable = true,
                  },
 
