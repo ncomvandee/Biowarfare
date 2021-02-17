@@ -11,6 +11,17 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
+    <NavigationPage.TitleView>
+
+        <Label Text="Score Read" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <StackLayout>
             <Frame Grid.Row="0" 
