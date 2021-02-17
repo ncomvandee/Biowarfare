@@ -23,6 +23,7 @@
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" 
                FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
                />
         
     </NavigationPage.TitleView>
