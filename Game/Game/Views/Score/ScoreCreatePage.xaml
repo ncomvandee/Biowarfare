@@ -8,7 +8,6 @@
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ScoreCreatePage"
-             Title="{Binding Title}"
              Style="{StaticResource ScoreContentPage}">
 
     <ContentPage.Resources>
@@ -16,6 +15,17 @@
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <NavigationPage.TitleView>
+
+        <Label Text="{Binding Title}" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center">
