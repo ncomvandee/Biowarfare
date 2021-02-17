@@ -5,9 +5,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Game.Views.ScoreDeletePage"
-             Title="{Binding Title}"
              Style="{StaticResource ScoreContentPage}">
 
+    <NavigationPage.TitleView>
+
+        <Label Text="{Binding Title}" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
+
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout>
             <Grid  Style="{StaticResource IndexGridViewStyle}"
