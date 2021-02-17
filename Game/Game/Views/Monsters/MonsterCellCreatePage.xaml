@@ -53,6 +53,7 @@
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
                    Style="{StaticResource MonsterCreateEntryStyle}"
+                   MaxLength="7"
                    />
 
             <Frame Style="{StaticResource MonsterStatsFrameStyle}"

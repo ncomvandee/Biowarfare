@@ -56,7 +56,8 @@
             <Entry Text="{Binding Data.Name}" 
                    Placeholder="Enter name here" 
                    Style="{StaticResource MonsterCreateEntryStyle}"
-                   x:Name="NameEntry"/>
+                   x:Name="NameEntry"
+                   MaxLength="7"/>
 
             <Frame Style="{StaticResource MonsterStatsFrameStyle}"
                    >
