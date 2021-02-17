@@ -8,7 +8,6 @@
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local="using:Game.Models"
              x:Class="Game.Views.MonsterCellUpdatePage"
-             Title="{Binding Title}"
              Style="{StaticResource MonsterContentPage}"
              >
 
