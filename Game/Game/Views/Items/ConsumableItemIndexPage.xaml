@@ -24,6 +24,7 @@
                     RefreshCommand="{Binding LoadItemsCommand}"
                     CachingStrategy="RecycleElement"
                     HasUnevenRows="true"
+                    ItemSelected="OnItemSelected"
                     HorizontalScrollBarVisibility="Default"
                     >
                 

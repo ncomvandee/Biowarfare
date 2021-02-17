@@ -171,6 +171,10 @@ namespace Game.Models
                 case AttributeEnum.MaxHealth:
                     msg = "hp_green.png";
                     break;
+
+                case AttributeEnum.Unknown:
+                    msg = "item_value.png";
+                    break;
             }
 
             return msg;
