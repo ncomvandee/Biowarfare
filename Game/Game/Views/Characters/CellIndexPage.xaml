@@ -16,7 +16,12 @@
     
 
     <NavigationPage.TitleView>
-        <Label Text="Cell Index" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        <Label Text="Cell Index" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Title"
+               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               />
     </NavigationPage.TitleView>
 
 
