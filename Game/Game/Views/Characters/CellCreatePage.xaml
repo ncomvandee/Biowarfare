@@ -81,6 +81,7 @@
                    Placeholder="Enter name here"
                    x:Name="NameEntry"
                    Style="{StaticResource CharacterCreateEntryStyle}"
+                   MaxLength="7"
                    />
 
             <Frame Style="{StaticResource CharacterStatsFrameStyle}"
