@@ -54,7 +54,7 @@ namespace Game.GameRules
                     Description = "A flexible glove to keep the germs away. Adds to a cell’s defense by default.  ",
                     ImageURI = "finger_glove_bg.png",
                     Value = 9,
-                    Location = ItemLocationEnum.LeftFinger,
+                    Location = ItemLocationEnum.RightFinger,
                     Attribute = AttributeEnum.Defense,
                 },
                 new ItemModel {
@@ -70,7 +70,7 @@ namespace Game.GameRules
                     Description = "A full canister to ward away enemies, boosts a cell’s attack by default. ",
                     ImageURI = "disinfectant_spray_white_bg.png",
                     Value = 9,
-                    Location = ItemLocationEnum.RightFinger,
+                    Location = ItemLocationEnum.LeftFinger,
                     Attribute = AttributeEnum.Attack,
                  },
 
