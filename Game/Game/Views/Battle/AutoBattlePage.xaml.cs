@@ -22,11 +22,16 @@ namespace Game.Views
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public AutoBattlePage ()
+		public AutoBattlePage()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 
+		/// <summary>
+		/// Defines what happens when the AutoBattleButton is clicked.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		public async void AutobattleButton_Clicked(object sender, EventArgs e)
 		{
 			// Call into Auto Battle from here to do the Battle...
@@ -36,15 +41,18 @@ namespace Game.Views
 			{
 				ExperienceTotal = 300,    // Enough for next level
 				Name = "Mike Level Example",
-				Speed = 100,	// Go first
+				Speed = 100,    // Go first
 			};
 
 			var CharacterPlayer = new PlayerInfoModel(Character);
 
+			// Turn on the Koenig version for now...
+			BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+
 			BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
-			await AutoBattle.RunAutoBattle();
-			
+			await BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle();
+
 			var BattleMessage = string.Format("Done {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
 			BattleMessageValue.Text = BattleMessage;
