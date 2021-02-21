@@ -201,7 +201,7 @@ namespace UnitTests.ViewModels
             first.Name = "test";
 
             // Make a Delete Page
-            var myPage = new Game.Views.MonsterUpdatePage(true);
+            var myPage = new Game.Views.MonsterCellUpdatePage(true);
 
             // Act
             MessagingCenter.Send(myPage, "Update", first);
