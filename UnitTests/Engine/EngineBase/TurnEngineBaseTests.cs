@@ -1594,7 +1594,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Add player after map is made, so player is not on the map
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Cleric });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
