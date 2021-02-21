@@ -1376,6 +1376,18 @@
 
             <!--___________________________________________-->
 
+            <!--Frame for title on game page-->
+            <Style TargetType="Frame"
+                   x:Key="GamePageFrameStyle"
+                   BasedOn="{StaticResource MediumRectangleMidgroundFrame}"
+                   >
+                <Setter Property="HeightRequest" Value="130"/>
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="Margin" Value="0, 5, 0, 0"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
@@ -1675,6 +1687,17 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Temporary label in game page-->
+            <Style TargetType="Label"
+                   x:Key="GamePageBiowarfareLabelStyle"
+                   >
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -2330,6 +2353,34 @@
                 <Setter Property="FontSize"  Value="Default"/>
                 <Setter Property="HeightRequest"  Value="100"/>
                 <Setter Property="TextColor"  Value="{StaticResource PrimaryItemBackground}"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+
+
+
+
+
+
+            <!-- Scrollview -->
+
+
+
+
+
+
+
+
+
+            <!--Scrollview on game page-->
+            <Style TargetType="ScrollView"
+                   x:Key="GamePageScrollViewStyle"
+                   >
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+                <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+                <Setter Property="Padding" Value="10"/>
 
             </Style>
 

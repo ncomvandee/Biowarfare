@@ -6,7 +6,7 @@
 
     <ContentPage.Content>
 
-        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
+        <ScrollView Style="{StaticResource GamePageScrollViewStyle}">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -14,17 +14,14 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout Orientation="Vertical">
-                    <Frame Style="{StaticResource MediumRectangleMidgroundFrame}"
-                           HeightRequest="130"
-                           WidthRequest="350"
-                           Margin="0, 5, 0, 0" 
+                    
+                    <Frame Style="{StaticResource GamePageFrameStyle}"
                            Grid.Row="0"
                            >
-                        <Label Text="BioWarfare"
-                               FontSize="Title"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               TextColor="{StaticResource PrimaryBackgroundPurple}"/>
+                        
+                        <Label Style="{StaticResource GamePageBiowarfareLabelStyle}"
+                               Text="BioWarfare"
+                               />
 
                     </Frame>
 
@@ -35,11 +32,11 @@
                             Grid.Row="1"
                             Style="{StaticResource GamePageButtonStyle}"
                             WidthRequest="175"
-                            Clicked="VillageButton_Clicked"/>
+                            Clicked="VillageButton_Clicked"
+                            />
 
 
                     </StackLayout>
-
 
                     <StackLayout>
                         <Button
@@ -47,11 +44,10 @@
                             Text="Battle"
                             Grid.Row="2"
                             Style="{StaticResource GamePageBattleButtonStyle}"
-                            Clicked="DungeonButton_Clicked"/>
-
+                            Clicked="DungeonButton_Clicked"
+                            />
 
                     </StackLayout>
-
 
                     <StackLayout>
                         <Button
@@ -59,7 +55,8 @@
                             Grid.Row="3"
                             Style="{StaticResource SmallGamePageButtonStyle}"
                             WidthRequest="110"
-                            Clicked="AboutButton_Clicked"/>
+                            Clicked="AboutButton_Clicked"
+                            />
 
                     </StackLayout>
 
@@ -67,7 +64,8 @@
                             Grid.Row="4"
                             Style="{StaticResource SmallGamePageButtonStyle}"
                             Margin="180, 20, 0, 0"
-                            Clicked="AutobattleButton_Clicked"/>
+                            Clicked="AutobattleButton_Clicked"
+                            />
                     
                 </StackLayout>
             </Grid>
