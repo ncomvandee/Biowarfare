@@ -8,7 +8,12 @@
              >
 
     <NavigationPage.TitleView>
-        <Label Text="Osmosis Jones" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Title"  Margin="0, 0, 75, 0"/>
+        
+        <Label Style="{StaticResource NavLabel}"
+               Text="Osmosis Jones" 
+               Margin="0, 0, 55, 0"
+               />
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>

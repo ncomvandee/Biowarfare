@@ -1661,6 +1661,21 @@
 
             <!--___________________________________________-->
 
+            <!--Label for navigation bar-->
+            <Style TargetType="Label"
+                   x:Key="NavLabel"
+                   >
+
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+
+            </Style>
+            <!--___________________________________________-->
+
+
 
 
 
