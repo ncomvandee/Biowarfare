@@ -13,10 +13,10 @@ using System.Diagnostics;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class MonsterIndexPageTests : MonsterIndexPage
+    public class MonsterIndexPageTests : MonsterCellIndexPage
     {
         App app;
-        MonsterIndexPage page;
+        MonsterCellIndexPage page;
 
         public MonsterIndexPageTests() : base(true) { }
         
@@ -30,7 +30,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new MonsterIndexPage();
+            page = new MonsterCellIndexPage();
         }
 
         [TearDown]
@@ -153,7 +153,7 @@ namespace UnitTests.Views
         {
             // Arrange
             // Act
-            page.AddItem_Clicked(null, null);
+            page.CreateCell_Clicked(null, null);
 
             // Reset
 
