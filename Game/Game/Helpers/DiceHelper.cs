@@ -16,7 +16,7 @@ namespace Game.Helpers
         public static bool ForceRollsToNotRandom = false;
 
         // Holds the random value for the sytem
-        private static int _ForcedRandomValue = 1;
+        public static int _ForcedRandomValue = 1;
 
         // What number should return for random numbers (1 is good choice...)
         public static void SetForcedRollValue(int value)

@@ -31,7 +31,9 @@ namespace UnitTests.Helpers
             DiceHelper.EnableForcedRolls();
 
             // Act
-            var result = DiceHelper.SetForcedRollValue(1);
+            DiceHelper.SetForcedRollValue(1);
+
+            var result = DiceHelper._ForcedRandomValue;
 
             // Reset
             DiceHelper.DisableForcedRolls();
