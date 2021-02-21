@@ -10,11 +10,8 @@
 
     <NavigationPage.TitleView>
         
-        <Label Text="Delete Cell" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+        <Label Style="{StaticResource NavLabel}"
+               Text="Delete Cell" 
                />
         
     </NavigationPage.TitleView>
@@ -22,7 +19,8 @@
         <StackLayout Orientation="Vertical" >
 
             <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
-                   Padding="5">
+                   Padding="5"
+                   >
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -40,22 +38,22 @@
                         <StackLayout Orientation="Horizontal" 
                                      HorizontalOptions="CenterAndExpand"
                                      VerticalOptions="CenterAndExpand" 
-                                    >
+                                     >
 
                             <Label Text="{Binding Data.Job}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                   Style="{StaticResource CharacterCellNameLabelStyle}"
+                                   />
 
                             <!--<BoxView Color="{StaticResource PrimaryCharacterBackground}" WidthRequest="2" HeightRequest="1" ></BoxView>-->
 
 
                             <Label Text="|" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                   Style="{StaticResource CharacterCellNameLabelStyle}"
+                                   />
 
                             <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                   Style="{StaticResource CharacterCellNameLabelStyle}"
+                                   />
 
                         </StackLayout>
 
@@ -80,18 +78,20 @@
 
                 <Label Text="Are you sure you want to delete?" 
                        Style="{StaticResource SimpleLabelTextStyle}" 
-                        />
+                       />
 
                 <StackLayout Orientation="Horizontal">
 
                     <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                             Text="Delete" 
-                            Clicked="Delete_Clicked">  
+                            Clicked="Delete_Clicked"
+                            >  
                     </Button>
 
                     <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
                             Text="Cancel" 
-                            Clicked="Cancel_Clicked">
+                            Clicked="Cancel_Clicked"
+                            >
                     </Button>
                     
                 </StackLayout>
