@@ -20,6 +20,12 @@ namespace Game.Views
         public GenericViewModel<MonsterModel> ViewModel = new GenericViewModel<MonsterModel>();
 
         /// <summary>
+        /// Empty constructor for Unit Test
+        /// </summary>
+        /// <param name="UnitTest"></param>
+        public MonsterCellCreatePage(bool UnitTest) { }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         public MonsterCellCreatePage()
