@@ -7,7 +7,6 @@
              Style="{StaticResource MonsterContentPage}"
              >
                
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
@@ -15,12 +14,9 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        
-        <Label Text="Create New Monster Cell" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Create New Monster Cell" 
                />
         
     </NavigationPage.TitleView>
@@ -41,7 +37,8 @@
                                 ItemsSource="{x:Static local_enum:MonsterTypeEnumHelper.GetMonsterTypeList}"
                                 SelectedItem="{Binding Data.MonsterType, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                 x:Name="MonsterTypePicker"
-                                SelectedIndexChanged="ImageChanged"/>
+                                SelectedIndexChanged="ImageChanged"
+                                />
                         
                     </Frame>
 
@@ -89,12 +86,14 @@
                             Grid.Row="1" 
                             ValueChanged="OnSliderChanged"
                             x:Name="AttackSlider" 
-                            Value="{Binding Data.Attack}"/>
+                            Value="{Binding Data.Attack}"
+                            />
 
                     <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Attack}" 
                            Grid.Row="1" 
-                           x:Name="AttackStat"/>
+                           x:Name="AttackStat"
+                           />
 
                     <Label Text="Def" 
                            Grid.Row="2" 
@@ -105,12 +104,14 @@
                             Grid.Row="2" 
                             ValueChanged="OnSliderChanged"
                             x:Name="DefenseSlider" 
-                            Value="{Binding Data.Defense}"/>
+                            Value="{Binding Data.Defense}"
+                            />
 
                     <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Defense}" 
                            Grid.Row="2" 
-                           x:Name="DefenseStat"/>
+                           x:Name="DefenseStat"
+                           />
 
                     <Label Text="Spd" 
                            Grid.Row="3"
@@ -121,19 +122,22 @@
                             Grid.Row="3"
                             ValueChanged="OnSliderChanged"
                             x:Name="SpeedSlider"
-                            Value="{Binding Data.Speed}"/>
+                            Value="{Binding Data.Speed}"
+                            />
 
                     <Label Style="{StaticResource StatsNumberLabelStyle}"
                            Text="{Binding Data.Speed}"
                            Grid.Row="3"
-                           x:Name="SpeedStat"/>
+                           x:Name="SpeedStat"
+                           />
                 </Grid>
                 
             </Frame>
 
             <StackLayout Orientation="Horizontal" 
                          Margin="0, 10, 0, 0"
-                         HorizontalOptions="Center">
+                         HorizontalOptions="Center"
+                         >
                 
                 <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
                         Text="Save" 
