@@ -1080,7 +1080,7 @@ namespace UnitTests.Engine.EngineBase
             // Arrange
             Engine.EngineSettings.CurrentActionAbility = AbilityEnum.Unknown;
             
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job=CellTypeEnum.BCell});
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job=CharacterJobEnum.Unknown});
 
             // remove it so it is not found
             characterPlayer.AbilityTracker.Remove(AbilityEnum.Unknown);
@@ -1100,7 +1100,7 @@ namespace UnitTests.Engine.EngineBase
             // Arrange
             Engine.EngineSettings.CurrentActionAbility = AbilityEnum.Unknown;
 
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Unknown });
 
             // remove it so it is not found
             characterPlayer.AbilityTracker[AbilityEnum.Unknown] = 0;
@@ -1119,7 +1119,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Unknown });
 
             // remove it so it is not found
             characterPlayer.AbilityTracker.Add(AbilityEnum.Heal, 1);
@@ -1139,7 +1139,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Unknown });
 
             // remove it so it is not found
             characterPlayer.AbilityTracker.Add(AbilityEnum.Toughness,1);
@@ -1159,7 +1159,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Unknown });
 
             // remove it so it is not found
             characterPlayer.AbilityTracker.Add(AbilityEnum.Quick, 1);
@@ -1179,7 +1179,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var characterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Unknown });
 
             // remove it so it is not found
             characterPlayer.AbilityTracker.Add(AbilityEnum.Curse, 1);
@@ -1456,7 +1456,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell});
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric});
 
             // Get the longest range weapon in stock.
             var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
@@ -1488,7 +1488,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
@@ -1514,7 +1514,7 @@ namespace UnitTests.Engine.EngineBase
             var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
             Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
@@ -1561,7 +1561,7 @@ namespace UnitTests.Engine.EngineBase
         public void TurnEngine_MoveAsTurn_Invalid_Monster_InValid_Defender_Not_On_Map_Should_Fail()
         {
             // Arrange
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             // Not on map.... 
@@ -1594,7 +1594,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Add player after map is made, so player is not on the map
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
