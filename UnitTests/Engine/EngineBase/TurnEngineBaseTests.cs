@@ -1488,7 +1488,7 @@ namespace UnitTests.Engine.EngineBase
         {
             // Arrange
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Cleric });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
