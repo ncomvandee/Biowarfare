@@ -15,7 +15,7 @@ namespace UnitTests.Helpers
             // Arrange
 
             // Act
-            var result = CharacterJobEnumHelper.GetJobList;
+            var result = CharacterJobEnumHelper.GetCharacterJobList;
 
             // Assert
             Assert.AreEqual(2,result.Count());
