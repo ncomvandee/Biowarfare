@@ -18,12 +18,9 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        
-        <Label x:Name="TitlePage" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand"
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               x:Name="TitlePage" 
                />
         
     </NavigationPage.TitleView>
@@ -63,7 +60,8 @@
                    Placeholder="Enter name here" 
                    Style="{StaticResource MonsterCreateEntryStyle}"
                    x:Name="NameEntry"
-                   MaxLength="7"/>
+                   MaxLength="7"
+                   />
 
             <Frame Style="{StaticResource MonsterStatsFrameStyle}"
                    >
@@ -78,61 +76,66 @@
                         </Grid.RowDefinitions>
 
                         <Label Text="Stats" 
-                           Grid.Row="0" 
-                           Style="{StaticResource MonsterStatsLabelTitleStyle}"
-                           />
+                               Grid.Row="0" 
+                               Style="{StaticResource MonsterStatsLabelTitleStyle}"
+                               />
 
                         <Label Text="Atk" 
-                           Grid.Row="1" 
-                           Style="{StaticResource MonsterStatsLabelStyle}"
-                           />
+                               Grid.Row="1" 
+                               Style="{StaticResource MonsterStatsLabelStyle}"
+                               />
 
                         <Slider Style="{StaticResource StatsSliderStyle}"
-                            Grid.Row="1"
-                            ValueChanged="OnSliderChanged"
-                            x:Name="AttackSlider" 
-                            Value="{Binding Data.Attack}"/>
+                                Grid.Row="1"
+                                ValueChanged="OnSliderChanged"
+                                x:Name="AttackSlider" 
+                                Value="{Binding Data.Attack}"
+                                />
 
                         <Label Style="{StaticResource StatsNumberLabelStyle}"
-                           Text="{Binding Data.Attack}" 
-                           Grid.Row="1" 
-                           x:Name="AttackStat"/>
+                               Text="{Binding Data.Attack}" 
+                               Grid.Row="1" 
+                               x:Name="AttackStat"
+                               />
 
                         <Label Text="Def" 
-                           Grid.Row="2" 
-                           Style="{StaticResource MonsterStatsLabelStyle}"
-                           />
+                               Grid.Row="2" 
+                               Style="{StaticResource MonsterStatsLabelStyle}"
+                               />
 
                         <Slider Style="{StaticResource StatsSliderStyle}"
-                            Grid.Row="2" 
-                            ValueChanged="OnSliderChanged"
-                            x:Name="DefenseSlider" 
-                            Value="{Binding Data.Defense}"/>
+                                Grid.Row="2" 
+                                ValueChanged="OnSliderChanged"
+                                x:Name="DefenseSlider" 
+                                Value="{Binding Data.Defense}"
+                                />
 
                         <Label Style="{StaticResource StatsNumberLabelStyle}"
-                           Text="{Binding Data.Defense}" 
-                           Grid.Row="2" 
-                           x:Name="DefenseStat"/>
+                               Text="{Binding Data.Defense}" 
+                               Grid.Row="2" 
+                               x:Name="DefenseStat"
+                               />
 
                         <Label Text="Spd" 
-                           Grid.Row="3" 
-                           Style="{StaticResource MonsterStatsLabelStyle}"
-                           />
+                               Grid.Row="3" 
+                               Style="{StaticResource MonsterStatsLabelStyle}"
+                               />
 
                         <Slider Style="{StaticResource StatsSliderStyle}"
-                            Grid.Row="3" 
-                            ValueChanged="OnSliderChanged"
-                            x:Name="SpeedSlider" 
-                            Value="{Binding Data.Speed}"/>
+                                Grid.Row="3" 
+                                ValueChanged="OnSliderChanged"
+                                x:Name="SpeedSlider" 
+                                Value="{Binding Data.Speed}"
+                                />
 
                         <Label Style="{StaticResource StatsNumberLabelStyle}"
-                           Text="{Binding Data.Speed}" 
-                           Grid.Row="3" 
-                           x:Name="SpeedStat"/>
-                        
+                               Text="{Binding Data.Speed}" 
+                               Grid.Row="3" 
+                               x:Name="SpeedStat"
+                               />
+
                     </Grid>
                 </ScrollView>
-  
             </Frame>
 
             <StackLayout Orientation="Horizontal" 
