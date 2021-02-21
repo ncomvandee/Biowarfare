@@ -16,19 +16,17 @@
 
 
     <NavigationPage.TitleView>
-        
-        <Label Text="Monster Cell Index" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Monster Cell Index" 
                />
         
     </NavigationPage.TitleView>
     
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}"
-                     HorizontalOptions="FillAndExpand">
+                     HorizontalOptions="FillAndExpand"
+                     >
 
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset}"
@@ -44,8 +42,7 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Grid  Style="{StaticResource IndexGridViewStyle}"
-                                   >
+                            <Grid  Style="{StaticResource IndexGridViewStyle}">
 
                                 <Frame Grid.Row="0"
                                        Grid.Column="0"
@@ -58,8 +55,7 @@
                                 <StackLayout>
                                         
                                         <!--Frame for thumbnail--> 
-                                        <Frame Style="{StaticResource SmallCircleFrameStyle}"
-                                               >
+                                        <Frame Style="{StaticResource SmallCircleFrameStyle}">
 
                                             <Image Source="{Binding ImageURI}">
                        
@@ -68,8 +64,7 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame Style="{StaticResource MonsterInnerFrameStyle}"
-                                               >
+                                        <Frame Style="{StaticResource MonsterInnerFrameStyle}">
                                             
                                             <Grid>
                                                 <Grid.RowDefinitions>
