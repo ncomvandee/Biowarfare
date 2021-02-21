@@ -154,7 +154,7 @@ namespace UnitTests.ViewModels
             var first = ViewModel.Dataset.FirstOrDefault();
 
             // Make a Delete Page
-            var myPage = new Game.Views.MonsterDeletePage(true);
+            var myPage = new Game.Views.MonsterCellDeletePage(true);
 
             // Act
             MessagingCenter.Send(myPage, "Delete", first);
