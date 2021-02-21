@@ -11,10 +11,10 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class MonsterDeletePageTests : MonsterDeletePage
+    public class MonsterDeletePageTests : MonsterCellDeletePage
     {
         App app;
-        MonsterDeletePage page;
+        MonsterCellDeletePage page;
 
         public MonsterDeletePageTests() : base(true) { }
         
@@ -28,7 +28,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new MonsterDeletePage(new GenericViewModel<MonsterModel>(new MonsterModel()));
+            page = new MonsterCellDeletePage(new GenericViewModel<MonsterModel>(new MonsterModel()));
         }
 
         [TearDown]
