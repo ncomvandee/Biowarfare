@@ -1511,7 +1511,7 @@ namespace UnitTests.Engine.EngineKoenig
             var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
             Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Cleric });
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
