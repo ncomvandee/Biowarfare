@@ -13,10 +13,10 @@ using System.Threading.Tasks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CellReadPageTests : CharacterReadPage
+    public class CellReadPageTests : CellReadPage
     {
         App app;
-        CharacterReadPage page;
+        CellReadPage page;
 
         public CellReadPageTests() : base(true) { }
 
@@ -30,7 +30,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new CharacterReadPage(new GenericViewModel<CharacterModel>(new CharacterModel()));
+            page = new CellReadPage(new GenericViewModel<CharacterModel>(new CharacterModel()));
         }
 
         [TearDown]
@@ -40,7 +40,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_Constructor_Default_Should_Pass()
+        public void CellReadPage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -54,12 +54,12 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_Update_Clicked_Default_Should_Pass()
+        public void CellReadPage_Update_Clicked_Default_Should_Pass()
         {
             // Arrange
 
             // Act
-            page.Update_Clicked(null, null);
+            page.CellEditButton_Clicked(null, null);
 
             // Reset
 
@@ -68,7 +68,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_Delete_Clicked_Default_Should_Pass()
+        public void CellReadPage_Delete_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -82,7 +82,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_OnBackButtonPressed_Valid_Should_Pass()
+        public void CellReadPage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 
@@ -96,7 +96,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_GetItemToDisplay_Valid_Should_Pass()
+        public void CellReadPage_GetItemToDisplay_Valid_Should_Pass()
         {
             // Arrange
 
@@ -110,7 +110,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_ShowPopup_Valid_Should_Pass()
+        public void CellReadPage_ShowPopup_Valid_Should_Pass()
         {
             // Arrange
 
@@ -124,7 +124,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_ClosePopup_Clicked_Default_Should_Pass()
+        public void CellReadPage_ClosePopup_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -138,7 +138,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_AddItemsToDisplay_With_Data_Should_Remove_And_Pass()
+        public void CellReadPage_AddItemsToDisplay_With_Data_Should_Remove_And_Pass()
         {
             // Arrange
 
@@ -149,7 +149,7 @@ namespace UnitTests.Views
             itemBox.Children.Add(new Label());
 
             // Act
-            page.AddItemsToDisplay();
+            page.AddItemToDisplay();
 
             // Reset
 
@@ -158,7 +158,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public async Task CharacterReadPage_GetItemToDisplay_With_Item_Should_Pass()
+        public async Task CellReadPage_GetItemToDisplay_With_Item_Should_Pass()
         {
             // Arrange
             ItemIndexViewModel.Instance.Dataset.Clear();
@@ -180,7 +180,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public async Task CharacterReadPage_GetItemToDisplay_With_NoItem_Should_Pass()
+        public async Task CellReadPage_GetItemToDisplay_With_NoItem_Should_Pass()
         {
             // Arrange
             ItemIndexViewModel.Instance.Dataset.Clear();
@@ -199,7 +199,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterReadPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
+        public void CellReadPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
         {
             // Arrange
             var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
