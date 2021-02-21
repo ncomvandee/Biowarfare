@@ -10,17 +10,15 @@
                      IconImageSource="icon_delete.png" 
                      Clicked="Delete_Clicked" 
                      />
-        
+
     </ContentPage.ToolbarItems>
 
-
     <NavigationPage.TitleView>
-        <Label Text="{Binding Title}" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand"
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+        
+        <Label Style="{StaticResource NavLabel}"
+               Text="{Binding Title}" 
                />
+        
     </NavigationPage.TitleView>
     
     <ContentPage.Content>
@@ -38,7 +36,7 @@
                            Style="{StaticResource MonsterReadCellTitleFrame}"
                            Padding="5"
                            >
-                        
+
                         <StackLayout Orientation="Horizontal" 
                                  Grid.Row="0" 
                                  HorizontalOptions="CenterAndExpand"
@@ -60,7 +58,6 @@
                         </StackLayout>
                     </Frame>
 
-                   
                     <!--Frame for thumbnail-->
                     <Frame x:Name="ImageFrame" 
                            Style="{StaticResource LargeCircleFrameStyle}" 
@@ -75,7 +72,8 @@
                            Margin="20"
                            FontSize="Caption"
                            IsVisible="false"
-                           x:Name="DescriptionFrame"/>
+                           x:Name="DescriptionFrame"
+                           />
 
 
                     <Button Style="{StaticResource InvisibleReadButtonStyle}"
@@ -101,9 +99,10 @@
                            >
 
                         <Label Style="{StaticResource MonsterCellNameLabelStyle}"
-                           Text="Attributes" 
-                           Grid.Row="0" 
-                           Padding="5"/>
+                               Text="Attributes" 
+                               Grid.Row="0" 
+                               Padding="5"
+                               />
 
                    </Frame>
 
@@ -113,7 +112,11 @@
                             IsVisible="True"
                             >
 
-                        <Grid ColumnSpacing="20" RowSpacing="5" Margin="0, 20">
+                        <Grid ColumnSpacing="20" 
+                              RowSpacing="5" 
+                              Margin="0, 20"
+                              >
+
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -161,9 +164,7 @@
                                    />
 
                         </Grid>
-
                     </Frame>
-
                 </Grid>
             </Frame>
 
