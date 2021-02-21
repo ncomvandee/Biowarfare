@@ -2113,6 +2113,18 @@
 
             </Style>
 
+            <!--___________________________________________-->
+
+            <!--Style for plus minus buttons on create page-->
+            <Style TargetType="ImageButton"
+                   x:Key="CreatePlusMinusButtonStyle"
+                   >
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="WidthRequest" Value="30"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
 
 
 
