@@ -1,10 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Game;
 using Game.Views;
@@ -17,12 +11,12 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class ItemReadPageTests : ItemReadPage
+    public class MonsterDeletePageTests : MonsterDeletePage
     {
         App app;
-        ItemReadPage page;
+        MonsterDeletePage page;
 
-        public ItemReadPageTests() : base(true) { }
+        public MonsterDeletePageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
@@ -34,7 +28,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel()));
+            page = new MonsterDeletePage(new GenericViewModel<MonsterModel>(new MonsterModel()));
         }
 
         [TearDown]
@@ -44,7 +38,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Constructor_Default_Should_Pass()
+        public void MonsterDeletePage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -58,12 +52,12 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Update_Clicked_Default_Should_Pass()
+        public void MonsterDeletePage_Cancel_Clicked_Default_Should_Pass()
         {
             // Arrange
 
             // Act
-            page.Update_Clicked(null, null);
+            page.Cancel_Clicked(null, null);
 
             // Reset
 
@@ -72,7 +66,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Delete_Clicked_Default_Should_Pass()
+        public void MonsterDeletePage_Delete_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -86,7 +80,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_OnBackButtonPressed_Valid_Should_Pass()
+        public void MonsterDeletePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 

@@ -17,12 +17,12 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class ItemReadPageTests : ItemReadPage
+    public class CharacterDeletePageTests : CharacterDeletePage
     {
         App app;
-        ItemReadPage page;
+        CharacterDeletePage page;
 
-        public ItemReadPageTests() : base(true) { }
+        public CharacterDeletePageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
@@ -34,7 +34,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel()));
+            page = new CharacterDeletePage(new GenericViewModel<CharacterModel>(new CharacterModel()));
         }
 
         [TearDown]
@@ -44,7 +44,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Constructor_Default_Should_Pass()
+        public void CharacterDeletePage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -58,12 +58,12 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Update_Clicked_Default_Should_Pass()
+        public void CharacterDeletePage_Cancel_Clicked_Default_Should_Pass()
         {
             // Arrange
 
             // Act
-            page.Update_Clicked(null, null);
+            page.Cancel_Clicked(null, null);
 
             // Reset
 
@@ -72,7 +72,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_Delete_Clicked_Default_Should_Pass()
+        public void CharacterDeletePage_Delete_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -86,7 +86,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void ItemReadPage_OnBackButtonPressed_Valid_Should_Pass()
+        public void CharacterDeletePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 
