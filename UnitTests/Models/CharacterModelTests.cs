@@ -109,7 +109,7 @@ namespace UnitTests.Models
 
             Assert.AreEqual(DifficultyEnum.Unknown, result.Difficulty);
 
-            Assert.AreEqual(CellTypeEnum.BCell, result.Job);
+            Assert.AreEqual(CharacterJobEnum.Unknown, result.Job);
         }
 
         [Test]
@@ -193,7 +193,7 @@ namespace UnitTests.Models
             result.OffHand = "offhand";
             result.RightFinger ="rightfinger";
             result.LeftFinger = "leftfinger";
-            result.Job = CellTypeEnum.BCell;
+            result.Job = CharacterJobEnum.Unknown;
 
             // Reset
 
@@ -220,14 +220,14 @@ namespace UnitTests.Models
             Assert.AreEqual("offhand", result.OffHand);
             Assert.AreEqual("rightfinger", result.RightFinger);
             Assert.AreEqual("leftfinger", result.LeftFinger);
-            Assert.AreEqual(CellTypeEnum.BCell, result.Job);
+            Assert.AreEqual(CharacterJobEnum.Unknown, result.Job);
         }
 
         [Test]
         public void CharacterModel_GetAttack_Fighter_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.KillerTCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Fighter };
 
             // Act
             var result = data.GetAttack();
@@ -242,7 +242,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetDefense_Fighter_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.KillerTCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Fighter };
 
             // Act
             var result = data.GetDefense();
@@ -257,7 +257,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetSpeed_Fighter_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.KillerTCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Fighter };
 
             // Act
             var result = data.GetSpeed();
@@ -272,7 +272,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetAttack_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.NKCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
 
             // Act
             var result = data.GetAttack();
@@ -287,7 +287,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetDefense_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.NKCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
 
             // Act
             var result = data.GetDefense();
@@ -302,7 +302,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetSpeed_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CellTypeEnum.NKCell };
+            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
 
             // Act
             var result = data.GetSpeed();

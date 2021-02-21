@@ -13,7 +13,7 @@ namespace UnitTests.Models
             // Arrange
 
             // Act
-            var result = CellTypeEnum.BCell.ToMessage();
+            var result = CharacterJobEnum.Unknown.ToMessage();
 
             // Reset
 
@@ -27,7 +27,7 @@ namespace UnitTests.Models
             // Arrange
 
             // Act
-            var result = CellTypeEnum.KillerTCell.ToMessage();
+            var result = CharacterJobEnum.Fighter.ToMessage();
 
             // Reset
 
@@ -41,7 +41,7 @@ namespace UnitTests.Models
             // Arrange
 
             // Act
-            var result = CellTypeEnum.NKCell.ToMessage();
+            var result = CharacterJobEnum.Cleric.ToMessage();
 
             // Reset
 
