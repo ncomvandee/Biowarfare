@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CharacterIndexPageTests : CharacterIndexPage
+    public class CellIndexPageTests : CharacterIndexPage
     {
         App app;
         CharacterIndexPage page;
 
-        public CharacterIndexPageTests() : base(true) { }
+        public CellIndexPageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
