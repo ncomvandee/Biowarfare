@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CellIndexPageTests : CharacterIndexPage
+    public class CellIndexPageTests : CellIndexPage
     {
         App app;
-        CharacterIndexPage page;
+        CellIndexPage page;
 
         public CellIndexPageTests() : base(true) { }
         
@@ -29,7 +29,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new CharacterIndexPage();
+            page = new CellIndexPage();
         }
 
         [TearDown]
@@ -39,7 +39,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_Constructor_Default_Should_Pass()
+        public void CellIndexPage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -67,7 +67,7 @@ namespace UnitTests.Views
         //}
 
         [Test]
-        public void CharacterIndexPage_OnBackButtonPressed_Valid_Should_Pass()
+        public void CellIndexPage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 
@@ -81,7 +81,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_OnCharacterSelected_Clicked_Default_Should_Pass()
+        public void CellIndexPage_OnCharacterSelected_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -99,7 +99,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_OnCharacterSelected_Clicked_Invalid_Null_Should_Fail()
+        public void CellIndexPage_OnCharacterSelected_Clicked_Invalid_Null_Should_Fail()
         {
             // Arrange
 
@@ -115,10 +115,10 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_OnAppearing_Valid_Should_Pass()
+        public void CellIndexPage_OnAppearing_Valid_Should_Pass()
         {
             // Arrange
-            CharacterIndexViewModel ViewModel = CharacterIndexViewModel.Instance;
+            CellIndexViewModel ViewModel = CellIndexViewModel.Instance;
 
             // Act
             OnAppearing();
@@ -130,11 +130,11 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_OnAppearing_Valid_Empty_Should_Pass()
+        public void CellIndexPage_OnAppearing_Valid_Empty_Should_Pass()
         {
             // Arrange
 
-            CharacterIndexViewModel ViewModel = CharacterIndexViewModel.Instance;
+            CellIndexViewModel ViewModel = CellIndexViewModel.Instance;
             ViewModel.Dataset.Clear();
 
             // Act
@@ -147,11 +147,11 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterIndexPage_AddItemClicked_Valid_Should_Pass()
+        public void CellIndexPage_CreateCell_Clicked_Valid_Should_Pass()
         {
             // Arrange
             // Act
-            page.AddItem_Clicked(null, null);
+            page.CreateCell_Clicked(null, null);
 
             // Reset
 
