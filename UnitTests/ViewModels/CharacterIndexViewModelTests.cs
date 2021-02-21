@@ -14,7 +14,7 @@ namespace UnitTests.ViewModels
 {
     public class CharacterIndexViewModelTests
     {
-        CharacterIndexViewModel ViewModel;
+        CellIndexViewModel ViewModel;
 
         [SetUp]
         public void Setup()
@@ -25,7 +25,7 @@ namespace UnitTests.ViewModels
             // Add each model here to warm up and load it.
             Game.Helpers.DataSetsHelper.WarmUp();
 
-            ViewModel = CharacterIndexViewModel.Instance;
+            ViewModel = CellIndexViewModel.Instance;
         }
 
         [TearDown]
@@ -140,7 +140,7 @@ namespace UnitTests.ViewModels
             var first = ViewModel.Dataset.FirstOrDefault();
 
             // Make a Delete Page
-            var myPage = new Game.Views.CharacterDeletePage(true);
+            var myPage = new Game.Views.CellDeletePage(true);
 
             // Act
             MessagingCenter.Send(myPage, "Delete", first);
@@ -176,7 +176,7 @@ namespace UnitTests.ViewModels
             var data = new CharacterModel();
 
             // Make a Delete Page
-            var myPage = new Game.Views.CharacterCreatePage(true);
+            var myPage = new Game.Views.CellCreatePage(true);
 
             var countBefore = ViewModel.Dataset.Count();
 
@@ -201,7 +201,7 @@ namespace UnitTests.ViewModels
             first.Name = "test";
 
             // Make a Delete Page
-            var myPage = new Game.Views.CharacterUpdatePage(true);
+            var myPage = new Game.Views.CellUpdatePage(true);
 
             // Act
             MessagingCenter.Send(myPage, "Update", first);
