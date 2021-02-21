@@ -1497,8 +1497,20 @@
 
             </Style>
             <!--___________________________________________-->
-            
-            
+
+            <!--frame popup on read page-->
+            <Style TargetType="Frame"
+                   x:Key="ReadPagePopupStyle"
+                   >
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".5, .5, .7, .7"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
@@ -2739,6 +2751,34 @@
             </Style>
 
             <!--___________________________________________-->
+
+
+
+
+
+
+
+
+            <!-- FlexLayout -->
+
+
+
+
+
+
+
+
+            <!--FlexLayout on read page-->
+            <Style TargetType="FlexLayout"
+                   x:Key="ReadPageFlexLayoutStyle"
+                   >
+                <Setter Property="Padding" Value="0, 10"/>
+                <Setter Property="Wrap" Value="NoWrap"/>
+                <Setter Property="JustifyContent" Value="SpaceBetween"/>
+                <Setter Property="AlignContent" Value="SpaceBetween"/>
+                <Setter Property="HeightRequest" Value="300"/>
+
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>

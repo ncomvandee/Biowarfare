@@ -14,21 +14,22 @@
     </ContentPage.ToolbarItems>
 
     <NavigationPage.TitleView>
-        
-        <Label Text="{Binding Title}" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="{Binding Title}" 
                />
         
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
+        
         <AbsoluteLayout HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand">
+                        VerticalOptions="StartAndExpand"
+                        >
+            
             <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1"
-                         AbsoluteLayout.LayoutFlags="All" >
+                         AbsoluteLayout.LayoutFlags="All" 
+                         >
 
                 <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
 
@@ -50,53 +51,56 @@
                                  >
 
                                 <Label Text="{Binding Data.Job}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                       />
 
                                 <Label Text="|" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                       />
 
                                 <Label Text="{Binding Data.Level, StringFormat= 'Lvl.{0}'}" 
-                               Style="{StaticResource CharacterCellNameLabelStyle}"
-                               />
+                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                       />
 
                             </StackLayout>
                         </Frame>
 
                         <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            Grid.Row="1"
-                            IsVisible="False"
-                            >
+                                Grid.Row="1"
+                                IsVisible="False"
+                                >
 
 
                         </Frame>
+                        
                         <!--Frame for thumbnail-->
                         <Frame x:Name="ImageFrame" 
-                           Style="{StaticResource LargeCircleFrameStyle}" 
-                           Grid.Row="1">
+                               Style="{StaticResource LargeCircleFrameStyle}" 
+                               Grid.Row="1"
+                               >
 
                             <Image Source="{Binding Data.ImageURI}" />
 
                         </Frame>
 
                         <Label Grid.Row="1" Text="{Binding Data.Description}" 
-                           Margin="20"
-                           FontSize="Caption"
-                           IsVisible="false"
-                           x:Name="DescriptionFrame"/>
+                               Margin="20"
+                               FontSize="Caption"
+                               IsVisible="false"
+                               x:Name="DescriptionFrame"
+                               />
 
                         <Button Style="{StaticResource InvisibleReadButtonStyle}"
-                            Grid.Row="1"   
-                            Clicked="ShowDescriptionClicked"
-                            />
+                                Grid.Row="1"   
+                                Clicked="ShowDescriptionClicked"
+                                />
 
                     </Grid>
                 </Frame>
 
                 <Frame Style="{StaticResource CharacterRectangleMidgroundFrame}"
-                   Margin="0, 20, 0, 0" 
-                   >
+                       Margin="0, 20, 0, 0" 
+                       >
 
                     <Grid>
                         <Grid.RowDefinitions>
@@ -105,40 +109,46 @@
                         </Grid.RowDefinitions>
 
                         <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadAttributeFrameStyle}"
-                           >
+                               Style="{StaticResource ReadAttributeFrameStyle}"
+                               >
 
-                            <Image Source='icon_click.png' HorizontalOptions="End" Margin="10, 5"/>
+                            <Image Source='icon_click.png' 
+                                   HorizontalOptions="End"
+                                   Margin="10, 5"
+                                   />
+                            
                         </Frame>
 
                         <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
-                            Grid.Row="0" 
-                            Text="Items" 
-                            x:Name="ItemAttributeToggleButton"
-                            Clicked="ItemAttributeToggle"/>
+                                Grid.Row="0" 
+                                Text="Items" 
+                                x:Name="ItemAttributeToggleButton"
+                                Clicked="ItemAttributeToggle"
+                                />
 
                         <ScrollView Orientation="Horizontal"
                                     HorizontalScrollBarVisibility="Default"
                                     Grid.Row="1" 
-                                    x:Name="ItemsFrame">
+                                    x:Name="ItemsFrame"
+                                    >
                             
-                            <FlexLayout x:Name="ItemBox"
-                                        Padding="0, 10"
-                                        Wrap="NoWrap"
-                                        JustifyContent="SpaceBetween"
-                                        AlignContent="SpaceBetween"
-                                        HeightRequest="300"
-                                    />
+                            <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
+                                        x:Name="ItemBox"
+                                        />
 
                         </ScrollView>
 
                         <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            x:Name="AttributeFrame"
-                            Grid.Row="1"
-                            IsVisible="False"
-                            >
+                                x:Name="AttributeFrame"
+                                Grid.Row="1"
+                                IsVisible="False"
+                                >
 
-                            <Grid ColumnSpacing="25" RowSpacing="5" Margin="0, 20">
+                            <Grid ColumnSpacing="25" 
+                                  RowSpacing="5" 
+                                  Margin="0, 20"
+                                  >
+
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
@@ -152,129 +162,106 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Image Source="attack_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="0" 
-                                   />
+                                       WidthRequest="35" 
+                                       Grid.Row="0" 
+                                       Grid.Column="0" 
+                                       />
 
                                 <Label Text="{Binding Data.GetAttackTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="0" 
-                                   />
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="0" 
+                                       />
 
                                 <Image Source="defense_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="1" 
-                                   />
+                                       WidthRequest="35" 
+                                       Grid.Row="0" 
+                                       Grid.Column="1" 
+                                       />
 
                                 <Label Text="{Binding Data.GetDefenseTotal}"
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="1" 
-                                   />
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="1" 
+                                       />
 
                                 <Image Source="speed_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="2" 
-                                   />
+                                       WidthRequest="35" 
+                                       Grid.Row="0" 
+                                       Grid.Column="2" 
+                                       />
 
                                 <Label Text="{Binding Data.GetSpeedTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="2" 
-                                   />
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="2" 
+                                       />
 
                                 <Image Source="heart_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="3" 
-                                   />
+                                       WidthRequest="35" 
+                                       Grid.Row="0" 
+                                       Grid.Column="3" 
+                                       />
 
                                 <Label Text="{Binding Data.GetMaxHealthTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="3" 
-                                   />
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="3" 
+                                       />
 
                                 <Image Source="xp_icon.png" 
-                                   WidthRequest="35" 
-                                   Grid.Row="0" 
-                                   Grid.Column="4" 
-                                   />
+                                       WidthRequest="35" 
+                                       Grid.Row="0" 
+                                       Grid.Column="4" 
+                                       />
 
                                 <Label Text="{Binding Data.ExperienceTotal}" 
-                                   Style="{StaticResource ReadStatsLabelStyle}"
-                                   Grid.Row="1" 
-                                   Grid.Column="4" 
-                                   />
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="4" 
+                                       />
 
                             </Grid>
-
                         </Frame>
-
                     </Grid>
                 </Frame>
 
                 <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
-                    Text="Edit" 
-                    Margin="20" 
-                    Clicked="CellEditButton_Clicked"
-
-                    />
+                        Text="Edit" 
+                        Margin="20" 
+                        Clicked="CellEditButton_Clicked"
+                        />
 
             </StackLayout>
 
-            <Frame AbsoluteLayout.LayoutBounds=".5, .5, .7, .7"
-                   AbsoluteLayout.LayoutFlags="All"
-                   BackgroundColor="{StaticResource PrimaryCharacterForeground}"
-                   BorderColor="{StaticResource SecondaryAccentColor}"
-                  
-                   
-                   
-                   CornerRadius="20"
+            <!--#Popup Window-->
+
+            <Frame Style="{StaticResource ReadPagePopupStyle}"
                    x:Name="ItemPopUpFrame"
-                   IsVisible="false">
+                   IsVisible="false"
+                   >
 
-                <StackLayout VerticalOptions="CenterAndExpand"
-                             HorizontalOptions="CenterAndExpand"
-                             HeightRequest="500"
-                             WidthRequest="500" >
+                <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
 
-                    <ImageButton Source="icon_cancel.png"
-                                 WidthRequest="30" 
-                                 HeightRequest="40"
-                                 HorizontalOptions="End"
-                                 Margin="10, 0"
-                                 Clicked="ClosePopup_Clicked"/>
+                    <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
+                                 Source="icon_cancel.png"
+                                 Clicked="ClosePopup_Clicked"
+                                 />
 
-                    <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
-                           BorderColor="Transparent"
-                           HeightRequest="30"
-                           CornerRadius="20"
-                           Padding="5">
+                    <Frame Style="{StaticResource PopupTitleFrameStyle}">
 
-                        <Label Text="Name goes here, I guess"
+                        <Label Style="{StaticResource EquipPopupLabelStyle}"
+                               Text="Name goes here, I guess"
                                x:Name="ItemPopUpName"
-                               HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="Center"
-                               FontSize="Subtitle"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
                     </Frame>
 
-                    <Frame BackgroundColor="White"
-                           CornerRadius="100"
-                           WidthRequest="100"
-                           HeightRequest="100"
-                           BorderColor="Transparent"
-                           Padding="10">
-                        
+                    <Frame Style="{StaticResource ItemImageCircleFrameStyle}">
+
                         <Image Source="face_mask_no_bg.png"
-                               x:Name="ItemPopUpImage"/>
+                               x:Name="ItemPopUpImage"
+                               />
 
                     </Frame>
 
@@ -290,73 +277,45 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Label Text="Description: "
+                        <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               Text="Description: "
                                Grid.Row="0"
                                Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
-                        
-                        <Label x:Name="ItemPopUpDescription"
+
+                        <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                               x:Name="ItemPopUpDescription"
                                Grid.Row="0"
                                Grid.Column="1"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                        <Label Text="Location: "
+                        <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               Text="Location: "
                                Grid.Row="1"
                                Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
-                        
-                        <Label x:Name="ItemPopUpLocation"
+
+                        <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                               x:Name="ItemPopUpLocation"
                                Grid.Row="1"
                                Grid.Column="1" 
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
 
-                        <Label x:Name="ItemPopUpAttribute"
+                        <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               x:Name="ItemPopUpAttribute"
                                Grid.Row="2"
                                Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
-                        
-                        <Label x:Name="ItemPopUpValue"
+
+                        <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                               x:Name="ItemPopUpValue"
                                Grid.Row="2"
                                Grid.Column="1" 
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
                                />
-
-
 
                     </Grid>
-
-
-
-
                 </StackLayout>
-                
             </Frame>
-
-            <!--<StackLayout x:Name="PopUpLoadingView"
-                         AbsoluteLayout.LayoutBounds=".5, .5, .7, .7"
-                         AbsoluteLayout.LayoutFlags="All"
-                         BackgroundColor="Wheat"
-                         >
-
-                <StackLayout VerticalOptions="CenterAndExpand"
-                             HorizontalOptions="CenterAndExpand"
-                             WidthRequest="500"
-                             HeightRequest="500">
-                    
-                    
-                </StackLayout>
-                            
-                
-            </StackLayout>-->
-            
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
