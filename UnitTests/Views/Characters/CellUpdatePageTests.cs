@@ -12,12 +12,12 @@ using System.Linq;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CharacterUpdatePageTests : CharacterUpdatePage
+    public class CellUpdatePageTests : CharacterUpdatePage
     {
         App app;
         CharacterUpdatePage page;
 
-        public CharacterUpdatePageTests() : base(true) { }
+        public CellUpdatePageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
