@@ -17,10 +17,10 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CellDeletePageTests : CharacterDeletePage
+    public class CellDeletePageTests : CellDeletePage
     {
         App app;
-        CharacterDeletePage page;
+        CellDeletePage page;
 
         public CellDeletePageTests() : base(true) { }
         
@@ -34,7 +34,7 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new CharacterDeletePage(new GenericViewModel<CharacterModel>(new CharacterModel()));
+            page = new CellDeletePage(new GenericViewModel<CharacterModel>(new CharacterModel()));
         }
 
         [TearDown]
@@ -44,7 +44,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterDeletePage_Constructor_Default_Should_Pass()
+        public void CellDeletePage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -58,7 +58,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterDeletePage_Cancel_Clicked_Default_Should_Pass()
+        public void CellDeletePage_Cancel_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -72,7 +72,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterDeletePage_Delete_Clicked_Default_Should_Pass()
+        public void CellDeletePage_Delete_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -86,7 +86,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterDeletePage_OnBackButtonPressed_Valid_Should_Pass()
+        public void CellDeletePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 
