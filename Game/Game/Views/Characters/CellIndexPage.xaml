@@ -16,12 +16,11 @@
     
 
     <NavigationPage.TitleView>
-        <Label Text="Cell Index" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+        
+        <Label Style="{StaticResource NavLabel}"
+               Text="Cell Index" 
                />
+        
     </NavigationPage.TitleView>
 
 
@@ -43,8 +42,7 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Grid  Style="{StaticResource IndexGridViewStyle}"
-                                   >
+                            <Grid  Style="{StaticResource IndexGridViewStyle}">
 
                                 <Frame Grid.Row="0"
                                        Grid.Column="0"
@@ -57,8 +55,7 @@
                                 <StackLayout>
                                         
                                         <!--Frame for thumbnail--> 
-                                        <Frame Style="{StaticResource SmallCircleFrameStyle}"
-                                               >
+                                        <Frame Style="{StaticResource SmallCircleFrameStyle}">
 
                                             <Image Source="{Binding ImageURI}">
                        
@@ -67,8 +64,7 @@
                                         </Frame>
 
                                         <!--Frame with stats bars-->
-                                        <Frame Style="{StaticResource CharacterInnerFrameStyle}"
-                                               >
+                                        <Frame Style="{StaticResource CharacterInnerFrameStyle}">
                                             
                                             <Grid>
                                                 <Grid.RowDefinitions>
