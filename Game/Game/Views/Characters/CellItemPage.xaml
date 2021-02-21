@@ -14,21 +14,78 @@
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
+
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipPickerFrame"
+                   BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
+                   >
+                
+                
+                
+                
+                
+                
+                
+            </Style>
+
+            <!--InformationBox style on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="InformationBoxFrameStyle"
+                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
+                   >
+                
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="HeightRequest" Value="-1"/>
+                <Setter Property="WidthRequest" Value="400"/>
+
+            </Style>
+
+            <!--Title frame style on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="EquippedTitleFrameStyle"
+                   BasedOn="{StaticResource CharacterReadCellTitleFrame}"
+                   >
+
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
+            <!--Location Label on Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="LocationLabelStyle"
+                   BasedOn="{StaticResource SimpleLabelTextStyle}"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Grid.Column" Value="0"/>
+
+            </Style>
+
+
+
+
+
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+        
+        <Label Style="{StaticResource NavLabel}"
+               Text="{Binding Title}"
+               />
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <StackLayout Orientation="Vertical">
+                    
                     <!--Information Box-->
-                    <Frame Style="{StaticResource CharacterCreateFrameStyle}" Padding="5"
-                       HeightRequest="-1" WidthRequest="400"
-                       >
+                    <Frame Style="{StaticResource InformationBoxFrameStyle}">
 
                         <StackLayout>
 
@@ -44,29 +101,27 @@
                                     <RowDefinition Height="AUTO" />
                                 </Grid.RowDefinitions>
 
-                                <Frame Style="{StaticResource CharacterReadCellTitleFrame}"
-                                   VerticalOptions="CenterAndExpand" 
-                                   HorizontalOptions="Center" 
-                                   Padding="10"
-                                   >
+                                <Frame Style="{StaticResource EquippedTitleFrameStyle}">
 
                                     <StackLayout Orientation="Horizontal" 
-                                             Grid.Row="0" 
-                                             Grid.Column="2"
-                                             >
+                                                 Grid.Row="0" 
+                                                 Grid.Column="2"
+                                                 >
 
                                         <Label Text="Equipped Item" 
-                                           Style="{StaticResource CharacterCellNameLabelStyle}"
-                                           Margin="0"
-                                           />
+                                               Style="{StaticResource CharacterCellNameLabelStyle}"
+                                               Margin="0"
+                                               />
 
                                     </StackLayout>
                                 </Frame>
-
+                                
+                                <!--Head-->
+                                
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="1"  
-                                         Margin="0,20,0,0"
-                                         >
+                                             Grid.Row="1"  
+                                             Margin="0,20,0,0"
+                                             >
 
                                     <Grid >
                                         <Grid.RowDefinitions>
@@ -80,37 +135,37 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Head" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentHeadItem"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30"
-                                            x:Name="HeadDeleteButton"
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                        >
+                                                     HeightRequest="30"
+                                                     x:Name="HeadDeleteButton"
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>1.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                        </ImageButton>
 
+                                        </ImageButton>
                                     </Grid>
                                 </StackLayout>
 
+                                <!--Necklace-->
+
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="2" 
-                                         >
+                                             Grid.Row="2" 
+                                             >
 
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -123,34 +178,35 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label Text="Neckless" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                        <Label Text="Necklace" 
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentNecklessItem"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30" 
-                                            x:Name="NeckLessDeleteButton"
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"  
-                                            >
+                                                     HeightRequest="30" 
+                                                     x:Name="NeckLessDeleteButton"
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"  
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>2.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
+                                            
                                         </ImageButton>
 
                                     </Grid>
                                 </StackLayout>
+
+                                <!--Primary Hand-->
 
                                 <StackLayout Orientation="Horizontal" 
                                          Grid.Row="3"
@@ -168,38 +224,39 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Primary Hand" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentPrimaryHand"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30" 
-                                            x:Name="PrimaryHandDeleteButton" 
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                           >
+                                                     HeightRequest="30" 
+                                                     x:Name="PrimaryHandDeleteButton" 
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>3.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
+                                            
                                         </ImageButton>
 
 
                                     </Grid>
                                 </StackLayout>
 
+                                <!--Off Hand-->
+
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="4"
-                                         >
+                                             Grid.Row="4"
+                                             >
 
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -213,37 +270,38 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Off Hand" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentOffHand"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
-
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
                                         </StackLayout>
+                                        
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30" 
-                                            x:Name="OffHandDeleteButton"
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                          >
+                                                     HeightRequest="30" 
+                                                     x:Name="OffHandDeleteButton"
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>4.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
+                                            
                                         </ImageButton>
 
 
                                     </Grid>
                                 </StackLayout>
 
+                                <!--Left Finger-->
+
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="5"
-                                         >
+                                             Grid.Row="5"
+                                             >
 
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -257,39 +315,40 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Left Finger" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
 
                                         <StackLayout x:Name="CurrentLeftFinger"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30" 
-                                            x:Name="LeftFingerDeleteButton"
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                        >
+                                                     HeightRequest="30" 
+                                                     x:Name="LeftFingerDeleteButton"
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>6.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
+                                            
                                         </ImageButton>
 
 
                                     </Grid>
                                 </StackLayout>
 
+                                <!--Right Finger-->
+
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="6"
-                                         >
+                                             Grid.Row="6"
+                                             >
 
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -303,39 +362,40 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Right Finger" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentRightFinger"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30"
-                                            x:Name="RightFingerDeleteButton" 
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                        >
+                                                     HeightRequest="30"
+                                                     x:Name="RightFingerDeleteButton" 
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>5.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
+                                            
                                         </ImageButton>
 
 
                                     </Grid>
                                 </StackLayout>
 
+                                <!--Feet-->
+
                                 <StackLayout Orientation="Horizontal" 
-                                         Grid.Row="7"
-                                         >
+                                             Grid.Row="7"
+                                             >
 
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -349,31 +409,29 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="Feet" 
-                                           Style="{StaticResource SimpleLabelTextStyle}"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           Grid.Column="0"
-                                           />
+                                               Style="{StaticResource LocationLabelStyle}"
+                                               />
 
                                         <StackLayout x:Name="CurrentFeet"
-                                                 BackgroundColor="Transparent"
-                                                 Grid.Column="1">
+                                                     BackgroundColor="Transparent"
+                                                     Grid.Column="1"
+                                                     >
 
                                         </StackLayout>
 
                                         <ImageButton Source="icon_subtract.png"  
-                                            HeightRequest="30"  
-                                            x:Name="FeetDeleteButton"
-                                            Grid.Column="3" 
-                                            HorizontalOptions="End"
-                                            Clicked="DeleteButton_Clicked"
-                                        >
+                                                     HeightRequest="30"  
+                                                     x:Name="FeetDeleteButton"
+                                                     Grid.Column="3" 
+                                                     HorizontalOptions="End"
+                                                     Clicked="DeleteButton_Clicked"
+                                                     >
 
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>7.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                        </ImageButton>
 
+                                        </ImageButton>
                                     </Grid>
                                 </StackLayout>
                             </Grid>
