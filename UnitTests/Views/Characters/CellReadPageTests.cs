@@ -13,12 +13,12 @@ using System.Threading.Tasks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CharacterReadPageTests : CharacterReadPage
+    public class CellReadPageTests : CharacterReadPage
     {
         App app;
         CharacterReadPage page;
 
-        public CharacterReadPageTests() : base(true) { }
+        public CellReadPageTests() : base(true) { }
 
         [SetUp]
         public void Setup()
