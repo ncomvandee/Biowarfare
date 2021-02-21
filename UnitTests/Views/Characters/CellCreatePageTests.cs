@@ -45,7 +45,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Constructor_Default_Should_Pass()
+        public void CellCreatePage_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -59,7 +59,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Cancel_Clicked_Default_Should_Pass()
+        public void CellCreatePage_Cancel_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -73,7 +73,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Save_Clicked_Default_Should_Pass()
+        public void CellCreatePage_Save_Clicked_Default_Should_Pass()
         {
             // Arrange
 
@@ -87,7 +87,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Save_Clicked_Null_Image_Should_Pass()
+        public void CellCreatePage_Save_Clicked_Null_Image_Should_Pass()
         {
             // Arrange
             page.ViewModel.Data.ImageURI = null;
@@ -102,7 +102,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_OnBackButtonPressed_Valid_Should_Pass()
+        public void CellCreatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
 
