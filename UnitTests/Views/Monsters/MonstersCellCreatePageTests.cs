@@ -12,12 +12,12 @@ using System.Linq;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class MonsterCreatePageTests : MonsterCreatePage
+    public class MonsterCellCreatePageTests : MonsterCellCreatePage
     {
         App app;
-        MonsterCreatePage page;
+        MonsterCellCreatePage page;
 
-        public MonsterCreatePageTests() : base(true) { }
+        public MonsterCellCreatePageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
@@ -30,7 +30,7 @@ namespace UnitTests.Views
             Application.Current = app;
 
             //page = new MonsterCreatePage(new GenericViewModel<MonsterModel>(new MonsterModel()));
-            page = new MonsterCreatePage();
+            page = new MonsterCellCreatePage();
         }
 
         [TearDown]
@@ -59,7 +59,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.Cancel_Clicked(null, null);
+            page.CancelButton_Clicked(null, null);
 
             // Reset
 
@@ -73,7 +73,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.Save_Clicked(null, null);
+            page.SaveButton_Clicked(null, null);
 
             // Reset
 
@@ -88,7 +88,7 @@ namespace UnitTests.Views
             page.ViewModel.Data.ImageURI = null;
 
             // Act
-            page.Save_Clicked(null, null);
+            page.SaveButton_Clicked(null, null);
 
             // Reset
 
@@ -298,19 +298,19 @@ namespace UnitTests.Views
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
 
-        [Test]
-        public void MonsterCreatePage_RandomButton_Clicked_Vaid_Should_Pass()
-        {
-            // Arrange
-            page.ViewModel.Data.ImageURI = null;
+        //[Test]
+        //public void MonsterCreatePage_RandomButton_Clicked_Vaid_Should_Pass()
+        //{
+        //    // Arrange
+        //    page.ViewModel.Data.ImageURI = null;
 
-            // Act
-            page.RandomButton_Clicked(null, null);
+        //    // Act
+        //    page.RandomButton_Clicked(null, null);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
     }
 }
