@@ -17,6 +17,9 @@ namespace Game.Views
     public partial class CellCreatePage : ContentPage      
     {
 
+        // Empty Constructor for UTs
+        public CellCreatePage(bool UnitTest) { }
+
         // Maximum Cell Level
         public int MaxLevel = 20;
 
