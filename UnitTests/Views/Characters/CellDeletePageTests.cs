@@ -17,12 +17,12 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CharacterDeletePageTests : CharacterDeletePage
+    public class CellDeletePageTests : CharacterDeletePage
     {
         App app;
         CharacterDeletePage page;
 
-        public CharacterDeletePageTests() : base(true) { }
+        public CellDeletePageTests() : base(true) { }
         
         [SetUp]
         public void Setup()
