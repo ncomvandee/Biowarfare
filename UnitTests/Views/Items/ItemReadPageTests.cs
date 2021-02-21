@@ -63,7 +63,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.Update_Clicked(null, null);
+            page.ItemEditButton_Clicked(null, null);
 
             // Reset
 
