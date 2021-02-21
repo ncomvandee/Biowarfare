@@ -17,12 +17,12 @@ using Xamarin.Forms.Mocks;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class CharacterCreatePageTests : CharacterCreatePage
+    public class CellCreatePageTests : CellCreatePage
     {
         App app;
-        CharacterCreatePage page;
+        CellCreatePage page;
 
-        public CharacterCreatePageTests() : base(true) { }
+        public CellCreatePageTests() : base(true) { }
 
         [SetUp]
         public void Setup()
@@ -35,7 +35,7 @@ namespace UnitTests.Views
             Application.Current = app;
 
             //page = new CharacterCreatePage(new GenericViewModel<CharacterModel>(new CharacterModel()));
-            page = new CharacterCreatePage();
+            page = new CellCreatePage();
         }
 
         [TearDown]
@@ -64,7 +64,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.Cancel_Clicked(null, null);
+            page.CancelButton_Clicked(null, null);
 
             // Reset
 
@@ -78,7 +78,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.Save_Clicked(null, null);
+            page.SaveButton_Clicked(null, null);
 
             // Reset
 
@@ -93,7 +93,7 @@ namespace UnitTests.Views
             page.ViewModel.Data.ImageURI = null;
 
             // Act
-            page.Save_Clicked(null, null);
+            page.SaveButton_Clicked(null, null);
 
             // Reset
 
