@@ -176,7 +176,7 @@ namespace UnitTests.ViewModels
             var data = new MonsterModel();
 
             // Make a Delete Page
-            var myPage = new Game.Views.MonsterCreatePage(true);
+            var myPage = new Game.Views.MonsterCellCreatePage(true);
 
             var countBefore = ViewModel.Dataset.Count();
 
