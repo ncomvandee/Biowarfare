@@ -10,8 +10,11 @@ namespace Game.Models
     /// </summary>
     public enum CellTypeEnum
     {
+        // Unknown Cell type for the sake of Unit Test
+        Unknown = 0,
+
         // White blood cell. Special ability, provide damage imumunity to friendly ally
-        BCell = 0,    
+        BCell = 2,    
 
         // White blood cell. Special abilities, dealth highest damage and +5 attack
         KillerTCell = 10,
