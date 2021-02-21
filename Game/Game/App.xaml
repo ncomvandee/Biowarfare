@@ -1389,6 +1389,117 @@
 
             <!--___________________________________________-->
 
+            <!--Frame for equip picker-->
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipPickerFrame"
+                   BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="Padding" Value="10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+            <!--Frame for item box-->
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipBoxFrameStyle"
+                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="Padding" Value="5"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Frame for popup on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="PopupFrameStyle"
+                   >
+
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="BorderColor" Value="{StaticResource SecondaryAccentColor}"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Frame for item image popup on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="ItemImageCircleFrameStyle"
+                   >
+
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="Padding" Value="10"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Popup title frame style on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="PopupTitleFrameStyle"
+                   >
+
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterMidground}"/>
+
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--InformationBox style on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="InformationBoxFrameStyle"
+                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
+                   >
+
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="HeightRequest" Value="-1"/>
+                <Setter Property="WidthRequest" Value="400"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Title frame style on Cell Item Page-->
+            <Style TargetType="Frame" 
+                   x:Key="EquippedTitleFrameStyle"
+                   BasedOn="{StaticResource CharacterReadCellTitleFrame}"
+                   >
+
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Item frame on item equip page -->
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipCircleFrameStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+
+            </Style>
+            <!--___________________________________________-->
+            
+            
+
 
 
 
@@ -1698,6 +1809,70 @@
 
             </Style>
             <!--___________________________________________-->
+
+            <!--Popup Label on Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="EquipPopupLabelStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
+            <!--Location Label on Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="LocationLabelStyle"
+                   BasedOn="{StaticResource SimpleLabelTextStyle}"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Grid.Column" Value="0"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+            <!--Item label in lower listview for Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="ItemEquipNameLabelStyle"
+                   BasedOn="{StaticResource SimpleLabelTextStyle}"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Popup labels for attributes for Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="PopupAttributeLabelStyle"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Bold Popup labels for attributes for Cell Item Page-->
+            <Style TargetType="Label" 
+                   x:Key="PopupBoldAttributeLabelStyle"
+                   BasedOn="{StaticResource PopupAttributeLabelStyle}"
+                   >
+
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
 
 
 
@@ -2115,6 +2290,23 @@
 
             <!--___________________________________________-->
 
+
+
+
+
+
+
+
+            <!-- ImageButton -->
+
+
+
+
+
+
+
+            <!--___________________________________________-->
+            
             <!--Style for plus minus buttons on create page-->
             <Style TargetType="ImageButton"
                    x:Key="CreatePlusMinusButtonStyle"
@@ -2124,6 +2316,75 @@
 
             </Style>
             
+            <!--___________________________________________-->
+
+            <!--Close Popup ImageButton on Cell Item Page-->
+            <Style TargetType="ImageButton" 
+                   x:Key="ClosePopupButtonStyle"
+                   >
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Margin" Value="10, 0"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
+            <!--Subtract ImageButton on Cell Item Page-->
+            <Style TargetType="ImageButton" 
+                   x:Key="EquipImageButtonStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="Grid.Column" Value="3"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+            <!--Plus ImageButton on Cell Item Page-->
+            <Style TargetType="ImageButton" 
+                   x:Key="EquipImageAddButtonStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="Grid.Column" Value="3"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+
+
+
+
+
+
+            <!-- Image -->
+
+
+
+
+
+
+            <!--___________________________________________-->
+            
+            <!--Item image in frame on item equip page-->
+            <Style TargetType="Image" 
+                   x:Key="EquipImageStyle"
+                   BasedOn="{StaticResource ImageMediumStyle}"
+                   >
+
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+
             <!--___________________________________________-->
 
 
@@ -2197,6 +2458,18 @@
 
             </Style>
 
+            <!--___________________________________________-->
+            
+            <!--Equip picker style-->
+            <Style TargetType="Picker" 
+                   x:Key="ItemEquipPickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
             <!--___________________________________________-->
 
 
@@ -2347,14 +2620,14 @@
 
 
             <!-- Editor -->
-            
-            
-            
-            
-            
-            
-            
 
+
+
+
+
+
+
+           
             <!--Item create page editor-->
             <Style TargetType="Editor"
                    x:Key="ItemCreateEditorStyle"
@@ -2384,7 +2657,7 @@
 
 
 
-
+            
             <!--Scrollview on game page-->
             <Style TargetType="ScrollView"
                    x:Key="GamePageScrollViewStyle"
@@ -2395,7 +2668,77 @@
                 <Setter Property="Padding" Value="10"/>
 
             </Style>
+            <!--___________________________________________-->
 
+
+
+
+
+
+
+            <!-- StackLayout -->
+
+
+
+
+
+
+
+
+
+          
+            <!--Location StackLayout on Cell Item Page-->
+            <Style TargetType="StackLayout" 
+                   x:Key="LocationStackLayoutStyle"
+                   >
+
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Grid.Column" Value="1"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+            <!--Stacklayout in popup for Cell Item Page-->
+            <Style TargetType="StackLayout"
+                   x:Key="PopupStackLayoutStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value="500"/>
+                <Setter Property="WidthRequest" Value="500"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+
+
+
+
+
+            <!-- ListView -->
+
+
+
+
+
+
+
+            <!--ListView style for item equip page-->
+            <Style TargetType="ListView" 
+                   x:Key="EquipListViewStyle"
+                   >
+
+                <Setter Property="HasUnevenRows" Value="True"/>
+                <Setter Property="Margin" Value="5,0,5,0"/>
+                <Setter Property="RefreshCommand" Value="{Binding LoadItemsCommand}"/>
+                <Setter Property="IsRefreshing" Value="{Binding IsBusy, Mode=OneWay}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
         </ResourceDictionary>
     </Application.Resources>

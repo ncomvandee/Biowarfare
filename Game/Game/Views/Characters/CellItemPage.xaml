@@ -14,145 +14,6 @@
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
-
-            
-            <!--Frame for equip picker--> 
-            <Style TargetType="Frame" 
-                   x:Key="ItemEquipPickerFrame"
-                   BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
-                   >
-
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
-                <Setter Property="WidthRequest" Value="200"/>
-                <Setter Property="Padding" Value="10"/>
-
-            </Style>
-
-
-            <!--Equip picker style-->
-            <Style TargetType="Picker" 
-                   x:Key="ItemEquipPickerStyle"
-                   BasedOn="{StaticResource CreatePickerStyle}"
-                   >
-
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
-
-            </Style>
-
-
-            <!--Frame for item box-->
-            <Style TargetType="Frame" 
-                   x:Key="ItemEquipBoxFrameStyle"
-                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
-                   >
-
-                <Setter Property="WidthRequest" Value="400"/>
-                <Setter Property="Padding" Value="5"/>
-
-            </Style>
-
-
-            <!--ListView style for item equip page-->
-            <Style TargetType="ListView" 
-                   x:Key="EquipListViewStyle"
-                   >
-
-                <Setter Property="HasUnevenRows" Value="True"/>
-                <Setter Property="Margin" Value="5,0,5,0"/>
-                <Setter Property="RefreshCommand" Value="{Binding LoadItemsCommand}"/>
-                <Setter Property="IsRefreshing" Value="{Binding IsBusy, Mode=OneWay}"/>
-
-            </Style>
-
-
-
-          
-
-
-
-
-
-
-            <!--InformationBox style on Cell Item Page-->
-            <Style TargetType="Frame" 
-                   x:Key="InformationBoxFrameStyle"
-                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
-                   >
-                
-                <Setter Property="Padding" Value="5"/>
-                <Setter Property="HeightRequest" Value="-1"/>
-                <Setter Property="WidthRequest" Value="400"/>
-
-            </Style>
-
-            <!--Title frame style on Cell Item Page-->
-            <Style TargetType="Frame" 
-                   x:Key="EquippedTitleFrameStyle"
-                   BasedOn="{StaticResource CharacterReadCellTitleFrame}"
-                   >
-
-                <Setter Property="Padding" Value="10"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
-
-            </Style>
-
-            <!--Location Label on Cell Item Page-->
-            <Style TargetType="Label" 
-                   x:Key="LocationLabelStyle"
-                   BasedOn="{StaticResource SimpleLabelTextStyle}"
-                   >
-
-                <Setter Property="HorizontalOptions" Value="Start"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="Grid.Column" Value="0"/>
-
-            </Style>
-
-            <!--Location StackLayout on Cell Item Page-->
-            <Style TargetType="StackLayout" 
-                   x:Key="LocationStackLayoutStyle"
-                   >
-
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="Grid.Column" Value="1"/>
-
-            </Style>
-
-            <!--Subtract ImageButton on Cell Item Page-->
-            <Style TargetType="ImageButton" 
-                   x:Key="EquipImageButtonStyle"
-                   >
-
-                <Setter Property="HeightRequest" Value="30"/>
-                <Setter Property="Grid.Column" Value="3"/>
-                <Setter Property="HorizontalOptions" Value="End"/>
-
-            </Style>
-
-
-            <!--Item frame on item equip page -->
-            <Style TargetType="Frame" 
-                   x:Key="ItemEquipCircleFrameStyle"
-                   >
-
-                <Setter Property="HeightRequest" Value="60"/>
-                <Setter Property="WidthRequest" Value="60"/>
-                <Setter Property="CornerRadius" Value="100"/>
-                <Setter Property="BorderColor" Value="White"/>
-                <Setter Property="BackgroundColor" Value="White"/>
-
-            </Style>
-
-
-
-
-
-          
-
-
-
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -168,7 +29,7 @@
         <ScrollView>
             <Grid>
                 <StackLayout Orientation="Vertical">
-                    
+
                     <!--Information Box-->
                     <Frame Style="{StaticResource InformationBoxFrameStyle}">
 
@@ -200,9 +61,9 @@
 
                                     </StackLayout>
                                 </Frame>
-                                
+
                                 <!--Head-->
-                                
+
                                 <StackLayout Orientation="Horizontal" 
                                              Grid.Row="1"  
                                              Margin="0,20,0,0"
@@ -279,7 +140,7 @@
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>2.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                            
+
                                         </ImageButton>
 
                                     </Grid>
@@ -321,7 +182,7 @@
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>3.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                            
+
                                         </ImageButton>
 
 
@@ -363,7 +224,7 @@
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>4.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                            
+
                                         </ImageButton>
 
 
@@ -407,7 +268,7 @@
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>6.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                            
+
                                         </ImageButton>
 
 
@@ -451,7 +312,7 @@
                                             <ImageButton.CommandParameter>
                                                 <x:Decimal>5.00000</x:Decimal>
                                             </ImageButton.CommandParameter>
-                                            
+
                                         </ImageButton>
 
 
@@ -503,7 +364,7 @@
                     </Frame>
 
                     <!--Picker-->
-                    
+
                     <Frame Style="{StaticResource ItemEquipPickerFrame}">
 
                         <Picker Style="{StaticResource ItemEquipPickerStyle}"
@@ -515,7 +376,7 @@
                     </Frame>
 
                     <!--Item Box-->
-                    
+
                     <Frame Style="{StaticResource ItemEquipBoxFrameStyle}">
 
                         <ListView Style="{StaticResource EquipListViewStyle}"
@@ -541,32 +402,22 @@
                                             <Frame Style="{StaticResource ItemEquipCircleFrameStyle}"
                                                    Grid.Column="0"
                                                    >
-                                                
-                                                    <Image  
-                                                        Source="{Binding ImageURI}"
-                                                        Style="{StaticResource ImageMediumStyle}"
-                                                        VerticalOptions="Center"
-                                                        HorizontalOptions="Center"
-                                                    />
+
+                                                <Image Source="{Binding ImageURI}"
+                                                           Style="{StaticResource EquipImageStyle}"
+                                                           />
                                             </Frame>
 
                                             <Label Grid.Column="1" 
-                                               Text="{Binding Name}" 
-                                               Style="{StaticResource SimpleLabelTextStyle}"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"
-                                               HorizontalOptions="FillAndExpand"
-                                               VerticalOptions="FillAndExpand"
-                                               />
+                                                   Text="{Binding Name}" 
+                                                   Style="{StaticResource ItemEquipNameLabelStyle}"
+                                                   />
 
-                                            <ImageButton Source="icon_add.png"
-                                                HeightRequest="40"
-                                                WidthRequest="30"
-                                                Grid.Column="3" 
-                                                HorizontalOptions="End"
-                                                Clicked="AddButton_Clicked"
-                                                CommandParameter="{Binding .}"
-                                                />
+                                            <ImageButton Style="{StaticResource EquipImageAddButtonStyle}"
+                                                         Source="icon_add.png"
+                                                         Clicked="AddButton_Clicked"
+                                                         CommandParameter="{Binding .}"
+                                                         />
 
                                         </Grid>
                                     </ViewCell>
@@ -595,54 +446,37 @@
                     <!--#endButton-->
 
                 </StackLayout>
-                
+
                 <!--#Popup Window-->
-                <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,200,0,0">
-                    <Frame 
-                   BackgroundColor="{StaticResource PrimaryCharacterForeground}"
-                   BorderColor="{StaticResource SecondaryAccentColor}"
-                   CornerRadius="20"
-                   x:Name="ItemPopUpFrame"
-                   IsVisible="false">
+                <StackLayout HorizontalOptions="CenterAndExpand" 
+                             Margin="0,200,0,0"
+                             >
+                    <Frame Style="{StaticResource PopupFrameStyle}"
+                           x:Name="ItemPopUpFrame"
+                           IsVisible="false"
+                           >
 
-                        <StackLayout VerticalOptions="CenterAndExpand"
-                             HorizontalOptions="CenterAndExpand"
-                             HeightRequest="500"
-                             WidthRequest="500" >
+                        <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
 
-                            <ImageButton Source="icon_cancel.png"
-                                 WidthRequest="30" 
-                                 HeightRequest="40"
-                                 HorizontalOptions="End"
-                                 Margin="10, 0"
-                                 Clicked="ClosePopup_Clicked"
-                                 />
+                            <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
+                                         Source="icon_cancel.png"
+                                         Clicked="ClosePopup_Clicked"
+                                         />
 
-                            <Frame BackgroundColor="{StaticResource PrimaryCharacterMidground}"
-                           BorderColor="Transparent"
-                           HeightRequest="30"
-                           CornerRadius="20"
-                           Padding="5">
+                            <Frame Style="{StaticResource PopupTitleFrameStyle}">
 
-                                <Label Text="Name goes here, I guess"
-                               x:Name="ItemPopUpName"
-                               HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="Center"
-                               FontSize="Subtitle"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource EquipPopupLabelStyle}"
+                                       Text="Name goes here, I guess"
+                                       x:Name="ItemPopUpName"
+                                       />
 
                             </Frame>
 
-                            <Frame BackgroundColor="White"
-                               CornerRadius="100"
-                               WidthRequest="100"
-                               HeightRequest="100"
-                               BorderColor="Transparent"
-                               Padding="10">
+                            <Frame Style="{StaticResource ItemImageCircleFrameStyle}">
 
                                 <Image Source="face_mask_no_bg.png"
-                               x:Name="ItemPopUpImage"/>
+                                       x:Name="ItemPopUpImage"
+                                       />
 
                             </Frame>
 
@@ -658,54 +492,49 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="Description: "
-                               Grid.Row="0"
-                               Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                                       Text="Description: "
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       />
 
-                                <Label x:Name="ItemPopUpDescription"
-                               Grid.Row="0"
-                               Grid.Column="1"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                                       x:Name="ItemPopUpDescription"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                       />
 
-                                <Label Text="Location: "
-                               Grid.Row="1"
-                               Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                                       Text="Location: "
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       />
 
-                                <Label x:Name="ItemPopUpLocation"
-                               Grid.Row="1"
-                               Grid.Column="1" 
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                                       x:Name="ItemPopUpLocation"
+                                       Grid.Row="1"
+                                       Grid.Column="1" 
+                                       />
 
-                                <Label x:Name="ItemPopUpAttribute"
-                               Grid.Row="2"
-                               Grid.Column="0"
-                               FontAttributes="Bold"
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                                       x:Name="ItemPopUpAttribute"
+                                       Grid.Row="2"
+                                       Grid.Column="0"
+                                       />
 
-                                <Label x:Name="ItemPopUpValue"
-                               Grid.Row="2"
-                               Grid.Column="1" 
-                               TextColor="{StaticResource PrimaryCharacterBackground}"
-                               />
+                                <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                                       x:Name="ItemPopUpValue"
+                                       Grid.Row="2"
+                                       Grid.Column="1" 
+                                       />
 
                             </Grid>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-       
+
                 <!--#endPopup Window-->
             </Grid>
-                
         </ScrollView>
-
     </ContentPage.Content>
 </ContentPage>
