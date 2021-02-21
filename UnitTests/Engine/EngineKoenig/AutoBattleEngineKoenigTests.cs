@@ -93,7 +93,7 @@ namespace UnitTests.Engine.EngineKoenig
 
             //Reset
             DiceHelper.DisableForcedRolls();
-            CharacterIndexViewModel.Instance.ForceDataRefresh();
+            CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
             Assert.AreEqual(true, result);
@@ -126,7 +126,7 @@ namespace UnitTests.Engine.EngineKoenig
             var result = await AutoBattleEngine.RunAutoBattle();
 
             //Reset
-            CharacterIndexViewModel.Instance.ForceDataRefresh();
+            CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
             Assert.AreEqual(true, result);
@@ -140,15 +140,15 @@ namespace UnitTests.Engine.EngineKoenig
             //Arrange
             AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
 
-            CharacterIndexViewModel.Instance.Dataset.Clear();
+            CellIndexViewModel.Instance.Dataset.Clear();
 
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "1" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "2" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "3" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "4" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "5" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "6" });
-            await CharacterIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "7" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "1" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "2" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "3" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "4" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "5" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "6" });
+            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "7" });
 
             //Act
             var result = AutoBattleEngine.CreateCharacterParty();
@@ -156,7 +156,7 @@ namespace UnitTests.Engine.EngineKoenig
             var name = AutoBattleEngine.Battle.EngineSettings.CharacterList.ElementAt(5).Name;
 
             //Reset
-            CharacterIndexViewModel.Instance.ForceDataRefresh();
+            CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
             Assert.AreEqual(6, count);
@@ -169,14 +169,14 @@ namespace UnitTests.Engine.EngineKoenig
             //Arrange
             AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
 
-            CharacterIndexViewModel.Instance.Dataset.Clear();
+            CellIndexViewModel.Instance.Dataset.Clear();
 
             //Act
             var result = AutoBattleEngine.CreateCharacterParty();
             var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
 
             //Reset
-            CharacterIndexViewModel.Instance.ForceDataRefresh();
+            CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
             Assert.AreEqual(6, count);
