@@ -73,6 +73,10 @@ namespace Game.Models
                 case CellTypeEnum.Basophil:
                     Message = "Basophil";
                     break;
+
+                case CellTypeEnum.Unknown:
+                    Message = "Player";
+                    break;
             }
 
             return Message;

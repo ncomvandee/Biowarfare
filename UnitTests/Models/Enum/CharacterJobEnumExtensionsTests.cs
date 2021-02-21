@@ -13,7 +13,7 @@ namespace UnitTests.Models
             // Arrange
 
             // Act
-            var result = CharacterJobEnum.Unknown.ToMessage();
+            var result = CellTypeEnum.Unknown.ToMessage();
 
             // Reset
 
