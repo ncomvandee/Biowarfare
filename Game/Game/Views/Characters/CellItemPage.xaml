@@ -15,18 +15,64 @@
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
 
+            
+            <!--Frame for equip picker--> 
             <Style TargetType="Frame" 
                    x:Key="ItemEquipPickerFrame"
                    BasedOn="{StaticResource CharacterCreatePickerFrameStyle}"
                    >
-                
-                
-                
-                
-                
-                
-                
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="Padding" Value="10"/>
+
             </Style>
+
+
+            <!--Equip picker style-->
+            <Style TargetType="Picker" 
+                   x:Key="ItemEquipPickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryCharacterForeground}"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryCharacterBackground}"/>
+
+            </Style>
+
+
+            <!--Frame for item box-->
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipBoxFrameStyle"
+                   BasedOn="{StaticResource CharacterCreateFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="Padding" Value="5"/>
+
+            </Style>
+
+
+            <!--ListView style for item equip page-->
+            <Style TargetType="ListView" 
+                   x:Key="EquipListViewStyle"
+                   >
+
+                <Setter Property="HasUnevenRows" Value="True"/>
+                <Setter Property="Margin" Value="5,0,5,0"/>
+                <Setter Property="RefreshCommand" Value="{Binding LoadItemsCommand}"/>
+                <Setter Property="IsRefreshing" Value="{Binding IsBusy, Mode=OneWay}"/>
+
+            </Style>
+
+
+
+          
+
+
+
+
+
 
             <!--InformationBox style on Cell Item Page-->
             <Style TargetType="Frame" 
@@ -64,7 +110,46 @@
 
             </Style>
 
+            <!--Location StackLayout on Cell Item Page-->
+            <Style TargetType="StackLayout" 
+                   x:Key="LocationStackLayoutStyle"
+                   >
 
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Grid.Column" Value="1"/>
+
+            </Style>
+
+            <!--Subtract ImageButton on Cell Item Page-->
+            <Style TargetType="ImageButton" 
+                   x:Key="EquipImageButtonStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="Grid.Column" Value="3"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+
+            </Style>
+
+
+            <!--Item frame on item equip page -->
+            <Style TargetType="Frame" 
+                   x:Key="ItemEquipCircleFrameStyle"
+                   >
+
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+
+            </Style>
+
+
+
+
+
+          
 
 
 
@@ -89,7 +174,7 @@
 
                         <StackLayout>
 
-                            <Grid>
+                            <Grid >
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="AUTO" />
                                     <RowDefinition Height="AUtO" />
@@ -138,18 +223,15 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentHeadItem"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentHeadItem"
                                                      >
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30"
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="HeadDeleteButton"
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -182,18 +264,15 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentNecklessItem"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentNecklessItem"
                                                      >
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30" 
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="NeckLessDeleteButton"
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"  
                                                      >
 
@@ -227,18 +306,15 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentPrimaryHand"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentPrimaryHand"
                                                      >
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30" 
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="PrimaryHandDeleteButton" 
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -273,17 +349,14 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentOffHand"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentOffHand"
                                                      >
                                         </StackLayout>
-                                        
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30" 
+
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="OffHandDeleteButton"
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -319,18 +392,15 @@
                                                />
 
 
-                                        <StackLayout x:Name="CurrentLeftFinger"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentLeftFinger"
                                                      >
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30" 
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="LeftFingerDeleteButton"
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -365,19 +435,16 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentRightFinger"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentRightFinger"
                                                      >
 
                                         </StackLayout>
 
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30"
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="RightFingerDeleteButton" 
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -412,18 +479,15 @@
                                                Style="{StaticResource LocationLabelStyle}"
                                                />
 
-                                        <StackLayout x:Name="CurrentFeet"
-                                                     BackgroundColor="Transparent"
-                                                     Grid.Column="1"
+                                        <StackLayout Style="{StaticResource LocationStackLayoutStyle}"
+                                                     x:Name="CurrentFeet"
                                                      >
 
                                         </StackLayout>
 
-                                        <ImageButton Source="icon_subtract.png"  
-                                                     HeightRequest="30"  
+                                        <ImageButton Style="{StaticResource EquipImageButtonStyle}"
+                                                     Source="icon_subtract.png"  
                                                      x:Name="FeetDeleteButton"
-                                                     Grid.Column="3" 
-                                                     HorizontalOptions="End"
                                                      Clicked="DeleteButton_Clicked"
                                                      >
 
@@ -439,37 +503,26 @@
                     </Frame>
 
                     <!--Picker-->
-                    <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
-                      BackgroundColor="{StaticResource PrimaryCharacterForeground}"
-                      WidthRequest="200" 
-                      Padding="10"
-                      >
+                    
+                    <Frame Style="{StaticResource ItemEquipPickerFrame}">
 
-                        <Picker 
-                        Style="{StaticResource CreatePickerStyle}"
-                        TextColor="{StaticResource PrimaryCharacterBackground}"
-                        BackgroundColor="{StaticResource PrimaryCharacterForeground}"
-                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListMessageCharacter}" 
-                        SelectedItem="{Binding SelectedLocation, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}" 
-                        x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
-                        />
+                        <Picker Style="{StaticResource ItemEquipPickerStyle}"
+                                ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListMessageCharacter}" 
+                                SelectedItem="{Binding SelectedLocation, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}" 
+                                x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_Changed"
+                                />
 
                     </Frame>
 
                     <!--Item Box-->
-                    <Frame Style="{StaticResource CharacterCreateFrameStyle}"
-                       Padding="5"
-                       WidthRequest="400"
-                       >
+                    
+                    <Frame Style="{StaticResource ItemEquipBoxFrameStyle}">
 
-                        <ListView x:Name="ItemsListView" 
-                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                        RefreshCommand="{Binding LoadItemsCommand}"
-                        CachingStrategy="RecycleElement"
-                        HasUnevenRows="True"
-                        Margin="5,0,5,0"
-                        ItemSelected="OnItemSelected"
-                        >
+                        <ListView Style="{StaticResource EquipListViewStyle}"
+                                  x:Name="ItemsListView" 
+                                  CachingStrategy="RecycleElement"
+                                  ItemSelected="OnItemSelected"
+                                  >
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
@@ -485,12 +538,9 @@
                                             </Grid.RowDefinitions>
 
 
-                                            <Frame BackgroundColor="White"
-                                                   HeightRequest="60"
-                                                   WidthRequest="60"
-                                                   CornerRadius="100"
+                                            <Frame Style="{StaticResource ItemEquipCircleFrameStyle}"
                                                    Grid.Column="0"
-                                                   BorderColor="White">
+                                                   >
                                                 
                                                     <Image  
                                                         Source="{Binding ImageURI}"
