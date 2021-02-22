@@ -11,18 +11,17 @@
              Style="{StaticResource ScoreContentPage}">
 
     <ContentPage.Resources>
+        
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
         </ResourceDictionary>
+        
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
 
         <Label Text="{Binding Title}" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               Style="{StaticResource NavLabel}"
                />
 
     </NavigationPage.TitleView>
@@ -38,9 +37,7 @@
 
             <Frame Style="{StaticResource LargeOuterScoresFrameStyle}">
 
-                <Frame Style="{StaticResource LargeScoresInnerFrameStyle}"
-                       
-                       >
+                <Frame Style="{StaticResource LargeScoresInnerFrameStyle}">
 
                     <Grid>
                         <Grid.RowDefinitions>
@@ -51,11 +48,12 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <ScrollView VerticalScrollBarVisibility="Default"
-                                    >
+                        <ScrollView VerticalScrollBarVisibility="Default">
+                            
                             <StackLayout Style="{StaticResource OuterBoxStack}"
                                          Spacing="10"
-                                         Margin="20">
+                                         Margin="20"
+                                         >
 
                                 <StackLayout Style="{StaticResource HorizontalStack}">
 
