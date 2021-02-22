@@ -53,6 +53,20 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CellItemPage_UpdatePageBidingContext_Should_Return_True()
+        {
+            // Arrange
+
+            // Act
+            var result = page.UpdatePageBindingContext();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(result); // Got to here, so it happened...
+        }
+
+        [Test]
         public void CellItemPage_Save_Clicked_Default_Should_Pass()
         {
             // Arrange
