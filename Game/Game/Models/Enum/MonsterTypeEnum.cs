@@ -108,6 +108,9 @@ namespace Game.Models
     /// </summary>
     public static class MonsterTypeEnumHelper
     {
+        /// <summary>
+        /// Returns a list of Monster types 
+        /// </summary>
         public static List<string> GetMonsterTypeList
         {
             get
