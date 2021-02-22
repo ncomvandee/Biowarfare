@@ -134,7 +134,9 @@ namespace Game.Models
             return Value;
         }
 
-        // Get value for item attribute as double for showing in progress bar        
+        /// <summary>
+        /// Get value for item attribute as double for showing in progress bar  
+        /// </summary>
         public double GetValueForProgressBar
         {
             get
@@ -148,7 +150,9 @@ namespace Game.Models
             }
         }
 
-        // Get text for attribute in progress bar
+        /// <summary>
+        /// Get text for attribute in progress bar
+        /// </summary>
         public string GetTextForAttributeProgressBar
         {
             get
