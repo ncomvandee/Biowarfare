@@ -151,24 +151,24 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual("6", name);
         }
 
-        //[Test]
-        //public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
-        //{
-        //    //Arrange
-        //    AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
+        [Test]
+        public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
+        {
+            //Arrange
+            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
 
-        //    CharacterIndexViewModel.Instance.Dataset.Clear();
+            CellIndexViewModel.Instance.Dataset.Clear();
 
-        //    //Act
-        //    var result = AutoBattleEngine.CreateCharacterParty();
-        //    var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
+            //Act
+            var result = AutoBattleEngine.CreateCharacterParty();
+            var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
 
-        //    //Reset
-        //    CharacterIndexViewModel.Instance.ForceDataRefresh();
+            //Reset
+            CellIndexViewModel.Instance.ForceDataRefresh();
 
-        //    //Assert
-        //    Assert.AreEqual(6, count);
-        //}
+            //Assert
+            Assert.AreEqual(6, count);
+        }
         #endregion CreateCharacterParty   
     }
 }
