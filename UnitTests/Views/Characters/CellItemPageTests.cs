@@ -189,5 +189,33 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellItemPage_AddButton_Clicked_Should_Pass()
+        {
+            // Arrange
+
+            // Make a new Character to use for the Picker Tests
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = 10
+            };
+
+            //Make new item
+            var dataTest = new ItemModel { Id = "101010", Name = "test", Location = ItemLocationEnum.PrimaryHand };
+
+            var control = new ImageButton();
+            control.CommandParameter = dataTest;
+
+            // Act
+            page.AddButton_Clicked(control, null);
+
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
