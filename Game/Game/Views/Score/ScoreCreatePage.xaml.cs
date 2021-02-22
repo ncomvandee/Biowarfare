@@ -10,13 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace Game.Views
 {
     /// <summary>
-    /// Create Item
+    /// Create a Score 
     /// </summary>
     [DesignTimeVisible(false)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ScoreCreatePage : ContentPage
     {
-        // The item to create
+        // The Score to create
         public GenericViewModel<ScoreModel> ViewModel { get; set; }
 
         // Constructor for Unit Testing
