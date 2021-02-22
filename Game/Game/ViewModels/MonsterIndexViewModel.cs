@@ -20,9 +20,14 @@ namespace Game.ViewModels
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // Monster Index View Model Instance 
         private static volatile MonsterIndexViewModel instance;
+        // Syncroot Object 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Returns Monster Index View Model Instance 
+        /// </summary>
         public static MonsterIndexViewModel Instance
         {
             get
