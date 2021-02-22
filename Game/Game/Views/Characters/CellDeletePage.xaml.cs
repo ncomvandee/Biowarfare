@@ -9,7 +9,7 @@ using Game.Models;
 namespace Game.Views
 {
     /// <summary>
-    /// The Read Page
+    /// Delete a Cell 
     /// </summary>
     [DesignTimeVisible(false)] 
     [XamlCompilation(XamlCompilationOptions.Compile)]
