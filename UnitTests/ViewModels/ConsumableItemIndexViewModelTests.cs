@@ -70,9 +70,9 @@ namespace UnitTests.ViewModels
             // Add items into the list Z ordered
             var dataList = new List<ItemModel>
             {
-                new ItemModel { Name = "z" },
-                new ItemModel { Name = "m" },
-                new ItemModel { Name = "a" }
+                new ItemModel { Name = "z" , IsConsumable=true},
+                new ItemModel { Name = "m" , IsConsumable=true},
+                new ItemModel { Name = "a" , IsConsumable=true}
             };
 
             // Act
