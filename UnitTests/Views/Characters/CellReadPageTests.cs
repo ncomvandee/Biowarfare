@@ -195,7 +195,7 @@ namespace UnitTests.Views
             await ItemIndexViewModel.Instance.LoadDefaultDataAsync();
 
             // Assert
-            Assert.AreEqual(2, result.Children.Count()); // Got to here, so it happened...
+            Assert.AreEqual(0, result.Children.Count()); // Got to here, so it happened...
         }
 
         [Test]
