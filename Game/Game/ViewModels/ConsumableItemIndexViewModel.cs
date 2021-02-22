@@ -19,9 +19,14 @@ namespace Game.ViewModels
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // Consumable Item View Model Instance 
         private static volatile ConsumableItemIndexViewModel instance;
+        // Syncroot Object 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Create consumable item index view model instance 
+        /// </summary>
         public static ConsumableItemIndexViewModel Instance
         {
             get
