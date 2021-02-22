@@ -272,5 +272,22 @@ namespace UnitTests.ViewModels
             Assert.IsNull(result);
         }
 
+        [Test]
+        public async Task MonsterIndexViewModel_Get_Monster_ID_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new MonsterModel());
+
+            //Create new character test
+            var dataTest = new MonsterModel { Name = "test" };
+            await ViewModel.CreateAsync(dataTest);
+            // Act
+            var result = ViewModel.GetMonster(dataTest.Guid);
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
     }
 }
