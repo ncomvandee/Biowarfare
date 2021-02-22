@@ -2800,6 +2800,17 @@
 
             <!--___________________________________________-->
 
+            <!--Style for score index page stack layout-->
+            <Style TargetType="StackLayout"  
+                 x:Key="ScoreIndexStackLayoutStyle"
+                 >
+
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="0, 10, 0, 10"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
