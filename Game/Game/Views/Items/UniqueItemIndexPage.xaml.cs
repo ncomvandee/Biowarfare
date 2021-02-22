@@ -58,16 +58,6 @@ namespace Game.Views.Items
         }
 
         /// <summary>
-        /// Call to Add a new record
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new ItemCreatePage()));
-        }
-
-        /// <summary>
         /// Refresh the list on page appearing
         /// </summary>
         protected override void OnAppearing()
