@@ -104,5 +104,33 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellItemPage_LocationPicker_SelectedItem_Not_Null_Should_Pass()
+        {
+            // Arrange
+
+            // Make a new Character to use for the Picker Tests
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = 10
+            };
+
+            //Make new item
+            var dataTest = new ItemModel { Name = "test" , Location= ItemLocationEnum.PrimaryHand};
+
+            var control = (Picker)page.FindByName("LocationPicker");
+            control.SelectedItem = dataTest;
+
+            // Act
+            page.LocationPicker_Changed(control, null);
+
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
