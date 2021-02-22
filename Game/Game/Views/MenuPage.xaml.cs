@@ -15,6 +15,7 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
+        // Get the current rootpage 
         public MainPage RootPage { get => Application.Current.MainPage as MainPage; }
 
         // List of Menu Items
