@@ -169,7 +169,7 @@ namespace Game.Views
         {
 
             //Get Current character item
-            GetCharacterItem();
+            //GetCharacterItem();
 
             // Temp store off the Level
             var data = this.ViewModel.Data;
@@ -208,15 +208,15 @@ namespace Game.Views
             CurrentRightFinger.Children.Clear();
             CurrentLeftFinger.Children.Clear();
             CurrentFeet.Children.Clear();
-
+           
             //Add new children
-            CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.Head, ItemLocationEnum.Head));
-            CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.Necklass, ItemLocationEnum.Necklass));
-            CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.PrimaryHand, ItemLocationEnum.PrimaryHand));
-            CurrentOffHand.Children.Add(RenderItemInformation(ViewModel.Data.OffHand, ItemLocationEnum.OffHand));
-            CurrentLeftFinger.Children.Add(RenderItemInformation(ViewModel.Data.LeftFinger, ItemLocationEnum.LeftFinger));
-            CurrentRightFinger.Children.Add(RenderItemInformation(ViewModel.Data.RightFinger, ItemLocationEnum.RightFinger));
-            CurrentFeet.Children.Add(RenderItemInformation(ViewModel.Data.Feet, ItemLocationEnum.Feet));
+            CurrentHeadItem.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.Head), ItemLocationEnum.Head));
+            CurrentNecklessItem.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.Necklass), ItemLocationEnum.Necklass));
+            CurrentPrimaryHand.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.PrimaryHand), ItemLocationEnum.PrimaryHand));
+            CurrentOffHand.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.OffHand), ItemLocationEnum.OffHand));
+            CurrentLeftFinger.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.LeftFinger), ItemLocationEnum.LeftFinger));
+            CurrentRightFinger.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.RightFinger), ItemLocationEnum.RightFinger));
+            CurrentFeet.Children.Add(RenderItemInformation(ViewModel.Data.GetItemByLocation(ItemLocationEnum.Feet), ItemLocationEnum.Feet));
 
        
         }
@@ -224,17 +224,17 @@ namespace Game.Views
         /// <summary>
         /// Display information of an item
         /// </summary>
-        /// <param name="locationString"></param>
+        /// <param name="item"></param>
         /// <param name="locationEnum"></param>
         /// <param name="col"></param>
         /// <returns></returns>
-        public Grid RenderItemInformation(string locationString, ItemLocationEnum locationEnum)
+        public Grid RenderItemInformation(ItemModel item, ItemLocationEnum locationEnum)
         {
 
             var grid = new Grid { };
 
 
-            if (locationString == null)
+            if (item == null)
             {
 
                 grid.RowDefinitions.Add(new RowDefinition
@@ -266,7 +266,7 @@ namespace Game.Views
 
 
             //get item
-            ItemModel item = ViewModel.Data.GetItem(locationString);
+            //ItemModel item = ViewModel.Data.GetItem(item);
 
 
             //item label
