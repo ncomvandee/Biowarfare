@@ -23,7 +23,9 @@ namespace Game.Services
         // Local Instance of the Client
         private HttpClient _httpClientInstance;
 
-        // client
+        /// <summary>
+        /// Client 
+        /// </summary>
         private HttpClient _httpClient
         {
             get
@@ -40,7 +42,9 @@ namespace Game.Services
             //}
         }
 
-        // this instance
+        /// <summary>
+        /// Client service this instance 
+        /// </summary>
         public static HttpClientService Instance
         {
             get
