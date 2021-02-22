@@ -4,108 +4,74 @@
              x:Class="Game.Views.VillagePage"
              >
 
-
     <NavigationPage.TitleView>
-        <Label Text="Immune System" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title" Margin="0, 0, 55, 0"
-                TextColor="{StaticResource PrimaryBackgroundPurple}"
-               />
-    </NavigationPage.TitleView>
 
+        <Label Text="Immune System" 
+               Style="{StaticResource NavLabel}"
+               Margin="0, 0, 55, 0"
+               />
+
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
 
-        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
+        <ScrollView Style="{StaticResource VillagePageScrollViewStyle}">
 
-            <FlexLayout x:Name="flexLayout"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround">
+            <FlexLayout Style="{StaticResource VillageFlexLayoutStyle}"
+                        x:Name="flexLayout"
+                        >
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
-
-                    
-
-                        <ImageButton
-                            Source="character_button.png"
-                            Style="{StaticResource ImageLargeStyle}"
-                            Clicked="CharactersButton_Clicked"/>
+                        <ImageButton Source="character_button.png"
+                                     Style="{StaticResource ImageLargeStyle}"
+                                     Clicked="CharactersButton_Clicked"
+                                     />
                    
-
-                    
-
-                        <Label 
-                                Text="Characters"
-                                Style="{StaticResource CellNameLabelStyle}"
-                                TextColor="{StaticResource SecondaryAccentColor}"
+                        <Label  Text="Characters"
+                                Style="{StaticResource VillagePageLabelStyle}"
                                 />
 
-                   
+                </StackLayout>
 
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+
+                    <ImageButton Source="monster_button.png"
+                                 Style="{StaticResource ImageLargeStyle}"
+                                 Clicked="MonstersButton_Clicked"
+                                 />
+
+                    <Label Text="Monsters"
+                           Style="{StaticResource VillagePageLabelStyle}"
+                           />
 
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                    <ImageButton
-                                Source="monster_button.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="MonstersButton_Clicked"/>
+                    <ImageButton Source="items_button.png"
+                                 Style="{StaticResource ImageLargeStyle}"
+                                 Clicked="ItemsButton_Clicked"
+                                 />
 
-                   
-                        
-                        <Label 
-                                Text="Monsters"
-                                Style="{StaticResource CellNameLabelStyle}"
-                                TextColor="{StaticResource SecondaryAccentColor}"
-                            />
-                   
-
+                    <Label Text="Items"
+                           Style="{StaticResource VillagePageLabelStyle}"
+                           />
 
                 </StackLayout>
-
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                    <ImageButton
-                                Source="items_button.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="ItemsButton_Clicked"/>
+                    <ImageButton Source="scores_button.png"
+                                 Style="{StaticResource ImageLargeStyle}"
+                                 Clicked="ScoresButton_Clicked"
+                                 />
 
-                  
-
-                        <Label 
-                                Text="Items"
-                                Style="{StaticResource CellNameLabelStyle}"
-                                TextColor="{StaticResource SecondaryAccentColor}"
-                                />
-
-                  
-                </StackLayout>
-
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
-                    <ImageButton
-                                Source="scores_button.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="ScoresButton_Clicked"/>
-
-                    
-                        
-                        <Label 
-                                Text="Scores"
-                                Style="{StaticResource CellNameLabelStyle}"
-                                TextColor="{StaticResource SecondaryAccentColor}"
-                                />
-
-                   
+                    <Label Text="Scores"
+                           Style="{StaticResource VillagePageLabelStyle}"
+                           />
 
                 </StackLayout>
-
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>

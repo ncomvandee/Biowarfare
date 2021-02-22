@@ -1913,6 +1913,17 @@
 
             <!--___________________________________________-->
 
+            <!--Text labels on village page-->
+            <Style TargetType="Label"
+                   x:Key="VillagePageLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource SecondaryAccentColor}"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
@@ -2743,8 +2754,32 @@
 
             </Style>
             <!--___________________________________________-->
+            
+            <!--ScrollView on Village page-->
+            <Style TargetType="ScrollView"
+                   x:Key="VillagePageScrollViewStyle"
+                   >
 
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+                <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+                <Setter Property="Padding" Value="10"/>
 
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--ScrollView on Village page-->
+            <Style TargetType="FlexLayout"
+                   x:Key="VillageFlexLayoutStyle"
+                   >
+
+                <Setter Property="Wrap" Value="Wrap"/>
+                <Setter Property="JustifyContent" Value="SpaceAround"/>
+                <Setter Property="AlignContent" Value="SpaceAround"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
