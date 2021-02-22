@@ -406,6 +406,34 @@ namespace UnitTests.Helpers
 
         #endregion ConvertMessageToEnum
 
+        [Test]
+        public void ConvertCatagoryToEnum_Valid_Face_Mask_Should_Return_Enum()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnumHelper.ConvertCatagoryToEnum("Face Mask");
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(ItemLocationEnum.Head, result);
+        }
+
+        [Test]
+        public void ConvertCatagoryToEnum_InValid_Bogus_Should_Return_Unknown()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnumHelper.ConvertCatagoryToEnum("Bogus");
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(ItemLocationEnum.Unknown, result);
+        }
+
         #region GetListMessageCharacter
         [Test]
         public void GetListMessageCharacter_Valid_Default_Should_Return_List()
