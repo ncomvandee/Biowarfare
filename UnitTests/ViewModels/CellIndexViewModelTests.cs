@@ -256,5 +256,20 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreEqual(2, countAfter); // Count of 0 for the load was skipped
         }
+
+        [Test]
+        public async Task CharacterIndexViewModel_Get_Cell_Null_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new CharacterModel());
+
+
+            // Act
+            var result = ViewModel.GetCell("");
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
+        }
     }
 }
