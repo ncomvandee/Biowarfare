@@ -160,5 +160,34 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+
+        [Test]
+        public void CellItemPage_DeleteButton_Clicked_Should_Pass()
+        {
+            // Arrange
+
+            // Make a new Character to use for the Picker Tests
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = 10
+            };
+
+            //Make new item
+            var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.PrimaryHand };
+
+            var control = new ImageButton();
+            control.CommandParameter = 7;
+
+            // Act
+            page.DeleteButton_Clicked(control, null);
+
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
