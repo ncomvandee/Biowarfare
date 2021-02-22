@@ -666,5 +666,21 @@ namespace UnitTests.ViewModels
             Assert.IsNull(result2);  // empty string
 
         }
+
+        [Test]
+        public void ConsumableItemIndexViewModel_GetItem_InValid_Id_Should_Return_Null()
+        {
+            // Arrange
+
+
+            // Act
+            var result = ViewModel.GetItem("non");
+
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);  
+
+        }
     }
 }
