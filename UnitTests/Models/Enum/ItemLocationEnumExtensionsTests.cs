@@ -18,7 +18,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Unknown", result);
+            Assert.AreEqual("Consumable", result);
         }
 
         [Test]
