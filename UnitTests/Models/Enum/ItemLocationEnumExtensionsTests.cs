@@ -46,7 +46,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Necklass", result);
+            Assert.AreEqual("Necklace", result);
         }
 
         [Test]
