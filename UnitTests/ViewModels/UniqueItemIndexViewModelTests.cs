@@ -637,5 +637,21 @@ namespace UnitTests.ViewModels
             Assert.AreEqual("101010", result.Id);
         }
 
+        [Test]
+        public void UniqueItemIndexViewModel_GetItem_InValid_Id_Should_Return_Null()
+        {
+            // Arrange
+
+
+            // Act
+            var result = ViewModel.GetItem("non");
+
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
+
+        }
+
     }
 }
