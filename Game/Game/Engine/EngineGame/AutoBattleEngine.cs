@@ -29,6 +29,9 @@ namespace Game.Engine.EngineGame
         // Output Score
         #endregion Algrorithm
 
+        /// <summary>
+        /// Create new autobattle 
+        /// </summary>
         public new IBattleEngineInterface Battle
         {
             get
@@ -42,16 +45,28 @@ namespace Game.Engine.EngineGame
             set { base.Battle = Battle; }
         }
 
+        /// <summary>
+        /// Override for creating character party in autobattle
+        /// </summary>
+        /// <returns></returns>
         public override bool CreateCharacterParty()
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Override for detecting infinite loops in the autobattle 
+        /// </summary>
+        /// <returns></returns>
         public override bool DetectInfinateLoop()
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Override for running the autobattle 
+        /// </summary>
+        /// <returns></returns>
         public override Task<bool> RunAutoBattle()
         {
             throw new System.NotImplementedException();
