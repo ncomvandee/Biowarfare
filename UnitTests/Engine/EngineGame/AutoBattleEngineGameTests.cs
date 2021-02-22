@@ -121,54 +121,54 @@ namespace UnitTests.Engine.EngineGame
         //}
         #endregion RunAutoBattle
 
-        #region CreateCharacterParty
-        [Test]
-        public async Task AutoBattleEngine_CreateCharacterParty_Valid_Characters_Should_Assign_6()
-        {
-            //Arrange
-            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
+        //#region CreateCharacterParty
+        //[Test]
+        //public async Task AutoBattleEngine_CreateCharacterParty_Valid_Characters_Should_Assign_6()
+        //{
+        //    //Arrange
+        //    AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
 
-            CellIndexViewModel.Instance.Dataset.Clear();
+        //    CellIndexViewModel.Instance.Dataset.Clear();
 
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "1" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "2" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "3" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "4" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "5" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "6" });
-            await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "7" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "1" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "2" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "3" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "4" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "5" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "6" });
+        //    await CellIndexViewModel.Instance.CreateAsync(new CharacterModel { Name = "7" });
 
-            //Act
-            var result = AutoBattleEngine.CreateCharacterParty();
-            var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
-            var name = AutoBattleEngine.Battle.EngineSettings.CharacterList.ElementAt(5).Name;
+        //    //Act
+        //    var result = AutoBattleEngine.CreateCharacterParty();
+        //    var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
+        //    var name = AutoBattleEngine.Battle.EngineSettings.CharacterList.ElementAt(5).Name;
 
-            //Reset
-            CellIndexViewModel.Instance.ForceDataRefresh();
+        //    //Reset
+        //    CellIndexViewModel.Instance.ForceDataRefresh();
 
-            //Assert
-            Assert.AreEqual(6, count);
-            Assert.AreEqual("6", name);
-        }
+        //    //Assert
+        //    Assert.AreEqual(6, count);
+        //    Assert.AreEqual("6", name);
+        //}
 
-        [Test]
-        public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
-        {
-            //Arrange
-            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
+        //[Test]
+        //public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
+        //{
+        //    //Arrange
+        //    AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
 
-            CellIndexViewModel.Instance.Dataset.Clear();
+        //    CellIndexViewModel.Instance.Dataset.Clear();
 
-            //Act
-            var result = AutoBattleEngine.CreateCharacterParty();
-            var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
+        //    //Act
+        //    var result = AutoBattleEngine.CreateCharacterParty();
+        //    var count = AutoBattleEngine.Battle.EngineSettings.CharacterList.Count();
 
-            //Reset
-            CellIndexViewModel.Instance.ForceDataRefresh();
+        //    //Reset
+        //    CellIndexViewModel.Instance.ForceDataRefresh();
 
-            //Assert
-            Assert.AreEqual(6, count);
-        }
-        #endregion CreateCharacterParty   
+        //    //Assert
+        //    Assert.AreEqual(6, count);
+        //}
+        //#endregion CreateCharacterParty   
     }
 }
