@@ -289,5 +289,21 @@ namespace UnitTests.ViewModels
             Assert.IsNotNull(result);
         }
 
+
+        [Test]
+        public async Task MonsterIndexViewModel_Get_Monster_Null_Guid_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new MonsterModel());
+
+            // Act
+            var result = ViewModel.GetMonster(System.Guid.NewGuid().ToString());
+
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
+        }
+
     }
 }
