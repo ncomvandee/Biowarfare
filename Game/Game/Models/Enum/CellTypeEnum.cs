@@ -185,6 +185,9 @@ namespace Game.Models
     /// </summary>
     public static class CharacterJobEnumHelper
     {
+        /// <summary>
+        /// Return the character type in a list format 
+        /// </summary>
         public static List<string> GetCharacterJobList
         {
             get
