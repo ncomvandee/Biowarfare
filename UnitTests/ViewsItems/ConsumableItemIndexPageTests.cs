@@ -53,6 +53,24 @@ namespace UnitTests.ViewsItems
             Assert.IsNotNull(result);
         }
 
-        
+        [Test]
+        public void ConsumableItemIndexPage_OnItemSelected_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            var selectedItem = new ItemModel();
+
+            var selectedItemChangedEventArgs = new SelectedItemChangedEventArgs(selectedItem, 0);
+
+            // Act
+            page.OnItemSelected(null, selectedItemChangedEventArgs);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+
     }
 }
