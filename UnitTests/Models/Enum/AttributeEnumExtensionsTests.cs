@@ -216,5 +216,75 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("heart_icon.png", result);
         }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToItemImage_Attack_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Attack.ToItemImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("item_attack.png", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToItemImage_Defense_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Defense.ToItemImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("defense_green.png", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToItemImage_Speed_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Speed.ToItemImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("speed_green.png", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToItemImage_CurrentHealth_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.CurrentHealth.ToItemImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("hp_green.png", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToItemImage_MaxHealth_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.MaxHealth.ToItemImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("hp_green.png", result);
+        }
     }
 }
