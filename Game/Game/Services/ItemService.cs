@@ -19,6 +19,11 @@ namespace Game.Services
         public static string DefaultImageURI = "item.png";
 
         #region ServerCalls
+        /// <summary>
+        /// Gets items from server using HTTp get request 
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public static async Task<List<ItemModel>> GetItemsFromServerGetAsync(int parameter = 100)
         {
             // parameter is the ItemModel group to request.  1, 2, 3, 100
