@@ -44,19 +44,20 @@ namespace Game.Helpers
         /// <returns></returns>
         public static int RollDice(int rolls, int dice)
         {
-            if (ForceRollsToNotRandom)
-            {
-                return rolls * _ForcedRandomValue;
-            }
-
             if (rolls < 1)
             {
                 return 0;
             }
 
+
             if (dice < 1)
             {
                 return 0;
+            }
+
+            if (ForceRollsToNotRandom)
+            {
+                return rolls * _ForcedRandomValue;
             }
 
             var myReturn = 0;
