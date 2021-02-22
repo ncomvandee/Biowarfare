@@ -19,9 +19,14 @@ namespace Game.ViewModels
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // Intem Index View Model Instance 
         private static volatile ItemIndexViewModel instance;
+        // Syncroot Object 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Returns Item Index View Model Instance 
+        /// </summary>
         public static ItemIndexViewModel Instance
         {
             get
