@@ -77,6 +77,84 @@ namespace UnitTests.Models
             Assert.AreEqual("Basophil", result);
         }
 
+        [Test]
+        public void CellTypeEnumExtensionTests_ToDescription_Killer_T_Cell_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.KillerTCell.ToDescription();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Killer T Cells are a type of white blood cell that kill infected, " +
+                              "damaged, or cancerous cells. Every time the Killer T Cell attacks," +
+                              " they will always roll the highest weapon damage. Has +5% attack.", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToDescription_NK_Cell_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.NKCell.ToDescription();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("NK cells are a type of lymphocyte that provides a rapid response to viruses in the body." +
+                              " Has a +10% speed buff.", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToDescription_Macrophage_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Macrophage.ToDescription();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Macrophages are a type of white blood cell that seek out and dispose of foreign invaders and non-healthy cells in their path." +
+                              " Macrophages are unique because they recruit other immune cells to fight alongside them." +
+                              " Having an active Macrophage in your immune system will increase all friendly characters by +5% defense power." +
+                              " Has a 5% personal defense buff.  ", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToDescription_Eosinophil_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Eosinophil.ToDescription();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Eosinophil are a type of white blood cell that specialize in attacking parasites." +
+                              " Eosinophil have a 10% attack buff when fighting against invaders of the parasite type.", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToDescription_Basophil_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Basophil.ToDescription();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Basophils are a type of white blood cell that are responsible for causing inflammatory reactions and producing histamine." +
+                              " Has a +10% hp buff.", result);
+        }
+
         //[Test]
         //public void CharacterJobEnumExtensionsTests_Fighter_Default_Should_Pass()
         //{
