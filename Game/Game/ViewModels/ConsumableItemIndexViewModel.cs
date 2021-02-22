@@ -122,7 +122,11 @@ namespace Game.ViewModels
         public override List<ItemModel> SortDataset(List<ItemModel> dataset)
         {
 
-            return dataset.Where(a => a.IsConsumable == true).ToList();
+            return dataset.Where(a => a.IsConsumable == true)
+                    .OrderBy(a => a.Name)
+                    .ThenBy(a => a.Description)
+                    .ToList();
+                
         }
 
         #endregion SortDataSet
