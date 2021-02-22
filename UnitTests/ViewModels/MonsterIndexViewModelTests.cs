@@ -256,5 +256,21 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreEqual(2, countAfter); // Count of 0 for the load was skipped
         }
+
+        [Test]
+        public async Task MonsterIndexViewModel_Get_Monster_Null_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new MonsterModel());
+
+
+            // Act
+            var result = ViewModel.GetMonster("");
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
+        }
+
     }
 }
