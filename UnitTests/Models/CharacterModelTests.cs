@@ -150,7 +150,7 @@ namespace UnitTests.Models
         }
 
         [Test]
-        public void CharacterModel_FormatOuput_Default_Should_Pass()
+        public void CharacterModel_FormatOutput_Default_Should_Pass()
         {
             // ArDefense
             var data = new CharacterModel();
@@ -402,7 +402,7 @@ namespace UnitTests.Models
             Assert.AreEqual(false, result);
         }
 
-        [Test]
+/*        [Test]
         public void CharacterModel_FormatOutput_Default_Should_Pass()
         {
             // ArDefense
@@ -415,7 +415,7 @@ namespace UnitTests.Models
 
             // Assert
             Assert.AreEqual(true, result.Contains("Elf"));
-        }
+        }*/
 
         [Test]
         public void CharacterModel_AddExperience_Default_Should_Pass()
