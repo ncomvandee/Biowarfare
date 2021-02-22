@@ -17,12 +17,11 @@
     </ContentPage.ToolbarItems>
 
     <NavigationPage.TitleView>
-        <Label Text="{Binding Title}" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-                TextColor="{StaticResource PrimaryBackgroundPurple}"
+        
+        <Label Style="{StaticResource NavLabel}"
+               Text="{Binding Title}" 
                />
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
@@ -42,14 +41,14 @@
                            >
 
                         <StackLayout Orientation="Horizontal" 
-                                 Grid.Row="0" 
-                                 HorizontalOptions="CenterAndExpand"
-                                 VerticalOptions="CenterAndExpand"
-                                 >
+                                     Grid.Row="0" 
+                                     HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand"
+                                     >
 
                             <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource ItemNameLabelStyle}"
-                               />
+                                   Style="{StaticResource ItemNameLabelStyle}"
+                                   />
 
                         </StackLayout>
                     </Frame>
@@ -64,7 +63,8 @@
                     <!--Frame for thumbnail-->
                     <Frame x:Name="ImageFrame" 
                            Style="{StaticResource LargeCircleFrameStyle}" 
-                           Grid.Row="1">
+                           Grid.Row="1"
+                           >
 
                         <Image Source="{Binding Data.ImageURI}" />
 
@@ -74,7 +74,8 @@
                            Margin="20"
                            FontSize="Caption"
                            IsVisible="false"
-                           x:Name="DescriptionFrame"/>
+                           x:Name="DescriptionFrame"
+                           />
 
                     <Button Style="{StaticResource InvisibleReadButtonStyle}"
                             Grid.Row="1"   
@@ -112,7 +113,11 @@
                             IsVisible="True"
                             >
 
-                        <Grid ColumnSpacing="20" RowSpacing="5" Margin="0, 20">
+                        <Grid ColumnSpacing="20" 
+                              RowSpacing="5" 
+                              Margin="0, 20"
+                              >
+
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -160,9 +165,7 @@
                                    />
 
                         </Grid>
-
                     </Frame>
-
                 </Grid>
             </Frame>
             
