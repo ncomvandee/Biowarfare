@@ -87,6 +87,37 @@ namespace UnitTests.ViewsItems
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void ConsumableItemIndexPage_AddItem_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.AddItem_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void ConsumableItemIndexPage_OnAppearing_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Warm it up
+            ItemIndexViewModel ViewModel = ItemIndexViewModel.Instance;
+
+            // Act
+            OnAppearing();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
 
     }
 }
