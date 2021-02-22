@@ -18,9 +18,14 @@ namespace Game.ViewModels
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // Battle engine view model instance 
         private static volatile BattleEngineViewModel instance;
+        // Syncroot object 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Create a battle engine view model instance 
+        /// </summary>
         public static BattleEngineViewModel Instance
         {
             get
