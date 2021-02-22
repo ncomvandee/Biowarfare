@@ -9,6 +9,9 @@ using Game.ViewModels;
 
 namespace Game.GameRules
 {
+    /// <summary>
+    /// Helper to manage random players 
+    /// </summary>
     public static class RandomPlayerHelper
     {
         /// <summary>
