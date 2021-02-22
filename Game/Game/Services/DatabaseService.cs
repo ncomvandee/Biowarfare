@@ -21,9 +21,14 @@ namespace Game.Services
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // A data service instance 
         private static volatile DatabaseService<T> instance;
+        // A syncroot object 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Returns an instance of the database service 
+        /// </summary>
         public static DatabaseService<T> Instance
         {
             get
@@ -54,6 +59,10 @@ namespace Game.Services
             return GetDataConnection();
         });
 
+        /// <summary>
+        /// Gets SQLite Data Connection 
+        /// </summary>
+        /// <returns></returns>
         public static SQLiteAsyncConnection GetDataConnection()
         {
             if (TestMode)
@@ -64,7 +73,9 @@ namespace Game.Services
             return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         }
 
+        // TestMode bool set to false default 
         public static bool TestMode = false;
+        // To Force exceptions 
         public int ForceExceptionOnNumber = -1;
 
         // Lazy Connection
