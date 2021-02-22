@@ -10,8 +10,10 @@ namespace Game.Models
     /// </summary>
     public enum MonsterTypeEnum
     {
+        Unknown = 1,
+
         // 25% chance to poison Cell, reduce 1hp every turn, last for 5 turns
-        Spore = 1,
+        Spore = 2,
 
         // 25 % to deal double damage, 50% to deal regular damage and 25% to heal opponent
         Bacteria = 12,
