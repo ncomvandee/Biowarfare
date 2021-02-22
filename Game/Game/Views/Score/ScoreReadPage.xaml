@@ -8,16 +8,18 @@
              Style="{StaticResource ScoreContentPage}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
+        
+        <ToolbarItem Text="Delete" 
+                     Clicked="Delete_Clicked" 
+                     IconImageSource="icon_delete.png"
+                     />
+        
     </ContentPage.ToolbarItems>
 
     <NavigationPage.TitleView>
 
         <Label Text="Score Read" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+               Style="{StaticResource NavLabel}"
                />
 
     </NavigationPage.TitleView>
@@ -39,14 +41,11 @@
                             />
 
                 </StackLayout>
-
             </Frame>
 
             <Frame Style="{StaticResource LargeOuterScoresFrameStyle}">
 
-                <Frame Style="{StaticResource LargeScoresInnerFrameStyle}"
-                       
-                       >
+                <Frame Style="{StaticResource LargeScoresInnerFrameStyle}">
 
                     <Grid>
                         <Grid.RowDefinitions>
@@ -61,7 +60,8 @@
                                     >
                             <StackLayout Style="{StaticResource OuterBoxStack}"
                                          Spacing="10"
-                                         Margin="20">
+                                         Margin="20"
+                                         >
 
                                 <StackLayout Style="{StaticResource HorizontalStack}">
 
