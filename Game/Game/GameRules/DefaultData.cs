@@ -5,14 +5,18 @@ using Game.ViewModels;
 
 namespace Game.GameRules
 {
+    /// <summary>
+    /// Default data for the game 
+    /// </summary>
     public static class DefaultData
     {
         /// <summary>
-        /// Load the Default data
+        /// Load the Default data for the Equipable items
         /// </summary>
         /// <returns></returns>
         public static List<ItemModel> LoadData(ItemModel temp)
         {
+            // List of equipable items
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
@@ -95,8 +99,14 @@ namespace Game.GameRules
             return datalist;
         }
 
+        /// <summary>
+        /// Load the Default Data for Consumable items 
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <returns></returns>
         public static List<ItemModel> LoadConsumableData(ItemModel temp)
         {
+            // List of Consumable items 
             var datalist = new List<ItemModel>()
             {
                
@@ -162,9 +172,14 @@ namespace Game.GameRules
         }
 
 
-
+        /// <summary>
+        /// Load the Default data for Unique drop items 
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <returns></returns>
         public static List<ItemModel> LoadUniqueData(ItemModel temp)
         {
+            // List of unique drop items 
             var datalist = new List<ItemModel>()
             {
 
@@ -258,7 +273,7 @@ namespace Game.GameRules
     }
 
     /// <summary>
-    /// Load Characters
+    /// Load Default Data for Characters
     /// </summary>
     /// <param name="temp"></param>
     /// <returns></returns>
@@ -272,6 +287,7 @@ namespace Game.GameRules
         var RightFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.RightFinger);
         var LeftFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.LeftFinger);
 
+            // List of Characters 
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
@@ -388,12 +404,13 @@ namespace Game.GameRules
     }
 
     /// <summary>
-    /// Load Characters
+    /// Load Default Data for Monsters 
     /// </summary>
     /// <param name="temp"></param>
     /// <returns></returns>
     public static List<MonsterModel> LoadData(MonsterModel temp)
     {
+        // List of Monsters 
         var datalist = new List<MonsterModel>()
             {
                 new MonsterModel {
