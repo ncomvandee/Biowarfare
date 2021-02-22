@@ -65,30 +65,6 @@ namespace UnitTests.ViewModels
             Assert.IsNotNull(result);
         }
 
-        //[Test]
-        //public void UniqueItemIndexViewModel_SortDataSet_Default_Should_Pass()
-        //{
-        //    // Arrange
-
-        //    // Add items into the list Z ordered
-        //    var dataList = new List<ItemModel>
-        //    {
-        //        new ItemModel { Name = "z" },
-        //        new ItemModel { Name = "m" },
-        //        new ItemModel { Name = "a" }
-        //    };
-
-        //    // Act
-        //    var result = ViewModel.SortDataset(dataList);
-
-        //    // Reset
-
-        //    // Assert
-        //    Assert.AreEqual("a", result[0].Name);
-        //    Assert.AreEqual("m", result[1].Name);
-        //    Assert.AreEqual("z", result[2].Name);
-        //}
-
         [Test]
         public async Task UniqueItemIndexViewModel_CheckIfItemExists_Default_Should_Pass()
         {
@@ -221,29 +197,6 @@ namespace UnitTests.ViewModels
             Assert.AreEqual(false, result);
         }
 
-        //[Test]
-        //public void UniqueItemIndexViewModel_Message_Create_Valid_Should_Pass()
-        //{
-        //    // Arrange
-
-        //    // Make a new Item
-        //    var data = new ItemModel();
-
-        //    // Make a Delete Page
-        //    var myPage = new Game.Views.ItemCreatePage(true);
-
-        //    var countBefore = ViewModel.Dataset.Count();
-
-        //    // Act
-        //    MessagingCenter.Send(myPage, "Create", data);
-        //    var countAfter = ViewModel.Dataset.Count();
-
-        //    // Reset
-
-        //    // Assert
-        //    Assert.AreEqual(countBefore + 1, countAfter); // Count of 0 for the load was skipped
-        //}
-
         [Test]
         public async Task UniqueItemIndexViewModel_Message_Update_Valid_Should_Pass()
         {
@@ -288,27 +241,6 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreEqual(0, result); // Count of 0 for the load was skipped
         }
-
-        //[Test]
-        //public async Task UniqueItemIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
-        //{
-        //    // Arrange
-
-        //    // Make the page Page
-        //    var myPage = new Game.Views.AboutPage(true);
-
-        //    var data = new ItemModel();
-        //    await ViewModel.CreateAsync(data);
-
-        //    // Act
-        //    MessagingCenter.Send(myPage, "WipeDataList", true);
-        //    var countAfter = ViewModel.Dataset.Count();
-
-        //    // Reset
-
-        //    // Assert
-        //    Assert.AreEqual(27, countAfter); // Count of 0 for the load was skipped
-        //}
 
         [Test]
         public async Task UniqueItemIndexViewModel_Update_Valid_Should_Pass()
@@ -672,6 +604,21 @@ namespace UnitTests.ViewModels
 
             // Assert
             Assert.AreNotEqual(null, result);  // Update returned Pass
+        }
+
+        [Test]
+        public async Task UniqueItemIndexViewModel_Get_Item_Null_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new ItemModel());
+
+
+            // Act
+            var result = ViewModel.GetItem("");
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
         }
 
     }
