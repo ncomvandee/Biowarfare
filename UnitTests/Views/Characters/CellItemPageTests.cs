@@ -16,7 +16,7 @@ namespace UnitTests.Views
     {
         App app;
         CellItemPage page;
-
+        public  GenericViewModel<CharacterModel> Model;
         public CellItemPageTests() : base(true) { }
 
         [SetUp]
@@ -78,6 +78,31 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void CellItemPage_LocationPicker_SelectedItem_Null_Should_Skip()
+        {
+            // Arrange
+
+            // Make a new Character to use for the Picker Tests
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = 10
+            };
+
+            var control = (Picker)page.FindByName("LocationPicker");
+            control.SelectedItem = null;
+
+            // Act
+            page.LocationPicker_Changed(control, null);
+
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
         }
     }
 }
