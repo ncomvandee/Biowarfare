@@ -7,6 +7,10 @@ using Game.Models;
 
 namespace Game.Services
 {
+    /// <summary>
+    /// Class to store Mock Data 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class MockDataStore<T> : IDataStore<T> where T: new()
     {
         #region Singleton
