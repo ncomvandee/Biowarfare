@@ -136,6 +136,9 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Sets level Up and Level Down Buttons 
+        /// </summary>
         public void SetEnableLevelButton()
         {
             LevelUpButton.IsEnabled = true;
