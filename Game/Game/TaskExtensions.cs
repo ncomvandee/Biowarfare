@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace Game
 {
+    /// <summary>
+    /// Class for game task extensions 
+    /// </summary>
     public static class TaskExtensions
     {
         // NOTE: Async void is intentional here. This provides a way
