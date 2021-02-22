@@ -3,6 +3,9 @@ using Game.Models;
 
 namespace Game.Engine.EngineInterfaces
 {
+    /// <summary>
+    /// Interface for Battle Engine 
+    /// </summary>
    public interface IBattleEngineInterface
     {
         IRoundEngineInterface Round { get; set; }
