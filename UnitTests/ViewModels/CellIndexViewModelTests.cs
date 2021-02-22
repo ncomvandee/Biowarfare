@@ -9,6 +9,7 @@ using Xamarin.Forms;
 
 using Game.ViewModels;
 using Game.Models;
+using System;
 
 namespace UnitTests.ViewModels
 {
@@ -287,6 +288,21 @@ namespace UnitTests.ViewModels
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public async Task CharacterIndexViewModel_Get_Cell_Null_Guid_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new CharacterModel());
+
+            // Act
+            var result = ViewModel.GetCell(Guid.NewGuid().ToString());
+
+            // Reset
+
+            // Assert
+            Assert.IsNull(result);
         }
     }
 }
