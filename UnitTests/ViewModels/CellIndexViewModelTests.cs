@@ -12,7 +12,7 @@ using Game.Models;
 
 namespace UnitTests.ViewModels
 {
-    public class CharacterIndexViewModelTests
+    public class CellIndexViewModelTests
     {
         CellIndexViewModel ViewModel;
 
@@ -35,7 +35,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_Read_Invalid_ID_Bogus_Should_Fail()
+        public async Task CellIndexViewModel_Read_Invalid_ID_Bogus_Should_Fail()
         {
             // Arrange
 
@@ -49,7 +49,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void CharacterIndexViewModel_Constructor_Default_Should_Pass()
+        public void CellIndexViewModel_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -63,7 +63,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void CharacterIndexViewModel_SortDataSet_Default_Should_Pass()
+        public void CellIndexViewModel_SortDataSet_Default_Should_Pass()
         {
             // Arrange
 
@@ -87,7 +87,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_CheckIfCharacterExists_Default_Should_Pass()
+        public async Task CellIndexViewModel_CheckIfCharacterExists_Default_Should_Pass()
         {
             // Arrange
 
@@ -109,7 +109,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_CheckIfCharacterExists_InValid_Missing_Should_Fail()
+        public async Task CellIndexViewModel_CheckIfCharacterExists_InValid_Missing_Should_Fail()
         {
             // Arrange
 
@@ -131,7 +131,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_Message_Delete_Valid_Should_Pass()
+        public async Task CellIndexViewModel_Message_Delete_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new CharacterModel());
@@ -154,7 +154,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void CharacterIndexViewModel_CheckIfExists_InValid_Null_Should_Return_Null()
+        public void CellIndexViewModel_CheckIfExists_InValid_Null_Should_Return_Null()
         {
             // Arrange
 
@@ -168,7 +168,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void CharacterIndexViewModel_Message_Create_Valid_Should_Pass()
+        public void CellIndexViewModel_Message_Create_Valid_Should_Pass()
         {
             // Arrange
 
@@ -191,7 +191,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_Message_Update_Valid_Should_Pass()
+        public async Task CellIndexViewModel_Message_Update_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new CharacterModel());
@@ -214,7 +214,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_Message_SetDataSource_Valid_Should_Pass()
+        public async Task CellIndexViewModel_Message_SetDataSource_Valid_Should_Pass()
         {
             // Arrange
 
@@ -236,7 +236,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task CharacterIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
+        public async Task CellIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new CharacterModel());
