@@ -13,10 +13,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Game.Views
 {
+    /// <summary>
+    /// Create a Monster Cell 
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MonsterCellCreatePage : ContentPage      
     {
-
+        // Monster to create 
         public GenericViewModel<MonsterModel> ViewModel = new GenericViewModel<MonsterModel>();
 
         /// <summary>
