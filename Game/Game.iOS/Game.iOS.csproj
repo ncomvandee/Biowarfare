@@ -393,4 +393,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\enter_pg_bg_web_v_one.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\enter_pg_vertical_background.png" />
+  </ItemGroup>
 </Project>
