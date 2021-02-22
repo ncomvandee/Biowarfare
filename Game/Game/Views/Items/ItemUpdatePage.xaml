@@ -17,12 +17,9 @@
     </ContentPage.Resources>
 
     <NavigationPage.TitleView>
-        
-        <Label Text="{Binding Title}" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="{Binding Title}" 
                />
         
     </NavigationPage.TitleView>
@@ -40,105 +37,101 @@
                              >
 
                     <Frame Style="{StaticResource ItemCreatePickerFrameStyle}"
-                           x:Name="ItemCatagoryPickerFrame">
-
+                           x:Name="ItemCatagoryPickerFrame"
+                           >
 
                         <Picker Style="{StaticResource ItemCreatePickerStyle}" 
-                            ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemAsCatagories}"
-                            x:Name="ItemCatagoryPicker" 
-                            SelectedIndexChanged="OnCatagoryChange"/>
+                                ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemAsCatagories}"
+                                x:Name="ItemCatagoryPicker" 
+                                SelectedIndexChanged="OnCatagoryChange"
+                                />
 
                     </Frame>
 
-                    <Frame Style="{StaticResource MediumCircleFrameStyle}"
-                           WidthRequest="170" HeightRequest="170">
+                    <Frame Style="{StaticResource ItemCircleFrameStyle}">
 
                         <Image Source="{Binding Data.ImageURI}" x:Name="ItemImage" />
 
                     </Frame>
-
                 </StackLayout>
-
             </Frame>
 
             <Entry Text="{Binding Data.Name}" 
-                   Placeholder="Enter name here"
                    x:Name="NameEntry"
-                   Style="{StaticResource ItemCreateEntryStyle}"
-                   Margin="0"
-                   MaxLength="20"/>
+                   Style="{StaticResource ItemEntryStyle}"
+                   />
 
             <Frame Style="{StaticResource ItemStatsFrameStyle}"
-                   HeightRequest="100">
+                   HeightRequest="100"
+                   >
 
-                <Editor Text="{Binding Data.Description}"
-                        BackgroundColor="Transparent" 
+                <Editor Style="{StaticResource ItemCreateEditorStyle}"
+                        Text="{Binding Data.Description}"
                         x:Name="DescriptionBox"
                         Placeholder="Description goes here..."
-                        PlaceholderColor="{StaticResource PrimaryItemForeground}"
-                        FontSize="Default"
-                        HeightRequest="100"
-                        TextColor="{StaticResource PrimaryItemBackground}"
-                    />
+                        />
             </Frame>
 
 
             <Frame Style="{StaticResource ItemStatsFrameStyle}"
-                   HeightRequest="100">
+                   HeightRequest="100"
+                   >
 
                 <Grid RowDefinitions="AUTO, AUTO">
 
                     <Frame Style="{StaticResource ItemCreatePickerFrameStyle}"
                            Grid.Row="0"
                            HeightRequest="35"
-                           x:Name="AttributePickerFrame">
+                           x:Name="AttributePickerFrame"
+                           >
 
                         <Picker Style="{StaticResource ItemCreatePickerStyle}"
                                 ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListAttributes}"
                                 SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                 SelectedIndexChanged="OnPickerChange"
-                                x:Name="AttributePicker"/>
+                                x:Name="AttributePicker"
+                                />
 
                     </Frame>
 
                     <StackLayout Orientation="Horizontal"
                                  Margin="0, 10, 0, 0"
-                                 Grid.Row="1">
+                                 Grid.Row="1"
+                                 >
+
                         <Label x:Name="StatIcon"
                                HorizontalOptions="CenterAndExpand"
-                               FontSize="Medium"/>
+                               FontSize="Medium"
+                               />
 
-                        <Slider ThumbColor="{StaticResource SecondaryAccentColor}"
-                                Maximum="9"
-                                Minimum="1"
-                                WidthRequest="200"
-                                HorizontalOptions="StartAndExpand"
+                        <Slider Style="{StaticResource ItemAttributeSliderStyle}"
                                 ValueChanged="OnSliderChange"
-                                Value="{Binding Data.Value}"/>
+                                Value="{Binding Data.Value}"
+                                />
 
-                        <Label Text="{Binding Data.Value}" 
-                               FontSize="Body"
-                               FontAttributes="Bold"
-                               HorizontalOptions="StartAndExpand"
-                               x:Name="StatValue"/>
+                        <Label Style="{StaticResource ItemAttributeLabelStyle}"
+                               Text="{Binding Data.Value}" 
+                               x:Name="StatValue"
+                               />
 
                     </StackLayout>
-
                 </Grid>
-
             </Frame>
 
             <StackLayout Orientation="Horizontal" 
                          Margin="0, 10, 0, 0"
-                         HorizontalOptions="Center">
+                         HorizontalOptions="Center"
+                         >
 
                 <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Save"  
-                        Clicked="Save_Clicked"/>
+                        Clicked="Save_Clicked"
+                        />
 
                 <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Cancel"  
-                        Clicked="Cancel_Clicked"/>
+                        Clicked="Cancel_Clicked"
+                        />
 
             </StackLayout>
         </StackLayout>
