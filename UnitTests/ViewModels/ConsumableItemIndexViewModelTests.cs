@@ -35,7 +35,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Read_Invalid_ID_Bogus_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Read_Invalid_ID_Bogus_Should_Fail()
         {
             // Arrange
 
@@ -49,7 +49,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_Constructor_Default_Should_Pass()
+        public void ConsumableItemIndexViewModel_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -63,7 +63,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_SortDataSet_Default_Should_Pass()
+        public void ConsumableItemIndexViewModel_SortDataSet_Default_Should_Pass()
         {
             // Arrange
 
@@ -87,7 +87,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_CheckIfItemExists_Default_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_CheckIfItemExists_Default_Should_Pass()
         {
             // Arrange
 
@@ -109,7 +109,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_CheckIfItemExists_Invalid_Null_Should_Fail ()
+        public void ConsumableItemIndexViewModel_CheckIfItemExists_Invalid_Null_Should_Fail()
         {
             // Arrange
 
@@ -123,7 +123,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_CheckIfItemExists_InValid_Missing_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_CheckIfItemExists_InValid_Missing_Should_Fail()
         {
             // Arrange
 
@@ -145,7 +145,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Message_Delete_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Message_Delete_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel());
@@ -168,7 +168,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Delete_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Delete_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel());
@@ -187,7 +187,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Delete_Invalid_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Delete_Invalid_Should_Fail()
         {
             // Arrange
             var data = new ItemModel
@@ -205,7 +205,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Delete_Invalid_Null_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Delete_Invalid_Null_Should_Fail()
         {
             // Arrange
 
@@ -219,7 +219,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_Message_Create_Valid_Should_Pass()
+        public void ConsumableItemIndexViewModel_Message_Create_Valid_Should_Pass()
         {
             // Arrange
 
@@ -242,7 +242,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Message_Update_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Message_Update_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel());
@@ -265,7 +265,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Message_SetDataSource_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Message_SetDataSource_Valid_Should_Pass()
         {
             // Arrange
 
@@ -287,7 +287,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
         {
             // Arrange
 
@@ -308,7 +308,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Update_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Update_Valid_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel());
@@ -332,7 +332,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Update_Invalid_Bogus_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Update_Invalid_Bogus_Should_Fail()
         {
             // Arrange
 
@@ -349,7 +349,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Update_Invalid_Null_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Update_Invalid_Null_Should_Fail()
         {
             // Arrange
 
@@ -363,7 +363,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Create_Valid_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_Create_Valid_Should_Pass()
         {
             // Arrange
             var data = new ItemModel
@@ -381,7 +381,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_Create_InValid_Null_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_Create_InValid_Null_Should_Fail()
         {
             // Arrange
 
@@ -395,7 +395,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_ExecuteLoadDataCommand_Valid_Should_Pass()
+        public void ConsumableItemIndexViewModel_ExecuteLoadDataCommand_Valid_Should_Pass()
         {
             // Arrange
 
@@ -412,7 +412,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_ExecuteLoadDataCommand_InValid_Exception_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_ExecuteLoadDataCommand_InValid_Exception_Should_Fail()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel());
@@ -434,7 +434,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_ExecuteLoadDataCommand_Valid_IsBusy_Should_Pass()
+        public void ConsumableItemIndexViewModel_ExecuteLoadDataCommand_Valid_IsBusy_Should_Pass()
         {
             // Arrange
 
@@ -457,7 +457,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_SetDataSource_SQL_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_SetDataSource_SQL_Should_Pass()
         {
             // Arrange
 
@@ -471,7 +471,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_SetDataSource_Mock_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_SetDataSource_Mock_Should_Pass()
         {
             // Arrange
 
@@ -485,7 +485,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_CreateUpdateAsync_Valid_Create_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_CreateUpdateAsync_Valid_Create_Should_Pass()
         {
             // Arrange
             var data = new ItemModel
@@ -503,7 +503,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_CreateUpdateAsync_Valid_Update_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_CreateUpdateAsync_Valid_Update_Should_Pass()
         {
             // Arrange
             var data = new ItemModel
@@ -525,7 +525,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_CreateUpdateAsync_InValid_Null_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_CreateUpdateAsync_InValid_Null_Should_Fail()
         {
             // Arrange
 
@@ -539,7 +539,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_Create_Sync_Valid_Update_Should_Pass()
+        public void ConsumableItemIndexViewModel_Create_Sync_Valid_Update_Should_Pass()
         {
             // Arrange
             var data = new ItemModel
@@ -557,7 +557,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_Create_Sync_InValid_Null_Should_Pass()
+        public void ConsumableItemIndexViewModel_Create_Sync_InValid_Null_Should_Pass()
         {
             // Arrange
 
@@ -571,7 +571,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_GetDefaultItemId_Unknown_Should_Fail()
+        public void ConsumableItemIndexViewModel_GetDefaultItemId_Unknown_Should_Fail()
         {
             // Arrange
 
@@ -585,7 +585,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_GetDefaultItemId_Head_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_GetDefaultItemId_Head_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel { Location = ItemLocationEnum.PrimaryHand});
@@ -600,7 +600,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_GetDefaultItem_Unknown_Should_Fail()
+        public async Task ConsumableItemIndexViewModel_GetDefaultItem_Unknown_Should_Fail()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel { Location = ItemLocationEnum.PrimaryHand });
@@ -615,7 +615,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public async Task ItemIndexViewModel_GetDefaultItem_Head_Should_Pass()
+        public async Task ConsumableItemIndexViewModel_GetDefaultItem_Head_Should_Pass()
         {
             // Arrange
             await ViewModel.CreateAsync(new ItemModel { Location = ItemLocationEnum.PrimaryHand });
@@ -630,7 +630,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_GetLocationItems_Head_Should_Pass()
+        public void ConsumableItemIndexViewModel_GetLocationItems_Head_Should_Pass()
         {
             // Arrange
 
@@ -644,7 +644,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_GetLocationItems_RightFinger_Should_Pass()
+        public void ConsumableItemIndexViewModel_GetLocationItems_RightFinger_Should_Pass()
         {
             // Arrange
 
@@ -658,7 +658,7 @@ namespace UnitTests.ViewModels
         }
 
         [Test]
-        public void ItemIndexViewModel_GetLocationItems_LeftFinger_Should_Pass()
+        public void ConsumableItemIndexViewModel_GetLocationItems_LeftFinger_Should_Pass()
         {
             // Arrange
 
