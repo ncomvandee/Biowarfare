@@ -13,14 +13,20 @@ namespace Game.Models
         // Unknown Cell type for the sake of Unit Test
         Unknown = 0,
 
+        // Fighters hit hard and have fight abilities
+        Fighter = 10,
+
+        // Clerics defend well and have buff abilities
+        Cleric = 12,
+
         // White blood cell. Special ability, provide damage imumunity to friendly ally
         BCell = 2,    
 
         // White blood cell. Special abilities, dealth highest damage and +5 attack
-        KillerTCell = 10,
+        KillerTCell = 30,
 
         // Lymphocyte. Special ability, +10 speed buff
-        NKCell = 12,
+        NKCell = 42,
 
         // White blood cell. Special ability, increase friendly ally +5 defense when alive
         Macrophage = 15,
