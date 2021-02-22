@@ -109,7 +109,7 @@ namespace UnitTests.Models
 
             Assert.AreEqual(DifficultyEnum.Unknown, result.Difficulty);
 
-            Assert.AreEqual(CellTypeEnum.Unknown, result.Job);
+            Assert.AreEqual(CellTypeEnum.BCell, result.Job);
         }
 
         [Test]
