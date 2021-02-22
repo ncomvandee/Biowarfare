@@ -4,6 +4,9 @@ using Game.Models;
 
 namespace Game.Engine.EngineInterfaces
 {
+    /// <summary>
+    /// Holds the data structures for the Turn Engine
+    /// </summary>
     public interface ITurnEngineInterface
     {
         bool TakeTurn(PlayerInfoModel Attacker);
