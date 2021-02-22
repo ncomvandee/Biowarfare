@@ -28,6 +28,7 @@ namespace Game.Models
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             MonsterType = MonsterTypeEnum.Spore;
+            Attack = 1;
         }
 
         /// <summary>
