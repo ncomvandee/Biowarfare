@@ -71,6 +71,22 @@ namespace UnitTests.ViewsItems
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void ConsumableItemIndexPage_OnItemSelected_Clicked_Invalid_Null_Should_Fail()
+        {
+            // Arrange
+
+            var selectedItemChangedEventArgs = new SelectedItemChangedEventArgs(null, 0);
+
+            // Act
+            page.OnItemSelected(null, selectedItemChangedEventArgs);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
 
     }
 }
