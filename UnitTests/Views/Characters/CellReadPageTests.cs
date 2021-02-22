@@ -165,7 +165,7 @@ namespace UnitTests.Views
             await ItemIndexViewModel.Instance.CreateAsync(new ItemModel { Location = ItemLocationEnum.PrimaryHand });
 
             var character = new CharacterModel();
-            character.Head = ItemIndexViewModel.Instance.GetLocationItems(ItemLocationEnum.PrimaryHand).First().Id;
+            character.PrimaryHand = ItemIndexViewModel.Instance.GetLocationItems(ItemLocationEnum.PrimaryHand).First().Id;
             page.ViewModel.Data = character;
 
             // Act
