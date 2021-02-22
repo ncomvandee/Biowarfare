@@ -13,6 +13,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Game.Views
 {
+    /// <summary>
+    /// Create a Cell 
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CellCreatePage : ContentPage      
     {
