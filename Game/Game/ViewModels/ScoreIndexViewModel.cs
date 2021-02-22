@@ -19,9 +19,14 @@ namespace Game.ViewModels
         #region Singleton
 
         // Make this a singleton so it only exist one time because holds all the data records in memory
+        // Score index View Model Instance 
         private static volatile ScoreIndexViewModel instance;
+        // Syncroot Objcet 
         private static readonly object syncRoot = new Object();
 
+        /// <summary>
+        /// Returns Score Index View Model Instance 
+        /// </summary>
         public static ScoreIndexViewModel Instance
         {
             get
