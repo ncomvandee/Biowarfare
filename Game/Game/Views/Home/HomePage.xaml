@@ -27,6 +27,7 @@
                             Text="Enter"
                             Style="{StaticResource PrimaryButtonStyle}"
                             Clicked="GameButton_Clicked"
+                            Margin="0, 550, 0, 0"
                             />
 
                 </Grid>
