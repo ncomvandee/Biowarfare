@@ -11,7 +11,7 @@ using Game.Views;
 namespace Game.Views
 {
     /// <summary>
-    /// Index Page
+    /// Cell Index Page
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0019:Use pattern matching", Justification = "<Pending>")]
     [DesignTimeVisible(false)]
