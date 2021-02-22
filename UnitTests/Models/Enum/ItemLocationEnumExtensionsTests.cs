@@ -132,5 +132,131 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("Feet", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToCatagories_Finger_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Finger.ToCatagories();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Any Finger", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_Head_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Head.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("face_mask_no_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_Necklass_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Necklass.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("stethoscope_white_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_PrimaryHand_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.PrimaryHand.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("vicious_scalpel_white_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_OffHand_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.OffHand.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("thermometer_white_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_RightFinger_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.RightFinger.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("finger_glove_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_LeftFinger_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.LeftFinger.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("disinfectant_spray_white_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_Feet_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Feet.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("boots_no_bg.png", result);
+        }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToImage_Unknown_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Unknown.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("", result);
+        }
     }
 }
