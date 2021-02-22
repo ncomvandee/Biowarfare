@@ -13,7 +13,7 @@ using Xamarin.Forms.Xaml;
 namespace Game.Views.Items
 {
     /// <summary>
-    /// Index Page
+    /// Unique Item Index Page
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0019:Use pattern matching", Justification = "<Pending>")]
     [DesignTimeVisible(false)]
@@ -27,6 +27,9 @@ namespace Game.Views.Items
         // Empty Constructor for UTs
         public UniqueItemIndexPage(bool UnitTest) { }
 
+        /// <summary>
+        /// Constructor 
+        /// </summary>
         public UniqueItemIndexPage()
         {
             InitializeComponent();
