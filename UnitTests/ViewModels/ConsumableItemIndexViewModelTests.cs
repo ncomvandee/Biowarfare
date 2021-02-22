@@ -648,5 +648,23 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreNotEqual(null, result);  // Update returned Pass
         }
+
+        [Test]
+        public void ConsumableItemIndexViewModel_GetItem_InValid_Null_Or_EmptyString_Should_Return_NUll()
+        {
+            // Arrange
+
+
+            // Act
+            var result1 = ViewModel.GetItem(null);
+            var result2 = ViewModel.GetItem("");
+
+            // Reset
+
+            // Assert
+            Assert.IsNull(result1);  // null string
+            Assert.IsNull(result2);  // empty string
+
+        }
     }
 }
