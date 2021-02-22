@@ -9,12 +9,9 @@
              >
 
     <NavigationPage.TitleView>
-        
-        <Label Text="Delete Item" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Title"
-               TextColor="{StaticResource PrimaryBackgroundPurple}"
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Delete Item" 
                />
         
     </NavigationPage.TitleView>
@@ -22,7 +19,8 @@
         <StackLayout Orientation="Vertical" >
 
             <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
-                   Padding="5">
+                   Padding="5"
+                   >
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -32,19 +30,18 @@
 
                     <Frame Style="{StaticResource ItemReadCellTitleFrame}"
                            Grid.Row="0" 
-                           Padding="5"
-                                   >
+                           Padding="5, 10, 5, 0"
+                           >
 
                         <StackLayout Orientation="Horizontal" 
                                      HorizontalOptions="CenterAndExpand"
-                                    >
+                                     >
 
                             <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource ItemNameLabelStyle}"
-                               />
+                                   Style="{StaticResource ItemNameLabelStyle}"
+                                   />
 
                         </StackLayout>
-
                     </Frame>
 
                     <Frame Style="{StaticResource LargeCircleFrameStyle}"
@@ -56,7 +53,6 @@
 
                         </Image>
                     </Frame>
-
                 </Grid>
             </Frame>
 
@@ -66,18 +62,20 @@
 
                 <Label Text="Are you sure you want to delete?" 
                        Style="{StaticResource SimpleLabelTextStyle}" 
-                        />
+                       />
 
                 <StackLayout Orientation="Horizontal">
 
                     <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                             Text="Delete" 
-                            Clicked="Delete_Clicked">
+                            Clicked="Delete_Clicked"
+                            >
                     </Button>
 
                     <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                             Text="Cancel" 
-                            Clicked="Cancel_Clicked">
+                            Clicked="Cancel_Clicked"
+                            >
                     </Button>
 
                 </StackLayout>
