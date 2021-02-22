@@ -2,6 +2,10 @@
 
 namespace Game.ViewModels
 {
+    /// <summary>
+    /// Generic view model class 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class GenericViewModel<T> : BaseViewModel<DefaultModel> where T: class
     {
         /// <summary>
@@ -9,6 +13,9 @@ namespace Game.ViewModels
         /// </summary>
         T bindingData { get; set; }
 
+        /// <summary>
+        /// Generic data 
+        /// </summary>
         public T Data
         {
             get { return bindingData; }
