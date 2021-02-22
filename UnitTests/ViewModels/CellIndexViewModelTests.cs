@@ -271,5 +271,22 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.IsNull(result);
         }
+
+        [Test]
+        public async Task CharacterIndexViewModel_Get_Cell_ID_Valid_Should_Pass()
+        {
+            // Arrange
+            await ViewModel.CreateAsync(new CharacterModel());
+
+            //Create new character test
+            var dataTest = new CharacterModel { Name = "test" };
+            await ViewModel.CreateAsync(dataTest);
+            // Act
+            var result = ViewModel.GetCell(dataTest.Guid);
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
