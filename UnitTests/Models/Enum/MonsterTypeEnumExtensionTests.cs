@@ -91,5 +91,61 @@ namespace UnitTests.Models
             Assert.AreEqual("BIG BOSS CANCER", result);
         }
 
+        [Test]
+        public void MonsterTypeEnumExtensionTests_ToImage_Bacteria_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = MonsterTypeEnum.Bacteria.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("bacteria_bg.png", result);
+        }
+
+        [Test]
+        public void MonsterTypeEnumExtensionTests_ToImage_Parasite_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = MonsterTypeEnum.Parasite.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("parasite_bg.png", result);
+        }
+
+        [Test]
+        public void MonsterTypeEnumExtensionTests_ToImage_Virus_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = MonsterTypeEnum.Virus.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("virus_bg.png", result);
+        }
+
+        [Test]
+        public void MonsterTypeEnumExtensionTests_ToImage_Cancer_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = MonsterTypeEnum.Cancer.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("cancer_bg.png", result);
+        }
+
     }
 }
