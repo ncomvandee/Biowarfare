@@ -621,5 +621,21 @@ namespace UnitTests.ViewModels
             Assert.IsNull(result);
         }
 
+        [Test]
+        public async Task UniqueItemIndexViewModel_GetItem_Valid_Id_Should_Pass()
+        {
+            // Arrange
+
+            await ViewModel.CreateAsync(new ItemModel { Id = "101010", IsUnique = true });
+
+            // Act
+            var result = ViewModel.GetItem("101010");
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("101010", result.Id);
+        }
+
     }
 }
