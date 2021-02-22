@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Game.Views.HomePage">
+             x:Class="Game.Views.HomePage"
+             BackgroundImageSource="enter_pg_bg_web_v_one.png"
+             >
 
     <ContentPage.Content>
         <ScrollView
@@ -20,14 +22,6 @@
                         <RowDefinition Height="AUTO"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-
-
-                    <Frame Style="{StaticResource HomePageFramestyle}"
-                           Grid.Row="0"
-                           >
-                        <Image Source="nkcell_no_bg.png" />
-
-                    </Frame>
 
                     <Button Grid.Row="1" 
                             Text="Enter"
