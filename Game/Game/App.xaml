@@ -1987,7 +1987,18 @@
             </Style>
 
             <!--___________________________________________-->
+            
+            <!--Progress bar on item index page-->
+            <Style TargetType="ProgressBar"
+                   x:Key="ItemIndexProgressBarStyle"
+                   BasedOn="{StaticResource ItemProgressBarStyle}"
+                   >
 
+                <Setter Property="Margin" Value="40, 0, 20, 0"/>
+                <Setter Property="HeightRequest" Value="10"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -2776,6 +2787,18 @@
             
             <!--___________________________________________-->
 
+            <!--StackLayout on item index page-->
+            <Style TargetType="StackLayout"
+                   x:Key="ItemIndexStackLayoutStyle"
+                   >
+
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="0, 10, 0, 10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
