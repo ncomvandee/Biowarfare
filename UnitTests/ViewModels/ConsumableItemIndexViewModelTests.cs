@@ -218,28 +218,6 @@ namespace UnitTests.ViewModels
             Assert.AreEqual(false, result);
         }
 
-        [Test]
-        public void ConsumableItemIndexViewModel_Message_Create_Valid_Should_Pass()
-        {
-            // Arrange
-
-            // Make a new Item
-            var data = new ItemModel();
-
-            // Make a Delete Page
-            var myPage = new Game.Views.ItemCreatePage(true);
-
-            var countBefore = ViewModel.Dataset.Count();
-
-            // Act
-            MessagingCenter.Send(myPage, "Create", data);
-            var countAfter = ViewModel.Dataset.Count();
-
-            // Reset
-
-            // Assert
-            Assert.AreEqual(countBefore + 1, countAfter); // Count of 0 for the load was skipped
-        }
 
         [Test]
         public async Task ConsumableItemIndexViewModel_Message_Update_Valid_Should_Pass()
@@ -286,7 +264,7 @@ namespace UnitTests.ViewModels
             Assert.AreEqual(0, result); // Count of 0 for the load was skipped
         }
 
-        [Test]
+/*        [Test]
         public async Task ConsumableItemIndexViewModel_Message_WipeDataList_Valid_Should_Pass()
         {
             // Arrange
@@ -305,7 +283,7 @@ namespace UnitTests.ViewModels
 
             // Assert
             Assert.AreEqual(27, countAfter); // Count of 0 for the load was skipped
-        }
+        }*/
 
         [Test]
         public async Task ConsumableItemIndexViewModel_Update_Valid_Should_Pass()
