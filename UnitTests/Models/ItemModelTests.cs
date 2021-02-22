@@ -163,5 +163,24 @@ namespace UnitTests.Models
             // Assert 
             Assert.AreEqual(1, result);
         }
+
+        [Test]
+        public void ItemModel_GetTextForAttributeProgressBar_Valid_MaxHelth_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var DataTemp = new ItemModel();
+
+            // Set the ItemModel Attribute
+            DataTemp.Attribute = AttributeEnum.MaxHealth;
+
+            var result = DataTemp.GetTextForAttributeProgressBar;
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("HP", result);
+        }
     }
 }
