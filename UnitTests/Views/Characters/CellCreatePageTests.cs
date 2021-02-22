@@ -115,6 +115,27 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void CellCreatePage_CheckValidInfo_Invalid_Unselected_Picker_Should_Not_Pass()
+        {
+            // Arrange
+
+            // Act
+            var SetUpPicker = page.FindByName<Picker>("CellTypePicker");
+            SetUpPicker.SelectedIndex = -1;
+
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Ken";
+
+
+            var result = page.CheckValidInfo();
+
+            // reset
+
+            //Assert
+            Assert.AreEqual(false, result);
+        }
+
         //[Test]
         //public void CharacterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
