@@ -155,6 +155,76 @@ namespace UnitTests.Models
                               " Has a +10% hp buff.", result);
         }
 
+        [Test]
+        public void CellTypeEnumExtensionTests_ToImage_Killer_T_Cell_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.KillerTCell.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("t_cell_bg.png", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToImage_NK_Cell_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.NKCell.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("nkcell_bg.png", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToImage_Macrophage_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Macrophage.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("macrophage_bg.png", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToImage_Eosinophil_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Eosinophil.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("eosinophil_bg.png", result);
+        }
+
+        [Test]
+        public void CellTypeEnumExtensionTests_ToImage_Basophil_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = CellTypeEnum.Basophil.ToImage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("basophil_bg.png", result);
+        }
+
         //[Test]
         //public void CharacterJobEnumExtensionsTests_Fighter_Default_Should_Pass()
         //{
