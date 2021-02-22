@@ -192,6 +192,10 @@ namespace Game.Models
 
         }
 
+        /// <summary>
+        /// Formats the output to be readable 
+        /// </summary>
+        /// <returns></returns>
         public override string FormatOutput()
         {
             var myReturn = string.Empty;
@@ -277,6 +281,11 @@ namespace Game.Models
             return AbilityEnum.Unknown;
         }
 
+        /// <summary>
+        /// Bool to check to see if the ability is available to use 
+        /// </summary>
+        /// <param name="ability"></param>
+        /// <returns></returns>
         public bool IsAbilityAvailable(AbilityEnum ability)
         {
             var avaible = AbilityTracker.TryGetValue(ability, out int remaining);
