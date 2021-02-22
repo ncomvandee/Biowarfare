@@ -5,8 +5,15 @@ using Game.ViewModels;
 
 namespace Game.Helpers
 {
+    /// <summary>
+    /// Helper for Data Sets 
+    /// </summary>
     static public class DataSetsHelper
     {
+        /// <summary>
+        /// Warmup for data sets 
+        /// </summary>
+        /// <returns></returns>
         static public bool WarmUp()
         {
             ScoreIndexViewModel.Instance.GetCurrentDataSource();
@@ -17,6 +24,7 @@ namespace Game.Helpers
             return true;
         }
 
+        // Readonly wipelock object 
         private static readonly object WipeLock = new object();
 
         /// <summary>
