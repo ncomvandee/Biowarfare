@@ -52,16 +52,17 @@ namespace Game.Helpers
                 return 0;
             }
 
+            if (ForceRollsToNotRandom)
+            {
+                return rolls * _ForcedRandomValue;
+            }
 
             if (dice < 1)
             {
                 return 0;
             }
 
-            if (ForceRollsToNotRandom)
-            {
-                return rolls * _ForcedRandomValue;
-            }
+
 
             var myReturn = 0;
 
