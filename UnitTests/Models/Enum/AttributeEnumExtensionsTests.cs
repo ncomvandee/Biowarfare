@@ -90,5 +90,61 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("Speed", result);
         }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToAbbrivation_Attack_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Attack.ToAbbrivation();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("ATK", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToAbbrivation_Defense_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Defense.ToAbbrivation();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("DEF", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToAbbrivation_Speed_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.Speed.ToAbbrivation();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("SPD", result);
+        }
+
+        [Test]
+        public void AttributeEnumExtensionTests_ToAbbrivation_MaxHealth_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AttributeEnum.MaxHealth.ToAbbrivation();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("HP", result);
+        }
     }
 }
