@@ -16,7 +16,7 @@ namespace UnitTests.ViewsItems
     public class UniqueItemIndexPageTests : UniqueItemIndexPage
     {
         App app;
-        ConsumableItemIndexPage page;
+        UniqueItemIndexPage page;
 
         public UniqueItemIndexPageTests() : base(true) { }
         
@@ -30,7 +30,7 @@ namespace UnitTests.ViewsItems
             app = new App();
             Application.Current = app;
 
-            page = new ConsumableItemIndexPage();
+            page = new UniqueItemIndexPage();
         }
 
         [TearDown]
@@ -87,19 +87,6 @@ namespace UnitTests.ViewsItems
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        [Test]
-        public void UniqueItemIndexPage_AddItem_Clicked_Default_Should_Pass()
-        {
-            // Arrange
-
-            // Act
-            page.AddItem_Clicked(null, null);
-
-            // Reset
-
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
 
         [Test]
         public void UniqueItemIndexPage_OnAppearing_Valid_Should_Pass()
