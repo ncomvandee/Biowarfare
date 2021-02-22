@@ -1511,6 +1511,18 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Item create page circle frame-->
+            <Style TargetType="Frame"
+                   x:Key="ItemCircleFrameStyle"
+                   BasedOn="{StaticResource MediumCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="170"/>
+                <Setter Property="HeightRequest" Value="170"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
@@ -1885,6 +1897,21 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
 
             </Style>
+
+            <!--___________________________________________-->
+
+            <!--Item create page attribute label-->
+            <Style TargetType="Label"
+                   x:Key="ItemAttributeLabelStyle"
+                   >
+
+                <Setter Property="FontSize" Value="Body"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
@@ -2582,6 +2609,18 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Item create page entry-->
+            <Style TargetType="Entry"
+                   x:Key="ItemEntryStyle"
+                   BasedOn="{StaticResource ItemCreateEntryStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="MaxLength" Value="20"/>
+                <Setter Property="Placeholder" Value="Enter Name Here"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -2625,10 +2664,22 @@
 
             <!--___________________________________________-->
 
+            <!--Item create page slider-->
+            <Style TargetType="Slider"
+                   x:Key="ItemAttributeSliderStyle"
+                   BasedOn="{StaticResource ItemCreateSliderStyle}"
+                   >
+
+                <Setter Property="Maximum" Value="9"/>
+                <Setter Property="Minimum" Value="1"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
-            
+
+
 
 
             <!-- Editor -->
