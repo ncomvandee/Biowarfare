@@ -4,6 +4,9 @@ using Game.Models;
 
 namespace Game.Engine.EngineInterfaces
 {
+    /// <summary>
+    /// Holds the data structures for the Round Engine 
+    /// </summary>
     public interface IRoundEngineInterface
     {
         ITurnEngineInterface Turn { get; set; }
