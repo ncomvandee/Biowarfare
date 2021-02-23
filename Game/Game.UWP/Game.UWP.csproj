@@ -104,6 +104,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about_button.png" />
     <Content Include="adrenaline_syringe_no_bg.png" />
     <Content Include="adrenaline_syringe_white_bg.png" />
     <Content Include="antidote_bg.png" />
@@ -137,10 +138,12 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="attack_icon.png" />
+    <Content Include="auto_battle_button.png" />
     <Content Include="bacteria_bg.png" />
     <Content Include="bacteria_no_bg.png" />
     <Content Include="bandaid_no_bg.png" />
     <Content Include="band_aid_bg.png" />
+    <Content Include="battle_button.png" />
     <Content Include="bloodstone_no_bg.png" />
     <Content Include="bloodstone_white_bg.png" />
     <Content Include="boots_no_bg.png" />
@@ -166,6 +169,7 @@
     <Content Include="gummy_multivitamin_white_bg.png" />
     <Content Include="heart_icon.png" />
     <Content Include="hp_green.png" />
+    <Content Include="hung.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
     <Content Include="icon_click.png" />
@@ -173,6 +177,7 @@
     <Content Include="icon_edit.png" />
     <Content Include="icon_new.png" />
     <Content Include="icon_subtract.png" />
+    <Content Include="immune_system_button.png" />
     <Content Include="item.png" />
     <Content Include="items_button.png" />
     <Content Include="item_attack.png" />
@@ -181,6 +186,9 @@
     <Content Include="item_location.png" />
     <Content Include="item_range.png" />
     <Content Include="item_value.png" />
+    <Content Include="jaida.png" />
+    <Content Include="jara.png" />
+    <Content Include="ken .png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="mapcell.png" />
     <Content Include="monster_attack.png" />
@@ -191,6 +199,7 @@
     <Content Include="monster_speed.png" />
     <Content Include="monster_xp.png" />
     <Content Include="mri_headband_no_bg.png" />
+    <Content Include="nate.png" />
     <Content Include="nkcell_bg.png" />
     <Content Include="nkcell_no_bg.png" />
     <Content Include="parasite_bg.png" />
