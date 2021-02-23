@@ -211,6 +211,24 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void ItemUpdatePage_SaveClicked_Valid_Information_Should_Pass()
+        {
+            // Arrange
+            page.FindByName<Picker>("AttributePicker").SelectedIndex = 1;
+            page.FindByName<Picker>("ItemCatagoryPicker").SelectedIndex = 1;
+            page.FindByName<Entry>("NameEntry").Text = "Mjonir";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void ItemUpdatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
