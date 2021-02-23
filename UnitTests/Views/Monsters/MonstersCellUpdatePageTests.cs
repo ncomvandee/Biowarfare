@@ -109,6 +109,21 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void MonsterCellUpdatePage_CheckValidInfo_InValid_Info_Default_Should_Fail()
+        {
+            // Arrange
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "";
+
+            // Act
+            var result = page.CheckValidInfo();
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+
         //[Test]
         //public void MonsterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
         //{
@@ -130,7 +145,7 @@ namespace UnitTests.Views
         //    // Assert
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
-        
+
         //[Test]
         //public void MonsterUpdatePage_Defense_OnStepperValueChanged_Default_Should_Pass()
         //{
