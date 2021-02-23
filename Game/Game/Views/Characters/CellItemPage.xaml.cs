@@ -346,8 +346,9 @@ namespace Game.Views
         /// </summary>
         /// <param name="location"></param>
         /// <param name="v">true if visible</param>
-        private void DeleteButtonVisual(ItemLocationEnum location, bool v)
+        private bool DeleteButtonVisual(ItemLocationEnum location, bool v)
         {
+            var result = true;
             switch (location)
             {
                 
@@ -380,9 +381,11 @@ namespace Game.Views
                     break;
 
                 default:
+                    result= false;
                     break;
 
             }
+            return result;
         }
         #endregion LocationItem
     }
