@@ -37,9 +37,9 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Button Grid.Row="1" 
-                            Text="Enter"
-                            Style="{StaticResource PrimaryButtonStyle}"
+                    <ImageButton Grid.Row="1" 
+                            
+                            Source="enter_main.png"
                             Clicked="GameButton_Clicked"
                             Margin="0, 550, 0, 0"
                             />
