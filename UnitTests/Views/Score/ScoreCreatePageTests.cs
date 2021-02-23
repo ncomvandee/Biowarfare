@@ -127,5 +127,19 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void ScoreCreatePage_SaveClicked_IValid_Info_Default_Should_Pass()
+        {
+            // Arrange
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Henry";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
