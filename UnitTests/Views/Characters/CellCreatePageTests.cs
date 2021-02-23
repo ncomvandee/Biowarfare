@@ -102,6 +102,20 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CellCreatePage_AddItemClicked_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.AddItem_Clicked(null, null);
+
+            // Reset
+
+            //Assert
+            Assert.IsTrue(true);
+        }
+
+        [Test]
         public void CellCreatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
