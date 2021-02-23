@@ -370,7 +370,7 @@
     <AndroidResource Include="Resources\drawable\jara.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ken .png" />
+    <AndroidResource Include="Resources\drawable\ken.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\nate.png" />
