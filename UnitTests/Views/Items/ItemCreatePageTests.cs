@@ -164,6 +164,21 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void ItemCreatePage_OnCatagoryChange_Valid_Null_Should_Pass()
+        {
+            // Arrange
+            page.FindByName<Picker>("ItemCatagoryPicker").SelectedItem = null;
+
+            // Act
+            page.OnCatagoryChange(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void ItemCreatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
