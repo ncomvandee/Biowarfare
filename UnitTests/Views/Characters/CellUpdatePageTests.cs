@@ -161,7 +161,29 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CellUpdatePage_OnSliderChanged_AttackSlider_Should_Pass()
+        public void CellUpdatePage_OnSliderChanged_AttackSlider_Should_Equal_to_1()
+        {
+            // Arrange
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = MaxLevel
+                
+            };
+
+            var statText = (Label)page.FindByName("AttackStat");
+            var control = (Slider)page.FindByName("AttackSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack,1);
+            // Act
+            page.OnSliderChanged(control,e);
+            // Reset
+
+            // Assert
+            Assert.AreEqual("1", statText.Text); // 
+        }
+
+        [Test]
+        public void CellUpdatePage_OnSliderChanged_DefenseSlider_Should_Pass()
         {
             // Arrange
             page.ViewModel.Data = new CharacterModel()
@@ -170,11 +192,11 @@ namespace UnitTests.Views
                 Level = MaxLevel
             };
 
-            
-            var control = (Slider)page.FindByName("AttackSlider");
-            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack,1);
+
+            var control = (Slider)page.FindByName("DefenseSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack, 1);
             // Act
-            page.OnSliderChanged(control,e);
+            page.OnSliderChanged(control, e);
             // Reset
 
             // Assert
