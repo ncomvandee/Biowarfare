@@ -98,5 +98,23 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void ItemReadPage_Constructor_New_Item_Is_Consumable_Should_Pass()
+        {
+            // Arrange
+            ItemModel item = new ItemModel()
+            {
+                Id = "test",
+                IsConsumable = true
+            };
+            // Act
+            var result = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel(item)));
+
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result); // Got to here, so it happened...
+        }
     }
 }
