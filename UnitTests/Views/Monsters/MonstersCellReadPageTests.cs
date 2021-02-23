@@ -95,6 +95,20 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void MonsterCellReadPage_ShowDescriptionClicked_Valid_When_ImageFrame_IsVisible_Should_Pass()
+        {
+            // Arrange
+
+            // Act 
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void MonsterReadPage_GetItemToDisplay_Valid_Should_Pass()
         //{
