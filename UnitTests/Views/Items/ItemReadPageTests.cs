@@ -108,8 +108,28 @@ namespace UnitTests.Views
                 Id = "test",
                 IsConsumable = true
             };
+
+            var test = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel(item)));
             // Act
-            var result = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel(item)));
+            
+            var result = test.AdjustButtonIfConsumable();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(result); // Got to here, so it happened...
+        }
+
+
+        [Test]
+        public void ItemReadPage_Constructor_New_Item_Is_Unique_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ItemReadPage(new GenericViewModel<ItemModel>(new ItemModel()
+            {
+                IsUnique = true
+            })); 
 
             // Reset
 
