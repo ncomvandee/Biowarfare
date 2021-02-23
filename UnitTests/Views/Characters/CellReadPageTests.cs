@@ -215,5 +215,19 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void CellReadPage_ShowDescriptionClicked_Valid_When_ImageFrame_IsVisible_Should_Pass()
+        {
+            // Arrange
+
+            // Act 
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
