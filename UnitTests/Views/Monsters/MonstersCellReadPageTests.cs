@@ -109,6 +109,25 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        [Test]
+        public void MonsterCellReadPage_ShowDescriptionClicked_Valid_When_DescriptionFrame_IsVisible_Should_Pass()
+        {
+            // Arrange
+            var SetUpDescriptionFrame = page.FindByName<Label>("DescriptionFrame");
+            SetUpDescriptionFrame.IsVisible = true;
+
+            var SetUpImageFrame = page.FindByName<Frame>("ImageFrame");
+            SetUpImageFrame.IsVisible = false;
+
+            // Act 
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void MonsterReadPage_GetItemToDisplay_Valid_Should_Pass()
         //{
