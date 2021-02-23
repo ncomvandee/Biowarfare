@@ -179,6 +179,26 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        [Test]
+        public void ItemCreatePage_OnSliderChange_Valid_Default_Should_Pass()
+        {
+            // Arrange
+            page = new ItemCreatePage();
+
+            double OldVal = 2.0;
+            double NewVal = 4.0;
+
+            var arg = new ValueChangedEventArgs(OldVal, NewVal);
+
+            // Act
+            page.OnSliderChange(null, arg);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void ItemCreatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
