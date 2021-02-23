@@ -418,7 +418,7 @@
     <BundleResource Include="Resources\jara.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ken .png" />
+    <BundleResource Include="Resources\ken.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\nate.png" />
