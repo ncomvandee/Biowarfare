@@ -224,6 +224,21 @@ namespace UnitTests.Views
             Assert.AreEqual("1", statText.Text); // 
         }
 
+        [Test]
+        public void CellUpdatePage_CheckValidInfo_Empty_String_Should_Return_False()
+        {
+            // Arrange
+
+            var entry = (Entry)page.FindByName("NameEntry");
+            entry.Text = "";
+            // Act
+            var result = page.CheckValidInfo();
+            // Reset
+
+            // Assert
+            Assert.IsFalse(result); // 
+        }
+
 
         //[Test]
         //public void CharacterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
