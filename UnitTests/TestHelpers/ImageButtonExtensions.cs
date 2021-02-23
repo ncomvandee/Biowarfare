@@ -50,10 +50,10 @@ public static class ImageButtonExtensions
             return;
         }
 
-        foreach (var handler in eventDelegate.GetInvocationList())
+/*        foreach (var handler in eventDelegate.GetInvocationList())
         {
             handler.GetMethodInfo().Invoke(handler.Target, new object[] { source, eventArgs });
             // handler.GetMethodInfo()?.Invoke(handler.Target, new object[] { source, eventArgs });
-        }
+        }*/
     }
 }
