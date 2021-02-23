@@ -124,14 +124,18 @@ namespace Game.Views
             if (sender == AttackSlider)
             {
                 AttackStat.Text = String.Format("{0}", (int)e.NewValue);
+                return; 
             }
-            else if (sender == DefenseSlider)
+            if (sender == DefenseSlider)
             {
                 DefenseStat.Text = String.Format("{0}", (int)e.NewValue);
+                return;
             }
-            else if (sender == SpeedSlider)
+
+            if (sender == SpeedSlider)
             {
                 SpeedStat.Text = String.Format("{0}", (int)e.NewValue);
+                return;
             }
 
         }
