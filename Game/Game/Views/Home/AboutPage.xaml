@@ -95,6 +95,7 @@
 
                         <Image Source="nate.png" 
                                Style="{StaticResource AboutPageFaceImageStyle}"
+                             
                                />
                         
                         <Image Source="jaida.png" 
@@ -108,17 +109,30 @@
                                  >
 
 
-                        <Label Text="Nathan Koempel" 
+                        <Label Text="Nathan LaRiviere" 
                                Style="{StaticResource SimpleLabelTextStyle}"
-                               Margin="0, 0, 30, 10"
+                               Margin="0, 0, 30, 0"
                                />
 
                         <Label Text="Jaida Ho" 
                                Style="{StaticResource SimpleLabelTextStyle}"
-                               Margin="10, 0, 30, 10"
+                               Margin="10, 0, 30, 0"
                                />
 
                     </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center"
+                                 Margin="0"
+                                 >
+
+
+                        <Label Text="Koempel" 
+                               Style="{StaticResource SimpleLabelTextStyle}"
+                               Margin="0, 0, 130, 15"
+                               />
+                    </StackLayout>
+
                 </StackLayout>
 
 
