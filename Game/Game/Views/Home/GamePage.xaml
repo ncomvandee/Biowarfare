@@ -6,7 +6,89 @@
 
     <ContentPage.Content>
 
-        <ScrollView Style="{StaticResource GamePageScrollViewStyle}">
+        <ScrollView Style="{StaticResource VillagePageScrollViewStyle}">
+
+            <FlexLayout Style="{StaticResource VillageFlexLayoutStyle}"
+                        x:Name="flexLayout"
+                        >
+
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+
+                    <ImageButton Style="{StaticResource GamePageImmuneButtonStyle}"
+                                 Source="immune_system_button.png"
+                                 Grid.Row="1"
+                                 Clicked="VillageButton_Clicked"
+                                 />
+
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+
+                    <ImageButton Style="{StaticResource GamePageBattleStyle}"
+                                 Source="battle_button.png"
+                                 WidthRequest="110"
+                                 Grid.Row="2"
+                                 Clicked="DungeonButton_Clicked"
+                                 />
+
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+
+                    <ImageButton Style="{StaticResource GamePageImageButtonStyle}"
+                                 Source="about_button.png"
+                                 Grid.Row="3"
+                                 Clicked="AboutButton_Clicked"
+                                 />
+
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+
+                    <ImageButton Style="{StaticResource GamePageImageButtonStyle}" 
+                                 Source="auto_battle_button.png"
+                                 Grid.Row="4"
+                                 Clicked="AutobattleButton_Clicked"
+                                 />
+
+                </StackLayout>
+            </FlexLayout>
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<ScrollView Style="{StaticResource GamePageScrollViewStyle}">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -14,24 +96,15 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout Orientation="Vertical">
-                    
-                    <Frame Style="{StaticResource GamePageFrameStyle}"
-                           Grid.Row="0"
-                           >
-                        
-                        <Label Style="{StaticResource GamePageBiowarfareLabelStyle}"
-                               Text="BioWarfare"
-                               />
-
-                    </Frame>
 
                     <StackLayout>
-                        <Button
+                        
+                        <ImageButton
                            
-                            Text="Immune System"
+                            Source="immune_system_button.png"
                             Grid.Row="1"
-                            Style="{StaticResource GamePageButtonStyle}"
-                            WidthRequest="175"
+                            HeightRequest="125"
+                            WidthRequest="100"
                             Clicked="VillageButton_Clicked"
                             />
 
@@ -39,36 +112,36 @@
                     </StackLayout>
 
                     <StackLayout>
-                        <Button
-                           
-                            Text="Battle"
+                        <ImageButton
+                            Source="battle_button.png"
+                            HeightRequest="125"
                             Grid.Row="2"
-                            Style="{StaticResource GamePageBattleButtonStyle}"
+                            WidthRequest="100"
                             Clicked="DungeonButton_Clicked"
                             />
 
                     </StackLayout>
 
                     <StackLayout>
-                        <Button
-                            Text="About"
+                        <ImageButton
+                            Source="about_button.png"
                             Grid.Row="3"
-                            Style="{StaticResource SmallGamePageButtonStyle}"
-                            WidthRequest="110"
+                            
+                            WidthRequest="100"
                             Clicked="AboutButton_Clicked"
                             />
 
                     </StackLayout>
 
-                    <Button Text="Auto"
+                    <ImageButton Source="auto_battle_button.png"
                             Grid.Row="4"
-                            Style="{StaticResource SmallGamePageButtonStyle}"
-                            Margin="180, 20, 0, 0"
+                            HeightRequest="125"
+                            WidthRequest="100"
                             Clicked="AutobattleButton_Clicked"
                             />
                     
                 </StackLayout>
             </Grid>
-        </ScrollView>
+        </ScrollView>-->
     </ContentPage.Content>
 </ContentPage>

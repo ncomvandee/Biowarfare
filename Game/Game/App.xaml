@@ -2419,7 +2419,41 @@
             </Style>
 
             <!--___________________________________________-->
-            
+
+            <!--Style for about/auto battle buttons on game page-->
+            <Style TargetType="ImageButton"
+                   x:Key="GamePageImageButtonStyle"
+                   >
+                <Setter Property="HeightRequest" Value="125"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+
+            <!--Style for Immune system button on game page-->
+            <Style TargetType="ImageButton"
+                   x:Key="GamePageImmuneButtonStyle"
+                   BasedOn="{StaticResource GamePageImageButtonStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="110"/>
+                <Setter Property="HeightRequest" Value="150"/>
+
+            </Style>
+
+            <!--Style for battle button on game page-->
+            <Style TargetType="ImageButton"
+                   x:Key="GamePageBattleStyle"
+                   BasedOn="{StaticResource GamePageImageButtonStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="110"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
 
 
 
