@@ -217,5 +217,23 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellItemPage_OnItemSelected_InValid_Null_Event_Should_Return_Null()
+        {
+            // Arrange
+            var dataTest = new ItemModel { Id = "101010", Name = "test", Location = ItemLocationEnum.PrimaryHand };
+            var e =  new SelectedItemChangedEventArgs(null,0);
+
+
+            // Act
+            page.OnItemSelected(null, e);
+
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
