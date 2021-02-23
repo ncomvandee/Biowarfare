@@ -109,6 +109,20 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void CellUpdatePage_AddItem_Clicked_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.AddItem_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
         //[Test]
         //public void CharacterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
         //{
@@ -536,7 +550,7 @@ namespace UnitTests.Views
         //        Id = "test",
         //        Level = 10
         //    };
-            
+
         //    var control = (Picker)page.FindByName("LevelPicker");
         //    control.SelectedIndex = -1;
 
