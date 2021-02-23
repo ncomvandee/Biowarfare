@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about_button.png" />
+    <Content Include="add_items_character.png" />
     <Content Include="adrenaline_syringe_no_bg.png" />
     <Content Include="adrenaline_syringe_white_bg.png" />
     <Content Include="antidote_bg.png" />
@@ -149,6 +150,11 @@
     <Content Include="boots_no_bg.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
+    <Content Include="cancel_character.png" />
+    <Content Include="cancel_items.png" />
+    <Content Include="cancel_main.png" />
+    <Content Include="cancel_monster.png" />
+    <Content Include="cancel_scores.png" />
     <Content Include="cancer_bg.png" />
     <Content Include="cancer_no_bg.png" />
     <Content Include="character_button.png" />
@@ -157,10 +163,25 @@
     <Content Include="damage_blue.png" />
     <Content Include="defense_green.png" />
     <Content Include="defense_icon.png" />
+    <Content Include="delete_character.png" />
+    <Content Include="delete_items.png" />
+    <Content Include="delete_main.png" />
+    <Content Include="delete_monster.png" />
+    <Content Include="delete_scores.png" />
     <Content Include="disinfectant_spray_no_bg.png" />
     <Content Include="disinfectant_spray_white_bg.png" />
+    <Content Include="edit_character.png" />
+    <Content Include="edit_items.png" />
+    <Content Include="edit_main.png" />
+    <Content Include="edit_monster.png" />
+    <Content Include="edit_scores.png" />
+    <Content Include="enter_character.png" />
+    <Content Include="enter_items.png" />
+    <Content Include="enter_main.png" />
+    <Content Include="enter_monster.png" />
     <Content Include="enter_pg_bg_web_v_one.png" />
     <Content Include="enter_pg_vertical_background.png" />
+    <Content Include="enter_scores.png" />
     <Content Include="eosinophil_bg.png" />
     <Content Include="face_mask_no_bg.png" />
     <Content Include="finger_glove_bg.png" />
