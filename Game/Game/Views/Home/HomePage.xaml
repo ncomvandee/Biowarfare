@@ -2,11 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.HomePage"
-             BackgroundImageSource="enter_pg_bg_web_v_one.png"
              >
 
-    <ContentPage.Content>
-        <ScrollView
+ <ContentPage.Content>
+
+        <AbsoluteLayout VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand"
+                        >
+            
+            <Image AbsoluteLayout.LayoutFlags="All" 
+                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   Source="enter_pg_bg_web_v_one.png" 
+                   Aspect="AspectFill"
+                   />
+            
+            <StackLayout AbsoluteLayout.LayoutFlags="All" 
+                         AbsoluteLayout.LayoutBounds="1,1,1,1"
+                         >
+
+                <ScrollView
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand">
             
@@ -33,5 +47,8 @@
                 </Grid>
             </StackLayout>
         </ScrollView>
+         </StackLayout>
+       </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
+        
