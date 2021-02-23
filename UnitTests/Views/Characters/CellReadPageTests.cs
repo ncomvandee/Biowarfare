@@ -248,5 +248,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellReadPage_ItemAttributeToggle_Valid_When_ItemFrame_IsVisible_Should_Pass()
+        {
+            // Arrange
+            // No need to set anything because ItemFrame is set to visible at initial
+
+            // Act
+            page.ItemAttributeToggle(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
