@@ -8,12 +8,12 @@
              >
 
     <NavigationPage.TitleView>
-        
+
         <Label Style="{StaticResource NavLabel}"
                Text="Osmosis Jones" 
                Margin="0, 0, 55, 0"
                />
-        
+
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
@@ -23,87 +23,134 @@
                          HorizontalOptions="FillAndExpand" 
                          VerticalOptions="FillAndExpand"
                          >
-                
-                <Frame Style="{StaticResource AboutFrameStyle}">
-
+             
                     <StackLayout>
 
-                        <Frame Style="{StaticResource AboutTitleStyle}">
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
+                           Padding="5, 5, 5, 0"
+                           >
 
                             <Label Text="Developers" 
-                                   Style="{StaticResource AboutTitleLabelStyle}" 
-                                   />
-
-                        </Frame>
-
-                        <Label Text="Jara Lindsay" 
-                               Style="{StaticResource CellNameLabelStyle}" 
-                               />
-                        
-                        <Label Text="Ken Comvandee" 
-                               Style="{StaticResource CellNameLabelStyle}" 
-                               />
-                        
-                        <Label Text="Hung Huynh" 
-                               Style="{StaticResource CellNameLabelStyle}" 
-                               />
-
-                    </StackLayout>
-                </Frame>
-
-                <Frame Style="{StaticResource AboutFrameStyle}">
-
-                    <StackLayout>
-
-                        <Frame Style="{StaticResource AboutTitleStyle}">
-
-                            <Label Text="Designers" 
-                                   Style="{StaticResource AboutTitleLabelStyle}" 
-                                   />
-
-                        </Frame>
-
-                        <Label Text="Nathan Koempel" 
-                               Style="{StaticResource CellNameLabelStyle}" 
-                             
-                               />
-
-                        <Label Text="Jaida Ho" 
                                    Style="{StaticResource CellNameLabelStyle}" 
                                    />
 
+                        </Frame>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center"
+                                 >
+
+                        <Image Source="ken.png" 
+                               Style="{StaticResource AboutPageFaceImageStyle}"
+                               />
+                        
+                        <Image Source="jara.png" 
+                               Style="{StaticResource AboutPageFaceImageStyle}"
+                               />
+                        
+                        <Image Source="hung.png" 
+                               Style="{StaticResource AboutPageFaceImageStyle}"
+                               />
+
                     </StackLayout>
-                </Frame>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center"
+                                 >
+
+
+                        <Label Text="Ken Comvandee" 
+                               Style="{StaticResource SimpleLabelTextStyle}"
+                               Margin="5, 0, 20, 10"
+                               />
+
+                        <Label Text="Jara Lindsay" 
+                               Style="{StaticResource SimpleLabelTextStyle}"
+                               Margin="5, 0, 20, 10"
+                               />
+                        <Label Text="Hung Huynh" 
+                               Style="{StaticResource SimpleLabelTextStyle}" 
+                               Margin="15, 0, 20, 10"
+                               />
+                        
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout>
+
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
+                           Padding="5, 5, 5, 0"
+                           >
+
+                        <Label Text="Designers" 
+                               Style="{StaticResource CellNameLabelStyle}" 
+                               />
+
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center"
+                                 >
+
+                        <Image Source="nate.png" 
+                               Style="{StaticResource AboutPageFaceImageStyle}"
+                               />
+                        
+                        <Image Source="jaida.png" 
+                               Style="{StaticResource AboutPageFaceImageStyle}"
+                               />
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center"
+                                 >
+
+
+                        <Label Text="Nathan Koempel" 
+                               Style="{StaticResource SimpleLabelTextStyle}"
+                               Margin="0, 0, 30, 10"
+                               />
+
+                        <Label Text="Jaida Ho" 
+                               Style="{StaticResource SimpleLabelTextStyle}"
+                               Margin="10, 0, 30, 10"
+                               />
+
+                    </StackLayout>
+                </StackLayout>
+
 
 
                 <!--Database Settings Frame-->
                 <Frame Style="{StaticResource AboutDatabaseFrameStyle}">
                     <StackLayout Style="{StaticResource VerticalStack}">
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <StackLayout Style="{StaticResource HorizontalStack}">
 
-                            <Label
+                                <Label
                                 Text="Database Settings"
                                 Style="{DynamicResource CellNameLabelStyle}"/>
 
-                            <Switch
+                                <Switch
                                 x:Name="DatabaseSettingsSwitch"
                                 HorizontalOptions="EndAndExpand"
                                 Toggled="DatabaseSettingsSwitch_OnToggled"
                                 IsToggled="False"/>
-                        </StackLayout>
+                            </StackLayout>
 
-                        <StackLayout Style="{StaticResource VerticalStack}"
+                            <StackLayout Style="{StaticResource VerticalStack}"
                                      x:Name="DatabaseSettingsFrame"
                                      IsVisible="False">
 
-                            <!--Database Settings-->
-                            <StackLayout Style="{StaticResource HorizontalStack}"
+                                <!--Database Settings-->
+                                <StackLayout Style="{StaticResource HorizontalStack}"
                                     Padding="50,0,0,0">
 
-                                <Label Text="SQL Data Source"
+                                    <Label Text="SQL Data Source"
                                        Style="{DynamicResource LabelStyle}"/>
 
-                                <Switch
+                                    <Switch
                                     HorizontalOptions="Start" 
                                     VerticalOptions="Center"
                                     x:Name="DataSourceValue"
@@ -111,54 +158,56 @@
                                     Toggled="DataSource_Toggled" 
                                     />
 
-                            </StackLayout>
+                                </StackLayout>
 
-                            <StackLayout Style="{StaticResource HorizontalStack}"
+                                <StackLayout Style="{StaticResource HorizontalStack}"
                                         Padding="50,0,0,0">
 
-                                <Label Text="Wipe Data List"
+                                    <Label Text="Wipe Data List"
                                        Style="{DynamicResource LabelStyle}"/>
 
-                                <Button
+                                    <Button
                                     Text="Wipe"
                                     Clicked="WipeDataList_Clicked"
                                     />
 
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
+                        
+                        
 
-                        <!--Debug Settings Frame-->
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <!--Debug Settings Frame-->
+                            <StackLayout Style="{StaticResource HorizontalStack}">
 
-                            <Label
+                                <Label
                                 Text="Debug Settings"
                                 Style="{DynamicResource CellNameLabelStyle}"
                                 />
 
-                            <Switch
+                                <Switch
                                 x:Name="DebugSettingsSwitch"
                                 HorizontalOptions="EndAndExpand"
                                 Toggled="DebugSettingsSwitch_OnToggled"
                                 IsToggled="False"/>
-                        </StackLayout>
+                            </StackLayout>
 
-                        <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
+                            <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
 
-                            <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
+                                <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
 
-                                <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
+                                    <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
 
-                                <StackLayout Style="{StaticResource VerticalStack}">
+                                    <StackLayout Style="{StaticResource VerticalStack}">
 
-                                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
-                                        <Label
+                                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                                            <Label
                                             Text="Number of Items "
                                             HorizontalTextAlignment="Start"
                                             HorizontalOptions="Start"
                                             Style="{DynamicResource LabelStyle}"
                                             />
 
-                                        <Entry
+                                            <Entry
                                             x:Name="ServerItemValue"
                                             Text="1" 
                                             FontSize="Micro"
@@ -169,25 +218,27 @@
                                             WidthRequest="50"
                                             HorizontalOptions="FillAndExpand"
                                             Style="{DynamicResource EntryStyle}"
-                                />
-                                    </StackLayout>
+                                            />
+                                        </StackLayout>
 
-                                    <StackLayout Style="{StaticResource HorizontalStack}">
-                                        <Button
+                                        <StackLayout Style="{StaticResource HorizontalStack}">
+                                            <Button
                                             Text="Get"
                                             Clicked="GetItemsGet_Command"/>
 
-                                        <Button
+                                            <Button
                                         Text="Post"
                                         Clicked="GetItemsPost_Command"/>
-                                    </StackLayout>
+                                        </StackLayout>
 
+                                    </StackLayout>
                                 </StackLayout>
                             </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <StackLayout VerticalOptions="EndAndExpand">
+                    </Frame>
+                
+                     <!--DateTime-->
+                    <StackLayout VerticalOptions="EndAndExpand">
                     <Label x:Name="CurrentDateTime" Style="{StaticResource SimpleLabelTextStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center"/>
                 </StackLayout>
      
