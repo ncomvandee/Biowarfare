@@ -113,5 +113,21 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+       
+        [Test]
+        public void ScoreUpdatePage_IsValidInfo_InValid_Info_Default_Should_Fail()
+        {
+            // Arrange
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "";
+
+            // Act
+            var result = page.IsValidInfo();
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
     }
 }
