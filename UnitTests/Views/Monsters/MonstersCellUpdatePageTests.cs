@@ -138,6 +138,28 @@ namespace UnitTests.Views
             Assert.IsFalse(result); // 
         }
 
+        [Test]
+        public void MonsterCellUpdatePage_OnSliderChanged_SpeedSlider__Should_Equal_To_1()
+        {
+            // Arrange
+            page.ViewModel.Data = new MonsterModel()
+            {
+                Id = "test",
+               
+            };
+            var statText = (Label)page.FindByName("SpeedStat");
+
+            var control = (Slider)page.FindByName("SpeedSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack, 1);
+            // Act
+            page.OnSliderChanged(control, e);
+            // Reset
+
+            // Assert
+            Assert.AreEqual("1", statText.Text); // 
+        }
+
+
 
         //[Test]
         //public void MonsterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
