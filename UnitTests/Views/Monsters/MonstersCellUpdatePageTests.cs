@@ -123,6 +123,21 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result);
         }
 
+        [Test]
+        public void MonsterCellUpdatePage_CheckValidInfo_InValid_Type_Picker_Should_Return_False()
+        {
+            // Arrange
+
+            var picker = (Picker)page.FindByName("MonsterTypePicker");
+            picker.SelectedIndex = -1;
+            // Act
+            var result = page.CheckValidInfo();
+            // Reset
+
+            // Assert
+            Assert.IsFalse(result); // 
+        }
+
 
         //[Test]
         //public void MonsterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
