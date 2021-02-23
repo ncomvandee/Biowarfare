@@ -122,6 +122,24 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+        [Test]
+        public void CellUpdatePage_LevelDownButtonClicked_Level_1_Should_Equal_To_1()
+        {
+            // Arrange
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = 1
+            };
+            // Act
+            page.LevelDownButtonClicked(null, null);
+            var result = page.ViewModel.Data.Level;
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(MinLevel, result); // 
+        }
 
         //[Test]
         //public void CharacterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
