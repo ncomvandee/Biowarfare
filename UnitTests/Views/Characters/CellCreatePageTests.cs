@@ -167,6 +167,22 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        [Test]
+        public void CellCreatePage_LevelUpButtonClicked_Valid_Should_Pass()
+        {
+            // Arrange
+            page = new CellCreatePage();
+            page.ViewModel.Data.Level = 20;
+
+            // Act
+            page.LevelUpButtonClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void CharacterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
@@ -359,20 +375,20 @@ namespace UnitTests.Views
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
 
-       /* [Test]
-        public void CharacterCreatePage_RandomButton_Clicked_Vaid_Should_Pass()
-        {
-            // Arrange
-            page.ViewModel.Data.ImageURI = null;
+        /* [Test]
+         public void CharacterCreatePage_RandomButton_Clicked_Vaid_Should_Pass()
+         {
+             // Arrange
+             page.ViewModel.Data.ImageURI = null;
 
-            // Act
-            page.RandomButton_Clicked(null, null);
+             // Act
+             page.RandomButton_Clicked(null, null);
 
-            // Reset
+             // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }*/
+             // Assert
+             Assert.IsTrue(true); // Got to here, so it happened...
+         }*/
 
     }
 }
