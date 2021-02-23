@@ -151,6 +151,22 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void CellCreatePage_LevelDownButtonClicked_Valid_Should_Pass()
+        {
+            // Arrange
+            page = new CellCreatePage();
+            page.ViewModel.Data.Level = 1;
+
+            // Act
+            page.LevelDownButtonClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void CharacterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
