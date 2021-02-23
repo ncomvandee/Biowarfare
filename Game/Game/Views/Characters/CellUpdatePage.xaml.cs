@@ -100,6 +100,11 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ImageChanged(object sender, EventArgs e)
         {
+            if (CellTypePicker.SelectedIndex == -1)
+            {
+                return;
+            }
+
             CellTypePicker.BackgroundColor = Color.FromHex("#3CAEA3");
 
             // Get the string CellType from picker
