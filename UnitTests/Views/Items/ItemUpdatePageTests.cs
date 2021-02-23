@@ -114,6 +114,21 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void ItemUpdatePage_OnCatagoryChange_Valid_Null_Should_Pass()
+        {
+            // Arrange
+            page.FindByName<Picker>("ItemCatagoryPicker").SelectedItem = null;
+
+            // Act
+            page.OnCatagoryChange(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void ItemUpdatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
@@ -135,7 +150,7 @@ namespace UnitTests.Views
         //    // Assert
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
-        
+
         //[Test]
         //public void ItemUpdatePage_Range_OnStepperValueChanged_Default_Should_Pass()
         //{
