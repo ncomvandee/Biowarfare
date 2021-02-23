@@ -135,5 +135,41 @@ namespace UnitTests.Views
             // Assert
             Assert.IsNotNull(result); // Got to here, so it happened...
         }
+
+        [Test]
+        public void ItemReadPage_ShowDescriptionClicked_ImageFrame_IsVisible_True_Should_False()
+        {
+            // Arrange
+            var imageFrame = (Frame)page.FindByName("ImageFrame");
+            imageFrame.IsVisible = true;
+            var descriptionFrame = (Label)page.FindByName("DescriptionFrame");
+            descriptionFrame.IsVisible = false;
+            // Act
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(descriptionFrame.IsVisible);
+            Assert.IsFalse(imageFrame.IsVisible);
+        }
+
+        [Test]
+        public void ItemReadPage_ShowDescriptionClicked_DescriptionFrame_IsVisible_True_Should_False()
+        {
+            // Arrange
+            var imageFrame = (Frame)page.FindByName("ImageFrame");
+            imageFrame.IsVisible = false;
+            var descriptionFrame = (Label)page.FindByName("DescriptionFrame");
+            descriptionFrame.IsVisible = true;
+            // Act
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsFalse(descriptionFrame.IsVisible);
+            Assert.IsTrue(imageFrame.IsVisible);
+        }
     }
 }
