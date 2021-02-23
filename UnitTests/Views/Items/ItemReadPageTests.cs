@@ -153,5 +153,23 @@ namespace UnitTests.Views
             Assert.IsTrue(descriptionFrame.IsVisible);
             Assert.IsFalse(imageFrame.IsVisible);
         }
+
+        [Test]
+        public void ItemReadPage_ShowDescriptionClicked_DescriptionFrame_IsVisible_True_Should_False()
+        {
+            // Arrange
+            var imageFrame = (Frame)page.FindByName("ImageFrame");
+            imageFrame.IsVisible = false;
+            var descriptionFrame = (Label)page.FindByName("DescriptionFrame");
+            descriptionFrame.IsVisible = true;
+            // Act
+            page.ShowDescriptionClicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsFalse(descriptionFrame.IsVisible);
+            Assert.IsTrue(imageFrame.IsVisible);
+        }
     }
 }
