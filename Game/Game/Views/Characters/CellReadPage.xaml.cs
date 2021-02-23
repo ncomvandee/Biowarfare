@@ -75,12 +75,15 @@ namespace Game.Views
             {
                 ImageFrame.IsVisible = false;
                 DescriptionFrame.IsVisible = true;
+                return;
                 
-            } 
-            else if (DescriptionFrame.IsVisible)
+            }
+            
+            if (DescriptionFrame.IsVisible)
             {
                 DescriptionFrame.IsVisible = false;
                 ImageFrame.IsVisible = true;
+                return;
             }
             
         }
