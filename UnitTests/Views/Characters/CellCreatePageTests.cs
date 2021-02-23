@@ -203,6 +203,26 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        [Test]
+        public void CellCreatePage_OnSliderChanged_DefenseSlider_Valid_Default_Should_Pass()
+        {
+            // Arrange
+            page = new CellCreatePage();
+
+            var DefenseSlider = page.FindByName<Slider>("DefenseSlider");
+
+            double OldVal = 2.0;
+            double NewVal = 5.0;
+
+            var arg = new ValueChangedEventArgs(OldVal, NewVal);
+
+            // Act
+            page.OnSliderChanged(DefenseSlider, arg);
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
         //[Test]
         //public void CharacterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
