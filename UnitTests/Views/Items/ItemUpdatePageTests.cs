@@ -159,6 +159,23 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result);
         }
 
+        [Test]
+        public void ItemUpdatePage_ValidateInfo_Invalid_Unselected_ItemCatagory_Should_Not_Pass()
+        {
+            // Arrange
+            page.FindByName<Picker>("AttributePicker").SelectedIndex = 1;
+            page.FindByName<Picker>("ItemCatagoryPicker").SelectedIndex = -1;
+            page.FindByName<Entry>("NameEntry").Text = "Mjonir";
+
+            // Act
+            var result = page.ValidateInfo();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
         //[Test]
         //public void ItemUpdatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
