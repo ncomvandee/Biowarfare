@@ -111,7 +111,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void MonsterCellreatePage_OnSliderChanged_DefenseSlider__Should_Equal_To_1()
+        public void MonsterCellCreatePage_OnSliderChanged_DefenseSlider__Should_Equal_To_1()
         {
             // Arrange
             page.ViewModel.Data = new MonsterModel()
@@ -121,6 +121,27 @@ namespace UnitTests.Views
             var statText = (Label)page.FindByName("DefenseStat");
 
             var control = (Slider)page.FindByName("DefenseSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack, 1);
+            // Act
+            page.OnSliderChanged(control, e);
+            // Reset
+
+            // Assert
+            Assert.AreEqual("1", statText.Text); // 
+        }
+
+        [Test]
+        public void MonsterCellUpdatePage_OnSliderChanged_SpeedSlider__Should_Equal_To_1()
+        {
+            // Arrange
+            page.ViewModel.Data = new MonsterModel()
+            {
+                Id = "test",
+
+            };
+            var statText = (Label)page.FindByName("SpeedStat");
+
+            var control = (Slider)page.FindByName("SpeedSlider");
             ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack, 1);
             // Act
             page.OnSliderChanged(control, e);
