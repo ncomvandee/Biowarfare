@@ -170,6 +170,23 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result);
         }
 
+        [Test]
+        public void MonsterCellCreatePage_CheckValidInfo_Valid_Info_Default_Should_Pass()
+        {
+            // Arrange
+            var SetUpPicker = page.FindByName<Picker>("MonsterTypePicker");
+            SetUpPicker.SelectedIndex = 2;
+
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Ken";
+
+            // Act
+            var result = page.CheckValidInfo();
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+
         //[Test]
         //public void MonsterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
