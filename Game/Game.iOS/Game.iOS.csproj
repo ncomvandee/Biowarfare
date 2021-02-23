@@ -396,4 +396,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\enter_pg_vertical_background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\about_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\auto_battle_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\battle_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\immune_system_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\jaida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\jara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ken .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nate.png" />
+  </ItemGroup>
 </Project>
