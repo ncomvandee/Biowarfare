@@ -129,6 +129,36 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        [Test]
+        public void ItemUpdatePage_OnCatagoryChange_Valid_Information_Should_Pass()
+        {
+            // Arrange
+            page.FindByName<Picker>("ItemCatagoryPicker").SelectedItem = "Face Mask";
+
+            // Act
+            page.OnCatagoryChange(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void ItemUpdatePage_ValidateInfo_Empty_Name_Should_Not_Pass()
+        {
+            // Arrange
+            page.FindByName<Entry>("NameEntry").Text = "";
+
+            // Act
+            var result = page.ValidateInfo();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
         //[Test]
         //public void ItemUpdatePage_Value_OnStepperValueChanged_Default_Should_Pass()
         //{
