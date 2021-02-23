@@ -268,5 +268,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellItemPage_DeleteButtonVisual_Unknow_Location_Should_Return_False()
+        {
+            // Arrange
+
+
+            // Act
+            var result = page.DeleteButtonVisual(ItemLocationEnum.Unknown, false);
+
+            // Reset
+
+            // Assert
+            Assert.IsFalse(result);
+        }
     }
 }
