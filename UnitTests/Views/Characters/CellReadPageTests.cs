@@ -263,5 +263,24 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellReadPage_ItemAttributeToggle_Valid_When_AttributeFrame_IsVisible_Should_Pass()
+        {
+            // Arrange
+            var SetUpItemFrame = page.FindByName<ScrollView>("ItemsFrame");
+            SetUpItemFrame.IsVisible = false;
+
+            var SetUpAttriButeFrame = page.FindByName<Frame>("AttributeFrame");
+            SetUpAttriButeFrame.IsVisible = true;
+
+            // Act
+            page.ItemAttributeToggle(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
