@@ -235,5 +235,38 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void CellItemPage_OnItemSelected_Valid_Event_Should_Pass()
+        {
+            // Arrange
+            var dataTest = new ItemModel { Id = "101010", Name = "test", Location = ItemLocationEnum.PrimaryHand };
+            var e = new SelectedItemChangedEventArgs(dataTest, 0);
+
+
+            // Act
+            page.OnItemSelected(null, e);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void CellItemPage_RenderItemInformation_Valid_Item_Should_Pass()
+        {
+            // Arrange
+            var dataTest = new ItemModel { Id = "101010", Name = "test", Location = ItemLocationEnum.PrimaryHand };
+
+
+            // Act
+            page.RenderItemInformation(dataTest, ItemLocationEnum.PrimaryHand);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
     }
 }
