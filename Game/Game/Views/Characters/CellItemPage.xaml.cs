@@ -346,7 +346,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="location"></param>
         /// <param name="v">true if visible</param>
-        private bool DeleteButtonVisual(ItemLocationEnum location, bool v)
+        public bool DeleteButtonVisual(ItemLocationEnum location, bool v)
         {
             var result = true;
             switch (location)
