@@ -141,6 +141,67 @@ namespace UnitTests.Views
             Assert.AreEqual(MinLevel, result); // 
         }
 
+        [Test]
+        public void CellUpdatePage_LevelUpButtonClicked_Character_MaxLevel_Should_Equal_To_MaxLevel()
+        {
+            // Arrange
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = MaxLevel
+            };
+            // Act
+            page.LevelUpButtonClicked(null, null);
+            var result = page.ViewModel.Data.Level;
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(MaxLevel, result); // 
+        }
+
+        [Test]
+        public void CellUpdatePage_OnSliderChanged_AttackSlider_Should_Equal_to_1()
+        {
+            // Arrange
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = MaxLevel
+                
+            };
+
+            var statText = (Label)page.FindByName("AttackStat");
+            var control = (Slider)page.FindByName("AttackSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack,1);
+            // Act
+            page.OnSliderChanged(control,e);
+            // Reset
+
+            // Assert
+            Assert.AreEqual("1", statText.Text); // 
+        }
+
+        [Test]
+        public void CellUpdatePage_OnSliderChanged_DefenseSlider_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data = new CharacterModel()
+            {
+                Id = "test",
+                Level = MaxLevel
+            };
+
+
+            var control = (Slider)page.FindByName("DefenseSlider");
+            ValueChangedEventArgs e = new ValueChangedEventArgs(page.ViewModel.Data.Attack, 1);
+            // Act
+            page.OnSliderChanged(control, e);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // 
+        }
         //[Test]
         //public void CharacterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
         //{
