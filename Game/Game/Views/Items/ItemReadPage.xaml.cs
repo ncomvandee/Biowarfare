@@ -42,10 +42,15 @@ namespace Game.Views
             LocationName.Text = ViewModel.Data.Location.ToMessage();
 
             // Disable button if item is consumable or unique 
-            if (ViewModel.Data.IsConsumable || ViewModel.Data.IsUnique)
+            if (ViewModel.Data.IsConsumable) 
             {
                 AdjustButtonIfConsumable();
-            } 
+            }
+
+            if (ViewModel.Data.IsUnique)
+            {
+                AdjustButtonIfConsumable();
+            }
         }
 
         /// <summary>
