@@ -87,6 +87,29 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CellCreatePage_SaveButtonClicked_With_Valid_Info_Should_Pass()
+        {
+            // Arrange
+            page = new CellCreatePage();
+
+            var SetUpPicker = page.FindByName<Picker>("CellTypePicker");
+            SetUpPicker.SelectedIndex = 2;
+
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Ken";
+
+            // Act
+            page.SaveButton_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+
+
+        }
+
+        [Test]
         public void CellCreatePage_Save_Clicked_Null_Image_Should_Pass()
         {
             // Arrange
