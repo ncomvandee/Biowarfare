@@ -100,12 +100,15 @@ namespace Game.Views
                 ItemsFrame.IsVisible = false;
                 AttributeFrame.IsVisible = true;
                 ItemAttributeToggleButton.Text = "Attributes";
+                return;
             }
-            else if (AttributeFrame.IsVisible)
+
+            if (AttributeFrame.IsVisible)
             {
                 AttributeFrame.IsVisible = false;
                 ItemsFrame.IsVisible = true;
                 ItemAttributeToggleButton.Text = "Items";
+                return;
             }
         }
 
