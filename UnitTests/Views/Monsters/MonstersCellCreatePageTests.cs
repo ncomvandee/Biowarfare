@@ -187,6 +187,29 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void MonsterCellCreatePage_SaveButtonClicked_With_Valid_Info_Should_Pass()
+        {
+            // Arrange
+            page = new MonsterCellCreatePage();
+
+            var SetUpPicker = page.FindByName<Picker>("MonsterTypePicker");
+            SetUpPicker.SelectedIndex = 2;
+
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Ken";
+
+            // Act
+            page.SaveButton_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+
+
+        }
+
         //[Test]
         //public void MonsterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
