@@ -151,6 +151,25 @@ namespace UnitTests.Views
             Assert.AreEqual("1", statText.Text); // 
         }
 
+        [Test]
+        public void MonsterCellCreatePage_CheckValidInfo_Invalid_Unselected_Picker_Should_Not_Pass()
+        {
+            // Arrange
+            var SetUpPicker = page.FindByName<Picker>("MonsterTypePicker");
+            SetUpPicker.SelectedIndex = -1;
+
+            var SetUpNameEntry = page.FindByName<Entry>("NameEntry");
+            SetUpNameEntry.Text = "Ken";
+
+            // Act
+            var result = page.CheckValidInfo();
+
+            // reset
+
+            //Assert
+            Assert.AreEqual(false, result);
+        }
+
         //[Test]
         //public void MonsterCreatePage_Attack_OnStepperAttackChanged_Default_Should_Pass()
         //{
