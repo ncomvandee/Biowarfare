@@ -239,6 +239,21 @@ namespace UnitTests.Views
             Assert.IsFalse(result); // 
         }
 
+        [Test]
+        public void CellUpdatePage_CheckValidInfo_InValid_Type_Picker_Should_Return_False()
+        {
+            // Arrange
+
+            var picker = (Picker)page.FindByName("CellTypePicker");
+            picker.SelectedIndex = -1;
+            // Act
+            var result = page.CheckValidInfo();
+            // Reset
+
+            // Assert
+            Assert.IsFalse(result); // 
+        }
+
 
         //[Test]
         //public void CharacterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
