@@ -2,8 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.HomePage"
-             >
+             Style="{DynamicResource baseStyle}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
 
+            <Style TargetType="ContentPage"
+                   x:Key="baseStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+
+            </Style>
+
+            <Style TargetType="ContentPage"
+                   x:Key="RedHomePageContentStyle"
+                   >
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryAccentColor}"/>
+
+            </Style>
+
+            <Style TargetType="ContentPage"
+                   x:Key="PurpleHomePageContentStyle"
+                   >
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+
+        </ResourceDictionary>
+       
+    </ContentPage.Resources>
+    
+    
+    
  <ContentPage.Content>
 
         <AbsoluteLayout VerticalOptions="FillAndExpand" 
