@@ -21,21 +21,36 @@ namespace Game.Views
 
 			// Bool to set the background style based on timer 
 			bool originalStyle = true;
+			bool nextStyle = false; 
 
-				// Device timer will change the background color every 2 seconds from purple to red 
-				Device.StartTimer(TimeSpan.FromSeconds(2), () =>
+				// Device timer will change the background color every 1 second from purple to red 
+				Device.StartTimer(TimeSpan.FromSeconds(1), () =>
 					{
-						if (originalStyle)
+						if (originalStyle && !nextStyle)
 						{
 							// Change the background color to purple 
 							Resources["baseStyle"] = Resources["PurpleHomePageContentStyle"];
 							originalStyle = false;
+							nextStyle = true; 
 						}
-						else
+						else if (!originalStyle && nextStyle)
+						{
+							// Change the background color to transition color 
+							Resources["baseStyle"] = Resources["RedPurpleHomePageContentStyle"];
+							nextStyle = false; 
+						}
+						else if (!originalStyle && !nextStyle)
 						{
 							// Change the background color to red 
 							Resources["baseStyle"] = Resources["RedHomePageContentStyle"];
 							originalStyle = true;
+							nextStyle = true; 
+						}
+						else
+						{
+							// Change the background color to transition color 
+							Resources["baseStyle"] = Resources["RedPurpleHomePageContentStyle"];
+							nextStyle = false;
 						}
 
 						// Repeat again indefinately 

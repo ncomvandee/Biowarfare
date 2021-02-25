@@ -8,7 +8,7 @@
 
             <Style TargetType="ContentPage"
                    x:Key="baseStyle">
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="#5D1D60"/>
 
 
             </Style>
@@ -16,14 +16,21 @@
             <Style TargetType="ContentPage"
                    x:Key="RedHomePageContentStyle"
                    >
-                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="BackgroundColor" Value="#C96566"/>
 
             </Style>
 
             <Style TargetType="ContentPage"
                    x:Key="PurpleHomePageContentStyle"
                    >
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="#5D1D60"/>
+
+            </Style>
+
+            <Style TargetType="ContentPage"
+                   x:Key="RedPurpleHomePageContentStyle"
+                   >
+                <Setter Property="BackgroundColor" Value="#8E3153"/>
 
             </Style>
 
