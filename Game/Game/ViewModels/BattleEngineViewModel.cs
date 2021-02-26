@@ -72,10 +72,10 @@ namespace Game.ViewModels
         public ObservableCollection<CharacterModel> PartyCharacterList { get; set; } = new ObservableCollection<CharacterModel>();
 
         //// Hold the View Model to the CharacterIndexViewModel
-        //public CharacterIndexViewModel DatabaseCharacterViewModel = CharacterIndexViewModel.Instance;
+        public CellIndexViewModel DatabaseCharacterViewModel = CellIndexViewModel.Instance;
 
         //// Have the Database Character List point to the Character View Model List
-        //public ObservableCollection<CharacterModel> DatabaseCharacterList { get; set; } = CharacterIndexViewModel.Instance.Dataset;
+        public ObservableCollection<CharacterModel> DatabaseCharacterList { get; set; } = CellIndexViewModel.Instance.Dataset;
 
 
         #region Constructor
