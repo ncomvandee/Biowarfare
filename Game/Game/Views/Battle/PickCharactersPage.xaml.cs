@@ -45,7 +45,7 @@ namespace Game.Views
             // Clear the Database List and the Party List to start
             BattleEngineViewModel.Instance.PartyCharacterList.Clear();
             
-            CreateEngineCharaterList();
+       
 
             UpdateNextButtonState();
         }
