@@ -383,11 +383,14 @@
 
                     <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
 
-                        <Button 
+                        <ImageButton 
                             x:Name="BeginBattleButton"
                             Clicked="BattleButton_Clicked" 
-                            Text="Begin"
-                            IsEnabled="False"/>
+                            Source="start_main.png"
+                            HeightRequest="30"
+                            Margin="0, 5, 0, 0"
+                            IsEnabled="False"
+                            />
 
                     </StackLayout>
                 </StackLayout>
