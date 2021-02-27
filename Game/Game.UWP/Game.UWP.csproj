@@ -144,12 +144,14 @@
     <Content Include="bacteria_no_bg.png" />
     <Content Include="bandaid_no_bg.png" />
     <Content Include="band_aid_bg.png" />
+    <Content Include="basophil_no_bg.png" />
     <Content Include="battle_button.png" />
     <Content Include="bloodstone_no_bg.png" />
     <Content Include="bloodstone_white_bg.png" />
     <Content Include="boots_no_bg.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
+    <Content Include="b_cell_no_bg.png" />
     <Content Include="cancel_character.png" />
     <Content Include="cancel_items.png" />
     <Content Include="cancel_main.png" />
@@ -183,6 +185,7 @@
     <Content Include="enter_pg_vertical_background.png" />
     <Content Include="enter_scores.png" />
     <Content Include="eosinophil_bg.png" />
+    <Content Include="eosinophil_no_bg.png" />
     <Content Include="face_mask_no_bg.png" />
     <Content Include="finger_glove_bg.png" />
     <Content Include="finger_glove_no_bg.png" />
@@ -211,6 +214,7 @@
     <Content Include="jara.png" />
     <Content Include="ken.png" />
     <Content Include="macrophage_bg.png" />
+    <Content Include="macrophage_no_bg.png" />
     <Content Include="mapcell.png" />
     <Content Include="monster_attack.png" />
     <Content Include="monster_button.png" />
@@ -265,6 +269,7 @@
     <Content Include="thermometer_no_bg.png" />
     <Content Include="thermometer_white_bg.png" />
     <Content Include="t_cell_bg.png" />
+    <Content Include="t_cell_no_bg.png" />
     <Content Include="vicious_scalpel_no_bg.png" />
     <Content Include="vicious_scalpel_white_bg.png" />
     <Content Include="virus_bg.png" />

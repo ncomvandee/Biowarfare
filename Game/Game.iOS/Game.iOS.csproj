@@ -489,4 +489,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\start_main.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\t_cell_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\b_cell_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\basophil_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eosinophil_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\macrophage_no_bg.png" />
+  </ItemGroup>
 </Project>
