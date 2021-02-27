@@ -390,6 +390,7 @@
                             HeightRequest="30"
                             Margin="0, 5, 0, 0"
                             IsEnabled="False"
+                            IsVisible="False"
                             />
 
                     </StackLayout>

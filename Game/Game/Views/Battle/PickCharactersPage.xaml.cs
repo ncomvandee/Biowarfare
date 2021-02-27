@@ -109,11 +109,13 @@ namespace Game.Views
         {
             // If no characters disable Next button
             BeginBattleButton.IsEnabled = true;
+            BeginBattleButton.IsVisible = true;
 
             var currentCount = BattleEngineViewModel.Instance.PartyCharacterList.Count();
             if (currentCount == 0)
             {
               BeginBattleButton.IsEnabled = false;
+              BeginBattleButton.IsVisible = false;
             }
 
             PartyCountLabel.Text = currentCount.ToString() + " / 6";
