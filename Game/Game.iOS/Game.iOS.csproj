@@ -486,4 +486,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\enter_scores.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\start_main.png" />
+  </ItemGroup>
 </Project>
