@@ -8,6 +8,15 @@
              x:Class="Game.Views.PickCharactersPage"
              Title="{Binding Title}">
 
+    <NavigationPage.TitleView>
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Assemble Your Team" 
+               Margin="0, 0, 60, 0"
+               />
+
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <ScrollView VerticalScrollBarVisibility="Always" Margin="0">
             <StackLayout Orientation="Vertical">
@@ -100,13 +109,11 @@
 
 
 
-                <Label Text="Battle Time" Style="{StaticResource CenterMessageLargeStyle}"/>
-
                 <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
 
                     <StackLayout Orientation="Vertical">
 
-                        <Label Text="Characters" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0"/>
 
                         <ListView 
                                 x:Name="CharactersListView" 
@@ -234,22 +241,24 @@
                                 
                             </ListView.ItemTemplate>
                         </ListView>
-                        <StackLayout Orientation="Vertical">
-
-                            <Label Text="Count" Style="{StaticResource CenterMessageStyle}"/>
-
-                            <Label Style="{StaticResource CenterMessageStyle}" 
-                            x:Name="PartyCountLabel"
-                            Text="0"/>
-                        </StackLayout>
+                        
 
                     </StackLayout>
 
-                    
+
 
                     <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
 
-                        <Label Text="Party" Style="{StaticResource CenterMessageStyle}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                           
+
+                            <Label Text="In Party: " Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0"/>
+                        
+                        <Label Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0" 
+                            x:Name="PartyCountLabel"
+                            Text="0"/>
+
+                        </StackLayout>
 
                         <ListView 
                                 x:Name="PartyListView" 
