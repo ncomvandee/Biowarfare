@@ -311,6 +311,7 @@ namespace Game.Views
 
             var PlayerImageButton = DetermineMapImageButton(mapLocationModel);
 
+
             var PlayerStack = new StackLayout
             {
                 Padding = 0,
@@ -329,7 +330,8 @@ namespace Game.Views
             var MapFrame = new Frame
             {
                 Style = (Style)Application.Current.Resources["BattleMapFrame"],
-                Content = PlayerStack,
+                BackgroundColor = Color.Transparent,
+                Content = PlayerImageButton,
                 AutomationId = GetDictionaryFrameName(mapLocationModel)
             };
 
