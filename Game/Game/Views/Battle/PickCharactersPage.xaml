@@ -12,6 +12,94 @@
         <ScrollView VerticalScrollBarVisibility="Always" Margin="0">
             <StackLayout Orientation="Vertical">
 
+
+             
+                
+                
+                
+
+                <!--Horizontal list experiment--><!--
+                <CollectionView ItemsSource="{Binding DatabaseCharacterList}" HorizontalScrollBarVisibility="Always"
+                ItemsLayout="HorizontalList" HeightRequest="150" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+
+                                <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                                   WidthRequest="120"
+                                   HeightRequest="120"
+                                   Margin="10, 10, 10, 10"
+                                   Padding="5"
+                                  >
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0">
+
+                                            <Frame Grid.Row="0" 
+                                                Style="{StaticResource CharacterReadCellTitleFrame}"
+                                                Padding="2"
+                                               WidthRequest="75"
+                                               HeightRequest="25"
+                                               Margin="0"
+                                                >
+
+                                                <StackLayout Orientation="Horizontal" 
+                                                     Grid.Row="0" 
+                                                     HorizontalOptions="CenterAndExpand"
+                                                     VerticalOptions="CenterAndExpand"
+                                                     >
+
+                                                    <Label Text="{Binding Name}" 
+                                                   Style="{StaticResource CharacterCellNameLabelStyle}"
+                                                   FontSize="Small"
+                                                   Margin="0"
+                                                   
+                                                   />
+
+                                                </StackLayout>
+                                            </Frame>
+
+
+                                            --><!--Frame for thumbnail--><!--
+                                            <Frame x:Name="ImageFrame" 
+                                            Style="{StaticResource LargeCircleFrameStyle}"
+                                           WidthRequest="50"
+                                           HeightRequest="50"
+                                            Grid.Row="1"
+                                           Margin="0"
+                                             >
+
+                                                <Image Source="{Binding ImageURI}" />
+
+
+                                            </Frame>
+                                            <ImageButton Style="{StaticResource CreatePlusMinusButtonStyle}"
+                                                     Source="icon_add.png" 
+                                                    x:Name="CharactersListView"
+                                                         WidthRequest="15"
+                                                         Margin="0"
+                                                         Padding="0"
+                                                    />
+                                        </StackLayout>
+                                    </Grid>
+                            </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>-->
+
+
+
+
                 <Label Text="Battle Time" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                 <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
@@ -28,20 +116,101 @@
                                 CachingStrategy="RecycleElement"
                                 ItemSelected="OnDatabaseCharacterItemSelected"
                                 HasUnevenRows="true"
-                                HeightRequest="300"
+                                HeightRequest="250"
+                                
+                                SeparatorVisibility="None"
                                 >
 
                             <ListView.ItemTemplate>
+                                
+                                
                                 <DataTemplate >
+                                    
+                                    
                                     <ViewCell>
-                                        <Grid>
 
-                                            <!--Grid.Column="0" Grid.Row="0" Grid.RowSpan="1"-->
+                                        <Grid RowSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+
+                                            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                                                   WidthRequest="120"
+                                                   HeightRequest="120"
+                                                   Margin="10, 10, 10, 10"
+                                                   Padding="5"
+                                                   >
+                                                
+                                                <Grid RowSpacing="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+
+                                                    <StackLayout Orientation="Vertical" 
+                                                                 VerticalOptions="CenterAndExpand" 
+                                                                 Padding="0"
+                                                                 >
+                                                    
+                                                        <Frame Grid.Row="0" 
+                                                               Style="{StaticResource CharacterReadCellTitleFrame}"
+                                                               Padding="2"
+                                                               WidthRequest="75"
+                                                               HeightRequest="25"
+                                                               Margin="0"
+                                                               >
+
+                                                            <StackLayout Orientation="Horizontal" 
+                                                                         Grid.Row="0" 
+                                                                         HorizontalOptions="CenterAndExpand"
+                                                                         VerticalOptions="CenterAndExpand"
+                                                                         >
+
+                                                                <Label Text="{Binding Name}" 
+                                                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                                                       FontSize="Small"
+                                                                       Margin="0"
+                                                                       />
+                                                            
+
+                                                            </StackLayout>
+                                                            
+                                                        </Frame>
+
+                                                        <!--Frame for thumbnail-->
+                                                        <Frame x:Name="ImageFrame" 
+                                                               Style="{StaticResource LargeCircleFrameStyle}"
+                                                               WidthRequest="55"
+                                                               HeightRequest="55"
+                                                               Grid.Row="1"
+                                                               Margin="0"
+                                                               >
+
+                                                            <Image Source="{Binding ImageURI}" />
+
+
+                                                        </Frame>
+                                                        <Image Source="icon_add.png" 
+                                                               WidthRequest="20"
+                                                               Margin="0"
+                                                               />
+
+                                                    </StackLayout>
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+
+
+                                        <!--<Grid>
+
+                                            --><!--Grid.Column="0" Grid.Row="0" Grid.RowSpan="1"--><!--
                                             <Image  
                                                     Source="{Binding ImageURI}"
                                                     Style="{StaticResource ImageMediumStyle}"/>
 
-                                            <!--<Label Grid.Column="1" Grid.Row="0"
+                                            --><!--<Label Grid.Column="1" Grid.Row="0"
                                                    Text="{Binding Name}" 
                                                    Style="{StaticResource ListStyle}"
                                                    FontAttributes="Bold"/>
@@ -52,11 +221,17 @@
 
                                             <Label Grid.Column="1" Grid.Row="2"
                                                     Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                                    Style="{StaticResource ListStyle}"/>-->
+                                                    Style="{StaticResource ListStyle}"/>--><!--
 
-                                        </Grid>
+                                        </Grid>-->
+                                        
+                                        
                                     </ViewCell>
+                                    
+                                    
                                 </DataTemplate>
+                                
+                                
                             </ListView.ItemTemplate>
                         </ListView>
                         <StackLayout Orientation="Vertical">
@@ -91,12 +266,86 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <Grid>
+                                        <Grid RowSpacing="0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+
+                                            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                                                   WidthRequest="120"
+                                                   HeightRequest="120"
+                                                   Margin="10, 10, 10, 10"
+                                                   Padding="5"
+                                                   >
+
+                                                <Grid RowSpacing="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+
+                                                    <StackLayout Orientation="Vertical" 
+                                                                 VerticalOptions="CenterAndExpand" 
+                                                                 Padding="0"
+                                                                 >
+
+                                                        <Frame Grid.Row="0" 
+                                                               Style="{StaticResource CharacterReadCellTitleFrame}"
+                                                               Padding="2"
+                                                               WidthRequest="75"
+                                                               HeightRequest="25"
+                                                               Margin="0"
+                                                               >
+
+                                                            <StackLayout Orientation="Horizontal" 
+                                                                         Grid.Row="0" 
+                                                                         HorizontalOptions="CenterAndExpand"
+                                                                         VerticalOptions="CenterAndExpand"
+                                                                         >
+
+                                                                <Label Text="{Binding Name}" 
+                                                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                                                       FontSize="Small"
+                                                                       Margin="0"
+                                                                       />
+
+
+                                                            </StackLayout>
+
+                                                        </Frame>
+
+                                                        <!--Frame for thumbnail-->
+                                                        <Frame x:Name="ImageFrame" 
+                                                               Style="{StaticResource LargeCircleFrameStyle}"
+                                                               WidthRequest="55"
+                                                               HeightRequest="55"
+                                                               Grid.Row="1"
+                                                               Margin="0"
+                                                               >
+
+                                                            <Image Source="{Binding ImageURI}" />
+
+
+                                                        </Frame>
+                                                        <Image Source="icon_subtract.png" 
+                                                               WidthRequest="20"
+                                                               Margin="0"
+                                                               />
+
+                                                    </StackLayout>
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+
+
+                                        <!--<Grid>
                                             <Image  
                                                     Source="{Binding ImageURI}"
                                                     Style="{StaticResource ImageMediumStyle}"/>
 
-                                            <!--<Label
+                                            --><!--<Label
                                                    Text="{Binding Name}" 
                                                    Style="{StaticResource ListStyle}"
                                                    FontAttributes="Bold"/>
@@ -107,9 +356,11 @@
 
                                             <Label 
                                                     Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                                    Style="{StaticResource ListStyle}"/>-->
+                                                    Style="{StaticResource ListStyle}"/>--><!--
 
-                                        </Grid>
+                                        </Grid>-->
+                                       
+                                        
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -125,12 +376,6 @@
                             IsEnabled="False"/>
 
                     </StackLayout>
-
-
-
-
-
-
                 </StackLayout>
 
             </StackLayout>
