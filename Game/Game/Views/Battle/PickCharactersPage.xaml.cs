@@ -116,7 +116,7 @@ namespace Game.Views
               BeginBattleButton.IsEnabled = false;
             }
 
-            PartyCountLabel.Text = currentCount.ToString();
+            PartyCountLabel.Text = currentCount.ToString() + " / 6";
         }
 
         /// <summary>
