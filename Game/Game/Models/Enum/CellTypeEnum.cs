@@ -152,27 +152,27 @@ namespace Game.Models
             switch (value)
             {
                 case CellTypeEnum.KillerTCell:
-                    image = "t_cell_bg.png";
+                    image = "t_cell_no_bg.png";
                     break;
 
                 case CellTypeEnum.NKCell:
-                    image = "nkcell_bg.png";
+                    image = "nkcell_no_bg.png";
                     break;
 
                 case CellTypeEnum.BCell:
-                    image = "b_Cell_bg.png";
+                    image = "b_Cell_no_bg.png";
                     break;
 
                 case CellTypeEnum.Macrophage:
-                    image = "macrophage_bg.png";
+                    image = "macrophage_no_bg.png";
                     break;
 
                 case CellTypeEnum.Eosinophil:
-                    image = "eosinophil_bg.png";
+                    image = "eosinophil_no_bg.png";
                     break;
 
                 case CellTypeEnum.Basophil:
-                    image = "basophil_bg.png";
+                    image = "basophil_no_bg.png";
                     break;
             }
 
