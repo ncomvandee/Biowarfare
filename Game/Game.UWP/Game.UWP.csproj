@@ -259,6 +259,7 @@
     <Content Include="speed_icon.png" />
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
+    <Content Include="start_main.png" />
     <Content Include="stethoscope_no_bg.png" />
     <Content Include="stethoscope_white_bg.png" />
     <Content Include="thermometer_no_bg.png" />
