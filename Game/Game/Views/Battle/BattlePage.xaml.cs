@@ -330,7 +330,7 @@ namespace Game.Views
             var MapFrame = new Frame
             {
                 Style = (Style)Application.Current.Resources["BattleMapFrame"],
-                BackgroundColor = Color.Transparent,
+                BackgroundColor = Color.Wheat,
                 Content = PlayerImageButton,
                 AutomationId = GetDictionaryFrameName(mapLocationModel)
             };
@@ -913,9 +913,10 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    BattlePlayerInfomationBox.IsVisible = true;
+                    BattlePlayerInfomationBox.IsVisible = false;
                     MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
+                    BattleInfoAndActions.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons
