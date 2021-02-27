@@ -109,11 +109,13 @@
 
 
 
-                <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" Margin="0">
 
                     <StackLayout Orientation="Vertical">
 
-                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0"/>
+                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 0, 0, 5" Padding="0"/>
+                        
+                        
 
                         <ListView 
                                 x:Name="CharactersListView" 
@@ -123,9 +125,10 @@
                                 CachingStrategy="RecycleElement"
                                 ItemSelected="OnDatabaseCharacterItemSelected"
                                 HasUnevenRows="true"
-                                HeightRequest="250"
+                                HeightRequest="220"
                                 
                                 SeparatorVisibility="None"
+                            VerticalScrollBarVisibility="Always"
                                 >
 
                             <ListView.ItemTemplate>
@@ -143,10 +146,10 @@
                                             </Grid.RowDefinitions>
 
 
-                                            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                                            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
                                                    WidthRequest="120"
                                                    HeightRequest="120"
-                                                   Margin="10, 10, 10, 10"
+                                                   Margin="10, 0, 10, 10"
                                                    Padding="5"
                                                    >
                                                 
@@ -162,7 +165,7 @@
                                                                  >
                                                     
                                                         <Frame Grid.Row="0" 
-                                                               Style="{StaticResource CharacterReadCellTitleFrame}"
+                                                               Style="{StaticResource ReadCellTitleFrame}"
                                                                Padding="2"
                                                                WidthRequest="75"
                                                                HeightRequest="25"
@@ -176,7 +179,7 @@
                                                                          >
 
                                                                 <Label Text="{Binding Name}" 
-                                                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                                                       Style="{StaticResource CellNameLabelStyle}"
                                                                        FontSize="Small"
                                                                        Margin="0"
                                                                        />
@@ -250,11 +253,11 @@
                     <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
 
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                           
 
-                            <Label Text="In Party: " Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0"/>
+
+                            <Label Text="In Party: " Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 5, 0, 5" Padding="0"/>
                         
-                        <Label Style="{StaticResource SimpleLabelTextStyle}" Margin="0" Padding="0" 
+                        <Label Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 5, 0, 5" Padding="0" 
                             x:Name="PartyCountLabel"
                             Text="0"/>
 
@@ -268,7 +271,9 @@
                                 CachingStrategy="RecycleElement"
                                 ItemSelected="OnPartyCharacterItemSelected"
                                 HasUnevenRows="True"
-                            HeightRequest="300"
+                            HeightRequest="220"
+                            SeparatorVisibility="None"
+                            VerticalScrollBarVisibility="Always"
                                 
                                 >
 
@@ -282,10 +287,10 @@
                                             </Grid.RowDefinitions>
 
 
-                                            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
+                                            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
                                                    WidthRequest="120"
                                                    HeightRequest="120"
-                                                   Margin="10, 10, 10, 10"
+                                                   Margin="10, 0, 10, 10"
                                                    Padding="5"
                                                    >
 
@@ -301,7 +306,7 @@
                                                                  >
 
                                                         <Frame Grid.Row="0" 
-                                                               Style="{StaticResource CharacterReadCellTitleFrame}"
+                                                               Style="{StaticResource ReadCellTitleFrame}"
                                                                Padding="2"
                                                                WidthRequest="75"
                                                                HeightRequest="25"
@@ -315,7 +320,7 @@
                                                                          >
 
                                                                 <Label Text="{Binding Name}" 
-                                                                       Style="{StaticResource CharacterCellNameLabelStyle}"
+                                                                       Style="{StaticResource CellNameLabelStyle}"
                                                                        FontSize="Small"
                                                                        Margin="0"
                                                                        />
