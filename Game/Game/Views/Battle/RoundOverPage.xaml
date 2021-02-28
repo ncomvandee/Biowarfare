@@ -23,7 +23,10 @@
                         <Button Clicked="CloseButton_Clicked" Text="Close"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Round : " Style="{StaticResource MessageStyle}"/>
+                            <Frame Style="{StaticResource BasicScoreFrameStyle}" Padding="10">
+                                <Label Text="Round : " Style="{StaticResource VillagePageLabelStyle}"/>
+                            </Frame>
+                           
                             <Label Text="0" x:Name="TotalRound" Style="{StaticResource MessageStyle}"/>
                         </StackLayout>
 
