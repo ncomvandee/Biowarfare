@@ -7,6 +7,7 @@ using Game.Engine.EngineKoenig;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineInterfaces;
+using System.Threading.Tasks;
 
 namespace Game.Views
 {
@@ -34,6 +35,11 @@ namespace Game.Views
 		/// <param name="e"></param>
 		public async void AutobattleButton_Clicked(object sender, EventArgs e)
 		{
+
+			//loading picture
+			AutobattleImage.Source = "cell_gif.gif";
+			//AutobattleImage.IsAnimationPlaying = true;
+
 			// Call into Auto Battle from here to do the Battle...
 
 			// To See Level UP happening, a character needs to be close to the next level
@@ -50,14 +56,14 @@ namespace Game.Views
 			//BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
 
 			BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
-
-			await BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle();
+			await Task.Run(()=> BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle());
+			//await BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle();
 
 			var BattleMessage = string.Format("Done {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
 			BattleMessageValue.Text = BattleMessage;
 
-			AutobattleImage.Source = "troll6_d.gif";
+			AutobattleImage.Source = "splashscreen.png";
 		}
 	}
 }

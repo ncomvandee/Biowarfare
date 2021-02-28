@@ -19,10 +19,9 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
                     <Image
                         x:Name="AutobattleImage"
-                        Source="elf1_a.gif"
-                        IsAnimationPlaying="True"
+                        Source="splashscreen.png"
                         Style="{StaticResource ImageLargeStyle}"></Image>
-
+                    
 
                     <Label 
                     x:Name="BattleMessageValue"
