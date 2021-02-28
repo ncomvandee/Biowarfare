@@ -13,10 +13,18 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-            <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                <Label 
+        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+            <Frame Style="{StaticResource LargeScoresInnerFrameStyle}">
+                <StackLayout Style="{StaticResource CardImageTextBox}">
+                    <Image
+                        x:Name="AutobattleImage"
+                        Source="elf1_a.gif"
+                        IsAnimationPlaying="True"
+                        Style="{StaticResource ImageLargeStyle}"></Image>
+
+
+                    <Label 
                     x:Name="BattleMessageValue"
                     Text=""
                     LineBreakMode="WordWrap"
@@ -27,14 +35,10 @@
                     HorizontalTextAlignment="Center"
                     Style="{StaticResource ListStyle}"
                     />
-
-                <Image
-                        x:Name="AutobattleImage"
-                        Source="elf1_a.gif"
-                        IsAnimationPlaying="True"
-                        Style="{StaticResource ImageLargeStyle}"></Image>
-
-            </StackLayout>
+                </StackLayout>
+                
+            </Frame>
+          
             
             <StackLayout Style="{StaticResource CardImageTextBox}">
 
