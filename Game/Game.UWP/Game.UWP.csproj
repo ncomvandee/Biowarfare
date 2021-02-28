@@ -262,6 +262,10 @@
     <Content Include="scores_button.png" />
     <Content Include="speed_green.png" />
     <Content Include="speed_icon.png" />
+    <AndroidResource Include="splashscreen.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="spore_bg.png" />
     <Content Include="spore_no_bg.png" />
     <Content Include="start_main.png" />
