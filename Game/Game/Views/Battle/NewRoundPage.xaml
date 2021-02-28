@@ -4,33 +4,240 @@
              x:Class="Game.Views.NewRoundPage">
 
     <ContentPage.Content>
-        <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+          <ScrollView VerticalScrollBarVisibility="Never" 
+                      HorizontalScrollBarVisibility="Never"
+                      AbsoluteLayout.LayoutBounds="1, 1, 1, 1"
+                      AbsoluteLayout.LayoutFlags="All">
 
             <StackLayout Style="{StaticResource VerticalStack}">
 
                 <Label Text="Beginning a Round" Style="{StaticResource CenterMessageLargeStyle}"/>
 
-                <Button Clicked="BeginButton_Clicked" Text="Begin"/>
+                <ImageButton Source="start_main.png" 
+                             HeightRequest="40" 
+                             Margin="0, 10"
+                             Clicked="BeginButton_Clicked"/>
 
-                <Label Text="Characters" Style="{StaticResource MessageLargeStyle}"/>
+                <!--<Button Clicked="BeginButton_Clicked" Text="Begin"/>-->
+
+                <Frame HorizontalOptions="Start"
+                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BorderColor="Transparent"
+                       CornerRadius="20"
+                       Padding="10, 5"
+                       Margin="0, 10">
+
+                    <Label Text="Characters" 
+                           FontSize="Title"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+
+                </Frame>
+
+                
 
                 <FlexLayout x:Name="PartyListFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
+                            JustifyContent="SpaceEvenly"
+                            AlignContent="Center"
+                            Wrap="Wrap"/>
+
+                    <Frame HorizontalOptions="Start"
+                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BorderColor="Transparent"
+                       CornerRadius="20"
+                       Padding="15, 5"
+                       Margin="0, 10">
+
+                        <Label Text="Monster" 
+                           FontSize="Title"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+
+                    </Frame>
+
+                    <FlexLayout x:Name="MonsterListFrame"
+                                    JustifyContent="SpaceEvenly"
+                                    AlignContent="Center"
                                     Wrap="Wrap"/>
 
-                <Label Text="Monsters" Style="{StaticResource MessageLargeStyle}"/>
+                    <StackLayout Padding="1"></StackLayout>
 
-                <FlexLayout x:Name="MonsterListFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
-
-                <StackLayout Padding="1"></StackLayout>
-
-                <Button Clicked="BeginButton_Clicked" Text="Begin"/>
-                
             </StackLayout>
-        </ScrollView>
+              
+          </ScrollView>
+
+            <!--POPUP FRAME-->
+            <Frame Style="{StaticResource ReadPagePopupStyle}"
+                   x:Name="CharacterPopUpFrame"
+                   IsVisible="False"
+                   >
+
+                <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
+
+                    <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
+                                 Source="icon_cancel.png"
+                                 Clicked="ClosePopup_Clicked"/>
+
+                    <Frame Style="{StaticResource PopupTitleFrameStyle}">
+
+                        <Label Style="{StaticResource EquipPopupLabelStyle}"
+                               Text="Name goes here, I guess"
+                               x:Name="CharacterPopUpName"
+                               />
+
+                    </Frame>
+
+                    <Frame Style="{StaticResource ItemImageCircleFrameStyle}">
+
+                        <Image x:Name="CharacterPopUpImage"
+                               />
+
+                    </Frame>
+
+                    <Grid Padding="10" RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               Text="Cell Type: "
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               />
+
+                        <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                               x:Name="CharacterPopupCellType"
+                               FontAttributes="Bold"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               />
+
+                        <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               Text="Level: "
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               />
+
+                        <Label Style="{StaticResource PopupAttributeLabelStyle}"
+                               x:Name="CharacterPopupLevel"
+                               FontAttributes="bold"
+                               Grid.Row="1"
+                               Grid.Column="1" 
+                               />
+
+                    </Grid>
+
+                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                            BackgroundColor="AliceBlue"
+                            Padding="10"
+                            x:Name="AttributeFrame"
+                            CornerRadius="20"
+                            IsVisible="True"
+                                >
+
+                        <StackLayout>
+                            <Frame Style="{StaticResource PopupTitleFrameStyle}"
+                                   Padding="40, 0">
+
+                                <Label Style="{StaticResource EquipPopupLabelStyle}"
+                                       Text="Attribute"
+                                       FontSize="Default"
+                                        />
+
+                            </Frame>
+
+                            <Grid ColumnSpacing="25" 
+                                  RowSpacing="5" 
+                                  Margin="0, 0"
+                                  >
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="attack_icon.png" 
+                                       WidthRequest="35" 
+                                       Grid.Row="1" 
+                                       Grid.Column="0" 
+                                       />
+
+                                <Label x:Name="Attack"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="2" 
+                                       Grid.Column="0" 
+                                       />
+
+                                <Image Source="defense_icon.png" 
+                                       WidthRequest="35" 
+                                       Grid.Row="1" 
+                                       Grid.Column="1" 
+                                       />
+
+                                <Label x:Name="Defense"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="2" 
+                                       Grid.Column="1" 
+                                       />
+
+                                <Image Source="speed_icon.png" 
+                                       WidthRequest="35" 
+                                       Grid.Row="1" 
+                                       Grid.Column="2" 
+                                       />
+
+                                <Label x:Name="Speed"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="2" 
+                                       Grid.Column="2" 
+                                       />
+
+                                <Image Source="heart_icon.png" 
+                                       WidthRequest="35" 
+                                       Grid.Row="1" 
+                                       Grid.Column="3" 
+                                       />
+
+                                <Label x:Name="Health"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="2" 
+                                       Grid.Column="3" 
+                                       />
+
+                                <Image Source="xp_icon.png" 
+                                       WidthRequest="35" 
+                                       Grid.Row="1" 
+                                       Grid.Column="4" 
+                                       />
+
+                                <Label x:Name="Experience"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="2" 
+                                       Grid.Column="4" 
+                                       />
+
+                            </Grid>
+
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
