@@ -159,6 +159,7 @@
     <Content Include="cancel_scores.png" />
     <Content Include="cancer_bg.png" />
     <Content Include="cancer_no_bg.png" />
+    <Content Include="cell_gif.gif" />
     <Content Include="character_button.png" />
     <Content Include="chemo_port_of_pain_no_bg.png" />
     <Content Include="chemo_port_of_pain_white_bg.png" />

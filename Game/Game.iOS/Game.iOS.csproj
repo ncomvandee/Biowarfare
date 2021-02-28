@@ -504,4 +504,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\macrophage_no_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cell_gif.gif" />
+  </ItemGroup>
 </Project>
