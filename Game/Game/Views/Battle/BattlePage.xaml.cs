@@ -823,7 +823,11 @@ namespace Game.Views
             ShowBattleMode();
             await Navigation.PushModalAsync(new RoundOverPage());
         }
-
+        public async void RoundOver_Clicked(object sender, EventArgs args)
+        {
+            ShowBattleMode();
+            await Navigation.PushModalAsync(new RoundOverPage());
+        }
         /// <summary>
         /// Show Settings
         /// </summary>

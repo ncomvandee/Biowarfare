@@ -73,7 +73,8 @@
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 25"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
-                            
+                            <Button Text="Round Over" Clicked="RoundOver_Clicked"/>
+
                         </StackLayout>
                     
                     </StackLayout>
