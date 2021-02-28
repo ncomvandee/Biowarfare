@@ -31,7 +31,7 @@ namespace Game.Views
 
             DrawCharacterList();
 
-            DrawItemLists();
+           // DrawItemLists();
         }
 
         /// <summary>
@@ -61,16 +61,16 @@ namespace Game.Views
         /// The Ones Selected
         /// 
         /// </summary>
-        public void DrawItemLists()
+/*        public void DrawItemLists()
         {
             DrawDroppedItems();
             DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
             TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
-        }
+        }*/
 
-        /// <summary>
+ /*       /// <summary>
         /// Add the Dropped Items to the Display
         /// </summary>
         public void DrawDroppedItems()
@@ -86,12 +86,12 @@ namespace Game.Views
             {
                 ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
             }
-        }
+        }*/
 
         /// <summary>
         /// Add the Dropped Items to the Display
         /// </summary>
-        public void DrawSelectedItems()
+/*        public void DrawSelectedItems()
         {
             // Clear and Populate the Dropped Items
             var FlexList = ItemListSelectedFrame.Children.ToList();
@@ -104,14 +104,14 @@ namespace Game.Views
             {
                 ItemListSelectedFrame.Children.Add(GetItemToDisplay(data));
             }
-        }
+        }*/
 
         /// <summary>
         /// Look up the Item to Display
         /// </summary>
         /// <param name="location"></param>
         /// <returns></returns>
-        public StackLayout GetItemToDisplay(ItemModel item)
+       /* public StackLayout GetItemToDisplay(ItemModel item)
         {
             if (item == null)
             {
@@ -161,7 +161,7 @@ namespace Game.Views
             };
 
             return ItemStack;
-        }
+        }*/
 
         /// <summary>
         /// Return a stack layout with the Player information inside
@@ -175,55 +175,39 @@ namespace Game.Views
                 data = new PlayerInfoModel();
             }
 
+            // Default clickable item
+            var ClickAble = true;
+
             // Hookup the image
-            var PlayerImage = new Image
+            var PlayerImage = new ImageButton
             {
-                Style = (Style)Application.Current.Resources["ImageBattleLargeStyle"],
+                //Style = (Style)Application.Current.Resources["ImageBattleLargeStyle"],
+                BackgroundColor = Color.White,
+                CornerRadius = 100,
+                HeightRequest = 90,
+                WidthRequest = 90,
                 Source = data.ImageURI
             };
 
-            // Add the Level
-            var PlayerLevelLabel = new Label
+            // Frame containing Character image button
+            var ImageFrame = new Frame
             {
-                Text = "Level : " + data.Level,
-                Style = (Style)Application.Current.Resources["ValueStyleMicro"],
-                HorizontalOptions = LayoutOptions.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                Padding = 0,
-                LineBreakMode = LineBreakMode.TailTruncation,
-                CharacterSpacing = 1,
-                LineHeight = 1,
-                MaxLines = 1,
+                BackgroundColor = (Color)Application.Current.Resources["PrimaryMidgroundPurple"],
+                CornerRadius = 10,
+                BorderColor = Color.Transparent,
+                WidthRequest = 100,
+                HeightRequest = 100,
+                Content = PlayerImage,
             };
 
-            // Add the HP
-            var PlayerHPLabel = new Label
+            // If image is clickable show the popup page
+            if (ClickAble)
             {
-                Text = "HP : " + data.GetCurrentHealthTotal,
-                Style = (Style)Application.Current.Resources["ValueStyleMicro"],
-                HorizontalOptions = LayoutOptions.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                Padding = 0,
-                LineBreakMode = LineBreakMode.TailTruncation,
-                CharacterSpacing = 1,
-                LineHeight = 1,
-                MaxLines = 1,
-            };
+                PlayerImage.Clicked += (sender, args) => ShowPopup(data);
+            }
 
-            var PlayerNameLabel = new Label()
-            {
-                Text = data.Name,
-                Style = (Style)Application.Current.Resources["ValueStyle"],
-                HorizontalOptions = LayoutOptions.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                Padding = 0,
-                LineBreakMode = LineBreakMode.TailTruncation,
-                CharacterSpacing = 1,
-                LineHeight = 1,
-                MaxLines = 1,
-            };
 
-            // Put the Image Button and Text inside a layout
+            // Put the Image Button inside a layout
             var PlayerStack = new StackLayout
             {
                 Style = (Style)Application.Current.Resources["PlayerInfoBox"],
@@ -231,10 +215,7 @@ namespace Game.Views
                 Padding = 0,
                 Spacing = 0,
                 Children = {
-                    PlayerImage,
-                    PlayerNameLabel,
-                    PlayerLevelLabel,
-                    PlayerHPLabel,
+                    ImageFrame,
                 },
             };
 
@@ -242,20 +223,22 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Show the Popup for the Item
+        /// Show the Popup for the present character information
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public bool ShowPopup(ItemModel data)
+        public bool ShowPopup(PlayerInfoModel data)
         {
-            PopupLoadingView.IsVisible = true;
-            PopupItemImage.Source = data.ImageURI;
-
-            PopupItemName.Text = data.Name;
-            PopupItemDescription.Text = data.Description;
-            PopupItemLocation.Text = data.Location.ToMessage();
-            PopupItemAttribute.Text = data.Attribute.ToMessage();
-            PopupItemValue.Text = " + " + data.Value.ToString();
+            CharacterPopUpFrame.IsVisible = true;
+            CharacterPopupCellType.Text = data.Job.ToString();
+            CharacterPopUpImage.Source = data.ImageURI;
+            CharacterPopUpName.Text = data.Name;
+            CharacterPopupLevel.Text = data.Level.ToString();
+            Attack.Text = data.GetAttackTotal.ToString();
+            Defense.Text = data.GetDefenseTotal.ToString();
+            Speed.Text = data.GetSpeedTotal.ToString();
+            Health.Text = data.GetCurrentHealthTotal.ToString();
+            Experience.Text = data.ExperienceTotal.ToString();
             return true;
         }
 
@@ -266,8 +249,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public void ClosePopup_Clicked(object sender, EventArgs e)
 		{
-			PopupLoadingView.IsVisible = false;
-		}
+            CharacterPopUpFrame.IsVisible = false;
+        }
 		
 		/// <summary>
 		/// Closes the Round Over Popup
@@ -299,7 +282,7 @@ namespace Game.Views
 			BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
 
             // Show what was picked up
-            DrawItemLists();
+            //DrawItemLists();
         }
 
         /// <summary>
