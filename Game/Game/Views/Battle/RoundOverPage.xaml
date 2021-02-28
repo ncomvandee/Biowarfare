@@ -20,7 +20,6 @@
 
                         <Label Text="Round Cleared" Style="{StaticResource CenterMessageLargeStyle}"/>
 
-                        <Button Clicked="CloseButton_Clicked" Text="Close"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame Style="{StaticResource BasicScoreFrameStyle}" Padding="10">
@@ -44,29 +43,9 @@
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
 
-                        <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
-                        <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Found : " Style="{StaticResource LabelStyle}"/>
-                            <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
-                        <FlexLayout x:Name="ItemListFoundFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
-
-                        <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
-
-                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
-                        <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
-                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
-                        <FlexLayout x:Name="ItemListSelectedFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
-
-                        <Button Clicked="CloseButton_Clicked" Text="Close"/>
+                        <Button Text="Continue"
+                                Style="{StaticResource PrimaryButtonStyle}"
+                                Clicked="CloseButton_Clicked"/>
 
                     </StackLayout>
                 </ScrollView>
