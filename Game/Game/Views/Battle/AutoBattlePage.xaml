@@ -20,6 +20,7 @@
                     <Image
                         x:Name="AutobattleImage"
                         Source="splashscreen.png"
+                        IsAnimationPlaying="True"
                         Style="{StaticResource ImageLargeStyle}"></Image>
                     
 
