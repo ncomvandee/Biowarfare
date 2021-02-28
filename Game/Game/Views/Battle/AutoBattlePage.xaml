@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.AutoBattlePage"
              >
+    <NavigationPage.TitleView>
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Auto Battle" 
+               Margin="0, 0, 55, 0"
+               />
+
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
