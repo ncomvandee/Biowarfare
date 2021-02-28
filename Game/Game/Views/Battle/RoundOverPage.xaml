@@ -28,12 +28,17 @@
                                     <Label Text="Round :" Style="{StaticResource VillagePageLabelStyle}"/>
                                     <Label Text="0" x:Name="TotalRound" Style="{StaticResource VillagePageLabelStyle}"/>
                                 </StackLayout>
-                      
                             </Frame>
 
                         </StackLayout>
-
-                        <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
+                        
+                        <Frame Style="{StaticResource BasicScoreFrameStyle}" 
+                               Padding="10" 
+                               HorizontalOptions="StartAndExpand"
+                               Margin="0,20,0,20">
+                            <Label Text="Cells" Style="{StaticResource VillagePageLabelStyle}"/>
+                        </Frame>
+                        
                         <FlexLayout x:Name="CharacterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
