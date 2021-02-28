@@ -17,8 +17,8 @@
             <StackLayout Style="{StaticResource CardImageTextBox}">
 
                 <ImageButton
-                        Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
+                        Source="start_main.png"
+                        Style="{StaticResource GamePageBattleStyle}"
                         Clicked="AutobattleButton_Clicked"/>
 
                 <Label 
