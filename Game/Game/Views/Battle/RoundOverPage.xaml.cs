@@ -13,6 +13,7 @@ namespace Game.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RoundOverPage: ContentPage
 	{
+        bool isGameOver = false;
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -34,6 +35,16 @@ namespace Game.Views
 
 
            // DrawItemLists();
+        }
+
+        public RoundOverPage(bool gameOver)
+        {
+            InitializeComponent();
+            isGameOver = gameOver;
+
+            TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
+
+            DrawCharacterList();
         }
 
         /// <summary>
