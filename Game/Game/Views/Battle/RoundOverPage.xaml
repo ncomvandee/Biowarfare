@@ -40,7 +40,7 @@
                         </Frame>
                         
                         <FlexLayout x:Name="CharacterListFrame"
-                                    JustifyContent="Start"
+                                    JustifyContent="Center"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
 
