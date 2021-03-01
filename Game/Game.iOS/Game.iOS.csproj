@@ -510,4 +510,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\grid.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\grid_cell.png" />
+  </ItemGroup>
 </Project>
