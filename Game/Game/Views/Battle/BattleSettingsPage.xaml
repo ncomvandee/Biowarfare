@@ -7,101 +7,104 @@
 
   
     <ContentPage.Content>
-       
+
 
         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
-           
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
-               
-                
-
-            <Frame Grid.Row="0" 
+                <Frame 
                            Style="{StaticResource ReadCellTitleFrame}"
                            Padding="5"
                   
-                           HorizontalOptions="Start"
+                           HorizontalOptions="CenterAndExpand"
                            >
 
                 <Label Text ="Battle Mode" Style="{StaticResource CellNameLabelStyle}"
                        VerticalTextAlignment="Center"/>
             </Frame>
+            </StackLayout>
 
-            <Grid 
-                HorizontalOptions="StartAndExpand" 
-                Padding="10"
-                RowSpacing="1"
-                ColumnSpacing="2"
-                VerticalOptions="Center">
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
                 <Label 
-                    Grid.Row="0" Grid.Column="0"
+                   
                     
-                    Style="{DynamicResource LabelStyle}"/>
+                    Style="{DynamicResource LabelStyle}" HorizontalOptions="CenterAndExpand"/>
 
-                <Frame Style="{StaticResource CreatePickerFrameStyle}" HorizontalOptions="Center">
+                <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
+                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}"
+                       Margin="0, 0, 0, 0">
 
-                    <Picker
+                    <StackLayout Style="{StaticResource VerticalStack}">
+
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+
+                            <Label 
+                  
+                    Text="Mappings" 
+                    Style="{DynamicResource  CellNameLabelStyle}"
+                    Margin="15, 15, 0, 0"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="None"/>
+
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}" HorizontalOptions="CenterAndExpand">
+
+
+                                <Picker
                  
                     Style="{StaticResource CreatePickerStyle}" 
-                    Grid.Row="0" Grid.Column="1"
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Center"
+                    
+                    HorizontalOptions="CenterAndExpand" 
+                    VerticalOptions="CenterAndExpand"
                     FontSize="Micro"
                     x:Name="BattleModePicker"
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="BattleModePicker_Changed"
                         />
-                    
+
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
                 </Frame>
-                
-            </Grid>
+            </StackLayout>
 
-            <Label Text ="Control Hit Actions" Style="{StaticResource HeaderStyle}" />
 
-            <Grid
-                HorizontalOptions="StartAndExpand" 
-                Padding="10"
-                RowSpacing="1"
-                ColumnSpacing="2"
-                VerticalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Frame 
+                           Style="{StaticResource ReadCellTitleFrame}"
+                           Padding="5"
+                  
+                           HorizontalOptions="CenterAndExpand"
+                           >
 
-                <Frame  Grid.ColumnSpan="2" Grid.RowSpan="4" WidthRequest="375" HeightRequest="100" HorizontalOptions="Start" CornerRadius="20" BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}">
-
+                    <Label Text ="Control Hit Actions" Style="{StaticResource CellNameLabelStyle}" />
                 </Frame>
+            </StackLayout>
+
+            <Frame Style="{StaticResource AboutDatabaseFrameStyle}" BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}">
+                    <StackLayout Style="{StaticResource VerticalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}">
 
 
-                <Label 
-                    Grid.Row="0"
+
+                            <Label 
+                  
                     Text="Monster Hit Control" 
                     Style="{DynamicResource  CellNameLabelStyle}"
-                    Margin="0, 0, 0, 0"
-                    HorizontalOptions="Start"/>
+                    Margin="15, 15, 0, 0"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="None"/>
 
 
-                <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="0"  Margin="200, 10, 0, 0">
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="0"  Margin="200, 10, 0, 0">
 
-                    <Picker 
+                                <Picker 
                      
                      Style="{StaticResource CreatePickerStyle}" 
-                    Grid.Row="0" Grid.Column="1"
+                  
                     HorizontalOptions="Center" 
                     VerticalOptions="Center"
                     FontSize="Micro"
@@ -109,21 +112,24 @@
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="MonsterHitPicker_Changed"/>
 
-                </Frame>
-                
-                <Label 
-                    Grid.Row="1" 
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+
+                            <Label 
+                   
                     Text="Character Hit Control" 
                     Style="{DynamicResource  CellNameLabelStyle}"
-                    Margin="0, 0, 0, 0"
-                    HorizontalOptions="Start"/>
+                    Margin="15, 15, 0, 0"
+                    HorizontalOptions="Start"
+                    FontAttributes="None"/>
 
-                <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="1"
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="1"
                        Margin="200, 10, 0, 0">
 
-                    <Picker 
+                                <Picker 
                         Style="{StaticResource CreatePickerStyle}" 
-                    Grid.Row="1" Grid.Column="1"
+               
                     HorizontalOptions="Center" 
                     VerticalOptions="Center"
                     FontSize="Micro"
@@ -131,57 +137,90 @@
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="CharacterHitPicker_Changed"/>
 
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
                 </Frame>
 
-               
 
 
 
-                <Label 
-                    Grid.Row="2" Grid.Column="0"
-                    Text="Allow Critical Hit" 
-                    Style="{DynamicResource LabelStyle}"
-                    Margin="0, 20, 0, 0"/>
 
-                <Switch 
-                    Grid.Row="2" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    x:Name="AllowCriticalHitSwitch"
-                    Toggled="AllowCriticalHit_Toggled"
-                     Margin="0, 20, 0, 0"/>
+
+
+                <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
+                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}"
+                       Margin="0, 0, 0, 0">
+                    <StackLayout Style="{StaticResource VerticalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+
+                            
 
                 <Label 
-                    Grid.Row="3" Grid.Column="0"
-                    Text="Allow Critical Miss" 
-                    Style="{DynamicResource LabelStyle}"
-                     Margin="0, 20, 0, 0"/>
+                      
+                        Text="Allow Critical Hit" 
+                         Style="{DynamicResource  CellNameLabelStyle}"
+                        Margin="10, 10, 0, 0"
+                        VerticalOptions="Center"
+                    FontAttributes="None"
+                        />
 
-                <Switch 
-                    Grid.Row="3" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    x:Name="AllowCriticalMissSwitch"
-                    Toggled="AllowCriticalMiss_Toggled"
-                     Margin="0, 20, 0, 0"/>
+                        <Switch 
+                     
+                        HorizontalOptions="Start" 
+                        VerticalOptions="Center"
+                        x:Name="AllowCriticalHitSwitch"
+                        Toggled="AllowCriticalHit_Toggled"
+                            Margin="0, 10, 0, 0"
+                        />
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label 
+                      
+                        Text="Allow Critical Miss" 
+                        Style="{DynamicResource  CellNameLabelStyle}"
+                            Margin="10, 0, 0, 0"
+                        
+                            VerticalOptions="Center"
+                                FontAttributes="None"
+                            />
 
-                <Label 
-                    Grid.Row="4" Grid.Column="0"
-                    Text="Allow Monster Items" 
-                    Style="{DynamicResource LabelStyle}"
-                     Margin="0, 20, 0, 0"/>
+                        <Switch 
+                       
+                        HorizontalOptions="Start" 
+                        VerticalOptions="Center"
+                        x:Name="AllowCriticalMissSwitch"
+                        Toggled="AllowCriticalMiss_Toggled"
+                             
+                        
+                         />
+                        </StackLayout>
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label 
+                      
+                        Text="Allow Monster Items" 
+                         Style="{DynamicResource  CellNameLabelStyle}"
+                            VerticalOptions="Center"
+                            Margin="10, 0, 0, 0"
+                                    FontAttributes="None"
+                         />
 
-                <Switch 
-                    Grid.Row="4" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    x:Name="AllowMonsterItemsSwitch"
-                    Toggled="AllowMonsterItems_Toggled"
-                     Margin="0, 20, 0, 0"/>
-            </Grid>
+                    <Switch 
+                        
+                        HorizontalOptions="Start" 
+                        VerticalOptions="Center"
+                        x:Name="AllowMonsterItemsSwitch"
+                        Toggled="AllowMonsterItems_Toggled"
+                        
+                         />
+                </StackLayout>
+              </StackLayout>
+             </Frame>
+
+      
 
             <Button Clicked="CloseButton_Clicked" Text="Close" HorizontalOptions="CenterAndExpand"/>
-
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
