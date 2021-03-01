@@ -9,14 +9,14 @@
     <ContentPage.Content>
 
 
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="StartAndExpand">
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
                 <Frame 
                            Style="{StaticResource ReadCellTitleFrame}"
                            Padding="5"
-                  
+                           Margin="0, 0, 300, 10"
                            HorizontalOptions="CenterAndExpand"
                            >
 
@@ -26,7 +26,7 @@
             </StackLayout>
 
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand">
 
                 <Label 
                    
@@ -35,7 +35,8 @@
 
                 <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
                        BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       Margin="0, 0, 0, 0">
+                       Margin="0, 0, 115, 10"
+                       HorizontalOptions="StartAndExpand">
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
@@ -45,11 +46,11 @@
                   
                     Text="Mappings" 
                     Style="{DynamicResource  CellNameLabelStyle}"
-                    Margin="15, 15, 0, 0"
+                    Margin="0, 15, 0, 0"
                     HorizontalOptions="CenterAndExpand"
                     FontAttributes="None"/>
 
-                            <Frame Style="{StaticResource CreatePickerFrameStyle}" HorizontalOptions="CenterAndExpand">
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}" HorizontalOptions="CenterAndExpand" Margin="10, 5, 0, 5">
 
 
                                 <Picker
@@ -71,12 +72,12 @@
             </StackLayout>
 
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand">
 
                 <Frame 
                            Style="{StaticResource ReadCellTitleFrame}"
                            Padding="5"
-                  
+                           Margin="0, 0, 250, 10"
                            HorizontalOptions="CenterAndExpand"
                            >
 
@@ -84,13 +85,12 @@
                 </Frame>
             </StackLayout>
 
-            <Frame Style="{StaticResource AboutDatabaseFrameStyle}" BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}">
+            <Frame Style="{StaticResource AboutDatabaseFrameStyle}" BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}" Margin="0, 0, 20, 10" HorizontalOptions="StartAndExpand">
                     <StackLayout Style="{StaticResource VerticalStack}">
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
 
-
-                            <Label 
+                        <Label 
                   
                     Text="Monster Hit Control" 
                     Style="{DynamicResource  CellNameLabelStyle}"
@@ -99,7 +99,7 @@
                     FontAttributes="None"/>
 
 
-                            <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="0"  Margin="200, 10, 0, 0">
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="0"  Margin="18, 10, 0, 0">
 
                                 <Picker 
                      
@@ -121,11 +121,11 @@
                     Text="Character Hit Control" 
                     Style="{DynamicResource  CellNameLabelStyle}"
                     Margin="15, 15, 0, 0"
-                    HorizontalOptions="Start"
+                    
                     FontAttributes="None"/>
 
                             <Frame Style="{StaticResource CreatePickerFrameStyle}" Grid.Row="1"
-                       Margin="200, 10, 0, 0">
+                       Margin="10, 10, 0, 0">
 
                                 <Picker 
                         Style="{StaticResource CreatePickerStyle}" 
@@ -145,12 +145,10 @@
 
 
 
-
-
-
                 <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
                        BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       Margin="0, 0, 0, 0">
+                       Margin="0, 0, 60, 10"
+                       HorizontalOptions="Start">
                     <StackLayout Style="{StaticResource VerticalStack}">
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
@@ -219,7 +217,8 @@
 
       
 
-            <Button Clicked="CloseButton_Clicked" Text="Close" HorizontalOptions="CenterAndExpand"/>
+            <Button Clicked="CloseButton_Clicked" Text="Close" HorizontalOptions="CenterAndExpand"
+                    Style="{StaticResource PrimaryButtonStyle}"/>
            
         </StackLayout>
     </ContentPage.Content>
