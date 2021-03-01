@@ -465,7 +465,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="grid.png" />
+    <AndroidResource Include="Resources\drawable\grid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
