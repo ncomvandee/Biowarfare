@@ -109,7 +109,7 @@
 
 
 
-                <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" Margin="0">
+                <StackLayout  Orientation="Vertical" Margin="0">
 
                     <StackLayout Orientation="Vertical">
 
