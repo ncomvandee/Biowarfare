@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Game.Views.BattlePage">
+             x:Class="Game.Views.BattlePage"
+             >
 
     <NavigationPage.TitleView>
         <!--Menu Bar-->
@@ -48,8 +49,14 @@
                 <!--The Battle Map Display -->
                 <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
                     <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <!--<Image Source="item.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="Fill"/>-->
-                        <Grid x:Name="MapGrid" HorizontalOptions="Center" VerticalOptions="Start" ColumnSpacing="0" RowSpacing="0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Grid x:Name="MapGrid" 
+                              HorizontalOptions="Center" 
+                              VerticalOptions="Start" 
+                              ColumnSpacing="0" 
+                              RowSpacing="0" 
+                              AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                              AbsoluteLayout.LayoutFlags="All">
+                        </Grid>
                     </AbsoluteLayout>
                 </StackLayout>
 
@@ -57,30 +64,23 @@
                                 IsVisible="False"
                                 HorizontalOptions="CenterAndExpand"
                                 x:Name="BattleInfoAndActions">
-
                     <StackLayout Orientation="Horizontal">
-
                         <Frame WidthRequest="250" 
                                HeightRequest="300" 
                                HorizontalOptions="Start"
                                CornerRadius="20"
                                BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                                BorderColor="Transparent"/>
-
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 25"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 25"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
                             <Button Text="Round Over" Clicked="RoundOver_Clicked"/>
                             <Button Text="Game Over" Clicked="GameOver_Clicked"/>
-
                         </StackLayout>
-                    
                     </StackLayout>
                 </AbsoluteLayout>
-
 
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" Style="{StaticResource BattleUIBottomBox}">
@@ -90,7 +90,6 @@
                                 IsVisible="False">
 
                         <StackLayout x:Name="BattlePlayerBox" Style="{StaticResource PlayerBattleOuterBox}">
-
                             <StackLayout x:Name="AttackerBox" Style="{StaticResource PlayerBattleInfoBox}" HorizontalOptions="Start">
                                 <Image x:Name="AttackerImage" Source="item.png" Style="{StaticResource ImageBattleMediumStyle}"/>
                                 <Label x:Name="AttackerName" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
@@ -113,25 +112,20 @@
                     </Frame>
 
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" IsVisible="False"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
                         <ImageButton Source="start_main.png" x:Name="StartBattleButton" Clicked="StartButton_Clicked" IsVisible="False" />
-
-
                     </StackLayout>
 
                     <StackLayout 
                             Style="{StaticResource VerticalStack}" 
                             HeightRequest="100"
                             HorizontalOptions="CenterAndExpand">
-
                         <StackLayout x:Name="MessageDisplayBox" 
                             IsVisible="false"
                             Style="{StaticResource VerticalStack}" 
                                     VerticalOptions="StartAndExpand"
                                     HorizontalOptions="CenterAndExpand">
-
                             <Label x:Name="BattleMessages" 
                                     HorizontalOptions="FillAndExpand" 
                                     LineBreakMode="WordWrap" 
@@ -165,16 +159,11 @@
                     HorizontalOptions="FillAndExpand"
                     x:Name="GameOverDisplay" 
                     IsVisible="false">
-
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
                     <Label Text="Thank you for Playing" Style="{StaticResource CenterMessageLargeStyle}"/>
-
                     <Label Text="Check your score, or click Exit and return soon" Style="{StaticResource MessageStyle}" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" MaxLines="5" Padding="20"/>
-
                     <Button x:Name="ShowScoreButton" Clicked="ShowScoreButton_Clicked" Text="Score" WidthRequest="50"/>
-
                     <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit" WidthRequest="50"></Button>
-
                 </StackLayout>
             </StackLayout>
         </AbsoluteLayout>

@@ -24,7 +24,7 @@ namespace Game.Models
         // The Map Locations
         public MapModelLocation[,] MapGridLocation;
 
-        public PlayerInfoModel EmptySquare = new PlayerInfoModel { PlayerType = PlayerTypeEnum.Unknown, ImageURI= "" };
+        public PlayerInfoModel EmptySquare = new PlayerInfoModel { PlayerType = PlayerTypeEnum.Unknown, ImageURI= "b_cell_no_bg.png" };
 
         public MapModel()
         {

@@ -330,7 +330,7 @@ namespace Game.Views
             var MapFrame = new Frame
             {
                 Style = (Style)Application.Current.Resources["BattleMapFrame"],
-                BackgroundColor = Color.Wheat,
+                BackgroundColor = Color.FromHex("5A0746"),
                 Content = PlayerImageButton,
                 AutomationId = GetDictionaryFrameName(mapLocationModel)
             };
