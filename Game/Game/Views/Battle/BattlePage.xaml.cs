@@ -776,6 +776,7 @@ namespace Game.Views
             await Navigation.PopModalAsync();
         }
 
+
         /// <summary>
         /// The Next Round Button
         /// </summary>
@@ -836,7 +837,7 @@ namespace Game.Views
 
             // Show the Game Over Display
             //GameOverDisplay.IsVisible = true;
-            await Navigation.PushModalAsync(new RoundOverPage(true));
+           await Navigation.PushModalAsync(new RoundOverPage(true));
         }
         /// <summary>
         /// Show Settings
@@ -921,7 +922,7 @@ namespace Game.Views
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
 
                     // Show the Game Over Display
-                    GameOverDisplay.IsVisible = true;
+                    //GameOverDisplay.IsVisible = true;
                     break;
 
                 case BattleStateEnum.RoundOver:
