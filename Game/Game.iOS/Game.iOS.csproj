@@ -507,4 +507,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\cell_gif.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\grid.png" />
+  </ItemGroup>
 </Project>
