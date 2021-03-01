@@ -1,14 +1,166 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local_enum="clr-namespace:Game.Models"
+             xmlns:local_helpers="clr-namespace:Game.Helpers"
              x:Class="Game.Views.PickItemsPage"
              >
 
-    <ContentPage.Content>
-        <StackLayout Style="{StaticResource VerticalStack}">
-            <Label Text="Pick Items Page..."></Label>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-            <Button Clicked="CloseButton_Clicked" Text="Close"></Button>
+    <NavigationPage.TitleView>
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Assign Item" 
+               Margin="0, 0, 55, 0"
+               />
+
+    </NavigationPage.TitleView>
+
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame Style="{StaticResource ItemSquareMidgroundFrame}">
+
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Frame Grid.Row="0" 
+                           Style="{StaticResource ItemReadCellTitleFrame}"
+                           Padding="5"
+                           >
+
+                        <Label Text="Stone of Remidi" 
+                               Style="{StaticResource ItemNameLabelStyle}"
+                                />
+
+                        
+                    </Frame>
+
+                    <!--Frame for thumbnail-->
+                    <Frame x:Name="ImageFrame" 
+                           Style="{StaticResource LargeCircleFrameStyle}" 
+                           Grid.Row="1"
+                           >
+
+                        <Image Source="bloodstone_white_bg.png" />
+
+                    </Frame>
+
+                </Grid>
+
+            </Frame>
+
+            <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
+                   BackgroundColor="{StaticResource PrimaryItemForeground}"
+                   BorderColor="Transparent">
+
+
+                <Picker Style="{StaticResource CharacterCreatePickerStyle}" 
+                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
+                            SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                            x:Name="CellTypePicker" 
+                            />
+
+            </Frame>
+
+            <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
+                   WidthRequest="350">
+
+                <StackLayout>
+
+                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                           Padding="30, 0">
+
+                        <Label Text="Attribute" 
+                               Style="{StaticResource ItemNameLabelStyle}"/>
+
+                    </Frame>
+
+                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                           WidthRequest="300"
+                           Padding="10, 5"
+                           Margin="0">
+
+                        <Grid HorizontalOptions="FillAndExpand"
+                              Padding="10, 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Orientation="Horizontal" Grid.Column="0">
+                                <Image Source="attack_icon.png" />
+                                <Label Text="9"
+                                       FontSize="Medium"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                <Image Source="range_blue.png" />
+                                <Label Text="9"
+                                       FontSize="Medium"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Column="2">
+                                <Image Source="damage_blue.png"
+                                       Margin="0, 0, 0, 1"/>
+                                <Label Text="9"
+                                       FontSize="Medium"/>
+                            </StackLayout>
+
+
+                        </Grid>
+                            
+                    </Frame>
+
+                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                           Padding="30, 0"
+                           Margin="0">
+
+                        <Label Text="Description" 
+                               Style="{StaticResource ItemNameLabelStyle}"/>
+
+                    </Frame>
+
+                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                           WidthRequest="300"
+                           HeightRequest="90"
+                           Margin="0"
+                           Padding="10">
+
+                        <Label Text="Description goes here...." />
+
+                    </Frame>
+
+                </StackLayout>
+
+            </Frame>
+
+
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         Margin="10">
+                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                        Text="Save"
+                        BorderColor="Transparent"
+                    />
+
+                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                        Text="Cancel"
+                        BorderColor="Transparent"
+                    />
+            </StackLayout>
+
         </StackLayout>
         
     </ContentPage.Content>
