@@ -200,6 +200,13 @@ namespace Game.Views
                 Content = PlayerImage,
             };
 
+            //name of the cell
+            var cellName = new Label
+            {
+                Style = (Style)Application.Current.Resources["LabelBaseStyle"],
+                Text = data.Name,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
+            };
             // If image is clickable show the popup page
             if (ClickAble)
             {
@@ -212,10 +219,12 @@ namespace Game.Views
             {
                 Style = (Style)Application.Current.Resources["PlayerInfoBox"],
                 HorizontalOptions = LayoutOptions.Center,
-                Padding = 0,
-                Spacing = 0,
+                Padding = 10,
+                Spacing = 10,
+                Margin = new Thickness(10, 0, 10, 0),
                 Children = {
                     ImageFrame,
+                    cellName
                 },
             };
 
