@@ -191,6 +191,7 @@
     <Content Include="finger_glove_bg.png" />
     <Content Include="finger_glove_no_bg.png" />
     <Content Include="grid.png" />
+    <Content Include="grid_cell.png" />
     <Content Include="gummy_multivitamin_no_bg.png" />
     <Content Include="gummy_multivitamin_white_bg.png" />
     <Content Include="heart_icon.png" />
