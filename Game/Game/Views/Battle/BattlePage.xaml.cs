@@ -828,6 +828,16 @@ namespace Game.Views
             ShowBattleMode();
             await Navigation.PushModalAsync(new RoundOverPage());
         }
+
+        public async void GameOver_Clicked(object sender, EventArgs args)
+        {
+            GameUIDisplay.IsVisible = false;
+            AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
+
+            // Show the Game Over Display
+            //GameOverDisplay.IsVisible = true;
+            await Navigation.PushModalAsync(new RoundOverPage(true));
+        }
         /// <summary>
         /// Show Settings
         /// </summary>
