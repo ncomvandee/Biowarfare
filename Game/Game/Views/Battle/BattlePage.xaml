@@ -66,16 +66,16 @@
                                 x:Name="BattleInfoAndActions">
                     <StackLayout Orientation="Horizontal">
                         <Frame WidthRequest="250" 
-                               HeightRequest="300" 
+                               HeightRequest="200" 
                                HorizontalOptions="Start"
                                CornerRadius="20"
                                BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                                BorderColor="Transparent"/>
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 25"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
-                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 25"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
+                            <!--<ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
+                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>-->
                             <Button Text="Round Over" Clicked="RoundOver_Clicked"/>
                             <Button Text="Game Over" Clicked="GameOver_Clicked"/>
                         </StackLayout>
