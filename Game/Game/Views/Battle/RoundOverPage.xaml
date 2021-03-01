@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.RoundOverPage">
 
+    
     <ContentPage.Content>
 
         <AbsoluteLayout
@@ -18,7 +19,7 @@
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
-                        <Label Text="Round Cleared" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <Label Text="Round Cleared" x:Name="PageTitle" Style="{StaticResource CenterMessageLargeStyle}"/>
 
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
