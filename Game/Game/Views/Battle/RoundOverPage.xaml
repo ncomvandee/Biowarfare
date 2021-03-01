@@ -45,6 +45,7 @@
                                     Wrap="Wrap"/>
 
                         <Button Text="Continue"
+                                x:Name="BottomButton"
                                 Style="{StaticResource PrimaryButtonStyle}"
                                 Clicked="CloseButton_Clicked"/>
 

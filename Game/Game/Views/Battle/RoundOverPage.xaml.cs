@@ -45,6 +45,7 @@ namespace Game.Views
             TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
 
             DrawCharacterList();
+            BottomButton.Text = "Exit";
         }
 
         /// <summary>
@@ -284,8 +285,16 @@ namespace Game.Views
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		public void CloseButton_Clicked(object sender, EventArgs e)
+		public async void CloseButton_Clicked(object sender, EventArgs e)
 		{
+
+            if (isGameOver)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
+                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+                
+                return;
+            }
             // Reset to a new Round
             BattleEngineViewModel.Instance.Engine.Round.NewRound();
 
