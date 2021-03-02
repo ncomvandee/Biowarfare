@@ -26,7 +26,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
                    Padding="5">
 
                 <Grid RowSpacing="0">
@@ -36,12 +36,12 @@
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ItemReadCellTitleFrame}"
+                           Style="{StaticResource ReadCellTitleFrame}"
                            Padding="5, 0"
                            Margin="0">
 
                         <Label Text="Stone of Remidi" 
-                               Style="{StaticResource ItemNameLabelStyle}"
+                               Style="{StaticResource CellNameLabelStyle}"
                                VerticalOptions="Center" />
 
                         
@@ -62,33 +62,33 @@
 
             </Frame>
 
-            <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
-                   BackgroundColor="{StaticResource PrimaryItemForeground}"
+            <Frame Style="{StaticResource CreatePickerFrameStyle}"
+                   BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                    BorderColor="Transparent"
                    HeightRequest="50">
 
 
-                <Picker Style="{StaticResource CharacterCreatePickerStyle}" 
+                <Picker Style="{StaticResource CreatePickerStyle}" 
                         x:Name="CellPicker" />
             </Frame>
 
-            <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
                    WidthRequest="350"
                    HeightRequest="300"
                    >
 
                 <StackLayout>
 
-                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
                            Padding="30, 0">
 
                         <Label Text="Attribute" 
-                               Style="{StaticResource ItemNameLabelStyle}"
+                               Style="{StaticResource CellNameLabelStyle}"
                                VerticalOptions="Center"/>
 
                     </Frame>
 
-                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
                            WidthRequest="300"
                            Padding="10, 5"
                            Margin="0">
@@ -125,17 +125,17 @@
                             
                     </Frame>
 
-                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
                            Padding="30, 0"
                            Margin="0">
 
                         <Label Text="Description" 
-                               Style="{StaticResource ItemNameLabelStyle}"
+                               Style="{StaticResource CellNameLabelStyle}"
                                VerticalOptions="Center"/>
 
                     </Frame>
 
-                    <Frame Style="{StaticResource ItemReadCellTitleFrame}"
+                    <Frame Style="{StaticResource ReadCellTitleFrame}"
                            WidthRequest="300"
                            HeightRequest="60"
                            Margin="0"
@@ -157,13 +157,13 @@
             <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          Margin="10">
-                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                <Button Style="{StaticResource PrimaryButtonStyle}"
                         Text="Save"
                         BorderColor="Transparent"
                         Clicked="SaveButton_Clicked"
                     />
 
-                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
+                <Button Style="{StaticResource PrimaryButtonStyle}"
                         Text="Cancel"
                         BorderColor="Transparent"
                         Clicked="CancelButton_Clicked"
