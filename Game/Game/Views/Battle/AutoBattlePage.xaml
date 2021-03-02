@@ -14,27 +14,27 @@
 
     <ContentPage.Content>
 
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-            <Frame Style="{StaticResource CharacterSquareMidgroundFrame}">
+        <StackLayout Style="{StaticResource VerticalStack}" 
+                     HorizontalOptions="CenterAndExpand"
+                     >
+            
+            <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
+                
                 <StackLayout Style="{StaticResource CardImageTextBox}">
-                    <Image
-                        x:Name="AutobattleImage"
-                        Source="splashscreen.png"
-                        IsAnimationPlaying="True"
-                        Style="{StaticResource ImageLargeStyle}"></Image>
+
+                    <Image x:Name="AutobattleImage"
+                           Source="splashscreen.png"
+                           IsAnimationPlaying="True"
+                           Style="{StaticResource ImageLargeStyle}"
+                           >
+                    </Image>
                     
 
-                    <Label 
-                    x:Name="BattleMessageValue"
-                    Text=""
-                    LineBreakMode="WordWrap"
-                    MaxLines="10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    Style="{StaticResource ListStyle}"
-                    />
+                    <Label x:Name="BattleMessageValue"
+                           Text=""
+                           Style="{StaticResource BattleMessageStyle}"
+                           />
+                    
                 </StackLayout>
                 
             </Frame>

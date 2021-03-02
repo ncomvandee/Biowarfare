@@ -2046,6 +2046,23 @@
 
             <!--___________________________________________-->
 
+            <!--AutoBattle round label-->
+            <Style TargetType="Label"
+                   x:Key="BattleMessageStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="MaxLines" Value="10"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
