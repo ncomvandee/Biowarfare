@@ -16,7 +16,7 @@
 
         <Label Style="{StaticResource NavLabel}"
                Text="Assign Item" 
-               Margin="0, 0, 55, 0"
+               Margin="0, 0, 50, 0"
                />
 
     </NavigationPage.TitleView>
@@ -26,7 +26,8 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame Style="{StaticResource ItemSquareMidgroundFrame}">
+            <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
+                   Padding="5">
 
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
@@ -36,12 +37,12 @@
 
                     <Frame Grid.Row="0" 
                            Style="{StaticResource ItemReadCellTitleFrame}"
-                           Padding="5"
-                           >
+                           Padding="5, 0"
+                           Margin="0">
 
                         <Label Text="Stone of Remidi" 
                                Style="{StaticResource ItemNameLabelStyle}"
-                                />
+                               VerticalOptions="Center" />
 
                         
                     </Frame>
@@ -50,7 +51,8 @@
                     <Frame x:Name="ImageFrame" 
                            Style="{StaticResource LargeCircleFrameStyle}" 
                            Grid.Row="1"
-                           >
+                           WidthRequest="150"
+                           HeightRequest="150">
 
                         <Image Source="bloodstone_white_bg.png" />
 
@@ -62,7 +64,8 @@
 
             <Frame Style="{StaticResource CharacterCreatePickerFrameStyle}"
                    BackgroundColor="{StaticResource PrimaryItemForeground}"
-                   BorderColor="Transparent">
+                   BorderColor="Transparent"
+                   HeightRequest="50">
 
 
                 <Picker Style="{StaticResource CharacterCreatePickerStyle}" 
@@ -74,7 +77,9 @@
             </Frame>
 
             <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
-                   WidthRequest="350">
+                   WidthRequest="350"
+                   HeightRequest="300"
+                   >
 
                 <StackLayout>
 
@@ -82,7 +87,8 @@
                            Padding="30, 0">
 
                         <Label Text="Attribute" 
-                               Style="{StaticResource ItemNameLabelStyle}"/>
+                               Style="{StaticResource ItemNameLabelStyle}"
+                               VerticalOptions="Center"/>
 
                     </Frame>
 
@@ -128,18 +134,23 @@
                            Margin="0">
 
                         <Label Text="Description" 
-                               Style="{StaticResource ItemNameLabelStyle}"/>
+                               Style="{StaticResource ItemNameLabelStyle}"
+                               VerticalOptions="Center"/>
 
                     </Frame>
 
                     <Frame Style="{StaticResource ItemReadCellTitleFrame}"
                            WidthRequest="300"
-                           HeightRequest="90"
+                           HeightRequest="60"
                            Margin="0"
                            Padding="10">
+                        <ScrollView>
 
-                        <Label Text="Description goes here...." />
+                            <Label Text="Description goes here...." />
 
+                        </ScrollView>
+
+                        
                     </Frame>
 
                 </StackLayout>
