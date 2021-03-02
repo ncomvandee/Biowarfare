@@ -310,5 +310,19 @@ namespace UnitTests.Engine.EngineBase
             // Assert
             Assert.IsTrue(res);
         }
+
+        [Test]
+        public void AutoBattleEngine_DetectInfinateLoop_Should_Return_False()
+        {
+            // Arrange
+
+            // Act
+            var res = AutoBattleEngine.DetectInfinateLoop();
+
+            // Reset
+
+            // Assert
+            Assert.IsFalse(res);
+        }
     }
 }
