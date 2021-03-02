@@ -33,6 +33,8 @@ namespace Game.Views
 
             PickButton.IsVisible = true;
 
+
+            // Onlu button if there is drop item
             if (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count() != 0)
             {
                 AutoAssignButton.IsVisible = true;
@@ -44,6 +46,10 @@ namespace Game.Views
             DrawItemLists();
         }
 
+        /// <summary>
+        /// Constructor for Game Over
+        /// </summary>
+        /// <param name="gameOver"></param>
         public RoundOverPage(bool gameOver)
         {
             InitializeComponent();
@@ -185,6 +191,11 @@ namespace Game.Views
             return ItemStack;
         }
 
+        /// <summary>
+        /// Show Item Pop Up
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         private bool ShowItemPopup(ItemModel data)
         {
             PopupLoadingView.IsVisible = true;
@@ -334,7 +345,7 @@ namespace Game.Views
 			BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
 
             // Show what was picked up
-            //DrawItemLists();
+            DrawItemLists();
         }
 
         /// <summary>
@@ -357,6 +368,13 @@ namespace Game.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new ScorePage()));
         }
+
+        /// <summary>
+        /// Navigate to pickitemPage
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void PickItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new PickItemsPage()));
