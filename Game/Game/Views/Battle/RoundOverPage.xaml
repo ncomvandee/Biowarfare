@@ -70,16 +70,21 @@
                                     JustifyContent="Center"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-
+                        <Button Text="Score"
+                                Style="{StaticResource PrimaryButtonStyle}"
+                                Clicked="ScoreButton_Clicked"
+                                x:Name="ScoreButton"
+                                IsVisible="False"/>
+                        
                         <Button Text="Continue"
                                 x:Name="BottomButton"
                                 Style="{StaticResource PrimaryButtonStyle}"
                                 Clicked="CloseButton_Clicked"/>
 
-                        <Button Text="Score"
+                        <Button Text="Pick Item"
                                 Style="{StaticResource PrimaryButtonStyle}"
-                                Clicked="ScoreButton_Clicked"
-                                x:Name="ScoreButton"
+                                Clicked="PickItem_Clicked"
+                                x:Name="PickButton"
                                 IsVisible="False"/>
 
                     </StackLayout>

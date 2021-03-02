@@ -30,7 +30,7 @@ namespace Game.Views
 
             // Update the Selected Number, this gets updated later when selected refresh happens
             //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
-
+            PickButton.IsVisible = true;
             DrawCharacterList();
 
 
@@ -337,6 +337,9 @@ namespace Game.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new ScorePage()));
         }
-
+        public async void PickItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new PickItemsPage()));
+        }
     }
 }
