@@ -33,7 +33,11 @@ namespace Game.Views
 
             PickButton.IsVisible = true;
 
+            ItemFoundFrame.IsVisible = true;
+            ItemListFoundFrame.IsVisible = true;
 
+            ItemSelectedFrame.IsVisible = true;
+            ItemListSelectedFrame.IsVisible = true;
             // Onlu button if there is drop item
             if (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count() != 0)
             {

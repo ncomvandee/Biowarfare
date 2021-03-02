@@ -80,6 +80,8 @@
                                CornerRadius="20"
                                Padding="10, 5"
                                Margin="0, 10"
+                               IsVisible="False"
+                               x:Name="ItemFoundFrame"
                                >
 
                             <StackLayout Orientation="Horizontal">
@@ -102,7 +104,8 @@
                         <FlexLayout x:Name="ItemListFoundFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
-                                    Wrap="Wrap"/>
+                                    Wrap="Wrap"
+                                    IsVisible="False"/>
                         
                         <Button Text="Auto Assign Items"
                                 Style="{StaticResource PrimaryButtonStyle}"
@@ -119,7 +122,8 @@
                                CornerRadius="20"
                                Padding="10, 5"
                                Margin="0, 10"
-                               >
+                               x:Name="ItemSelectedFrame"
+                               IsVisible="False">
 
                             <StackLayout Orientation="Horizontal">
 
@@ -127,13 +131,13 @@
                                             Text="Item Selected :" 
                                             FontSize="Title"
                                        
-                                    />
+                                 />
 
                                 <Label  Style="{StaticResource CellNameLabelStyle}"
                                             Text="0" 
                                             FontSize="Title"
                                             x:Name="TotalSelected"
-                                    />
+                                 />
                             </StackLayout>
 
                         </Frame>
@@ -142,7 +146,8 @@
                         <FlexLayout x:Name="ItemListSelectedFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
-                                    Wrap="Wrap"/>
+                                    Wrap="Wrap"
+                                    IsVisible="False"/>
 
 
 
