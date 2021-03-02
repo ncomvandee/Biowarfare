@@ -160,6 +160,7 @@
                 <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Save"
                         BorderColor="Transparent"
+                        Clicked="SaveButton_Clicked"
                     />
 
                 <Button Style="{StaticResource ItemPrimaryButtonStyle}"
