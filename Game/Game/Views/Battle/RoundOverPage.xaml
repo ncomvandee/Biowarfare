@@ -98,24 +98,52 @@
                             </StackLayout>
                            
                         </Frame>
+                        <!--ItemFound-->
+                        <FlexLayout x:Name="ItemListFoundFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
                         
-                        <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
+                        <Button Text="Auto Assign Items"
+                                Style="{StaticResource PrimaryButtonStyle}"
+                                WidthRequest="-1"
+                                HeightRequest="-1"
+                                Padding="5"
+                                Clicked="AutoAssignButton_Clicked"
+                                x:Name="AutoAssignButton"
+                                IsVisible="False"/>
 
-                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
-                        <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
-                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                        <Frame HorizontalOptions="Start"
+                               BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                               BorderColor="Transparent"
+                               CornerRadius="20"
+                               Padding="10, 5"
+                               Margin="0, 10"
+                               >
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="Item Selected :" 
+                                            FontSize="Title"
+                                       
+                                    />
+
+                                <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="0" 
+                                            FontSize="Title"
+                                            x:Name="TotalSelected"
+                                    />
+                            </StackLayout>
+
+                        </Frame>
+                        
+                        <!--ItemSelected-->
                         <FlexLayout x:Name="ItemListSelectedFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
 
-                        <Button Clicked="CloseButton_Clicked" Text="Close"/>
-                        <FlexLayout x:Name="ItemListFoundFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
 
 
                         <Button Text="Score"

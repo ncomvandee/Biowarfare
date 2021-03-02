@@ -29,8 +29,15 @@ namespace Game.Views
             TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
 
             // Update the Selected Number, this gets updated later when selected refresh happens
-            //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+
             PickButton.IsVisible = true;
+
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count() != 0)
+            {
+                AutoAssignButton.IsVisible = true;
+            }
+         
             DrawCharacterList();
 
 
