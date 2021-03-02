@@ -166,7 +166,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("t_cell_bg.png", result);
+            Assert.AreEqual("t_cell_no_bg.png", result);
         }
 
         [Test]
@@ -180,7 +180,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("nkcell_bg.png", result);
+            Assert.AreEqual("nkcell_no_bg.png", result);
         }
 
         [Test]
@@ -194,7 +194,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("macrophage_bg.png", result);
+            Assert.AreEqual("macrophage_no_bg.png", result);
         }
 
         [Test]
@@ -208,7 +208,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("eosinophil_bg.png", result);
+            Assert.AreEqual("eosinophil_no_bg.png", result);
         }
 
         [Test]
@@ -222,7 +222,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("basophil_bg.png", result);
+            Assert.AreEqual("basophil_no_bg.png", result);
         }
 
         //[Test]
