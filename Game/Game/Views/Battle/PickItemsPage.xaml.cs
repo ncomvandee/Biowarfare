@@ -24,6 +24,11 @@ namespace Game.Views
 
 
         }
+
+        public async void SaveButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
         /// <summary>
         /// Quit the Battle
         /// 
