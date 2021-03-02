@@ -3,48 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.ScorePage">
 
+    <NavigationPage.TitleView>
+
+        <Label Style="{StaticResource NavLabel}"
+               Text="Game Score"   
+               />
+
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
+        <StackLayout Style="{StaticResource VerticalStack}">
+            
         <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
-            <StackLayout Style="{StaticResource VerticalStack}">
 
-            <Label Text="Score Page" Style="{StaticResource CenterMessageLargeStyle}"/>
+                <Frame Style="{StaticResource LargeOuterScoresFrameStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryMidgroundPurple}" BorderColor="{StaticResource PrimaryMidgroundPurple}">
 
-            <Button Clicked="CloseButton_Clicked" Text="Close"/>
+                    <Frame Style="{StaticResource LargeScoresInnerFrameStyle}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           BackgroundColor="{StaticResource PrimaryForegroundPurple}" BorderColor="{StaticResource PrimaryForegroundPurple}" Padding="10">
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label Text="Score : " Style="{StaticResource MessageStyle}"/>
-                <Label Text="0" x:Name="TotalScore" Style="{StaticResource MessageStyle}"/>
-            </StackLayout>
+                    <StackLayout Style="{StaticResource VerticalStack}">
 
-            <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
-            <FlexLayout x:Name="CharacterListFrame"
+
+
+
+
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label Text="Score : " Style="{StaticResource StatsLabelStyle}"/>
+                            <Label Text="0" x:Name="TotalScore" Style="{StaticResource StatsLabelStyle}" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                            <Label Text="Cells" Style="{StaticResource StatsLabelStyle}"/>
+                        <FlexLayout x:Name="CharacterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
 
-            <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label Text="Killed : " Style="{StaticResource LabelStyle}"/>
-                    <Label Text="0" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-                <FlexLayout x:Name="MonsterListFrame"
+                            <Label Text="Monsters" Style="{StaticResource StatsLabelStyle}"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Killed : " Style="{StaticResource StatsLabelStyle}"/>
+                                <Label Text="0" x:Name="TotalKilled" Style="{StaticResource StatsLabelStyle}" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <FlexLayout x:Name="MonsterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
 
-            <Label Text="Items" Style="{StaticResource MessageStyle}"/>
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label Text="Collected : " Style="{StaticResource LabelStyle}"/>
-                    <Label Text="0" x:Name="TotalCollected" Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-                <FlexLayout x:Name="ItemListFrame"
+                        <Label Text="Items" Style="{StaticResource StatsLabelStyle}"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Collected : " Style="{StaticResource StatsLabelStyle}"/>
+                                <Label Text="0" x:Name="TotalCollected" Style="{StaticResource StatsLabelStyle}" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <FlexLayout x:Name="ItemListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-                
-                <Button Clicked="CloseButton_Clicked" Text="Close"/>
 
-        </StackLayout>
+                            
+
+                        </StackLayout>
+
+                </Frame>
+            </Frame>
+            
         </ScrollView>
+            <Button Clicked="CloseButton_Clicked" Text="Close" Style="{StaticResource PrimaryButtonStyle}"/>
+           </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+  
