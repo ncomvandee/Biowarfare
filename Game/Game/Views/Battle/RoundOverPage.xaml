@@ -247,7 +247,7 @@
                     </Grid>
 
                     <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                            BackgroundColor="{StaticResource PrimaryAccentColor}"
                             Padding="10"
                             x:Name="AttributeFrame"
                             CornerRadius="20"
@@ -256,11 +256,11 @@
 
                         <StackLayout>
                             <Frame Style="{StaticResource PopupTitleFrameStyle}"
-                                   BackgroundColor="{StaticResource PrimaryBackgroundPurple}"
+                                   BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                                    Padding="40, 0">
 
                                 <Label Style="{StaticResource EquipPopupLabelStyle}"
-                                       TextColor="{StaticResource PrimaryForegroundPurple}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
                                        Text="Attribute"
                                        FontSize="Default"
                                         />
