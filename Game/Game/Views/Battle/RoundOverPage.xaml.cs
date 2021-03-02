@@ -46,6 +46,7 @@ namespace Game.Views
 
             DrawCharacterList();
             BottomButton.Text = "Exit";
+            ScoreButton.IsVisible = true;
         }
 
         /// <summary>
@@ -325,6 +326,16 @@ namespace Game.Views
         public async void ShowModalNewRoundPage()
         {
             await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Navigate to score page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void ScoreButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ScorePage()));
         }
 
     }

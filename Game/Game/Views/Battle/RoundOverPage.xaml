@@ -76,6 +76,12 @@
                                 Style="{StaticResource PrimaryButtonStyle}"
                                 Clicked="CloseButton_Clicked"/>
 
+                        <Button Text="Score"
+                                Style="{StaticResource PrimaryButtonStyle}"
+                                Clicked="ScoreButton_Clicked"
+                                x:Name="ScoreButton"
+                                IsVisible="False"/>
+
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
