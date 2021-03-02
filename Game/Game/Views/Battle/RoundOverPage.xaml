@@ -273,7 +273,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Image Source="attack_icon.png" 
-                                       WidthRequest="35" 
+                                       WidthRequest="20" 
                                        Grid.Row="1" 
                                        Grid.Column="0" 
                                        />
@@ -281,11 +281,12 @@
                                 <Label x:Name="Attack"
                                        Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="2" 
-                                       Grid.Column="0" 
+                                       Grid.Column="0"
+                                       FontSize="Medium"
                                        />
 
                                 <Image Source="defense_icon.png" 
-                                       WidthRequest="35" 
+                                       WidthRequest="20" 
                                        Grid.Row="1" 
                                        Grid.Column="1" 
                                        />
@@ -293,11 +294,12 @@
                                 <Label x:Name="Defense"
                                        Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="2" 
-                                       Grid.Column="1" 
+                                       Grid.Column="1"
+                                       FontSize="Medium"
                                        />
 
                                 <Image Source="speed_icon.png" 
-                                       WidthRequest="35" 
+                                       WidthRequest="20" 
                                        Grid.Row="1" 
                                        Grid.Column="2" 
                                        />
@@ -305,11 +307,12 @@
                                 <Label x:Name="Speed"
                                        Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="2" 
-                                       Grid.Column="2" 
+                                       Grid.Column="2"
+                                       FontSize="Medium"
                                        />
 
                                 <Image Source="heart_icon.png" 
-                                       WidthRequest="35" 
+                                       WidthRequest="20" 
                                        Grid.Row="1" 
                                        Grid.Column="3" 
                                        />
@@ -317,11 +320,12 @@
                                 <Label x:Name="Health"
                                        Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="2" 
-                                       Grid.Column="3" 
+                                       Grid.Column="3"
+                                       FontSize="Medium"
                                        />
 
                                 <Image Source="xp_icon.png" 
-                                       WidthRequest="35" 
+                                       WidthRequest="20" 
                                        Grid.Row="1" 
                                        Grid.Column="4" 
                                        />
@@ -329,7 +333,8 @@
                                 <Label x:Name="Experience"
                                        Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="2" 
-                                       Grid.Column="4" 
+                                       Grid.Column="4"
+                                       FontSize="Medium"
                                        />
 
                             </Grid>
