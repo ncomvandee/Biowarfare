@@ -1524,6 +1524,68 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Battle mode frame battle settings page-->
+            <Style TargetType="Frame"
+                   x:Key="BattleModeFrame"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="Padding" Value="5, 0, 5, 5"/>
+                <Setter Property="Margin" Value="0, 0, 300, 10"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Mappings frame style-->
+            <Style TargetType="Frame"
+                   x:Key="MappingsFrameStyle"
+                   BasedOn="{StaticResource AboutDatabaseFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="Margin" Value="0, 0, 115, 10"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Settings Slider frame style-->
+            <Style TargetType="Frame"
+                   x:Key="SettingsSliderFrameStyle"
+                   BasedOn="{StaticResource MappingsFrameStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 60, 10"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+
+            </Style>
+            <!--___________________________________________-->
+            
+            <!--Control Hit Actions frame battle settings page-->
+            <Style TargetType="Frame"
+                   x:Key="ControlHitFrame"
+                   BasedOn="{StaticResource BattleModeFrame}"
+                   >
+                <Setter Property="Padding" Value="5, 5, 5, 0"/>
+                <Setter Property="Margin" Value="0, 0, 250, 10"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Monster hit control frame style-->
+            <Style TargetType="Frame"
+                   x:Key="MonsterHitControlFrameStyle"
+                   BasedOn="{StaticResource MappingsFrameStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 20, 10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
 
 
 
@@ -1925,6 +1987,67 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Mappings label style-->
+            <Style TargetType="Label"
+                   x:Key="MappingsLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="FontAttributes" Value="None"/>
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Monster Hit Control label style-->
+            <Style TargetType="Label"
+                   x:Key="MonsterHitControlLabelStyle"
+                   BasedOn="{StaticResource MappingsLabelStyle}"
+                   >
+
+                <Setter Property="Margin" Value="15, 15, 0, 0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Allow crit hit label style-->
+            <Style TargetType="Label"
+                   x:Key="AllowCritLabelStyle"
+                   BasedOn="{StaticResource MappingsLabelStyle}"
+                   >
+
+                <Setter Property="FontAttributes" Value="None"/>
+                <Setter Property="Margin" Value="10, 10, 0, 0"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Allow crit miss label style-->
+            <Style TargetType="Label"
+                   x:Key="AllowCritMissLabelStyle"
+                   BasedOn="{StaticResource AllowCritLabelStyle}"
+                   >
+
+                <Setter Property="Margin" Value="10, 0, 0, 0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Label for score values on read page-->
+            <Style TargetType="Label"
+                   x:Key="ScoreStatsValueLabelStyle"
+                   BasedOn="{StaticResource ScoreStatsLabelStyle}"
+                   >
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
+
 
 
 
@@ -1989,16 +2112,7 @@
 
             <!--___________________________________________-->
 
-            <!--Label for score values on read page-->
-            <Style TargetType="Label"
-                   x:Key="ScoreStatsValueLabelStyle"
-                   BasedOn="{StaticResource ScoreStatsLabelStyle}"
-                   >
-                <Setter Property="FontAttributes" Value="Bold"/>
-
-            </Style>
-
-            <!--___________________________________________-->
+          
             
             <!--Progress bar on item index page-->
             <Style TargetType="ProgressBar"
@@ -2578,6 +2692,19 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Mappings/Battle Settings Picker Style-->
+            <Style TargetType="Picker"
+                   x:Key="MappingsPickerStyle"
+                   BasedOn="{StaticResource CreatePickerStyle}"
+                   >
+
+                <Setter Property="FontSize" Value="Micro"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 
@@ -2944,6 +3071,46 @@
                 <Setter Property="HeightRequest" Value="300"/>
 
             </Style>
+            <!--___________________________________________-->
+
+
+
+
+
+
+
+
+            <!-- Switch -->
+
+
+
+
+
+
+
+
+
+
+            <!--Allow crit hit switch style-->
+            <Style TargetType="Switch"
+                   x:Key="AllowCritSwitchStyle"
+                   >
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Allow crit hit switch style 2-->
+            <Style TargetType="Switch"
+                   x:Key="AllowCritSwitchMarginStyle"
+                   BasedOn="{StaticResource AllowCritSwitchStyle}"
+                   >
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
         </ResourceDictionary>
     </Application.Resources>

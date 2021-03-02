@@ -16,11 +16,7 @@
                          HorizontalOptions="CenterAndExpand"
                          >
 
-                <Frame Style="{StaticResource ReadCellTitleFrame}"
-                       Padding="5"
-                       Margin="0, 0, 300, 10"
-                       HorizontalOptions="CenterAndExpand"
-                       >
+                <Frame Style="{StaticResource BattleModeFrame}">
 
                 <Label Text ="Battle Mode" 
                        Style="{StaticResource CellNameLabelStyle}"
@@ -39,33 +35,21 @@
                        HorizontalOptions="CenterAndExpand"
                        />
 
-                <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
-                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}" 
-                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       Margin="0, 0, 115, 10"
-                       HorizontalOptions="StartAndExpand"
-                       >
+                <Frame Style="{StaticResource MappingsFrameStyle}">
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
                             <Label Text="Mappings" 
-                                   Style="{DynamicResource  CellNameLabelStyle}"
-                                   Margin="0, 15, 0, 0"
-                                   HorizontalOptions="CenterAndExpand"
-                                   FontAttributes="None"
-                                   />
+                                   Style="{DynamicResource  MappingsLabelStyle}"/>
 
                             <Frame Style="{StaticResource CreatePickerFrameStyle}" 
                                    HorizontalOptions="CenterAndExpand" 
                                    Margin="10, 5, 0, 5"
                                    >
 
-                                <Picker Style="{StaticResource CreatePickerStyle}" 
-                                        HorizontalOptions="CenterAndExpand" 
-                                        VerticalOptions="CenterAndExpand"
-                                        FontSize="Micro"
+                                <Picker Style="{StaticResource MappingsPickerStyle}" 
                                         x:Name="BattleModePicker"
                                         SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                                         SelectedIndexChanged="BattleModePicker_Changed"
@@ -82,11 +66,7 @@
                          HorizontalOptions="StartAndExpand"
                          >
 
-                <Frame Style="{StaticResource ReadCellTitleFrame}"
-                       Padding="5"
-                       Margin="0, 0, 250, 10"
-                       HorizontalOptions="CenterAndExpand"
-                       >
+                <Frame Style="{StaticResource ControlHitFrame}">
 
                     <Label Text ="Control Hit Actions" 
                            Style="{StaticResource CellNameLabelStyle}" 
@@ -95,38 +75,27 @@
                 </Frame>
             </StackLayout>
 
-            <!--Monster hit control label and picker--> 
-            <Frame Style="{StaticResource AboutDatabaseFrameStyle}" 
-                   BackgroundColor="{StaticResource PrimaryMidgroundPurple}" 
-                   BorderColor="{StaticResource PrimaryMidgroundPurple}" 
-                   Margin="0, 0, 20, 10" 
-                   HorizontalOptions="StartAndExpand"
-                   >
+            <!--Monster hit control label and picker-->
+            <Frame Style="{StaticResource MonsterHitControlFrameStyle}">
                 
                     <StackLayout Style="{StaticResource VerticalStack}">
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
 
                         <Label Text="Monster Hit Control" 
-                               Style="{DynamicResource  CellNameLabelStyle}"
-                               Margin="15, 15, 0, 0"
-                               HorizontalOptions="CenterAndExpand"
-                               FontAttributes="None"/>
+                               Style="{DynamicResource  MonsterHitControlLabelStyle}"
+                               />
 
 
-                            <Frame Style="{StaticResource CreatePickerFrameStyle}" 
-                                   Grid.Row="0"  
+                            <Frame Style="{StaticResource CreatePickerFrameStyle}"                                 
                                    Margin="18, 10, 0, 0"
                                    >
 
-                                <Picker Style="{StaticResource CreatePickerStyle}" 
-                                        HorizontalOptions="Center" 
-                                        VerticalOptions="Center"
-                                        FontSize="Micro"
-                                        x:Name="MonsterHitPicker"
-                                        SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
-                                        SelectedIndexChanged="MonsterHitPicker_Changed"
-                                        />
+                            <Picker Style="{StaticResource MappingsPickerStyle}" 
+                                    x:Name="MonsterHitPicker"
+                                    SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
+                                    SelectedIndexChanged="MonsterHitPicker_Changed"
+                                    />
 
                             </Frame>
                         </StackLayout>
@@ -135,20 +104,14 @@
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
                             <Label Text="Character Hit Control" 
-                                   Style="{DynamicResource  CellNameLabelStyle}"
-                                   Margin="15, 15, 0, 0"
-                                   FontAttributes="None"
+                                   Style="{DynamicResource  MonsterHitControlLabelStyle}"
                                    />
 
                             <Frame Style="{StaticResource CreatePickerFrameStyle}" 
-                                   Grid.Row="1"
                                    Margin="10, 10, 0, 0"
                                    >
 
-                                <Picker Style="{StaticResource CreatePickerStyle}" 
-                                        HorizontalOptions="Center" 
-                                        VerticalOptions="Center"
-                                        FontSize="Micro"
+                            <Picker Style="{StaticResource MappingsPickerStyle}" 
                                         x:Name="CharacterHitPicker"
                                         SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                                         SelectedIndexChanged="CharacterHitPicker_Changed"
@@ -159,29 +122,19 @@
                     </StackLayout>
                 </Frame>
 
-                <!--Frame and labels for slider selections--> 
-                <Frame Style="{StaticResource AboutDatabaseFrameStyle}"
-                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}" 
-                       BorderColor="{StaticResource PrimaryMidgroundPurple}"
-                       Margin="0, 0, 60, 10"
-                       HorizontalOptions="Start"
-                       >
+                <!--Frame and labels for slider selections-->
+            <Frame Style="{StaticResource SettingsSliderFrameStyle}">
                     
                     <StackLayout Style="{StaticResource VerticalStack}">
                         <StackLayout Style="{StaticResource HorizontalStack}">
 
                             <Label Text="Allow Critical Hit" 
-                                    Style="{DynamicResource  CellNameLabelStyle}"
-                                    Margin="10, 10, 0, 0"
-                                    VerticalOptions="Center"
-                                    FontAttributes="None"
-                                    />
+                                   Style="{DynamicResource  AllowCritLabelStyle}"
+                                   />
 
-                            <Switch HorizontalOptions="Start" 
-                                    VerticalOptions="Center"
+                        <Switch Style="{StaticResource AllowCritSwitchMarginStyle}"
                                     x:Name="AllowCriticalHitSwitch"
                                     Toggled="AllowCriticalHit_Toggled"
-                                    Margin="0, 10, 0, 0"
                                     />
                             
                         </StackLayout>
@@ -189,14 +142,10 @@
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             
                             <Label Text="Allow Critical Miss" 
-                                   Style="{DynamicResource  CellNameLabelStyle}"
-                                   Margin="10, 0, 0, 0"
-                                   VerticalOptions="Center"
-                                   FontAttributes="None"
+                                   Style="{DynamicResource  AllowCritMissLabelStyle}"
                                    />
 
-                            <Switch HorizontalOptions="Start" 
-                                    VerticalOptions="Center"
+                            <Switch Style="{StaticResource AllowCritSwitchStyle}"
                                     x:Name="AllowCriticalMissSwitch"
                                     Toggled="AllowCriticalMiss_Toggled"
                                     />
@@ -206,14 +155,10 @@
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             
                             <Label Text="Allow Monster Items" 
-                                   Style="{DynamicResource  CellNameLabelStyle}"
-                                   VerticalOptions="Center"
-                                   Margin="10, 0, 0, 0"
-                                   FontAttributes="None"
+                                   Style="{DynamicResource  AllowCritMissLabelStyle}"
                                    />
 
-                            <Switch HorizontalOptions="Start" 
-                                    VerticalOptions="Center"
+                            <Switch Style="{StaticResource AllowCritSwitchStyle}"
                                     x:Name="AllowMonsterItemsSwitch"
                                     Toggled="AllowMonsterItems_Toggled"
                                     />
