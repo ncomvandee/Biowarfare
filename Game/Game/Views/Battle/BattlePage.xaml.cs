@@ -825,12 +825,23 @@ namespace Game.Views
             ShowBattleMode();
             await Navigation.PushModalAsync(new RoundOverPage());
         }
+
+        /// <summary>
+        /// Round over button event on click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public async void RoundOver_Clicked(object sender, EventArgs args)
         {
             ShowBattleMode();
             await Navigation.PushModalAsync(new RoundOverPage());
         }
 
+        /// <summary>
+        /// Game over button event on click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public async void GameOver_Clicked(object sender, EventArgs args)
         {
             GameUIDisplay.IsVisible = false;
@@ -850,6 +861,9 @@ namespace Game.Views
         }
         #endregion PageHandelers
 
+        /// <summary>
+        /// Show the battle mode for different page contexts 
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
