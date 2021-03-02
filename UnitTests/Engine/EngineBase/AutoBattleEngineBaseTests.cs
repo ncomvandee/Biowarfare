@@ -295,5 +295,20 @@ namespace UnitTests.Engine.EngineBase
             Assert.AreEqual(false, result);
         }
         #endregion DetectInfinateLoop
+
+
+        [Test]
+        public void AutoBattleEngine_CreateCharacterParty_Should_Return_True()
+        {
+            // Arrange
+
+            // Act
+            var res = AutoBattleEngine.CreateCharacterParty();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(res);
+        }
     }
 }
