@@ -69,6 +69,7 @@
 
             <!--POPUP FRAME-->
             <Frame Style="{StaticResource ReadPagePopupStyle}"
+                   BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                    x:Name="CharacterPopUpFrame"
                    IsVisible="False"
                    >
@@ -79,9 +80,10 @@
                                  Source="icon_cancel.png"
                                  Clicked="ClosePopup_Clicked"/>
 
-                    <Frame Style="{StaticResource PopupTitleFrameStyle}">
+                    <Frame Style="{StaticResource PopupTitleFrameStyle}" BackgroundColor="{StaticResource PrimaryForegroundPurple}">
 
                         <Label Style="{StaticResource EquipPopupLabelStyle}"
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"
                                Text="Name goes here, I guess"
                                x:Name="CharacterPopUpName"
                                />
@@ -107,6 +109,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"
                                Text="Cell Type: "
                                Grid.Row="0"
                                Grid.Column="0"
@@ -114,6 +117,7 @@
 
                         <Label Style="{StaticResource PopupAttributeLabelStyle}"
                                x:Name="CharacterPopupCellType"
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"
                                FontAttributes="Bold"
                                Grid.Row="0"
                                Grid.Column="1"
@@ -121,6 +125,7 @@
 
                         <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
                                Text="Level: "
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"
                                Grid.Row="1"
                                Grid.Column="0"
                                />
@@ -128,6 +133,7 @@
                         <Label Style="{StaticResource PopupAttributeLabelStyle}"
                                x:Name="CharacterPopupLevel"
                                FontAttributes="bold"
+                               TextColor="{StaticResource PrimaryBackgroundPurple}"
                                Grid.Row="1"
                                Grid.Column="1" 
                                />
@@ -135,7 +141,7 @@
                     </Grid>
 
                     <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            BackgroundColor="AliceBlue"
+                            BackgroundColor="{StaticResource PrimaryAccentColor}"
                             Padding="10"
                             x:Name="AttributeFrame"
                             CornerRadius="20"
@@ -144,9 +150,11 @@
 
                         <StackLayout>
                             <Frame Style="{StaticResource PopupTitleFrameStyle}"
+                                   BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                                    Padding="40, 0">
 
                                 <Label Style="{StaticResource EquipPopupLabelStyle}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
                                        Text="Attribute"
                                        FontSize="Default"
                                         />
