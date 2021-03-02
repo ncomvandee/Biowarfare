@@ -166,6 +166,7 @@
                 <Button Style="{StaticResource ItemPrimaryButtonStyle}"
                         Text="Cancel"
                         BorderColor="Transparent"
+                        Clicked="CancelButton_Clicked"
                     />
             </StackLayout>
 

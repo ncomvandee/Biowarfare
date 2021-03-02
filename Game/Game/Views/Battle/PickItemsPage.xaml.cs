@@ -25,18 +25,21 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Save progress and return to RoundOverPage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void SaveButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
         /// <summary>
-        /// Quit the Battle
-        /// 
-        /// Quitting out
+        /// Cancel the progress and return to RoundOverPage
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public async void CloseButton_Clicked(object sender, EventArgs e)
+        public async void CancelButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
