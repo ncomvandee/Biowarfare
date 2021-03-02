@@ -33,24 +33,25 @@
                                    >  
                                 <StackLayout Orientation="Horizontal">
 
-                                <Label Style="{StaticResource CellNameLabelStyle}"
-                           Text="Round :" 
-                           FontSize="Title"
+                                    <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="Round :" 
+                                            FontSize="Title"
                                        
-                           />
+                                    />
 
-                                    <Label Style="{StaticResource CellNameLabelStyle}"
-                           Text="0" 
-                           FontSize="Title"
-                           x:Name="TotalRound"
-                           />
+                                    <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="0" 
+                                            FontSize="Title"
+                                            x:Name="TotalRound"
+                                    />
                                 </StackLayout>
 
                             </Frame>
 
 
                         </StackLayout>
-
+                        
+                        <!--Display Character-->
                         <Frame HorizontalOptions="Start"
                                BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                                BorderColor="Transparent"
@@ -59,9 +60,9 @@
                                Margin="0, 10"
                                >
 
-                            <Label Style="{StaticResource CellNameLabelStyle}"
-                           Text="Cells" 
-                           FontSize="Title"
+                            <Label  Style="{StaticResource CellNameLabelStyle}"
+                                    Text="Cells" 
+                                    FontSize="Title"
                            />
 
                         </Frame>
@@ -70,6 +71,53 @@
                                     JustifyContent="Center"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
+                        
+                        
+                        <!--Display item-->
+                        <Frame HorizontalOptions="Start"
+                               BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                               BorderColor="Transparent"
+                               CornerRadius="20"
+                               Padding="10, 5"
+                               Margin="0, 10"
+                               >
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="Item Found :" 
+                                            FontSize="Title"
+                                       
+                                    />
+
+                                <Label  Style="{StaticResource CellNameLabelStyle}"
+                                            Text="0" 
+                                            FontSize="Title"
+                                            x:Name="TotalFound"
+                                    />
+                            </StackLayout>
+                           
+                        </Frame>
+                        
+                        <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
+
+                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
+                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+                        <FlexLayout x:Name="ItemListSelectedFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
+
+                        <Button Clicked="CloseButton_Clicked" Text="Close"/>
+                        <FlexLayout x:Name="ItemListFoundFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
+
+
                         <Button Text="Score"
                                 Style="{StaticResource PrimaryButtonStyle}"
                                 Clicked="ScoreButton_Clicked"
@@ -92,7 +140,7 @@
             </StackLayout>
 
 
-            <!--POPUP FRAME-->
+            <!--POPUP Character FRAME-->
             <Frame Style="{StaticResource ReadPagePopupStyle}"
                    x:Name="CharacterPopUpFrame"
                    IsVisible="False"
@@ -263,7 +311,48 @@
 
                 </StackLayout>
             </Frame>
+            
+            <!--Popup item Frame-->
+            <StackLayout 
+                    x:Name="PopupLoadingView" 
+                    BackgroundColor="{StaticResource PageBackgroundColor}" 
+                    IsVisible="false" 
+                    AbsoluteLayout.LayoutBounds=".5, .5,.5,.5" 
+                    AbsoluteLayout.LayoutFlags="All">
 
+                <StackLayout 
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                        HeightRequest="300"
+                        >
+
+                    <Frame 
+                             BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
+
+                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
+                            <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
+
+                            <Label x:Name="PopupItemName" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
+                            <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Location : " Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="PopupItemLocation" Style="{StaticResource ValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label x:Name="PopupItemAttribute" Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="PopupItemValue" Style="{StaticResource ValueStyle}" />
+                            </StackLayout>
+
+                            <Button x:Name="PopupCloseButton" 
+                                Clicked="ClosePopup_Clicked" 
+                                Text="Close"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

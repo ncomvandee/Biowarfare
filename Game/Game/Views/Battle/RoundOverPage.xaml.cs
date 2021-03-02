@@ -25,8 +25,8 @@ namespace Game.Views
             TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
 
             PageTitle.Text = "Round " + BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString() + " Cleared";
-            // Update the Found Number
-            //TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
+            //Update the Found Number
+            TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
 
             // Update the Selected Number, this gets updated later when selected refresh happens
             //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
@@ -34,7 +34,7 @@ namespace Game.Views
             DrawCharacterList();
 
 
-           // DrawItemLists();
+            DrawItemLists();
         }
 
         public RoundOverPage(bool gameOver)
@@ -76,16 +76,16 @@ namespace Game.Views
         /// The Ones Selected
         /// 
         /// </summary>
-/*        public void DrawItemLists()
+        public void DrawItemLists()
         {
             DrawDroppedItems();
             DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
             TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
-        }*/
+        }
 
- /*       /// <summary>
+        /// <summary>
         /// Add the Dropped Items to the Display
         /// </summary>
         public void DrawDroppedItems()
@@ -101,12 +101,12 @@ namespace Game.Views
             {
                 ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
             }
-        }*/
+        }
 
         /// <summary>
         /// Add the Dropped Items to the Display
         /// </summary>
-/*        public void DrawSelectedItems()
+        public void DrawSelectedItems()
         {
             // Clear and Populate the Dropped Items
             var FlexList = ItemListSelectedFrame.Children.ToList();
@@ -119,14 +119,14 @@ namespace Game.Views
             {
                 ItemListSelectedFrame.Children.Add(GetItemToDisplay(data));
             }
-        }*/
+        }
 
         /// <summary>
         /// Look up the Item to Display
         /// </summary>
         /// <param name="location"></param>
         /// <returns></returns>
-       /* public StackLayout GetItemToDisplay(ItemModel item)
+        public StackLayout GetItemToDisplay(ItemModel item)
         {
             if (item == null)
             {
@@ -145,7 +145,7 @@ namespace Game.Views
             if (data == null)
             {
                 // Show the Default Icon for the Location
-                data = new ItemModel { Name="Unknown", ImageURI = "icon_cancel.png" };
+                data = new ItemModel { Name = "Unknown", ImageURI = "icon_cancel.png" };
 
                 // Turn off click action
                 ClickableButton = false;
@@ -161,7 +161,7 @@ namespace Game.Views
             if (ClickableButton)
             {
                 // Add a event to the user can click the item and see more
-                ItemButton.Clicked += (sender, args) => ShowPopup(data);
+                ItemButton.Clicked += (sender, args) => ShowItemPopup(data);
             }
 
             // Put the Image Button and Text inside a layout
@@ -171,12 +171,25 @@ namespace Game.Views
                 Style = (Style)Application.Current.Resources["ItemImageBox"],
                 HorizontalOptions = LayoutOptions.Center,
                 Children = {
-                    ItemButton,
-                },
+                     ItemButton,
+                 },
             };
 
             return ItemStack;
-        }*/
+        }
+
+        private bool ShowItemPopup(ItemModel data)
+        {
+            PopupLoadingView.IsVisible = true;
+            PopupItemImage.Source = data.ImageURI;
+
+            PopupItemName.Text = data.Name;
+            PopupItemDescription.Text = data.Description;
+            PopupItemLocation.Text = data.Location.ToMessage();
+            PopupItemAttribute.Text = data.Attribute.ToMessage();
+            PopupItemValue.Text = " + " + data.Value.ToString();
+            return true;
+        }
 
         /// <summary>
         /// Return a stack layout with the Player information inside
@@ -225,7 +238,7 @@ namespace Game.Views
             // If image is clickable show the popup page
             if (ClickAble)
             {
-                PlayerImage.Clicked += (sender, args) => ShowPopup(data);
+                PlayerImage.Clicked += (sender, args) => ShowCharacterPopup(data);
             }
 
 
@@ -251,7 +264,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public bool ShowPopup(PlayerInfoModel data)
+        public bool ShowCharacterPopup(PlayerInfoModel data)
         {
             CharacterPopUpFrame.IsVisible = true;
             CharacterPopupCellType.Text = data.Job.ToString();
