@@ -323,7 +323,8 @@ namespace Game.Views
             if (isGameOver)
             {
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
-                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+                await Navigation.PushModalAsync(new MainPage());
+
                 
                 return;
             }
