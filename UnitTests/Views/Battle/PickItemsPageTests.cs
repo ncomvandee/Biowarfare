@@ -56,7 +56,7 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
-        [Test]
+/*        [Test]
         public void PickItemsPage_CloseButton_Clicked_Default_Should_Pass()
         {
             // Arrange
@@ -67,6 +67,6 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        }*/
     }
 }
