@@ -22,16 +22,16 @@
                 <!--<Button Clicked="BeginButton_Clicked" Text="Begin"/>-->
 
                 <Frame HorizontalOptions="Start"
-                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                        BorderColor="Transparent"
                        CornerRadius="20"
                        Padding="10, 5"
                        Margin="0, 10">
 
-                    <Label Text="Characters" 
+                    <Label Style="{StaticResource CellNameLabelStyle}"
+                           Text="Cells" 
                            FontSize="Title"
-                           FontAttributes="Bold"
-                           TextColor="White"/>
+                           />
 
                 </Frame>
 
@@ -43,16 +43,16 @@
                             Wrap="Wrap"/>
 
                     <Frame HorizontalOptions="Start"
-                       BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                       BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                        BorderColor="Transparent"
                        CornerRadius="20"
                        Padding="15, 5"
                        Margin="0, 10">
 
-                        <Label Text="Monster" 
-                           FontSize="Title"
-                           FontAttributes="Bold"
-                           TextColor="White"/>
+                        <Label Style="{StaticResource CellNameLabelStyle}"
+                               Text="Monsters" 
+                               FontSize="Title"
+                               />
 
                     </Frame>
 
