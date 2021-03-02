@@ -8,12 +8,13 @@
         <!--Menu Bar-->
         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
             <Frame Padding="10,0,0,0"/>
-            <Label Text="BioWarfare" Style="{StaticResource CenterMessageLargeStyle}"/>
+            <Label Text="BioWarfare" Style="{StaticResource NavLabel}" HorizontalOptions="Start"/>
             <Frame Padding="10,0,0,0"/>
-            <ImageButton Source="icon_edit.png" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
-            <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            <Label x:Name="BattleModeValue" Text="" Style="{StaticResource ValueStyleMicro}" HorizontalTextAlignment="End" Margin="30, 0, 60, 0" TextColor="{StaticResource PrimaryBackgroundPurple}"/>
+            <ImageButton Source="icon_edit.png" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}" HorizontalOptions="End"/>
+            <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}" HorizontalOptions="End"/>
             <Frame Padding="10,0,0,0"/>
-            <Label x:Name="BattleModeValue" Text="" Style="{StaticResource ValueStyleMicro}" HorizontalTextAlignment="Center"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
