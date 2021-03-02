@@ -69,11 +69,7 @@
 
 
                 <Picker Style="{StaticResource CharacterCreatePickerStyle}" 
-                            ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetCharacterJobList}"
-                            SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                            x:Name="CellTypePicker" 
-                            />
-
+                        x:Name="CellPicker" />
             </Frame>
 
             <Frame Style="{StaticResource ItemSquareMidgroundFrame}"
