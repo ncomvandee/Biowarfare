@@ -332,7 +332,8 @@ namespace Game.Views
                 Style = (Style)Application.Current.Resources["BattleMapFrame"],
                 BackgroundColor = Color.FromHex("5A0746"),
                 BorderColor = Color.FromHex("6D1F27"),
-                Content = PlayerImageButton,
+                //                Content = PlayerImageButton,
+                Content = PlayerStack,
                 AutomationId = GetDictionaryFrameName(mapLocationModel)
             };
 
