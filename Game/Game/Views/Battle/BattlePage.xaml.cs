@@ -944,10 +944,10 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    BattlePlayerInfomationBox.IsVisible = false;
+                    BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = false;
-                    BattleInfoAndActions.IsVisible = true;
+                    AttackButton.IsVisible = true;
+                    BattleInfoAndActions.IsVisible = false;
                     break;
 
                 // Based on the State disable buttons
