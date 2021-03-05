@@ -22,6 +22,14 @@ namespace Game.Models
         [Ignore]
         public bool Alive { get; set; } = true;
 
+        // Poison status
+        [Ignore]
+        public bool Poison { get; set; } = false;
+
+        // Poison count 
+        [Ignore]
+        public int PoisonCount { get; set; } = 0;
+
         // The type of player, character comes before monster
         [Ignore]
         public PlayerTypeEnum PlayerType { get; set; } = PlayerTypeEnum.Unknown;
@@ -573,6 +581,46 @@ namespace Game.Models
         }
 
         /// <summary>
+        /// Take Check Poison
+        /// Check if A character is poisoned by a monster
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckPoison()
+        {
+
+            if (Poison == false)
+            {
+                return false;
+            }
+
+            // Poison is true so take turn damage 
+            TakePoisonDamage();
+            // Add to poison count 
+            PoisonCount++;
+            // If poison count is = 5, set poison back to false and reset count
+            if(PoisonCount == 5)
+            {
+                Poison = false;
+                PoisonCount = 0; 
+            }
+
+            return true; 
+            
+        }
+
+        /// <summary>
+        /// Take Poison Damage
+        /// If A character is poisoned by a monster, they take poison damage of 1hp per turn for 5 turns 
+        /// </summary>
+        /// <returns></returns>
+        public bool TakePoisonDamage()
+        {
+            int damage = 1; 
+            TakeDamage(damage);
+            return true;
+        }
+
+        /// <summary>
         /// Roll the Damage Dice, and add to the Damage
         /// </summary>
         /// <returns></returns>
@@ -600,6 +648,15 @@ namespace Game.Models
             Alive = false;
             return Alive;
         }
+
+        // Poison
+        // Poison turns to true 
+        public bool CausePoison()
+        {
+            Poison = true;
+            return Poison;
+        }
+
 
         #endregion BattleMethods
 
