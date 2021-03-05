@@ -50,6 +50,7 @@ namespace UnitTests.Models
             Assert.AreEqual(Game.Services.ItemService.DefaultImageURI, result.ImageURI);
             Assert.AreEqual(PlayerTypeEnum.Unknown, result.PlayerType);
             Assert.AreEqual(true, result.Alive);
+            Assert.AreEqual(false, result.Poison);
             Assert.AreEqual(0, result.Order);
             Assert.AreEqual(result.Id, result.Guid);
             Assert.AreEqual(0, result.ListOrder);
@@ -84,6 +85,7 @@ namespace UnitTests.Models
             result.ImageURI = "uri";
             result.PlayerType = PlayerTypeEnum.Monster;
             result.Alive = false;
+            result.Poison = false;
             result.Order = 100;
             result.Guid = "guid";
             result.ListOrder = 200;
@@ -111,6 +113,7 @@ namespace UnitTests.Models
             Assert.AreEqual("uri", result.ImageURI);
             Assert.AreEqual(PlayerTypeEnum.Monster, result.PlayerType);
             Assert.AreEqual(false, result.Alive);
+            Assert.AreEqual(false, result.Poison);
             Assert.AreEqual(100, result.Order);
             Assert.AreEqual("guid", result.Guid);
             Assert.AreEqual(200, result.ListOrder);
