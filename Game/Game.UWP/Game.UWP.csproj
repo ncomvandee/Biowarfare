@@ -182,6 +182,7 @@
     <Content Include="enter_items.png" />
     <Content Include="enter_main.png" />
     <Content Include="enter_monster.png" />
+    <Content Include="enter_page_bg_holes.png" />
     <Content Include="enter_pg_bg_web_v_one.png" />
     <Content Include="enter_pg_vertical_background.png" />
     <Content Include="enter_scores.png" />
