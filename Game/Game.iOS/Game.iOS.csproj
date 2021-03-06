@@ -513,4 +513,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\grid_cell.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\enter_page_bg_holes.png" />
+  </ItemGroup>
 </Project>
