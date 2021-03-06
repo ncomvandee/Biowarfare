@@ -49,7 +49,7 @@
             
             <Image AbsoluteLayout.LayoutFlags="All" 
                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                   Source="enter_pg_bg_web_v_one.png" 
+                   Source="enter_page_bg_holes.png" 
                    Aspect="AspectFill"
                    />
             
