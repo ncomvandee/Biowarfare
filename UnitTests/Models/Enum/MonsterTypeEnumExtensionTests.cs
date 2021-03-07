@@ -102,7 +102,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("bacteria_bg.png", result);
+            Assert.AreEqual("bacteria_no_bg.png", result);
         }
 
         [Test]
@@ -116,7 +116,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("parasite_bg.png", result);
+            Assert.AreEqual("parasite_no_bg.png", result);
         }
 
         [Test]
@@ -130,7 +130,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("virus_bg.png", result);
+            Assert.AreEqual("virus_no_bg.png", result);
         }
 
         [Test]
@@ -144,7 +144,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("cancer_bg.png", result);
+            Assert.AreEqual("cancer_no_bg.png", result);
         }
 
     }
