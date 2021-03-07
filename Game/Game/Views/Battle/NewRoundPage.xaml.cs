@@ -115,17 +115,7 @@ namespace Game.Views
         public void ShowPopup (PlayerInfoModel data)
         {
             CharacterPopUpFrame.IsVisible = true;
-
-            if (data.PlayerType == PlayerTypeEnum.Character)
-            {
-                CharacterPopupCellType.Text = data.Job.ToString();
-            }
-
-            if (data.PlayerType == PlayerTypeEnum.Monster)
-            {
-                CharacterPopupCellType.Text = data.MonsterType.ToString();
-            }
-            
+            CharacterPopupCellType.Text = data.Job.ToString();
             CharacterPopUpImage.Source = data.ImageURI;
             CharacterPopUpName.Text = data.Name;
             CharacterPopupLevel.Text = data.Level.ToString();
