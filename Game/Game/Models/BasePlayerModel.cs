@@ -142,6 +142,9 @@ namespace Game.Models
         // The Job for the Player
         public CellTypeEnum Job { get; set; } = CellTypeEnum.BCell;
 
+        // Monster type for monster
+        public MonsterTypeEnum MonsterType { get; set; } = MonsterTypeEnum.Bacteria;
+
         #endregion PlayerAttributes
 
         #endregion Attributes
