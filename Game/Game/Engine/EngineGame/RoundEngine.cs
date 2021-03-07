@@ -3,6 +3,9 @@ using Game.Engine.EngineBase;
 using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
 using Game.Models;
+using Game.ViewModels;
+using System;
+using System.Linq;
 
 namespace Game.Engine.EngineGame
 {
@@ -92,10 +95,54 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override int AddMonstersToRound()
         {
-            return base.AddMonstersToRound();
-            // TODO: Teams, You need to implement your own Logic can not use mine.
+            // Random object
+            Random rand = new Random();
 
-            // throw new System.NotImplementedException();
+            // List of monster except Boss cancer
+            var MonsterList = MonsterIndexViewModel.Instance.GetMonstersListExceptBoss();
+
+            // Number of monster in MonsterList
+            int count = MonsterList.Count();
+
+            // Average Cell level use for calculating monster level
+            int AverageCellLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
+
+            // Boss cancer will appear every 5 rounds
+            if (EngineSettings.BattleScore.RoundCount > 0 && EngineSettings.BattleScore.RoundCount % 5 == 0)
+            {
+                // Data for cancer
+                var boss = MonsterIndexViewModel.Instance.GetSpecificMonster(MonsterTypeEnum.Cancer);
+
+                EngineSettings.MonsterList.Add(new PlayerInfoModel(boss));
+            }
+
+            // Keep adding monster until full
+            while (EngineSettings.MaxNumberPartyMonsters > EngineSettings.MonsterList.Count)
+            {
+                // Index for selecting monster in to list
+                int index = rand.Next(0, count);
+
+                // Data for particular monster
+                var data = MonsterList[index];
+
+                // Set the level for monster bases on average level of Character party
+                int LevelForMonster = rand.Next(AverageCellLevel - 3, AverageCellLevel + 3);
+
+                // If level formonster is lesser than 0 or more than 20, set the level to Cell average level
+                if (LevelForMonster <= 0 || LevelForMonster >= 20)
+                {
+                    LevelForMonster = AverageCellLevel;
+                }
+
+                // Set level to monster
+                data.Level = LevelForMonster;
+
+                // Add to list
+                EngineSettings.MonsterList.Add(new PlayerInfoModel(data));
+
+            }
+
+            return EngineSettings.MonsterList.Count;
         }
 
         /// <summary>
