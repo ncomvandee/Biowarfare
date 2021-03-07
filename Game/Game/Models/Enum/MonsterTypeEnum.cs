@@ -81,23 +81,23 @@ namespace Game.Models
             switch (value)
             {
                 case MonsterTypeEnum.Spore:
-                    image = "spore_bg.png";
+                    image = "spore_no_bg.png";
                     break;
 
                 case MonsterTypeEnum.Bacteria:
-                    image = "bacteria_bg.png";
+                    image = "bacteria_no_bg.png";
                     break;
 
                 case MonsterTypeEnum.Parasite:
-                    image = "parasite_bg.png";
+                    image = "parasite_no_bg.png";
                     break;
 
                 case MonsterTypeEnum.Virus:
-                    image = "virus_bg.png";
+                    image = "virus_no_bg.png";
                     break;
 
                 case MonsterTypeEnum.Cancer:
-                    image = "cancer_bg.png";
+                    image = "cancer_no_bg.png";
                     break;
             }
 
