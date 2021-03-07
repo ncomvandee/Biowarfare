@@ -3,6 +3,9 @@ using Game.Engine.EngineBase;
 using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
 using Game.Models;
+using Game.ViewModels;
+using System;
+using System.Linq;
 
 namespace Game.Engine.EngineGame
 {
@@ -92,10 +95,44 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override int AddMonstersToRound()
         {
-            return base.AddMonstersToRound();
             // TODO: Teams, You need to implement your own Logic can not use mine.
 
-            // throw new System.NotImplementedException();
+            Random rand = new Random();
+
+            var MonsterList = MonsterIndexViewModel.Instance.GetMonstersListExceptBoss();
+
+            int count = MonsterList.Count();
+
+            int AverageCellLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
+
+            if (EngineSettings.BattleScore.RoundCount % 5 == 0)
+            {
+                var boss = MonsterIndexViewModel.Instance.GetSpecificMonster(MonsterTypeEnum.Cancer);
+
+                EngineSettings.MonsterList.Add(new PlayerInfoModel(boss));
+            }
+
+            while (EngineSettings.MaxNumberPartyMonsters > EngineSettings.MonsterList.Count)
+            {
+                int index = rand.Next(0, count);
+
+                var data = MonsterList[index];
+
+                int LevelForMonster = rand.Next(AverageCellLevel - 3, AverageCellLevel + 3);
+
+                if (LevelForMonster <= 0 || LevelForMonster >= 20)
+                {
+                    LevelForMonster = AverageCellLevel;
+                }
+
+                data.Level = LevelForMonster;
+
+
+                EngineSettings.MonsterList.Add(new PlayerInfoModel(data));
+
+            }
+
+            return EngineSettings.MonsterList.Count;
         }
 
         /// <summary>

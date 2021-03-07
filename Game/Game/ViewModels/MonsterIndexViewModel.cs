@@ -163,6 +163,34 @@ namespace Game.ViewModels
         #endregion SortDataSet
 
         /// <summary>
+        /// Return monster list without Cancer
+        /// </summary>
+        /// <returns></returns>
+        public List<MonsterModel> GetMonstersListExceptBoss()
+        {
+            // List of monsters without cancer
+            var ResultList = Dataset.Where(a => a.MonsterType.Equals(MonsterTypeEnum.Cancer) == false).ToList();
+
+            return ResultList;
+        }
+
+        /// <summary>
+        /// Get specific Monster
+        /// </summary>
+        /// <returns></returns>
+        public MonsterModel GetSpecificMonster(MonsterTypeEnum MonsterType)
+        {
+            // Specific monster in dataset
+            MonsterModel result = Dataset.Where(a => a.MonsterType.Equals(MonsterType)).FirstOrDefault();
+
+            if (result == null)
+            {
+                return null;
+            }
+            return result;
+        }
+
+        /// <summary>
         /// Takes an Monster string ID and looks it up and returns the Monster
         /// </summary>
         /// <param name="id"></param>
