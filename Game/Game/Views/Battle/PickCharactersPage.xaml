@@ -18,384 +18,242 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <ScrollView VerticalScrollBarVisibility="Always" Margin="0">
+
+        <ScrollView VerticalScrollBarVisibility="Always"
+                    Margin="0"
+                    >
             <StackLayout Orientation="Vertical">
 
-
-             
-                
-                
-                
-
-                <!--Horizontal list experiment--><!--
-                <CollectionView ItemsSource="{Binding DatabaseCharacterList}" HorizontalScrollBarVisibility="Always"
-                ItemsLayout="HorizontalList" HeightRequest="150" >
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="0">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-
-
-                                <Frame Style="{StaticResource CharacterSquareMidgroundFrame}"
-                                   WidthRequest="120"
-                                   HeightRequest="120"
-                                   Margin="10, 10, 10, 10"
-                                   Padding="5"
-                                  >
-                                    <Grid RowSpacing="0">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-
-                                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="0">
-
-                                            <Frame Grid.Row="0" 
-                                                Style="{StaticResource CharacterReadCellTitleFrame}"
-                                                Padding="2"
-                                               WidthRequest="75"
-                                               HeightRequest="25"
-                                               Margin="0"
-                                                >
-
-                                                <StackLayout Orientation="Horizontal" 
-                                                     Grid.Row="0" 
-                                                     HorizontalOptions="CenterAndExpand"
-                                                     VerticalOptions="CenterAndExpand"
-                                                     >
-
-                                                    <Label Text="{Binding Name}" 
-                                                   Style="{StaticResource CharacterCellNameLabelStyle}"
-                                                   FontSize="Small"
-                                                   Margin="0"
-                                                   
-                                                   />
-
-                                                </StackLayout>
-                                            </Frame>
-
-
-                                            --><!--Frame for thumbnail--><!--
-                                            <Frame x:Name="ImageFrame" 
-                                            Style="{StaticResource LargeCircleFrameStyle}"
-                                           WidthRequest="50"
-                                           HeightRequest="50"
-                                            Grid.Row="1"
-                                           Margin="0"
-                                             >
-
-                                                <Image Source="{Binding ImageURI}" />
-
-
-                                            </Frame>
-                                            <ImageButton Style="{StaticResource CreatePlusMinusButtonStyle}"
-                                                     Source="icon_add.png" 
-                                                    x:Name="CharactersListView"
-                                                         WidthRequest="15"
-                                                         Margin="0"
-                                                         Padding="0"
-                                                    />
-                                        </StackLayout>
-                                    </Grid>
-                            </Frame>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>-->
-
-
-
-
-                <StackLayout  Orientation="Vertical" Margin="0">
+                <StackLayout  Orientation="Vertical" 
+                              Margin="0"
+                              >
 
                     <StackLayout Orientation="Vertical">
 
-                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 0, 0, 5" Padding="0"/>
-                        
-                        
+                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" 
+                               Margin="0, 0, 0, 5" 
+                               Padding="0"
+                               />
 
-                        <ListView 
-                                x:Name="CharactersListView" 
-                                ItemsSource="{Binding DatabaseCharacterList}"
-                                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                                RefreshCommand="{Binding LoadItemsCommand}"
-                                CachingStrategy="RecycleElement"
-                                ItemSelected="OnDatabaseCharacterItemSelected"
-                                HasUnevenRows="true"
-                                HeightRequest="220"
-                                
-                                SeparatorVisibility="None"
-                            VerticalScrollBarVisibility="Always"
-                                >
+                        <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                                     Command = "{Binding LoadItemsCommand}"
+                                     >
 
-                            <ListView.ItemTemplate>
-                                
-                                
-                                <DataTemplate >
-                                    
-                                    
-                                    <ViewCell>
+                            <CollectionView ItemsSource="{Binding DatabaseCharacterList}"
+                                            HorizontalScrollBarVisibility="Always"
+                                            SelectionMode="Single"
+                                            SelectionChanged="OnDatabaseCharacterItemSelected"
+                                            HeightRequest="150"
+                                            x:Name="CharactersListView" 
+                                            >
 
-                                        <Grid RowSpacing="0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
+                                <CollectionView.ItemsLayout>
 
+                                    <LinearItemsLayout ItemSpacing="10" 
+                                                       Orientation="Horizontal" 
+                                                       />
 
-                                            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                                                   WidthRequest="120"
-                                                   HeightRequest="120"
-                                                   Margin="10, 0, 10, 10"
-                                                   Padding="5"
-                                                   >
-                                                
-                                                <Grid RowSpacing="0">
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto" />
-                                                        <RowDefinition Height="*" />
-                                                    </Grid.RowDefinitions>
+                                </CollectionView.ItemsLayout>
 
-                                                    <StackLayout Orientation="Vertical" 
-                                                                 VerticalOptions="CenterAndExpand" 
-                                                                 Padding="0"
-                                                                 >
-                                                    
-                                                        <Frame Grid.Row="0" 
-                                                               Style="{StaticResource ReadCellTitleFrame}"
-                                                               Padding="2"
-                                                               WidthRequest="75"
-                                                               HeightRequest="25"
-                                                               Margin="0"
-                                                               >
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
 
-                                                            <StackLayout Orientation="Horizontal" 
-                                                                         Grid.Row="0" 
-                                                                         HorizontalOptions="CenterAndExpand"
-                                                                         VerticalOptions="CenterAndExpand"
-                                                                         >
+                                        <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
+                                               WidthRequest="120"
+                                               HeightRequest="120"
+                                               Margin="10, 0, 10, 10"
+                                               Padding="5"
+                                               >
 
-                                                                <Label Text="{Binding Name}" 
-                                                                       Style="{StaticResource CellNameLabelStyle}"
-                                                                       FontSize="Small"
-                                                                       Margin="0"
-                                                                       />
-                                                            
+                                            <Grid RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
 
-                                                            </StackLayout>
-                                                            
-                                                        </Frame>
+                                                <StackLayout Orientation="Vertical" 
+                                                             VerticalOptions="CenterAndExpand" 
+                                                             Padding="0"
+                                                             >
 
-                                                        <!--Frame for thumbnail-->
-                                                        <Frame x:Name="ImageFrame" 
-                                                               Style="{StaticResource LargeCircleFrameStyle}"
-                                                               WidthRequest="55"
-                                                               HeightRequest="55"
-                                                               Grid.Row="1"
-                                                               Margin="0"
-                                                               >
+                                                    <Frame Grid.Row="0" 
+                                                           Style="{StaticResource ReadCellTitleFrame}"
+                                                           Padding="2"
+                                                           WidthRequest="75"
+                                                           HeightRequest="25"
+                                                           Margin="0"
+                                                           >
 
-                                                            <Image Source="{Binding ImageURI}" />
+                                                        <StackLayout Orientation="Horizontal" 
+                                                                     Grid.Row="0" 
+                                                                     HorizontalOptions="CenterAndExpand"
+                                                                     VerticalOptions="CenterAndExpand"
+                                                                     >
 
+                                                            <Label Text="{Binding Name}" 
+                                                                   Style="{StaticResource CellNameLabelStyle}"
+                                                                   FontSize="Small"
+                                                                   Margin="0"
+                                                                   />
 
-                                                        </Frame>
-                                                        <Image Source="icon_add.png" 
-                                                               WidthRequest="20"
-                                                               Margin="0"
-                                                               />
+                                                        </StackLayout>
 
-                                                    </StackLayout>
-                                                </Grid>
-                                            </Frame>
-                                        </Grid>
+                                                    </Frame>
 
+                                                    <Frame x:Name="ImageFrame" 
+                                                           Style="{StaticResource LargeCircleFrameStyle}"
+                                                           BorderColor="White"
+                                                           WidthRequest="50"
+                                                           HeightRequest="50"
+                                                           Grid.Row="1"
+                                                           Margin="0"
+                                                           >
 
-                                        <!--<Grid>
+                                                        <Image Source="{Binding ImageURI}" />
 
-                                            --><!--Grid.Column="0" Grid.Row="0" Grid.RowSpan="1"--><!--
-                                            <Image  
-                                                    Source="{Binding ImageURI}"
-                                                    Style="{StaticResource ImageMediumStyle}"/>
+                                                    </Frame>
 
-                                            --><!--<Label Grid.Column="1" Grid.Row="0"
-                                                   Text="{Binding Name}" 
-                                                   Style="{StaticResource ListStyle}"
-                                                   FontAttributes="Bold"/>
+                                                    <Image Source="icon_subtract.png" 
+                                                           WidthRequest="20"
+                                                           Margin="0"
+                                                           />
 
-                                            <Label Grid.Column="1" Grid.Row="1"
-                                                   Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
-                                                   Style="{StaticResource ListStyle}"/>
-
-                                            <Label Grid.Column="1" Grid.Row="2"
-                                                    Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                                    Style="{StaticResource ListStyle}"/>--><!--
-
-                                        </Grid>-->
-                                        
-                                        
-                                    </ViewCell>
-                                    
-                                    
-                                </DataTemplate>
-                                
-                                
-                            </ListView.ItemTemplate>
-                        </ListView>
-                        
-
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </RefreshView>
                     </StackLayout>
 
+                    <StackLayout VerticalOptions="CenterAndExpand" 
+                                 Orientation="Vertical"
+                                 >
 
+                        <StackLayout Orientation="Horizontal" 
+                                     HorizontalOptions="Center"
+                                     >
 
-                    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                            <Label Text="In Party: " 
+                                   Style="{StaticResource SimpleLabelTextStyle}" 
+                                   Margin="0, 5, 0, 5" 
+                                   Padding="0"
+                                   />
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-
-
-                            <Label Text="In Party: " Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 5, 0, 5" Padding="0"/>
-                        
-                        <Label Style="{StaticResource SimpleLabelTextStyle}" Margin="0, 5, 0, 5" Padding="0" 
-                            x:Name="PartyCountLabel"
-                            Text="0"/>
+                            <Label Style="{StaticResource SimpleLabelTextStyle}" 
+                                   Margin="0, 5, 0, 5" 
+                                   Padding="0" 
+                                   x:Name="PartyCountLabel"
+                                   Text="0"
+                                   />
 
                         </StackLayout>
 
-                        <ListView 
-                                x:Name="PartyListView" 
-                                ItemsSource="{Binding PartyCharacterList}"
-                                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                                RefreshCommand="{Binding LoadItemsCommand}"
-                                CachingStrategy="RecycleElement"
-                                ItemSelected="OnPartyCharacterItemSelected"
-                                HasUnevenRows="True"
-                            HeightRequest="220"
-                            SeparatorVisibility="None"
-                            VerticalScrollBarVisibility="Always"
+                        <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                                     Command = "{Binding LoadItemsCommand}"
+                                     >
+                            
+                            <CollectionView x:Name="PartyListView" 
+                                            ItemsSource="{Binding PartyCharacterList}"
+                                            HorizontalScrollBarVisibility="Always"
+                                            SelectionChanged="OnPartyCharacterItemSelected"
+                                            HeightRequest="150"
+                                            SelectionMode="Single"
+                                            >
                                 
-                                >
+                                <CollectionView.ItemsLayout>
+                                    
+                                    <LinearItemsLayout ItemSpacing="10" 
+                                                       Orientation="Horizontal" 
+                                                       />
+                                    
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
 
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <Grid RowSpacing="0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
+                                        <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
+                                               WidthRequest="120"
+                                               HeightRequest="120"
+                                               Margin="10, 0, 10, 10"
+                                               Padding="5"
+                                               >
 
+                                            <Grid RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
 
-                                            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                                                   WidthRequest="120"
-                                                   HeightRequest="120"
-                                                   Margin="10, 0, 10, 10"
-                                                   Padding="5"
-                                                   >
+                                                <StackLayout Orientation="Vertical" 
+                                                             VerticalOptions="CenterAndExpand" 
+                                                             Padding="0"
+                                                             >
 
-                                                <Grid RowSpacing="0">
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto" />
-                                                        <RowDefinition Height="*" />
-                                                    </Grid.RowDefinitions>
+                                                    <Frame Grid.Row="0" 
+                                                           Style="{StaticResource ReadCellTitleFrame}"
+                                                           Padding="2"
+                                                           WidthRequest="75"
+                                                           HeightRequest="25"
+                                                           Margin="0"
+                                                           >
 
-                                                    <StackLayout Orientation="Vertical" 
-                                                                 VerticalOptions="CenterAndExpand" 
-                                                                 Padding="0"
-                                                                 >
+                                                        <StackLayout Orientation="Horizontal" 
+                                                                     Grid.Row="0" 
+                                                                     HorizontalOptions="CenterAndExpand"
+                                                                     VerticalOptions="CenterAndExpand"
+                                                                     >
 
-                                                        <Frame Grid.Row="0" 
-                                                               Style="{StaticResource ReadCellTitleFrame}"
-                                                               Padding="2"
-                                                               WidthRequest="75"
-                                                               HeightRequest="25"
-                                                               Margin="0"
-                                                               >
+                                                            <Label Text="{Binding Name}" 
+                                                                   Style="{StaticResource CellNameLabelStyle}"
+                                                                   FontSize="Small"
+                                                                   Margin="0"
+                                                                    />
 
-                                                            <StackLayout Orientation="Horizontal" 
-                                                                         Grid.Row="0" 
-                                                                         HorizontalOptions="CenterAndExpand"
-                                                                         VerticalOptions="CenterAndExpand"
-                                                                         >
+                                                        </StackLayout>
+                                                    </Frame>
 
-                                                                <Label Text="{Binding Name}" 
-                                                                       Style="{StaticResource CellNameLabelStyle}"
-                                                                       FontSize="Small"
-                                                                       Margin="0"
-                                                                       />
+                                                    <Frame x:Name="ImageFrame" 
+                                                           Style="{StaticResource LargeCircleFrameStyle}"
+                                                           BorderColor="White"
+                                                           WidthRequest="50"
+                                                           HeightRequest="50"
+                                                           Grid.Row="1"
+                                                           Margin="0"
+                                                           >
 
+                                                        <Image Source="{Binding ImageURI}" />
 
-                                                            </StackLayout>
+                                                    </Frame>
+                                                    <Image Source="icon_subtract.png" 
+                                                           WidthRequest="20"
+                                                           Margin="0"
+                                                           />
 
-                                                        </Frame>
-
-                                                        <!--Frame for thumbnail-->
-                                                        <Frame x:Name="ImageFrame" 
-                                                               Style="{StaticResource LargeCircleFrameStyle}"
-                                                               WidthRequest="55"
-                                                               HeightRequest="55"
-                                                               Grid.Row="1"
-                                                               Margin="0"
-                                                               >
-
-                                                            <Image Source="{Binding ImageURI}" />
-
-
-                                                        </Frame>
-                                                        <Image Source="icon_subtract.png" 
-                                                               WidthRequest="20"
-                                                               Margin="0"
-                                                               />
-
-                                                    </StackLayout>
-                                                </Grid>
-                                            </Frame>
-                                        </Grid>
-
-
-                                        <!--<Grid>
-                                            <Image  
-                                                    Source="{Binding ImageURI}"
-                                                    Style="{StaticResource ImageMediumStyle}"/>
-
-                                            --><!--<Label
-                                                   Text="{Binding Name}" 
-                                                   Style="{StaticResource ListStyle}"
-                                                   FontAttributes="Bold"/>
-
-                                            <Label 
-                                                   Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
-                                                   Style="{StaticResource ListStyle}"/>
-
-                                            <Label 
-                                                    Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                                    Style="{StaticResource ListStyle}"/>--><!--
-
-                                        </Grid>-->
-                                       
-                                        
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </RefreshView>
                     </StackLayout>
 
-                    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                    <StackLayout VerticalOptions="CenterAndExpand" 
+                                 Orientation="Vertical"
+                                 >
 
-                        <ImageButton 
-                            x:Name="BeginBattleButton"
-                            Clicked="BattleButton_Clicked" 
-                            Source="start_main.png"
-                            HeightRequest="30"
-                            Margin="0, 5, 0, 0"
-                            IsEnabled="False"
-                            IsVisible="False"
-                            />
+                        <ImageButton x:Name="BeginBattleButton"
+                                     Clicked="BattleButton_Clicked" 
+                                     Source="start_main.png"
+                                     HeightRequest="30"
+                                     Margin="0, 5, 0, 0"
+                                     IsEnabled="False"
+                                     IsVisible="False"
+                                     />
 
                     </StackLayout>
                 </StackLayout>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
