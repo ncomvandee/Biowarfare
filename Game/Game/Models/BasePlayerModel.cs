@@ -239,13 +239,9 @@ namespace Game.Models
 
                 switch (Job)
                 {
-                    case CellTypeEnum.NKCell:
-                        result = +2;
+                    case CellTypeEnum.Macrophage:
+                        result = 5;
                         break;
-                    case CellTypeEnum.KillerTCell:
-                        result = -1;
-                        break;
-                    case CellTypeEnum.BCell:
                     default:
                         break;
                 }
@@ -477,7 +473,7 @@ namespace Game.Models
             // Get Defense bonus from Items
             myReturn += GetDefenseItemBonus;
 
-            myReturn += GetDefenseJobBonus;
+            myReturn +=myReturn*GetDefenseJobBonus/100;
 
             // Add any Round Buffs
             myReturn += BuffDefenseValue;
