@@ -647,8 +647,16 @@ namespace Game.Models
             var myItem = ItemIndexViewModel.Instance.GetItem(PrimaryHand);
             if (myItem != null)
             {
+                //special kill for killerTCell
+                if (Job == CellTypeEnum.KillerTCell)
+                {
+                    myReturn += myItem.Damage;
+                }
                 // Dice of the weapon.  So sword of Damage 10 is d10
-                myReturn += DiceHelper.RollDice(1, myItem.Damage);
+                else
+                {
+                    myReturn += DiceHelper.RollDice(1, myItem.Damage);
+                }
             }
 
             // Add in the Level as extra damage per game rules
