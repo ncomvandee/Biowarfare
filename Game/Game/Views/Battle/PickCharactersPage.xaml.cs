@@ -72,6 +72,9 @@ namespace Game.Views
                 BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
             }
 
+            // Remove the character from the list when it is clicked on 
+            BattleEngineViewModel.Instance.DatabaseCharacterList.Remove(data);
+
             UpdateNextButtonState();
         }
 
@@ -91,8 +94,11 @@ namespace Game.Views
             // Manually deselect Character.
             PartyListView.SelectedItem = null;
 
-            // Remove the character from the list
+            // Remove the character from the list when it is clicked on 
             BattleEngineViewModel.Instance.PartyCharacterList.Remove(data);
+
+            // Add the character back to the character list to be selected again 
+            BattleEngineViewModel.Instance.DatabaseCharacterList.Add(data);
 
             UpdateNextButtonState();
         }
