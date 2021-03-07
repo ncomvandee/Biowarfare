@@ -249,6 +249,26 @@ namespace Game.Models
             }
         }
 
+        [Ignore]
+        // Return the Maxhealth Bonus
+
+        public int GetMaxHealthJobBonus
+        {
+            get
+            {
+                var result = 0;
+                switch (Job)
+                {
+                    case CellTypeEnum.Basophil:
+                        result = 10;
+                        break;
+                    default:
+                        break;
+                }
+                return result;
+            }
+        }
+
 
         #endregion Defense
 
@@ -536,6 +556,9 @@ namespace Game.Models
 
             // MaxHealth Bonus from Level
             myReturn += GetMaxHealthLevelBonus;
+
+            //Maxheal from job
+            myReturn += myReturn * GetMaxHealthJobBonus / 100;
 
             // Get MaxHealth bonus from Items
             myReturn += GetMaxHealthItemBonus;
