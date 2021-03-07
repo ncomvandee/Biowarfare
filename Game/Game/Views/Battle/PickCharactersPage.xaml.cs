@@ -72,6 +72,8 @@ namespace Game.Views
                 BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
             }
 
+
+
             // Remove the character from the list when it is clicked on 
             BattleEngineViewModel.Instance.DatabaseCharacterList.Remove(data);
 
@@ -149,6 +151,12 @@ namespace Game.Views
         {
             // Clear the currett list
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Clear();
+
+            // Load picked Characters back into character list
+            foreach (var data in BattleEngineViewModel.Instance.PartyCharacterList)
+            {
+                BattleEngineViewModel.Instance.DatabaseCharacterList.Add(data);
+            }
 
             // Load the Characters into the Engine
             foreach (var data in BattleEngineViewModel.Instance.PartyCharacterList)
