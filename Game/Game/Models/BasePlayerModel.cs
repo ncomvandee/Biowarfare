@@ -198,11 +198,9 @@ namespace Game.Models
 
                 switch (Job)
                 {
-                    case CellTypeEnum.NKCell:
-                        result = -1;
-                        break;
+
                     case CellTypeEnum.KillerTCell:
-                        result = +2;
+                        result = 5;
                         break;
                     case CellTypeEnum.BCell:
                     default:
@@ -433,7 +431,7 @@ namespace Game.Models
             myReturn += GetAttackItemBonus;
 
             // Add Job Bonus
-            myReturn += GetAttackJobBonus;
+            myReturn += myReturn*GetAttackJobBonus/100;
 
             // Add any Round Buffs
             myReturn += BuffAttackValue;
