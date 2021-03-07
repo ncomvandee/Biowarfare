@@ -280,12 +280,8 @@ namespace Game.Models
                 switch (Job)
                 {
                     case CellTypeEnum.NKCell:
-                        result = 0;
+                        result = 10;
                         break;
-                    case CellTypeEnum.KillerTCell:
-                        result = +1;
-                        break;
-                    case CellTypeEnum.BCell:
                     default:
                         break;
                 }
@@ -504,7 +500,7 @@ namespace Game.Models
             // Get Speed bonus from Items
             myReturn += GetSpeedItemBonus;
 
-            myReturn += GetSpeedJobBonus;
+            myReturn += myReturn*GetSpeedJobBonus/100;
 
             // Add any Round Buffs
             myReturn += BuffSpeedValue;
