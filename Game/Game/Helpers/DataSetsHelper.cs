@@ -18,8 +18,8 @@ namespace Game.Helpers
         {
             ScoreIndexViewModel.Instance.GetCurrentDataSource();
             ItemIndexViewModel.Instance.GetCurrentDataSource();
-            //CharacterIndexViewModel.Instance.GetCurrentDataSource();
-            //MonsterIndexViewModel.Instance.GetCurrentDataSource();
+            CellIndexViewModel.Instance.GetCurrentDataSource();
+            MonsterIndexViewModel.Instance.GetCurrentDataSource();
 
             return true;
         }
