@@ -1243,8 +1243,8 @@ namespace UnitTests.Engine.EngineGame
 
 
 
-            // Act
-            Engine.Round.NewRound();
+                // Act
+                Engine.Round.NewRound();
 
             // Reset
 
@@ -1255,8 +1255,67 @@ namespace UnitTests.Engine.EngineGame
 
         }
 
+
+
         [Test]
-        public void RoundEngine_Start_AddMonstersToRound_High_Level_Monster_Valid_Should_Pass()
+        public void RoundEngine_Start_AddMonstersToRound_Non_Boss_Round__Valid_Should_Return_Equal_Count()
+        {
+
+            // Add each model here to warm up and load it.
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                       new CharacterModel
+                                       {
+                                           Speed = 200,
+                                           Level = 1,
+                                           CurrentHealth = 1,
+                                           ExperienceTotal = 1,
+                                           Name = "Mike",
+                                           ListOrder = 1,
+                                       });
+
+            var MonsterPlayer = new PlayerInfoModel(
+                                new MonsterModel
+                                {
+                                    Speed = 1,
+                                    Level = 1,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    Name = "Monster",
+                                    ListOrder = 2,
+
+                                });
+
+
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.BattleScore.RoundCount = 0;
+
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+
+
+            // Act
+            Engine.Round.NewRound();
+
+            // Reset
+
+
+            // Assert
+            Assert.AreEqual(Engine.EngineSettings.MaxNumberPartyMonsters, Engine.EngineSettings.MonsterList.Count);
+
+
+        }
+
+
+        [Test]
+        public void RoundEngine_Start_AddMonstersToRound_Create_High_Level_Monsters_Valid_Should_Pass()
         {
 
             // Add each model here to warm up and load it.
@@ -1290,10 +1349,11 @@ namespace UnitTests.Engine.EngineGame
 
 
             // Assert
-            Assert.AreEqual(6, Engine.EngineSettings.MonsterList.Count()); 
+            Assert.IsNotEmpty(Engine.EngineSettings.MonsterList); 
 
 
         }
+
 
     }
 }
