@@ -280,6 +280,27 @@ namespace Game.Engine.EngineGame
                         }
                     };
 
+                    //Bacteria has threee random skill: 25% to double damge, 50% deal regular damge, 25% heal opponent
+                    //Cancer Cell has a cahnce to instant kill 
+                    if (Attacker.MonsterType == MonsterTypeEnum.Bacteria)
+                    {
+                        int chance = DiceHelper.RollDice(1, 12);
+
+                        //Double the damge
+                        if (chance == 1 && chance == 3 && chance ==5)
+                        {
+                            EngineSettings.BattleMessagesModel.DamageAmount*=2;
+                        }
+
+                        //Health The Target
+                        if (chance == 1 && chance == 3 && chance == 5)
+                        {
+                            //EngineSettings.BattleMessagesModel.DamageAmount /= 2;
+                            //Health Target first
+                            Target.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount/2;
+                        }
+                    }
+
                     // Apply the Damage
                     ApplyDamage(Target);
 
