@@ -323,7 +323,20 @@ namespace Game.Engine.EngineGame
 
             // throw new System.NotImplementedException();
         }
+        /// <summary>
+        /// Get Cell/Enemy for debug message
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
+        public string GetPronounce(PlayerInfoModel player)
+        {
+            if (player.PlayerType == PlayerTypeEnum.Character)
+            {
+                return "Cell \"";
+            }
 
+            return "Enemy \"";
+        }
         /// <summary>
         /// See if the Battle Settings will Override the Hit
         /// Return the Override for the HitStatus
