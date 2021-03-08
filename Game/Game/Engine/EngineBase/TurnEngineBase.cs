@@ -9,6 +9,7 @@ using Game.GameRules;
 using Game.Engine.EngineModels;
 using Game.Engine.EngineInterfaces;
 
+
 namespace Game.Engine.EngineBase
 {
     /* 
@@ -425,10 +426,25 @@ namespace Game.Engine.EngineBase
                     break;
             }
 
-            EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + EngineSettings.BattleMessagesModel.AttackStatus + Target.Name + EngineSettings.BattleMessagesModel.TurnMessageSpecial + EngineSettings.BattleMessagesModel.ExperienceEarned;
+            EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker)+ Attacker.Name + "\"" + EngineSettings.BattleMessagesModel.AttackStatus + GetPronounce(Target) + Target.Name + "\"" + EngineSettings.BattleMessagesModel.TurnMessageSpecial + EngineSettings.BattleMessagesModel.ExperienceEarned;
             Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
 
             return true;
+        }
+
+        /// <summary>
+        /// Get Cell/Enemy for debug message
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
+        public string GetPronounce(PlayerInfoModel player)
+        {
+            if(player.PlayerType == PlayerTypeEnum.Character)
+            {
+                return "Cell \"";
+            }
+
+            return "Enemy \"";
         }
 
         /// <summary>
