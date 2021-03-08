@@ -277,6 +277,7 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override void ApplyDamage(PlayerInfoModel Target)
         {
+            base.ApplyDamage(Target);
             // throw new System.NotImplementedException();
         }
 
@@ -304,11 +305,13 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override bool RemoveIfDead(PlayerInfoModel Target)
         {
-            if (Target.CurrentHealth == 0)
-            {
-                Target.Alive = false;
-            }
+
             return base.RemoveIfDead(Target);
+            //if (Target.CurrentHealth == 0)
+            //{
+            //    Target.Alive = false;
+            //}
+            //return base.RemoveIfDead(Target);
             // throw new System.NotImplementedException();
         }
 
