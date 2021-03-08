@@ -1,6 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading.Tasks;
 using Game.Engine.EngineBase;
 using Game.Engine.EngineInterfaces;
+using Game.Models;
 
 namespace Game.Engine.EngineGame
 {
@@ -77,9 +79,52 @@ namespace Game.Engine.EngineGame
         /// Override for running the autobattle 
         /// </summary>
         /// <returns></returns>
-        public override Task<bool> RunAutoBattle()
+        public async override Task<bool> RunAutoBattle()
         {
-            return base.RunAutoBattle();
+            RoundEnum RoundCondition;
+
+            Debug.WriteLine("Auto Battle Starting");
+
+            // Auto Battle, does all the steps that a human would do.
+
+            // Prepare for Battle
+
+            CreateCharacterParty();
+
+            // Start Battle in AutoBattle mode
+            Battle.StartBattle(true);
+
+            // Fight Loop. Continue until Game is Over...
+            do
+            {
+                // Check for excessive duration.
+                if (DetectInfinateLoop())
+                {
+                    Debug.WriteLine("Aborting, More than Max Rounds");
+                    Battle.EndBattle();
+                    return false;
+                }
+
+                Debug.WriteLine("Next Turn");
+
+                // Do the turn...
+                // If the round is over start a new one...
+                RoundCondition = Battle.Round.RoundNextTurn();
+
+                if (RoundCondition == RoundEnum.NewRound)
+                {
+                    Battle.Round.NewRound();
+                    Debug.WriteLine("New Round");
+                }
+
+            } while (RoundCondition != RoundEnum.GameOver);
+
+            Debug.WriteLine("Game Over");
+
+            // Wrap up
+            Battle.EndBattle();
+
+            return true;
             // throw new System.NotImplementedException();
         }
     }
