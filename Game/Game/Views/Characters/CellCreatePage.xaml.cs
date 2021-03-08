@@ -45,6 +45,9 @@ namespace Game.Views
             this.ViewModel.Title = "Create";
 
             NameEntry.Text = "";
+
+            //Maxhealth base 
+            ViewModel.Data.MaxHealth = 5;
         }
 
         /// <summary>
@@ -166,6 +169,7 @@ namespace Game.Views
 
             LevelEntry.Text = ViewModel.Data.Level.ToString();
 
+          
             // Call to set enable or disable the button
             SetEnableLevelButton();
 
