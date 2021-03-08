@@ -304,6 +304,18 @@ namespace Game.Engine.EngineGame
                     // Apply the Damage
                     ApplyDamage(Target);
 
+                    //Spore applies poison to the target
+                    if (Attacker.MonsterType == MonsterTypeEnum.Spore)
+                    {
+                        int chance = DiceHelper.RollDice(1, 12);
+
+                        if (chance <= 3)
+                        {
+                            Target.Poison = true;
+                        }
+                    }
+
+
                     //Parasite heal 25% of its attack damge 
                     if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
                     {
@@ -312,6 +324,7 @@ namespace Game.Engine.EngineGame
 
                     EngineSettings.BattleMessagesModel.TurnMessageSpecial = EngineSettings.BattleMessagesModel.GetCurrentHealthMessage();
 
+                   
                     // Check if Dead and Remove
                     RemoveIfDead(Target);
 
