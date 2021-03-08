@@ -6,6 +6,7 @@ using Game.Models;
 using Game.ViewModels;
 using System;
 using System.Linq;
+using Game.GameRules;
 
 namespace Game.Engine.EngineGame
 {
@@ -95,6 +96,7 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override int AddMonstersToRound()
         {
+
             // Random object
             Random rand = new Random();
 
@@ -136,6 +138,9 @@ namespace Game.Engine.EngineGame
 
                 // Set level to monster
                 data.Level = LevelForMonster;
+
+                // Modify attribute
+                data = RandomPlayerHelper.ModifyMonsterAttributeBaseOnLevel(data);
 
                 // Add to list
                 EngineSettings.MonsterList.Add(new PlayerInfoModel(data));
