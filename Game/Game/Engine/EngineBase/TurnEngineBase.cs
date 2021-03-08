@@ -554,9 +554,8 @@ namespace Game.Engine.EngineBase
         public virtual bool RemoveIfDead(PlayerInfoModel Target)
         {
             // Check for alive
-            if (Target.CurrentHealth == 0)
+            if (Target.Alive ==false)
             {
-                Target.Alive = false;
                 TargetDied(Target);
                 return true;
             }
