@@ -5,6 +5,7 @@ using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
 using Game.Engine.EngineBase;
 using System.Diagnostics;
+using Game.Helpers;
 
 namespace Game.Engine.EngineGame
 {
@@ -269,7 +270,15 @@ namespace Game.Engine.EngineGame
                         EngineSettings.BattleMessagesModel.DamageAmount *= 2;
                     }
 
-
+                    //Cancer Cell has a cahnce to instant kill 
+                    if (Attacker.MonsterType == MonsterTypeEnum.Cancer)
+                    {
+                        int chance = DiceHelper.RollDice(1, 20);
+                        if (chance == 1)
+                        {
+                            EngineSettings.BattleMessagesModel.DamageAmount = Target.CurrentHealth;
+                        }
+                    };
 
                     // Apply the Damage
                     ApplyDamage(Target);
@@ -278,7 +287,7 @@ namespace Game.Engine.EngineGame
                     if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
                     {
                         Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
-                    }
+                    };
 
                     EngineSettings.BattleMessagesModel.TurnMessageSpecial = EngineSettings.BattleMessagesModel.GetCurrentHealthMessage();
 
