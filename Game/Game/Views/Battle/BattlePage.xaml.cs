@@ -128,6 +128,7 @@ namespace Game.Views
             var PlayerStack = new StackLayout
             {
                 Style = (Style)Application.Current.Resources["PlayerBattleDisplayBox"],
+                BackgroundColor = Color.Transparent,
                 Children = {
                     PlayerImage,
                 },
@@ -214,7 +215,8 @@ namespace Game.Views
                     // Update the Image in the Datastructure
                     MapGridObjectAddImage(PlayerImageButton, data);
 
-                    stackObject.BackgroundColor = DetermineMapBackgroundColor(data);
+                    stackObject.BackgroundColor = Color.Transparent;
+                    //stackObject.BackgroundColor = DetermineMapBackgroundColor(data);
                 }
             }
 
