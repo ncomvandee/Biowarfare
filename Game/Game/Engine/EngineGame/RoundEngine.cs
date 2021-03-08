@@ -131,7 +131,7 @@ namespace Game.Engine.EngineGame
                 int LevelForMonster = rand.Next(AverageCellLevel - 3, AverageCellLevel + 3);
 
                 // If level formonster is lesser than 0 or more than 20, set the level to Cell average level
-                if (LevelForMonster <= 0 || LevelForMonster >= 20)
+                if (LevelForMonster <= 1 || LevelForMonster >= 20)
                 {
                     LevelForMonster = AverageCellLevel;
                 }
