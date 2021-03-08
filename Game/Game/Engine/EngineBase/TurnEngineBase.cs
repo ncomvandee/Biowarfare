@@ -417,11 +417,6 @@ namespace Game.Engine.EngineBase
                     // Apply the Damage
                     ApplyDamage(Target);
 
-                    //Parasite heal 25% of its attack damge 
-                    if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
-                    {
-                        Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
-                    }
 
                     EngineSettings.BattleMessagesModel.TurnMessageSpecial = EngineSettings.BattleMessagesModel.GetCurrentHealthMessage();
 

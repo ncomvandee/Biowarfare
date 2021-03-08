@@ -223,6 +223,13 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override bool TurnAsAttack(PlayerInfoModel Attacker, PlayerInfoModel Target)
         {
+
+            //Parasite heal 25% of its attack damge 
+            if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
+            {
+                Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
+            }
+
             return base.TurnAsAttack(Attacker, Target);
             // Set Messages to empty
 
