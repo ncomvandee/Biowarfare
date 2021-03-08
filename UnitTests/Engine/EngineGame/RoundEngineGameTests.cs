@@ -1197,6 +1197,63 @@ namespace UnitTests.Engine.EngineGame
 
 
         }
+
+        [Test]
+        public void RoundEngine_Start_AddMonstersToRound_BossRound_Valid_Should_Return_Equal_Count()
+        {
+
+            // Add each model here to warm up and load it.
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                       new CharacterModel
+                                       {
+                                           Speed = 200,
+                                           Level = 1,
+                                           CurrentHealth = 1,
+                                           ExperienceTotal = 1,
+                                           Name = "Mike",
+                                           ListOrder = 1,
+                                       });
+
+            var MonsterPlayer = new PlayerInfoModel(
+                                new MonsterModel
+                                {
+                                    Speed = 1,
+                                    Level = 1,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    Name = "Monster",
+                                    ListOrder = 2,
+                                    
+                                });  
+
+
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.BattleScore.RoundCount = 5;
+
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+
+
+            // Act
+            Engine.Round.NewRound();
+
+            // Reset
+
+         
+            // Assert
+            Assert.AreEqual(Engine.EngineSettings.MaxNumberPartyMonsters, Engine.EngineSettings.MonsterList.Count);
+
+
+        }
+
     }
 }
 
