@@ -6,6 +6,7 @@ using NUnit.Framework;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineGame;
+using System;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -1250,6 +1251,46 @@ namespace UnitTests.Engine.EngineGame
          
             // Assert
             Assert.AreEqual(Engine.EngineSettings.MaxNumberPartyMonsters, Engine.EngineSettings.MonsterList.Count);
+
+
+        }
+
+        [Test]
+        public void RoundEngine_Start_AddMonstersToRound_High_Level_Monster_Valid_Should_Pass()
+        {
+
+            // Add each model here to warm up and load it.
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                       new CharacterModel
+                                       {
+                                           Speed = 200,
+                                           Level = 20,
+                                           CurrentHealth = 1,
+                                           ExperienceTotal = 1,
+                                           Name = "Mike",
+                                           ListOrder = 1,
+                                       });
+
+          
+
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            // Act
+
+            Engine.Round.NewRound();
+
+
+            // Reset
+
+
+            // Assert
+            Assert.AreEqual(6, Engine.EngineSettings.MonsterList.Count()); 
 
 
         }
