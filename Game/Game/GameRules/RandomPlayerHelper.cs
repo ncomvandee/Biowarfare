@@ -210,9 +210,9 @@ namespace Game.GameRules
 
             result.MaxHealth = health;
             result.CurrentHealth = health;
-            result.Attack = monster.Attack + DiceHelper.RollDice(1, monster.Level);
-            result.Defense = monster.Defense + DiceHelper.RollDice(1, monster.Level);
-            result.Speed = monster.Speed + DiceHelper.RollDice(1, monster.Level);
+            result.Attack = DiceHelper.RollDice(1, monster.Level);
+            result.Defense = DiceHelper.RollDice(1, monster.Level);
+            result.Speed = DiceHelper.RollDice(1, monster.Level);
 
             return result;
         }
