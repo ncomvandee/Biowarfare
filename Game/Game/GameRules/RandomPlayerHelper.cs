@@ -185,6 +185,28 @@ namespace Game.GameRules
         }
 
         /// <summary>
+        /// Modify monster attribute
+        /// </summary>
+        /// <param name="monster"></param>
+        /// <returns></returns>
+        public static MonsterModel ModifyMonsterAttributeBaseOnLevel(MonsterModel monster)
+        {
+            // Monster model after modified
+            var result = monster;
+
+            // Get health
+            int health = GetHealth(monster.Level);
+
+            result.MaxHealth = health;
+            result.CurrentHealth = health;
+            result.Attack = monster.Attack + DiceHelper.RollDice(1, monster.Level);
+            result.Defense = monster.Defense + DiceHelper.RollDice(1, monster.Level);
+            result.Speed = monster.Speed + DiceHelper.RollDice(1, monster.Level);
+
+            return result;
+        }
+
+        /// <summary>
         /// Create Random Character for the battle
         /// </summary>
         /// <param name="MaxLevel"></param>
