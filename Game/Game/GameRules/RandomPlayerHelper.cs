@@ -110,7 +110,18 @@ namespace Game.GameRules
 
             return result;
         }
+        /// <summary>
+        /// Get the monster type
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static MonsterTypeEnum GetMonsterType()
+        {
+            List<MonsterTypeEnum> StringList = new List<MonsterTypeEnum> {MonsterTypeEnum.Bacteria, MonsterTypeEnum.Cancer, MonsterTypeEnum.Parasite, MonsterTypeEnum.Spore, MonsterTypeEnum.Virus };
+            var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
+            return result;
+        }
         /// <summary>
         /// Get Name
         /// 
@@ -262,7 +273,10 @@ namespace Game.GameRules
 
                 // Randomize Name
                 Name = GetMonsterName(),
-                Description = GetMonsterDescription(),
+                //Description = GetMonsterDescription(),
+
+                //get the monsterType
+                MonsterType = GetMonsterType(),
 
                 // Randomize the Attributes
                 Attack = GetAbilityValue(),
