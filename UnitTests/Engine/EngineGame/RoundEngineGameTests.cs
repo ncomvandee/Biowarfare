@@ -1147,7 +1147,56 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(Engine.EngineSettings.PlayerList.First().Guid, result.Guid);
         }
         #endregion GetNextPlayerInList
-    }
 
+        [Test]
+        public void RoundEngine_Start_NewRound_Valid_Should_Return_True()
+        {
+            // Add each model here to warm up and load it.
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                       new CharacterModel
+                                       {
+                                           Speed = 200,
+                                           Level = 1,
+                                           CurrentHealth = 1,
+                                           ExperienceTotal = 1,
+                                           Name = "Mike",
+                                           ListOrder = 1,
+                                       });
+
+            var MonsterPlayer = new PlayerInfoModel(
+                                new MonsterModel
+                                {
+                                    Speed = 1,
+                                    Level = 1,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    Name = "Monster",
+                                    ListOrder = 4,
+                                });
+
+
+            Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+
+            // Start a new round with character and monster 
+            var result = Engine.Round.NewRound();
+
+            // Assert
+            Assert.AreEqual(true, result);
+
+
+        }
+    }
 }
 
