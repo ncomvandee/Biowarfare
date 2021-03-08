@@ -46,7 +46,7 @@ namespace Game.Views
 			var Character = new CharacterModel
 			{
 				ExperienceTotal = 300,    // Enough for next level
-				Name = "Mike Level Example",
+				Name = "Mike",
 				Speed = 100,    // Go first
 			};
 
@@ -56,8 +56,8 @@ namespace Game.Views
 			//BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
 
 			BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
-			await Task.Run(()=> BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle());
-			//await BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle();
+			//await Task.Run(()=> BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle());
+			await BattleEngineViewModel.Instance.AutoBattleEngine.RunAutoBattle();
 
 			var BattleMessage = string.Format("Done {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
