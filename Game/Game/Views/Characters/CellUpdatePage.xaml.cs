@@ -179,7 +179,8 @@ namespace Game.Views
             }
 
             LevelEntry.Text = ViewModel.Data.Level.ToString();
-
+            //Maxhealth
+            ViewModel.Data.MaxHealth -= 5;
             // Call to set enable or disable the button
             SetEnableLevelButton();
 
@@ -201,6 +202,9 @@ namespace Game.Views
             }
 
             LevelEntry.Text = ViewModel.Data.Level.ToString();
+
+            //Maxhealth
+            ViewModel.Data.MaxHealth += 5;
 
             // Call to set enable or disable the button
             SetEnableLevelButton();
