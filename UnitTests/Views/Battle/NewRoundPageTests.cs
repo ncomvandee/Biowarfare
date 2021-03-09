@@ -146,5 +146,37 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void NewRoundPage_ClosePopup_Clicked_Should_Pass()
+        {
+            // Arrange
+            // Act
+
+            page.ClosePopup_Clicked(null,null);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+
+        [Test]
+        public void NewRoundPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
+        {
+            // Arrange
+            var result = page.CreatePlayerDisplayBox(new PlayerInfoModel(new CharacterModel { Name = "test" }));
+            
+            var button = result.Content;
+     
+            
+            // Act
+
+            ((ImageButton)button).PropagateUpClicked();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
