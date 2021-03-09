@@ -1096,5 +1096,22 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got Here
         }
+
+        [Test]
+        public void RoundOverClicked_Should_Pass()
+        {
+            // Arrange
+
+
+
+            // Act
+
+            page.RoundOver_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
     }
 }
