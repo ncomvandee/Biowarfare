@@ -1269,6 +1269,21 @@ namespace UnitTests.Models
         }
 
         [Test]
+        public void BasePlayerModel_TakePoisonDamage_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
+
+            // Act
+            data.CausePoison();
+            var result = data.TakePoisonDamage(); 
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+
+        [Test]
         public void BasePlayerModel_Cause_Poison_Default_Should_Pass()
         {
             // Arrange
@@ -1284,7 +1299,7 @@ namespace UnitTests.Models
         }
 
 
-
+        
 
 
 
