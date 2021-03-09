@@ -1267,5 +1267,26 @@ namespace UnitTests.Models
 
             Assert.AreEqual(2, Result);
         }
+
+        [Test]
+        public void BasePlayerModel_Cause_Poison_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
+
+            // Act
+            var result = data.CausePoison();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+
+
+
+
+
+
     }
 }
