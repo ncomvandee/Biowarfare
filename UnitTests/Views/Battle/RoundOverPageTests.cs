@@ -265,5 +265,23 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void RoundOverPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
+        {
+            // Arrange
+            var result = page.CreatePlayerDisplayBox(new PlayerInfoModel(new CharacterModel { Name = "test" }));
+
+            var button = result.Children[0];
+
+
+            // Act
+
+            ((ImageButton)button).PropagateUpClicked();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
