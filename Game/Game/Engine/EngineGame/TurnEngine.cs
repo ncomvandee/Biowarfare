@@ -58,10 +58,16 @@ namespace Game.Engine.EngineGame
             //check for posion character
             foreach (var data in EngineSettings.CharacterList)
             {
-                data.CheckPoison();
-                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(data) + data.Name + "\"" + "Get Poison Damge, Remaining Health " + data.CurrentHealth;
+                var poison = data.CheckPoison();
+                if (poison)
+                {
+                    EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(data) + data.Name + "\"" + "Get Poison Damge, Remaining Health " + data.CurrentHealth;
+                    Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+                }
+
 
                 RemoveIfDead(data);
+
                 if(data.CurrentHealth==0 && data == Attacker)
                 {
                     return result;
@@ -406,7 +412,7 @@ namespace Game.Engine.EngineGame
                 //Spore applies poison to the target
                 if (Attacker.MonsterType == MonsterTypeEnum.Spore)
                 {
-                    int chance = DiceHelper.RollDice(1, 12);
+                    int chance = DiceHelper.RollDice(1, 3);
 
                     if (chance <= 3)
                     {
@@ -419,6 +425,8 @@ namespace Game.Engine.EngineGame
                 if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
                 {
                     Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
+                    EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\"" + " health itself, current health " + Attacker.CurrentHealth;
+                    Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
                 }
 
             }
