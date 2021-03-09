@@ -317,5 +317,22 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void RoundOverPage_PickItem_Clicked_Clicked_Should_Pass()
+        {
+            // Arrange
+
+
+
+
+            // Act
+            page.PickItem_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
