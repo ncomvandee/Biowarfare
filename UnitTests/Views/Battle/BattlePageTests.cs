@@ -1059,5 +1059,25 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(result, (Color)Application.Current.Resources["BattleMapMonsterColor"]); // Got Here
         }
+
+        [Test]
+        public void DetermineMapBackgroundColor_PlayerType_Unknow_Should_Pass()
+        {
+            // Arrange
+            var data = new MapModelLocation { Player = new PlayerInfoModel(), Column = 0, Row = 0 };
+            data.Player.PlayerType = PlayerTypeEnum.Unknown;
+
+
+
+
+            // Act
+
+            var result = page.DetermineMapBackgroundColor(data);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(result, (Color)Application.Current.Resources["BattleMapTransparentColor"]); // Got Here
+        }
     }
 }
