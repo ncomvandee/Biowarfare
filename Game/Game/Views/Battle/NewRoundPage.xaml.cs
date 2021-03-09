@@ -54,7 +54,7 @@ namespace Game.Views
 		/// </summary>
 		/// <param name="data"></param>
 		/// <returns></returns>
-		public StackLayout CreatePlayerDisplayBox(PlayerInfoModel data)
+		public Frame CreatePlayerDisplayBox(PlayerInfoModel data)
 		{
             if (data == null)
             {
@@ -84,8 +84,10 @@ namespace Game.Views
                 WidthRequest = 100,
                 HeightRequest = 100,
                 Content = PlayerImage,
-            };
 
+        };
+
+          
             // If image is clickable show the popup page
             if (ClickAble)
             {
@@ -94,7 +96,7 @@ namespace Game.Views
 
 
             // Put the Image Button inside a layout
-            var PlayerStack = new StackLayout
+/*            var PlayerStack = new StackLayout
             {
                 Style = (Style)Application.Current.Resources["PlayerInfoBox"],
                 HorizontalOptions = LayoutOptions.Center,
@@ -104,8 +106,8 @@ namespace Game.Views
                     ImageFrame,
                 },
             };
-
-            return PlayerStack;
+*/
+            return ImageFrame;
 		}
 
         /// <summary>
