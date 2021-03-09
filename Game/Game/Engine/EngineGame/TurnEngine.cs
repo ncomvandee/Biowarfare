@@ -293,13 +293,27 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override PlayerInfoModel SelectMonsterToAttack()
         {
-            return base.SelectMonsterToAttack();
+            //return base.SelectMonsterToAttack();
+
+            if (EngineSettings.PlayerList == null)
+            {
+                return null;
+            }
+
+            if (EngineSettings.PlayerList.Count < 1)
+            {
+                return null;
+            }
+
             // Select first one to hit in the list for now...
             // Attack the Weakness (lowest HP) MonsterModel first 
 
-            // TODO: Teams, You need to implement your own Logic can not use mine.
+            // Order by who got the biggest Attack damge 
+            var Defender = EngineSettings.PlayerList
+                .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Monster)
+                .OrderByDescending(m => m.GetAttackTotal).FirstOrDefault();
 
-            // throw new System.NotImplementedException();
+            return Defender;
 
         }
 
