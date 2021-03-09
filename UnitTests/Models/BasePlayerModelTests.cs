@@ -1298,8 +1298,21 @@ namespace UnitTests.Models
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void BasePlayerModel_Get_Poison_Count_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
 
-        
+            // Act
+            int result = data.PoisonCount; 
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
+
+
 
 
 
