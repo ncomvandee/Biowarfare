@@ -283,5 +283,22 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void RoundOverPage_CloseButton_Clicked_Should_Pass()
+        {
+            // Arrange
+            var res = new RoundOverPage(true);
+
+
+
+            // Act
+            res.CloseButton_Clicked(null,null);
+         
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
