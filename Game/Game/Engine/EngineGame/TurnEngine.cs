@@ -424,9 +424,14 @@ namespace Game.Engine.EngineGame
                 //Parasite heal 25% of its attack damge 
                 if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
                 {
-                    Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
-                    EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\"" + " health itself, current health " + Attacker.CurrentHealth;
-                    Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+                    var chance = DiceHelper.RollDice(1, 2);
+                    if (chance == 1)
+                    {
+                        Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
+                        EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\"" + " health itself, current health " + Attacker.CurrentHealth;
+                        Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+                    }
+
                 }
 
             }
