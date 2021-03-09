@@ -107,8 +107,8 @@ namespace Game.Engine.EngineGame
             int count = MonsterList.Count();
 
             // Average Cell level use for calculating monster level
-            int AverageCellLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
-
+            //int AverageCellLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
+            int AverageCellLevel = 3;
             // Boss cancer will appear every 5 rounds
             if (EngineSettings.BattleScore.RoundCount > 0 && EngineSettings.BattleScore.RoundCount % 5 == 0)
             {
