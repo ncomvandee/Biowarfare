@@ -6,6 +6,7 @@ using Game.Engine.EngineModels;
 using Game.Engine.EngineBase;
 using System.Diagnostics;
 using Game.Helpers;
+using System.Linq;
 
 namespace Game.Engine.EngineGame
 {
@@ -264,12 +265,27 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override PlayerInfoModel SelectCharacterToAttack()
         {
-            return base.SelectCharacterToAttack();
+
+            if (EngineSettings.PlayerList == null)
+            {
+                return null;
+            }
+
+            if (EngineSettings.PlayerList.Count < 1)
+            {
+                return null;
+            }
+
             // Select first in the list
 
-            // TODO: Teams, You need to implement your own Logic can not use mine.
+            // Order by who got the biggest Attack damge 
+            var Defender = EngineSettings.PlayerList
+                .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Character)
+                .OrderByDescending(m => m.GetAttackTotal).FirstOrDefault();
 
-            // throw new System.NotImplementedException();
+            return Defender;
+            //return base.SelectCharacterToAttack();
+
         }
 
         /// <summary>
