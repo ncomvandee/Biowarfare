@@ -1343,6 +1343,25 @@ namespace UnitTests.Models
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public async Task BasePlayerModel_GetDamageRollValue_KillerTCell_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
+            data.Job = CellTypeEnum.KillerTCell;
+            await ItemIndexViewModel.Instance.CreateAsync(new ItemModel { Attribute = AttributeEnum.Attack, Value = 1, Id = "primaryhand" });
+
+            var itemOld = ItemIndexViewModel.Instance.Dataset.FirstOrDefault();
+            data.AddItem(ItemLocationEnum.PrimaryHand, itemOld.Id);
+
+            // Act
+            data.GetDamageRollValue();
+
+            // Reset
+
+            // Assert
+            Assert.NotNull(data.PrimaryHand);
+        }
 
 
     }
