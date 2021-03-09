@@ -1587,7 +1587,7 @@ namespace UnitTests.Engine.EngineGame
             // Arrange
 
             var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
-            Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
+            //Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
 
             Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
 
