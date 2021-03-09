@@ -397,7 +397,7 @@ namespace Game.Engine.EngineGame
 
                     if (chance <= 3)
                     {
-                        Target.Poison = true;
+                        Target.CausePoison();
                     }
                 }
 
