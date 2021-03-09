@@ -59,7 +59,8 @@ namespace Game.Models
 
             Difficulty = data.Difficulty;
 
-            //Job = data.Job;
+            Job = data.Job;
+            MonsterType = data.MonsterType;
 
             AbilityTracker = data.AbilityTracker;
         }
