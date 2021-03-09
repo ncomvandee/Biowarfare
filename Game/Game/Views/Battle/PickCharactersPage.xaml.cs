@@ -85,9 +85,9 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        public void OnPartyCharacterItemSelected(object sender, SelectionChangedEventArgs args)
+        public void OnPartyCharacterItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            CharacterModel data = args.CurrentSelection.FirstOrDefault() as CharacterModel;
+            CharacterModel data = args.SelectedItem as CharacterModel;
             if (data == null)
             {
                 return;
