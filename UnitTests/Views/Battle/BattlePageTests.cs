@@ -1019,5 +1019,26 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got Here
         }
+
+
+        [Test]
+        public void DetermineMapBackgroundColor_PlayerType_Character_Should_Pass()
+        {
+            // Arrange
+            var data = new MapModelLocation { Player = new PlayerInfoModel(), Column = 0, Row = 0 };
+            data.Player.PlayerType = PlayerTypeEnum.Character;
+
+
+
+
+            // Act
+
+            var result =  page.DetermineMapBackgroundColor(data);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(result, (Color)Application.Current.Resources["BattleMapCharacterColor"]); // Got Here
+        }
     }
 }
