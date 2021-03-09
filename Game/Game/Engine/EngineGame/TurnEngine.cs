@@ -406,7 +406,7 @@ namespace Game.Engine.EngineGame
                 //Spore applies poison to the target
                 if (Attacker.MonsterType == MonsterTypeEnum.Spore)
                 {
-                    int chance = DiceHelper.RollDice(1, 3);
+                    int chance = DiceHelper.RollDice(1, 12);
 
                     if (chance <= 3)
                     {
@@ -458,6 +458,18 @@ namespace Game.Engine.EngineGame
                     }
                 }
 
+            }
+            if(Attacker.PlayerType == PlayerTypeEnum.Character) 
+            {
+                //10% damge against Parasite
+                if (Attacker.Job == CellTypeEnum.Eosinophil)
+                {
+                    if (Target.MonsterType == MonsterTypeEnum.Parasite)
+                    {
+                        EngineSettings.BattleMessagesModel.DamageAmount += EngineSettings.BattleMessagesModel.DamageAmount * 10 / 100;
+                    }
+                }
+                
             }
            
 
