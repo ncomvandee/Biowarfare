@@ -54,6 +54,19 @@ namespace Game.Engine.EngineGame
 
             bool result = false;
 
+
+            //check for posion character
+            foreach (var data in EngineSettings.CharacterList)
+            {
+                data.CheckPoison();
+                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(data) + data.Name + "\"" + "Get Poison Damge, Remaining Health " + data.CurrentHealth;
+
+                RemoveIfDead(data);
+                if(data.CurrentHealth==0 && data == Attacker)
+                {
+                    return result;
+                }
+            }
             // If the action is not set, then try to set it or use Attact
             if (EngineSettings.CurrentAction == ActionEnum.Unknown)
             {
@@ -393,7 +406,7 @@ namespace Game.Engine.EngineGame
                 //Spore applies poison to the target
                 if (Attacker.MonsterType == MonsterTypeEnum.Spore)
                 {
-                    int chance = DiceHelper.RollDice(1, 12);
+                    int chance = DiceHelper.RollDice(1, 3);
 
                     if (chance <= 3)
                     {
