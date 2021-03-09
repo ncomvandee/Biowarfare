@@ -333,29 +333,13 @@ namespace Game.Engine.EngineGame
                     // Apply the Damage
                     ApplyDamage(Target);
 
-                    //Spore applies poison to the target
-                    if (Attacker.MonsterType == MonsterTypeEnum.Spore)
-                    {
-                        int chance = DiceHelper.RollDice(1, 12);
+                    // Check if Dead and Remove
+                    RemoveIfDead(Target);
 
-                        if (chance <= 3)
-                        {
-                            Target.Poison = true;
-                        }
-                    }
-
-
-                    //Parasite heal 25% of its attack damge 
-                    if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
-                    {
-                        Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
-                    };
+                    AfterApplyDamge(Attacker, Target);
 
                     EngineSettings.BattleMessagesModel.TurnMessageSpecial = EngineSettings.BattleMessagesModel.GetCurrentHealthMessage();
 
-
-                    // Check if Dead and Remove
-                    RemoveIfDead(Target);
 
                     // If it is a character apply the experience earned
                     CalculateExperience(Attacker, Target);
@@ -397,6 +381,39 @@ namespace Game.Engine.EngineGame
         }
 
         /// <summary>
+        /// Special Effect after apply damge
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <param name="Target"></param>
+        /// <returns></returns>
+        public bool AfterApplyDamge(PlayerInfoModel Attacker, PlayerInfoModel Target)
+        {
+            if(Attacker.PlayerType == PlayerTypeEnum.Monster)
+            {
+                //Spore applies poison to the target
+                if (Attacker.MonsterType == MonsterTypeEnum.Spore)
+                {
+                    int chance = DiceHelper.RollDice(1, 12);
+
+                    if (chance <= 3)
+                    {
+                        Target.Poison = true;
+                    }
+                }
+
+
+                //Parasite heal 25% of its attack damge 
+                if (Attacker.MonsterType == MonsterTypeEnum.Parasite)
+                {
+                    Attacker.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount * 25 / 100;
+                }
+
+            }
+
+            return true;
+        }
+
+        /// <summary>
         /// Special damge calculator before deal damage 
         /// </summary>
         /// <param name="Attacker"></param>
@@ -427,6 +444,7 @@ namespace Game.Engine.EngineGame
                         Target.CurrentHealth += EngineSettings.BattleMessagesModel.DamageAmount / 2;
                     }
                 }
+
             }
            
 
