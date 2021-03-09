@@ -195,17 +195,20 @@ namespace Game.Models
             get
             {
                 var result = 0;
-
-                switch (Job)
+                if (PlayerType == PlayerTypeEnum.Character)
                 {
+                    switch (Job)
+                    {
 
-                    case CellTypeEnum.KillerTCell:
-                        result = 5;
-                        break;
-                    case CellTypeEnum.BCell:
-                    default:
-                        break;
+                        case CellTypeEnum.KillerTCell:
+                            result = 5;
+                            break;
+                        case CellTypeEnum.BCell:
+                        default:
+                            break;
+                    }
                 }
+                   
                 return result;
             }
         }
@@ -236,15 +239,18 @@ namespace Game.Models
             get
             {
                 var result = 0;
-
-                switch (Job)
+                if (PlayerType == PlayerTypeEnum.Character)
                 {
-                    case CellTypeEnum.Macrophage:
-                        result = 5;
-                        break;
-                    default:
-                        break;
+                    switch (Job)
+                    {
+                        case CellTypeEnum.Macrophage:
+                            result = 5;
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                    
                 return result;
             }
         }
@@ -257,14 +263,19 @@ namespace Game.Models
             get
             {
                 var result = 0;
-                switch (Job)
+
+                if (PlayerType == PlayerTypeEnum.Character)
                 {
-                    case CellTypeEnum.Basophil:
-                        result = 10;
-                        break;
-                    default:
-                        break;
+                    switch (Job)
+                    {
+                        case CellTypeEnum.Basophil:
+                            result = 10;
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                   
                 return result;
             }
         }
@@ -293,14 +304,30 @@ namespace Game.Models
             {
                 var result = 0;
 
-                switch (Job)
+                if(PlayerType == PlayerTypeEnum.Character)
                 {
-                    case CellTypeEnum.NKCell:
-                        result = 10;
-                        break;
-                    default:
-                        break;
+                    switch (Job)
+                    {
+                        case CellTypeEnum.NKCell:
+                            result = 10;
+                            break;
+                        default:
+                            break;
+                    }
                 }
+               
+                if(PlayerType == PlayerTypeEnum.Monster)
+                {
+                    switch (MonsterType)
+                    {
+                        case MonsterTypeEnum.Cancer:
+                            result = 10;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                
                 return result;
             }
         }
