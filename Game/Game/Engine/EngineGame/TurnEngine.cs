@@ -478,7 +478,7 @@ namespace Game.Engine.EngineGame
         public bool BeforeApplyDamge(PlayerInfoModel Attacker, PlayerInfoModel Target)
         {
 
-            if(Attacker.PlayerType == PlayerTypeEnum.Monster)
+            if (Attacker.PlayerType == PlayerTypeEnum.Monster)
             {
                 //Bacteria has threee random skill: 25% to double damge, 50% deal regular damge, 25% heal opponent
                 //Cancer Cell has a cahnce to instant kill 
@@ -487,13 +487,13 @@ namespace Game.Engine.EngineGame
                     int chance = DiceHelper.RollDice(1, 12);
 
                     //Double the damge
-                    if (chance == 1 && chance == 3 && chance == 5)
+                    if (chance == 1 || chance == 3 || chance == 5)
                     {
                         EngineSettings.BattleMessagesModel.DamageAmount *= 2;
                     }
 
                     //Health The Target
-                    if (chance == 1 && chance == 3 && chance == 5)
+                    if (chance == 2 || chance == 4 || chance == 6)
                     {
                         //EngineSettings.BattleMessagesModel.DamageAmount /= 2;
                         //Health Target first
