@@ -131,5 +131,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void NewRoundPage_ShowPopUp_PlayerType_Monster_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel();
+            data.PlayerType = PlayerTypeEnum.Monster;
+            // Act
+
+            page.ShowPopup(data);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
