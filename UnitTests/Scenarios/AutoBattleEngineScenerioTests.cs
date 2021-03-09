@@ -384,9 +384,11 @@ namespace Scenario
         //}
 
         [Test]
-        public async Task AutoBattleEngine_BeforeApplyDamage_Bacteria_Double_Damage_Should_Return_True()
+        public async Task AutoBattleEngine_BeforeApplyDamage_Bacteria_Double_Damage_Roll_1_Should_Pass()
         {
             // Arrange
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyCharacters = 1;
+            
 
             var CharacterPlayerMike = new PlayerInfoModel(
                                 new CharacterModel
@@ -401,11 +403,14 @@ namespace Scenario
 
             AutoBattle.Battle.EngineSettings.CharacterList.Add(CharacterPlayerMike);
 
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyMonsters = 1;
+
             var MonsterPlayer = new PlayerInfoModel(
                    new MonsterModel
                    {
                        Speed = 100, // Will go first...
                        Level = 10,
+                       Attack = 5,
                        CurrentHealth = 1,
                        ExperienceTotal = 1,
                        ExperienceRemaining = 1,
@@ -428,6 +433,110 @@ namespace Scenario
 
             //Assert
             Assert.AreEqual(false, result);
+
+        }
+
+        [Test]
+        public async Task AutoBattleEngine_BeforeApplyDamage_Bacteria_Double_Damage_Roll_3_Should_Pass()
+        {
+            // Arrange
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyCharacters = 1;
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                new CharacterModel
+                                {
+                                    Speed = -1, // Will go last...
+                                    Level = 10,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    ExperienceRemaining = 1,
+                                    Name = "Mike",
+                                });
+
+            AutoBattle.Battle.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyMonsters = 1;
+
+            var MonsterPlayer = new PlayerInfoModel(
+                   new MonsterModel
+                   {
+                       Speed = 100, // Will go first...
+                       Level = 10,
+                       Attack = 5,
+                       CurrentHealth = 1,
+                       ExperienceTotal = 1,
+                       ExperienceRemaining = 1,
+                       MonsterType = MonsterTypeEnum.Bacteria,
+                   });
+
+            AutoBattle.Battle.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+
+            // Controll Rolls,  Always Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(3);
+
+
+            //Act
+            var result = await AutoBattle.RunAutoBattle();
+
+            //Reset
+            DiceHelper.DisableForcedRolls();
+
+            //Assert
+            Assert.AreEqual(false, result);
+
+        }
+
+        [Test]
+        public async Task AutoBattleEngine_BeforeApplyDamage_Bacteria_Double_Damage_Roll_5_Should_Pass()
+        {
+            // Arrange
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyCharacters = 1;
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                new CharacterModel
+                                {
+                                    Speed = -1, // Will go last...
+                                    Level = 10,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    ExperienceRemaining = 1,
+                                    Name = "Mike",
+                                });
+
+            AutoBattle.Battle.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            AutoBattle.Battle.EngineSettings.MaxNumberPartyMonsters = 1;
+
+            var MonsterPlayer = new PlayerInfoModel(
+                   new MonsterModel
+                   {
+                       Speed = 100, // Will go first...
+                       Level = 10,
+                       Attack = 5,
+                       CurrentHealth = 1,
+                       ExperienceTotal = 1,
+                       ExperienceRemaining = 1,
+                       MonsterType = MonsterTypeEnum.Bacteria,
+                   });
+
+            AutoBattle.Battle.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+
+            // Controll Rolls,  Always Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(5);
+
+
+            //Act
+            var result = await AutoBattle.RunAutoBattle();
+
+            //Reset
+            DiceHelper.DisableForcedRolls();
+
+            //Assert
+            Assert.AreEqual(true, result);
 
         }
     }
