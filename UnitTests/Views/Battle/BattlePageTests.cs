@@ -1079,5 +1079,22 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(result, (Color)Application.Current.Resources["BattleMapTransparentColor"]); // Got Here
         }
+
+        [Test]
+        public void GameOverClicked_Should_Pass()
+        {
+            // Arrange
+
+
+
+            // Act
+
+            page.GameOver_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
     }
 }
