@@ -382,5 +382,53 @@ namespace Scenario
         //    //Assert
         //    Assert.AreEqual(true, result);
         //}
+
+        [Test]
+        public async Task AutoBattleEngine_BeforeApplyDamage_Bacteria_Double_Damage_Should_Return_True()
+        {
+            // Arrange
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                                new CharacterModel
+                                {
+                                    Speed = -1, // Will go last...
+                                    Level = 10,
+                                    CurrentHealth = 1,
+                                    ExperienceTotal = 1,
+                                    ExperienceRemaining = 1,
+                                    Name = "Mike",
+                                });
+
+            AutoBattle.Battle.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+
+            var MonsterPlayer = new PlayerInfoModel(
+                   new MonsterModel
+                   {
+                       Speed = 100, // Will go first...
+                       Level = 10,
+                       CurrentHealth = 1,
+                       ExperienceTotal = 1,
+                       ExperienceRemaining = 1,
+                       MonsterType = MonsterTypeEnum.Bacteria,
+                   });
+
+            AutoBattle.Battle.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+
+            // Controll Rolls,  Always Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(1);
+
+
+            //Act
+            var result = await AutoBattle.RunAutoBattle();
+
+            //Reset
+            DiceHelper.DisableForcedRolls();
+
+            //Assert
+            Assert.AreEqual(false, result);
+
+        }
     }
 }
