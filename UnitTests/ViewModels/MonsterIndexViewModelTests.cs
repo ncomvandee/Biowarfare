@@ -305,5 +305,20 @@ namespace UnitTests.ViewModels
             Assert.IsNull(result);
         }
 
+        [Test]
+        public async Task MonsterIndexViewModel_GetSpecificMonster_Null_Should_Return_Null()
+        {
+            // Arrange
+
+            // Act
+            var data = MonsterIndexViewModel.Instance.GetSpecificMonster(MonsterTypeEnum.Unknown);
+
+            // Reset
+
+            // Assert
+
+            Assert.IsNull(data);
+        }
+
     }
 }
