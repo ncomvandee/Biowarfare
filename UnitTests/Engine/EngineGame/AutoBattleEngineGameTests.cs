@@ -119,6 +119,25 @@ namespace UnitTests.Engine.EngineGame
             //Assert
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public async Task AutoBattleEngine_RunAutoBattle_InValid_DetectInfinateLoop_Should_Return_False()
+        {
+            //Arrange
+
+            // Trigger DetectInfinateLoop Loop
+            var oldRoundCountMax = AutoBattleEngine.Battle.EngineSettings.MaxRoundCount;
+            AutoBattleEngine.Battle.EngineSettings.MaxRoundCount = -1;
+
+            //Act
+            var result = await AutoBattleEngine.RunAutoBattle();
+
+            //Reset
+            AutoBattleEngine.Battle.EngineSettings.MaxRoundCount = oldRoundCountMax;
+
+            //Assert
+            Assert.AreEqual(false, result);
+        }
         #endregion RunAutoBattle
 
         #region CreateCharacterParty
