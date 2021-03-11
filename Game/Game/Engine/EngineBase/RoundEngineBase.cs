@@ -250,10 +250,14 @@ namespace Game.Engine.EngineBase
             return EngineSettings.PlayerList;
         }
 
+        /// <summary>
+        /// Enter another realm where player who is slowest go first
+        /// </summary>
+        /// <returns></returns>
         public virtual List<PlayerInfoModel> SlowIsTheNewFast()
         {
             // Order is based by... 
-            // Order by Speed (Desending)
+            // Order by Speed (Slow Go First)
             // Then by Highest level (Descending)
             // Then by Highest Experience Points (Descending)
             // Then by Character before MonsterModel (enum assending)
