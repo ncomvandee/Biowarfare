@@ -161,11 +161,17 @@ namespace Game.Views
             var data = ItemIndexViewModel.Instance.GetItem(item.Id);
             if (data == null)
             {
-                // Show the Default Icon for the Location
-                data = new ItemModel { Name = "Unknown", ImageURI = "icon_cancel.png" };
+                data = ConsumableItemIndexViewModel.Instance.GetItem(item.Id);
 
-                // Turn off click action
-                ClickableButton = false;
+                if (data == null)
+                {
+                    // Show the Default Icon for the Location
+                    data = new ItemModel { Name = "Unknown", ImageURI = "icon_cancel.png" };
+
+                    // Turn off click action
+                    ClickableButton = false;
+                }
+                
             }
 
             // Hookup the Image Button to show the Item picture

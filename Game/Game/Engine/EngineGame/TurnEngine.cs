@@ -672,12 +672,28 @@ namespace Game.Engine.EngineGame
 
             }
 
-            int index = DiceHelper.RollDice(1, ItemIndexViewModel.Instance.Dataset.Count() - 1);
-            var data = ItemIndexViewModel.Instance.Dataset[index];
+            int DropChance = DiceHelper.RollDice(1, 2);
+            ItemModel data = new ItemModel();
+
+            if (DropChance == 1)
+            {
+                int index = DiceHelper.RollDice(1, ItemIndexViewModel.Instance.Dataset.Count() - 1);
+                data = ItemIndexViewModel.Instance.Dataset[index];
+
+                
+            }
+
+            if (DropChance == 2)
+            {
+                var temp = ConsumableItemIndexViewModel.Instance.Dataset;
+                int index = DiceHelper.RollDice(1, ConsumableItemIndexViewModel.Instance.Dataset.Count() - 1);
+                data = ConsumableItemIndexViewModel.Instance.Dataset[index];
+            }
 
             myItemList.Add(data);
-            
-            //myItemList.AddRange(GetRandomMonsterItemDrops(EngineSettings.BattleScore.RoundCount));
+
+
+
 
             // Add to ScoreModel
             foreach (var ItemModel in myItemList)
