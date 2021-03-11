@@ -17,6 +17,8 @@ namespace Game.Models
         // The Ability will be the List of Abilities per Job, and a count of how many times they can use it per round
         public Dictionary<AbilityEnum, int> AbilityTracker = new Dictionary<AbilityEnum, int>();
 
+        public Dictionary<AbilityEnum, int> ConsumableItemTracker = new Dictionary<AbilityEnum, int>();
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -136,6 +138,11 @@ namespace Game.Models
                     }
                     break;
             }
+            foreach (var item in AbilityEnumHelper.GetListItem)
+            {
+                AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 2);
+            }
+
         }
 
         /// <summary>
@@ -189,7 +196,7 @@ namespace Game.Models
             // Adding abilities for monsters, why not, they work hard for a living
             foreach (var item in AbilityEnumHelper.GetListOthers)
             {
-                AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                ConsumableItemTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
             }
 
         }
