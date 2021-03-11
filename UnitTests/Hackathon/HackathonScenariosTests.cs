@@ -205,94 +205,105 @@ namespace Scenario
         }
         #endregion Scenario3
 
-        //#region Scenario4
-        //[Test]
-        //public async Task HakathonScenario_Monsters_Movement_Based_On_Speed_Should_PassAsync()
-        //{
-        //    /* 
-        //   * Scenario Number:  
-        //   *      #35
-        //   *      
-        //   * Description: 
-        //   *      Monster movement should be based on speed, monsters pick 
-        //   *      the most optimal square closest to the target that is within
-        //   *      the speed range of the monster and move there. 
-        //   *      
-        //   * 
-        //   * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
-        //   *     MapModel.cs:
-        //   *       Added ReturnClosestEmptyLocationSpeed(MapModelLocation Target, MapModelLocation Attacker, PlayerInfoModel PlayerAttacker)
-        //   *       Added more parameters so that I could:
-        //   *           1) Determine the free spaced on the map that are in range of the Attacker to move into based on speed
-        //   *           2) Then Calculate the distance between the in range empty location and the target location
-        //   *           3) Return the location that is the closest to the Target that is also in speed range
-        //   *     
-        //   * 
-        //   *     TurnEngine.cs:
-        //   *       line 213, added more parameters to the ReturnClosestEmptyLocationSpeed call
-        //   *     
-        //   * Test Algrorithm:
-        //   *      <Step by step how to validate this change>
-        //   *      
-        //   * Test Conditions:
-        //   *      <List the different test conditions to make>
-        //   * 
-        //   * Validation:
-        //   *      <List how to validate this change>
-        //   *      
-        //   *  
-        //   */
+        #region Scenario4
+        [Test]
+        public void HakathonScenario_Monsters_Movement_Based_On_Speed_Should_Pass()
+        {
+            /* 
+           * Scenario Number:  
+           *      #35
+           *      
+           * Description: 
+           *      Monster movement should be based on speed, monsters pick 
+           *      the most optimal square closest to the target that is within
+           *      the speed range of the monster and move there. 
+           *      
+           * 
+           * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+           *     MapModel.cs:
+           *       Added ReturnClosestEmptyLocationSpeed(MapModelLocation Target, MapModelLocation Attacker, PlayerInfoModel PlayerAttacker)
+           *       Added more parameters so that I could:
+           *           1) Determine the free spaced on the map that are in range of the Attacker to move into based on speed
+           *           2) Then Calculate the distance between the in range empty location and the target location
+           *           3) Return the location that is the closest to the Target that is also in speed range
+           *     
+           * 
+           *     TurnEngine.cs:
+           *       line 213, added more parameters to the ReturnClosestEmptyLocationSpeed call
+           *     
+           * Test Algrorithm:
+           *      <Step by step how to validate this change>
+           *      
+           * Test Conditions:
+           *      <List the different test conditions to make>
+           * 
+           * Validation:
+           *      <List how to validate this change>
+           *      
+           *  
+           */
 
-        //    // Arrange
-        //    EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
-        //    EngineViewModel.Engine.EngineSettings.MaxNumberPartyMonsters = 2;
+            // Arrange
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
 
-        //    // Add a slow character so that monsters can go first 
-        //    var CharacterPlayerMike = new PlayerInfoModel(
-        //                new CharacterModel
-        //                {
-        //                    Speed = -1, // Will go last...
-        //                        Level = 1,
-        //                    CurrentHealth = 1,
-        //                    ExperienceTotal = 1,
-        //                    ExperienceRemaining = 1,
-        //                    Name = "Mike",
-        //                });
+            // Add a slow character so that monsters can go first 
+            var CharacterPlayerMike = new PlayerInfoModel(
+                        new CharacterModel
+                        {
+                            Speed = -1, // Will go last...
+                            Level = 1,
+                            CurrentHealth = 1,
+                            ExperienceTotal = 1,
+                            ExperienceRemaining = 1,
+                            Name = "Mike",
+                        });
 
-        //    EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
 
-        //    // Add quicker monsters so that monsters can go first & we know their speed 
-        //    var MonsterPlayerMelissa = new PlayerInfoModel(
-        //                new MonsterModel
-        //                {
-        //                    Speed = 3, // Will go second 
-        //                    Level = 1,
-        //                    CurrentHealth = 10,
-        //                    ExperienceTotal = 1,
-        //                    ExperienceRemaining = 1,
-        //                    Name = "Melissa",
-        //                });
+            // Add quicker monsters so that monsters can go first & we know their speed 
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyMonsters = 1;
 
 
-        //    EngineViewModel.Engine.EngineSettings.MonsterList.Add(MonsterPlayerMelissa);
+            var MonsterPlayerMelissa = new PlayerInfoModel(
+                        new MonsterModel
+                        {
+                            Speed = 3, // Will go second 
+                            Level = 1,
+                            CurrentHealth = 10,
+                            ExperienceTotal = 1,
+                            ExperienceRemaining = 1,
+                            Name = "Melissa",
+                        });
 
 
+            EngineViewModel.Engine.EngineSettings.MonsterList.Add(MonsterPlayerMelissa);
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
 
 
-        //    // Act
-        //    var result = await EngineViewModel.AutoBattleEngine.RunAutoBattle();
-        //    //var MelissaLocation = EngineViewModel.Engine.EngineSettings.MapModel.GetLocationForPlayer(MonsterPlayerMelissa);
-        //    //var MikeLocation = EngineViewModel.Engine.EngineSettings.MapModel.GetLocationForPlayer(CharacterPlayerMike);
-        //    //var distance = EngineViewModel.Engine.EngineSettings.MapModel.ReturnClosestEmptyLocationSpeed(MelissaLocation, MikeLocation, MonsterPlayerMelissa);
-        //    //var numberdistance = EngineViewModel.Engine.EngineSettings.MapModel.CalculateDistance(MelissaLocation, distance);
+            // Act
+            EngineViewModel.Engine.EngineSettings.CurrentAttacker = MonsterPlayerMelissa;
+            EngineViewModel.Engine.EngineSettings.CurrentDefender = CharacterPlayerMike;
+
+            var MelissaLocation = new MapModelLocation();
+            MelissaLocation.Row = 4;
+            MelissaLocation.Column = 3;
+            MelissaLocation.IsSelectedTarget = true;
+
+            var MikeLocation = new MapModelLocation();
+            MikeLocation.Row = 1;
+            MikeLocation.Column = 1;
+            var distance = EngineViewModel.Engine.EngineSettings.MapModel.ReturnClosestEmptyLocationSpeed(MelissaLocation, MikeLocation, MonsterPlayerMelissa);
+            var numberdistance = EngineViewModel.Engine.EngineSettings.MapModel.CalculateDistance(MelissaLocation, distance);
 
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.AreEqual(true, result);
-        //}
-        //#endregion Scenario4
+            // Assert
+            Assert.IsTrue(numberdistance <= MonsterPlayerMelissa.Speed);
+
+
+        }
+        #endregion Scenario4
 
         [Test]
         public void HackathonScenario16_Valid_Should_Pass()
