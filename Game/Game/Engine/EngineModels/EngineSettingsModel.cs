@@ -47,8 +47,11 @@ namespace Game.Engine.EngineModels
         // The Pool of items collected during the round as turns happen
          public List<ItemModel> ItemPool { get; set; } = new List<ItemModel>();
 
+        // Consumable backpack for team to use
+        public List<ItemModel> EmergencyKit { get; set; } = new List<ItemModel>();
+
         // List of Monsters
-         public List<PlayerInfoModel> MonsterList { get; set; } = new List<PlayerInfoModel>();
+        public List<PlayerInfoModel> MonsterList { get; set; } = new List<PlayerInfoModel>();
 
         // List of Characters
          public List<PlayerInfoModel> CharacterList { get; set; } = new List<PlayerInfoModel>();
