@@ -7,6 +7,7 @@ using Game.Engine.EngineBase;
 using System.Diagnostics;
 using Game.Helpers;
 using System.Linq;
+using Game.ViewModels;
 
 namespace Game.Engine.EngineGame
 {
@@ -660,15 +661,43 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override int DropItems(PlayerInfoModel Target)
         {
-            return base.DropItems(Target);
-            // Drop Items to ItemModel Pool
+            var DroppedMessage = "\nItems Dropped : \n";
 
-            // I feel generous, even when characters die, random drops happen :-)
-            // If Random drops are enabled, then add some....
+            var myItemList = new List<ItemModel>();
+
+            if (Target.PlayerType == PlayerTypeEnum.Character)
+            {
+                // Drop Items to ItemModel Pool
+                myItemList = Target.DropAllItems();
+
+            }
+
+            int index = DiceHelper.RollDice(1, ItemIndexViewModel.Instance.Dataset.Count() - 1);
+            var data = ItemIndexViewModel.Instance.Dataset[index];
+
+            myItemList.Add(data);
+            
+            //myItemList.AddRange(GetRandomMonsterItemDrops(EngineSettings.BattleScore.RoundCount));
 
             // Add to ScoreModel
+            foreach (var ItemModel in myItemList)
+            {
+                EngineSettings.BattleScore.ItemsDroppedList += ItemModel.FormatOutput() + "\n";
+                DroppedMessage += ItemModel.Name + "\n";
+            }
 
-            // throw new System.NotImplementedException();
+            EngineSettings.ItemPool.AddRange(myItemList);
+
+            if (myItemList.Count == 0)
+            {
+                DroppedMessage = " Nothing dropped. ";
+            }
+
+            EngineSettings.BattleMessagesModel.DroppedMessage = DroppedMessage;
+
+            EngineSettings.BattleScore.ItemModelDropList.AddRange(myItemList);
+
+            return myItemList.Count();
         }
 
         /// <summary>
