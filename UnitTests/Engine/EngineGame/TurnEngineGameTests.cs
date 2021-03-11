@@ -664,30 +664,30 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(1, result);
         }
 
-        [Test]
-        public void TurnEngine_DropItems_Valid_Character_Items_2_Should_Return_2()
-        {
-            // Arrange
-            var player = new CharacterModel
-            {
-                Head = ItemIndexViewModel.Instance.Dataset.FirstOrDefault().Id,
-                Feet = ItemIndexViewModel.Instance.Dataset.FirstOrDefault().Id,
-            };
+        //[Test]
+        //public void TurnEngine_DropItems_Valid_Character_Items_2_Should_Return_2()
+        //{
+        //    // Arrange
+        //    var player = new CharacterModel
+        //    {
+        //        Head = ItemIndexViewModel.Instance.Dataset.FirstOrDefault().Id,
+        //        Feet = ItemIndexViewModel.Instance.Dataset.FirstOrDefault().Id,
+        //    };
 
-            var PlayerInfo = new PlayerInfoModel(player);
+        //    var PlayerInfo = new PlayerInfoModel(player);
 
-            DiceHelper.EnableForcedRolls();
-            DiceHelper.SetForcedRollValue(0);
+        //    DiceHelper.EnableForcedRolls();
+        //    DiceHelper.SetForcedRollValue(0);
 
-            // Act
-            var result = Engine.Round.Turn.DropItems(PlayerInfo);
+        //    // Act
+        //    var result = Engine.Round.Turn.DropItems(PlayerInfo);
 
-            // Reset
-            DiceHelper.DisableForcedRolls();
+        //    // Reset
+        //    DiceHelper.DisableForcedRolls();
 
-            // Assert
-            Assert.AreEqual(2, result);
-        }
+        //    // Assert
+        //    Assert.AreEqual(2, result);
+        //}
 
         [Test]
         public void TurnEngine_DropItems_Valid_Monster_Items_0_Random_Drop_1_Should_Return_1()
@@ -1505,30 +1505,30 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
 
-        [Test]
-        public void TurnEngine_MoveAsTurn_Valid_Monster_Should_Pass()
-        {
-            // Arrange
+        //[Test]
+        //public void TurnEngine_MoveAsTurn_Valid_Monster_Should_Pass()
+        //{
+        //    // Arrange
 
-            var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
-            Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
+        //    var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
+        //    Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
-            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
+        //    var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
+        //    Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
-            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+        //    Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
 
-            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
-            Engine.EngineSettings.BattleScore.AutoBattle = true;
+        //    Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+        //    Engine.EngineSettings.BattleScore.AutoBattle = true;
 
-            // Act
-            var result = Engine.Round.Turn.MoveAsTurn(MonsterPlayer);
+        //    // Act
+        //    var result = Engine.Round.Turn.MoveAsTurn(MonsterPlayer);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.AreEqual(true, result);
-        }
+        //    // Assert
+        //    Assert.AreEqual(true, result);
+        //}
 
         [Test]
         public void TurnEngine_MoveAsTurn_Invalid_Monster_InValid_No_Defender_Should_Fail()
