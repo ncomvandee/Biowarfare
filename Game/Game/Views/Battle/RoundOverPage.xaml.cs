@@ -31,7 +31,6 @@ namespace Game.Views
             // Update the Selected Number, this gets updated later when selected refresh happens
             TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
 
-            PickButton.IsVisible = true;
 
             ItemFoundFrame.IsVisible = true;
             ItemListFoundFrame.IsVisible = true;
@@ -183,8 +182,16 @@ namespace Game.Views
 
             if (ClickableButton)
             {
-                // Add a event to the user can click the item and see more
-                ItemButton.Clicked += (sender, args) => ShowItemPopup(data);
+                if (data.IsConsumable)
+                {
+                    // Add a event to the user can click the item and see more
+                    ItemButton.Clicked += (sender, args) => ShowItemPopup(data);
+                }
+
+                if (data.IsConsumable == false)
+                {
+                    ItemButton.Clicked += (sender, args) => PickItem_Clicked(data);
+                }
             }
 
             // Put the Image Button and Text inside a layout
@@ -316,6 +323,16 @@ namespace Game.Views
 		{
             CharacterPopUpFrame.IsVisible = false;
         }
+
+        /// <summary>
+        /// Close item popup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void CloseItemPopup_Clicked(object sender, EventArgs e)
+        {
+            PopupLoadingView.IsVisible = false;
+        }
 		
 		/// <summary>
 		/// Closes the Round Over Popup
@@ -386,9 +403,9 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public async void PickItem_Clicked(object sender, EventArgs e)
+        public async void PickItem_Clicked(ItemModel data)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new PickItemsPage()));
+            await Navigation.PushModalAsync(new PickItemsPage(new GenericViewModel < ItemModel >(data)));
         }
     }
 }

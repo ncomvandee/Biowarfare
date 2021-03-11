@@ -4,6 +4,8 @@ using Xamarin.Forms.Xaml;
 using Game.ViewModels;
 using System.Linq;
 using System.Collections.Generic;
+using Game.Models;
+using Game.ViewModels;
 
 namespace Game.Views
 {
@@ -13,12 +15,17 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PickItemsPage : ContentPage
     {
+        // View Model for Item
+        public readonly GenericViewModel<ItemModel> ViewModel;
+
         /// <summary>
         /// Constructor
         /// </summary>
-        public PickItemsPage()
+        public PickItemsPage(GenericViewModel<ItemModel> data)
         {
             InitializeComponent();
+
+            BindingContext = this.ViewModel = data;
 
             PopulateCellPicker();
 
