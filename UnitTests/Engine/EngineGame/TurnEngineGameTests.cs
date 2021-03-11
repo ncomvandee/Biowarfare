@@ -644,10 +644,10 @@ namespace UnitTests.Engine.EngineGame
 
         #region DropItems
         [Test]
-        public void TurnEngine_DropItems_Valid_No_Items_Should_Return_0()
+        public void TurnEngine_DropItems_Valid_No_Items_Should_Return_1()
         {
             // Arrange
-            var player = new CharacterModel();
+            var player = new MonsterModel();
 
             var PlayerInfo = new PlayerInfoModel(player);
 
@@ -661,7 +661,7 @@ namespace UnitTests.Engine.EngineGame
             DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(1, result);
         }
 
         [Test]
