@@ -236,10 +236,15 @@ namespace Scenario
            *      
            * Test Conditions:
            *      <List the different test conditions to make>
+           *      NumberDistance should be <= to attacking monster speed because they can only move at max their speed 
            * 
            * Validation:
            *      <List how to validate this change>
-           *      
+           *      Create 1 monster, 1 character
+           *      Make monster speed higher 
+           *      Set monster and character spaces on the map
+           *      Calculate closest empty space from monster to character based on monster speed
+           *      Result should be a number < = monster speed 
            *  
            */
 
