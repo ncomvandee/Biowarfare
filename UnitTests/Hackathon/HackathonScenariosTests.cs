@@ -292,7 +292,7 @@ namespace Scenario
             var MikeLocation = new MapModelLocation();
             MikeLocation.Row = 1;
             MikeLocation.Column = 1;
-            var distance = EngineViewModel.Engine.EngineSettings.MapModel.ReturnClosestEmptyLocationSpeed(MelissaLocation, MikeLocation, MonsterPlayerMelissa);
+            var distance = EngineViewModel.Engine.EngineSettings.MapModel.ReturnClosestEmptyLocationSpeed(MikeLocation, MelissaLocation, MonsterPlayerMelissa);
             var numberdistance = EngineViewModel.Engine.EngineSettings.MapModel.CalculateDistance(MelissaLocation, distance);
 
 
