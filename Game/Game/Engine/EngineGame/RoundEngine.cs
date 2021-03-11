@@ -272,7 +272,11 @@ namespace Game.Engine.EngineGame
             // throw new System.NotImplementedException();
         }
 
-        public List<PlayerInfoModel> SlowIsTheNewFast()
+        /// <summary>
+        /// Entering another realm where slowest player go first
+        /// </summary>
+        /// <returns></returns>
+        public override List<PlayerInfoModel> SlowIsTheNewFast()
         {
             EngineSettings.PlayerList = EngineSettings.PlayerList.OrderBy(a => a.GetSpeed())
                .ThenByDescending(a => a.Level)
