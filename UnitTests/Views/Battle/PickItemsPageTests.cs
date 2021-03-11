@@ -11,6 +11,7 @@ using Game.Views;
 using Xamarin.Forms.Mocks;
 using Xamarin.Forms;
 using Game.ViewModels;
+using Game.Models;
 
 namespace UnitTests.Views
 {
@@ -33,7 +34,7 @@ namespace UnitTests.Views
             // For now, set the engine to the Koenig Engine, change when ready 
             BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
 
-            page = new PickItemsPage();
+            page = new PickItemsPage(new GenericViewModel<ItemModel>(new ItemModel()));
         }
 
         [TearDown]
