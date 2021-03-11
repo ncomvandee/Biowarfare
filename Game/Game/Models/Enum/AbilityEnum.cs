@@ -161,6 +161,22 @@ namespace Game.Models
             }
         }
 
+        public static List<string> GetListItem
+        {
+            get
+            {
+
+                List<string> AbilityList = new List<string>{
+                AbilityEnum.Bandage.ToString(),
+                AbilityEnum.Barrier.ToString(),
+                AbilityEnum.Curse.ToString(),
+                AbilityEnum.Heal.ToString()
+                };
+
+                AbilityList.AddRange(GetListOthers);
+                return AbilityList;
+            }
+        }
         /// <summary>
         /// Returns a list of strings of the enum of not Cleric or Fighter
         /// </summary>
