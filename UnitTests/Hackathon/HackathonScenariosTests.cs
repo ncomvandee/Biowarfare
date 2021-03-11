@@ -29,7 +29,7 @@ namespace Scenario
             EngineViewModel.Engine.StartBattle(false);
 
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Default;
-            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum= HitStatusEnum.Default;
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Default;
 
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = false;
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = false;
@@ -75,7 +75,7 @@ namespace Scenario
             // Act
 
             // Assert
-           
+
 
             // Act
             var result = EngineViewModel;
@@ -198,9 +198,9 @@ namespace Scenario
             var data = EngineViewModel.Engine.EngineSettings.MonsterList[0];
 
             // Reset
-            
+
             // Assert
-            Assert.AreEqual(1,result);
+            Assert.AreEqual(1, result);
             Assert.AreEqual(MonsterTypeEnum.Cancer, data.MonsterType);
         }
         #endregion Scenario3
@@ -293,7 +293,89 @@ namespace Scenario
         //    Assert.AreEqual(true, result);
         //}
         //#endregion Scenario4
+
+        [Test]
+        public void HackathonScenario16_Valid_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      #16
+            *      
+            * Description: 
+            *      When toggle the switch to Slow is the new fast, the order of player will be changed. The slowest go first
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *      Set up the switch in BattleSettingPage
+            *      Add new property to keep track of the event in BattleSettingModel
+            *      Add method interface in IRoundEngineInterfacr
+            *      Add new method to return the list of slowest first in TurnEngine
+            *      Also add method in RoundEngineBase to inherit from IRoundEngineInterface
+            *      
+            *      
+            *      
+            * 
+            * Test Algrorithm:
+            *      <Step by step how to validate this change>
+            *      Set the maximum party of character and monster to be 1
+            *      Create the new player with slowest speed as possible
+            *      Create another player with fastest speed
+            *      Toggle the event switch in BattleSettingPage
+            *      Check if the slowest is at index 0 in playerList
+            *      
+            *      
+            * 
+            * Test Conditions:
+            *      <List the different test conditions to make>
+            * 
+            * Validation:
+            *      <List how to validate this change>
+            *      Check if the slowest is at index 0 in playerList
+            *      
+            *  
+            */
+
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyMonsters = 1;
+
+            var CharacterPlayerMike = new PlayerInfoModel(
+                            new CharacterModel
+                            {
+                                Speed = -1, // Will go first in this case
+                                Level = 1,
+                                CurrentHealth = 1,
+                                ExperienceTotal = 1,
+                                ExperienceRemaining = 1,
+                                Name = "Mike",
+                            });
+
+            var MonsterPlayerAnakin = new PlayerInfoModel(new MonsterModel
+            {
+                Speed = 20, // Will go last in this case
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                ExperienceRemaining = 1,
+                Name = "Anakin",
+            });
+
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+            EngineViewModel.Engine.EngineSettings.MonsterList.Add(MonsterPlayerAnakin);
+
+            // Act
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast = true;
+            BattleEngineViewModel.Instance.Engine.Round.NewRound();
+
+            var result = EngineViewModel.Engine.EngineSettings.PlayerList[0];
+
+            // Reset
+
+            // Assert
+
+            Assert.AreEqual(CharacterPlayerMike.Name, result.Name);
+
+
+
+        }
     }
-
-
 }
