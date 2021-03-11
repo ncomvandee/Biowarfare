@@ -24,6 +24,7 @@ namespace Game.Engine.EngineInterfaces
         PlayerInfoModel GetNextPlayerTurn();
         List<PlayerInfoModel> RemoveDeadPlayersFromList();
         List<PlayerInfoModel> OrderPlayerListByTurnOrder();
+        List<PlayerInfoModel> SlowIsTheNewFast();
         List<PlayerInfoModel> MakePlayerList();
         PlayerInfoModel GetNextPlayerInList();
         bool PickupItemsFromPool(PlayerInfoModel character);

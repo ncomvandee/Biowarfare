@@ -26,5 +26,8 @@ namespace Game.Models
 
         // Can monsters have Items and weapons?
         public bool AllowMonsterItems = false;
+
+        // Go slowwwww
+        public bool SlowIsTheNewFast = false;
     }
 }

@@ -60,6 +60,8 @@ namespace Game.Views
             #region MonsterToggles
             AllowMonsterItemsSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems;
             #endregion
+
+            GoSlowSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast;
         }
 
         /// <summary>
@@ -138,6 +140,8 @@ namespace Game.Views
             }
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = false;
+
+            
         }
 
         /// <summary>
@@ -172,6 +176,23 @@ namespace Game.Views
             }
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
+        }
+
+        /// <summary>
+        /// Activate the Slow is the new fast event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void GoSlow_Toggled(object sender, EventArgs e)
+        {
+            if (GoSlowSwitch.IsToggled == true)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast = true;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList = BattleEngineViewModel.Instance.Engine.Round.SlowIsTheNewFast();
+                return;
+            }
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast = false;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList = BattleEngineViewModel.Instance.Engine.Round.OrderPlayerListByTurnOrder();
         }
 
     }

@@ -164,7 +164,20 @@
                                     />
                             
                         </StackLayout>
+
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+
+                            <Label Text="Slow is the new Fast" 
+                                   Style="{DynamicResource  AllowCritMissLabelStyle}"
+                                   />
+
+                            <Switch Style="{StaticResource AllowCritSwitchStyle}"
+                                    x:Name="GoSlowSwitch"
+                                    Toggled="GoSlow_Toggled"
+                                    />
+
                     </StackLayout>
+                </StackLayout>
                 </Frame>
             
             <!--Close button--> 

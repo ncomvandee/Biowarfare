@@ -272,6 +272,19 @@ namespace Game.Engine.EngineGame
             // throw new System.NotImplementedException();
         }
 
+        public List<PlayerInfoModel> SlowIsTheNewFast()
+        {
+            EngineSettings.PlayerList = EngineSettings.PlayerList.OrderBy(a => a.GetSpeed())
+               .ThenByDescending(a => a.Level)
+               .ThenByDescending(a => a.ExperienceTotal)
+               .ThenByDescending(a => a.PlayerType)
+               .ThenBy(a => a.Name)
+               .ThenBy(a => a.ListOrder)
+               .ToList();
+
+            return EngineSettings.PlayerList;
+        }
+
         /// <summary>
         /// Who is Playing this round?
         /// </summary>

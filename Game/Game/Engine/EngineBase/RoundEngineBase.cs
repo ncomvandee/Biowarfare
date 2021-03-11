@@ -250,6 +250,28 @@ namespace Game.Engine.EngineBase
             return EngineSettings.PlayerList;
         }
 
+        public virtual List<PlayerInfoModel> SlowIsTheNewFast()
+        {
+            // Order is based by... 
+            // Order by Speed (Desending)
+            // Then by Highest level (Descending)
+            // Then by Highest Experience Points (Descending)
+            // Then by Character before MonsterModel (enum assending)
+            // Then by Alphabetic on Name (Assending)
+            // Then by First in list order (Assending
+
+            EngineSettings.PlayerList = EngineSettings.PlayerList.OrderBy(a => a.GetSpeed())
+                .ThenByDescending(a => a.Level)
+                .ThenByDescending(a => a.ExperienceTotal)
+                .ThenByDescending(a => a.PlayerType)
+                .ThenBy(a => a.Name)
+                .ThenBy(a => a.ListOrder)
+                .ToList();
+
+            return EngineSettings.PlayerList;
+        }
+
+
         /// <summary>
         /// Who is Playing this round?
         /// </summary>
