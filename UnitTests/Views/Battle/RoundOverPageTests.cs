@@ -318,21 +318,21 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        [Test]
-        public void RoundOverPage_PickItem_Clicked_Clicked_Should_Pass()
-        {
-            // Arrange
+        //[Test]
+        //public void RoundOverPage_PickItem_Clicked_Clicked_Should_Pass()
+        //{
+        //    // Arrange
 
 
 
 
-            // Act
-            page.PickItem_Clicked(null, null);
+        //    // Act
+        //    page.PickItem_Clicked(null, null);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
     }
 }
