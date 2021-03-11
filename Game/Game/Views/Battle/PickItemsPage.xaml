@@ -40,7 +40,7 @@
                            Padding="5, 0"
                            Margin="0">
 
-                        <Label Text="Stone of Remidi" 
+                        <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CellNameLabelStyle}"
                                VerticalOptions="Center" />
 
@@ -54,7 +54,7 @@
                            WidthRequest="150"
                            HeightRequest="150">
 
-                        <Image Source="bloodstone_white_bg.png" />
+                        <Image Source="{Binding Data.ImageURI}" />
 
                     </Frame>
 
@@ -103,20 +103,20 @@
 
                             <StackLayout Orientation="Horizontal" Grid.Column="0">
                                 <Image Source="attack_icon.png" />
-                                <Label Text="9"
+                                <Label Text="{Binding Data.Value}"
                                        FontSize="Medium"/>
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal" Grid.Column="1">
                                 <Image Source="range_blue.png" />
-                                <Label Text="9"
+                                <Label Text="{Binding Data.Range}"
                                        FontSize="Medium"/>
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal" Grid.Column="2">
                                 <Image Source="damage_blue.png"
                                        Margin="0, 0, 0, 1"/>
-                                <Label Text="9"
+                                <Label Text="{Binding Data.Damage}"
                                        FontSize="Medium"/>
                             </StackLayout>
 
@@ -142,7 +142,7 @@
                            Padding="10">
                         <ScrollView>
 
-                            <Label Text="Description goes here...." />
+                            <Label Text="{Binding Data.Description}" />
 
                         </ScrollView>
 
