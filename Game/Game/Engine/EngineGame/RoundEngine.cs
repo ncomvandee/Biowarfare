@@ -67,8 +67,16 @@ namespace Game.Engine.EngineGame
             // Make the BaseEngine.PlayerList
             MakePlayerList();
 
-            // Set Order for the Round
-            OrderPlayerListByTurnOrder();
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast == false)
+            {
+                // Set Order for the Round
+                OrderPlayerListByTurnOrder();
+            }
+
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SlowIsTheNewFast)
+            {
+                SlowIsTheNewFast();
+            }
 
             // Populate BaseEngine.MapModel with Characters and Monsters
             EngineSettings.MapModel.PopulateMapModel(EngineSettings.PlayerList);
