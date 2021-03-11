@@ -104,6 +104,10 @@ namespace Game.Engine.EngineGame
                 case ActionEnum.Move:
                     result = MoveAsTurn(Attacker);
                     break;
+
+                case ActionEnum.UseConsumableItem:
+                    result = UseConsumableItem(Attacker);
+                    break;
             }
 
             EngineSettings.BattleScore.TurnCount++;
@@ -244,6 +248,16 @@ namespace Game.Engine.EngineGame
             return base.UseAbility(Attacker);
             // throw new System.NotImplementedException();
         }
+
+        /// <summary>
+        /// Use the Ability
+        /// </summary>
+        public bool UseConsumableItem(PlayerInfoModel Attacker)
+        {
+          
+          throw new System.NotImplementedException();
+        }
+
 
         /// <summary>
         /// Attack as a Turn

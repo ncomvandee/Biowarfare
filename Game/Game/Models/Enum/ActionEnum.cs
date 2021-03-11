@@ -16,7 +16,11 @@
         Move = 10,
 
         // Ability
-        Ability = 20
+        Ability = 20,
+
+        // Use consumable item 
+        UseConsumableItem = 30
+
     }
 
     /// <summary>
@@ -48,6 +52,10 @@
                     Message = " Uses Ability ";
                     break;
 
+                case ActionEnum.UseConsumableItem:
+                    Message = " Uses Consumable ";
+                    break;
+
                 case ActionEnum.Unknown:
                 default:
                     break;
@@ -77,6 +85,11 @@
                     break;
 
                 case ActionEnum.Ability:
+                    Message = "item.png";
+                    break;
+
+
+                case ActionEnum.UseConsumableItem:
                     Message = "item.png";
                     break;
 
