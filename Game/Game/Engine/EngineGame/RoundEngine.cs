@@ -116,6 +116,10 @@ namespace Game.Engine.EngineGame
                 var boss = MonsterIndexViewModel.Instance.GetSpecificMonster(MonsterTypeEnum.Cancer);
 
                 EngineSettings.MonsterList.Add(new PlayerInfoModel(boss));
+
+
+                //hackathon only spaw Boss Cancer cell
+                return EngineSettings.MonsterList.Count;
             }
 
             // Keep adding monster until full
