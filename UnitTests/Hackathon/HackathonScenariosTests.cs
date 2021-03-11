@@ -3,6 +3,10 @@
 using Game.Models;
 using System.Threading.Tasks;
 using Game.ViewModels;
+using Game.Views;
+using Xamarin.Forms.Mocks;
+using Game;
+using Xamarin.Forms;
 
 namespace Scenario
 {
@@ -16,7 +20,7 @@ namespace Scenario
         public void Setup()
         {
             // Choose which engine to run
-            EngineViewModel.SetBattleEngineToKoenig();
+            EngineViewModel.SetBattleEngineToGame();
 
             // Put seed data into the system for all tests
             EngineViewModel.Engine.Round.ClearLists();
@@ -29,6 +33,8 @@ namespace Scenario
 
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = false;
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = false;
+
+
         }
 
         [TearDown]
@@ -152,5 +158,53 @@ namespace Scenario
             Assert.AreEqual(1, EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount);
         }
         #endregion Scenario1
+
+        #region Scenario3
+        [Test]
+        public void HakathonScenario_Boss_Monster_Respawd_At_Round_five_Should_Return_True()
+        {
+            /* 
+            * Scenario Number:  
+            *      #
+            *      
+            * Description: 
+            *      Boss monster shows up at round 5
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *      Change Round number to round 5
+            *      Clear the monster list
+            *      Call AddMonstersToRound();
+            * 
+            * Test Algrorithm:
+            *      <Step by step how to validate this change>
+            *      Check number of monsterlist
+            *      check member of monsterlist
+            * 
+            * Test Conditions:
+            *      <List the different test conditions to make>
+            * 
+            * Validation:
+            *      <List how to validate this change>
+            *      Monsterlist count to one 
+            *      Monsterlist data is Monstertype.Cancer
+            *  
+            */
+
+            // Arrange
+            EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount = 5;
+            EngineViewModel.Engine.EngineSettings.MonsterList.Clear();
+            // Act
+            var result = EngineViewModel.Engine.Round.AddMonstersToRound();
+            var data = EngineViewModel.Engine.EngineSettings.MonsterList[0];
+
+            // Reset
+            
+            // Assert
+            Assert.AreEqual(1,result);
+            Assert.AreEqual(MonsterTypeEnum.Cancer, data.MonsterType);
+        }
+        #endregion Scenario3
     }
+
+
 }
