@@ -44,9 +44,6 @@
                                    Style="{StaticResource CharacterCellNameLabelStyle}"
                                    />
 
-                            <!--<BoxView Color="{StaticResource PrimaryCharacterBackground}" WidthRequest="2" HeightRequest="1" ></BoxView>-->
-
-
                             <Label Text="|" 
                                    Style="{StaticResource CharacterCellNameLabelStyle}"
                                    />
@@ -82,17 +79,17 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
-                            Text="Delete" 
-                            Clicked="Delete_Clicked"
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Source="delete_character.png"
+                                 Clicked="Delete_Clicked"
                             >  
-                    </Button>
+                    </ImageButton>
 
-                    <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
-                            Text="Cancel" 
-                            Clicked="Cancel_Clicked"
-                            >
-                    </Button>
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Clicked="Cancel_Clicked"
+                                 Source="cancel_character.png"
+                                 >
+                    </ImageButton>
                     
                 </StackLayout>
             </StackLayout>
