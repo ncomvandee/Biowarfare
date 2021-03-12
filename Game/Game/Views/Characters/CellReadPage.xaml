@@ -226,11 +226,12 @@
                     </Grid>
                 </Frame>
 
-                <Button Style="{StaticResource CharacterPrimaryButtonStyle}"
-                        Text="Edit" 
-                        Margin="20" 
-                        Clicked="CellEditButton_Clicked"
-                        />
+                <ImageButton 
+                             Clicked="CellEditButton_Clicked"
+                             Source="edit_character.png"
+                             >
+                </ImageButton>
+
 
             </StackLayout>
 
@@ -244,7 +245,7 @@
                 <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
 
                     <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
-                                 Source="icon_cancel.png"
+                                 Source="cancel_x_character.png"
                                  Clicked="ClosePopup_Clicked"
                                  />
 
