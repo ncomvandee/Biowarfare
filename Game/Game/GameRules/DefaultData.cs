@@ -299,12 +299,6 @@ namespace Game.GameRules
                     MaxHealth = 5,
                     ImageURI = "basophil_no_bg.png",
                     Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -318,12 +312,6 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "b_cell_no_bg.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
                 },
 
@@ -335,13 +323,7 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "eosinophil_no_bg.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -354,12 +336,6 @@ namespace Game.GameRules
                     MaxHealth = 5,
                     ImageURI = "t_cell_no_bg.png",
                     Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -372,13 +348,7 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "macrophage_no_bg.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
+                    Necklass = NecklassString,      
                 },
 
                 new CharacterModel {
@@ -389,13 +359,7 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "nkcell_no_bg.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
                     Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
             };
