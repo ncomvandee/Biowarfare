@@ -140,114 +140,144 @@
 
                     </Grid>
 
-                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
-                            BackgroundColor="{StaticResource PrimaryAccentColor}"
-                            Padding="10"
-                            x:Name="AttributeFrame"
-                            CornerRadius="20"
-                            IsVisible="True"
-                                >
+                    <Frame Style="{StaticResource InvisibleReadFrameStyle}"
+                           BackgroundColor="{StaticResource PrimaryAccentColor}"
+                           Margin="0, 20, 0, 0" 
+                           HeightRequest="170"
+                           WidthRequest="300"
+                           CornerRadius="20">
 
-                        <StackLayout>
-                            <Frame Style="{StaticResource PopupTitleFrameStyle}"
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Frame Grid.Row="0" 
+                                   Style="{StaticResource ReadAttributeFrameStyle}"
                                    BackgroundColor="{StaticResource PrimaryForegroundPurple}"
-                                   Padding="40, 0">
+                                   BorderColor="Transparent">
 
-                                <Label Style="{StaticResource EquipPopupLabelStyle}"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       Text="Attribute"
-                                       FontSize="Default"
-                                        />
+                                <Image Source='icon_click.png' 
+                                   HorizontalOptions="End"
+                                   Margin="10, 5"
+                                   />
 
                             </Frame>
 
-                            <Grid ColumnSpacing="25" 
-                                  RowSpacing="5" 
-                                  Margin="0, 0"
+                            <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
+                                    Grid.Row="0" 
+                                    Text="Items" 
+                                    x:Name="ItemAttributeToggleButton"
+                                    Clicked="ItemAttributeToggle_Clicked"
+                                />
+
+                            <ScrollView Orientation="Horizontal"
+                                    HorizontalScrollBarVisibility="Default"
+                                    Grid.Row="1" 
+                                    x:Name="ItemsFrame"
+                                    IsVisible="false"    
+                                    >
+
+                                <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
+                                            x:Name="ItemBox"
+                                            />
+
+                            </ScrollView>
+
+                            <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                                x:Name="AttributeFrame"
+                                Grid.Row="1"
+                                IsVisible="true"
+                                >
+
+                                <Grid ColumnSpacing="25" 
+                                  RowSpacing="0" 
+                                  Margin="0, 10"
                                   >
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <Image Source="attack_icon.png" 
-                                       WidthRequest="20" 
-                                       Grid.Row="1" 
+                                    <Image Source="attack_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
                                        Grid.Column="0" 
                                        />
 
-                                <Label x:Name="Attack"
-                                       Style="{StaticResource ReadStatsLabelStyle}"
-                                       Grid.Row="2" 
-                                       Grid.Column="0"
-                                       FontSize="Medium"
+                                    <Label x:Name="Attack"
+                                           FontSize="Medium"
+                                           Style="{StaticResource ReadStatsLabelStyle}"
+                                           Grid.Row="1" 
+                                           Grid.Column="0" 
                                        />
 
-                                <Image Source="defense_icon.png" 
-                                       WidthRequest="20" 
+                                    <Image Source="defense_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="1" 
+                                       />
+
+                                    <Label x:Name="Defense"
+                                           FontSize="Medium"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="1" 
                                        Grid.Column="1" 
                                        />
 
-                                <Label x:Name="Defense"
-                                       Style="{StaticResource ReadStatsLabelStyle}"
-                                       Grid.Row="2" 
-                                       Grid.Column="1"
-                                       FontSize="Medium"
+                                    <Image Source="speed_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="2" 
                                        />
 
-                                <Image Source="speed_icon.png" 
-                                       WidthRequest="20" 
+                                    <Label x:Name="Speed"
+                                           FontSize="Medium"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="1" 
                                        Grid.Column="2" 
                                        />
 
-                                <Label x:Name="Speed"
-                                       Style="{StaticResource ReadStatsLabelStyle}"
-                                       Grid.Row="2" 
-                                       Grid.Column="2"
-                                       FontSize="Medium"
+                                    <Image Source="heart_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="3" 
                                        />
 
-                                <Image Source="heart_icon.png" 
-                                       WidthRequest="20" 
+                                    <Label x:Name="Health"
+                                           FontSize="Medium" 
+                                       Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="1" 
                                        Grid.Column="3" 
                                        />
 
-                                <Label x:Name="Health"
-                                       Style="{StaticResource ReadStatsLabelStyle}"
-                                       Grid.Row="2" 
-                                       Grid.Column="3"
-                                       FontSize="Medium"
+                                    <Image Source="xp_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="4" 
                                        />
 
-                                <Image Source="xp_icon.png" 
-                                       WidthRequest="20" 
+                                    <Label x:Name="Experience"
+                                           FontSize="Medium" 
+                                       Style="{StaticResource ReadStatsLabelStyle}"
                                        Grid.Row="1" 
                                        Grid.Column="4" 
                                        />
 
-                                <Label x:Name="Experience"
-                                       Style="{StaticResource ReadStatsLabelStyle}"
-                                       Grid.Row="2" 
-                                       Grid.Column="4"
-                                       FontSize="Medium"
-                                       />
-
-                            </Grid>
-
-                        </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
                     </Frame>
+
 
                 </StackLayout>
             </Frame>

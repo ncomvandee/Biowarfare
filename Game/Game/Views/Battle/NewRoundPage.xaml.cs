@@ -17,11 +17,14 @@ namespace Game.Views
 	{
 		// This uses the Instance so it can be shared with other Battle Pages as needed
 		public BattleEngineViewModel EngineViewModel = BattleEngineViewModel.Instance;
+        
+        // View Model for Item
+        public readonly GenericViewModel<CharacterModel> ViewModel;
 
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		public NewRoundPage ()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public NewRoundPage ()
 		{
 			InitializeComponent ();
 
@@ -94,21 +97,93 @@ namespace Game.Views
                 PlayerImage.Clicked += (sender, args) => ShowPopup(data);
             }
 
-
-            // Put the Image Button inside a layout
-/*            var PlayerStack = new StackLayout
-            {
-                Style = (Style)Application.Current.Resources["PlayerInfoBox"],
-                HorizontalOptions = LayoutOptions.Center,
-                Padding = 0,
-                Spacing = 0,
-                Children = {
-                    ImageFrame,
-                },
-            };
-*/
             return ImageFrame;
 		}
+
+        /// <summary>
+        /// Displays items Cell equipped as image
+        /// </summary>
+        public void AddItemToDisplay(PlayerInfoModel CellData)
+        {
+            var FlexList = ItemBox.Children.ToList();
+
+            foreach (var data in FlexList)
+            {
+                ItemBox.Children.Remove(data);
+            }
+
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Head, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Necklass, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.PrimaryHand, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.OffHand, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.RightFinger, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.LeftFinger, CellData));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Feet, CellData));
+
+        }
+
+        /// <summary>
+        /// Look up items to display
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
+        public StackLayout GetItemToDisplay(ItemLocationEnum location, PlayerInfoModel data)
+        {
+            var ItemData = data.GetItemByLocation(location);
+
+            // If item is not equipped, will not render anything
+            if (ItemData == null)
+            {
+
+                return new StackLayout { };
+
+            }
+
+            // Item image as ImageButton for pop-up detail view
+            var ItemButton = new ImageButton
+            {
+                Source = ItemData.ImageURI,
+                WidthRequest = 60,
+                HeightRequest = 60,
+                BackgroundColor = Color.White,
+                CornerRadius = 50,
+                Padding = 5,
+            };
+
+            // Label for each item
+            var ItemLabel = new Label
+            {
+                Text = ItemData.Attribute.ToString() + " + " + ItemData.Value.ToString(),
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.HeadTruncation
+
+            };
+
+            // Frame for label, so that the text will wrap if text is long
+            var ItemFrame = new Frame
+            {
+                BackgroundColor = Color.Transparent,
+                BorderColor = Color.Transparent,
+                WidthRequest = 100,
+
+                Content = ItemLabel,
+            };
+
+            // Put ImageButton and label in to same stack
+            var ItemStack = new StackLayout
+            {
+                Padding = 3,
+                HorizontalOptions = LayoutOptions.Center,
+
+                Children = { ItemButton, ItemFrame },
+            };
+
+            // Render particuler stack
+            return ItemStack;
+        }
+
 
         /// <summary>
         /// Shows the popup frame that present character information
@@ -137,6 +212,8 @@ namespace Game.Views
             Health.Text = data.GetCurrentHealthTotal.ToString();
             Experience.Text = data.ExperienceTotal.ToString();
 
+            AddItemToDisplay(data);
+
         }
 
         /// <summary>
@@ -148,5 +225,31 @@ namespace Game.Views
         {
             CharacterPopUpFrame.IsVisible = false;
         }
-	}
+
+        /// <summary>
+        /// Flip feature, toggle betweem item list and attribute
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ItemAttributeToggle_Clicked(object sender, EventArgs e)
+        {
+            if (ItemsFrame.IsVisible)
+            {
+                ItemsFrame.IsVisible = false;
+                AttributeFrame.IsVisible = true;
+                ItemAttributeToggleButton.Text = "Attributes";
+                return;
+            }
+
+            if (AttributeFrame.IsVisible)
+            {
+                AttributeFrame.IsVisible = false;
+                ItemsFrame.IsVisible = true;
+                ItemAttributeToggleButton.Text = "Items";
+                return;
+            }
+        }
+
+
+    }
 }
