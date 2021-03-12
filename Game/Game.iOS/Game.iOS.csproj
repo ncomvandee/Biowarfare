@@ -516,4 +516,55 @@
   <ItemGroup>
     <BundleResource Include="Resources\enter_page_bg_holes.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\assign_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\attack_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\auto_assign_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel_x_character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel_x_items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel_x_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel_x_monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel_x_scores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\continue_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\get_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\move_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pass_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\select_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\update_scores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\use_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\wipe_main.png" />
+  </ItemGroup>
 </Project>
