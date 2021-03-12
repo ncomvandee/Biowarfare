@@ -12130,88 +12130,103 @@ namespace Game.Droid
 			public const int range_blue = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int scores_button = 2131165441;
+			public const int save_character = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int select_main = 2131165442;
+			public const int save_items = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int speed_green = 2131165443;
+			public const int save_main = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int speed_icon = 2131165444;
-			
-			// aapt resource value: 0x7F070106
-			public const int splashscreen = 2131165446;
+			public const int save_monster = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int splash_screen = 2131165445;
+			public const int save_scores = 2131165445;
+			
+			// aapt resource value: 0x7F070106
+			public const int scores_button = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int spore_bg = 2131165447;
+			public const int select_main = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int spore_no_bg = 2131165448;
+			public const int speed_green = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int start_main = 2131165449;
-			
-			// aapt resource value: 0x7F07010A
-			public const int stethoscope_no_bg = 2131165450;
+			public const int speed_icon = 2131165449;
 			
 			// aapt resource value: 0x7F07010B
-			public const int stethoscope_white_bg = 2131165451;
+			public const int splashscreen = 2131165451;
 			
-			// aapt resource value: 0x7F07010E
-			public const int test_custom_background = 2131165454;
-			
-			// aapt resource value: 0x7F07010F
-			public const int thermometer_no_bg = 2131165455;
-			
-			// aapt resource value: 0x7F070110
-			public const int thermometer_white_bg = 2131165456;
-			
-			// aapt resource value: 0x7F070111
-			public const int tooltip_frame_dark = 2131165457;
-			
-			// aapt resource value: 0x7F070112
-			public const int tooltip_frame_light = 2131165458;
+			// aapt resource value: 0x7F07010A
+			public const int splash_screen = 2131165450;
 			
 			// aapt resource value: 0x7F07010C
-			public const int t_cell_bg = 2131165452;
+			public const int spore_bg = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int t_cell_no_bg = 2131165453;
+			public const int spore_no_bg = 2131165453;
+			
+			// aapt resource value: 0x7F07010E
+			public const int start_main = 2131165454;
+			
+			// aapt resource value: 0x7F07010F
+			public const int stethoscope_no_bg = 2131165455;
+			
+			// aapt resource value: 0x7F070110
+			public const int stethoscope_white_bg = 2131165456;
 			
 			// aapt resource value: 0x7F070113
-			public const int update_scores = 2131165459;
+			public const int test_custom_background = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int use_main = 2131165460;
+			public const int thermometer_no_bg = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int vicious_scalpel_no_bg = 2131165461;
+			public const int thermometer_white_bg = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int vicious_scalpel_white_bg = 2131165462;
+			public const int tooltip_frame_dark = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int virus_bg = 2131165463;
+			public const int tooltip_frame_light = 2131165463;
+			
+			// aapt resource value: 0x7F070111
+			public const int t_cell_bg = 2131165457;
+			
+			// aapt resource value: 0x7F070112
+			public const int t_cell_no_bg = 2131165458;
 			
 			// aapt resource value: 0x7F070118
-			public const int virus_no_bg = 2131165464;
+			public const int update_scores = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int wipe_main = 2131165465;
-			
-			// aapt resource value: 0x7F07011C
-			public const int xp_icon = 2131165468;
+			public const int use_main = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int x_ray_gun_no_bg = 2131165466;
+			public const int vicious_scalpel_no_bg = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int x_ray_gun_white_bg = 2131165467;
+			public const int vicious_scalpel_white_bg = 2131165467;
+			
+			// aapt resource value: 0x7F07011C
+			public const int virus_bg = 2131165468;
+			
+			// aapt resource value: 0x7F07011D
+			public const int virus_no_bg = 2131165469;
+			
+			// aapt resource value: 0x7F07011E
+			public const int wipe_main = 2131165470;
+			
+			// aapt resource value: 0x7F070121
+			public const int xp_icon = 2131165473;
+			
+			// aapt resource value: 0x7F07011F
+			public const int x_ray_gun_no_bg = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int x_ray_gun_white_bg = 2131165472;
 			
 			static Drawable()
 			{
