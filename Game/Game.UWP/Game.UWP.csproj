@@ -275,6 +275,11 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="range_blue.png" />
+    <Content Include="save_character.png" />
+    <Content Include="save_items.png" />
+    <Content Include="save_main.png" />
+    <Content Include="save_monster.png" />
+    <Content Include="save_scores.png" />
     <Content Include="scores_button.png" />
     <Content Include="select_main.png" />
     <Content Include="speed_green.png" />
