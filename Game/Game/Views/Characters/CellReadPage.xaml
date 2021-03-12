@@ -229,7 +229,8 @@
                 <ImageButton 
                              Clicked="CellEditButton_Clicked"
                              Source="edit_character.png"
-                             >
+                             Style="{StaticResource ImageButtonGameStyle}"
+                    >
                 </ImageButton>
 
 

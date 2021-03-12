@@ -2587,6 +2587,18 @@
             <!--___________________________________________-->
 
 
+            <!--Style for all image buttons-->
+            <Style TargetType="ImageButton"
+                   x:Key="ImageButtonGameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Margin" Value="0, 15, 0, 0"/>
+
+            </Style>
+
+     
 
 
 
