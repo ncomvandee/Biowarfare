@@ -673,22 +673,31 @@ namespace Game.Engine.EngineGame
 
             }
 
+            // 50 50 percent chance that the item drop will be equipable or consumable
             int DropChance = DiceHelper.RollDice(1, 2);
             ItemModel data = new ItemModel();
 
+            // Drop equipable
             if (DropChance == 1)
             {
                 int index = DiceHelper.RollDice(1, ItemIndexViewModel.Instance.Dataset.Count() - 1);
+
+                // Get the random item from the dataset
                 data = ItemIndexViewModel.Instance.Dataset[index];
 
-                
             }
 
+            // Drop consumable
             if (DropChance == 2)
             {
-                var temp = ConsumableItemIndexViewModel.Instance.Dataset;
                 int index = DiceHelper.RollDice(1, ConsumableItemIndexViewModel.Instance.Dataset.Count() - 1);
+
+                // Get the random item from dataset
                 data = ConsumableItemIndexViewModel.Instance.Dataset[index];
+
+                // If item is consumable, will be picked to emergency kit automatically
+                EngineSettings.EmergencyKit.Add(data);
+                
             }
 
             myItemList.Add(data);
