@@ -226,8 +226,7 @@
                     </Grid>
                 </Frame>
 
-                <ImageButton 
-                             Clicked="CellEditButton_Clicked"
+                <ImageButton Clicked="CellEditButton_Clicked"
                              Source="edit_character.png"
                              Style="{StaticResource ImageButtonGameStyle}"
                     >
