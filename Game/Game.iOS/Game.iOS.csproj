@@ -567,4 +567,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\wipe_main.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\save_character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\save_items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\save_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\save_monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\save_scores.png" />
+  </ItemGroup>
 </Project>
