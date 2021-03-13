@@ -168,11 +168,10 @@
                 </Grid>
             </Frame>
 
-            <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
-                    Text="Edit" 
-                    Margin="20" 
-                    Clicked="MonsterCellEditButton_Clicked" 
-                    />
+            <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                         Clicked="MonsterCellEditButton_Clicked" 
+                         Source="edit_monster.png"
+                         />
         
         </StackLayout>
     </ContentPage.Content>
