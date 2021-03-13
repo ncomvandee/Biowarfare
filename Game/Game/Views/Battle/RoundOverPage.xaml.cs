@@ -124,7 +124,7 @@ namespace Game.Views
         /// </summary>
         public void DrawSelectedItems()
         {
-            // Clear and Populate the Dropped Items
+            // Clear and Populate the Selected Items
             var FlexList = ItemListSelectedFrame.Children.ToList();
             foreach (var data in FlexList)
             {
@@ -145,11 +145,6 @@ namespace Game.Views
         public StackLayout GetItemToDisplay(ItemModel item, bool Assignable)
         {
             if (item == null)
-            {
-                return new StackLayout();
-            }
-
-            if (string.IsNullOrEmpty(item.Id))
             {
                 return new StackLayout();
             }
@@ -182,12 +177,14 @@ namespace Game.Views
 
             if (ClickableButton)
             {
+                // If item is consumable, no need to assign item. Consumable will automatically go to EmergencyKit(Backpack)
                 if (data.IsConsumable)
                 {
                     // Add a event to the user can click the item and see more
                     ItemButton.Clicked += (sender, args) => ShowItemPopup(data);
                 }
 
+                // If item is not consumable, user can manually assign item to cell
                 if (data.IsConsumable == false)
                 {
                     ItemButton.Clicked += (sender, args) => PickItem_Clicked(data);
@@ -323,8 +320,10 @@ namespace Game.Views
         /// <returns></returns>
         public StackLayout GetItemToDisplay(ItemLocationEnum location, PlayerInfoModel data)
         {
+            // Item from location where player is equipped
             var ItemData = data.GetItemByLocation(location);
 
+            // Default clickable button
             var ClickAbleButton = true;
 
             // If item is not equipped, will not render anything
@@ -346,6 +345,7 @@ namespace Game.Views
                 Padding = 5,
             };
 
+            // Clicked to unequip item from player
             if (ClickAbleButton)
             {
                 ItemButton.Clicked += (sender, args) => UnequippedItem(data, location);
@@ -403,7 +403,9 @@ namespace Game.Views
             Health.Text = data.GetCurrentHealthTotal.ToString();
             Experience.Text = data.ExperienceTotal.ToString();
 
+            // Show items player equipped
             AddItemToDisplay(data);
+
             return true;
         }
 
@@ -526,10 +528,17 @@ namespace Game.Views
             }
         }
 
+        /// <summary>
+        /// Unequipped item from player
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="location"></param>
         public void UnequippedItem(PlayerInfoModel data, ItemLocationEnum location)
         {
+            // Item which player equipped
             var item = data.GetItemByLocation(location);
 
+            // Unequipped item by location
             switch (location)
             {
                 case ItemLocationEnum.Head:
@@ -561,11 +570,13 @@ namespace Game.Views
                     break;
             }
 
-
+            // Added unequipped item back to item pool
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(item);
 
+            // Removed item from selected list
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Remove(item);
 
+            // Refresh display
             AddItemToDisplay(data);
 
             DrawItemLists();
