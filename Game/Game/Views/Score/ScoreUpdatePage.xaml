@@ -184,15 +184,15 @@
                          Margin="0, 10, 0, 0"
                          HorizontalOptions="Center">
 
-                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                        Text="Save" 
-                        Clicked="Save_Clicked"
-                        />
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Source="save_scores.png"
+                             Clicked="Save_Clicked"
+                             />
 
-                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                        Text="Cancel" 
-                        Clicked="Cancel_Clicked"
-                        />
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Source="cancel_scores.png"
+                             Clicked="Cancel_Clicked"
+                             />
 
             </StackLayout>
 
