@@ -123,15 +123,15 @@
                          HorizontalOptions="Center"
                          >
 
-                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
-                        Text="Save"  
-                        Clicked="Save_Clicked"
-                        />
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Source="save_items.png" 
+                             Clicked="Save_Clicked"
+                             />
 
-                <Button Style="{StaticResource ItemPrimaryButtonStyle}"
-                        Text="Cancel"  
-                        Clicked="Cancel_Clicked"
-                        />
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Source="cancel_items.png" 
+                             Clicked="Cancel_Clicked"
+                             />
 
             </StackLayout>
         </StackLayout>
