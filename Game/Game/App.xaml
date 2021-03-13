@@ -2598,7 +2598,19 @@
 
             </Style>
 
-     
+            <!--Style for all image buttons-->
+            <Style TargetType="ImageButton"
+                   x:Key="SmallImageButtonGameStyle"
+                   BasedOn="{StaticResource ImageButtonGameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="120"/>
+                <Setter Property="HeightRequest" Value="20"/>
+                <Setter Property="Margin" Value="0, 0, 0, 0"/>
+
+            </Style>
+
+
 
 
 

@@ -142,14 +142,16 @@
                     <StackLayout Style="{StaticResource VerticalStack}">
                             <StackLayout Style="{StaticResource HorizontalStack}">
 
-                                <Label
-                                Text="Database Settings"
-                                Style="{DynamicResource CellNameLabelStyle}"/>
+                                <Label Text="Database Settings"
+                                       Style="{DynamicResource CellNameLabelStyle}"
+                                       Margin="0, 0, 5, 0"
+                                       />
 
                                 <Switch
                                 x:Name="DatabaseSettingsSwitch"
                                 HorizontalOptions="EndAndExpand"
                                 Toggled="DatabaseSettingsSwitch_OnToggled"
+                                OnColor="{StaticResource SecondaryAccentColor}"
                                 IsToggled="False"/>
                             </StackLayout>
 
@@ -162,13 +164,18 @@
                                     Padding="50,0,0,0">
 
                                     <Label Text="SQL Data Source"
-                                       Style="{DynamicResource LabelStyle}"/>
+                                           Style="{DynamicResource SimpleLabelTextStyle}"
+                                           TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                           Margin="0, 5, 5, 0"
+                                           
+                                           />
 
                                     <Switch
                                     HorizontalOptions="Start" 
                                     VerticalOptions="Center"
                                     x:Name="DataSourceValue"
                                     IsToggled="{Binding ItemIndexViewModel.Instance.CurrentDataSource}"
+                                    OnColor="{StaticResource SecondaryAccentColor}"
                                     Toggled="DataSource_Toggled" 
                                     />
 
@@ -178,12 +185,15 @@
                                         Padding="50,0,0,0">
 
                                     <Label Text="Wipe Data List"
-                                       Style="{DynamicResource LabelStyle}"/>
+                                           Style="{DynamicResource SimpleLabelTextStyle}"
+                                           TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                           Margin="0, 0, 0, 0"
+                                           />
 
-                                    <Button
-                                    Text="Wipe"
-                                    Clicked="WipeDataList_Clicked"
-                                    />
+                                    <ImageButton Source="wipe_main.png"
+                                                 Style="{StaticResource SmallImageButtonGameStyle}"
+                                                 Clicked="WipeDataList_Clicked"
+                                                 />
 
                                 </StackLayout>
                             </StackLayout>
@@ -196,12 +206,14 @@
                                 <Label
                                 Text="Debug Settings"
                                 Style="{DynamicResource CellNameLabelStyle}"
+                                    Margin="0, 0, 5, 0"
                                 />
 
                                 <Switch
                                 x:Name="DebugSettingsSwitch"
                                 HorizontalOptions="EndAndExpand"
                                 Toggled="DebugSettingsSwitch_OnToggled"
+                                OnColor="{StaticResource SecondaryAccentColor}"
                                 IsToggled="False"/>
                             </StackLayout>
 
@@ -209,7 +221,7 @@
 
                                 <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
 
-                                    <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
+                                    <Label Text="More Debug Settings to come..." Style="{DynamicResource SimpleLabelTextStyle}"/>
 
                                     <StackLayout Style="{StaticResource VerticalStack}">
 
@@ -218,7 +230,9 @@
                                             Text="Number of Items "
                                             HorizontalTextAlignment="Start"
                                             HorizontalOptions="Start"
-                                            Style="{DynamicResource LabelStyle}"
+                                            Style="{DynamicResource SimpleLabelTextStyle}"
+                                            TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                                Margin="0, 5, 5, 0"
                                             />
 
                                             <Entry
@@ -231,18 +245,21 @@
                                             Keyboard="Numeric"
                                             WidthRequest="50"
                                             HorizontalOptions="FillAndExpand"
-                                            Style="{DynamicResource EntryStyle}"
+                                            Style="{DynamicResource CreateEntryStyle}"
                                             />
                                         </StackLayout>
 
                                         <StackLayout Style="{StaticResource HorizontalStack}">
-                                            <Button
-                                            Text="Get"
-                                            Clicked="GetItemsGet_Command"/>
-
-                                            <Button
-                                        Text="Post"
-                                        Clicked="GetItemsPost_Command"/>
+                                        <ImageButton Source="get_main.png"
+                                                     Style="{StaticResource SmallImageButtonGameStyle}"
+                                                     Clicked="GetItemsGet_Command"
+                                                     />
+                                            
+                                        <ImageButton Style="{StaticResource SmallImageButtonGameStyle}"
+                                                     Source="post_main.png"
+                                                     Clicked="GetItemsPost_Command"
+                                                     />
+                                            
                                         </StackLayout>
 
                                     </StackLayout>
