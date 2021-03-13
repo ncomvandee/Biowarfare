@@ -47,6 +47,10 @@ namespace Game.Engine.EngineGame
         {
             EngineSettings.ItemPool.Clear();
             EngineSettings.MonsterList.Clear();
+
+            EngineSettings.BattleScore.ItemModelDropList.Clear();
+            EngineSettings.BattleScore.ItemModelSelectList.Clear();
+
             return true;
         }
 
@@ -368,8 +372,31 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override ItemModel SwapCharacterItem(PlayerInfoModel character, ItemLocationEnum setLocation, ItemModel PoolItem)
         {
-            return base.SwapCharacterItem(character, setLocation, PoolItem);
-            // throw new System.NotImplementedException();
+            // Put on the new ItemModel, which drops the one back to the pool
+            var droppedItem = character.AddItem(setLocation, PoolItem.Id);
+
+            // Remove from DropList
+            EngineSettings.BattleScore.ItemModelDropList.Remove(PoolItem);
+
+            // If item is dropped from current round, will be add to SelectList
+            if (EngineSettings.ItemPool.Contains(PoolItem))
+            {
+                EngineSettings.BattleScore.ItemModelSelectList.Add(PoolItem);
+            }
+
+            if (droppedItem != null)
+            {
+ 
+                if (EngineSettings.ItemPool.Contains(droppedItem))
+                {
+                    EngineSettings.BattleScore.ItemModelSelectList.Remove(droppedItem);
+                }
+
+                // Add the dropped item back to DropList for re-distribution
+                EngineSettings.BattleScore.ItemModelDropList.Add(droppedItem);
+            }
+
+            return droppedItem;
         }
 
         /// <summary>
