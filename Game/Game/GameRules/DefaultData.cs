@@ -23,7 +23,6 @@ namespace Game.GameRules
                     Name = "Scalpel of Swedish Hospital",
                     Description = "The super sharp operating knife useually use in surgery. The blade is very sharp, it can cut though everything, except cut you out of my mind",
                     ImageURI = "vicious_scalpel_white_bg.png",
-                    Range = 10,
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
@@ -299,6 +298,12 @@ namespace Game.GameRules
                     MaxHealth = 5,
                     ImageURI = "basophil_no_bg.png",
                     Head = HeadString,
+                    Necklass = NecklassString,
+                    PrimaryHand = PrimaryHandString,
+                    OffHand = OffHandString,
+                    Feet = FeetString,
+                    RightFinger = RightFingerString,
+                    LeftFinger = LeftFingerString
                 },
 
                 new CharacterModel {
