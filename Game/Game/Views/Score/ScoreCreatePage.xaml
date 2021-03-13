@@ -40,13 +40,13 @@
                          HorizontalOptions="Center"
                          >
 
-                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                        Text="Save" 
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                        Source="save_scores.png"
                         Clicked="Save_Clicked"
                         />
 
-                <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                        Text="Cancel" 
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                        Source="cancel_scores.png"
                         Clicked="Cancel_Clicked"
                         />
 
