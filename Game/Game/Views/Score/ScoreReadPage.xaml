@@ -188,10 +188,10 @@
                 </Frame>
             </Frame>
 
-            <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                        Text="Update" 
-                        Clicked="Update_Clicked"
-                        />
+            <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                         Source="update_scores.png"
+                         Clicked="Update_Clicked"
+                         />
 
         </StackLayout>
     </ContentPage.Content>
