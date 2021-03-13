@@ -119,17 +119,17 @@
                 <StackLayout Orientation="Horizontal" 
                              >
 
-                    <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                            Text="Delete" 
-                            Clicked="Delete_Clicked"
-                            >
-                    </Button>
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Source="delete_scores.png"
+                                 Clicked="Delete_Clicked"
+                                 >
+                    </ImageButton>
 
-                    <Button Style="{StaticResource ScorePrimaryButtonStyle}"
-                            Text="Cancel" 
-                            Clicked="Cancel_Clicked"
-                            >
-                    </Button>
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Source="cancel_scores.png"
+                                 Clicked="Cancel_Clicked"
+                                 >
+                    </ImageButton>
 
                 </StackLayout>
             </StackLayout>
