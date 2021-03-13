@@ -115,7 +115,7 @@ namespace Game.Views
 
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList)
             {
-                ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
+                ItemListFoundFrame.Children.Add(GetItemToDisplay(data, true));
             }
         }
 
@@ -133,7 +133,7 @@ namespace Game.Views
 
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList)
             {
-                ItemListSelectedFrame.Children.Add(GetItemToDisplay(data));
+                ItemListSelectedFrame.Children.Add(GetItemToDisplay(data, false));
             }
         }
 
@@ -142,7 +142,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="location"></param>
         /// <returns></returns>
-        public StackLayout GetItemToDisplay(ItemModel item)
+        public StackLayout GetItemToDisplay(ItemModel item, bool Assignable)
         {
             if (item == null)
             {
@@ -154,8 +154,8 @@ namespace Game.Views
                 return new StackLayout();
             }
 
-            // Defualt Image is the Plus
-            var ClickableButton = true;
+            // If item is already assigned, will be showed in ItemListSelecctedFrame and cannot click anymore.
+            var ClickableButton = Assignable;
 
             var data = ItemIndexViewModel.Instance.GetItem(item.Id);
             if (data == null)
@@ -325,6 +325,8 @@ namespace Game.Views
         {
             var ItemData = data.GetItemByLocation(location);
 
+            var ClickAbleButton = true;
+
             // If item is not equipped, will not render anything
             if (ItemData == null)
             {
@@ -343,6 +345,11 @@ namespace Game.Views
                 CornerRadius = 50,
                 Padding = 5,
             };
+
+            if (ClickAbleButton)
+            {
+                ItemButton.Clicked += (sender, args) => UnequippedItem(data, location);
+            }
 
             // Label for each item
             var ItemLabel = new Label
@@ -492,6 +499,7 @@ namespace Game.Views
         public async void PickItem_Clicked(ItemModel data)
         {
             await Navigation.PushModalAsync(new PickItemsPage(new GenericViewModel < ItemModel >(data)));
+
         }
 
         /// <summary>
@@ -516,6 +524,61 @@ namespace Game.Views
                 ItemAttributeToggleButton.Text = "Items";
                 return;
             }
+        }
+
+        public void UnequippedItem(PlayerInfoModel data, ItemLocationEnum location)
+        {
+            var item = data.GetItemByLocation(location);
+
+            switch (location)
+            {
+                case ItemLocationEnum.Head:
+                    data.Head = null;
+                    break;
+
+                case ItemLocationEnum.Necklass:
+                    data.Necklass = null;
+                    break;
+
+                case ItemLocationEnum.PrimaryHand:
+                    data.PrimaryHand = null;
+                    break;
+
+                case ItemLocationEnum.OffHand:
+                    data.OffHand = null;
+                    break;
+
+                case ItemLocationEnum.LeftFinger:
+                    data.LeftFinger = null;
+                    break;
+
+                case ItemLocationEnum.RightFinger:
+                    data.RightFinger = null;
+                    break;
+
+                case ItemLocationEnum.Feet:
+                    data.Feet = null;
+                    break;
+            }
+
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(item);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Remove(item);
+
+            AddItemToDisplay(data);
+
+            DrawItemLists();
+
+
+        }
+
+        /// <summary>
+        /// Refresh page after come back from PickItemPage
+        /// </summary>
+        protected override void OnAppearing()
+        {
+            DrawItemLists();
         }
     }
 }

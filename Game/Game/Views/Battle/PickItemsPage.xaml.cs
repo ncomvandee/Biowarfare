@@ -45,7 +45,12 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+
+            if (AssignItemToCell())
+            {
+                await Navigation.PopModalAsync();
+
+            }
         }
         /// <summary>
         /// Cancel the progress and return to RoundOverPage
@@ -73,6 +78,30 @@ namespace Game.Views
             }
 
             CellPicker.ItemsSource = Character;
+        }
+
+        public bool AssignItemToCell()
+        {
+
+            var CellSelected = CellPicker.SelectedItem.ToString();
+
+            foreach(var cell in BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList)
+            {
+                if (CellSelected.Equals(cell.Name))
+                {
+                    var ItemLocation = ViewModel.Data.Location;
+                    var id = ViewModel.Data.Id;
+
+                    cell.AddItem(ItemLocation, id);
+
+                    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Remove(ViewModel.Data);
+
+                    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(ViewModel.Data);
+
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
