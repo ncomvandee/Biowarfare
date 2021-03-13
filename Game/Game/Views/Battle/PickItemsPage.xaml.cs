@@ -5,7 +5,6 @@ using Game.ViewModels;
 using System.Linq;
 using System.Collections.Generic;
 using Game.Models;
-using Game.ViewModels;
 
 namespace Game.Views
 {
@@ -80,27 +79,40 @@ namespace Game.Views
             CellPicker.ItemsSource = Character;
         }
 
+        /// <summary>
+        /// Assign item to player
+        /// </summary>
+        /// <returns></returns>
         public bool AssignItemToCell()
         {
-
+            // Selected cell
             var CellSelected = CellPicker.SelectedItem.ToString();
 
+            // Look up matching selected cell in CharacterList
             foreach(var cell in BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList)
             {
+
                 if (CellSelected.Equals(cell.Name))
                 {
+                    // Item location
                     var ItemLocation = ViewModel.Data.Location;
+
+                    // Item id
                     var id = ViewModel.Data.Id;
 
+                    // Assign item to player
                     cell.AddItem(ItemLocation, id);
 
+                    // Remove item from item pool
                     BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Remove(ViewModel.Data);
 
+                    // Add item to SelectedList
                     BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(ViewModel.Data);
 
                     return true;
                 }
             }
+
             return false;
         }
     }
