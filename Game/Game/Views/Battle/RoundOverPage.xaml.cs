@@ -61,7 +61,7 @@ namespace Game.Views
             TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
 
             DrawCharacterList();
-            BottomButton.Text = "Exit";
+            BottomButton.Source = "continue_main.png";
             ScoreButton.IsVisible = true;
         }
 

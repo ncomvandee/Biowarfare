@@ -107,11 +107,8 @@
                                     Wrap="Wrap"
                                     IsVisible="False"/>
                         
-                        <Button Text="Auto Assign Items"
-                                Style="{StaticResource PrimaryButtonStyle}"
-                                WidthRequest="-1"
-                                HeightRequest="-1"
-                                Padding="5"
+                        <ImageButton Source="auto_assign_main.png"
+                                Style="{StaticResource ImageButtonGameStyle}"
                                 Clicked="AutoAssignButton_Clicked"
                                 x:Name="AutoAssignButton"
                                 IsVisible="False"/>
@@ -157,9 +154,9 @@
                                 x:Name="ScoreButton"
                                 IsVisible="False"/>
 
-                        <Button Text="Continue"
+                        <ImageButton Source="continue_main.png"
                                 x:Name="BottomButton"
-                                Style="{StaticResource PrimaryButtonStyle}"
+                                Style="{StaticResource ImageButtonGameStyle}"
                                 Clicked="CloseButton_Clicked"/>
 
                     </StackLayout>
