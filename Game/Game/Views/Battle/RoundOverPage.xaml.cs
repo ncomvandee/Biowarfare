@@ -99,6 +99,9 @@ namespace Game.Views
 
             // Only need to update the selected, the Dropped is set in the constructor
             TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+
+            // Need to update here too, for accurate display
+            TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
         }
 
         /// <summary>
