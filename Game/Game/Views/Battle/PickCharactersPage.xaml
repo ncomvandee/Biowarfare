@@ -113,7 +113,7 @@
 
                                                     </Frame>
 
-                                                    <Image Source="icon_subtract.png" 
+                                                    <Image Source="icon_add.png" 
                                                            WidthRequest="20"
                                                            Margin="0"
                                                            />
