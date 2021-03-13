@@ -169,12 +169,11 @@
                 </Grid>
             </Frame>
             
-            <Button Style="{StaticResource ItemPrimaryButtonStyle}"
-                    Text="Edit" 
-                    Margin="20" 
-                    Clicked="ItemEditButton_Clicked"
-                    x:Name="EditButton"
-                    />
+            <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                         Source="edit_items.png"
+                         Clicked="ItemEditButton_Clicked"
+                         x:Name="EditButton"
+                         />
 
         </StackLayout>
     </ContentPage.Content>
