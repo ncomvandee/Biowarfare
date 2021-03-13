@@ -77,19 +77,21 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
-                            Text="Delete" 
-                            Clicked="Delete_Clicked"
-                            >  
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Clicked="Delete_Clicked"
+                                 Source="delete_monster.png"
+                                 
+                                 >  
                         
-                    </Button>
+                    </ImageButton>
 
-                    <Button Style="{StaticResource MonsterPrimaryButtonStyle}"
-                            Text="Cancel" 
-                            Clicked="Cancel_Clicked"
-                            >
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Clicked="Cancel_Clicked"
+                                 Source="cancel_monster.png"
+                                 
+                                 >
                         
-                    </Button>
+                    </ImageButton>
                     
                 </StackLayout>
             </StackLayout>
