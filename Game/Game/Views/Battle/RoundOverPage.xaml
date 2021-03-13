@@ -240,7 +240,145 @@
 
                     </Grid>
 
-                    <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                    <Frame Style="{StaticResource InvisibleReadFrameStyle}"
+                           BackgroundColor="{StaticResource PrimaryAccentColor}"
+                           Margin="0, 20, 0, 0" 
+                           HeightRequest="170"
+                           WidthRequest="300"
+                           CornerRadius="20">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Frame Grid.Row="0" 
+                                   Style="{StaticResource ReadAttributeFrameStyle}"
+                                   BackgroundColor="{StaticResource PrimaryForegroundPurple}"
+                                   BorderColor="Transparent">
+
+                                <Image Source='icon_click.png' 
+                                   HorizontalOptions="End"
+                                   Margin="10, 5"
+                                   />
+
+                            </Frame>
+
+                            <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
+                                    Grid.Row="0" 
+                                    Text="Attribute" 
+                                    x:Name="ItemAttributeToggleButton"
+                                    Clicked="ItemAttributeToggle_Clicked"
+                                />
+
+                            <ScrollView Orientation="Horizontal"
+                                    HorizontalScrollBarVisibility="Default"
+                                    Grid.Row="1" 
+                                    x:Name="ItemsFrame"
+                                    IsVisible="false"    
+                                    >
+
+                                <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
+                                            x:Name="ItemBox"
+                                            />
+
+                            </ScrollView>
+
+                            <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
+                                x:Name="AttributeFrame"
+                                Grid.Row="1"
+                                IsVisible="true"
+                                >
+
+                                <Grid ColumnSpacing="25" 
+                                  RowSpacing="0" 
+                                  Margin="0, 10"
+                                  >
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="attack_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="0" 
+                                       />
+
+                                    <Label x:Name="Attack"
+                                           FontSize="Medium"
+                                           Style="{StaticResource ReadStatsLabelStyle}"
+                                           Grid.Row="1" 
+                                           Grid.Column="0" 
+                                       />
+
+                                    <Image Source="defense_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="1" 
+                                       />
+
+                                    <Label x:Name="Defense"
+                                           FontSize="Medium"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="1" 
+                                       />
+
+                                    <Image Source="speed_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="2" 
+                                       />
+
+                                    <Label x:Name="Speed"
+                                           FontSize="Medium"
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="2" 
+                                       />
+
+                                    <Image Source="heart_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="3" 
+                                       />
+
+                                    <Label x:Name="Health"
+                                           FontSize="Medium" 
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="3" 
+                                       />
+
+                                    <Image Source="xp_icon.png" 
+                                       WidthRequest="30" 
+                                       Grid.Row="0" 
+                                       Grid.Column="4" 
+                                       />
+
+                                    <Label x:Name="Experience"
+                                           FontSize="Medium" 
+                                       Style="{StaticResource ReadStatsLabelStyle}"
+                                       Grid.Row="1" 
+                                       Grid.Column="4" 
+                                       />
+
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </Frame>
+
+                    <!--<Frame  Style="{StaticResource InvisibleReadFrameStyle}"
                             BackgroundColor="{StaticResource PrimaryAccentColor}"
                             Padding="10"
                             x:Name="AttributeFrame"
@@ -347,7 +485,7 @@
                             </Grid>
 
                         </StackLayout>
-                    </Frame>
+                    </Frame>-->
 
                 </StackLayout>
             </Frame>
