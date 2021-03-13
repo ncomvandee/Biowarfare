@@ -98,7 +98,7 @@ namespace Game.Views
             DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
-            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Distinct().Count().ToString();
 
             // Need to update here too, for accurate display
             TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
@@ -134,7 +134,8 @@ namespace Game.Views
                 ItemListSelectedFrame.Children.Remove(data);
             }
 
-            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList)
+            // If the item is not dropped from the battle, but instead, equipped to the player at CRUDi, won't show in SelectList
+            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Distinct())
             {
                 ItemListSelectedFrame.Children.Add(GetItemToDisplay(data, false));
             }

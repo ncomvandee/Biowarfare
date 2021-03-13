@@ -100,14 +100,8 @@ namespace Game.Views
                     // Item id
                     var id = ViewModel.Data.Id;
 
-                    // Assign item to player
-                    cell.AddItem(ItemLocation, id);
-
-                    // Remove item from item pool
-                    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Remove(ViewModel.Data);
-
-                    // Add item to SelectedList
-                    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(ViewModel.Data);
+                    // Equip item to player, or swap with existence one
+                    BattleEngineViewModel.Instance.Engine.Round.SwapCharacterItem(cell, ItemLocation, ViewModel.Data);
 
                     return true;
                 }
@@ -115,5 +109,6 @@ namespace Game.Views
 
             return false;
         }
+
     }
 }
