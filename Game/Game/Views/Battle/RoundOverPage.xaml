@@ -487,10 +487,9 @@
                 </StackLayout>
             </Frame>
             
-            <!--Popup item Frame-->
+            
             <StackLayout 
                     x:Name="PopupLoadingView" 
-                    BackgroundColor="{StaticResource PageBackgroundColor}" 
                     IsVisible="false" 
                     AbsoluteLayout.LayoutBounds=".5, .5,.5,.5" 
                     AbsoluteLayout.LayoutFlags="All">
@@ -501,9 +500,97 @@
                         WidthRequest="300"
                         HeightRequest="300"
                         >
+                    <!--Popup item Frame-->
+                    <Frame Style="{StaticResource ReadPagePopupStyle}"
+                           BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
+                      
+                   >
 
-                    <Frame 
-                             BorderColor="{StaticResource SecondaryAccentColor}" Padding="1">
+                        <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
+
+                            <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
+                                 Source="cancel_x_main.png"
+                                 x:Name="PopupCloseButton" 
+                                 Clicked="CloseItemPopup_Clicked" 
+                                 />
+
+                            <Frame Style="{StaticResource PopupTitleFrameStyle}"
+                                   BackgroundColor="{StaticResource PrimaryForegroundPurple}">
+
+                                <Label Style="{StaticResource EquipPopupLabelStyle}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                               Text="Name goes here, I guess"
+                               x:Name="PopupItemName"
+                               />
+
+                            </Frame>
+
+                            <Frame Style="{StaticResource ItemImageCircleFrameStyle}"
+                                   WidthRequest="50"
+                                   HeightRequest="50">
+
+                                <Image Source="face_mask_no_bg.png"
+                                x:Name="PopupItemImage"
+                               />
+
+                            </Frame>
+
+                            <Grid Padding="10" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                    <RowDefinition Height="AUTO" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="90" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Style="{StaticResource PopupBoldAttributeLabelMainStyle}"
+                               Text="Description: "
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               />
+
+                                <Label Style="{StaticResource PopupAttributeLabelMainStyle}"
+                               x:Name="PopupItemDescription"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               />
+
+                                <Label Style="{StaticResource PopupBoldAttributeLabelMainStyle}"
+                               Text="Location: "
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               />
+
+                                <Label Style="{StaticResource PopupAttributeLabelMainStyle}"
+                               x:Name="PopupItemLocation"
+                               Grid.Row="1"
+                               Grid.Column="1" 
+                               />
+
+                                <Label Style="{StaticResource PopupBoldAttributeLabelMainStyle}"
+                               x:Name="PopupItemAttribute"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               />
+
+                                <Label Style="{StaticResource PopupAttributeLabelMainStyle}"
+                               x:Name="PopupItemValue"
+                               Grid.Row="2"
+                               Grid.Column="1" 
+                               />
+
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <!--<Frame 
+                             BorderColor="{StaticResource SecondaryAccentColor}" Padding="1"
+                        BackgroundColor="{StaticResource PrimaryMidgroundPurple}">
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
                             <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
@@ -525,7 +612,7 @@
                                 Clicked="CloseItemPopup_Clicked" 
                                 Text="Close"/>
                         </StackLayout>
-                    </Frame>
+                    </Frame>-->
                 </StackLayout>
             </StackLayout>
         </AbsoluteLayout>

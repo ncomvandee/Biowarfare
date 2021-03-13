@@ -1949,6 +1949,16 @@
 
 
             </Style>
+
+            <!--Popup labels for attributes for Item Battle Page Popup-->
+            <Style TargetType="Label" 
+                   x:Key="PopupAttributeLabelMainStyle"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+
+            </Style>
             <!--___________________________________________-->
 
             <!--Bold Popup labels for attributes for Cell Item Page-->
@@ -1960,6 +1970,18 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
 
             </Style>
+
+            <!--Bold Popup labels for attributes for Item Battle page popup-->
+            <Style TargetType="Label" 
+                   x:Key="PopupBoldAttributeLabelMainStyle"
+                   BasedOn="{StaticResource PopupAttributeLabelMainStyle}"
+                   >
+
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+
+
 
             <!--___________________________________________-->
 
