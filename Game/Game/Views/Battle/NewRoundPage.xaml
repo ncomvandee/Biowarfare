@@ -69,6 +69,7 @@
 
             <!--POPUP FRAME-->
             <Frame Style="{StaticResource ReadPagePopupStyle}"
+                   WidthRequest="400"
                    BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                    x:Name="CharacterPopUpFrame"
                    IsVisible="False"
@@ -77,7 +78,7 @@
                 <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
 
                     <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
-                                 Source="icon_cancel.png"
+                                 Source="cancel_x_main.png"
                                  Clicked="ClosePopup_Clicked"/>
 
                     <Frame Style="{StaticResource PopupTitleFrameStyle}" BackgroundColor="{StaticResource PrimaryForegroundPurple}">
@@ -97,6 +98,16 @@
 
                     </Frame>
 
+                    <Frame
+                        WidthRequest="200"
+                        HeightRequest="75"
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        Margin="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        >
+
                     <Grid Padding="10" RowSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="AUTO" />
@@ -108,9 +119,12 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
+
                         <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
                                TextColor="{StaticResource PrimaryBackgroundPurple}"
                                Text="Cell Type: "
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
                                Grid.Row="0"
                                Grid.Column="0"
                                />
@@ -118,6 +132,8 @@
                         <Label Style="{StaticResource PopupAttributeLabelStyle}"
                                x:Name="CharacterPopupCellType"
                                TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
                                FontAttributes="Bold"
                                Grid.Row="0"
                                Grid.Column="1"
@@ -126,6 +142,8 @@
                         <Label Style="{StaticResource PopupBoldAttributeLabelStyle}"
                                Text="Level: "
                                TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
                                Grid.Row="1"
                                Grid.Column="0"
                                />
@@ -134,15 +152,20 @@
                                x:Name="CharacterPopupLevel"
                                FontAttributes="bold"
                                TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
                                Grid.Row="1"
                                Grid.Column="1" 
                                />
 
+
                     </Grid>
 
+                    </Frame>
+
                     <Frame Style="{StaticResource InvisibleReadFrameStyle}"
-                           BackgroundColor="{StaticResource PrimaryAccentColor}"
-                           Margin="0, 20, 0, 0" 
+                           BackgroundColor="{StaticResource SecondaryAccentColor}"
+                           Margin="0, 0, 0, 0" 
                            HeightRequest="170"
                            WidthRequest="300"
                            CornerRadius="20">
