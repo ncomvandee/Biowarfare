@@ -190,7 +190,8 @@
 
                             <Button Style="{StaticResource InvisibleReadAttributeButtonStyle}"
                                     Grid.Row="0" 
-                                    Text="Items" 
+                                    Text="Items"
+                                    TextColor="{StaticResource PrimaryBackgroundPurple}"
                                     x:Name="ItemAttributeToggleButton"
                                     Clicked="ItemAttributeToggle_Clicked"
                                 />
@@ -231,7 +232,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="attack_icon.png" 
+                                    <Image Source="main_attack.png" 
                                        WidthRequest="30" 
                                        Grid.Row="0" 
                                        Grid.Column="0" 
@@ -244,7 +245,7 @@
                                            Grid.Column="0" 
                                        />
 
-                                    <Image Source="defense_icon.png" 
+                                    <Image Source="main_defense.png" 
                                        WidthRequest="30" 
                                        Grid.Row="0" 
                                        Grid.Column="1" 
@@ -257,7 +258,7 @@
                                        Grid.Column="1" 
                                        />
 
-                                    <Image Source="speed_icon.png" 
+                                    <Image Source="main_speed.png" 
                                        WidthRequest="30" 
                                        Grid.Row="0" 
                                        Grid.Column="2" 
@@ -270,7 +271,7 @@
                                        Grid.Column="2" 
                                        />
 
-                                    <Image Source="heart_icon.png" 
+                                    <Image Source="main_health.png" 
                                        WidthRequest="30" 
                                        Grid.Row="0" 
                                        Grid.Column="3" 
@@ -283,7 +284,7 @@
                                        Grid.Column="3" 
                                        />
 
-                                    <Image Source="xp_icon.png" 
+                                    <Image Source="main_xp.png" 
                                        WidthRequest="30" 
                                        Grid.Row="0" 
                                        Grid.Column="4" 
