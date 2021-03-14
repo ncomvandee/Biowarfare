@@ -5,7 +5,7 @@
              >
 
     <NavigationPage.TitleView>
-        
+
         <!--Menu Bar-->
         <StackLayout Style="{StaticResource HorizontalStack}" 
                      HorizontalOptions="StartAndExpand" 
@@ -13,25 +13,25 @@
                      >
 
             <Frame Style="{StaticResource BattlePageNavFrame}"/>
-            
+
             <Label Text="BioWarfare" 
                    Style="{StaticResource NavLabel}" 
                    HorizontalOptions="Start"
                    />
 
             <Frame Style="{StaticResource BattlePageNavFrame}"/>
-            
+
             <Label x:Name="BattleModeValue"
                    Text="" 
                    Style="{StaticResource BattlePageNavLabelStyle}" 
                    />
-            
+
             <ImageButton Source="icon_edit.png" 
                          Clicked="Setttings_Clicked" 
                          Style="{StaticResource BattleToolbarStyle}" 
                          HorizontalOptions="End"
                          />
-            
+
             <ImageButton Source="icon_cancel.png"
                          Clicked="ExitButton_Clicked" 
                          Style="{StaticResource BattleToolbarStyle}" 
@@ -39,98 +39,9 @@
                          />
 
             <Frame Style="{StaticResource BattlePageNavFrame}"/>
-            
+
         </StackLayout>
     </NavigationPage.TitleView>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-            <!--Style for the nav lagbel in the Battle Page--> 
-            <Style TargetType="Label"
-                   x:Key="BattlePageNavLabelStyle"
-                   BasedOn="{StaticResource ValueStyleMicro}"
-                   >
-
-                <Setter Property="Margin" Value="30, 5, 60, 0"/>
-                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
-                <Setter Property="HorizontalTextAlignment" Value="End"/>
-
-            </Style>
-
-            <!--Style for nav bar frame on battle page-->
-            <Style TargetType="Frame"
-                   x:Key="BattlePageNavFrame"
-                   >
-
-                <Setter Property="Padding" Value="10,0,0,0"/>
-                
-            </Style>
-
-            <!--Stack Layout for game ui on battle page--> 
-            <Style TargetType="StackLayout"
-                   x:Key="GameUiStackLayoutStyle"
-                   >
-                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1"/>
-                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
-                
-            </Style>
-
-            <!--Absolute Layout for game ui on battle page-->
-            <Style TargetType="AbsoluteLayout"
-                   x:Key="BattleAbsoluteLayoutStyle"
-                   >
-
-                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-
-            </Style>
-
-            <!--Frame in middle of Battle Page-->
-            <Style TargetType="Frame"
-                   x:Key="BattlePageFrameStyle"
-                   >
-
-                <Setter Property="WidthRequest" Value="250"/>
-                <Setter Property="HeightRequest" Value="200"/>
-                <Setter Property="HorizontalOptions" Value="Start"/>
-                <Setter Property="CornerRadius" Value="20"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
-                <Setter Property="BorderColor" Value="Transparent"/>
-
-            </Style>
-
-            <!--Map Grid Style on Battle Page--> 
-            <Style TargetType="Grid"
-                   x:Key="BattlePageGridStyle"
-                   >
-
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Start"/>
-                <Setter Property="ColumnSpacing" Value="0"/>
-                <Setter Property="RowSpacing" Value="0"/>
-                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"/>
-                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
-
-            </Style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </ResourceDictionary>  
-        
-    </ContentPage.Resources>
 
     <ContentPage.Content>
         <AbsoluteLayout IsVisible="True"
@@ -313,7 +224,7 @@
                             </StackLayout>
                         </StackLayout>
                     </Frame>
-
+                    <!--Battle Grammar Buttons-->
                     <StackLayout Style="{StaticResource HorizontalStack}" 
                                  HorizontalOptions="CenterAndExpand"
                                  >
@@ -339,6 +250,7 @@
                         
                     </StackLayout>
 
+                    <!--Battle Grammar Messages-->
                     <StackLayout Style="{StaticResource VerticalStack}" 
                                  HeightRequest="100"
                                  HorizontalOptions="CenterAndExpand"
@@ -378,29 +290,19 @@
             </StackLayout>
 
             <!--The Game Over Screen -->
-            <StackLayout Style="{StaticResource VerticalStack}"
-                         AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                         AbsoluteLayout.LayoutFlags="All"
-                         HorizontalOptions="FillAndExpand"
+            <StackLayout Style="{StaticResource GameOverStackLayoutStyle}"
                          x:Name="GameOverDisplay" 
                          IsVisible="false"
                          >
-                
-                <StackLayout VerticalOptions="Center" 
-                             HorizontalOptions="Center" 
-                             Padding="10"
-                             >
+
+                <StackLayout Style="{StaticResource InnerGameOverStackLayoutStyle}">
                     
                     <Label Text="Thank you for Playing" 
                            Style="{StaticResource CenterMessageLargeStyle}"
                            />
                     
                     <Label Text="Check your score, or click Exit and return soon" 
-                           Style="{StaticResource MessageStyle}" 
-                           LineBreakMode="WordWrap" 
-                           HorizontalTextAlignment="Center" 
-                           MaxLines="5" 
-                           Padding="20"
+                           Style="{StaticResource StaticResource MessageStyle}" 
                            />
                     
                     <Button x:Name="ShowScoreButton" 

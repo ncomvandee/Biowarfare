@@ -1586,7 +1586,30 @@
 
             <!--___________________________________________-->
 
+            <!--Style for nav bar frame on battle page-->
+            <Style TargetType="Frame"
+                   x:Key="BattlePageNavFrame"
+                   >
 
+                <Setter Property="Padding" Value="10,0,0,0"/>
+
+            </Style>
+            <!--___________________________________________-->
+            
+            <!--Frame in middle of Battle Page-->
+            <Style TargetType="Frame"
+                   x:Key="BattlePageFrameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="200"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -2085,6 +2108,34 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Style for the nav lagbel in the Battle Page-->
+            <Style TargetType="Label"
+                   x:Key="BattlePageNavLabelStyle"
+                   BasedOn="{StaticResource ValueStyleMicro}"
+                   >
+
+                <Setter Property="Margin" Value="30, 5, 60, 0"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
+            <!--Style for the nav lagbel in the Battle Page-->
+            <Style TargetType="Label"
+                   x:Key="GameOverLabelStyle"
+                   BasedOn="{StaticResource MessageStyle}"
+                   >
+
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="MaxLines" Value="5"/>
+                <Setter Property="Padding" Value="20"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -2265,6 +2316,23 @@
 
 
             </Style>
+            
+            <!--___________________________________________-->
+
+            <!--Map Grid Style on Battle Page-->
+            <Style TargetType="Grid"
+                   x:Key="BattlePageGridStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="ColumnSpacing" Value="0"/>
+                <Setter Property="RowSpacing" Value="0"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+
+            </Style>
+
 
 
 
@@ -3082,9 +3150,48 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Stack Layout for game over screen-->
+            <Style TargetType="StackLayout"
+                   x:Key="GameOverStackLayoutStyle"
+                   BasedOn="{StaticResource VerticalStack}"
+                   >
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Inner Stack Layout for game over screen-->
+            <Style TargetType="StackLayout"
+                   x:Key="InnerGameOverStackLayoutStyle"
+                   >
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
+            <!--Stack Layout for game ui on battle page-->
+            <Style TargetType="StackLayout"
+                   x:Key="GameUiStackLayoutStyle"
+                   >
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
 
+            </Style>
+            
+            <!--___________________________________________-->
+
+
+            
+            
+            
             <!-- ListView -->
 
 
@@ -3173,6 +3280,36 @@
 
             </Style>
             <!--___________________________________________-->
+
+
+
+
+
+
+
+
+
+            <!-- Absolute Layout -->
+
+
+
+
+
+
+
+
+
+
+
+            <!--Absolute Layout for game ui on battle page-->
+            <Style TargetType="AbsoluteLayout"
+                   x:Key="BattleAbsoluteLayoutStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+
+            </Style>
 
 
         </ResourceDictionary>
