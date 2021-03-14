@@ -85,6 +85,13 @@ namespace Game.Views
         /// <returns></returns>
         public bool AssignItemToCell()
         {
+
+            if (CellPicker.SelectedItem == null)
+            {
+                PickerFrame.BackgroundColor = Color.Red;
+                return false;
+            }
+
             // Selected cell
             var CellSelected = CellPicker.SelectedItem.ToString();
 
@@ -110,5 +117,14 @@ namespace Game.Views
             return false;
         }
 
+        /// <summary>
+        /// Event when picker is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CellPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PickerFrame.BackgroundColor = Color.FromHex("#D660BF");
+        }
     }
 }

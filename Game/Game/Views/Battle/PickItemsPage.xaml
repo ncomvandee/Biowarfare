@@ -65,11 +65,13 @@
             <Frame Style="{StaticResource CreatePickerFrameStyle}"
                    BackgroundColor="{StaticResource PrimaryForegroundPurple}"
                    BorderColor="Transparent"
-                   HeightRequest="50">
+                   HeightRequest="50"
+                   x:Name="PickerFrame">
 
 
                 <Picker Style="{StaticResource CreatePickerStyle}" 
-                        x:Name="CellPicker" />
+                        x:Name="CellPicker"
+                        SelectedIndexChanged="CellPicker_SelectedIndexChanged"/>
             </Frame>
 
             <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
