@@ -171,6 +171,7 @@
     <Content Include="character_button.png" />
     <Content Include="chemo_port_of_pain_no_bg.png" />
     <Content Include="chemo_port_of_pain_white_bg.png" />
+    <Content Include="close_main.png" />
     <Content Include="continue_main.png" />
     <Content Include="damage_blue.png" />
     <Content Include="defense_green.png" />
@@ -185,6 +186,7 @@
     <Content Include="edit_character.png" />
     <Content Include="edit_items.png" />
     <Content Include="edit_main.png" />
+    <Content Include="edit_main_icon.png" />
     <Content Include="edit_monster.png" />
     <Content Include="edit_scores.png" />
     <Content Include="enter_character.png" />
@@ -229,6 +231,12 @@
     <Content Include="ken.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="macrophage_no_bg.png" />
+    <Content Include="main_attack.png" />
+    <Content Include="main_defense.png" />
+    <Content Include="main_exit.png" />
+    <Content Include="main_health.png" />
+    <Content Include="main_speed.png" />
+    <Content Include="main_xp.png" />
     <Content Include="mapcell.png" />
     <Content Include="monster_attack.png" />
     <Content Include="monster_button.png" />
@@ -301,6 +309,7 @@
     <Content Include="use_main.png" />
     <Content Include="vicious_scalpel_no_bg.png" />
     <Content Include="vicious_scalpel_white_bg.png" />
+    <Content Include="view_scores_main.png" />
     <Content Include="virus_bg.png" />
     <Content Include="virus_no_bg.png" />
     <Content Include="wipe_main.png" />
