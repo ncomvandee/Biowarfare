@@ -427,6 +427,19 @@ namespace Game.Engine.EngineGame
                     CalculateExperience(Attacker, Target);
 
                     break;
+
+                    // Instantly kill opponent in one hit
+                case HitStatusEnum.MadeMeOnePunchMan:
+                    Target.CauseDeath();
+                    EngineSettings.BattleMessagesModel.TurnMessageSpecial = EngineSettings.BattleMessagesModel.GetCurrentHealthMessage();
+
+                    // Check if Dead and Remove
+                    RemoveIfDead(Target);
+
+                    // If it is a character apply the experience earned
+                    CalculateExperience(Attacker, Target);
+
+                    break;
             }
 
             EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\"" + EngineSettings.BattleMessagesModel.AttackStatus + GetPronounce(Target) + Target.Name + "\"" + EngineSettings.BattleMessagesModel.TurnMessageSpecial + EngineSettings.BattleMessagesModel.ExperienceEarned;
@@ -581,10 +594,34 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override HitStatusEnum BattleSettingsOverrideHitStatusEnum(HitStatusEnum myEnum)
         {
-            return base.BattleSettingsOverrideHitStatusEnum(myEnum);
-            // Based on the Hit Status, establish a message
+            switch (myEnum)
+            {
+                case HitStatusEnum.Hit:
+                    EngineSettings.BattleMessagesModel.AttackStatus = " somehow Hit ";
+                    return HitStatusEnum.Hit;
 
-            // throw new System.NotImplementedException();
+                case HitStatusEnum.CriticalHit:
+                    EngineSettings.BattleMessagesModel.AttackStatus = " somehow Critical Hit ";
+                    return HitStatusEnum.CriticalHit;
+
+                case HitStatusEnum.Miss:
+                    EngineSettings.BattleMessagesModel.AttackStatus = " somehow Missed ";
+                    return HitStatusEnum.Miss;
+
+                case HitStatusEnum.CriticalMiss:
+                    EngineSettings.BattleMessagesModel.AttackStatus = " somehow Critical Missed ";
+                    return HitStatusEnum.CriticalMiss;
+
+                case HitStatusEnum.MadeMeOnePunchMan:
+                    EngineSettings.BattleMessagesModel.AttackStatus = "One hit kill";
+                    return HitStatusEnum.MadeMeOnePunchMan;
+
+                case HitStatusEnum.Unknown:
+                case HitStatusEnum.Default:
+                default:
+                    // Return what it was
+                    return EngineSettings.BattleMessagesModel.HitStatus;
+            }
         }
 
         /// <summary>

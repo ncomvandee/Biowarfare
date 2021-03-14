@@ -24,7 +24,10 @@ namespace Game.Models
         Hit = 20,
 
         // Critical Hit, bonus after hit happens
-        CriticalHit = 25
+        CriticalHit = 25,
+
+        // Kill player with only one hit
+        MadeMeOnePunchMan = 30
     }
 
     /// <summary>
@@ -58,6 +61,10 @@ namespace Game.Models
 
                 case HitStatusEnum.CriticalMiss:
                     Message = " misses really badly";
+                    break;
+
+                case HitStatusEnum.MadeMeOnePunchMan:
+                    Message = "BOOM, YOU ARE DEAD";
                     break;
 
                 case HitStatusEnum.Default:
