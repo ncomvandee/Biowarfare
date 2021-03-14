@@ -104,7 +104,8 @@
                             </Grid.ColumnDefinitions>
 
                             <StackLayout Orientation="Horizontal" Grid.Column="0">
-                                <Image Source="attack_icon.png" />
+                                <Image Source="attack_icon.png"
+                                       x:Name="AttributeIcon"/>
                                 <Label Text="{Binding Data.Value}"
                                        FontSize="Medium"/>
                             </StackLayout>

@@ -34,6 +34,8 @@ namespace Game.Views
 
             PopulateCellPicker();
 
+            AttributeIcon.Source = ViewModel.Data.Attribute.ToImage();
+
 
         }
 
