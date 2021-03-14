@@ -926,6 +926,7 @@ namespace Game.Views
                     //GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     StartBattleButton.IsVisible = true;
+                    BattleInfoAndActions.IsVisible = false;
                     break;
 
                 case BattleStateEnum.NewRound:
@@ -946,10 +947,10 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    BattlePlayerInfomationBox.IsVisible = true;
-                    MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = true;
-                    BattleInfoAndActions.IsVisible = false;
+                    //BattlePlayerInfomationBox.IsVisible = false;
+                    //MessageDisplayBox.IsVisible = false;
+                    //AttackButton.IsVisible = false;
+                    //BattleInfoAndActions.IsVisible = false;
                     break;
 
                 // Based on the State disable buttons
@@ -968,9 +969,18 @@ namespace Game.Views
             {
                 case BattleModeEnum.MapAbility:
                 case BattleModeEnum.MapFull:
+                    GamePlayersTopDisplay.IsVisible = false;
+                    BattleMapDisplay.IsVisible = true;
+                    BattleInfoAndActions.IsVisible = true;
+                    break;
+
                 case BattleModeEnum.MapNext:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
+                    BattleInfoAndActions.IsVisible = false;
+                    BattlePlayerInfomationBox.IsVisible = true;
+                    MessageDisplayBox.IsVisible = true;
+                    AttackButton.IsVisible = true;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
@@ -979,6 +989,10 @@ namespace Game.Views
                 default:
                     GamePlayersTopDisplay.IsVisible = true;
                     BattleMapDisplay.IsVisible = false;
+                    BattlePlayerInfomationBox.IsVisible = true;
+                    MessageDisplayBox.IsVisible = true;
+                    AttackButton.IsVisible = true;
+                    BattleInfoAndActions.IsVisible = false;
                     break;
             }
         }
