@@ -582,4 +582,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\save_scores.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\edit_main_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_defense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\main_xp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\view_scores_main.png" />
+  </ItemGroup>
 </Project>
