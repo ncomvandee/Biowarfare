@@ -26,14 +26,16 @@
                    Style="{StaticResource BattlePageNavLabelStyle}" 
                    />
 
-            <ImageButton Source="icon_edit.png" 
+            <ImageButton Source="edit_main_icon.png" 
                          Clicked="Setttings_Clicked" 
-                         Style="{StaticResource BattleToolbarStyle}" 
+                         Style="{StaticResource BattleToolbarStyle}"
+                         BackgroundColor="Transparent"
                          HorizontalOptions="End"
                          />
 
-            <ImageButton Source="icon_cancel.png"
+            <ImageButton Source="cancel_x_main.png"
                          Clicked="ExitButton_Clicked" 
+                         BackgroundColor="Transparent"
                          Style="{StaticResource BattleToolbarStyle}" 
                          HorizontalOptions="End"
                          />
