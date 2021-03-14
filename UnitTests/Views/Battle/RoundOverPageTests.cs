@@ -123,47 +123,47 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        [Test]
-        public void RoundOverPage_GetItemToDisplay_Null_Should_Pass()
-        {
-            // Arrange
-            // Act
-            page.GetItemToDisplay(null);
+        //[Test]
+        //public void RoundOverPage_GetItemToDisplay_Null_Should_Pass()
+        //{
+        //    // Arrange
+        //    // Act
+        //    page.GetItemToDisplay(null);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
-        [Test]
-        public void RoundOverPage_GetItemToDisplay_InValid_Id_Should_Pass()
-        {
-            // Arrange
-            // Act
-            page.GetItemToDisplay(new ItemModel { Id = "" });
+        //[Test]
+        //public void RoundOverPage_GetItemToDisplay_InValid_Id_Should_Pass()
+        //{
+        //    // Arrange
+        //    // Act
+        //    page.GetItemToDisplay(new ItemModel { Id = "" });
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
-        [Test]
-        public async Task RoundOverPage_GetItemToDisplay_Valid_Should_Pass()
-        {
-            // Arrange
-            var data = new ItemModel { Name = "Mike" };
-            await ItemIndexViewModel.Instance.CreateAsync(data);
+        //[Test]
+        //public async Task RoundOverPage_GetItemToDisplay_Valid_Should_Pass()
+        //{
+        //    // Arrange
+        //    var data = new ItemModel { Name = "Mike" };
+        //    await ItemIndexViewModel.Instance.CreateAsync(data);
 
-            // Act
-            page.GetItemToDisplay(data);
+        //    // Act
+        //    page.GetItemToDisplay(data);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
         [Test]
         public void RoundOverPage_DrawCharacterList_Valid_Should_Pass()
@@ -249,22 +249,22 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        [Test]
-        public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
-        {
-            // Arrange
-            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
-            var StackItem = page.GetItemToDisplay(item);
-            var dataImage = StackItem.Children[0];
+        //[Test]
+        //public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
+        //{
+        //    // Arrange
+        //    var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+        //    var StackItem = page.GetItemToDisplay(item);
+        //    var dataImage = StackItem.Children[0];
 
-            // Act
-            ((ImageButton)dataImage).PropagateUpClicked();
+        //    // Act
+        //    ((ImageButton)dataImage).PropagateUpClicked();
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
         [Test]
         public void RoundOverPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
