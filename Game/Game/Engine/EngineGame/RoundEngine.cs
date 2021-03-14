@@ -190,10 +190,24 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override void PickupItemsForAllCharacters()
         {
-            // In Auto Battle this happens and the characters get their items
-            // When called manualy, make sure to do the character pickup before calling EndRound
+            // The player who has highest level will go through the item pool to pick up first,
+            // then, who has the most max health,
+            // then, who is faster,
+            // then, whos is hit hardest,
+            // then, who is toughest,
+            // then, who has most experience
+            var myList = EngineSettings.CharacterList.OrderByDescending(a => a.Level)
+                .ThenByDescending(a => a.MaxHealth)
+                .ThenByDescending(a => a.Speed)
+                .ThenByDescending(a => a.Attack)
+                .ThenByDescending(a => a.Defense)
+                .ThenByDescending(a => a.ExperienceTotal)
+                .ToList();
 
-            // throw new System.NotImplementedException();
+            foreach(var character in myList)
+            {
+                base.PickupItemsFromPool(character);
+            }
         }
 
         /// <summary>
@@ -347,11 +361,7 @@ namespace Game.Engine.EngineGame
         public override bool PickupItemsFromPool(PlayerInfoModel character)
         {
             return base.PickupItemsFromPool(character);
-            // TODO: Teams, You need to implement your own Logic if not using auto apply
-
-            // I use the same logic for Auto Battle as I do for Manual Battle
-
-            // throw new System.NotImplementedException();
+ 
         }
 
         /// <summary>
@@ -362,7 +372,7 @@ namespace Game.Engine.EngineGame
         public override bool GetItemFromPoolIfBetter(PlayerInfoModel character, ItemLocationEnum setLocation)
         {
             return base.GetItemFromPoolIfBetter(character, setLocation);
-            // throw new System.NotImplementedException();
+
         }
 
         /// <summary>
@@ -382,6 +392,9 @@ namespace Game.Engine.EngineGame
             if (EngineSettings.ItemPool.Contains(PoolItem))
             {
                 EngineSettings.BattleScore.ItemModelSelectList.Add(PoolItem);
+
+                // Remove item from pool
+                EngineSettings.ItemPool.Remove(PoolItem);
             }
 
             if (droppedItem != null)
