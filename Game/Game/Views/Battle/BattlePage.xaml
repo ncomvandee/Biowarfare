@@ -307,10 +307,11 @@
                            Style="{StaticResource MessageStyle}" 
                            />
                     
-                    <Button x:Name="ShowScoreButton" 
+                    <ImageButton x:Name="ShowScoreButton"
+                                 Style="{StaticResource ImageButtonGameStyle}"
                             Clicked="ShowScoreButton_Clicked" 
-                            Text="Score" 
-                            WidthRequest="50"
+                           Source="view_scores_main.png"
+                           
                             />
                     
                     <Button x:Name="ExitButton" 
