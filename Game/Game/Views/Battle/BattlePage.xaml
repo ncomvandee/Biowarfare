@@ -302,7 +302,7 @@
                            />
                     
                     <Label Text="Check your score, or click Exit and return soon" 
-                           Style="{StaticResource StaticResource MessageStyle}" 
+                           Style="{StaticResource MessageStyle}" 
                            />
                     
                     <Button x:Name="ShowScoreButton" 
