@@ -1611,6 +1611,107 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Style for round page cell title frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPageCellTitleFrameStyle"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Padding" Value="10, 5"/>
+                <Setter Property="Margin" Value="0, 10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for round page monster title frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPageMonsterTitleFrameStyle"
+                   BasedOn="{StaticResource RoundPageCellTitleFrameStyle}"
+                   >
+
+                <Setter Property="Padding" Value="15, 5"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for round page popup title frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPagePopupTitleFrameStyle"
+                   BasedOn="{StaticResource PopupTitleFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for round page popup frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPagePopupFrameStyle"
+                   BasedOn="{StaticResource ReadPagePopupStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for invisible popup frame for cell labels-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPageInvisibleFrameStyle"
+                   >
+
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="75"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for popup stats frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPageStatsFrameStyle"
+                   BasedOn="{StaticResource InvisibleReadFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="170"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="0, 0, 0, 20"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryAccentColor}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for round page popup Attribute frame-->
+            <Style TargetType="Frame"
+                   x:Key="RoundPagePopupAttributeFrameStyle"
+                   BasedOn="{StaticResource ReadAttributeFrameStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
 
 
 
@@ -2138,6 +2239,47 @@
             <!--___________________________________________-->
 
 
+            <!--Style for round page popup label-->
+            <Style TargetType="Label"
+                   x:Key="RoundPagePopupLabelStyle"
+                   BasedOn="{StaticResource EquipPopupLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Style for round page popup cell type label-->
+            <Style TargetType="Label"
+                   x:Key="RoundPagePopupCellTypeLabelStyle"
+                   BasedOn="{StaticResource PopupBoldAttributeLabelMainStyle}"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Style for round page popup cell type label-->
+            <Style TargetType="Label"
+                   x:Key="RoundPagePopupCellTypeRegularLabelStyle"
+                   BasedOn="{StaticResource PopupAttributeLabelMainStyle}"
+                   >
+
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+
 
 
 
@@ -2573,6 +2715,20 @@
 
             <!--___________________________________________-->
 
+            <!--Style for round page popup button style-->
+            <Style TargetType="Button"
+                   x:Key="RoundPagePopupButtonStyle"
+                   BasedOn="{StaticResource InvisibleReadAttributeButtonStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+
+
 
 
 
@@ -2588,7 +2744,7 @@
 
 
 
-            <!--___________________________________________-->
+          
             
             <!--Style for plus minus buttons on create page-->
             <Style TargetType="ImageButton"
@@ -2699,9 +2855,12 @@
                 <Setter Property="Margin" Value="0, 0, 0, 0"/>
 
             </Style>
+            <!--___________________________________________-->
+            
 
 
-
+            
+            
 
 
 
@@ -2711,9 +2870,10 @@
 
 
 
+            
 
 
-            <!--___________________________________________-->
+           
             
             <!--Item image in frame on item equip page-->
             <Style TargetType="Image" 
@@ -2738,7 +2898,18 @@
 
             </Style>
             <!--___________________________________________-->
+            
+            <!--Style for round page popup image-->
+            <Style TargetType="Image"
+                   x:Key="RoundPagePopupImageStyle"
+                   >
 
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="Margin" Value="10, 5"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
@@ -3072,17 +3243,34 @@
 
             <!--___________________________________________-->
 
-            <!--ScrollView on Village page-->
-            <Style TargetType="FlexLayout"
-                   x:Key="VillageFlexLayoutStyle"
+           
+
+            <!--Style for round page scrollview in attribute frame-->
+            <Style TargetType="ScrollView"
+                   x:Key="RoundPageAttributeScrollViewStyle"
                    >
 
-                <Setter Property="Wrap" Value="Wrap"/>
-                <Setter Property="JustifyContent" Value="SpaceAround"/>
-                <Setter Property="AlignContent" Value="SpaceAround"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Default"/>
 
             </Style>
             <!--___________________________________________-->
+
+            <!--Style for round page scrollview-->
+            <Style TargetType="ScrollView"
+                   x:Key="RoundPageScrollViewStyle"
+                   >
+
+                <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1, 1, 1, 1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
 
 
 
@@ -3242,6 +3430,33 @@
 
             </Style>
             <!--___________________________________________-->
+
+            <!--ScrollView on Village page-->
+            <Style TargetType="FlexLayout"
+                   x:Key="VillageFlexLayoutStyle"
+                   >
+
+                <Setter Property="Wrap" Value="Wrap"/>
+                <Setter Property="JustifyContent" Value="SpaceAround"/>
+                <Setter Property="AlignContent" Value="SpaceAround"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Style for round page flexlayout-->
+            <Style TargetType="FlexLayout"
+                   x:Key="RoundPageFlexLayoutStyle"
+                   >
+
+                <Setter Property="JustifyContent" Value="SpaceEvenly"/>
+                <Setter Property="AlignContent" Value="Center"/>
+                <Setter Property="Wrap" Value="Wrap"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
 
 
 
