@@ -181,9 +181,10 @@
                 </Frame>
             
             <!--Close button--> 
-            <Button Clicked="CloseButton_Clicked" 
-                    Text="Close" HorizontalOptions="CenterAndExpand"
-                    Style="{StaticResource PrimaryButtonStyle}"
+            <ImageButton Clicked="CloseButton_Clicked" 
+                     HorizontalOptions="CenterAndExpand"
+                     Style="{StaticResource ImageButtonGameStyle}"
+                         Source="close_main.png"
                     />
            
         </StackLayout>
