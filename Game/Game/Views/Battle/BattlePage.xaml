@@ -73,8 +73,8 @@
                                BackgroundColor="{StaticResource PrimaryMidgroundPurple}"
                                BorderColor="Transparent"/>
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
-                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
+                            <ImageButton Source="start_main.png" Style="{StaticResource ImageButtonGameStyle}"/>
+                            <ImageButton Source="start_main.png" Style="{StaticResource ImageButtonGameStyle}"/>
                             <!--<ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
                             <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>-->
                             <Button Text="Round Over" Clicked="RoundOver_Clicked"/>
@@ -115,7 +115,7 @@
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" IsVisible="False"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
-                        <ImageButton Source="start_main.png" x:Name="StartBattleButton" Clicked="StartButton_Clicked" IsVisible="False" />
+                        <ImageButton Source="start_main.png" x:Name="StartBattleButton" Clicked="StartButton_Clicked" IsVisible="False" Style="{StaticResource ImageButtonGameStyle}"/>
                     </StackLayout>
 
                     <StackLayout 
