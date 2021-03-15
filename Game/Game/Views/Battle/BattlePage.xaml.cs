@@ -182,6 +182,7 @@ namespace Game.Views
         public bool UpdateMapGrid()
         {
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+            var currentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapGridLocation)
             {
                 // Use the ImageButton from the dictionary because that represents the player object
@@ -244,8 +245,30 @@ namespace Game.Views
 
                     stackObject.BackgroundColor = Color.Yellow;
                 }
+                //Highline the next attacker's turn
+                if (data.Player == currentAttacker)
+                {
+                    MapObject = GetMapGridObject(GetDictionaryStackName(data));
+                    if (MapObject == null)
+                    {
+                        return false;
+                    }
 
-                
+                    var stackObject = (StackLayout)MapObject;
+
+                    // Remove the ImageButton
+                    stackObject.Children.RemoveAt(0);
+
+                    var PlayerImageButton = DetermineMapImageButton(data);
+
+                    stackObject.Children.Add(PlayerImageButton);
+
+                    // Update the Image in the Datastructure
+                    MapGridObjectAddImage(PlayerImageButton, data);
+
+                    stackObject.BackgroundColor = Color.Transparent;
+                }
+
             }
 
             return true;
