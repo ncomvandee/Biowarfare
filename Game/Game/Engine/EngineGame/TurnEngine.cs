@@ -367,18 +367,21 @@ namespace Game.Engine.EngineGame
             {
                 return false;
             }
+            if(EngineSettings.MapModel.IsTargetInRange(Attacker,Target) == false)
+            {
+                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" tried to attack " + GetPronounce(Target) + Target.Name + "\" but not in range";
+                Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
 
-            var AttackerLocation = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
+                return false;
+            }
+/*            var AttackerLocation = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
             var TargetLocation = EngineSettings.MapModel.GetLocationForPlayer(Target);
             
             var distance = EngineSettings.MapModel.CalculateDistance(AttackerLocation, TargetLocation);
             if (distance > Attacker.GetRange())
             {
-                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" try to attack " + GetPronounce(Target) + Target.Name + "\" but not in range" ;
-                Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
 
-                return false;
-            }
+            }*/
 
             // Set Messages to empty
             EngineSettings.BattleMessagesModel.ClearMessages();
