@@ -149,6 +149,7 @@
                            Style="{StaticResource BattlePageFrameStyle}"
                            IsVisible="False"
                            HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
                            WidthRequest="300"
                            HeightRequest="600"
                            Padding="10">
@@ -176,11 +177,16 @@
                                 <Label x:Name="AttackerName" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                       FontAttributes="Bold"
                                        />
                                 
                                 <Label x:Name="AttackerHealth" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                       FontAttributes="Bold"
+                                       Margin="0, 0, 0, 0"
                                        />
                                 
                             </StackLayout>
@@ -197,6 +203,8 @@
                                        VerticalTextAlignment="Center" 
                                        HorizontalOptions="Center" 
                                        HorizontalTextAlignment="Center"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                       FontAttributes="Bold"
                                        />
                                 
                                 <Image x:Name="AttackerAttack" 
@@ -224,11 +232,15 @@
                                 <Label x:Name="DefenderName" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                       FontAttributes="Bold"
                                        />
                                 
                                 <Label x:Name="DefenderHealth" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
+                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
+                                       FontAttributes="Bold"
                                        />
                                 
                             </StackLayout>
@@ -286,12 +298,22 @@
                                  HeightRequest="100"
                                  HorizontalOptions="CenterAndExpand"
                                  >
-                        
+                        <Frame BackgroundColor="Transparent" 
+                               IsVisible="false"
+                               x:Name="MessageDisplayFrame"
+                               VerticalOptions="CenterAndExpand"
+                               BorderColor="Transparent"
+                               Padding="5"
+                               Margin="10"
+                               CornerRadius="20"
+                               >
+                            
                         <StackLayout x:Name="MessageDisplayBox" 
                                      IsVisible="false"
                                      Style="{StaticResource VerticalStack}" 
                                      VerticalOptions="EndAndExpand"
                                      HorizontalOptions="CenterAndExpand"
+                                     
                                      >
                             
                             <Label x:Name="BattleMessages" 
@@ -316,7 +338,9 @@
                         IsVisible="false"
                         />-->
                         </StackLayout>
+                        </Frame>
                     </StackLayout>
+                        
                 </StackLayout>
             </StackLayout>
 
