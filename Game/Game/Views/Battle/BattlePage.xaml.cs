@@ -1194,5 +1194,137 @@ namespace Game.Views
                     break;
             }
         }
+
+        /// <summary>
+        /// Displays emergency kit list
+        /// </summary>
+        public void AddItemToDisplay()
+        {
+            var FlexList = ItemBox.Children.ToList();
+
+            foreach (var data in FlexList)
+            {
+                ItemBox.Children.Remove(data);
+            }
+
+            // List of consumable
+            var EmergencyKit = EngineSettingsModel.Instance.EmergencyKit.ToList();
+
+            foreach (var consumable in EmergencyKit)
+            {
+                ItemBox.Children.Add(GetItemToDisplay(consumable));
+            }
+
+        }
+
+        /// <summary>
+        /// Look up items to display
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
+        public StackLayout GetItemToDisplay(ItemModel consumable)
+        {
+
+            // Default clickable button
+            var ClickAbleButton = true;
+
+            // If item is not equipped, will not render anything
+            if (consumable == null)
+            {
+
+                return new StackLayout { };
+
+            }
+
+            // Item image as ImageButton for pop-up detail view
+            var ItemButton = new ImageButton
+            {
+                Source = consumable.ImageURI,
+                WidthRequest = 40,
+                HeightRequest = 40,
+                BackgroundColor = Color.White,
+                CornerRadius = 40,
+                Padding = 5,
+            };
+
+            // Clicked to unequip item from player
+            if (ClickAbleButton)
+            {
+                
+            }
+
+            // Label for each item
+            var ItemLabel = new Label
+            {
+                Text = consumable.Name,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.HeadTruncation
+
+            };
+
+            // Frame for label, so that the text will wrap if text is long
+            var ItemFrame = new Frame
+            {
+                BackgroundColor = Color.Transparent,
+                BorderColor = Color.Transparent,
+                WidthRequest = 100,
+
+                Content = ItemLabel,
+            };
+
+            // Put ImageButton and label in to same stack
+            var ItemStack = new StackLayout
+            {
+                Padding = 3,
+                HorizontalOptions = LayoutOptions.Center,
+
+                Children = { ItemButton, ItemFrame},
+            };
+
+            // Render particuler stack
+            return ItemStack;
+        }
+
+        /// <summary>
+        /// Event handler when click use item botton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void UseItemButton_Clicked(object sender, EventArgs e)
+        {
+            // Display player info popup
+            CharacterPopUpFrame.IsVisible = true;
+
+            GetPlayerInfo();
+        }
+
+        /// <summary>
+        /// Seed the correct info to popup
+        /// </summary>
+        public void GetPlayerInfo()
+        {
+            // Current turn player
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+
+            CharacterPopUpName.Text = cell.Name;
+            CharacterPopUpImage.Source = cell.ImageURI;
+            CharacterPopupCellType.Text = cell.Job.ToString();
+            CharacterPopupHealth.Text = cell.GetCurrentHealth() + " / " + cell.GetMaxHealth();
+            CharacterPopupAttack.Text = cell.GetAttack().ToString();
+            CharacterPopupDefense.Text = cell.GetDefense().ToString();
+            CharacterPopupSpeed.Text = cell.GetSpeed().ToString();
+        }
+
+        /// <summary>
+        ///  Close popup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ClosePopup_Clicked(object sender, EventArgs e)
+        {
+            CharacterPopUpFrame.IsVisible = false;
+        }
     }
 }
