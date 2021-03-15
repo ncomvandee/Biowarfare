@@ -45,7 +45,9 @@
                         </StackLayout>
 
                         <!--Display Character-->
-                        <Frame Style="{StaticResource RoundPageCellTitleFrameStyle}">
+                        <Frame Style="{StaticResource RoundPageCellTitleFrameStyle}"
+                               x:Name="CellHeader"
+                               IsVisible="True">
 
                             <Label  Style="{StaticResource CellNameLabelStyle}"
                                     Text="Cells" 

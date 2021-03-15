@@ -59,10 +59,11 @@ namespace Game.Views
             isGameOver = gameOver;
 
             TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
-
+            PageTitle.Text = "Game Over";
             DrawCharacterList();
             BottomButton.Source = "continue_main.png";
             ScoreButton.IsVisible = true;
+            CellHeader.IsVisible = false;
         }
 
         /// <summary>
