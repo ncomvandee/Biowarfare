@@ -386,7 +386,7 @@ namespace UnitTests.ViewModels
             // Reset
 
             // Assert
-            Assert.AreEqual(true, ViewModel.Dataset.Count() > 0); // Check that there are rows of data
+            Assert.IsTrue( ViewModel.Dataset.Count() > 0); // Check that there are rows of data
         }
 
         [Test]
