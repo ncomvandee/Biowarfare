@@ -206,7 +206,7 @@ namespace Game.Views
                         return false;
                     }
 
-                    var stackObject = (StackLayout)MapObject;
+/*                    var stackObject = (StackLayout)MapObject;
 
                     // Remove the ImageButton
                     stackObject.Children.RemoveAt(0);
@@ -218,8 +218,10 @@ namespace Game.Views
                     // Update the Image in the Datastructure
                     MapGridObjectAddImage(PlayerImageButton, data);
 
-                    stackObject.BackgroundColor = Color.Transparent;
+                    stackObject.BackgroundColor = Color.Transparent;*/
                     //stackObject.BackgroundColor = DetermineMapBackgroundColor(data);
+
+                    AddImageButtonToMap(MapObject, data, Color.Transparent);
                 }
 
                 //Highline the next attacker's turn
@@ -231,7 +233,7 @@ namespace Game.Views
                         return false;
                     }
 
-                    var stackObject = (StackLayout)MapObject;
+/*                    var stackObject = (StackLayout)MapObject;
 
                     // Remove the ImageButton
                     stackObject.Children.RemoveAt(0);
@@ -243,7 +245,9 @@ namespace Game.Views
                     // Update the Image in the Datastructure
                     MapGridObjectAddImage(PlayerImageButton, data);
 
-                    stackObject.BackgroundColor = Color.Yellow;
+                    stackObject.BackgroundColor = Color.Yellow;*/
+
+                    AddImageButtonToMap(MapObject, data, Color.Yellow);
                 }
                 //Highline the next attacker's turn
                 if (data.Player == currentAttacker)
@@ -254,7 +258,7 @@ namespace Game.Views
                         return false;
                     }
 
-                    var stackObject = (StackLayout)MapObject;
+/*                    var stackObject = (StackLayout)MapObject;
 
                     // Remove the ImageButton
                     stackObject.Children.RemoveAt(0);
@@ -266,11 +270,40 @@ namespace Game.Views
                     // Update the Image in the Datastructure
                     MapGridObjectAddImage(PlayerImageButton, data);
 
-                    stackObject.BackgroundColor = Color.Transparent;
+                    stackObject.BackgroundColor = Color.Transparent;*/
+
+                    AddImageButtonToMap(MapObject, data, Color.Transparent);
                 }
 
             }
 
+            return true;
+        }
+
+        /// <summary>
+        /// Change back ground color base on current attacker and next character turn
+        /// </summary>
+        /// <param name="MapObject"></param>
+        /// <param name="data"></param>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        public bool AddImageButtonToMap(object MapObject, MapModelLocation data ,Color color)
+        {
+
+
+            var stackObject = (StackLayout)MapObject;
+
+            // Remove the ImageButton
+            stackObject.Children.RemoveAt(0);
+
+            var PlayerImageButton = DetermineMapImageButton(data);
+
+            stackObject.Children.Add(PlayerImageButton);
+
+            // Update the Image in the Datastructure
+            MapGridObjectAddImage(PlayerImageButton, data);
+
+            stackObject.BackgroundColor = color;
             return true;
         }
 
