@@ -1332,15 +1332,18 @@ namespace UnitTests.Engine.EngineKoenig
             // Arrange
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
-            
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
-            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
+
+            // Clear the abilities, so the attack is the choice.
+            CharacterPlayer.AbilityTracker.Clear();
+
+            // GSet thr range
+            CharacterPlayer.Range = 10;
+            var range = CharacterPlayer.GetRange();
 
             var Monster = new MonsterModel();
             Engine.EngineSettings.PlayerList.Add(new PlayerInfoModel(Monster));
             Engine.EngineSettings.PlayerList.Add(new PlayerInfoModel(Monster));
+            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
 
