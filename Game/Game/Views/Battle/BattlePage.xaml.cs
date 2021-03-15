@@ -1329,10 +1329,17 @@ namespace Game.Views
             CharacterPopUpFrame.IsVisible = false;
         }
 
+        /// <summary>
+        /// Use consumable in emergency kit
+        /// </summary>
+        /// <param name="consumable"></param>
+        /// <returns></returns>
         public bool UseConsumableItem(ItemModel consumable)
         {
+            // Default result
             var result = false;
 
+            // Current turn player
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
 
             switch (consumable.Name)
@@ -1359,17 +1366,25 @@ namespace Game.Views
 
             if (result)
             {
+                // Remove consumable out of emergency kit after used
                 EngineSettingsModel.Instance.EmergencyKit.Remove(consumable);
             }
 
+            // Refresh player data
             GetPlayerInfo();
 
+            // Refresh emergency list
             AddItemToDisplay();
 
 
             return result;
         }
 
+        /// <summary>
+        /// Remove poison from player
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <returns></returns>
         public bool UseAntidote(PlayerInfoModel cell)
         { 
             // Cure poison
@@ -1379,6 +1394,11 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Increase speed for round
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <returns></returns>
         public bool UseAdrenaline(PlayerInfoModel cell)
         {
             cell.BuffSpeed();
@@ -1386,10 +1406,16 @@ namespace Game.Views
             return true;
         }
 
+        /// <summary>
+        /// Restore small amount of health
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <returns></returns>
         public bool UseBandAid(PlayerInfoModel cell)
         {
             cell.CurrentHealth += 10;
 
+            // If current exceed max health, current health = max health
             if (cell.CurrentHealth > cell.MaxHealth)
             {
                 cell.CurrentHealth = cell.MaxHealth;
@@ -1399,6 +1425,11 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Increase defense for round
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <returns></returns>
         public bool UseGummy(PlayerInfoModel cell)
         {
 
