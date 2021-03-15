@@ -609,4 +609,34 @@
   <ItemGroup>
     <BundleResource Include="Resources\view_scores_main.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\any_finger_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feet_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\head_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\necklace_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\off_hand_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\primary_hand_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\right_finger_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\use_ability_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\use_item_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left_finger_location.png" />
+  </ItemGroup>
 </Project>
