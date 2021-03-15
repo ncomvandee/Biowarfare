@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.Models;
 using Game.ViewModels;
+using Game.Engine.EngineModels;
 
 namespace Game.Views
 {
@@ -27,7 +28,7 @@ namespace Game.Views
 
         // Hold the Map Objects, for easy access to update them
         public Dictionary<string, object> MapLocationObject = new Dictionary<string, object>();
-
+        public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
 
         // Empty Constructor for UTs
         bool UnitTestSetting;
@@ -420,8 +421,10 @@ namespace Game.Views
                     data.Clicked += (sender, args) => SetSelectedMonster(MapLocationModel);
                     break;
                 case PlayerTypeEnum.Unknown:
-                default:
                     data.Clicked += (sender, args) => SetSelectedEmpty(MapLocationModel);
+                    break;
+                default:
+                    
 
                     // Use the blank cell
                     data.Source = BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.EmptySquare.ImageURI;
@@ -476,7 +479,34 @@ namespace Game.Views
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
 
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
+
+            var cell = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+
+            if (cell.PlayerType != PlayerTypeEnum.Character)
+            {
+                //do the turn if 
+                var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+                UpdateMapGrid();
+                return false;
+            }
+
+
+            var currentCellLocation = EngineSettings.MapModel.GetLocationForPlayer(cell);
+
+            if (currentCellLocation == null)
+            {
+                return false;
+            }
+            
+             
+            EngineSettings.MapModel.MovePlayerOnMap(currentCellLocation, data);
+            currentCellLocation = EngineSettings.MapModel.GetLocationForPlayer(cell);
+            UpdateMapGrid();
+
+
             return true;
+
         }
 
         /// <summary>
