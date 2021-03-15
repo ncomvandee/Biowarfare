@@ -934,7 +934,7 @@ namespace Game.Views
             // Output The Message that happened.
             BattleMessagesForAllActions.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessagesForAllActions.Text);
 
-            Debug.WriteLine(BattleMessages.Text);
+            Debug.WriteLine(BattleMessagesForAllActions.Text);
 
             if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
             {
@@ -951,6 +951,7 @@ namespace Game.Views
         public void ClearMessages()
         {
             BattleMessages.Text = "";
+            BattleMessagesForAllActions.Text = "";
             htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
             //HtmlBox.Source = htmlSource;
         }
