@@ -525,10 +525,11 @@
                             <ScrollView Style="{StaticResource RoundPageAttributeScrollViewStyle}"
                                         Grid.Row="1"
                                         x:Name="ItemsFrame"
-                                        IsVisible="false">
+                                        IsVisible="True">
 
                                 <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
-                                            x:Name="ItemBox" />
+                                            x:Name="ItemBox"
+                                            IsVisible="true"/>
 
                             </ScrollView>
                         </Grid>

@@ -1250,7 +1250,7 @@ namespace Game.Views
             // Clicked to unequip item from player
             if (ClickAbleButton)
             {
-                
+                ItemButton.Clicked += (sender, args) => UseConsumableItem(consumable);
             }
 
             // Label for each item
@@ -1298,6 +1298,8 @@ namespace Game.Views
             CharacterPopUpFrame.IsVisible = true;
 
             GetPlayerInfo();
+
+            AddItemToDisplay();
         }
 
         /// <summary>
@@ -1325,6 +1327,84 @@ namespace Game.Views
         public void ClosePopup_Clicked(object sender, EventArgs e)
         {
             CharacterPopUpFrame.IsVisible = false;
+        }
+
+        public bool UseConsumableItem(ItemModel consumable)
+        {
+            var result = false;
+
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+
+            switch (consumable.Name)
+            {
+                case "Antidote":
+                    result = UseAntidote(cell);
+                    break;
+
+                case "Adrenaline Syringe":
+
+                    result = UseAdrenaline(cell);
+                    break;
+
+                case "Band aid":
+
+                    result = UseBandAid(cell);
+                    break;
+
+                case "Gummy Multi-Vitamin":
+
+                    result = UseGummy(cell);
+                    break;
+            };
+
+            if (result)
+            {
+                EngineSettingsModel.Instance.EmergencyKit.Remove(consumable);
+            }
+
+            GetPlayerInfo();
+
+            AddItemToDisplay();
+
+
+            return result;
+        }
+
+        public bool UseAntidote(PlayerInfoModel cell)
+        { 
+            // Cure poison
+            cell.Poison = false;
+
+            return true;
+
+        }
+
+        public bool UseAdrenaline(PlayerInfoModel cell)
+        {
+            cell.BuffSpeed();
+
+            return true;
+        }
+
+        public bool UseBandAid(PlayerInfoModel cell)
+        {
+            cell.CurrentHealth += 10;
+
+            if (cell.CurrentHealth > cell.MaxHealth)
+            {
+                cell.CurrentHealth = cell.MaxHealth;
+            }
+
+            return true;
+
+        }
+
+        public bool UseGummy(PlayerInfoModel cell)
+        {
+
+            cell.BuffDefense();
+
+            return true;
         }
     }
 }
