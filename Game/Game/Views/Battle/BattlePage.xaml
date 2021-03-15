@@ -118,7 +118,12 @@
                     
                     <StackLayout Orientation="Horizontal">
 
-                        <Frame Style="{StaticResource BattlePageFrameStyle}"/>
+                        <Frame Style="{StaticResource BattlePageFrameStyle}"
+                               >
+                            <Label x:Name="BattleMessagesForAllActions"
+                                   Padding="10"/>
+                        </Frame>
+                        
                         
                         <StackLayout Orientation="Vertical" 
                                      HorizontalOptions="FillAndExpand"
