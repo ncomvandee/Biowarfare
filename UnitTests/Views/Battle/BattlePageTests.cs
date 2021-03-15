@@ -183,7 +183,9 @@ namespace UnitTests.Views
         public void BattlePage_GameMessage_Default_Should_Pass()
         {
             // Arrange
-
+            var data = new PlayerInfoModel();
+            data.PlayerType = PlayerTypeEnum.Character;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = data;
             // Act
             page.GameMessage();
 
