@@ -181,6 +181,7 @@ namespace Game.Views
         /// <returns></returns>
         public bool UpdateMapGrid()
         {
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapGridLocation)
             {
                 // Use the ImageButton from the dictionary because that represents the player object
@@ -219,6 +220,32 @@ namespace Game.Views
                     stackObject.BackgroundColor = Color.Transparent;
                     //stackObject.BackgroundColor = DetermineMapBackgroundColor(data);
                 }
+
+                //Highline the next attacker's turn
+                if(data.Player == cell)
+                {
+                    MapObject = GetMapGridObject(GetDictionaryStackName(data));
+                    if (MapObject == null)
+                    {
+                        return false;
+                    }
+
+                    var stackObject = (StackLayout)MapObject;
+
+                    // Remove the ImageButton
+                    stackObject.Children.RemoveAt(0);
+
+                    var PlayerImageButton = DetermineMapImageButton(data);
+
+                    stackObject.Children.Add(PlayerImageButton);
+
+                    // Update the Image in the Datastructure
+                    MapGridObjectAddImage(PlayerImageButton, data);
+
+                    stackObject.BackgroundColor = Color.Yellow;
+                }
+
+                
             }
 
             return true;
@@ -457,7 +484,7 @@ namespace Game.Views
                     BattleMapBackgroundColor = "BattleMapTransparentColor";
                     break;
             }
-
+            var cell = BattleEngineViewModel.Instance.Engine.Round;
             var result = (Color)Application.Current.Resources[BattleMapBackgroundColor];
             return result;
         }
