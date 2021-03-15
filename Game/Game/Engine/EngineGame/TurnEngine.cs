@@ -338,6 +338,9 @@ namespace Game.Engine.EngineGame
                 return null;
             }
 
+
+
+
             // Select first one to hit in the list for now...
             // Attack the Weakness (lowest HP) MonsterModel first 
 
@@ -362,6 +365,18 @@ namespace Game.Engine.EngineGame
 
             if (Target == null)
             {
+                return false;
+            }
+
+            var AttackerLocation = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
+            var TargetLocation = EngineSettings.MapModel.GetLocationForPlayer(Target);
+            
+            var distance = EngineSettings.MapModel.CalculateDistance(AttackerLocation, TargetLocation);
+            if (distance > Attacker.GetRange())
+            {
+                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" try to attack " + GetPronounce(Target) + Target.Name + "\" but not in range" ;
+                Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+
                 return false;
             }
 
