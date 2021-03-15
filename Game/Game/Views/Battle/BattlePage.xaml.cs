@@ -757,15 +757,6 @@ namespace Game.Views
             AttackerName.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.Name;
             AttackerHealth.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.GetCurrentHealthTotal.ToString() + " / " + BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.GetMaxHealthTotal.ToString();
 
-            // Show what action the Attacker used
-            //AttackerAttack.Source = BattleEngineViewModel.Instance.Engine.EngineSettings.PreviousAction.ToImageURI();
-            AttackerAttack.Source = "";
-
-            var item = ItemIndexViewModel.Instance.GetItem(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PrimaryHand);
-            if (item != null)
-            {
-                AttackerAttack.Source = item.ImageURI;
-            }
             DefenderFrame.IsVisible = true;
             DefenderImage.Source = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.ImageURI;
             DefenderName.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.Name;
@@ -1063,7 +1054,6 @@ namespace Game.Views
         public async void GameOver_Clicked(object sender, EventArgs args)
         {
             GameUIDisplay.IsVisible = false;
-            AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
 
             // Show the Game Over Display
             //GameOverDisplay.IsVisible = true;
@@ -1139,8 +1129,7 @@ namespace Game.Views
             switch (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum)
             {
                 case BattleStateEnum.Starting:
-                    //GameUIDisplay.IsVisible = false;
-                    AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
+
                     StartBattleButton.IsVisible = true;
                     AttackButton.IsVisible = false;
                     UseAbilityButton.IsVisible = false;
@@ -1149,7 +1138,6 @@ namespace Game.Views
 
                 case BattleStateEnum.NewRound:
                     UpdateMapGrid();
-                    AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     NextRoundButton.IsVisible = true;
                     AttackButton.IsVisible = false;
                     UseAbilityButton.IsVisible = false;
@@ -1159,7 +1147,6 @@ namespace Game.Views
                 case BattleStateEnum.GameOver:
                     // Hide the Game Board
                     GameUIDisplay.IsVisible = false;
-                    AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
 
                     // Show the Game Over Display
                     //GameOverDisplay.IsVisible = true;

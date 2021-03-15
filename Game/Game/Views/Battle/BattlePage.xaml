@@ -170,7 +170,8 @@
                                        >
                                 
                                 
-                                <Image x:Name="AttackerImage" Source="item.png" 
+                                <Image x:Name="AttackerImage" 
+                                       Source="item.png" 
                                        Style="{StaticResource ImageBattleMediumStyle}"
                                        />
                                 </Frame>
@@ -207,10 +208,10 @@
                                        FontAttributes="Bold"
                                        />
                                 
-                                <Image x:Name="AttackerAttack" 
+                                <!--<Image x:Name="AttackerAttack" 
                                        Source="mapcell.png" 
                                        Style="{StaticResource ImageSmallStyle}"
-                                       />
+                                       />-->
                                 
                             </StackLayout>
 
