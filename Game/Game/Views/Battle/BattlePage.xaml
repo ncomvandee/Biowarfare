@@ -96,6 +96,7 @@
                              Style="{StaticResource BattleMapBox}"  
                              HorizontalOptions="CenterAndExpand" 
                              VerticalOptions="Start"
+                             
                              >
                     
                     <AbsoluteLayout HorizontalOptions="CenterAndExpand" 
@@ -110,7 +111,7 @@
                     </AbsoluteLayout>
                 </StackLayout>
 
-                <AbsoluteLayout Margin="0, 10"
+                <!--<AbsoluteLayout Margin="0, 10"
                                 IsVisible="False"
                                 HorizontalOptions="CenterAndExpand"
                                 x:Name="BattleInfoAndActions"
@@ -137,30 +138,20 @@
                                          Style="{StaticResource ImageButtonGameStyle}"
                                          />
                             
-                            <!--<ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>
-                            <ImageButton Source="start_main.png" WidthRequest="100" HeightRequest="40" Margin="10, 0"/>-->
-                            
-                            <Button Text="Round Over" 
-                                    Clicked="RoundOver_Clicked"
-                                    />
-                            
-                            <Button Text="Game Over" 
-                                    Clicked="GameOver_Clicked"
-                                    />
-                            
-                        </StackLayout>
-                    </StackLayout>
-                </AbsoluteLayout>
+                            -->
 
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" 
                              Style="{StaticResource BattleUIBottomBox}"
-                             >
+                             Margin="0, 60">
 
                     <Frame x:Name="BattlePlayerInfomationBox"
-                           Style="{StaticResource PlayerBattleOuterFrame}"
+                           Style="{StaticResource BattlePageFrameStyle}"
                            IsVisible="False"
-                           >
+                           HorizontalOptions="CenterAndExpand"
+                           WidthRequest="300"
+                           HeightRequest="600"
+                           Padding="10">
 
                         <StackLayout x:Name="BattlePlayerBox" 
                                      Style="{StaticResource PlayerBattleOuterBox}"
@@ -233,15 +224,34 @@
                     </Frame>
                     <!--Battle Grammar Buttons-->
                     <StackLayout Style="{StaticResource HorizontalStack}" 
-                                 HorizontalOptions="CenterAndExpand"
+                                 HorizontalOptions= "CenterAndExpand"
                                  >
-                        
-                        <Button x:Name="AttackButton" 
+
+                        <ImageButton Source="use_ability_main.png" 
+                                     x:Name="UseAbilityButton" 
+                                     IsVisible="False" 
+                                     Style="{StaticResource ImageButtonGameStyle}"
+                                     WidthRequest="100"/>
+
+                        <ImageButton Source="attack_main.png" 
+                                     Clicked="AttackButton_Clicked"
+                                     x:Name="AttackButton"
+                                     IsVisible="true" 
+                                     Style="{StaticResource ImageButtonGameStyle}"
+                                     WidthRequest="100"/>
+
+                        <!--<Button x:Name="AttackButton" 
                                 Clicked="AttackButton_Clicked" 
                                 Text="Next Attack" 
                                 IsVisible="False"
-                                />
-                        
+                                />-->
+
+                        <ImageButton Source="use_item_main.png" 
+                                     x:Name="UseItemButton"
+                                     IsVisible="False" 
+                                     Style="{StaticResource ImageButtonGameStyle}"
+                                     WidthRequest="100"/>
+
                         <Button x:Name="NextRoundButton" 
                                 Clicked="NextRoundButton_Clicked" 
                                 Text="Next Round" 
@@ -266,7 +276,7 @@
                         <StackLayout x:Name="MessageDisplayBox" 
                                      IsVisible="false"
                                      Style="{StaticResource VerticalStack}" 
-                                     VerticalOptions="StartAndExpand"
+                                     VerticalOptions="EndAndExpand"
                                      HorizontalOptions="CenterAndExpand"
                                      >
                             
