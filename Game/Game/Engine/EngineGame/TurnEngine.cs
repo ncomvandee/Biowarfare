@@ -374,14 +374,6 @@ namespace Game.Engine.EngineGame
 
                 return false;
             }
-/*            var AttackerLocation = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
-            var TargetLocation = EngineSettings.MapModel.GetLocationForPlayer(Target);
-            
-            var distance = EngineSettings.MapModel.CalculateDistance(AttackerLocation, TargetLocation);
-            if (distance > Attacker.GetRange())
-            {
-
-            }*/
 
             // Set Messages to empty
             EngineSettings.BattleMessagesModel.ClearMessages();
