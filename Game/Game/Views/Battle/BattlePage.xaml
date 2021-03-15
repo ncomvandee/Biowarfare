@@ -258,18 +258,13 @@
                                      Style="{StaticResource ImageButtonGameStyle}"
                                      />
 
-                        <ImageButton Source="attack_main.png" 
+                        <ImageButton Source="continue_main.png" 
                                      Clicked="AttackButton_Clicked"
                                      x:Name="AttackButton"
                                      IsVisible="true" 
                                      Style="{StaticResource ImageButtonGameStyle}"
                                     />
 
-                        <!--<Button x:Name="AttackButton" 
-                                Clicked="AttackButton_Clicked" 
-                                Text="Next Attack" 
-                                IsVisible="False"
-                                />-->
 
                         <ImageButton Source="use_item_main.png" 
                                      x:Name="UseItemButton"
