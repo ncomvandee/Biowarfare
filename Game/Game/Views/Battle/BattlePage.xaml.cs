@@ -540,7 +540,7 @@ namespace Game.Views
                     BattleMapBackgroundColor = "BattleMapTransparentColor";
                     break;
             }
-            var cell = BattleEngineViewModel.Instance.Engine.Round;
+  
             var result = (Color)Application.Current.Resources[BattleMapBackgroundColor];
             return result;
         }
@@ -650,6 +650,7 @@ namespace Game.Views
 
                 // Show the Round Over, after that is cleared, it will show the New Round Dialog
                 //ShowModalRoundOverPage();
+                ShowBattleMode();
                 RoundOver_Clicked(null, null);
                 return true;
             }
@@ -668,6 +669,7 @@ namespace Game.Views
                 Debug.WriteLine("Game Over");
 
                 //GameOver();
+                //ShowBattleMode();
                 GameOver_Clicked(null, null);
                 return true;
             }
