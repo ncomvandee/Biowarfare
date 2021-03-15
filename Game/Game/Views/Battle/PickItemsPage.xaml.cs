@@ -36,6 +36,8 @@ namespace Game.Views
 
             AttributeIcon.Source = ViewModel.Data.Attribute.ToImage();
 
+            LocationIcon.Source = ViewModel.Data.Location.ToIcon();
+
 
         }
 

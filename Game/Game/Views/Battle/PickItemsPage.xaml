@@ -22,159 +22,152 @@
     </NavigationPage.TitleView>
    
     <ContentPage.Content>
-        <StackLayout>
+        <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout>
 
-            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                   Padding="5"
-                   >
+                <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
+                       Padding="5">
 
-                <Grid RowSpacing="0">
+                    <Grid RowSpacing="0">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
 
-                    <Frame Grid.Row="0" 
-                           Style="{StaticResource PickItemsTitleFrame}"
-                           >
+                        <Frame Grid.Row="0"
+                               Style="{StaticResource PickItemsTitleFrame}">
 
-                        <Label Text="{Binding Data.Name}" 
-                               Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center" 
-                               />
+                            <Label Text="{Binding Data.Name}"
+                                   Style="{StaticResource CellNameLabelStyle}"
+                                   VerticalOptions="Center" />
 
-                    </Frame>
+                        </Frame>
 
-                    <!--Frame for thumbnail-->
-                    <Frame x:Name="ImageFrame" 
-                           Style="{StaticResource PickItemsCircleFrame}" 
-                           Grid.Row="1"
-                           >
+                        <!--Frame for thumbnail-->
+                        <Frame x:Name="ImageFrame"
+                               Style="{StaticResource PickItemsCircleFrame}"
+                               Grid.Row="1">
 
-                        <Image Source="{Binding Data.ImageURI}"/>
+                            <Image Source="{Binding Data.ImageURI}" />
 
-                    </Frame>
-                </Grid>
-            </Frame>
+                        </Frame>
+                    </Grid>
+                </Frame>
 
-            <Frame Style="{StaticResource PickItemsPickerFrame}"
-                   x:Name="PickerFrame"
-                   >
+                <Frame Style="{StaticResource PickItemsPickerFrame}"
+                       x:Name="PickerFrame">
 
-                <Picker Style="{StaticResource CreatePickerStyle}" 
-                        x:Name="CellPicker"
-                        SelectedIndexChanged="CellPicker_SelectedIndexChanged"
-                        />
+                    <Picker Style="{StaticResource CreatePickerStyle}"
+                            x:Name="CellPicker"
+                            SelectedIndexChanged="CellPicker_SelectedIndexChanged" />
 
-            </Frame>
+                </Frame>
 
-            <Frame Style="{StaticResource PickItemsSquareFrameStyle}">
+                <Frame Style="{StaticResource PickItemsSquareFrameStyle}">
 
-                <StackLayout>
+                    <StackLayout>
 
-                    <Frame Style="{StaticResource ReadCellTitleFrame}"
-                           Padding="30, 0"
-                           >
+                        <Frame Style="{StaticResource ReadCellTitleFrame}"
+                               Padding="30, 0">
 
-                        <Label Text="Attribute" 
-                               Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center"
-                               />
+                            <Label Text="Attribute"
+                                   Style="{StaticResource CellNameLabelStyle}"
+                                   VerticalOptions="Center" />
 
-                    </Frame>
+                        </Frame>
 
-                    <Frame Style="{StaticResource PickItemsAttributeTitleFrameStyle}">
+                        <Frame Style="{StaticResource PickItemsAttributeTitleFrameStyle}">
 
-                        <Grid HorizontalOptions="FillAndExpand"
-                              Padding="10, 0"
-                              >
+                            <Grid HorizontalOptions="FillAndExpand"
+                                  Padding="10, 0">
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
-                            <StackLayout Orientation="Horizontal" 
-                                         Grid.Column="0"
-                                         >
+                                <StackLayout Orientation="Horizontal"
+                                             Grid.Column="0">
 
-                                <Image Source="attack_icon.png"
-                                       x:Name="AttributeIcon"
-                                       />
+                                    <Image Source="attack_icon.png"
+                                           x:Name="AttributeIcon" />
 
-                                <Label Text="{Binding Data.Value}"
-                                       FontSize="Medium"
-                                       />
+                                    <Label Text="{Binding Data.Value}"
+                                           FontSize="Medium" />
 
-                            </StackLayout>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" 
-                                         Grid.Column="1"
-                                         >
+                                <StackLayout Orientation="Horizontal"
+                                             Grid.Column="1">
 
-                                <Image Source="range_blue.png"
-                                       />
+                                    <Image Source="range_blue.png" />
 
-                                <Label Text="{Binding Data.Range}"
-                                       FontSize="Medium"
-                                       />
+                                    <Label Text="{Binding Data.Range}"
+                                           FontSize="Medium" />
 
-                            </StackLayout>
+                                </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Column="2"
-                                         >
+                                <StackLayout Orientation="Horizontal"
+                                             Grid.Column="2">
 
-                                <Image Source="damage_blue.png"
-                                       Margin="0, 0, 0, 1"
-                                       />
+                                    <Image Source="damage_blue.png"
+                                           Margin="0, 0, 0, 1" />
 
-                                <Label Text="{Binding Data.Damage}"
-                                       FontSize="Medium"
-                                       />
+                                    <Label Text="{Binding Data.Damage}"
+                                           FontSize="Medium" />
 
-                            </StackLayout>
-                        </Grid>
-                    </Frame>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
 
-                    <Frame Style="{StaticResource PickItemsLowerTitleFrame}"
-                           >
+                        <Frame Style="{StaticResource PickItemsLowerTitleFrame}">
 
-                        <Label Text="Description" 
-                               Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center"
-                               />
+                            <Label Text="Description"
+                                   Style="{StaticResource CellNameLabelStyle}"
+                                   VerticalOptions="Center" />
 
-                    </Frame>
+                        </Frame>
 
-                    <Frame Style="{StaticResource PickItemsDescriptionFrame}">
+                        <Frame Style="{StaticResource PickItemsDescriptionFrame}">
 
-                        <ScrollView>
+                            <ScrollView>
 
-                            <Label Text="{Binding Data.Description}"/>
+                                <Label Text="{Binding Data.Description}" />
 
-                        </ScrollView>
-                    </Frame>
+                            </ScrollView>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Margin="10">
+
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Clicked="SaveButton_Clicked"
+                                 Source="save_main.png" />
+
+                    <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                 Clicked="CancelButton_Clicked"
+                                 Source="cancel_main.png" />
+
                 </StackLayout>
-            </Frame>
-
-            <StackLayout Orientation="Horizontal" 
-                         HorizontalOptions="Center"
-                         Margin="10"
-                         >
-
-                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
-                             Clicked="SaveButton_Clicked"
-                             Source="save_main.png"
-                             />
-
-                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
-                             Clicked="CancelButton_Clicked"
-                             Source="cancel_main.png"
-                             />
-
             </StackLayout>
-        </StackLayout>
+
+            <Frame AbsoluteLayout.LayoutBounds=".4, .42, 4, .25"
+                   AbsoluteLayout.LayoutFlags="All"
+                   BackgroundColor="Transparent"
+                   WidthRequest="30"
+                   HeightRequest="30"
+                   CornerRadius="100"
+                   BorderColor="Transparent"
+                   Padding="5">
+
+                <Image x:Name="LocationIcon"/>
+
+            </Frame>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

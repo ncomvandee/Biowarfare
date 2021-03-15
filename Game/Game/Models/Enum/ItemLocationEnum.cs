@@ -194,6 +194,58 @@ namespace Game.Models
         
         }
 
+        /// <summary>
+        /// Get the icon per locaiton
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string ToIcon(this ItemLocationEnum value)
+        {
+            var image = "";
+
+            switch (value)
+            {
+                case ItemLocationEnum.Head:
+                    image = "head_location.png";
+                    break;
+
+                case ItemLocationEnum.Necklass:
+                    image = "necklace_location.png";
+                    break;
+
+                case ItemLocationEnum.PrimaryHand:
+                    image = "primary_hand_location.png";
+                    break;
+
+                case ItemLocationEnum.OffHand:
+                    image = "off_hand_location.png";
+                    break;
+
+                case ItemLocationEnum.RightFinger:
+                    image = "right_finger_location.png";
+                    break;
+
+                case ItemLocationEnum.LeftFinger:
+                    image = "left_finger_location.png";
+                    break;
+
+                case ItemLocationEnum.Feet:
+                    image = "feet_location.png";
+                    break;
+
+                case ItemLocationEnum.Finger:
+                    image = "any_finger_location.png";
+                    break;
+
+                case ItemLocationEnum.Unknown:
+                default:
+                    break;
+            }
+
+            return image;
+
+        }
+
     }
 
     /// <summary>
