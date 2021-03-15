@@ -565,12 +565,13 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
 
             var cell = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+            
 
             if (cell.PlayerType != PlayerTypeEnum.Character)
             {
                 //do the turn if 
-                var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
-                UpdateMapGrid();
+/*                var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+                UpdateMapGrid();*/
                 return false;
             }
 
@@ -584,7 +585,7 @@ namespace Game.Views
             
              
             EngineSettings.MapModel.MovePlayerOnMap(currentCellLocation, data);
-            currentCellLocation = EngineSettings.MapModel.GetLocationForPlayer(cell);
+            GameMessage();
             UpdateMapGrid();
 
 
@@ -608,7 +609,60 @@ namespace Game.Views
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
 
-            data.IsSelectedTarget = true;
+            //data.IsSelectedTarget = true;
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PlayerType != PlayerTypeEnum.Character)
+            {
+                return false;
+
+            }
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+
+            // Get the turn, set the current player and attacker to match
+            //SetAttackerAndDefender();
+
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(data.Player);
+
+            // Hold the current state
+            var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+
+            // Output the Message of what happened.
+            GameMessage();
+
+            // Show the outcome on the Board
+            DrawGameAttackerDefenderBoard();
+
+            if (RoundCondition == RoundEnum.NewRound)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.NewRound;
+
+                // Pause
+                Task.Delay(WaitTime);
+
+                Debug.WriteLine("New Round");
+
+                // Show the Round Over, after that is cleared, it will show the New Round Dialog
+                ShowModalRoundOverPage();
+                return true;
+            }
+
+            // Check for Game Over
+            if (RoundCondition == RoundEnum.GameOver)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
+
+                // Wrap up
+                BattleEngineViewModel.Instance.Engine.EndBattle();
+
+                // Pause
+                Task.Delay(WaitTime);
+
+                Debug.WriteLine("Game Over");
+
+                GameOver();
+                return true;
+            }
             return true;
         }
 
