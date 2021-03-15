@@ -1314,6 +1314,14 @@ namespace Game.Views
             // Current turn player
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
 
+            // Player status
+            String status = "Happy";
+
+            if (cell.Poison)
+            {
+                status = "Poisoned";
+            }
+
             CharacterPopUpName.Text = cell.Name;
             CharacterPopUpImage.Source = cell.ImageURI;
             CharacterPopupCellType.Text = cell.Job.ToString();
@@ -1321,6 +1329,7 @@ namespace Game.Views
             CharacterPopupAttack.Text = cell.GetAttack().ToString();
             CharacterPopupDefense.Text = cell.GetDefense().ToString();
             CharacterPopupSpeed.Text = cell.GetSpeed().ToString();
+            CharacterPopupStatus.Text = status;
         }
 
         /// <summary>
