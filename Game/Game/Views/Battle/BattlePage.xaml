@@ -319,7 +319,7 @@
                             <Label x:Name="BattleMessages" 
                                     HorizontalOptions="FillAndExpand" 
                                     LineBreakMode="WordWrap" 
-                                    MaxLines="3"
+                                    MaxLines="2"
                                     LineHeight="1"
                                     CharacterSpacing="1"
                                     Style="{StaticResource SimpleLabelTextStyle}"
