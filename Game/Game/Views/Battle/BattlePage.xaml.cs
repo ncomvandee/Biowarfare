@@ -183,6 +183,8 @@ namespace Game.Views
         {
             // Disable the map grid
             MapGrid.IsEnabled = false;
+            UseAbilityButton.IsVisible = false;
+            UseItemButton.IsVisible = false;
 
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
             var currentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
@@ -191,6 +193,8 @@ namespace Game.Views
             if (cell != null && cell.PlayerType == PlayerTypeEnum.Character)
             {
                 MapGrid.IsEnabled = true;
+                UseAbilityButton.IsVisible = true;
+                UseItemButton.IsVisible = true;
             }
 
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapGridLocation)
