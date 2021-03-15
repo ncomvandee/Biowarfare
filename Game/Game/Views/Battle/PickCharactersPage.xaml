@@ -16,7 +16,6 @@
                />
 
     </NavigationPage.TitleView>
-
     <ContentPage.Content>
 
         <ScrollView VerticalScrollBarVisibility="Always"
@@ -30,20 +29,17 @@
 
                     <StackLayout Orientation="Vertical">
 
-                        <Label Text="Cells" Style="{StaticResource SimpleLabelTextStyle}" 
-                               Margin="0, 0, 0, 5" 
-                               Padding="0"
+                        <Label Text="Cells" 
+                               Style="{StaticResource PickCellsLabelStyle}"
                                />
 
                         <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                                      Command = "{Binding LoadItemsCommand}"
                                      >
 
-                            <CollectionView ItemsSource="{Binding DatabaseCharacterList}"
-                                            HorizontalScrollBarVisibility="Always"
-                                            SelectionMode="Single"
+                            <CollectionView Style="{StaticResource PickCharactersCollectionStyle}"
+                                            ItemsSource="{Binding DatabaseCharacterList}"
                                             SelectionChanged="OnDatabaseCharacterItemSelected"
-                                            HeightRequest="150"
                                             x:Name="CharactersListView" 
                                             >
 
@@ -58,12 +54,7 @@
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>
 
-                                        <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                                               WidthRequest="120"
-                                               HeightRequest="120"
-                                               Margin="10, 0, 10, 10"
-                                               Padding="5"
-                                               >
+                                        <Frame Style="{StaticResource PickCellsFrameStyle}">
 
                                             <Grid RowSpacing="0">
                                                 <Grid.RowDefinitions>
@@ -77,23 +68,15 @@
                                                              >
 
                                                     <Frame Grid.Row="0" 
-                                                           Style="{StaticResource ReadCellTitleFrame}"
-                                                           Padding="2"
-                                                           WidthRequest="75"
-                                                           HeightRequest="25"
-                                                           Margin="0"
+                                                           Style="{StaticResource PickCellsTitleFrameStyle}"
                                                            >
 
-                                                        <StackLayout Orientation="Horizontal" 
+                                                        <StackLayout Style="{StaticResource CollectionStackLayoutStyle}"
                                                                      Grid.Row="0" 
-                                                                     HorizontalOptions="CenterAndExpand"
-                                                                     VerticalOptions="CenterAndExpand"
                                                                      >
 
                                                             <Label Text="{Binding Name}" 
-                                                                   Style="{StaticResource CellNameLabelStyle}"
-                                                                   FontSize="Small"
-                                                                   Margin="0"
+                                                                   Style="{StaticResource PickCellsNameLabelStyle}"
                                                                    />
 
                                                         </StackLayout>
@@ -101,21 +84,16 @@
                                                     </Frame>
 
                                                     <Frame x:Name="ImageFrame" 
-                                                           Style="{StaticResource LargeCircleFrameStyle}"
-                                                           BorderColor="White"
-                                                           WidthRequest="50"
-                                                           HeightRequest="50"
+                                                           Style="{StaticResource PickCellsCircleFrameStyle}"
                                                            Grid.Row="1"
-                                                           Margin="0"
                                                            >
 
-                                                        <Image Source="{Binding ImageURI}" />
+                                                        <Image Source="{Binding ImageURI}"/>
 
                                                     </Frame>
 
                                                     <Image Source="icon_add.png" 
-                                                           WidthRequest="20"
-                                                           Margin="0"
+                                                           Style="{StaticResource PickCharactersImageStyle}"
                                                            />
 
                                                 </StackLayout>
@@ -136,14 +114,10 @@
                                      >
 
                             <Label Text="In Party: " 
-                                   Style="{StaticResource SimpleLabelTextStyle}" 
-                                   Margin="0, 5, 0, 5" 
-                                   Padding="0"
+                                   Style="{StaticResource PickCellsPartyLabelStyle}" 
                                    />
 
-                            <Label Style="{StaticResource SimpleLabelTextStyle}" 
-                                   Margin="0, 5, 0, 5" 
-                                   Padding="0" 
+                            <Label Style="{StaticResource PickCellsPartyLabelStyle}" 
                                    x:Name="PartyCountLabel"
                                    Text="0"
                                    />
@@ -154,12 +128,10 @@
                                      Command = "{Binding LoadItemsCommand}"
                                      >
                             
-                            <CollectionView x:Name="PartyListView" 
+                            <CollectionView Style="{StaticResource PickCharactersCollectionStyle}"
+                                            x:Name="PartyListView" 
                                             ItemsSource="{Binding PartyCharacterList}"
-                                            HorizontalScrollBarVisibility="Always"
                                             SelectionChanged="OnPartyCharacterItemSelected"
-                                            HeightRequest="150"
-                                            SelectionMode="Single"
                                             >
                                 
                                 <CollectionView.ItemsLayout>
@@ -172,14 +144,10 @@
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>
 
-                                        <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                                               WidthRequest="120"
-                                               HeightRequest="120"
-                                               Margin="10, 0, 10, 10"
-                                               Padding="5"
-                                               >
+                                        <Frame Style="{StaticResource PickCellsFrameStyle}">
 
                                             <Grid RowSpacing="0">
+                                                
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="Auto" />
                                                     <RowDefinition Height="*" />
@@ -191,33 +159,22 @@
                                                              >
 
                                                     <Frame Grid.Row="0" 
-                                                           Style="{StaticResource ReadCellTitleFrame}"
-                                                           Padding="2"
-                                                           WidthRequest="75"
-                                                           HeightRequest="25"
-                                                           Margin="0"
+                                                           Style="{StaticResource PickCellsTitleFrameStyle}"
                                                            >
 
-                                                        <StackLayout Orientation="Horizontal" 
+                                                        <StackLayout Style="{StaticResource CollectionStackLayoutStyle}"
                                                                      Grid.Row="0" 
-                                                                     HorizontalOptions="CenterAndExpand"
-                                                                     VerticalOptions="CenterAndExpand"
                                                                      >
 
                                                             <Label Text="{Binding Name}" 
-                                                                   Style="{StaticResource CellNameLabelStyle}"
-                                                                   FontSize="Small"
-                                                                   Margin="0"
-                                                                    />
+                                                                   Style="{StaticResource PickCellsNameLabelStyle}"
+                                                                   />
 
                                                         </StackLayout>
                                                     </Frame>
 
                                                     <Frame x:Name="ImageFrame" 
-                                                           Style="{StaticResource LargeCircleFrameStyle}"
-                                                           BorderColor="White"
-                                                           WidthRequest="50"
-                                                           HeightRequest="50"
+                                                           Style="{StaticResource PickCellsCircleFrameStyle}"
                                                            Grid.Row="1"
                                                            Margin="0"
                                                            >
@@ -225,9 +182,9 @@
                                                         <Image Source="{Binding ImageURI}" />
 
                                                     </Frame>
-                                                    <Image Source="icon_subtract.png" 
-                                                           WidthRequest="20"
-                                                           Margin="0"
+                                                    
+                                                    <Image Style="{StaticResource PickCharactersImageStyle}"
+                                                           Source="icon_subtract.png" 
                                                            />
 
                                                 </StackLayout>
@@ -243,11 +200,10 @@
                                  Orientation="Vertical"
                                  >
 
-                        <ImageButton x:Name="BeginBattleButton"
+                        <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                                     x:Name="BeginBattleButton"
                                      Clicked="BattleButton_Clicked" 
                                      Source="start_main.png"
-                                     HeightRequest="30"
-                                     Margin="0, 5, 0, 0"
                                      IsEnabled="False"
                                      IsVisible="False"
                                      />

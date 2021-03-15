@@ -1737,7 +1737,52 @@
 
             <!--___________________________________________-->
 
+            <!--Cells square frame on Pick Characters Page-->
+            <Style TargetType="Frame"
+                   x:Key="PickCellsFrameStyle"
+                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+                   >
 
+                <Setter Property="WidthRequest" Value="120"/>
+                <Setter Property="HeightRequest" Value="120"/>
+                <Setter Property="Margin" Value="10, 0, 10, 10"/>
+                <Setter Property="Padding" Value="5"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Cells Title frame on Pick Characters Page-->
+            <Style TargetType="Frame"
+                   x:Key="PickCellsTitleFrameStyle"
+                   BasedOn="{StaticResource ReadCellTitleFrame}"
+                   >
+
+                <Setter Property="WidthRequest" Value="75"/>
+                <Setter Property="HeightRequest" Value="25"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="2"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Cells circle frame on Pick Characters Page-->
+            <Style TargetType="Frame"
+                   x:Key="PickCellsCircleFrameStyle"
+                   BasedOn="{StaticResource LargeCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BorderColor" Value="White"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+            
+            
 
 
 
@@ -2303,6 +2348,45 @@
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
 
             </Style>
+            <!--___________________________________________-->
+
+            <!--Cells Label on Pick Characters Page-->
+            <Style TargetType="Label"
+                   x:Key="PickCellsLabelStyle"
+                   BasedOn="{StaticResource SimpleLabelTextStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0, 0, 0, 5"/>
+                <Setter Property="Padding" Value="0"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+
+            <!--Cells Name Label on Pick Characters Page-->
+            <Style TargetType="Label"
+                   x:Key="PickCellsNameLabelStyle"
+                   BasedOn="{StaticResource CellNameLabelStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="FontSize" Value="Small"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Cells in party label on Pick Characters Page-->
+            <Style TargetType="Label"
+                   x:Key="PickCellsPartyLabelStyle"
+                   BasedOn="{StaticResource SimpleLabelTextStyle}"
+                   >
+
+                <Setter Property="Margin" Value="0, 5, 0, 5"/>
+                <Setter Property="Padding" Value="0"/>
+
+            </Style>
+
             <!--___________________________________________-->
 
 
@@ -2937,7 +3021,17 @@
 
             <!--___________________________________________-->
 
+            <!--Style for round page popup image-->
+            <Style TargetType="Image"
+                   x:Key="PickCharactersImageStyle"
+                   >
 
+                <Setter Property="WidthRequest" Value="20"/>
+                <Setter Property="Margin" Value="0"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
@@ -3426,6 +3520,20 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Stacklayout inside collection view-->
+            <Style TargetType="StackLayout"
+                   x:Key="CollectionStackLayoutStyle"
+                   >
+
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+            
+            <!--___________________________________________-->
+            
+
 
 
 
@@ -3588,6 +3696,39 @@
                 <Setter Property="VerticalOptions" Value="FillAndExpand"/>
 
             </Style>
+
+            <!--___________________________________________-->
+
+
+
+
+
+
+
+
+
+            <!-- Collection View -->
+
+
+
+
+
+
+
+
+
+
+            <!--Pick characters collection-->
+            <Style TargetType="CollectionView"
+                   x:Key="PickCharactersCollectionStyle"
+                   >
+
+                <Setter Property="HorizontalScrollBarVisibility" Value="Always"/>
+                <Setter Property="SelectionMode" Value="Single"/>
+                <Setter Property="HeightRequest" Value="150"/>
+
+            </Style>
+
 
 
         </ResourceDictionary>
