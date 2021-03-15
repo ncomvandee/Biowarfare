@@ -404,8 +404,8 @@
 
                     </Frame>
 
-                    <Frame Style="{StaticResource RoundPageInvisibleFrameStyle}"
-                           WidthRequest="500">
+                    <Frame Style="{StaticResource RoundPageInvisibleFrameStyle}"  
+                           WidthRequest="320">
 
                         <Grid>
                             <Grid.RowDefinitions>
@@ -420,6 +420,7 @@
                             </Grid.ColumnDefinitions>
 
                             <StackLayout Orientation="Horizontal"
+                                       
                                          Grid.Row="0"
                                          Grid.Column="0"
                                          Margin="20, 0">
