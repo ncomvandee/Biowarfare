@@ -586,9 +586,11 @@ namespace Game.Views
              
             EngineSettings.MapModel.MovePlayerOnMap(currentCellLocation, data);
             GameMessage();
+
+            ///DrawGameAttackerDefenderBoard();
             UpdateMapGrid();
 
-
+            //BattleEngineViewModel.Instance.Engine.Round.EndRound()
             return true;
 
         }
@@ -630,13 +632,13 @@ namespace Game.Views
 
             // Hold the current state
             var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
-
+            UpdateMapGrid();
             // Output the Message of what happened.
             GameMessage();
 
             // Show the outcome on the Board
             DrawGameAttackerDefenderBoard();
-
+            
             if (RoundCondition == RoundEnum.NewRound)
             {
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.NewRound;
@@ -647,7 +649,8 @@ namespace Game.Views
                 Debug.WriteLine("New Round");
 
                 // Show the Round Over, after that is cleared, it will show the New Round Dialog
-                ShowModalRoundOverPage();
+                //ShowModalRoundOverPage();
+                RoundOver_Clicked(null, null);
                 return true;
             }
 
@@ -664,7 +667,8 @@ namespace Game.Views
 
                 Debug.WriteLine("Game Over");
 
-                GameOver();
+                //GameOver();
+                GameOver_Clicked(null, null);
                 return true;
             }
             return true;
@@ -857,7 +861,7 @@ namespace Game.Views
 
                 Debug.WriteLine("Game Over");
 
-                GameOver();
+                GameOver_Clicked(null, null);
                 return;
             }
         }

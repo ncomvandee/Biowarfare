@@ -222,6 +222,38 @@ namespace Game.Engine.EngineGame
         public override RoundEnum RoundNextTurn()
         {
             //return base.RoundNextTurn();
+/*            // No characters, game is over...
+            if (EngineSettings.CharacterList.Count < 1)
+            {
+                // Game Over
+                EngineSettings.RoundStateEnum = RoundEnum.GameOver;
+                return EngineSettings.RoundStateEnum;
+            }
+
+            // Check if round is over
+            if (EngineSettings.MonsterList.Count < 1)
+            {
+                // If over, New Round
+                EngineSettings.RoundStateEnum = RoundEnum.NewRound;
+                return RoundEnum.NewRound;
+            }*/
+
+            if (EngineSettings.BattleScore.AutoBattle)
+            {
+                // Decide Who gets next turn
+                // Remember who just went...
+                EngineSettings.CurrentAttacker = GetNextPlayerTurn();
+
+                // Only Attack for now
+                EngineSettings.CurrentAction = ActionEnum.Attack;
+            }
+
+            // Do the turn....
+            Turn.TakeTurn(EngineSettings.CurrentAttacker);
+
+            EngineSettings.RoundStateEnum = RoundEnum.NextTurn;
+
+
             // No characters, game is over...
             if (EngineSettings.CharacterList.Count < 1)
             {
@@ -238,20 +270,6 @@ namespace Game.Engine.EngineGame
                 return RoundEnum.NewRound;
             }
 
-            if (EngineSettings.BattleScore.AutoBattle)
-            {
-                // Decide Who gets next turn
-                // Remember who just went...
-                EngineSettings.CurrentAttacker = GetNextPlayerTurn();
-
-                // Only Attack for now
-                EngineSettings.CurrentAction = ActionEnum.Attack;
-            }
-
-            // Do the turn....
-            Turn.TakeTurn(EngineSettings.CurrentAttacker);
-
-            EngineSettings.RoundStateEnum = RoundEnum.NextTurn;
 
             return EngineSettings.RoundStateEnum;
             // No characters, game is over..
