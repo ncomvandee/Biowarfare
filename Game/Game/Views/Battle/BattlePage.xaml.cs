@@ -1136,6 +1136,8 @@ namespace Game.Views
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     NextRoundButton.IsVisible = true;
                     AttackButton.IsVisible = false;
+                    UseAbilityButton.IsVisible = false;
+                    UseItemButton.IsVisible = false;
                     break;
 
                 case BattleStateEnum.GameOver:
