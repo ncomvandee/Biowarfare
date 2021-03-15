@@ -161,11 +161,18 @@
                                          Style="{StaticResource PlayerBattleInfoBox}" 
                                          HorizontalOptions="Start"
                                          >
+
+                                <Frame x:Name="AttackerFrame" 
+                                       Style="{StaticResource SmallCircleFrameStyle}" 
+                                       WidthRequest="70"
+                                       IsVisible="False"
+                                       >
+                                
                                 
                                 <Image x:Name="AttackerImage" Source="item.png" 
                                        Style="{StaticResource ImageBattleMediumStyle}"
                                        />
-                                
+                                </Frame>
                                 <Label x:Name="AttackerName" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
@@ -203,12 +210,17 @@
                                          Style="{StaticResource PlayerBattleInfoBox}" 
                                          HorizontalOptions="End"
                                          >
-                                
-                                <Image x:Name="DefenderImage" 
+                                <Frame x:Name="DefenderFrame" 
+                                       Style="{StaticResource SmallCircleFrameStyle}" 
+                                       WidthRequest="70"
+                                       IsVisible="False"
+                                       >
+
+                                    <Image x:Name="DefenderImage" 
                                        Source="item.png" 
                                        Style="{StaticResource ImageBattleMediumStyle}"
                                        />
-                                
+                                </Frame>
                                 <Label x:Name="DefenderName" 
                                        Text="" 
                                        Style="{StaticResource ValueStyleBattleMicro}"
