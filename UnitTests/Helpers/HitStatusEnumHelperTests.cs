@@ -21,7 +21,7 @@ namespace UnitTests.Helpers
             var result = HitStatusEnumHelper.GetListAll;
 
             // Assert
-            Assert.AreEqual(6,result.Count());
+            Assert.AreEqual(7,result.Count());
 
             // Assert
         }
@@ -35,7 +35,7 @@ namespace UnitTests.Helpers
             var result = HitStatusEnumHelper.GetListMessageAll;
 
             // Assert
-            Assert.AreEqual(6, result.Count());
+            Assert.AreEqual(7, result.Count());
         }
 
         [Test]
