@@ -725,12 +725,12 @@ namespace Game.Engine.EngineGame
             if (Target.PlayerType == PlayerTypeEnum.Monster)
             {
 
-                // 50 50 percent chance that the item drop will be equipable or consumable
-                int DropChance = DiceHelper.RollDice(1, 2);
+                // 70 30 percent chance that the item drop will be equipable or consumable
+                int DropChance = DiceHelper.RollDice(1, 10);
                 ItemModel data = new ItemModel();
 
-                // Drop equipable
-                if (DropChance == 1)
+                // Drop equipable 70 percent chances
+                if (DropChance <= 7)
                 {
                     int index = DiceHelper.RollDice(1, ItemIndexViewModel.Instance.Dataset.Count() - 1);
 
@@ -739,8 +739,8 @@ namespace Game.Engine.EngineGame
 
                 }
 
-                // Drop consumable
-                if (DropChance == 2)
+                // Drop consumable 30 percent channces
+                if (DropChance > 7)
                 {
                     int index = DiceHelper.RollDice(1, ConsumableItemIndexViewModel.Instance.Dataset.Count() - 1);
 
