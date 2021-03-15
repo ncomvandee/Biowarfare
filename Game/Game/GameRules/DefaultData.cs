@@ -290,7 +290,7 @@ namespace Game.GameRules
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
-                    Name = "Connie",
+                    Name = "Basel",
                     Job = CellTypeEnum.Basophil,
                     Description = "Basophils are a type of white blood cell that are responsible for causing inflammatory reactions and producing histamine." +
                                   " Has a +10% hp buff.",
@@ -307,7 +307,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Missy",
+                    Name = "Bea",
                     Job = CellTypeEnum.BCell,
                     Description = "B Cells are a specialized white blood cell that secrete antibodies." +
                                   " Once per round, B Cells can give any living team member an Immunity token. " +
@@ -321,7 +321,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Georgie",
+                    Name = "Phil",
                     Job = CellTypeEnum.Eosinophil,
                     Description = "Eosinophil are a type of white blood cell that specialize in attacking parasites." +
                                   " Eosinophil have a 10% attack buff when fighting against invaders of the parasite type.",
@@ -332,7 +332,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "George",
+                    Name = "Killer",
                     Job = CellTypeEnum.KillerTCell,
                     Description = "Killer T Cells are a type of white blood cell that kill infected," +
                                   " damaged, or cancerous cells. Every time the Killer T Cell attacks," +
@@ -344,7 +344,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Mary",
+                    Name = "Micro",
                     Job = CellTypeEnum.Macrophage,
                     Description = "Macrophages are a type of white blood cell that seek out and dispose of foreign invaders and non-healthy cells in their path." +
                                   " Macrophages are unique because they recruit other immune cells to fight alongside them." +
