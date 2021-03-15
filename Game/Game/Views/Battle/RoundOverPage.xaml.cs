@@ -256,7 +256,7 @@ namespace Game.Views
             };
 
             // Frame containing Character image button
-/*            var ImageFrame = new Frame
+           var ImageFrame = new Frame
             {
                 BackgroundColor = (Color)Application.Current.Resources["PrimaryMidgroundPurple"],
                 CornerRadius = 10,
@@ -264,7 +264,7 @@ namespace Game.Views
                 WidthRequest = 100,
                 HeightRequest = 100,
                 Content = PlayerImage,
-            };*/
+            };
 
             //name of the cell
             var cellName = new Label
@@ -289,8 +289,8 @@ namespace Game.Views
                 Spacing = 10,
                 Margin = new Thickness(10, 0, 10, 0),
                 Children = {
-                    PlayerImage,
-                    cellName
+
+                    ImageFrame, 
                 },
             };
 
