@@ -806,6 +806,12 @@ namespace Game.Views
         /// </summary>
         public void NextAttackExample()
         {
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+
+            if(cell.PlayerType == PlayerTypeEnum.Character)
+            {
+                return;
+            }
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
             // Get the turn, set the current player and attacker to match
