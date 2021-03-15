@@ -20,160 +20,161 @@
                />
 
     </NavigationPage.TitleView>
-
-
-
+   
     <ContentPage.Content>
         <StackLayout>
 
             <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                   Padding="5">
+                   Padding="5"
+                   >
 
                 <Grid RowSpacing="0">
+
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
                     <Frame Grid.Row="0" 
-                           Style="{StaticResource ReadCellTitleFrame}"
-                           Padding="15, 0"
-                           Margin="0, 10, 0, 0">
+                           Style="{StaticResource PickItemsTitleFrame}"
+                           >
 
                         <Label Text="{Binding Data.Name}" 
                                Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center" />
+                               VerticalOptions="Center" 
+                               />
 
-                        
                     </Frame>
 
                     <!--Frame for thumbnail-->
                     <Frame x:Name="ImageFrame" 
-                           Style="{StaticResource LargeCircleFrameStyle}" 
+                           Style="{StaticResource PickItemsCircleFrame}" 
                            Grid.Row="1"
-                           WidthRequest="150"
-                           HeightRequest="150">
+                           >
 
-                        <Image Source="{Binding Data.ImageURI}" />
+                        <Image Source="{Binding Data.ImageURI}"/>
 
                     </Frame>
-
                 </Grid>
-
             </Frame>
 
-            <Frame Style="{StaticResource CreatePickerFrameStyle}"
-                   BackgroundColor="{StaticResource PrimaryForegroundPurple}"
-                   BorderColor="Transparent"
-                   HeightRequest="50"
-                   x:Name="PickerFrame">
-
+            <Frame Style="{StaticResource PickItemsPickerFrame}"
+                   x:Name="PickerFrame"
+                   >
 
                 <Picker Style="{StaticResource CreatePickerStyle}" 
                         x:Name="CellPicker"
-                        SelectedIndexChanged="CellPicker_SelectedIndexChanged"/>
+                        SelectedIndexChanged="CellPicker_SelectedIndexChanged"
+                        />
+
             </Frame>
 
-            <Frame Style="{StaticResource MediumSquareMidgroundFrame}"
-                   WidthRequest="350"
-                   HeightRequest="300"
-                   >
+            <Frame Style="{StaticResource PickItemsSquareFrameStyle}">
 
                 <StackLayout>
 
                     <Frame Style="{StaticResource ReadCellTitleFrame}"
-                           Padding="30, 0">
+                           Padding="30, 0"
+                           >
 
                         <Label Text="Attribute" 
                                Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center"
+                               />
 
                     </Frame>
 
-                    <Frame Style="{StaticResource ReadCellTitleFrame}"
-                           WidthRequest="300"
-                           Padding="10, 5"
-                           Margin="0">
+                    <Frame Style="{StaticResource PickItemsAttributeTitleFrameStyle}">
 
                         <Grid HorizontalOptions="FillAndExpand"
-                              Padding="10, 0">
+                              Padding="10, 0"
+                              >
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <StackLayout Orientation="Horizontal" Grid.Column="0">
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Column="0"
+                                         >
+
                                 <Image Source="attack_icon.png"
-                                       x:Name="AttributeIcon"/>
+                                       x:Name="AttributeIcon"
+                                       />
+
                                 <Label Text="{Binding Data.Value}"
-                                       FontSize="Medium"/>
+                                       FontSize="Medium"
+                                       />
+
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Column="1">
-                                <Image Source="range_blue.png" />
+                            <StackLayout Orientation="Horizontal" 
+                                         Grid.Column="1"
+                                         >
+
+                                <Image Source="range_blue.png"
+                                       />
+
                                 <Label Text="{Binding Data.Range}"
-                                       FontSize="Medium"/>
+                                       FontSize="Medium"
+                                       />
+
                             </StackLayout>
 
-                            <StackLayout Orientation="Horizontal" Grid.Column="2">
+                            <StackLayout Orientation="Horizontal" Grid.Column="2"
+                                         >
+
                                 <Image Source="damage_blue.png"
-                                       Margin="0, 0, 0, 1"/>
+                                       Margin="0, 0, 0, 1"
+                                       />
+
                                 <Label Text="{Binding Data.Damage}"
-                                       FontSize="Medium"/>
+                                       FontSize="Medium"
+                                       />
+
                             </StackLayout>
-
-
                         </Grid>
-                            
                     </Frame>
 
-                    <Frame Style="{StaticResource ReadCellTitleFrame}"
-                           Padding="30, 0"
-                           Margin="0">
+                    <Frame Style="{StaticResource PickItemsLowerTitleFrame}"
+                           >
 
                         <Label Text="Description" 
                                Style="{StaticResource CellNameLabelStyle}"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center"
+                               />
 
                     </Frame>
 
-                    <Frame Style="{StaticResource ReadCellTitleFrame}"
-                           WidthRequest="300"
-                           HeightRequest="60"
-                           Margin="0"
-                           Padding="10">
+                    <Frame Style="{StaticResource PickItemsDescriptionFrame}">
+
                         <ScrollView>
 
-                            <Label Text="{Binding Data.Description}" />
+                            <Label Text="{Binding Data.Description}"/>
 
                         </ScrollView>
-
-                        
                     </Frame>
-
                 </StackLayout>
-
             </Frame>
-
 
             <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
-                         Margin="10">
-                <Button Style="{StaticResource PrimaryButtonStyle}"
-                        Text="Save"
-                        BorderColor="Transparent"
-                        Clicked="SaveButton_Clicked"
-                    />
+                         Margin="10"
+                         >
 
-                <Button Style="{StaticResource PrimaryButtonStyle}"
-                        Text="Cancel"
-                        BorderColor="Transparent"
-                        Clicked="CancelButton_Clicked"
-                    />
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Clicked="SaveButton_Clicked"
+                             Source="save_main.png"
+                             />
+
+                <ImageButton Style="{StaticResource ImageButtonGameStyle}"
+                             Clicked="CancelButton_Clicked"
+                             Source="cancel_main.png"
+                             />
+
             </StackLayout>
-
         </StackLayout>
-        
     </ContentPage.Content>
 </ContentPage>

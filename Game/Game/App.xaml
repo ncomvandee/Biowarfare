@@ -1781,8 +1781,97 @@
             </Style>
 
             <!--___________________________________________-->
+
+            <!--Frame for pick items page title-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsTitleFrame"
+               BasedOn="{StaticResource ReadCellTitleFrame}"
+               >
+
+                <Setter Property="Padding" Value="15, 0"/>
+                <Setter Property="Margin" Value="0, 10, 0, 0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Frame for item image on pick items page-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsCircleFrame"
+               BasedOn="{StaticResource LargeCircleFrameStyle}"
+               >
+
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="HeightRequest" Value="150"/>
+
+            </Style>
+
+            <!--___________________________________________-->
             
-            
+            <!--Frame for picker on pick items page-->
+            <Style TargetType="Frame"
+                   x:Key="PickItemsPickerFrame"
+                   BasedOn="{StaticResource CreatePickerFrameStyle}"
+                    >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="HeightRequest" Value="50"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Square Frame for item image on pick items page-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsSquareFrameStyle"
+               BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+               >
+
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="HeightRequest" Value="300"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Attribute Title Frame on pick items page-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsAttributeTitleFrameStyle"
+               BasedOn="{StaticResource ReadCellTitleFrame}"
+               >
+
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="Padding" Value="10, 5"/>
+                <Setter Property="Margin" Value="0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Frame for item image on pick items page-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsLowerTitleFrame"
+               BasedOn="{StaticResource ReadCellTitleFrame}"
+               >
+
+                <Setter Property="Padding" Value="30, 0"/>
+                <Setter Property="Margin" Value="0"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Frame for description on pick items page-->
+            <Style TargetType="Frame"
+               x:Key="PickItemsDescriptionFrame"
+               BasedOn="{StaticResource ReadCellTitleFrame}"
+               >
+
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="60"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+
 
 
 
