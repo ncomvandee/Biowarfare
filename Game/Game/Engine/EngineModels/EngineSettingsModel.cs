@@ -48,7 +48,7 @@ namespace Game.Engine.EngineModels
          public List<ItemModel> ItemPool { get; set; } = new List<ItemModel>();
 
         // Consumable backpack for team to use
-        public List<ItemModel> EmergencyKit { get; set; } = new List<ItemModel>();
+        public List<ItemModel> EmergencyKit { get; set; } = new List<ItemModel>(ViewModels.ConsumableItemIndexViewModel.Instance.Dataset);
 
         // List of Monsters
         public List<PlayerInfoModel> MonsterList { get; set; } = new List<PlayerInfoModel>();
