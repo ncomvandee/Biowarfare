@@ -198,7 +198,9 @@ namespace UnitTests.Views
         {
             // Arrange
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage = "me";
-
+            var data = new PlayerInfoModel();
+            data.PlayerType = PlayerTypeEnum.Character;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = data;
             // Act
             page.GameMessage();
 
