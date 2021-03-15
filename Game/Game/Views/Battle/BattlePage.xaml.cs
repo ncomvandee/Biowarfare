@@ -933,15 +933,6 @@ namespace Game.Views
                 BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
             }
 
-            // Output The Message that happened.
-            BattleMessagesForAllActions.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessagesForAllActions.Text);
-
-            Debug.WriteLine(BattleMessagesForAllActions.Text);
-
-            if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
-            {
-                BattleMessagesForAllActions.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessagesForAllActions.Text);
-            }
 
             //htmlSource.Html = BattleEngineViewModel.Instance.Engine.BattleMessagesModel.GetHTMLFormattedTurnMessage();
             //HtmlBox.Source = HtmlBox.Source = htmlSource;
@@ -953,7 +944,6 @@ namespace Game.Views
         public void ClearMessages()
         {
             BattleMessages.Text = "";
-            BattleMessagesForAllActions.Text = "";
             htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
             //HtmlBox.Source = htmlSource;
         }
@@ -1120,8 +1110,9 @@ namespace Game.Views
                     //GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     StartBattleButton.IsVisible = true;
-                    BattleInfoAndActions.IsVisible = false;
                     AttackButton.IsVisible = false;
+                    UseAbilityButton.IsVisible = false;
+                    UseItemButton.IsVisible = false;
                     break;
 
                 case BattleStateEnum.NewRound:
@@ -1143,10 +1134,9 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    //BattlePlayerInfomationBox.IsVisible = false;
-                    //MessageDisplayBox.IsVisible = false;
-                    //AttackButton.IsVisible = false;
-                    //BattleInfoAndActions.IsVisible = false;
+                    BattlePlayerInfomationBox.IsVisible = true;
+                    MessageDisplayBox.IsVisible = true;
+                    AttackButton.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons
@@ -1167,16 +1157,15 @@ namespace Game.Views
                 case BattleModeEnum.MapFull:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
-                    BattleInfoAndActions.IsVisible = true;
+                    UseAbilityButton.IsVisible = true;
+                    UseItemButton.IsVisible = true;
                     break;
 
                 case BattleModeEnum.MapNext:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
-                    BattleInfoAndActions.IsVisible = false;
-                    BattlePlayerInfomationBox.IsVisible = true;
-                    MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = true;
+                    UseAbilityButton.IsVisible = false;
+                    UseItemButton.IsVisible = false;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
@@ -1185,10 +1174,8 @@ namespace Game.Views
                 default:
                     GamePlayersTopDisplay.IsVisible = true;
                     BattleMapDisplay.IsVisible = false;
-                    BattlePlayerInfomationBox.IsVisible = true;
-                    MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = true;
-                    BattleInfoAndActions.IsVisible = false;
+                    UseAbilityButton.IsVisible = false;
+                    UseItemButton.IsVisible = false;
                     break;
             }
         }
