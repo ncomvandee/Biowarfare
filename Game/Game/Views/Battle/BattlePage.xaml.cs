@@ -568,13 +568,9 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedEmpty(MapModelLocation data)
         {
-            // TODO: Info
 
-            /*
-             * This gets called when the characters is clicked on
-             * Usefull if you want to select the location to move to etc.
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
+
+            /*Move Character on Empty Space
              */
 
             BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
@@ -584,9 +580,6 @@ namespace Game.Views
 
             if (cell.PlayerType != PlayerTypeEnum.Character)
             {
-                //do the turn if 
-/*                var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
-                UpdateMapGrid();*/
                 return false;
             }
 
@@ -597,8 +590,12 @@ namespace Game.Views
             {
                 return false;
             }
-            
-             
+
+            //Message
+            EngineSettings.BattleMessagesModel.TurnMessage = string.Format("{0} moves from {1},{2} to {3},{4}", cell.Name, currentCellLocation.Column, currentCellLocation.Row, data.Column, data.Row);
+            Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+
+            //Move
             EngineSettings.MapModel.MovePlayerOnMap(currentCellLocation, data);
             GameMessage();
 
