@@ -150,8 +150,6 @@
                            IsVisible="False"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand"
-                           WidthRequest="300"
-                           HeightRequest="600"
                            Padding="10">
 
                         <StackLayout x:Name="BattlePlayerBox" 
