@@ -1871,6 +1871,35 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Purple outer frame in scores page-->
+            <Style TargetType="Frame"
+                   x:Key="OuterScoresPageFrameStyle"
+                   BasedOn="{StaticResource LargeOuterScoresFrameStyle}"
+                   >
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Pink inner scores page frame-->
+            <Style TargetType="Frame"
+                   x:Key="InnerScoresPageFrameStyle"
+                   BasedOn="{StaticResource LargeScoresInnerFrameStyle}"
+                   >
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="Padding" Value="10"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
 
 
 
