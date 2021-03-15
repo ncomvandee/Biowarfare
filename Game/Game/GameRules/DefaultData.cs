@@ -78,7 +78,7 @@ namespace Game.GameRules
                  },
 
             };
-            for (int i = 0; i < 20; i++)
+/*            for (int i = 0; i < 20; i++)
             {
                 var item = new ItemModel
                 {
@@ -93,7 +93,7 @@ namespace Game.GameRules
                 item.Description = item.Name;
 
                 datalist.Add(item);
-            }
+            }*/
 
             return datalist;
         }
