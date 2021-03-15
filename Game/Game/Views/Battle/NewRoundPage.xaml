@@ -150,7 +150,7 @@
                             <ScrollView Style="{StaticResource RoundPageAttributeScrollViewStyle}"
                                         Grid.Row="1" 
                                         x:Name="ItemsFrame"
-                                        IsVisible="false"    
+                                        IsVisible="true"    
                                         >
 
                                 <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
@@ -162,7 +162,7 @@
                             <Frame  Style="{StaticResource InvisibleReadFrameStyle}"
                                     x:Name="AttributeFrame"
                                     Grid.Row="1"
-                                    IsVisible="true"
+                                    IsVisible="false"
                                     >
 
                                 <Grid ColumnSpacing="25" 
