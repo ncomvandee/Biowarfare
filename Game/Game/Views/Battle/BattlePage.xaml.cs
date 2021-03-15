@@ -610,12 +610,16 @@ namespace Game.Views
              */
 
             //data.IsSelectedTarget = true;
-            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
-            if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PlayerType != PlayerTypeEnum.Character)
+
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+
+            if (cell.PlayerType != PlayerTypeEnum.Character)
             {
                 return false;
 
             }
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(cell);
+
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
