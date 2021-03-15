@@ -1121,12 +1121,14 @@ namespace Game.Views
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     StartBattleButton.IsVisible = true;
                     BattleInfoAndActions.IsVisible = false;
+                    AttackButton.IsVisible = false;
                     break;
 
                 case BattleStateEnum.NewRound:
                     UpdateMapGrid();
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     NextRoundButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
                     break;
 
                 case BattleStateEnum.GameOver:
