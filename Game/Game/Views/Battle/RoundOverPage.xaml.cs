@@ -342,10 +342,10 @@ namespace Game.Views
             var ItemButton = new ImageButton
             {
                 Source = ItemData.ImageURI,
-                WidthRequest = 60,
-                HeightRequest = 60,
+                WidthRequest = 40,
+                HeightRequest = 40,
                 BackgroundColor = Color.White,
-                CornerRadius = 50,
+                CornerRadius = 40,
                 Padding = 5,
             };
 
@@ -376,13 +376,20 @@ namespace Game.Views
                 Content = ItemLabel,
             };
 
+            // Location as icon
+            var LocationIcon = new Image
+            {
+                Source = location.ToIcon(),
+                WidthRequest = 20
+            };
+
             // Put ImageButton and label in to same stack
             var ItemStack = new StackLayout
             {
                 Padding = 3,
                 HorizontalOptions = LayoutOptions.Center,
 
-                Children = { ItemButton, ItemFrame },
+                Children = { ItemButton, ItemFrame, LocationIcon },
             };
 
             // Render particuler stack
