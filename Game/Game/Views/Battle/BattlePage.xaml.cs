@@ -946,13 +946,13 @@ namespace Game.Views
 
             Debug.WriteLine(BattleMessages.Text);
 
-            //if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
-            //{
-            //    BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
-            //    BattleMessages.MaxLines = 1;
-            //}
+            if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
+            {
+                BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
+                BattleMessages.MaxLines = 2;
+            }
 
-            
+
             //htmlSource.Html = BattleEngineViewModel.Instance.Engine.BattleMessagesModel.GetHTMLFormattedTurnMessage();
             //HtmlBox.Source = HtmlBox.Source = htmlSource;
         }
