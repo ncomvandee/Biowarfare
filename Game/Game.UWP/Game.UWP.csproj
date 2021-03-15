@@ -110,6 +110,7 @@
     <Content Include="adrenaline_syringe_white_bg.png" />
     <Content Include="antidote_bg.png" />
     <Content Include="antidote_no_bg.png" />
+    <Content Include="any_finger_location.png" />
     <Content Include="Assets\BadgeLogo.scale-100.png" />
     <Content Include="Assets\BadgeLogo.scale-125.png" />
     <Content Include="Assets\BadgeLogo.scale-150.png" />
@@ -200,6 +201,7 @@
     <Content Include="eosinophil_bg.png" />
     <Content Include="eosinophil_no_bg.png" />
     <Content Include="face_mask_no_bg.png" />
+    <Content Include="feet_location.png" />
     <Content Include="finger_glove_bg.png" />
     <Content Include="finger_glove_no_bg.png" />
     <Content Include="get_main.png" />
@@ -207,6 +209,7 @@
     <Content Include="grid_cell.png" />
     <Content Include="gummy_multivitamin_no_bg.png" />
     <Content Include="gummy_multivitamin_white_bg.png" />
+    <Content Include="head_location.png" />
     <Content Include="heart_icon.png" />
     <Content Include="hp_green.png" />
     <Content Include="hung.png" />
@@ -229,6 +232,7 @@
     <Content Include="jaida.png" />
     <Content Include="jara.png" />
     <Content Include="ken.png" />
+    <Content Include="left_finger_location.png" />
     <Content Include="macrophage_bg.png" />
     <Content Include="macrophage_no_bg.png" />
     <Content Include="main_attack.png" />
@@ -248,12 +252,15 @@
     <Content Include="move_main.png" />
     <Content Include="mri_headband_no_bg.png" />
     <Content Include="nate.png" />
+    <Content Include="necklace_location.png" />
     <Content Include="nkcell_bg.png" />
     <Content Include="nkcell_no_bg.png" />
+    <Content Include="off_hand_location.png" />
     <Content Include="parasite_bg.png" />
     <Content Include="parasite_no_bg.png" />
     <Content Include="pass_main.png" />
     <Content Include="post_main.png" />
+    <Content Include="primary_hand_location.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -283,6 +290,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="range_blue.png" />
+    <Content Include="right_finger_location.png" />
     <Content Include="save_character.png" />
     <Content Include="save_items.png" />
     <Content Include="save_main.png" />
@@ -306,6 +314,8 @@
     <Content Include="t_cell_bg.png" />
     <Content Include="t_cell_no_bg.png" />
     <Content Include="update_scores.png" />
+    <Content Include="use_ability_main.png" />
+    <Content Include="use_item_main.png" />
     <Content Include="use_main.png" />
     <Content Include="vicious_scalpel_no_bg.png" />
     <Content Include="vicious_scalpel_white_bg.png" />
