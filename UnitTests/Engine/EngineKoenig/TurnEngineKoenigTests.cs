@@ -1459,8 +1459,9 @@ namespace UnitTests.Engine.EngineKoenig
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell});
 
             // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+/*            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
+            CharacterPlayer.PrimaryHand = weapon.Id;*/
+
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
