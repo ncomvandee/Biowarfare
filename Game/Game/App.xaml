@@ -1712,6 +1712,32 @@
 
             <!--___________________________________________-->
 
+            <!--Frame for item popup-->
+            <Style TargetType="Frame"
+                   x:Key="RoundOverItemPopupFrameStyle"
+                   BasedOn="{StaticResource ReadPagePopupStyle}"
+                   >
+
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Frame for item iamge-->
+            <Style TargetType="Frame"
+                   x:Key="RoundOverItemImageFrameStyle"
+                   BasedOn="{StaticResource ItemImageCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="HeightRequest" Value="50"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+
 
 
 
@@ -3376,10 +3402,34 @@
             
             <!--___________________________________________-->
 
+            <!--StackLayout on Round Over Page-->
+            <Style TargetType="StackLayout"
+                   x:Key="RoundOverStackLayoutStyle"
+                   >
 
-            
-            
-            
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".5, .5,.5,.5"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Inner StackLayout on Round Over Page-->
+            <Style TargetType="StackLayout"
+                   x:Key="RoundOverInnerStackLayoutStyle"
+                   >
+
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="300"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+
+
+
+
             <!-- ListView -->
 
 
@@ -3450,6 +3500,19 @@
 
                 <Setter Property="JustifyContent" Value="SpaceEvenly"/>
                 <Setter Property="AlignContent" Value="Center"/>
+                <Setter Property="Wrap" Value="Wrap"/>
+
+            </Style>
+
+            <!--___________________________________________-->
+
+            <!--Flexlayout on Round Over Page-->
+            <Style TargetType="FlexLayout"
+                   x:Key="RoundOverFlexLayoutStyle"
+                   >
+
+                <Setter Property="JustifyContent" Value="Start"/>
+                <Setter Property="AlignContent" Value="Start"/>
                 <Setter Property="Wrap" Value="Wrap"/>
 
             </Style>
