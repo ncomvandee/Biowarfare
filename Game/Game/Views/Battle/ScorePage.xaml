@@ -16,16 +16,18 @@
         <StackLayout Style="{StaticResource VerticalStack}" 
                      HorizontalOptions="Center"
                      >
-            
-        <ScrollView HorizontalScrollBarVisibility="Never" 
-                    VerticalScrollBarVisibility="Never"
-                    >
 
-                <Frame Style="{StaticResource OuterScoresPageFrameStyle}">
+            <Frame Style="{StaticResource OuterScoresPageFrameStyle}">
 
-                    <Frame Style="{StaticResource InnerScoresPageFrameStyle}">
+                <Frame Style="{StaticResource InnerScoresPageFrameStyle}">
+                    
+                    <ScrollView HorizontalScrollBarVisibility="Always" 
+                                VerticalScrollBarVisibility="Always"
+                                >
 
                         <StackLayout Style="{StaticResource VerticalStack}">
+
+
 
                             <StackLayout Style="{StaticResource HorizontalStack}">
 
@@ -100,15 +102,14 @@
                                         />
 
                         </StackLayout>
-                    </Frame>
+                    </ScrollView>
                 </Frame>
-            </ScrollView>
-            
+            </Frame>
             <ImageButton Clicked="CloseButton_Clicked" 
                          Style="{StaticResource ImageButtonGameStyle}"
                          Source="close_main.png"
                          />
-            
+           
            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
