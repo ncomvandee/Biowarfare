@@ -181,8 +181,18 @@ namespace Game.Views
         /// <returns></returns>
         public bool UpdateMapGrid()
         {
+            // Disable the map grid
+            MapGrid.IsEnabled = false;
+
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
             var currentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+
+            // If the current turn is cell, enable the map grid
+            if (cell != null && cell.PlayerType == PlayerTypeEnum.Character)
+            {
+                MapGrid.IsEnabled = true;
+            }
+
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapGridLocation)
             {
                 // Use the ImageButton from the dictionary because that represents the player object
@@ -494,6 +504,7 @@ namespace Game.Views
                 // Store the guid to identify this button
                 AutomationId = MapLocationModel.Player.Guid
             };
+
 
             switch (MapLocationModel.Player.PlayerType)
             {
@@ -818,10 +829,10 @@ namespace Game.Views
         {
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
 
-            if(cell.PlayerType == PlayerTypeEnum.Character)
-            {
-                return;
-            }
+            //if(cell.PlayerType == PlayerTypeEnum.Character)
+            //{
+            //    return;
+            //}
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
             // Get the turn, set the current player and attacker to match
