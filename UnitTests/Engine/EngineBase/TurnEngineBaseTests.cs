@@ -1336,8 +1336,8 @@ namespace UnitTests.Engine.EngineBase
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
             
             // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+/*            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
+            CharacterPlayer.PrimaryHand = weapon.Id;*/
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             var Monster = new MonsterModel();
@@ -1397,8 +1397,7 @@ namespace UnitTests.Engine.EngineBase
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
 
             // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
@@ -1427,8 +1426,7 @@ namespace UnitTests.Engine.EngineBase
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
 
             // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+
 
             CharacterPlayer.AbilityTracker.Clear();
 
@@ -1459,8 +1457,8 @@ namespace UnitTests.Engine.EngineBase
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
 
             // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+/*            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
+            CharacterPlayer.PrimaryHand = weapon.Id;*/
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
