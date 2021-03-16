@@ -195,7 +195,12 @@ namespace Game.Models
                 // List of all Cell type
                 var myList = Enum.GetNames(typeof(CellTypeEnum)).ToList();
 
-                return myList;
+                // List of only valid Cell type
+                var myReturn = myList.Where(a => a.ToString() != CellTypeEnum.Cleric.ToString() &&
+                                                 a.ToString() != CellTypeEnum.Fighter.ToString() &&
+                                                 a.ToString() != CellTypeEnum.Unknown.ToString()).ToList();
+
+                return myReturn;
             }
         }
     }
