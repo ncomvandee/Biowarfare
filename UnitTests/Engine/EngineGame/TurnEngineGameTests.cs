@@ -24,6 +24,7 @@ namespace UnitTests.Engine.EngineGame
             Engine.Round = new RoundEngine();
             Engine.Round.Turn = new TurnEngine();
             //Engine.StartBattle(true);   // Start engine in auto battle mode
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = BattleModeEnum.Unknown;
         }
 
         [TearDown]
@@ -557,10 +558,11 @@ namespace UnitTests.Engine.EngineGame
         {
             // Arrange
             var PlayerInfo = new PlayerInfoModel(new CharacterModel());
-
+            Engine.EngineSettings.CurrentDefender = PlayerInfo;
+            Engine.EngineSettings.CurrentAttacker = PlayerInfo;
             // Act
             var result = Engine.Round.Turn.TakeTurn(PlayerInfo);
-
+           
             // Reset
 
             // Assert
@@ -618,7 +620,7 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.CurrentAction = ActionEnum.Move;
 
             var character = new PlayerInfoModel(new CharacterModel());
-            var monster = new PlayerInfoModel(new CharacterModel());
+            var monster = new PlayerInfoModel(new MonsterModel());
 
             Engine.EngineSettings.PlayerList.Add(character);
             Engine.EngineSettings.PlayerList.Add(monster);
@@ -631,6 +633,7 @@ namespace UnitTests.Engine.EngineGame
             // Set Autobattle to false
             EngineSettingsModel.Instance.BattleScore.AutoBattle = false;
 
+            Engine.EngineSettings.CurrentDefender = monster;
 
             // Act
             var result = Engine.Round.Turn.TakeTurn(character);
