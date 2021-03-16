@@ -1929,8 +1929,24 @@
             </Style>
             
             <!--___________________________________________-->
-            
 
+            <!--Style for lower frame on PickItemsPage-->
+            <Style TargetType="Frame"
+                   x:Key="PickItemsPageFrameStyle"
+                   >
+
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".4, .42, 4, .25"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="WidthRequest" Value="30"/>
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="Padding" Value="5"/>
+
+            </Style>
+
+            <!--___________________________________________-->
 
 
 
