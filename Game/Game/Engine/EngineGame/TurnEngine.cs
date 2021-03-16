@@ -732,6 +732,8 @@ namespace Game.Engine.EngineGame
             // Since monsters don't equip item, the engine will random the item to be dropped
             if (Target.PlayerType == PlayerTypeEnum.Monster)
             {
+                //Make sure no force roll
+                DiceHelper.DisableForcedRolls();
 
                 // 70 30 percent chance that the item drop will be equipable or consumable
                 int DropChance = DiceHelper.RollDice(1, 10);
