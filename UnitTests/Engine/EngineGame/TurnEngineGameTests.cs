@@ -1338,9 +1338,7 @@ namespace UnitTests.Engine.EngineGame
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
 
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+            CharacterPlayer.Range = 10;
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
             var Monster = new MonsterModel();
@@ -1369,10 +1367,7 @@ namespace UnitTests.Engine.EngineGame
             // Arrange
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
-
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+            CharacterPlayer.Range = 10;
             CharacterPlayer.CurrentHealth = 1;
             CharacterPlayer.MaxHealth = 100;
 
@@ -1428,10 +1423,7 @@ namespace UnitTests.Engine.EngineGame
             // Arrange
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
-
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+            CharacterPlayer.Range = 10;
             CharacterPlayer.AbilityTracker.Clear();
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
@@ -1460,9 +1452,7 @@ namespace UnitTests.Engine.EngineGame
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell });
 
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
+            CharacterPlayer.Range = 10;
 
             Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
 
