@@ -3413,6 +3413,7 @@
 
                 <Setter Property="TextColor" Value="{StaticResource PrimaryScoreMidground}"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryScoreMidground}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
 
             </Style>
 
