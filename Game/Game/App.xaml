@@ -3367,6 +3367,7 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
 
 
             </Style>
