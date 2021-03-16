@@ -29,7 +29,7 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center">
 
-            <Entry Style="{StaticResource ScoresNameCreateEntryStyle}"
+            <Entry Style="{StaticResource ScoreCreateEntryStyle}"
                    Placeholder="Name goes here"
                    x:Name="NameEntry"
                    Text="{Binding Data.Name}"
