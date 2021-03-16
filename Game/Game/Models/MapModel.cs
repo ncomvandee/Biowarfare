@@ -287,7 +287,7 @@ namespace Game.Models
             MapModelLocation Result = null;
 
             int LowestDistance = int.MaxValue;
-            int speed = PlayerAttacker.Speed;
+            int speed = PlayerAttacker.GetSpeedTotal;
 
             // For every empty location on the map 
             foreach (var data in GetEmptyLocations())
