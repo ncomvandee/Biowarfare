@@ -34,7 +34,7 @@ namespace UnitTests.Views
 
             // For now, set the engine to the Koenig Engine, change when ready 
             BattleEngineViewModel.Instance.SetBattleEngineToGame();
-                                         //.SetBattleToEngineKoenig()
+            //.SetBattleToEngineKoenig()
             page = new RoundOverPage();
         }
 
@@ -293,8 +293,8 @@ namespace UnitTests.Views
 
 
             // Act
-            res.CloseButton_Clicked(null,null);
-         
+            res.CloseButton_Clicked(null, null);
+
             // Reset
 
             // Assert
@@ -388,7 +388,7 @@ namespace UnitTests.Views
 
 
             // Act
-            page.CallOnAppearing();  
+            page.CallOnAppearing();
 
             // Reset
 
@@ -396,14 +396,14 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        
+
         [Test]
         public void RoundOverPage_UnequippedItem__PrimaryHand_Should_Pass()
         {
             // Arrange
-            var data = new PlayerInfoModel(new CharacterModel { Name = "test" }); 
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.PrimaryHand };
-            data.AddItem(dataTest.Location, dataTest.Guid); 
+            data.AddItem(dataTest.Location, dataTest.Guid);
             //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
             // Act
 
@@ -437,6 +437,23 @@ namespace UnitTests.Views
             // Arrange
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.Necklass };
+            data.AddItem(dataTest.Location, dataTest.Guid);
+            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            // Act
+
+            page.UnequippedItem(data, dataTest.Location);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void RoundOverPage_UnequippedItem__OffHand_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+            var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.OffHand };
             data.AddItem(dataTest.Location, dataTest.Guid);
             //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
             // Act
