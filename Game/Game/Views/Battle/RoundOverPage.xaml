@@ -18,9 +18,7 @@
 
                         <Label Text="Round Cleared" 
                                x:Name="PageTitle" 
-                               Style="{StaticResource CenterMessageLargeStyle}"
-                               TextColor="{StaticResource PrimaryMidgroundPurple}"
-                               FontAttributes="Bold"
+                               Style="{StaticResource NewRoundLabelStyle}"
                                />
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
