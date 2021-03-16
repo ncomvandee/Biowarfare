@@ -334,5 +334,21 @@ namespace UnitTests.Views
         //    // Assert
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
+
+
+        [Test]
+        public void RoundOverPage_CloseItemPopup__Clicked_Should_Pass()
+        {
+            // Arrange
+
+
+            // Act
+            page.CloseItemPopup_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
