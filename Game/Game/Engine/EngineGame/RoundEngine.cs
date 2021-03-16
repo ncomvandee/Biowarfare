@@ -88,6 +88,8 @@ namespace Game.Engine.EngineGame
             // Update Score for the RoundCount
             EngineSettings.BattleScore.RoundCount++;
 
+            EngineSettings.BattleScore.TurnCount= 0;
+
             return true;
         }
 
