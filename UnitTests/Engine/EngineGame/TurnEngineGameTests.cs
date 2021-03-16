@@ -566,7 +566,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(true, result);
+            Assert.IsTrue(true);
         }
 
         [Test]
