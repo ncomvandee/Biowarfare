@@ -28,16 +28,12 @@
 
             <ImageButton Source="edit_main_icon.png" 
                          Clicked="Setttings_Clicked" 
-                         Style="{StaticResource BattleToolbarStyle}"
-                         BackgroundColor="Transparent"
-                         HorizontalOptions="End"
+                         Style="{StaticResource BattleNavImageButtonStyle}"
                          />
 
             <ImageButton Source="cancel_x_main.png"
                          Clicked="ExitButton_Clicked" 
-                         BackgroundColor="Transparent"
-                         Style="{StaticResource BattleToolbarStyle}" 
-                         HorizontalOptions="End"
+                         Style="{StaticResource BattleNavImageButtonStyle}" 
                          />
 
             <Frame Style="{StaticResource BattlePageNavFrame}"/>
@@ -96,7 +92,6 @@
                              Style="{StaticResource BattleMapBox}"  
                              HorizontalOptions="CenterAndExpand" 
                              VerticalOptions="Start"
-                             
                              >
                     
                     <AbsoluteLayout HorizontalOptions="CenterAndExpand" 
@@ -111,46 +106,16 @@
                     </AbsoluteLayout>
                 </StackLayout>
 
-                <!--<AbsoluteLayout Margin="0, 10"
-                                IsVisible="False"
-                                HorizontalOptions="CenterAndExpand"
-                                x:Name="BattleInfoAndActions"
-                                >
-                    
-                    <StackLayout Orientation="Horizontal">
-
-                        <Frame Style="{StaticResource BattlePageFrameStyle}"
-                               >
-                            <Label x:Name="BattleMessagesForAllActions"
-                                   Padding="10"/>
-                        </Frame>
-                        
-                        
-                        <StackLayout Orientation="Vertical" 
-                                     HorizontalOptions="FillAndExpand"
-                                     >
-                            
-                            <ImageButton Source="start_main.png" 
-                                         Style="{StaticResource ImageButtonGameStyle}"
-                                         />
-                            
-                            <ImageButton Source="start_main.png" 
-                                         Style="{StaticResource ImageButtonGameStyle}"
-                                         />
-                            
-                            -->
-
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" 
                              Style="{StaticResource BattleUIBottomBox}"
-                             Margin="0, 60">
+                             Margin="0, 60"
+                             >
 
                     <Frame x:Name="BattlePlayerInfomationBox"
-                           Style="{StaticResource BattlePageFrameStyle}"
+                           Style="{StaticResource BattleInfoFrameStyle}"
                            IsVisible="False"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           Padding="10">
+                           >
 
                         <StackLayout x:Name="BattlePlayerBox" 
                                      Style="{StaticResource PlayerBattleOuterBox}"
@@ -167,25 +132,20 @@
                                        IsVisible="False"
                                        >
                                 
-                                
                                 <Image x:Name="AttackerImage" 
                                        Source="item.png" 
                                        Style="{StaticResource ImageBattleMediumStyle}"
                                        />
                                 </Frame>
+                                
                                 <Label x:Name="AttackerName" 
                                        Text="" 
-                                       Style="{StaticResource ValueStyleBattleMicro}"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       FontAttributes="Bold"
+                                       Style="{StaticResource BattleAttackerLabelStyle}"
                                        />
                                 
                                 <Label x:Name="AttackerHealth" 
                                        Text="" 
-                                       Style="{StaticResource ValueStyleBattleMicro}"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       FontAttributes="Bold"
-                                       Margin="0, 0, 0, 0"
+                                       Style="{StaticResource BattleAttackerHealthLabelStyle}"
                                        />
                                 
                             </StackLayout>
@@ -193,23 +153,11 @@
                             <StackLayout HorizontalOptions="Center" 
                                          VerticalOptions="Center"
                                          >
-                                
+
                                 <Label x:Name="BattlePlayerBoxVersus" 
                                        Text="vs" 
-                                       Style="{StaticResource ValueStyleBattleMicro}"
-                                       Padding="0,5,0,0"
-                                       VerticalOptions="Center" 
-                                       VerticalTextAlignment="Center" 
-                                       HorizontalOptions="Center" 
-                                       HorizontalTextAlignment="Center"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       FontAttributes="Bold"
+                                       Style="{StaticResource BattleBoxLabelStyle}"
                                        />
-                                
-                                <!--<Image x:Name="AttackerAttack" 
-                                       Source="mapcell.png" 
-                                       Style="{StaticResource ImageSmallStyle}"
-                                       />-->
                                 
                             </StackLayout>
 
@@ -217,6 +165,7 @@
                                          Style="{StaticResource PlayerBattleInfoBox}" 
                                          HorizontalOptions="End"
                                          >
+                                
                                 <Frame x:Name="DefenderFrame" 
                                        Style="{StaticResource SmallCircleFrameStyle}" 
                                        WidthRequest="70"
@@ -224,27 +173,26 @@
                                        >
 
                                     <Image x:Name="DefenderImage" 
-                                       Source="item.png" 
-                                       Style="{StaticResource ImageBattleMediumStyle}"
-                                       />
+                                           Source="item.png" 
+                                           Style="{StaticResource ImageBattleMediumStyle}"
+                                           />
+                                    
                                 </Frame>
+                                
                                 <Label x:Name="DefenderName" 
                                        Text="" 
-                                       Style="{StaticResource ValueStyleBattleMicro}"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       FontAttributes="Bold"
+                                       Style="{StaticResource BattleAttackerLabelStyle}"
                                        />
                                 
                                 <Label x:Name="DefenderHealth" 
                                        Text="" 
-                                       Style="{StaticResource ValueStyleBattleMicro}"
-                                       TextColor="{StaticResource PrimaryBackgroundPurple}"
-                                       FontAttributes="Bold"
+                                       Style="{StaticResource BattleAttackerLabelStyle}"
                                        />
                                 
                             </StackLayout>
                         </StackLayout>
                     </Frame>
+                    
                     <!--Battle Grammar Buttons-->
                     <StackLayout Style="{StaticResource HorizontalStack}" 
                                  HorizontalOptions= "CenterAndExpand"
@@ -263,14 +211,12 @@
                                      Style="{StaticResource ImageButtonGameStyle}"
                                     />
 
-
                         <ImageButton Source="use_item_main.png" 
                                      x:Name="UseItemButton"
                                      IsVisible="False" 
                                      Style="{StaticResource ImageButtonGameStyle}"
                                      Clicked="UseItemButton_Clicked"/>
                                     
-
                         <ImageButton x:Name="NextRoundButton" 
                                      Clicked="NextRoundButton_Clicked" 
                                      IsVisible="False"
@@ -292,49 +238,26 @@
                                  HeightRequest="100"
                                  HorizontalOptions="CenterAndExpand"
                                  >
-                        <Frame BackgroundColor="Transparent" 
+
+                        <Frame Style="{StaticResource BattleMessageDisplayFrameStyle}"
                                IsVisible="false"
                                x:Name="MessageDisplayFrame"
-                               VerticalOptions="CenterAndExpand"
-                               BorderColor="Transparent"
-                               Padding="5"
-                               Margin="10"
-                               CornerRadius="20"
                                >
-                            
-                        <StackLayout x:Name="MessageDisplayBox" 
+
+                            <StackLayout x:Name="MessageDisplayBox" 
                                      IsVisible="false"
                                      Style="{StaticResource VerticalStack}" 
                                      VerticalOptions="EndAndExpand"
                                      HorizontalOptions="CenterAndExpand"
-                                     
                                      >
-                            
-                            <Label x:Name="BattleMessages" 
-                                    HorizontalOptions="FillAndExpand" 
-                                    LineBreakMode="WordWrap" 
-                                    MaxLines="2"
-                                    LineHeight="1"
-                                    CharacterSpacing="1"
-                                    Style="{StaticResource SimpleLabelTextStyle}"
-                                    FontSize="Micro"
-                                   />
 
-                            <!--<WebView
-                        x:Name="HtmlBox"
-                        WidthRequest="100"
-                        MinimumWidthRequest="100"
-                        HeightRequest="100"
-                        MinimumHeightRequest="100"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Start"
-                        BackgroundColor="Transparent"
-                        IsVisible="false"
-                        />-->
-                        </StackLayout>
+                                <Label x:Name="BattleMessages" 
+                                       Style="{StaticResource BattleMessagesLabelStyle}"
+                                       />
+
+                            </StackLayout>
                         </Frame>
                     </StackLayout>
-                        
                 </StackLayout>
             </StackLayout>
 
@@ -356,10 +279,9 @@
                     
                     <ImageButton x:Name="ShowScoreButton"
                                  Style="{StaticResource ImageButtonGameStyle}"
-                            Clicked="ShowScoreButton_Clicked" 
-                           Source="view_scores_main.png"
-                           
-                            />
+                                 Clicked="ShowScoreButton_Clicked" 
+                                 Source="view_scores_main.png"
+                                 />
                     
                     <Button x:Name="ExitButton" 
                             Clicked="ExitButton_Clicked" 
@@ -370,35 +292,38 @@
                     </Button>
                 </StackLayout>
             </StackLayout>
-            
-            
+
+            <!--Use Items Pop-up Frame-->
             <Frame Style="{StaticResource RoundPagePopupFrameStyle}"
                    x:Name="CharacterPopUpFrame"
-                   IsVisible="false">
+                   IsVisible="false"
+                   >
 
                 <StackLayout Style="{StaticResource PopupStackLayoutStyle}">
 
                     <ImageButton Style="{StaticResource ClosePopupButtonStyle}"
                                  Source="cancel_x_main.png"
-                                 WidthRequest="20"
-                                 HeightRequest="30"
-                                 Clicked="ClosePopup_Clicked"/>
+                                 Clicked="ClosePopup_Clicked"
+                                 />
 
                     <Frame Style="{StaticResource RoundPagePopupTitleFrameStyle}"
-                           HeightRequest="20">
+                           HeightRequest="20"
+                           >
 
                         <Label Style="{StaticResource RoundPagePopupLabelStyle}"
                                Text="Name goes here, I guess"
                                FontSize="Caption"
-                               x:Name="CharacterPopUpName" />
+                               x:Name="CharacterPopUpName" 
+                               />
 
                     </Frame>
 
                     <Frame Style="{StaticResource ItemImageCircleFrameStyle}"
                            WidthRequest="70"
-                           HeightRequest="70">
+                           HeightRequest="70"
+                           >
 
-                        <Image x:Name="CharacterPopUpImage" />
+                        <Image x:Name="CharacterPopUpImage"/>
 
                     </Frame>
 
@@ -418,52 +343,59 @@
                             </Grid.ColumnDefinitions>
 
                             <StackLayout Orientation="Horizontal"
-                                       
                                          Grid.Row="0"
                                          Grid.Column="0"
-                                         Margin="20, 0">
+                                         Margin="20, 0"
+                                         >
 
                                 <Label Text="Cell Type:"
                                        HorizontalOptions="StartAndExpand"
                                        Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
                                        />
-                                
+
                                 <Label Text="Macrophage"
                                        HorizontalOptions="StartAndExpand"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupCellType"/>
+                                       x:Name="CharacterPopupCellType"
+                                       />
 
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal"
                                          Grid.Row="1"
                                          Grid.Column="0"
-                                         Margin="20, 0">
+                                         Margin="20, 0"
+                                         >
 
                                 <Label Text="HP:"
                                        HorizontalOptions="StartAndExpand"
-                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"/>
-                                
+                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
+                                       />
+
                                 <Label Text="25 / 25"
                                        HorizontalOptions="StartAndExpand"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupHealth"/>
+                                       x:Name="CharacterPopupHealth"
+                                       />
 
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal"
                                          Grid.Row="2"
                                          Grid.Column="0"
-                                         Margin="20, 0">
+                                         Margin="20, 0"
+                                         >
 
                                 <Label Text="Status:"
                                        HorizontalOptions="StartAndExpand"
-                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"/>
+                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
+                                       />
 
                                 <Label Text="Poison"
                                        HorizontalOptions="StartAndExpand"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupStatus"/>
+                                       x:Name="CharacterPopupStatus"
+                                       />
 
                             </StackLayout>
 
@@ -474,62 +406,49 @@
 
                                 <Label Text="Attack: " 
                                        HorizontalOptions="StartAndExpand"
-                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"/>
-                                
+                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
+                                       />
+
                                 <Label Text="99"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupAttack"/>
+                                       x:Name="CharacterPopupAttack"
+                                       />
 
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal"
                                          Grid.Row="1"
-                                         Grid.Column="1">
+                                         Grid.Column="1"
+                                         >
 
                                 <Label Text="Defense: "
                                        HorizontalOptions="StartAndExpand"
-                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"/>
-                                
+                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
+                                       />
+
                                 <Label Text="99"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupDefense"/>
+                                       x:Name="CharacterPopupDefense"
+                                       />
 
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal"
                                          Grid.Row="2"
-                                         Grid.Column="1">
+                                         Grid.Column="1"
+                                         >
 
                                 <Label Text="Speed: "
                                        HorizontalOptions="StartAndExpand"
-                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}" />
-                                
+                                       Style="{StaticResource RoundPagePopupCellTypeLabelStyle}" 
+                                       />
+
                                 <Label Text="99"
                                        Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                       x:Name="CharacterPopupSpeed"/>
+                                       x:Name="CharacterPopupSpeed"
+                                       />
 
                             </StackLayout>
-
-                            <!--<Label Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
-                                   Text="Cell Type: "
-                                   Grid.Row="0"
-                                   Grid.Column="0" />
-
-                            <Label Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                   x:Name="CharacterPopupCellType"
-                                   Grid.Row="0"
-                                   Grid.Column="1" />
-
-                            <Label Style="{StaticResource RoundPagePopupCellTypeLabelStyle}"
-                                   Text="Level: "
-                                   Grid.Row="1"
-                                   Grid.Column="0" />
-
-                            <Label Style="{StaticResource RoundPagePopupCellTypeRegularLabelStyle}"
-                                   x:Name="CharacterPopupLevel"
-                                   Grid.Row="1"
-                                   Grid.Column="1" />-->
-
                         </Grid>
                     </Frame>
 
@@ -542,7 +461,8 @@
                             </Grid.RowDefinitions>
 
                             <Frame Grid.Row="0"
-                                   Style="{StaticResource RoundPagePopupAttributeFrameStyle}">
+                                   Style="{StaticResource RoundPagePopupAttributeFrameStyle}"
+                                   >
 
                             </Frame>
 
@@ -551,23 +471,24 @@
                                     Text="Emergency Kit"
                                     FontSize="Small"
                                     x:Name="ItemAttributeToggleButton"
-                                     />
+                                    />
 
                             <ScrollView Style="{StaticResource RoundPageAttributeScrollViewStyle}"
                                         Grid.Row="1"
                                         x:Name="ItemsFrame"
-                                        IsVisible="True">
+                                        IsVisible="True"
+                                        >
 
                                 <FlexLayout Style="{StaticResource ReadPageFlexLayoutStyle}"
                                             x:Name="ItemBox"
-                                            IsVisible="true"/>
+                                            IsVisible="true"
+                                            />
 
                             </ScrollView>
                         </Grid>
                     </Frame>
                 </StackLayout>
             </Frame>
-
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
