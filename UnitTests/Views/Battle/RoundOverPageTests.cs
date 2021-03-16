@@ -413,5 +413,22 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void RoundOverPage_UnequippedItem__Head_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+            var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.Head };
+            data.AddItem(dataTest.Location, dataTest.Guid);
+            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            // Act
+
+            page.UnequippedItem(data, dataTest.Location);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
