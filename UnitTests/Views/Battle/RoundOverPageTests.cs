@@ -33,8 +33,8 @@ namespace UnitTests.Views
             Application.Current = app;
 
             // For now, set the engine to the Koenig Engine, change when ready 
-            BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
-
+            BattleEngineViewModel.Instance.SetBattleEngineToGame();
+                                         //.SetBattleToEngineKoenig()
             page = new RoundOverPage();
         }
 
@@ -97,7 +97,7 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-/*        [Test]
+        [Test]
         public void RoundOverPage_ShowPopup_Default_Should_Pass()
         {
             // Arrange
@@ -108,7 +108,7 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
-        }*/
+        }
 
         [Test]
         public void RoundOverPage_CreatePlayerDisplayBox_Null_Should_Pass()
@@ -123,47 +123,47 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        //[Test]
-        //public void RoundOverPage_GetItemToDisplay_Null_Should_Pass()
-        //{
-        //    // Arrange
-        //    // Act
-        //    page.GetItemToDisplay(null);
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_Null_Should_Pass()
+        {
+            // Arrange
+            // Act
+            page.GetItemToDisplay(null, false);
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.IsTrue(true); // Got to here, so it happened...
-        //}
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
-        //[Test]
-        //public void RoundOverPage_GetItemToDisplay_InValid_Id_Should_Pass()
-        //{
-        //    // Arrange
-        //    // Act
-        //    page.GetItemToDisplay(new ItemModel { Id = "" });
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_InValid_Id_Should_Pass()
+        {
+            // Arrange
+            // Act
+            page.GetItemToDisplay(new ItemModel { Id = "" }, false);
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.IsTrue(true); // Got to here, so it happened...
-        //}
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
-        //[Test]
-        //public async Task RoundOverPage_GetItemToDisplay_Valid_Should_Pass()
-        //{
-        //    // Arrange
-        //    var data = new ItemModel { Name = "Mike" };
-        //    await ItemIndexViewModel.Instance.CreateAsync(data);
+        [Test]
+        public async Task RoundOverPage_GetItemToDisplay_Valid_Should_Pass()
+        {
+            // Arrange
+            var data = new ItemModel { Name = "Mike" };
+            await ItemIndexViewModel.Instance.CreateAsync(data);
 
-        //    // Act
-        //    page.GetItemToDisplay(data);
+            // Act
+            page.GetItemToDisplay(data, false);
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.IsTrue(true); // Got to here, so it happened...
-        //}
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
         [Test]
         public void RoundOverPage_DrawCharacterList_Valid_Should_Pass()
@@ -249,22 +249,22 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        //[Test]
-        //public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
-        //{
-        //    // Arrange
-        //    var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
-        //    var StackItem = page.GetItemToDisplay(item);
-        //    var dataImage = StackItem.Children[0];
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
+        {
+            // Arrange
+            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            var StackItem = page.GetItemToDisplay(item, true);
+            var dataImage = StackItem.Children[0];
 
-        //    // Act
-        //    ((ImageButton)dataImage).PropagateUpClicked();
+            // Act
+            ((ImageButton)dataImage).PropagateUpClicked();
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.IsTrue(true); // Got to here, so it happened...
-        //}
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
         [Test]
         public void RoundOverPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
@@ -327,7 +327,7 @@ namespace UnitTests.Views
 
 
         //    // Act
-        //    page.PickItem_Clicked(null, null);
+        //    page.PickItem_Clicked(null);
 
         //    // Reset
 

@@ -217,7 +217,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        private bool ShowItemPopup(ItemModel data)
+        public bool ShowItemPopup(ItemModel data)
         {
             PopupLoadingView.IsVisible = true;
             PopupItemImage.Source = data.ImageURI;
