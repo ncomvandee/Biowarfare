@@ -144,8 +144,14 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override ActionEnum DetermineActionChoice(PlayerInfoModel Attacker)
         {
-            return base.DetermineActionChoice(Attacker);
             // If it is the characters turn, and NOT auto battle, use what was sent into the engine
+/*            if (Attacker.PlayerType == PlayerTypeEnum.Character)
+            {
+                if (EngineSettings.BattleScore.AutoBattle == false)
+                {
+                    return EngineSettings.CurrentAction;
+                }
+            }*/
 
             /*
              * The following is Used for Monsters, and Auto Battle Characters
@@ -156,12 +162,22 @@ namespace Game.Engine.EngineGame
              */
 
             // Assume Move if nothing else happens
+            EngineSettings.CurrentAction = ActionEnum.Move;
 
-            // Check to see if ability is avaiable
+/*            // Check to see if ability is avaiable
+            if (ChooseToUseAbility(Attacker))
+            {
+                EngineSettings.CurrentAction = ActionEnum.Ability;
+                return EngineSettings.CurrentAction;
+            }*/
 
             // See if Desired Target is within Range, and if so attack away
+            if (EngineSettings.MapModel.IsTargetInRange(Attacker, AttackChoice(Attacker)))
+            {
+                EngineSettings.CurrentAction = ActionEnum.Attack;
+            }
 
-            // throw new System.NotImplementedException();
+            return EngineSettings.CurrentAction;
         }
 
         /// <summary>
@@ -184,8 +200,7 @@ namespace Game.Engine.EngineGame
              * 
              */
 
-            if (Attacker.PlayerType == PlayerTypeEnum.Monster)
-            {
+
                 // For Attack, Choose Who
                 EngineSettings.CurrentDefender = AttackChoice(Attacker);
 
@@ -215,12 +230,10 @@ namespace Game.Engine.EngineGame
                 Debug.WriteLine(string.Format("{0} moves from {1},{2} to {3},{4}", locationAttacker.Player.Name, locationAttacker.Column, locationAttacker.Row, openSquare.Column, openSquare.Row));
                 string line = string.Format("{0} moves from {1},{2} to {3},{4}", locationAttacker.Player.Name, locationAttacker.Column, locationAttacker.Row, openSquare.Column, openSquare.Row); 
 
-                EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " (Speed is: " + Attacker.Speed + ") moves " + line + " closer to " + EngineSettings.CurrentDefender.Name;
+                EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " (Speed is: " + Attacker.GetSpeed() + ") moves " + line + " closer to " + EngineSettings.CurrentDefender.Name;
 
                 return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
-            }
-
-            return true;
+  
         }
 
         /// <summary>
