@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.NewRoundPage">
 
+   
     <ContentPage.Content>
         
         <AbsoluteLayout HorizontalOptions="FillAndExpand" 
@@ -14,9 +15,7 @@
                 <StackLayout Style="{StaticResource VerticalStack}">
 
                     <Label Text="Beginning a Round" x:Name="PageTitle"
-                           Style="{StaticResource CenterMessageLargeStyle}"
-                           TextColor="{StaticResource PrimaryMidgroundPurple}"
-                           FontAttributes="Bold"
+                           Style="{StaticResource NewRoundLabelStyle}"
                            />
 
                     <ImageButton Style="{StaticResource ImageButtonGameStyle}"
