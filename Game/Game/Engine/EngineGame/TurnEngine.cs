@@ -275,18 +275,6 @@ namespace Game.Engine.EngineGame
         public override bool Attack(PlayerInfoModel Attacker)
         {
 
-            if (EngineSettings.BattleScore.AutoBattle)
-            {
-                return base.Attack(Attacker);
-            }
-            if (EngineSettings.MapModel.IsTargetInRange(Attacker, EngineSettings.CurrentDefender) == false)
-            {
-                EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" tried to attack " + GetPronounce(EngineSettings.CurrentDefender) + EngineSettings.CurrentDefender.Name + "\" but not in range";
-                Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
-
-                return false;
-            }
-
             return base.Attack(Attacker);
             
             // INFO: Teams, AttackChoice will auto pick the target, good for auto battle
@@ -382,6 +370,16 @@ namespace Game.Engine.EngineGame
                 return false;
             }
 
+            if(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum == BattleModeEnum.MapFull)
+            {
+                if (EngineSettings.MapModel.IsTargetInRange(Attacker, EngineSettings.CurrentDefender) == false)
+                {
+                    EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" tried to attack " + GetPronounce(EngineSettings.CurrentDefender) + EngineSettings.CurrentDefender.Name + "\" but not in range";
+                    Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+
+                    return false;
+                }
+            }
 
             // Set Messages to empty
             EngineSettings.BattleMessagesModel.ClearMessages();
