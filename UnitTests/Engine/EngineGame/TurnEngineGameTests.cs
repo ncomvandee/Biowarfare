@@ -692,7 +692,7 @@ namespace UnitTests.Engine.EngineGame
         //    Assert.AreEqual(2, result);
         //}
 
-        [Test]
+/*        [Test]
         public void TurnEngine_DropItems_Valid_Monster_Items_0_Random_Drop_1_Should_Return_1()
         {
             // Arrange
@@ -713,7 +713,7 @@ namespace UnitTests.Engine.EngineGame
 
             // Assert
             Assert.AreEqual(1, result);
-        }
+        }*/
         #endregion DropItems
 
         #region TargetDied
