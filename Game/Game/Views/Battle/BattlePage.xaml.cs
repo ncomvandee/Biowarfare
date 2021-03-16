@@ -642,8 +642,10 @@ namespace Game.Views
 
             BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(data.Player);
 
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Attack;
             // Hold the current state
             var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+
             UpdateMapGrid();
             // Output the Message of what happened.
             GameMessage();
