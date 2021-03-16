@@ -89,9 +89,9 @@ namespace Scenario
 
         #region Scenario1
         [Test]
-        public async Task HackathonScenario_Scenario_1_Valid_Default_Should_Pass()
+        /*public async Task HackathonScenario_Scenario_1_Valid_Default_Should_Pass()
         {
-            /* 
+            *//* 
             * Scenario Number:  
             *      1
             *      
@@ -118,7 +118,7 @@ namespace Scenario
             *      Verify Mike is not in the Player List
             *      Verify Round Count is 1
             *  
-            */
+            *//*
 
             //Arrange
 
@@ -156,7 +156,7 @@ namespace Scenario
             Assert.AreEqual(true, result);
             Assert.AreEqual(null, EngineViewModel.Engine.EngineSettings.PlayerList.Find(m => m.Name.Equals("Mike")));
             Assert.AreEqual(1, EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount);
-        }
+        }*/
         #endregion Scenario1
 
         #region Scenario3
