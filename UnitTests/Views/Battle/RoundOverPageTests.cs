@@ -380,5 +380,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void RoundOverPage_OnAppearing__Clicked_Should_Pass()
+        {
+            // Arrange
+
+
+            // Act
+            page.CallOnAppearing();  
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
