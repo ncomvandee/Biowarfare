@@ -178,5 +178,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void NewRoundPage_ItemAttributeToggle_Clicked_Should_Pass()
+        {
+            // Arrange
+            // Act
+
+            page.ItemAttributeToggle_Clicked(null, null);
+            page.ItemAttributeToggle_Clicked(null, null);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
     }
 }
