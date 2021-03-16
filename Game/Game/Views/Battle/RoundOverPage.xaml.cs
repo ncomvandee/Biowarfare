@@ -580,6 +580,14 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Public helper method to call protected OnAppearing() for testing 
+        /// </summary>
+        public void CallOnAppearing()
+        {
+            OnAppearing(); 
+        }
+
+        /// <summary>
         /// Refresh page after come back from PickItemPage
         /// </summary>
         protected override void OnAppearing()
