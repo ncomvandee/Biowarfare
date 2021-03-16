@@ -166,6 +166,23 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public async Task RoundOverPage_GetItemToDisplay_Consumable_Valid_Should_Pass()
+        {
+            // Arrange
+            var data = new ItemModel { Name = "Mike", IsConsumable = true};
+            await ItemIndexViewModel.Instance.CreateAsync(data);
+
+            // Act
+            page.GetItemToDisplay(data, true);
+            var result = page.ShowItemPopup(data); 
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(result); // Got to here, so it happened...
+        }
+
+        [Test]
         public void RoundOverPage_DrawCharacterList_Valid_Should_Pass()
         {
             // Arrange
@@ -404,7 +421,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.PrimaryHand };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+           
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -421,7 +438,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.Head };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+           
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -438,7 +455,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.Necklass };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -455,7 +472,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.OffHand };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+           
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -472,7 +489,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.LeftFinger };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+           
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -489,7 +506,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.RightFinger };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -506,7 +523,7 @@ namespace UnitTests.Views
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
             var dataTest = new ItemModel { Name = "test", Location = ItemLocationEnum.Feet };
             data.AddItem(dataTest.Location, dataTest.Guid);
-            //var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            
             // Act
 
             page.UnequippedItem(data, dataTest.Location);
@@ -515,5 +532,28 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        //[Test]
+        //public void RoundOverPage_GetItemToDisplay_True_Valid_Should_Pass()
+        //{
+        //    // Arrange
+        //    var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+        //    var dataTest = new ItemModel { Name = "AttackBoots", Location = ItemLocationEnum.PrimaryHand, Attribute = AttributeEnum.Attack, Value = 10, IsConsumable = false, Damage = 10 };
+        //    dataTest.Guid = "test"; 
+        //    data.AddItem(ItemLocationEnum.PrimaryHand, dataTest.Id);
+
+
+
+        //    // Act
+        //    var result = page.GetItemToDisplay(dataTest.Location, data);
+        //    var ItemData = data.GetItemByLocation(ItemLocationEnum.PrimaryHand);
+
+        //    // Reset
+
+        //    // Assert
+        //    Assert.IsNotNull(result); 
+        //}
+
+      
     }
 }
