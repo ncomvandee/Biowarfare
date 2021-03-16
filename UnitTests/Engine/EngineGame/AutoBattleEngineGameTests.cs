@@ -32,6 +32,7 @@ namespace UnitTests.Engine.EngineGame
             AutoBattleEngine.Battle.Round = new RoundEngine();
             AutoBattleEngine.Battle.Round.Turn = new TurnEngine();
 
+      
             // Remove this comment when the Battle engine is ready to go...
             // AutoBattleEngine.Battle.StartBattle(true);   // Clear the Engine
         }
@@ -67,14 +68,14 @@ namespace UnitTests.Engine.EngineGame
             DiceHelper.EnableForcedRolls();
             DiceHelper.SetForcedRollValue(3);
 
-            var data = new CharacterModel { Level = 1, MaxHealth = 10 };
+/*            var data = new CharacterModel { Level = 1, MaxHealth = 10 };
 
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
-            AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
+            AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));*/
 
             //Act
             var result = await AutoBattleEngine.RunAutoBattle();
