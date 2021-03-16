@@ -383,7 +383,7 @@ namespace Game.Engine.EngineGame
                 return false;
             }
 
-            if(EngineSettings.BattleSettingsModel.BattleModeEnum == BattleModeEnum.MapFull || !EngineSettings.BattleScore.AutoBattle)
+            if(EngineSettings.BattleSettingsModel.BattleModeEnum == BattleModeEnum.MapFull && !EngineSettings.BattleScore.AutoBattle)
             {
                 if (EngineSettings.MapModel.IsTargetInRange(Attacker, EngineSettings.CurrentDefender) == false)
                 {
