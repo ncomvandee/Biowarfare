@@ -101,6 +101,8 @@ namespace Game.Engine.EngineBase
         /// <returns></returns>
         public virtual bool DetectInfinateLoop()
         {
+            Debug.WriteLine("Round " + Battle.EngineSettings.BattleScore.RoundCount);
+            Debug.WriteLine("Turn " + Battle.EngineSettings.BattleScore.TurnCount);
             if (Battle.EngineSettings.BattleScore.RoundCount > Battle.EngineSettings.MaxRoundCount)
             {
                 return true;
