@@ -2596,6 +2596,18 @@
             </Style>
             <!--___________________________________________-->
             
+            <!--Round Label Central on New Round Page-->
+            <Style TargetType="Label"
+                   x:Key="NewRoundLabelStyle"
+                   BasedOn="{StaticResource CenterMessageLargeStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+            <!--___________________________________________-->
+
 
 
 

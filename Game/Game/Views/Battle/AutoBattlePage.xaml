@@ -19,7 +19,7 @@
                      >
             
             <Frame Style="{StaticResource MediumSquareMidgroundFrame}">
-                
+
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <Image x:Name="AutobattleImage"
@@ -27,28 +27,26 @@
                            IsAnimationPlaying="True"
                            Style="{StaticResource ImageLargeStyle}"
                            >
+                        
                     </Image>
-                    
 
                     <Label x:Name="BattleMessageValue"
                            Text=""
                            Style="{StaticResource BattleMessageStyle}"
                            />
-                    
+
                 </StackLayout>
-                
             </Frame>
-          
-            
+
             <StackLayout Style="{StaticResource CardImageTextBox}">
 
                 <ImageButton
                         Source="start_main.png"
                         Style="{StaticResource GamePageBattleStyle}"
-                        Clicked="AutobattleButton_Clicked"/>
+                        Clicked="AutobattleButton_Clicked"
+                    />
+                
             </StackLayout>
-
-      
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
