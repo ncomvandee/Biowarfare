@@ -88,8 +88,13 @@ namespace Scenario
         #endregion Scenario0
 
         #region Scenario1
+<<<<<<< HEAD
         [Test]
         public async Task HackathonScenario_Scenario_1_Valid_Default_Should_Pass()
+=======
+        //[Test]
+        /*public async Task HackathonScenario_Scenario_1_Valid_Default_Should_Pass()
+>>>>>>> be63601fa33a163d35ee87499df9ffbb379cfa10
         {
             //*//* 
             //* Scenario Number:  
