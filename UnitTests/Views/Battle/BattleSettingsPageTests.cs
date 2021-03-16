@@ -36,7 +36,8 @@ namespace UnitTests.Views
             Application.Current = app;
 
             // For now, set the engine to the Koenig Engine, change when ready 
-            BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+            BattleEngineViewModel.Instance.SetBattleEngineToGame();
+                                          //.SetBattleEngineToKoenig();
 
             page = new BattleSettingsPage();
         }
@@ -337,6 +338,28 @@ namespace UnitTests.Views
 
             // Assert
             Assert.AreEqual(HitStatusEnum.Default, BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum);
+        }
+
+        [Test]
+        public void BattleSettingsPage_GoSlow_Toggled_True_Default_Should_Pass()
+        {
+            // Arrange
+
+            var control = (Switch)page.FindByName("GoSlowSwitch");
+            var current = control.IsToggled;
+
+            ToggledEventArgs args = new ToggledEventArgs(current);
+            page.AllowCriticalHit_Toggled(null, args);
+
+            control.IsToggled = true;
+
+            // Act
+            page.GoSlow_Toggled(null, args);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(!current); // Got to here, so it happened...
         }
     }
 }
