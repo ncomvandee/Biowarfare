@@ -762,7 +762,10 @@ namespace Game.Views
             if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.Alive == false)
             {
                 UpdateMapGrid();
-                DefenderImage.BackgroundColor = Color.Red;
+                DefenderImage.BackgroundColor = Color.FromHex("BE4647");
+                DefenderFrame.BackgroundColor = Color.FromHex("BE4647");
+                DefenderFrame.BorderColor = Color.FromHex("BE4647"); 
+
             }
 
             BattlePlayerBoxVersus.Text = "vs";
@@ -781,6 +784,8 @@ namespace Game.Views
             DefenderName.Text = string.Empty;
             DefenderHealth.Text = string.Empty;
             DefenderImage.BackgroundColor = Color.Transparent;
+            DefenderFrame.BackgroundColor = Color.White;
+            DefenderFrame.BorderColor = Color.White;
 
             BattlePlayerBoxVersus.Text = string.Empty;
         }
