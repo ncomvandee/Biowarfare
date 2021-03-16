@@ -1138,6 +1138,7 @@ namespace Game.Views
                     AttackButton.IsVisible = false;
                     UseAbilityButton.IsVisible = false;
                     UseItemButton.IsVisible = false;
+                    MapGrid.IsEnabled = false;
                     break;
 
                 case BattleStateEnum.NewRound:
@@ -1146,6 +1147,7 @@ namespace Game.Views
                     AttackButton.IsVisible = false;
                     UseAbilityButton.IsVisible = false;
                     UseItemButton.IsVisible = false;
+                    MapGrid.IsEnabled = false;
                     break;
 
                 case BattleStateEnum.GameOver:
@@ -1163,6 +1165,7 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
                     MessageDisplayFrame.IsVisible = true;
                     AttackButton.IsVisible = true;
+                    MapGrid.IsEnabled = true;
                     break;
 
                 // Based on the State disable buttons
