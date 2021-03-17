@@ -414,6 +414,7 @@ namespace Game.Engine.EngineGame
                     if (EngineSettings.BattleMessagesModel.HitStatus == HitStatusEnum.CriticalHit)
                     {
                         EngineSettings.BattleMessagesModel.DamageAmount *= 2;
+
                     }
 
                     //Cancer Cell has a cahnce to instant kill 
@@ -555,7 +556,7 @@ namespace Game.Engine.EngineGame
                     }
 
                     //Health The Target
-                    if (chance <= 6)
+                    if (chance <= 6 && chance>3)
                     {
                         //EngineSettings.BattleMessagesModel.DamageAmount /= 2;
                         //Health Target first
