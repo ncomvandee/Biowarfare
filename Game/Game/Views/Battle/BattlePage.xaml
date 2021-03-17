@@ -109,12 +109,11 @@
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" 
                              Style="{StaticResource BattleUIBottomBox}"
-                             Margin="0, 60"
-                             >
+                             Margin="0, 60">
 
                     <Frame x:Name="BattlePlayerInfomationBox"
                            Style="{StaticResource BattleInfoFrameStyle}"
-                           IsVisible="False"
+                           IsVisible="true"
                            >
 
                         <StackLayout x:Name="BattlePlayerBox" 
@@ -191,6 +190,8 @@
                                 
                             </StackLayout>
                         </StackLayout>
+                        
+                        
                     </Frame>
                     
                     <!--Battle Grammar Buttons-->
@@ -490,6 +491,39 @@
                     </Frame>
                 </StackLayout>
             </Frame>
+
+
+
+            <AbsoluteLayout AbsoluteLayout.LayoutBounds="80 ,380 , 1 ,1 "
+                            AbsoluteLayout.LayoutFlags="None"
+                            >
+                     <!--Use ability popup frame-->
+                <Frame
+                    IsVisible="false"
+                   Padding="10"
+                   CornerRadius="10"
+                   BackgroundColor="MediumAquamarine"
+                   BorderColor="Transparent"
+                   x:Name="UseAbilityPopupFrame"
+                    WidthRequest="300"
+                    HeightRequest="100">
+
+                <StackLayout>
+                    <Label Text=" Click on friendly ally to give them immunity token, prevent them from taking damage"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center" />
+
+                                           
+                        <ImageButton Source="cancel_main.png"
+                                     WidthRequest="90"
+                                     HeightRequest="30"
+                                     VerticalOptions="CenterAndExpand"
+                                     Clicked="CloseAbilityPopup_Clicked" />
+
+                </StackLayout>
+                </Frame>
+            </AbsoluteLayout>
+
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

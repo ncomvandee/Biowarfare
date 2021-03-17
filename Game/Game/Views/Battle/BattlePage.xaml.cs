@@ -198,11 +198,11 @@ namespace Game.Views
             {
                 MapGrid.IsEnabled = true;
                 UseItemButton.IsVisible = true;
-                UseAbilityButton.IsEnabled = true;
+                UseAbilityButton.IsVisible = true;
 
                 if (cell.Job == CellTypeEnum.BCell)
                 {
-                    UseAbilityButton.IsVisible = true;
+                    UseAbilityButton.IsEnabled = true;
                 }
             }
 
@@ -731,6 +731,7 @@ namespace Game.Views
             {
                 EngineSettings.CurrentAction = ActionEnum.Ability;
                 EngineSettings.CurrentActionAbility = AbilityEnum.Invulnerable;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = cell;
             }
 
 
@@ -741,6 +742,8 @@ namespace Game.Views
             // Output the Message of what happened.
 
             GameMessage();
+
+            UseAbilityPopupFrame.IsVisible = false;
 
             return true;
         }
@@ -1368,6 +1371,11 @@ namespace Game.Views
                 status = "Poisoned";
             }
 
+            if (cell.Invulnerable)
+            {
+                status = "Invulnerable";
+            }
+
             CharacterPopUpName.Text = cell.Name;
             CharacterPopUpImage.Source = cell.ImageURI;
             CharacterPopupCellType.Text = cell.Job.ToString();
@@ -1499,7 +1507,19 @@ namespace Game.Views
 
         public void UseAbility_Clicked(object sender, EventArgs e)
         {
+            UseAbilityPopupFrame.IsVisible = true;
             UseAbility = true;
+        }
+
+        /// <summary>
+        /// Close ability popup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void CloseAbilityPopup_Clicked(object sender, EventArgs e)
+        {
+            UseAbility = false;
+            UseAbilityPopupFrame.IsVisible = false;
         }
     }
 }
