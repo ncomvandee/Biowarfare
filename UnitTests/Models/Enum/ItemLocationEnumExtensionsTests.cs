@@ -272,5 +272,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("head_location.png", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToIcon_Necklace_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Necklass.ToIcon();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("necklace_location.png", result);
+        }
     }
 }
