@@ -81,11 +81,6 @@ namespace Game.Engine.EngineGame
                 // Set the action if one is not set
                 EngineSettings.CurrentAction = DetermineActionChoice(Attacker);
 
-                // When in doubt, attack...
-                if (EngineSettings.CurrentAction == ActionEnum.Unknown)
-                {
-                    EngineSettings.CurrentAction = ActionEnum.Attack;
-                }
             }
 
             switch (EngineSettings.CurrentAction)
