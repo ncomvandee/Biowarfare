@@ -1024,7 +1024,7 @@ namespace UnitTests.Engine.EngineGame
             DiceHelper.SetForcedRollValue(20);
 
             var oldSetting = Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
-            Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = true;
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum= HitStatusEnum.CriticalHit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
