@@ -1175,5 +1175,18 @@ namespace UnitTests.Engine.EngineBase
             Assert.AreEqual(2, result.Count);
         }
         #endregion PlayerList
+
+
+        [Test]
+        public void RoundEgineBase_SlowIsTheNewFast_Should_Pass()
+        {
+            //Arrange
+            //Act
+            Engine.Round.SlowIsTheNewFast();
+
+            //Reset
+            //Assert
+            Assert.IsTrue(true);
+        }
     }
 }
