@@ -153,6 +153,7 @@
     <Content Include="bloodstone_no_bg.png" />
     <Content Include="bloodstone_white_bg.png" />
     <Content Include="boots_no_bg.png" />
+    <Content Include="boots_white_bg.png" />
     <Content Include="b_cell_bg.png" />
     <Content Include="basophil_bg.png" />
     <Content Include="b_cell_no_bg.png" />
@@ -242,6 +243,7 @@
     <Content Include="main_speed.png" />
     <Content Include="main_xp.png" />
     <Content Include="mapcell.png" />
+    <Content Include="mask_white_bg.png" />
     <Content Include="monster_attack.png" />
     <Content Include="monster_button.png" />
     <Content Include="monster_defense.png" />
