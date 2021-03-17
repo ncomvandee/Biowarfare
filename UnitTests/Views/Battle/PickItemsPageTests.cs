@@ -82,5 +82,18 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void PickItemsPage_SaveButton_Clicked_Null_Should_Pass()
+        {
+            // Arrange
+            // Act
+            page.SaveButton_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
