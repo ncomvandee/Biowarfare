@@ -1117,5 +1117,23 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got Here
         }
+
+        [Test]
+        public void GetItemToDisplay_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+            var dataTest = new ItemModel { Name = "AttackBoots", Location = ItemLocationEnum.PrimaryHand, Attribute = AttributeEnum.Attack, Value = 10, IsConsumable = true, Damage = 10 };
+            dataTest.Guid = "test";
+            data.AddItem(ItemLocationEnum.PrimaryHand, dataTest.Id);
+
+
+            // Act
+
+            var result = page.GetItemToDisplay(dataTest);
+          
+            // Assert
+            Assert.IsNotNull(result); // Got Here
+        }
     }
 }
