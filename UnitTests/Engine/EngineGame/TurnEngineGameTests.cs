@@ -562,7 +562,7 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.CurrentAttacker = PlayerInfo;
             // Act
             var result = Engine.Round.Turn.TakeTurn(PlayerInfo);
-           
+
             // Reset
 
             // Assert
@@ -713,28 +713,28 @@ namespace UnitTests.Engine.EngineGame
         //    Assert.AreEqual(2, result);
         //}
 
-/*        [Test]
-        public void TurnEngine_DropItems_Valid_Monster_Items_0_Random_Drop_1_Should_Return_1()
-        {
-            // Arrange
-            var player = new CharacterModel();
+        /*        [Test]
+                public void TurnEngine_DropItems_Valid_Monster_Items_0_Random_Drop_1_Should_Return_1()
+                {
+                    // Arrange
+                    var player = new CharacterModel();
 
-            var PlayerInfo = new PlayerInfoModel(player);
+                    var PlayerInfo = new PlayerInfoModel(player);
 
-            DiceHelper.EnableForcedRolls();
+                    DiceHelper.EnableForcedRolls();
 
-            // Drop is 0-Number, so 2 will yield 1
-            DiceHelper.SetForcedRollValue(2);
+                    // Drop is 0-Number, so 2 will yield 1
+                    DiceHelper.SetForcedRollValue(2);
 
-            // Act
-            var result = Engine.Round.Turn.DropItems(PlayerInfo);
+                    // Act
+                    var result = Engine.Round.Turn.DropItems(PlayerInfo);
 
-            // Reset
-            DiceHelper.DisableForcedRolls();
+                    // Reset
+                    DiceHelper.DisableForcedRolls();
 
-            // Assert
-            Assert.AreEqual(1, result);
-        }*/
+                    // Assert
+                    Assert.AreEqual(1, result);
+                }*/
         #endregion DropItems
 
         #region TargetDied
@@ -955,10 +955,11 @@ namespace UnitTests.Engine.EngineGame
         public void TurnEngine_TurnAsAttack_Valid_Cancer_Monster_Attacks_Character_Hit_Should_Pass()
         {
             // Arrange
-            var Monster = new MonsterModel{
+            var Monster = new MonsterModel
+            {
                 MonsterType = MonsterTypeEnum.Cancer
             };
-            
+
             var MonsterPlayer = new PlayerInfoModel(Monster);
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
@@ -1024,7 +1025,7 @@ namespace UnitTests.Engine.EngineGame
             DiceHelper.SetForcedRollValue(20);
 
             var oldSetting = Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
-            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum= HitStatusEnum.CriticalHit;
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.CriticalHit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
@@ -1395,46 +1396,46 @@ namespace UnitTests.Engine.EngineGame
         #endregion BattleSettings
 
         #region DetermineActionChoice
-/*        [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Monster_Should_Return_CurrentAction()
-        {
-            // Arrange
-            var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
+        /*        [Test]
+                public void TurnEngine_DetermineActionChoice_Valid_Monster_Should_Return_CurrentAction()
+                {
+                    // Arrange
+                    var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
 
-            MonsterPlayer.CurrentHealth = 1;
-            MonsterPlayer.MaxHealth = 1000;
+                    MonsterPlayer.CurrentHealth = 1;
+                    MonsterPlayer.MaxHealth = 1000;
 
-            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+                    Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
 
-            // Act
-            var result = Engine.Round.Turn.DetermineActionChoice(MonsterPlayer);
+                    // Act
+                    var result = Engine.Round.Turn.DetermineActionChoice(MonsterPlayer);
 
-            // Reset
+                    // Reset
 
-            // Assert
-            Assert.AreEqual(ActionEnum.Ability, result);
-        }
-*/
-/*        [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Should_Return_CurrentAction()
-        {
-            // Arrange
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
+                    // Assert
+                    Assert.AreEqual(ActionEnum.Ability, result);
+                }
+        */
+        /*        [Test]
+                public void TurnEngine_DetermineActionChoice_Valid_Character_Should_Return_CurrentAction()
+                {
+                    // Arrange
+                    var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
 
-            CharacterPlayer.CurrentHealth = 1;
-            CharacterPlayer.MaxHealth = 1000;
+                    CharacterPlayer.CurrentHealth = 1;
+                    CharacterPlayer.MaxHealth = 1000;
 
-            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
-            Engine.EngineSettings.BattleScore.AutoBattle = true;
+                    Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+                    Engine.EngineSettings.BattleScore.AutoBattle = true;
 
-            // Act
-            var result = Engine.Round.Turn.DetermineActionChoice(CharacterPlayer);
+                    // Act
+                    var result = Engine.Round.Turn.DetermineActionChoice(CharacterPlayer);
 
-            // Reset
+                    // Reset
 
-            // Assert
-            Assert.AreEqual(ActionEnum.Ability, result);
-        }*/
+                    // Assert
+                    Assert.AreEqual(ActionEnum.Ability, result);
+                }*/
 
         [Test]
         public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
@@ -1817,7 +1818,7 @@ namespace UnitTests.Engine.EngineGame
 
             var Char = new PlayerInfoModel(new CharacterModel
             {
-               Job= CellTypeEnum.Eosinophil
+                Job = CellTypeEnum.Eosinophil
             });
             Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
             Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Hit;
@@ -1882,10 +1883,30 @@ namespace UnitTests.Engine.EngineGame
             Assert.IsTrue(true);
         }
         #endregion DropItems
+        [Test]
+        public void TurnEngine_CalculateAttackStatus_Virus_Should_Hit()
+        {
+            // Arrange
+            var monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Virus
+            });
 
 
 
+            // Act
+            var result = Engine.Round.Turn.CalculateAttackStatus(monster, monster);
 
+            // Reset
+
+
+
+            // Assert
+            Assert.AreEqual(Engine.EngineSettings.BattleMessagesModel.HitStatus, result);
+
+
+
+        }
     }
 
 
