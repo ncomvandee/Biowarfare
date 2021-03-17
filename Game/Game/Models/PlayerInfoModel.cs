@@ -131,6 +131,14 @@ namespace Game.Models
                     }
                     break;
 
+                case CellTypeEnum.BCell:
+                    foreach (var item in AbilityEnumHelper.GetListBcell)
+                    {
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                    }
+                    break;
+
+
                 default:
                     foreach (var item in AbilityEnumHelper.GetListOthers)
                     {
@@ -317,18 +325,19 @@ namespace Game.Models
         /// <returns></returns>
         public bool UseAbility(AbilityEnum ability)
         {
-            var avaible = AbilityTracker.TryGetValue(ability, out int remaining);
-            if (avaible == false)
-            {
-                // does not exist
-                return false;
-            }
+            
+            //var avaible = AbilityTracker.TryGetValue(ability, out int remaining);
+            //if (avaible == false)
+            //{
+            //    // does not exist
+            //    return false;
+            //}
 
-            if (remaining < 1)
-            {
-                // out of tries
-                return false;
-            }
+            //if (remaining < 1)
+            //{
+            //    // out of tries
+            //    return false;
+            //}
 
             switch (ability)
             {
@@ -351,10 +360,14 @@ namespace Game.Models
                 case AbilityEnum.Nimble:
                     BuffSpeed();
                     break;
+
+                case AbilityEnum.Invulnerable:
+                    GiveImmunityToken();
+                    break;
             }
 
             // Reduce the count
-            AbilityTracker[ability] = remaining - 1;
+            //AbilityTracker[ability] = remaining - 1;
 
             return true;
         }

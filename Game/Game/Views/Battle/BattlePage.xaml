@@ -200,7 +200,8 @@
 
                         <ImageButton Source="use_ability_main.png" 
                                      x:Name="UseAbilityButton" 
-                                     IsVisible="False" 
+                                     IsVisible="False"
+                                     Clicked="UseAbility_Clicked"
                                      Style="{StaticResource ImageButtonGameStyle}"
                                      />
 

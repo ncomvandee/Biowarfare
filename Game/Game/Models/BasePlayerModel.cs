@@ -26,6 +26,10 @@ namespace Game.Models
         [Ignore]
         public bool Poison { get; set; } = false;
 
+        // Vulnerable status
+        [Ignore]
+        public bool Invulnerable { get; set; } = false;
+
         // Poison count 
         [Ignore]
         public int PoisonCount { get; set; } = 0;
@@ -103,6 +107,17 @@ namespace Game.Models
         public int BuffSpeed()
         {
             return BuffSpeedValue += 5;
+        }
+
+        /// <summary>
+        /// Take no damage
+        /// </summary>
+        /// <returns></returns>
+        public bool GiveImmunityToken()
+        {
+            Invulnerable = true;
+
+            return true;
         }
 
         #endregion Buffs
@@ -609,6 +624,11 @@ namespace Game.Models
             if (damage <= 0)
             {
                 return false;
+            }
+
+            if (Invulnerable)
+            {
+                return true;
             }
 
             CurrentHealth -= damage;

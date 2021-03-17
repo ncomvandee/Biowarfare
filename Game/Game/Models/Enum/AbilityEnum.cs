@@ -44,6 +44,9 @@ namespace Game.Models
 
         // Heal Self
         Heal = 54,
+
+        // Take no damage
+        Invulnerable = 62
     }
 
     /// <summary>
@@ -93,6 +96,10 @@ namespace Game.Models
 
                 case AbilityEnum.Heal:
                     Message = "Heal Self";
+                    break;
+
+                case AbilityEnum.Invulnerable:
+                    Message = "Invulnerable";
                     break;
 
                 case AbilityEnum.None:
@@ -157,6 +164,22 @@ namespace Game.Models
                 };
 
                 AbilityList.AddRange(GetListOthers);
+                return AbilityList;
+            }
+        }
+
+        /// <summary>
+        /// Get list of ability only for Bcell
+        /// </summary>
+        public static List<string> GetListBcell
+        {
+            get
+            {
+                List<string> AbilityList = new List<string>
+                {
+                    AbilityEnum.Invulnerable.ToString()
+                };
+
                 return AbilityList;
             }
         }

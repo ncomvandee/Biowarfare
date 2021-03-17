@@ -26,6 +26,9 @@ namespace Game.Views
         // Wait time before proceeding
         public int WaitTime = 1500;
 
+        // Detemine if using ability or not
+        public bool UseAbility = false;
+
         // Hold the Map Objects, for easy access to update them
         public Dictionary<string, object> MapLocationObject = new Dictionary<string, object>();
         public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
@@ -184,6 +187,7 @@ namespace Game.Views
             // Disable the map grid
             MapGrid.IsEnabled = false;
             UseAbilityButton.IsVisible = false;
+            UseAbilityButton.IsEnabled = false;
             UseItemButton.IsVisible = false;
 
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
@@ -193,9 +197,15 @@ namespace Game.Views
             if (cell != null && cell.PlayerType == PlayerTypeEnum.Character)
             {
                 MapGrid.IsEnabled = true;
-                UseAbilityButton.IsVisible = true;
                 UseItemButton.IsVisible = true;
+                UseAbilityButton.IsEnabled = true;
+
+                if (cell.Job == CellTypeEnum.BCell)
+                {
+                    UseAbilityButton.IsVisible = true;
+                }
             }
+
 
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapGridLocation)
             {
@@ -714,6 +724,23 @@ namespace Game.Views
              * 
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
+
+            var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
+
+            if (cell.Job == CellTypeEnum.BCell && UseAbility)
+            {
+                EngineSettings.CurrentAction = ActionEnum.Ability;
+                EngineSettings.CurrentActionAbility = AbilityEnum.Invulnerable;
+            }
+
+
+            // Hold the current state
+            var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+
+            UpdateMapGrid();
+            // Output the Message of what happened.
+
+            GameMessage();
 
             return true;
         }
@@ -1468,6 +1495,11 @@ namespace Game.Views
             cell.BuffDefense();
 
             return true;
+        }
+
+        public void UseAbility_Clicked(object sender, EventArgs e)
+        {
+            UseAbility = true;
         }
     }
 }
