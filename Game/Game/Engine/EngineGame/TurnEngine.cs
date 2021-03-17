@@ -101,8 +101,7 @@ namespace Game.Engine.EngineGame
                     result = MoveAsTurn(Attacker);
                     break;
 
-                case ActionEnum.UseConsumableItem:
-                    result = UseConsumableItem(Attacker);
+                default:
                     break;
             }
 
@@ -259,14 +258,6 @@ namespace Game.Engine.EngineGame
             // throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Use the Ability
-        /// </summary>
-        public bool UseConsumableItem(PlayerInfoModel Attacker)
-        {
-          
-          throw new System.NotImplementedException();
-        }
 
 
         /// <summary>
