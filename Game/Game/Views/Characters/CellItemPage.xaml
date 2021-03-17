@@ -432,13 +432,13 @@
                              HorizontalOptions="Center"
                              >
 
-                        <Button Text="Save" 
-                            Style="{StaticResource CharacterPrimaryButtonStyle}"
+                        <ImageButton Source="save_character.png"
+                            Style="{StaticResource ImageButtonGameStyle}"
                             Clicked="SaveButton_Clicked"
                             />
 
-                        <Button Text="Cancel" 
-                            Style="{StaticResource CharacterPrimaryButtonStyle}"
+                        <ImageButton Source="cancel_character.png" 
+                            Style="{StaticResource ImageButtonGameStyle}"
                             Clicked="CancelButton_Clicked"
                             />
 
