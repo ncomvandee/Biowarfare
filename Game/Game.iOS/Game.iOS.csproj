@@ -639,4 +639,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\left_finger_location.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\boots_white_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mask_white_bg.png" />
+  </ItemGroup>
 </Project>
