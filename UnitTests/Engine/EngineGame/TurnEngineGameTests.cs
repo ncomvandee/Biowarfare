@@ -1574,19 +1574,19 @@ namespace UnitTests.Engine.EngineGame
         {
             // Arrange
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
-            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Not on map.... 
-            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.CharacterList);
 
             var MonsterPlayer = new PlayerInfoModel(new MonsterModel());
-            Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
             Engine.EngineSettings.BattleScore.AutoBattle = true;
 
             // Act
-            var result = Engine.Round.Turn.MoveAsTurn(MonsterPlayer);
+            var result = Engine.Round.Turn.MoveAsTurn(CharacterPlayer);
 
             // Reset
 
