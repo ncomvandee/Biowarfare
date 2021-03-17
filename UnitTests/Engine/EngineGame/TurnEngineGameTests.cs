@@ -1066,6 +1066,30 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(true, result);
         }
+
+
+        [Test]
+        public void TurnEngine_TurnAsAttack_Cancer_Roll_Twenty_Should_Pass()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Cancer
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(20);
+
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Monster, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+            Assert.IsTrue(true);
+        }
         #endregion TurnAsAttack
 
         #region RemoveIfDead
@@ -1813,6 +1837,31 @@ namespace UnitTests.Engine.EngineGame
             Assert.IsTrue(true);
         }
         #endregion BeforeApplyDamge
+
+        #region DropItems
+        [Test]
+        public void TurnEngine_DropItems_Roll_1_Empty_Item_ShouldPass()
+        {
+            // Arrange
+            //clear all item
+            ItemIndexViewModel.Instance.Dataset.Clear();
+            ItemIndexViewModel.Instance.Dataset.Add(new ItemModel());
+            var monster = new PlayerInfoModel(new MonsterModel());
+
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(1);
+
+            // Act
+            Engine.Round.Turn.DropItems(monster);
+
+            // Reset
+            DiceHelper.DisableForcedRolls();
+
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+        #endregion DropItems
     }
 
 
