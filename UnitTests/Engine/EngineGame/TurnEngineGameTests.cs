@@ -857,14 +857,15 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             // Forece a Miss
-            DiceHelper.EnableForcedRolls();
-            DiceHelper.SetForcedRollValue(20);
+            //DiceHelper.EnableForcedRolls();
+            //DiceHelper.SetForcedRollValue(20);
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Hit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
 
             // Reset
-            DiceHelper.DisableForcedRolls();
+            //DiceHelper.DisableForcedRolls();
 
             // Assert
             Assert.AreEqual(true, result);
@@ -884,14 +885,16 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             // Forece a Miss
-            DiceHelper.EnableForcedRolls();
-            DiceHelper.SetForcedRollValue(20);
+            //DiceHelper.EnableForcedRolls();
+            //DiceHelper.SetForcedRollValue(20);
+
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Hit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
 
             // Reset
-            DiceHelper.DisableForcedRolls();
+            //DiceHelper.DisableForcedRolls();
 
             // Assert
             Assert.AreEqual(true, result);
@@ -1137,14 +1140,15 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Forece a Miss
-            DiceHelper.EnableForcedRolls();
-            DiceHelper.SetForcedRollValue(20);
+            //DiceHelper.EnableForcedRolls();
+            //DiceHelper.SetForcedRollValue(20);
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Hit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
 
             // Reset
-            DiceHelper.DisableForcedRolls();
+            //DiceHelper.DisableForcedRolls();
 
             // Assert
             Assert.AreEqual(true, result);
@@ -1698,6 +1702,30 @@ namespace UnitTests.Engine.EngineGame
             //Reset
             DiceHelper.DisableForcedRolls();
             //Assert
+            Assert.AreEqual(true, result);
+        }
+
+
+        [Test]
+        public void TurnEngine_AfterApplyDamge_Parasite_Heal_Should_Return_True()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Parasite
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(1);
+
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Monster, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+            Assert.AreEqual(true, result);
         }
         #endregion AfterApplyDamge
     }
