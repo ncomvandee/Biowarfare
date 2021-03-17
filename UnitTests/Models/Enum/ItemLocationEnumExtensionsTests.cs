@@ -342,5 +342,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("feet_location.png", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToIcon_Finger_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Finger.ToIcon();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("any_finger_location.png", result);
+        }
     }
 }
