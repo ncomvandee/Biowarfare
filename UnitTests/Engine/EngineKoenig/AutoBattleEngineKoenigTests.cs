@@ -96,7 +96,7 @@ namespace UnitTests.Engine.EngineKoenig
             CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
-            Assert.AreEqual(true, result);
+            Assert.IsTrue(true);
         }
 
         [Test]
