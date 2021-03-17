@@ -118,5 +118,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("item.png", result);
         }
+
+        [Test]
+        public void ActionEnumExtensionsTests_ToImage_UseConsumableItem_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ActionEnum.UseConsumableItem.ToImageURI();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("item.png", result);
+        }
     }
 }
