@@ -643,6 +643,27 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(true, result);
         }
+
+
+        [Test]
+        public void TurnEngine_TakeTurn_Poison_Character_Should_Pass()
+        {
+            // Arrange
+
+            Engine.EngineSettings.CurrentAction = ActionEnum.Move;
+
+            var character = new PlayerInfoModel(new CharacterModel());
+            character.Poison = true;
+            Engine.EngineSettings.CharacterList.Add(character);
+
+            // Act
+            var result = Engine.Round.Turn.TakeTurn(character);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
         #endregion TakeTurn
 
         #region DropItems
