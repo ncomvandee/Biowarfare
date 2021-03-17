@@ -314,5 +314,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("right_finger_location.png", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToIcon_LeftFinger_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.LeftFinger.ToIcon();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("left_finger_location.png", result);
+        }
     }
 }
