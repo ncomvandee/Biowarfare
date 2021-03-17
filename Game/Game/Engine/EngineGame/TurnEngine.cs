@@ -549,13 +549,13 @@ namespace Game.Engine.EngineGame
                     int chance = DiceHelper.RollDice(1, 12);
 
                     //Double the damge
-                    if (chance == 1 || chance == 3 || chance == 5)
+                    if (chance <= 3)
                     {
                         EngineSettings.BattleMessagesModel.DamageAmount *= 2;
                     }
 
                     //Health The Target
-                    if (chance == 2 || chance == 4 || chance == 6)
+                    if (chance <= 6)
                     {
                         //EngineSettings.BattleMessagesModel.DamageAmount /= 2;
                         //Health Target first
