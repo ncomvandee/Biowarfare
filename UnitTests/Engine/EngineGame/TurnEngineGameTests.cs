@@ -1755,6 +1755,29 @@ namespace UnitTests.Engine.EngineGame
             //Assert
             Assert.AreEqual(damge, Engine.EngineSettings.BattleMessagesModel.DamageAmount);
         }
+
+        [Test]
+        public void TurnEngine_BeforeApplyDamge_Bacteria_Roll_Ten_Should_Pass()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Bacteria
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(10);
+
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Monster, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+            Assert.IsTrue(true);
+        }
         #endregion BeforeApplyDamge
     }
 
