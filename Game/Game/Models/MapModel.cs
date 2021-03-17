@@ -289,6 +289,7 @@ namespace Game.Models
             int LowestDistance = int.MaxValue;
             int speed = PlayerAttacker.GetSpeedTotal;
 
+            
             // For every empty location on the map 
             foreach (var data in GetEmptyLocations())
             {
@@ -308,6 +309,11 @@ namespace Game.Models
                     Result = data;
                     LowestDistance = distance;
                 }
+            }
+
+            if(Result == null)
+            {
+                Result = GetEmptyLocations().First();
             }
 
             return Result;
