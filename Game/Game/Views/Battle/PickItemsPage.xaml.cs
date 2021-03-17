@@ -126,7 +126,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CellPicker_SelectedIndexChanged(object sender, EventArgs e)
+        public void CellPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             PickerFrame.BackgroundColor = Color.FromHex("#D660BF");
         }
