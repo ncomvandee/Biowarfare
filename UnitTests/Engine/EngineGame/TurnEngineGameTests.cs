@@ -1050,17 +1050,17 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Forece a Miss
-            DiceHelper.EnableForcedRolls();
-            DiceHelper.SetForcedRollValue(1);
+            //DiceHelper.EnableForcedRolls();
+            //DiceHelper.SetForcedRollValue(1);
 
             var oldSetting = Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss;
-            Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = true;
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.CriticalMiss;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
 
             // Reset
-            DiceHelper.DisableForcedRolls();
+            //DiceHelper.DisableForcedRolls();
             Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = oldSetting;
 
             // Assert
@@ -1154,6 +1154,7 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
             Assert.AreEqual(2, CharacterPlayer.Level);
         }
+
         #endregion TurnAsAttack
 
         #region UseAbility
@@ -1790,7 +1791,7 @@ namespace UnitTests.Engine.EngineGame
                 MonsterType = MonsterTypeEnum.Parasite
             });
 
-            var Char = new PlayerInfoModel(new MonsterModel
+            var Char = new PlayerInfoModel(new CharacterModel
             {
                Job= CellTypeEnum.Eosinophil
             });
