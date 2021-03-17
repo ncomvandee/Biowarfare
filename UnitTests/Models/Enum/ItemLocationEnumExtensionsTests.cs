@@ -258,5 +258,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToIcon_Head_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.Head.ToIcon();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("head_location.png", result);
+        }
     }
 }
