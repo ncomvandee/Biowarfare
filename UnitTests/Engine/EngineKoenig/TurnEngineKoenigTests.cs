@@ -941,6 +941,7 @@ namespace UnitTests.Engine.EngineKoenig
 
             var oldSetting = Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
             Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = true;
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.CriticalHit;
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
