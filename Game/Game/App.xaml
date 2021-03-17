@@ -1740,13 +1740,16 @@
             <!--Cells square frame on Pick Characters Page-->
             <Style TargetType="Frame"
                    x:Key="PickCellsFrameStyle"
-                   BasedOn="{StaticResource MediumSquareMidgroundFrame}"
+               
                    >
-
-                <Setter Property="WidthRequest" Value="120"/>
-                <Setter Property="HeightRequest" Value="120"/>
-                <Setter Property="Margin" Value="10, 0, 10, 10"/>
-                <Setter Property="Padding" Value="5"/>
+                
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="5, 0, 10, 0"/>
+                <Setter Property="Padding" Value="0, 5, 0, 0"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
 
             </Style>
 
@@ -1773,10 +1776,11 @@
                    BasedOn="{StaticResource LargeCircleFrameStyle}"
                    >
 
-                <Setter Property="WidthRequest" Value="50"/>
-                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="Margin" Value="0"/>
-                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="Padding" Value="2"/>
+
 
             </Style>
 
@@ -3974,8 +3978,10 @@
 
                 <Setter Property="HorizontalScrollBarVisibility" Value="Always"/>
                 <Setter Property="SelectionMode" Value="Single"/>
-                <Setter Property="HeightRequest" Value="150"/>
-
+                <Setter Property="HeightRequest" Value="135"/>
+                <Setter Property="ItemsUpdatingScrollMode" Value="KeepItemsInView"/>
+                
+       
             </Style>
 
 
