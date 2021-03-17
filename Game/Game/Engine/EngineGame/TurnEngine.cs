@@ -98,11 +98,12 @@ namespace Game.Engine.EngineGame
                     break;
 
                 case ActionEnum.Move:
+                default:
                     result = MoveAsTurn(Attacker);
                     break;
 
-                default:
-                    break;
+
+                 
             }
 
             EngineSettings.BattleScore.TurnCount++;
@@ -419,7 +420,7 @@ namespace Game.Engine.EngineGame
                     if (Attacker.MonsterType == MonsterTypeEnum.Cancer)
                     {
                         int chance = DiceHelper.RollDice(1, 20);
-                        if (chance == 1)
+                        if (chance == 20)
                         {
                             EngineSettings.BattleMessagesModel.DamageAmount = Target.CurrentHealth;
                         }
