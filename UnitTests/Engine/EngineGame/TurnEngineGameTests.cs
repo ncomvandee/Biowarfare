@@ -1861,7 +1861,31 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.IsTrue(true);
         }
+
+
+        [Test]
+        public void TurnEngine_GetRandomMonsterItemDrops_Round_One_Should_Pass()
+        {
+            // Arrange
+
+
+
+
+            // Act
+            Engine.Round.Turn.GetRandomMonsterItemDrops(1);
+
+            // Reset
+
+
+
+            // Assert
+            Assert.IsTrue(true);
+        }
         #endregion DropItems
+
+
+
+
     }
 
 
