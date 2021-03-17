@@ -948,7 +948,34 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(true, result);
         }
+        [Test]
+        public void TurnEngine_TurnAsAttack_Valid_Cancer_Monster_Attacks_Character_Hit_Should_Pass()
+        {
+            // Arrange
+            var Monster = new MonsterModel{
+                MonsterType = MonsterTypeEnum.Cancer
+            };
+            
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
+            var Character = new CharacterModel();
+            var CharacterPlayer = new PlayerInfoModel(Character);
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
+
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(20);
+
+            // Act
+            var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
+
+            // Reset
+            DiceHelper.DisableForcedRolls();
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
         [Test]
         public void TurnEngine_TurnAsAttack_Valid_Force_Critical_Hit_Monster_Attacks_Character_Hit_Should_Pass()
         {
