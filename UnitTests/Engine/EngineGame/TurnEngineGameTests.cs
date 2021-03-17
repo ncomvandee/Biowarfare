@@ -1778,6 +1778,39 @@ namespace UnitTests.Engine.EngineGame
             //Assert
             Assert.IsTrue(true);
         }
+
+
+        [Test]
+        public void TurnEngine_BeforeApplyDamge_Eosinophil_Against_Parasite_Should_Pass()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Parasite
+            });
+
+            var Char = new PlayerInfoModel(new MonsterModel
+            {
+               Job= CellTypeEnum.Eosinophil
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Hit;
+
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(2);
+
+            var damge = Char.GetDamageRollValue();
+            damge *= 2;
+
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Char, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+            Assert.IsTrue(true);
+        }
         #endregion BeforeApplyDamge
     }
 
