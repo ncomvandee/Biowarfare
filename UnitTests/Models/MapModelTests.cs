@@ -914,5 +914,46 @@ namespace UnitTests.Models
             // Assert 
             Assert.AreEqual(false, result);
         }
+
+        [Test]
+        public void MapModel_ReturnClosestEmptyLocationSpeed_Character_Speed_0_Should_Not_Return_Null()
+        {
+            //Arrange
+            var map = new MapModel();
+
+            map.MapXAxiesCount = 4;
+            map.MapYAxiesCount = 4;
+            map.MapGridLocation = new MapModelLocation[map.MapXAxiesCount, map.MapYAxiesCount];
+
+            var PlayerList = new List<PlayerInfoModel>();
+
+
+            var Attacker = new PlayerInfoModel(new CharacterModel());
+
+            //Make sure speed is zero
+            Attacker.Speed = 0;
+            Attacker.DropAllItems();
+            Attacker.Job = CellTypeEnum.Unknown;
+            Attacker.Level = 0;
+
+
+            PlayerList.Add(Attacker);
+
+            
+            var target = new PlayerInfoModel(new MonsterModel());
+            PlayerList.Add(new PlayerInfoModel(target));
+            //PlayerList.Add(new PlayerInfoModel(target));
+
+
+            map.PopulateMapModel(PlayerList);
+
+            //Act
+            var res = map.ReturnClosestEmptyLocationSpeed(map.GetLocationForPlayer(target), map.GetLocationForPlayer(Attacker), Attacker);
+
+            //Reset
+
+            //Assert
+            Assert.IsNotNull(res);
+        }
     }
 }
