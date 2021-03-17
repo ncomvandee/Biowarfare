@@ -976,6 +976,34 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void TurnEngine_TurnAsAttack_MadeMeOnePunchMan_Mode_Should_Pass()
+        {
+            // Arrange
+            var Monster = new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Cancer
+            };
+
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+            var Character = new CharacterModel();
+            var CharacterPlayer = new PlayerInfoModel(Character);
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.MadeMeOnePunchMan;
+
+
+            // Act
+            var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
+
+            // Reset
+
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
         [Test]
         public void TurnEngine_TurnAsAttack_Valid_Force_Critical_Hit_Monster_Attacks_Character_Hit_Should_Pass()
         {
@@ -1648,6 +1676,30 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(false, result);
         }
         #endregion MoveAsTurn
+
+        #region AfterApplyDamge
+
+        [Test]
+        public void TurnEngine_AfterApplyDamge_Spore_Apply_Posion_Should_Return_True()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Spore
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(1);
+
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Monster, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+        }
+        #endregion AfterApplyDamge
     }
 
 }
