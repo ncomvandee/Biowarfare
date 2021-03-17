@@ -632,9 +632,18 @@ namespace Game.Views
                 return false;
 
             }
+
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.IsTargetInRange(cell, data.Player) == false)
+            {
+
+                BattleMessages.Text = cell.Name + " tried to attack " + data.Player.Name+ " but not in range";
+
+
+                //UpdateMapGrid();
+
+                return true;
+            }
             BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(cell);
-
-
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
             // Get the turn, set the current player and attacker to match
