@@ -95,21 +95,21 @@ namespace UnitTests.Engine.EngineGame
 
             // Need to set the Monster count to 1, so the battle goes to Next Round Faster
             AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyMonsters = 1;
-            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 2;
+            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 1;
 
             var CharacterPlayerMike = new PlayerInfoModel(
-                            new MonsterModel
+                            new CharacterModel
                             {
                                 Speed = -1,
                                 Level = 10,
-                                CurrentHealth = 11,
+                                CurrentHealth = 20,
                                 ExperienceTotal = 1,
                                 ExperienceRemaining = 1,
                                 Name = "Mike",
                                 ListOrder = 1,
                             });
 
-            AutoBattleEngine.Battle.EngineSettings.MonsterList.Add(CharacterPlayerMike);
+            CellIndexViewModel.Instance.Dataset.Clear();
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Add(CharacterPlayerMike);
 
             //Act
