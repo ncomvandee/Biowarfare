@@ -43,6 +43,7 @@ namespace UnitTests.Engine.EngineModels
             result.PlayerList = new List<PlayerInfoModel>();
             result.MapModel = new MapModel();
             result.BattleSettingsModel = new BattleSettingsModel();
+            result.EmergencyKit = new List<ItemModel>(); 
 
             result.MaxNumberPartyCharacters = 6;
             result.MaxNumberPartyMonsters = 6;
@@ -70,6 +71,7 @@ namespace UnitTests.Engine.EngineModels
             Assert.IsNotNull(result.PlayerList);
             Assert.IsNotNull(result.MapModel);
             Assert.IsNotNull(result.BattleSettingsModel);
+            Assert.IsNotNull(result.EmergencyKit); 
 
             Assert.AreEqual(6, result.MaxNumberPartyCharacters);
             Assert.AreEqual(6, result.MaxNumberPartyMonsters);
