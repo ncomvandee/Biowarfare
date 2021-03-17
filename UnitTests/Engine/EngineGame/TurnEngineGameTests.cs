@@ -1728,6 +1728,35 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
         #endregion AfterApplyDamge
+
+
+        #region BeforeApplyDamge
+
+        [Test]
+        public void TurnEngine_BeforeApplyDamge_Bacteria_Roll_Two_Should_Pass()
+        {
+
+            // Arrange
+            var Monster = new PlayerInfoModel(new MonsterModel
+            {
+                MonsterType = MonsterTypeEnum.Bacteria
+            });
+            Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+
+            // Forece a Miss
+            DiceHelper.EnableForcedRolls();
+            DiceHelper.SetForcedRollValue(2);
+            var damge = Monster.GetDamageRollValue();
+            damge *= 2;
+            //Act
+            var result = Engine.Round.Turn.TurnAsAttack(Monster, Monster);
+            //Reset
+            DiceHelper.DisableForcedRolls();
+            //Assert
+            Assert.AreEqual(damge, Engine.EngineSettings.BattleMessagesModel.DamageAmount);
+        }
+        #endregion BeforeApplyDamge
     }
+
 
 }
