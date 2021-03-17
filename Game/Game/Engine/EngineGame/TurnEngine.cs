@@ -745,7 +745,7 @@ namespace Game.Engine.EngineGame
                     //In case test is running and roll is force out of range
                     if (index >= ItemIndexViewModel.Instance.Dataset.Count())
                     {
-                        index = 1;
+                        index = 0;
                     }
                     // Get the random item from the dataset
                     data = ItemIndexViewModel.Instance.Dataset[index];
@@ -760,7 +760,7 @@ namespace Game.Engine.EngineGame
                     //In case test is running and roll is force out of range
                     if(index >= ConsumableItemIndexViewModel.Instance.Dataset.Count())
                     {
-                        index = 1;
+                        index = 0;
                     }
                     // Get the random item from dataset
                     data = ConsumableItemIndexViewModel.Instance.Dataset[index];
