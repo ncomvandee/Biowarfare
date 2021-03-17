@@ -1119,7 +1119,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void GetItemToDisplay_Should_Pass()
+        public void GetItemToDisplay_Consumable_Equipped_Should_Pass()
         {
             // Arrange
             var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
@@ -1134,6 +1134,17 @@ namespace UnitTests.Views
           
             // Assert
             Assert.IsNotNull(result); // Got Here
+        }
+
+        [Test]
+        public void GetItemToDisplay_Consumable_Not_Equipped_Should_Pass()
+        {
+        
+            // Act
+            var result = page.GetItemToDisplay(null);
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
         }
     }
 }
