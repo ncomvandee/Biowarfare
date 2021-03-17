@@ -286,5 +286,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("necklace_location.png", result);
         }
+
+        [Test]
+        public void ItemLocationEnumExtensionsTests_ToIcon_OffHand_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = ItemLocationEnum.OffHand.ToIcon();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("off_hand_location.png", result);
+        }
     }
 }
