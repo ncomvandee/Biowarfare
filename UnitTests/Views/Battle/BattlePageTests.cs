@@ -31,7 +31,8 @@ namespace UnitTests.Views
             Application.Current = app;
 
             // For now, set the engine to the Koenig Engine, change when ready 
-            BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+            BattleEngineViewModel.Instance.SetBattleEngineToGame(); 
+                                        //SetBattleEngineToKoenig();
 
             page = new BattlePage();
 
@@ -1101,22 +1102,22 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
-        [Test]
-        public void RoundOverClicked_Should_Pass()
-        {
-            // Arrange
+        //[Test]
+        //public void RoundOverClicked_Should_Pass()
+        //{
+        //    // Arrange
 
 
 
-            // Act
+        //    // Act
 
-            page.RoundOver_Clicked(null, null);
+        //    page.RoundOver_Clicked(null, null);
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got Here
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got Here
+        //}
 
         [Test]
         public void GetItemToDisplay_Consumable_Equipped_Should_Pass()
@@ -1142,6 +1143,24 @@ namespace UnitTests.Views
         
             // Act
             var result = page.GetItemToDisplay(null);
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
+
+
+        [Test]
+        public void ClosePopup_Clicked_Should_Pass()
+        {
+            // Arrange
+
+
+
+            // Act
+
+            page.ClosePopup_Clicked(null, null); 
+
+            // Reset
 
             // Assert
             Assert.IsTrue(true); // Got Here
