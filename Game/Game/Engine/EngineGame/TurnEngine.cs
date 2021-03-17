@@ -731,7 +731,7 @@ namespace Game.Engine.EngineGame
             if (Target.PlayerType == PlayerTypeEnum.Monster)
             {
                 //Make sure no force roll
-                DiceHelper.DisableForcedRolls();
+                //DiceHelper.DisableForcedRolls();
 
                 // 70 30 percent chance that the item drop will be equipable or consumable
                 int DropChance = DiceHelper.RollDice(1, 10);
