@@ -517,8 +517,10 @@
 
 
 
-            <AbsoluteLayout AbsoluteLayout.LayoutBounds="80 ,380 , 1 ,1 "
-                            AbsoluteLayout.LayoutFlags="None"
+            <AbsoluteLayout AbsoluteLayout.LayoutBounds="1 ,1.1 , 1 ,.8 "
+                            AbsoluteLayout.LayoutFlags="All"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
                             >
                      <!--Use ability popup frame-->
                 <Frame
