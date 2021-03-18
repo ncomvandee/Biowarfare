@@ -40,11 +40,11 @@ namespace UnitTests.Views
             BattleEngineViewModel.Instance.Engine.Round.ClearLists();
 
             //Start the Engine in AutoBattle Mode
-            BattleEngineViewModel.Instance.Engine.StartBattle(false);
+            //BattleEngineViewModel.Instance.Engine.StartBattle(false);
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
+/*            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
             BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Add(new PlayerInfoModel(new MonsterModel()));
-            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();*/
         }
 
         [TearDown]
@@ -568,7 +568,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void BattlePage_SetSelectedEmpty_Default_Should_Pass()
+        public void BattlePage_SetSelectedEmpty_Default_Should_Not_Pass()
         {
             // Arrange
 
@@ -578,7 +578,7 @@ namespace UnitTests.Views
             // Reset
 
             // Assert
-            Assert.AreEqual(true,result); // Got to here, so it happened...
+            Assert.AreEqual(false,result); // Got to here, so it happened...
         }
 
         [Test]
@@ -1159,6 +1159,23 @@ namespace UnitTests.Views
             // Act
 
             page.ClosePopup_Clicked(null, null); 
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
+
+        [Test]
+        public void BattlePage_UseItemButton_Clicked_Should_Pass()
+        {
+            // Arrange
+
+
+
+            // Act
+
+            page.UseItemButton_Clicked(null, null);
 
             // Reset
 
