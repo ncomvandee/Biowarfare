@@ -132,5 +132,19 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual("Toughen Up", result);
         }
+
+        [Test]
+        public void AbilityEnumExtensionsTests_Invulnerable_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AbilityEnum.Invulnerable.ToMessage();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual("Invulnerable", result);
+        }
     }
 }
