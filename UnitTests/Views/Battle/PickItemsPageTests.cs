@@ -32,7 +32,9 @@ namespace UnitTests.Views
             Application.Current = app;
 
             // For now, set the engine to the Koenig Engine, change when ready 
-            BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+            //BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+
+            BattleEngineViewModel.Instance.SetBattleEngineToGame();
 
             page = new PickItemsPage(new GenericViewModel<ItemModel>(new ItemModel()));
         }
@@ -94,6 +96,33 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void PickItemsPage_Valid_Assigned_Should_Pass()
+        {
+            // Arrange
+            var characterKen = new PlayerInfoModel(new CharacterModel { Name = "Ken" });
+            var FaceMask = new ItemModel { Name = "Face Mask of Mine" };
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(characterKen);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.ItemPool.Add(FaceMask);
+
+            var SetUpPicker = page.FindByName<Picker>("CellPicker");
+
+            SetUpPicker.SelectedItem = "Ken";
+
+            // Act
+            var result = page.AssignItemToCell();
+
+            // Reset
+
+            // Assert
+
+            Assert.IsTrue(result);
+            
+
         }
     }
 }
