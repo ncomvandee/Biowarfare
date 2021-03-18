@@ -269,5 +269,20 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual(AbilityEnum.Unknown, result);
         }
+
+        [Test]
+        public void PlayerInfoModel_UseAbility_BCell_Avaiable_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell});
+           
+            // Act
+            var result = data.UseAbility(AbilityEnum.Invulnerable); 
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(result);
+        }
     }
 }
