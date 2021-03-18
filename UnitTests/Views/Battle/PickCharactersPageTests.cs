@@ -246,5 +246,32 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
+        {
+            // Arrange
+            var view = (CollectionView)page.FindByName("PartyListView");
+
+
+
+            var newSelection = new List<object>();
+            newSelection.Add(new CharacterModel());
+            newSelection.Add(new CharacterModel());
+
+
+
+            // Act
+            view.UpdateSelectedItems(newSelection);
+
+
+
+            // Reset
+
+
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
