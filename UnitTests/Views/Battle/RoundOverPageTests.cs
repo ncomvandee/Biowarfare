@@ -301,6 +301,24 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+
+        [Test]
+        public void RoundOverPage_AddItemToDisplay_Should_Pass()
+        {
+            // Arrange
+            var cell = new PlayerInfoModel(new CharacterModel());
+            var itemBox = (FlexLayout)page.FindByName("ItemBox");
+            itemBox.Children.Add(new StackLayout());
+            // Act
+            page.AddItemToDisplay(cell);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
         [Test]
         public void RoundOverPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
         {
