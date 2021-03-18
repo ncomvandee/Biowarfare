@@ -96,7 +96,7 @@ namespace UnitTests.Engine.EngineKoenig
             CellIndexViewModel.Instance.ForceDataRefresh();
 
             //Assert
-            Assert.IsTrue(true);
+            Assert.AreEqual(true, result);
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace UnitTests.Engine.EngineKoenig
                             {
                                 Speed = -1,
                                 Level = 10,
-                                CurrentHealth = 11,
+                                CurrentHealth = 20,
                                 ExperienceTotal = 1,
                                 ExperienceRemaining = 1,
                                 Name = "Mike",
