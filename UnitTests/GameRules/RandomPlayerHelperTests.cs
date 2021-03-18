@@ -137,7 +137,7 @@ namespace UnitTests.Helpers
             // Arrange
 
             // Act
-            var result = RandomPlayerHelper.GetItem(Game.Models.ItemLocationEnum.Unknown);
+            var result = RandomPlayerHelper.GetItem(ItemLocationEnum.Unknown);
 
             // Reset
 
