@@ -1472,7 +1472,7 @@ namespace UnitTests.Engine.EngineGame
         {
             // Arrange
 
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell});
             CharacterPlayer.Range = 10;
             CharacterPlayer.CurrentHealth = 1;
             CharacterPlayer.MaxHealth = 100;
