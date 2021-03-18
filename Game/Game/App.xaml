@@ -1924,12 +1924,13 @@
             <!--Infobox frame on battle page-->
             <Style TargetType="Frame"
                    x:Key="BattleInfoFrameStyle"
-                   BasedOn="{StaticResource BattlePageFrameStyle}"
                    >
 
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="Padding" Value="10"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
 
             </Style>
             

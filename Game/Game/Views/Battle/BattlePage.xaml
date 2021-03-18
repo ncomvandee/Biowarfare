@@ -50,6 +50,8 @@
             <StackLayout Style="{StaticResource GameUiStackLayoutStyle}"
                          x:Name="GameUIDisplay" 
                          IsVisible="True" 
+                         Padding="0"
+                         Margin="0"
                          >
 
                 <!--The Top of the Battle UI Holds the List of Players-->
@@ -109,11 +111,13 @@
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" 
                              Style="{StaticResource BattleUIBottomBox}"
-                             Margin="0, 60">
+                             Margin="5">
 
                     <Frame x:Name="BattlePlayerInfomationBox"
                            Style="{StaticResource BattleInfoFrameStyle}"
                            IsVisible="true"
+                            Padding="0, 0, 0, 5"
+                           Margin="0, 0, 0, 10"
                            >
 
                         <StackLayout x:Name="BattlePlayerBox" 
@@ -127,7 +131,9 @@
 
                                 <Frame x:Name="AttackerFrame" 
                                        Style="{StaticResource SmallCircleFrameStyle}" 
-                                       WidthRequest="70"
+                                        Margin="0"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
                                        IsVisible="False"
                                        >
                                 
@@ -156,6 +162,10 @@
                                 <Label x:Name="BattlePlayerBoxVersus" 
                                        Text="vs" 
                                        Style="{StaticResource BattleBoxLabelStyle}"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource SecondaryAccentColor}"
+                                       FontSize="Subtitle"
+                                       Padding="0, 0, 0, 15"
                                        />
                                 
                             </StackLayout>
@@ -167,7 +177,8 @@
                                 
                                 <Frame x:Name="DefenderFrame" 
                                        Style="{StaticResource SmallCircleFrameStyle}" 
-                                       WidthRequest="70"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
                                        IsVisible="False"
                                        >
 
@@ -203,6 +214,8 @@
                                      x:Name="UseAbilityButton" 
                                      IsVisible="False"
                                      Clicked="UseAbility_Clicked"
+                                     Margin="0"
+                                     WidthRequest="60"
                                      Style="{StaticResource ImageButtonGameStyle}"
                                      />
 
@@ -211,13 +224,17 @@
                                      x:Name="AttackButton"
                                      IsVisible="true" 
                                      Style="{StaticResource ImageButtonGameStyle}"
+                                     Margin="0"
                                     />
 
                         <ImageButton Source="use_item_main.png" 
                                      x:Name="UseItemButton"
                                      IsVisible="False" 
                                      Style="{StaticResource ImageButtonGameStyle}"
-                                     Clicked="UseItemButton_Clicked"/>
+                                     Clicked="UseItemButton_Clicked"
+                                     Margin="0"
+                                     WidthRequest="60"
+                                     />
                                     
                         <ImageButton x:Name="NextRoundButton" 
                                      Clicked="NextRoundButton_Clicked" 
@@ -237,13 +254,19 @@
 
                     <!--Battle Grammar Messages-->
                     <StackLayout Style="{StaticResource VerticalStack}" 
-                                 HeightRequest="100"
+                                 HeightRequest="50"
                                  HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="StartAndExpand"
+                                 Margin="0"
+                                 Padding="0"
                                  >
 
                         <Frame Style="{StaticResource BattleMessageDisplayFrameStyle}"
                                IsVisible="false"
                                x:Name="MessageDisplayFrame"
+                               CornerRadius="0"
+                                Margin="0"
+                                 Padding="0"
                                >
 
                             <StackLayout x:Name="MessageDisplayBox" 
