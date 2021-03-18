@@ -45,9 +45,9 @@ namespace Game.Views
             // Clear the Database List and the Party List to start
             BattleEngineViewModel.Instance.PartyCharacterList.Clear();
             
-       
-
+      
             UpdateNextButtonState();
+
         }
 
         /// <summary>
@@ -77,7 +77,10 @@ namespace Game.Views
             // Remove the character from the list when it is clicked on 
             BattleEngineViewModel.Instance.DatabaseCharacterList.Remove(data);
 
+    
             UpdateNextButtonState();
+
+          
         }
 
         /// <summary>
@@ -103,6 +106,7 @@ namespace Game.Views
             BattleEngineViewModel.Instance.DatabaseCharacterList.Add(data);
 
             UpdateNextButtonState();
+
         }
 
         /// <summary>
@@ -116,14 +120,17 @@ namespace Game.Views
         public void UpdateNextButtonState()
         {
             // If no characters disable Next button
+            // Disable back button to prevent data from being deleted on back
             BeginBattleButton.IsEnabled = true;
             BeginBattleButton.IsVisible = true;
+            NavigationPage.SetHasBackButton(this, false);
 
             var currentCount = BattleEngineViewModel.Instance.PartyCharacterList.Count();
             if (currentCount == 0)
             {
               BeginBattleButton.IsEnabled = false;
               BeginBattleButton.IsVisible = false;
+              NavigationPage.SetHasBackButton(this, true);
             }
 
             PartyCountLabel.Text = currentCount.ToString() + " / 6";
