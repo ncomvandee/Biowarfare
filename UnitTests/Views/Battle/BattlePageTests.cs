@@ -1242,5 +1242,100 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got Here
         }
+
+
+        [Test]
+        public void BattlePage_UseConsumableItem_AdrenalineSyringe_Should_Pass()
+        {
+            // Arrange
+
+            var item = new ItemModel();
+            item.Name = "Adrenaline Syringe";
+            item.IsConsumable = true;
+            var cell = new PlayerInfoModel(new CharacterModel());
+            cell.Job = CellTypeEnum.BCell;
+
+            page.UseAbility = true;
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(cell);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Clear();
+
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
+
+
+
+            // Act
+
+            page.UseConsumableItem(item);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
+
+
+        [Test]
+        public void BattlePage_UseConsumableItem_Bandaid_Should_Pass()
+        {
+            // Arrange
+
+            var item = new ItemModel();
+            item.Name = "Band aid";
+            item.IsConsumable = true;
+            var cell = new PlayerInfoModel(new CharacterModel());
+            cell.Job = CellTypeEnum.BCell;
+
+            page.UseAbility = true;
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(cell);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Clear();
+
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
+
+
+
+            // Act
+
+            page.UseConsumableItem(item);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
+
+        [Test]
+        public void BattlePage_UseConsumableItem_Gummy_Should_Pass()
+        {
+            // Arrange
+
+            var item = new ItemModel();
+            item.Name = "Gummy Multi-Vitamin";
+            item.IsConsumable = true;
+            var cell = new PlayerInfoModel(new CharacterModel());
+            cell.Job = CellTypeEnum.BCell;
+
+            page.UseAbility = true;
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(cell);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Clear();
+
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
+
+
+
+            // Act
+
+            page.UseConsumableItem(item);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
     }
 }
