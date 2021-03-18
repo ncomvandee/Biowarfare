@@ -370,17 +370,6 @@ namespace Game.Engine.EngineGame
                 return false;
             }
 
-/*            if(EngineSettings.BattleSettingsModel.BattleModeEnum == BattleModeEnum.MapFull && !EngineSettings.BattleScore.AutoBattle)
-            {
-                if (EngineSettings.MapModel.IsTargetInRange(Attacker, EngineSettings.CurrentDefender) == false)
-                {
-                    EngineSettings.BattleMessagesModel.TurnMessage = GetPronounce(Attacker) + Attacker.Name + "\" tried to attack " + GetPronounce(EngineSettings.CurrentDefender) + EngineSettings.CurrentDefender.Name + "\" but not in range";
-                    Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
-
-                    return false;
-                }
-            }*/
-
             // Set Messages to empty
             EngineSettings.BattleMessagesModel.ClearMessages();
 
