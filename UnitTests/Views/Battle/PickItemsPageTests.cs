@@ -126,5 +126,32 @@ namespace UnitTests.Views
             
 
         }
+
+        [Test]
+        public void PickItemsPage_InValid_Assigned_Should_Fail()
+        {
+            // Arrange
+            var characterKen = new PlayerInfoModel(new CharacterModel { Name = "Ken" });
+            var FaceMask = new ItemModel { Name = "Face Mask of Mine" };
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(characterKen);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.ItemPool.Add(FaceMask);
+
+            var SetUpPicker = page.FindByName<Picker>("CellPicker");
+
+            SetUpPicker.SelectedItem = "Cloud";
+
+            // Act
+            var result = page.AssignItemToCell();
+
+            // Reset
+
+            // Assert
+
+            Assert.IsFalse(result);
+
+
+        }
     }
 }
