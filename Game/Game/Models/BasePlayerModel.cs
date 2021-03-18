@@ -628,6 +628,7 @@ namespace Game.Models
 
             if (Invulnerable)
             {
+                Invulnerable = false;
                 return true;
             }
 
