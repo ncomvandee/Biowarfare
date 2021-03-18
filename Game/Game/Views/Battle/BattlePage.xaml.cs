@@ -731,19 +731,27 @@ namespace Game.Views
             {
                 EngineSettings.CurrentAction = ActionEnum.Ability;
                 EngineSettings.CurrentActionAbility = AbilityEnum.Invulnerable;
-                BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = cell;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = data.Player;
             }
 
+            UseAbilityPopupFrame.IsVisible = false;
+            UseAbility = false;
 
             // Hold the current state
             var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
 
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = cell;
+
             UpdateMapGrid();
             // Output the Message of what happened.
 
+            //Message
+            EngineSettings.BattleMessagesModel.TurnMessage = cell.Name + " Uses Ability " + EngineSettings.CurrentActionAbility.ToMessage() + "to " + data.Player.Name;
+            Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+
             GameMessage();
 
-            UseAbilityPopupFrame.IsVisible = false;
+            
 
             return true;
         }
@@ -1371,11 +1379,6 @@ namespace Game.Views
                 status = "Poisoned";
             }
 
-            if (cell.Invulnerable)
-            {
-                status = "Invulnerable";
-            }
-
             CharacterPopUpName.Text = cell.Name;
             CharacterPopUpImage.Source = cell.ImageURI;
             CharacterPopupCellType.Text = cell.Job.ToString();
@@ -1505,6 +1508,11 @@ namespace Game.Views
             return true;
         }
 
+        /// <summary>
+        /// Popup use ability frame
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void UseAbility_Clicked(object sender, EventArgs e)
         {
             UseAbilityPopupFrame.IsVisible = true;
@@ -1512,7 +1520,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Close ability popup
+        /// Close ability frame
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
