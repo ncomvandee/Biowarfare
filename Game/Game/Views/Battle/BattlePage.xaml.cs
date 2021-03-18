@@ -199,10 +199,12 @@ namespace Game.Views
                 MapGrid.IsEnabled = true;
                 UseItemButton.IsVisible = true;
                 UseAbilityButton.IsVisible = true;
+                UseAbilityButton.Opacity = .3;
 
                 if (cell.Job == CellTypeEnum.BCell)
                 {
                     UseAbilityButton.IsEnabled = true;
+                    UseAbilityButton.Opacity = 1;
                 }
             }
 
