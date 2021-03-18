@@ -554,7 +554,32 @@ namespace UnitTests.Views
             // Assert
             Assert.IsNotNull(result); 
         }
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_Click_UnequippedItem_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+            var dataTest = new ItemModel { Name = "AttackBoots", Location = ItemLocationEnum.PrimaryHand, Attribute = AttributeEnum.Attack, Value = 10, IsConsumable = false, Damage = 10 };
+            ItemIndexViewModel.Instance.Dataset.Add(dataTest);
+            dataTest.Guid = "test";
+            data.AddItem(ItemLocationEnum.PrimaryHand, dataTest.Id);
 
-      
+            var result = page.GetItemToDisplay(dataTest.Location, data);
+
+            var button = result.Children[0];
+
+            // Act
+
+
+            ((ImageButton)button).PropagateUpClicked();
+
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+
+
     }
 }
