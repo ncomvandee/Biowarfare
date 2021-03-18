@@ -1363,6 +1363,21 @@ namespace UnitTests.Models
             Assert.NotNull(data.PrimaryHand);
         }
 
+        [Test]
+        public void BasePlayerModel_TakeDamage_Invulnerable_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
+            data.CurrentHealth = 11; 
+            data.Invulnerable = true; 
 
+            // Act
+            data.TakeDamage(10);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(11, data.CurrentHealth);
+        }
     }
 }

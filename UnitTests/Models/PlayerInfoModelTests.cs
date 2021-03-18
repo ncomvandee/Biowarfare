@@ -271,17 +271,18 @@ namespace UnitTests.Models
         }
 
         [Test]
-        public void PlayerInfoModel_SelectAbilityToUse_BCell_Invulnerable_Should_Pass()
+        public void PlayerInfoModel_UseAbility_BCell_Avaiable_Should_Pass()
         {
             // Arrange
-            var data = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
-            data.AbilityTracker[AbilityEnum.Invulnerable] = 1;
-
+            var data = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell});
+           
             // Act
-            var result = data.SelectAbilityToUse();
+            var result = data.UseAbility(AbilityEnum.Invulnerable); 
+
+            // Reset
 
             // Assert
-            Assert.AreEqual(AbilityEnum.Invulnerable, result);
+            Assert.IsTrue(result);
         }
     }
 }
