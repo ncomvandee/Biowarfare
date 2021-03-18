@@ -42,9 +42,9 @@ namespace UnitTests.Views
             //Start the Engine in AutoBattle Mode
             //BattleEngineViewModel.Instance.Engine.StartBattle(false);
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
+/*            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
             BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Add(new PlayerInfoModel(new MonsterModel()));
-            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();*/
         }
 
         [TearDown]
@@ -568,7 +568,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void BattlePage_SetSelectedEmpty_Default_Should_Pass()
+        public void BattlePage_SetSelectedEmpty_Default_Should_Not_Pass()
         {
             // Arrange
 
@@ -578,7 +578,7 @@ namespace UnitTests.Views
             // Reset
 
             // Assert
-            Assert.AreEqual(true,result); // Got to here, so it happened...
+            Assert.AreEqual(false,result); // Got to here, so it happened...
         }
 
         [Test]
