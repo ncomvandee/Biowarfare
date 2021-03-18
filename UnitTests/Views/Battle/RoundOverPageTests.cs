@@ -533,26 +533,27 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        //[Test]
-        //public void RoundOverPage_GetItemToDisplay_True_Valid_Should_Pass()
-        //{
-        //    // Arrange
-        //    var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
-        //    var dataTest = new ItemModel { Name = "AttackBoots", Location = ItemLocationEnum.PrimaryHand, Attribute = AttributeEnum.Attack, Value = 10, IsConsumable = false, Damage = 10 };
-        //    dataTest.Guid = "test"; 
-        //    data.AddItem(ItemLocationEnum.PrimaryHand, dataTest.Id);
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_True_Valid_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Name = "test" });
+            var dataTest = new ItemModel { Name = "AttackBoots", Location = ItemLocationEnum.PrimaryHand, Attribute = AttributeEnum.Attack, Value = 10, IsConsumable = false, Damage = 10 };
+            ItemIndexViewModel.Instance.Dataset.Add(dataTest);
+            dataTest.Guid = "test"; 
+            data.AddItem(ItemLocationEnum.PrimaryHand, dataTest.Id);
 
 
 
-        //    // Act
-        //    var result = page.GetItemToDisplay(dataTest.Location, data);
-        //    var ItemData = data.GetItemByLocation(ItemLocationEnum.PrimaryHand);
+            // Act
+            var result = page.GetItemToDisplay(dataTest.Location, data);
+            var ItemData = data.GetItemByLocation(ItemLocationEnum.PrimaryHand);
 
-        //    // Reset
+            // Reset
 
-        //    // Assert
-        //    Assert.IsNotNull(result); 
-        //}
+            // Assert
+            Assert.IsNotNull(result); 
+        }
 
       
     }
