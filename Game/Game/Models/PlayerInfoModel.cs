@@ -325,19 +325,19 @@ namespace Game.Models
         /// <returns></returns>
         public bool UseAbility(AbilityEnum ability)
         {
-            
-            //var avaible = AbilityTracker.TryGetValue(ability, out int remaining);
-            //if (avaible == false)
-            //{
-            //    // does not exist
-            //    return false;
-            //}
 
-            //if (remaining < 1)
-            //{
-            //    // out of tries
-            //    return false;
-            //}
+            var avaible = AbilityTracker.TryGetValue(ability, out int remaining);
+            if (avaible == false)
+            {
+                // does not exist
+                return false;
+            }
+
+            if (remaining < 1)
+            {
+                // out of tries
+                return false;
+            }
 
             switch (ability)
             {
@@ -367,7 +367,7 @@ namespace Game.Models
             }
 
             // Reduce the count
-            //AbilityTracker[ability] = remaining - 1;
+            AbilityTracker[ability] = remaining - 1;
 
             return true;
         }
