@@ -716,42 +716,41 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedCharacter(MapModelLocation data)
         {
-            // TODO: Info
-
-            /*
-             * This gets called when the characters is clicked on
-             * Usefull if you want to select the character and then set state or do something
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
-
+            // The current turn player
             var cell = BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn();
 
+            // If current player is Bcell and use ability button is clicked
             if (cell.Job == CellTypeEnum.BCell && UseAbility)
             {
+                // Set the action to use ability
                 EngineSettings.CurrentAction = ActionEnum.Ability;
+
+                // Since there is only bcell that has active ability, and only has one ability, we set the ability to that ability accordingly
                 EngineSettings.CurrentActionAbility = AbilityEnum.Invulnerable;
+
+                // Need to trick the engine that, current attacker is friendly ally that have buff from bcell
                 BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = data.Player;
+
+                // Reset button state
+                UseAbilityPopupFrame.IsVisible = false;
+                UseAbility = false;
+
+                // Execute turn
+                var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
+
+                // Set the current attacker back to current player turn, otherwise the turn order will go wrong
+                BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = cell;
+
+                UpdateMapGrid();
+                // Output the Message of what happened.
+
+                //Message
+                EngineSettings.BattleMessagesModel.TurnMessage = cell.Name + " Uses Ability " + EngineSettings.CurrentActionAbility.ToMessage() + "to " + data.Player.Name;
+                Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
+
+                GameMessage();
+
             }
-
-            UseAbilityPopupFrame.IsVisible = false;
-            UseAbility = false;
-
-            // Hold the current state
-            var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
-
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = cell;
-
-            UpdateMapGrid();
-            // Output the Message of what happened.
-
-            //Message
-            EngineSettings.BattleMessagesModel.TurnMessage = cell.Name + " Uses Ability " + EngineSettings.CurrentActionAbility.ToMessage() + "to " + data.Player.Name;
-            Debug.WriteLine(EngineSettings.BattleMessagesModel.TurnMessage);
-
-            GameMessage();
-
-            
 
             return true;
         }
@@ -1377,6 +1376,11 @@ namespace Game.Views
             if (cell.Poison)
             {
                 status = "Poisoned";
+            }
+
+            if (cell.Invulnerable)
+            {
+                status = "Invulnerable";
             }
 
             CharacterPopUpName.Text = cell.Name;
