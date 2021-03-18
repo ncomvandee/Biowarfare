@@ -1970,6 +1970,36 @@
 
                 <!--___________________________________________-->
 
+            <!--Style for ability popup frame in battle page-->
+            <Style TargetType="Frame"
+                  x:Key="UseAbilityBattleFrameStyle"
+                  >
+
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryForegroundPurple}"/>
+                <Setter Property="BorderColor" Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="100"/>
+
+            </Style>
+            <!--___________________________________________-->
+
+            <!--Style for battle message display frame in battle page-->
+            <Style TargetType="Frame"
+                  x:Key="BattleDisplayFrameStyle"
+                   BasedOn="{StaticResource BattleMessageDisplayFrameStyle}"
+                  >
+
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+
+
+            </Style>
+            <!--___________________________________________-->
+
+
 
 
 
@@ -2660,9 +2690,23 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Style for label in Use Ability popup battle page-->
+            <Style TargetType="Label"
+                  x:Key="UseAbilityBattleLabelStyle"
+                  >
+
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryBackgroundPurple}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
-        
+            
+            
+
 
 
             <!-- ProgressBar -->
@@ -2670,6 +2714,8 @@
 
 
 
+            
+            
 
             <!-- Default Progress bar for index page -->
             <Style TargetType="ProgressBar"
@@ -3316,9 +3362,22 @@
 
             <!--___________________________________________-->
 
+            <!--Style for ImageButton cancel in Use Ability popup battle page-->
+            <Style TargetType="ImageButton"
+                  x:Key="UseAbilityBattleImageButtonStyle"
+                  >
+
+                <Setter Property="WidthRequest" Value="90"/>
+                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
+
+            
 
 
             <!-- Picker -->
@@ -3327,6 +3386,7 @@
 
 
 
+            
             <!-- Default Level Picker For Create/Update Page -->
             <Style TargetType="Picker"
                    x:Key="CreatePickerStyle"
@@ -3819,7 +3879,22 @@
             </Style>
             
             <!--___________________________________________-->
-            
+
+            <!--Style for battle message stack layout in battle page-->
+            <Style TargetType="StackLayout"
+                  x:Key="BattleMessageStackLayoutStyle"
+                   BasedOn="{StaticResource VerticalStack}"
+                  >
+
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="Margin" Value="0"/>
+
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
@@ -3984,6 +4059,19 @@
 
             </Style>
 
+            <!--___________________________________________-->
+
+            <!--Style for Absolute Layout for Use Ability popup battle page-->
+            <Style TargetType="AbsoluteLayout"
+                  x:Key="UseAbilityBattleAbsoluteLayoutStyle"
+                  >
+
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1 ,1.1 , 1 ,.8"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+
+            </Style>
             <!--___________________________________________-->
 
 

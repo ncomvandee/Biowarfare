@@ -40,27 +40,7 @@
 
         </StackLayout>
     </NavigationPage.TitleView>
-    <ContentPage.Resources>
-
-        <ResourceDictionary>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </ResourceDictionary>
-        
-        
-        
-        
-        
-        
-    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <AbsoluteLayout IsVisible="True"
                         Style="{StaticResource BattleAbsoluteLayoutStyle}"
@@ -262,20 +242,11 @@
                     </StackLayout>
 
                     <!--Battle Grammar Messages-->
-                    <StackLayout Style="{StaticResource VerticalStack}" 
-                                 HeightRequest="50"
-                                 HorizontalOptions="CenterAndExpand"
-                                 VerticalOptions="StartAndExpand"
-                                 Margin="0"
-                                 Padding="0"
-                                 >
+                    <StackLayout Style="{StaticResource BattleMessageStackLayoutStyle}">
 
-                        <Frame Style="{StaticResource BattleMessageDisplayFrameStyle}"
+                        <Frame Style="{StaticResource BattleDisplayFrameStyle}"
                                IsVisible="false"
                                x:Name="MessageDisplayFrame"
-                               CornerRadius="0"
-                                Margin="0"
-                                 Padding="0"
                                >
 
                             <StackLayout x:Name="MessageDisplayBox" 
@@ -524,40 +495,27 @@
                 </StackLayout>
             </Frame>
 
-
-
-            <AbsoluteLayout AbsoluteLayout.LayoutBounds="1 ,1.1 , 1 ,.8 "
-                            AbsoluteLayout.LayoutFlags="All"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"
+            <AbsoluteLayout Style="{StaticResource UseAbilityBattleAbsoluteLayoutStyle}"
                             IsVisible="false"
-                            x:Name="UseAbilityPopupFrame">
-                
-                     <!--Use ability popup frame-->
-                <Frame
-                   Padding="10"
-                   CornerRadius="10"
-                   BackgroundColor="MediumAquamarine"
-                   BorderColor="Transparent"
-                    WidthRequest="300"
-                    HeightRequest="100">
+                            x:Name="UseAbilityPopupFrame"
+                            >
 
-                <StackLayout>
-                    <Label Text=" Click on friendly ally to give them immunity token, prevent them from taking damage"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center" />
+                <!--Use ability popup frame-->
+                <Frame Style="{StaticResource UseAbilityBattleFrameStyle}">
 
-                                           
-                        <ImageButton Source="cancel_main.png"
-                                     WidthRequest="90"
-                                     HeightRequest="30"
-                                     VerticalOptions="CenterAndExpand"
-                                     Clicked="CloseAbilityPopup_Clicked" />
+                    <StackLayout>
+                        <Label Text="Click on an ally to give them an immunity token to prevent them from taking damage."
+                           Style="{StaticResource UseAbilityBattleLabelStyle}"
+                           />
 
-                </StackLayout>
+                        <ImageButton Style="{StaticResource UseAbilityBattleImageButtonStyle}" 
+                                     Source="cancel_main.png"
+                                     Clicked="CloseAbilityPopup_Clicked" 
+                                     />
+
+                    </StackLayout>
                 </Frame>
             </AbsoluteLayout>
-
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
