@@ -573,7 +573,7 @@ namespace UnitTests.Engine.EngineKoenig
             Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
             Engine.EngineSettings.CurrentActionAbility = AbilityEnum.Bandage;
 
-            var PlayerInfo = new PlayerInfoModel(new CharacterModel());
+            var PlayerInfo = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell});
 
             // Act
             var result = Engine.Round.Turn.TakeTurn(PlayerInfo);
