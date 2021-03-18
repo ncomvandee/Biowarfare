@@ -28,8 +28,8 @@ namespace UnitTests.Views
             Application.Current = app;
 
             // For now, set the engine to the Koenig Engine, change when ready 
-            BattleEngineViewModel.Instance.SetBattleEngineToGame();
-                                          //SetBattleEngineToKoenig();
+            BattleEngineViewModel.Instance.SetBattleEngineToKoenig();
+
 
             page = new AutoBattlePage();
         }
