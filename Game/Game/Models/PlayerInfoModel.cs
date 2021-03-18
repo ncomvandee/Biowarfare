@@ -120,21 +120,21 @@ namespace Game.Models
 
                     foreach (var item in AbilityEnumHelper.GetListCleric)
                     {
-                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 5);
                     }
                     break;
 
                 case CellTypeEnum.KillerTCell:
                     foreach (var item in AbilityEnumHelper.GetListFighter)
                     {
-                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 5);
                     }
                     break;
 
                 case CellTypeEnum.BCell:
                     foreach (var item in AbilityEnumHelper.GetListBcell)
                     {
-                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 5);
                     }
                     break;
 
@@ -142,7 +142,7 @@ namespace Game.Models
                 default:
                     foreach (var item in AbilityEnumHelper.GetListOthers)
                     {
-                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 5);
                     }
                     break;
             }
@@ -201,7 +201,7 @@ namespace Game.Models
             // Adding abilities for monsters, why not, they work hard for a living
             foreach (var item in AbilityEnumHelper.GetListOthers)
             {
-                AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), 5);
             }
 
         }
