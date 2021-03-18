@@ -1311,7 +1311,7 @@ namespace UnitTests.Engine.EngineBase
         public void TurnEngine_DetermineActionChoice_Valid_Character_Should_Return_CurrentAction()
         {
             // Arrange
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.NKCell});
 
             CharacterPlayer.CurrentHealth = 1;
             CharacterPlayer.MaxHealth = 1000;
