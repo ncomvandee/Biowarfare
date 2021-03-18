@@ -557,7 +557,9 @@ namespace UnitTests.Views
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
         {
             // Arrange
-
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Add(new PlayerInfoModel(new MonsterModel()));
+            BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
             // Act
             var result = page.SetSelectedMonster(new MapModelLocation());
 
