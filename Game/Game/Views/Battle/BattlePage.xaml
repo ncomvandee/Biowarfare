@@ -40,7 +40,27 @@
 
         </StackLayout>
     </NavigationPage.TitleView>
+    <ContentPage.Resources>
 
+        <ResourceDictionary>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ResourceDictionary>
+        
+        
+        
+        
+        
+        
+    </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout IsVisible="True"
                         Style="{StaticResource BattleAbsoluteLayoutStyle}"
@@ -50,8 +70,6 @@
             <StackLayout Style="{StaticResource GameUiStackLayoutStyle}"
                          x:Name="GameUIDisplay" 
                          IsVisible="True" 
-                         Padding="0"
-                         Margin="0"
                          >
 
                 <!--The Top of the Battle UI Holds the List of Players-->
@@ -116,8 +134,6 @@
                     <Frame x:Name="BattlePlayerInfomationBox"
                            Style="{StaticResource BattleInfoFrameStyle}"
                            IsVisible="true"
-                            Padding="0, 0, 0, 5"
-                           Margin="0, 0, 0, 10"
                            >
 
                         <StackLayout x:Name="BattlePlayerBox" 
@@ -130,10 +146,7 @@
                                          >
 
                                 <Frame x:Name="AttackerFrame" 
-                                       Style="{StaticResource SmallCircleFrameStyle}" 
-                                        Margin="0"
-                                       HeightRequest="40"
-                                       WidthRequest="40"
+                                       Style="{StaticResource BattlePageCircleFrameStyle}" 
                                        IsVisible="False"
                                        >
                                 
@@ -161,11 +174,7 @@
 
                                 <Label x:Name="BattlePlayerBoxVersus" 
                                        Text="vs" 
-                                       Style="{StaticResource BattleBoxLabelStyle}"
-                                       FontAttributes="Bold"
-                                       TextColor="{StaticResource SecondaryAccentColor}"
-                                       FontSize="Subtitle"
-                                       Padding="0, 0, 0, 15"
+                                       Style="{StaticResource BattlePageBattleBoxLabelStyle}"
                                        />
                                 
                             </StackLayout>
