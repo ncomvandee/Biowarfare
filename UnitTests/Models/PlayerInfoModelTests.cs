@@ -255,7 +255,7 @@ namespace UnitTests.Models
         public void PlayerInfoModel_SelectAbilityToUse_Cleric_Heal_Should_Skip()
         {
             // Arrange
-            var data = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.BCell });
+            var data = new PlayerInfoModel(new CharacterModel { Job = CellTypeEnum.Macrophage });
             data.AbilityTracker[AbilityEnum.Quick] = 0;
             data.AbilityTracker[AbilityEnum.Barrier] = 0;
             data.AbilityTracker[AbilityEnum.Curse] = 0;
