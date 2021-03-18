@@ -530,15 +530,15 @@
                             AbsoluteLayout.LayoutFlags="All"
                             VerticalOptions="CenterAndExpand"
                             HorizontalOptions="CenterAndExpand"
-                            >
+                            IsVisible="false"
+                            x:Name="UseAbilityPopupFrame">
+                
                      <!--Use ability popup frame-->
                 <Frame
-                    IsVisible="false"
                    Padding="10"
                    CornerRadius="10"
                    BackgroundColor="MediumAquamarine"
                    BorderColor="Transparent"
-                   x:Name="UseAbilityPopupFrame"
                     WidthRequest="300"
                     HeightRequest="100">
 
