@@ -283,6 +283,24 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+
+        [Test]
+        public void RoundOverPage_GetItemToDisplay_Consumable_Item_Click_Button_Valid_Should_Pass()
+        {
+            // Arrange
+            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            item.IsConsumable = true;
+            var StackItem = page.GetItemToDisplay(item, true);
+            var dataImage = StackItem.Children[0];
+
+            // Act
+            ((ImageButton)dataImage).PropagateUpClicked();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
         [Test]
         public void RoundOverPage_CreatePlayerDisplayBox_Clicked_Should_Pass()
         {
