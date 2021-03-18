@@ -1931,6 +1931,8 @@
                 <Setter Property="CornerRadius" Value="20"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryMidgroundPurple}"/>
                 <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="Padding" Value="0, 0, 0, 5"/>
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
 
             </Style>
             
@@ -1951,8 +1953,22 @@
                 <Setter Property="Padding" Value="5"/>
 
             </Style>
-
             <!--___________________________________________-->
+
+            <!--Style for vs circle frames on battle page-->
+            <Style TargetType="Frame"
+                   x:Key="BattlePageCircleFrameStyle"
+                   BasedOn="{StaticResource SmallCircleFrameStyle}"
+                   >
+
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Margin" Value="0"/>
+
+            </Style>
+
+
+                <!--___________________________________________-->
 
 
 
@@ -2630,9 +2646,23 @@
             </Style>
             <!--___________________________________________-->
 
+            <!--Battle Box vs text on battle page-->
+            <Style TargetType="Label"
+                   x:Key="BattlePageBattleBoxLabelStyle"
+                   BasedOn="{StaticResource BattleBoxLabelStyle}"
+                   >
+
+                <Setter Property="TextColor" Value="{StaticResource SecondaryAccentColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="Padding" Value="0, 0, 0, 15"/>
+
+            </Style>
+            <!--___________________________________________-->
 
 
 
+        
 
 
             <!-- ProgressBar -->
@@ -3746,6 +3776,8 @@
                 <Setter Property="VerticalOptions" Value="FillAndExpand"/>
                 <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1"/>
                 <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
 
             </Style>
             
