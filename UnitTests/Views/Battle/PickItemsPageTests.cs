@@ -16,10 +16,12 @@ using Game.Models;
 namespace UnitTests.Views
 {
     [TestFixture]
-    public class PickItemsPageTests
+    public class PickItemsPageTests : PickItemsPage
     {
         App app;
         PickItemsPage page;
+
+        public PickItemsPageTests() : base(true) { }
 
         [SetUp]
         public void Setup()
